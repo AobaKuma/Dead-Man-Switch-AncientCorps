@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: gorod -->
+  <DMS_Mech_Gorod.label>城邦</DMS_Mech_Gorod.label>
+  
+  <!-- EN: gorod grenader -->
+  <DMS_Mech_Gorod_Grenader.label>城邦榴弹型</DMS_Mech_Gorod_Grenader.label>
+  
+  <!-- EN: gorod gunner -->
+  <DMS_Mech_Gorod_Gunner.label>城邦机枪型</DMS_Mech_Gorod_Gunner.label>
+  
+</LanguageData>

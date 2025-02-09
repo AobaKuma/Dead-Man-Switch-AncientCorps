@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- 通用的技能，比如各種發射物 -->
+	<AbilityDef>
+		<defName>DMSAC_APS</defName>
+		<label>active protection system</label>
+		<description>開啟主動防禦系統，在短時間內攔截鄰近的有害威脅。</description>
+		<iconPath>UI/Ability/Grenade</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>6000~7200</cooldownTicksRange>
+		<charges>6</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<defaultCooldownTime>5</defaultCooldownTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<onlyManualCast>false</onlyManualCast>
+			<range>11.9</range>
+			<warmupTime>0.5</warmupTime>
+			<drawAimPie>false</drawAimPie>
+			<violent>false</violent>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="AncientCorps.CompProperties_ActiveProtectionSystem">
+				<Size>12</Size>
+				<spawnLeaving>Filth_Ash</spawnLeaving>
+				<fleckDef>DMS_SplashedPieces</fleckDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	
+
+	<AbilityDef>
+		<defName>DMSAC_ShieldLauncher</defName>
+		<label>shield projector deploy</label>
+		<description>Launch a shield projector shell intercept incoming munitions.</description>
+		<iconPath>UI/Ability/Smoke</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>3000~3600</cooldownTicksRange>
+		<charges>4</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<defaultCooldownTime>5</defaultCooldownTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<onlyManualCast>false</onlyManualCast>
+			<range>19.9</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<requireLineOfSight>false</requireLineOfSight>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>DMSAC_Bullet_ShieldProjectorShell</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

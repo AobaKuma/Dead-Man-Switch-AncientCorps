@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Ancient corps -->
+  <DMS_AncientCorps.label>Ancient corps</DMS_AncientCorps.label>
+  <!-- EN: An armored automatroid division used by a colonial fleet for executing full-scale planetary warfare. However for reasons unknown, despite their past victories against something unknown, the previous colonial fleet decided to seal this army in scattered underground facilities on this planet. It was recently reactivated for unknown reasons. -->
+  <DMS_AncientCorps.description>An armored automatroid division used by a colonial fleet for executing full-scale planetary warfare. However for reasons unknown, despite their past victories against something unknown, the previous colonial fleet decided to seal this army in scattered underground facilities on this planet. It was recently reactivated for unknown reasons.</DMS_AncientCorps.description>
+  <!-- EN: leader -->
+  <DMS_AncientCorps.leaderTitle>leader</DMS_AncientCorps.leaderTitle>
+  <!-- EN: automatroid -->
+  <DMS_AncientCorps.pawnSingular>automatroid</DMS_AncientCorps.pawnSingular>
+  <!-- EN: automatroids -->
+  <DMS_AncientCorps.pawnsPlural>automatroids</DMS_AncientCorps.pawnsPlural>
+  
+</LanguageData>

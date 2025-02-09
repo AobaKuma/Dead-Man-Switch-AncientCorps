@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <BackstoryDef>
+    <defName>AMC_CivilianChild01</defName>
+    <title>量產兒童</title>
+    <titleShort>速生兒</titleShort>
+    <description>[PAWN_nameDef]是透過人工合成胚胎量產的純正人類，這類技術所生產的人類雖然與基線人類差異不大，但免疫系統具有不可避免的瑕疵。[PAWN_pronoun]的童年是與自己上千個外貌相似的兄弟姊妹們一同接受軍事訓練與教育來為數年後可能參與的全面戰爭進行準備。</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>AMCCommon</li>
+      <li>FleetChild</li>
+    </spawnCategories>
+    <forcedTraits>
+      <Delicate>0</Delicate>
+    </forcedTraits>
+  </BackstoryDef>
+</Defs>

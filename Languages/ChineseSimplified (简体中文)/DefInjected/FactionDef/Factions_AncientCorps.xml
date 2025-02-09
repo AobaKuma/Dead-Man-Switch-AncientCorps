@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Ancient corps -->
+  <DMS_AncientCorps.label>古代机兵</DMS_AncientCorps.label>
+  <!-- EN: An armored automatroid division used by a colonial fleet for executing full-scale planetary warfare. However for reasons unknown, despite their past victories against something unknown, the previous colonial fleet decided to seal this army in scattered underground facilities on this planet. It was recently reactivated for unknown reasons. -->
+  <DMS_AncientCorps.description>殖民舰队用来执行全面行星战争的装甲机兵师。然而由于未知的原因尽管过去曾战胜了某种未知的敌人，前代殖民舰队还是决定将这支军队封存在这个星球上分散的地下设施中。最近由于未知原因被重新启动。</DMS_AncientCorps.description>
+  <!-- EN: leader -->
+  <DMS_AncientCorps.leaderTitle>指挥官</DMS_AncientCorps.leaderTitle>
+  <!-- EN: mechanoid -->
+  <DMS_AncientCorps.pawnSingular>机兵</DMS_AncientCorps.pawnSingular>
+  <!-- EN: mechanoids -->
+  <DMS_AncientCorps.pawnsPlural>机兵</DMS_AncientCorps.pawnsPlural>
+  
+</LanguageData>

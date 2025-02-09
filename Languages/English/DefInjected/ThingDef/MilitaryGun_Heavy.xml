@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: vladimirov HMG bullet -->
+  <Bullet_DMS_VladimirovMG.label>vladimirov HMG bullet</Bullet_DMS_VladimirovMG.label>
+  
+  <!-- EN: Aerial autocannon -->
+  <DMS_AerialAutocannon.label>Aerial autocannon</DMS_AerialAutocannon.label>
+  <!-- EN: An automatroid weapon based on a lightweight aircraft cannon, adapted to fire 30mm cannon rounds. While it is versatile across multiple platforms, overheating issues limit its ground use to only burst shots. -->
+  <DMS_AerialAutocannon.description>An automatroid weapon based on a lightweight aircraft cannon, adapted to fire 30mm cannon rounds. While it is versatile across multiple platforms, overheating issues limit its ground use to only burst shots.</DMS_AerialAutocannon.description>
+  <!-- EN: stock -->
+  <DMS_AerialAutocannon.tools.stock.label>stock</DMS_AerialAutocannon.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_AerialAutocannon.tools.barrel.label>barrel</DMS_AerialAutocannon.tools.barrel.label>
+  <!-- EN: Aerial autocannon -->
+  <DMS_AerialAutocannon.verbs.Verb_Shoot.label>Aerial autocannon</DMS_AerialAutocannon.verbs.Verb_Shoot.label>
+  
+  <!-- EN: armor piercing sabot -->
+  <DMS_Bullet_JusticeGavel.label>armor piercing sabot</DMS_Bullet_JusticeGavel.label>
+  
+  <!-- EN: Gsh30-6 "Flogger" -->
+  <DMS_Gsh30Gatlinggun.label>Gsh30-6 "Flogger"</DMS_Gsh30Gatlinggun.label>
+  <!-- EN: A lightweight multi-barrel gatling gun originally designed for aircraft, modified for ground-based platforms. It boasts an extremely high rate of fire for rapid enemy suppression, but the lack of an effective rapid cooling system prevents it from sustaining fire for extended periods. -->
+  <DMS_Gsh30Gatlinggun.description>A lightweight multi-barrel gatling gun originally designed for aircraft, modified for ground-based platforms. It boasts an extremely high rate of fire for rapid enemy suppression, but the lack of an effective rapid cooling system prevents it from sustaining fire for extended periods.</DMS_Gsh30Gatlinggun.description>
+  <!-- EN: stock -->
+  <DMS_Gsh30Gatlinggun.tools.stock.label>stock</DMS_Gsh30Gatlinggun.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Gsh30Gatlinggun.tools.barrel.label>barrel</DMS_Gsh30Gatlinggun.tools.barrel.label>
+  <!-- EN: Gsh30-6 "Flogger" -->
+  <DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>Gsh30-6 "Flogger"</DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>
+  
+  <!-- EN: 2A46M "Justice Gavel" -->
+  <DMS_Gun_JusticeGavel.label>2A46M "Justice Gavel"</DMS_Gun_JusticeGavel.label>
+  <!-- EN: A semi-automatic anti-tank cannon carried by ultra-heavy automatrons, known for its simple and reliable structure. It is widely used on various armored platforms to engage heavily armed and armored targets such as tanks and heavy mechs. -->
+  <DMS_Gun_JusticeGavel.description>A semi-automatic anti-tank cannon carried by ultra-heavy automatrons, known for its simple and reliable structure. It is widely used on various armored platforms to engage heavily armed and armored targets such as tanks and heavy mechs.</DMS_Gun_JusticeGavel.description>
+  <!-- EN: stock -->
+  <DMS_Gun_JusticeGavel.tools.stock.label>stock</DMS_Gun_JusticeGavel.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Gun_JusticeGavel.tools.barrel.label>barrel</DMS_Gun_JusticeGavel.tools.barrel.label>
+  <!-- EN: 2A46M "Justice Gavel" -->
+  <DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>2A46M "Justice Gavel"</DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Kord Machinegun -->
+  <DMS_KordMachineGun.label>Kord Machinegun</DMS_KordMachineGun.label>
+  <!-- EN: A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements. -->
+  <DMS_KordMachineGun.description>A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements.</DMS_KordMachineGun.description>
+  <!-- EN: stock -->
+  <DMS_KordMachineGun.tools.stock.label>stock</DMS_KordMachineGun.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_KordMachineGun.tools.barrel.label>barrel</DMS_KordMachineGun.tools.barrel.label>
+  <!-- EN: Kord Machinegun -->
+  <DMS_KordMachineGun.verbs.Verb_Shoot.label>Kord Machinegun</DMS_KordMachineGun.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Vladimirov HMG -->
+  <DMS_VladimirovMachineGun.label>Vladimirov HMG</DMS_VladimirovMachineGun.label>
+  <!-- EN: A large-caliber heavy machine gun named after its designer, deployed as a standard weapon by colonial fleets in full-scale wars against various interstellar threats. It ensures that automatroid units can deliver effective and immediate lethal damage to most hostile lifeforms and machines. -->
+  <DMS_VladimirovMachineGun.description>A large-caliber heavy machine gun named after its designer, deployed as a standard weapon by colonial fleets in full-scale wars against various interstellar threats. It ensures that automatroid units can deliver effective and immediate lethal damage to most hostile lifeforms and machines.</DMS_VladimirovMachineGun.description>
+  <!-- EN: stock -->
+  <DMS_VladimirovMachineGun.tools.stock.label>stock</DMS_VladimirovMachineGun.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_VladimirovMachineGun.tools.barrel.label>barrel</DMS_VladimirovMachineGun.tools.barrel.label>
+  <!-- EN: Vladimirov HMG -->
+  <DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>Vladimirov HMG</DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>
+  
+</LanguageData>

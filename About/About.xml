@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Ancient Machine Corps</name>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/NaraLogo</modIconPath>
+  	<author>AobaKuma</author>
+    <supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<packageId>Aoba.DeadManSwitch.AncientCorps</packageId>
+    <modDependencies>
+        <li>
+			<packageId>Aoba.DeadManSwitch.Core</packageId>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3121742525</steamWorkshopUrl>
+			<displayName>Dead Man Switch</displayName>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Aoba.DeadManSwitch.Core</li>
+  	</loadAfter>
+	<description>出於某些原因，一支被殖民艦隊用作全面戰爭的軍團被遺留在了這顆星球上長達數百年。如今為執行全面戰爭而被建造的地下軍工設施再一次的運轉，深眠於地下設施的古代機兵部隊再次的集結於地表。然而我們還尚不知道他們的敵人是誰...</description>
+</ModMetaData>

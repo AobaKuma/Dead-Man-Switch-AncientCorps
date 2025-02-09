@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: grenade round -->
+  <Bullet_DMS_AtlantLauncher.label>TODO</Bullet_DMS_AtlantLauncher.label>
+  
+  <!-- EN: solid slug -->
+  <Bullet_DMS_CombatShotgun.label>TODO</Bullet_DMS_CombatShotgun.label>
+  
+  <!-- EN: Atlant Grenade Launcher -->
+  <DMS_AtlantGrenadeLauncher.label>TODO</DMS_AtlantGrenadeLauncher.label>
+  <!-- EN: A fully automatic grenade launcher designed for handheld use, highly lethal against soft targets concealed behind cover. However, due to the intense recoil from continuous firing, it is typically not used in full-auto mode. -->
+  <DMS_AtlantGrenadeLauncher.description>TODO</DMS_AtlantGrenadeLauncher.description>
+  <!-- EN: stock -->
+  <DMS_AtlantGrenadeLauncher.tools.stock.label>TODO</DMS_AtlantGrenadeLauncher.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_AtlantGrenadeLauncher.tools.barrel.label>TODO</DMS_AtlantGrenadeLauncher.tools.barrel.label>
+  <!-- EN: Atlant Grenade Launcher -->
+  <DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>TODO</DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Tula combat shotgun -->
+  <DMS_KS23K.label>TODO</DMS_KS23K.label>
+  <!-- EN: A modernized large-caliber shotgun, fed by detachable box magazines to deliver sustained fire suppression. The metal slugs it uses are remarkably effective even against heavily armored targets. -->
+  <DMS_KS23K.description>TODO</DMS_KS23K.description>
+  <!-- EN: stock -->
+  <DMS_KS23K.tools.stock.label>TODO</DMS_KS23K.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_KS23K.tools.barrel.label>TODO</DMS_KS23K.tools.barrel.label>
+  <!-- EN: Tula combat shotgun -->
+  <DMS_KS23K.verbs.Verb_Shoot.label>TODO</DMS_KS23K.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Mikhail Machinegun -->
+  <DMS_PKM.label>TODO</DMS_PKM.label>
+  <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
+  <DMS_PKM.description>TODO</DMS_PKM.description>
+  <!-- EN: stock -->
+  <DMS_PKM.tools.stock.label>TODO</DMS_PKM.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_PKM.tools.barrel.label>TODO</DMS_PKM.tools.barrel.label>
+  <!-- EN: Mikhail Machinegun -->
+  <DMS_PKM.verbs.Verb_Shoot.label>TODO</DMS_PKM.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Yekaterin Rifle -->
+  <DMS_YekaterinRifle.label>TODO</DMS_YekaterinRifle.label>
+  <!-- EN: A bullpup anti-materiel rifle, designed to enable law enforcement units to neutralize heavy automatroid. Its structure is greatly simplified to ensure that even non-enhanced humans can carry and operate this rifle. -->
+  <DMS_YekaterinRifle.description>TODO</DMS_YekaterinRifle.description>
+  <!-- EN: stock -->
+  <DMS_YekaterinRifle.tools.stock.label>TODO</DMS_YekaterinRifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_YekaterinRifle.tools.barrel.label>TODO</DMS_YekaterinRifle.tools.barrel.label>
+  <!-- EN: Yekaterin Rifle -->
+  <DMS_YekaterinRifle.verbs.Verb_Shoot.label>TODO</DMS_YekaterinRifle.verbs.Verb_Shoot.label>
+  
+</LanguageData>

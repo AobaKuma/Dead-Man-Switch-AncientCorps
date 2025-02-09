@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef ParentName="FactionBase">
+    <defName>DMS_AncientCorps</defName>
+    <label>Ancient corps</label>
+    <description>An armored automatroid division used by a colonial fleet for executing full-scale planetary warfare. However for reasons unknown, despite their past victories against something unknown, the previous colonial fleet decided to seal this army in scattered underground facilities on this planet. It was recently reactivated for unknown reasons.</description>
+    <pawnSingular>automatroid</pawnSingular>
+    <pawnsPlural>automatroids</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <factionNameMaker>DMS_AncientFaction</factionNameMaker>
+    <factionIconPath>UI/Faction/AncientIcon</factionIconPath>
+    <canStageAttacks>true</canStageAttacks>
+    <colorSpectrum>
+      <li>(0.78, 0.79, 0.71)</li>
+    </colorSpectrum>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(300,  0)</li>
+        <li>(700,  1)</li>
+        <li>(1400, 1.8)</li>
+        <li>(2800, 2.2)</li>
+        <li>(5000, 2.6)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Plasfiber</li>
+        <li>Tungsteel</li>
+        <li>DMS_Ceramics</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <raidLootMaker>AMC_LootMaker</raidLootMaker>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     8)</li>
+        <li>(100,   60)</li>
+        <li>(1000, 250)</li>
+        <li>(2000, 400)</li>
+        <li>(6000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>false</hidden>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>true</canUseAvoidGrid>
+    <techLevel>Industrial</techLevel>
+    <earliestRaidDays>45</earliestRaidDays>
+    <permanentEnemyToEveryoneExcept>
+      <li>DMS_Army</li>
+      <li>OutlanderRefugee</li>
+      <li>Ancients</li>
+      <li>PlayerColony</li>
+    </permanentEnemyToEveryoneExcept>
+    <hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- All types-->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <DMS_Mech_Molot>6</DMS_Mech_Molot>
+          <DMS_Mech_Molot_Sweeper>10</DMS_Mech_Molot_Sweeper>
+          <DMS_Mech_Molot_Grinder>2</DMS_Mech_Molot_Grinder>
+          <DMS_Mech_Gorod_Gunner>2</DMS_Mech_Gorod_Gunner>
+          <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+          <DMS_Mech_Gorod_Grenader>1</DMS_Mech_Gorod_Grenader>
+        </options>
+      </li>
+      <li>
+        <!-- Ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>80</commonality>
+        <options>
+          <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+          <DMS_Mech_Gorod_Gunner>6</DMS_Mech_Gorod_Gunner>
+          <DMS_Mech_Molot_Sweeper>10</DMS_Mech_Molot_Sweeper>
+          <DMS_Mech_Molot_Grinder>6</DMS_Mech_Molot_Grinder>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>70</commonality>
+        <options>
+          <DMS_Mech_Molot>10</DMS_Mech_Molot>
+          <DMS_Mech_Molot_Sweeper>10</DMS_Mech_Molot_Sweeper>
+          <DMS_Mech_Molot_Grinder>6</DMS_Mech_Molot_Grinder>
+          <DMS_Mech_Gorod_Grenader>4</DMS_Mech_Gorod_Grenader>
+          <DMS_Mech_Gorod_Gunner>6</DMS_Mech_Gorod_Gunner>
+          <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+        </options>
+      </li>
+      <li>
+        <!-- heavy only -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
+          <DMS_Mech_Krepost_Sweeper>10</DMS_Mech_Krepost_Sweeper>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <allowedArrivalTemperatureRange>-100~200</allowedArrivalTemperatureRange>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>900</configurationListOrderPriority>
+    <dropPodActive>ActiveDropPodMechanoid</dropPodActive>
+    <dropPodIncoming>DropPodIncomingMechanoid</dropPodIncoming>
+  </FactionDef>
+  
+  <ThingSetMakerDef>
+    <defName>AMC_LootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Tungsteel</li>
+            <li>ComponentStamped</li>
+            <li>Plasfiber</li>
+            <li>Neurocomputer</li>
+            <li>DMS_CeramicsPlating</li>
+            <li>DMS_Ceramics</li>
+            <li>DMS_CombatRation</li>
+            <li>DMS_NutrientPort</li>
+            <li>DMS_ProstheticLeg</li>
+            <li>DMS_ProstheticArm</li>
+            <li>DMS_ProstheticEye</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+
+</Defs>

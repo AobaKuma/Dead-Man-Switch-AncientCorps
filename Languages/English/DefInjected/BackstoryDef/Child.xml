@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: [PAWN_nameDef]是透過人工合成胚胎量產的純正人類，這類技術所生產的人類雖然與基線人類差異不大，但免疫系統具有不可避免的瑕疵。[PAWN_pronoun]的童年是與自己上千個外貌相似的兄弟姊妹們一同接受軍事訓練與教育來為數年後可能參與的全面戰爭進行準備。 -->
+  <AMC_CivilianChild01.description>[PAWN_nameDef] is a baseliner human being mass-produced through artificial embryos. Although the humans produced by this technology are not much different from baseline humans, their immune systems have inevitable flaws. [PAWN_pronoun] spent his childhood receiving military training and education alongside thousands of his similar-looking brothers and sisters, preparing for the all-out war they would be involved in years later.</AMC_CivilianChild01.description>
+  <!-- EN: 量產兒童 -->
+  <AMC_CivilianChild01.title>produced child</AMC_CivilianChild01.title>
+  <!-- EN: 速生兒 -->
+  <AMC_CivilianChild01.titleShort>vat child</AMC_CivilianChild01.titleShort>
+  
+</LanguageData>

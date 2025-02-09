@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Krepost -->
+  <DMS_Mech_Krepost.label>Krepost</DMS_Mech_Krepost.label>
+  <!-- EN: 6M41 / BR-6 "Krepost" NATO nicknamed "TankHead". Huge and bulky walker, used as a bridgehead and mobile battery to maintain frontal battlefield firepower, Krepost is equipped with several active shields and reactive armors to resist incoming projectiles. Even if the shields are exhausted, its huge size and weapon systems are sufficient at holding off incoming enemies until reinforcements arrive. -->
+  <DMS_Mech_Krepost.description>6M41 / BR-6 "Krepost" NATO nicknamed "TankHead". Huge and bulky walker, used as a bridgehead and mobile battery to maintain frontal battlefield firepower, Krepost is equipped with several active shields and reactive armors to resist incoming projectiles. Even if the shields are exhausted, its huge size and weapon systems are sufficient at holding off incoming enemies until reinforcements arrive.</DMS_Mech_Krepost.description>
+  <!-- EN: Mechanical Head -->
+  <DMS_Mech_Krepost.tools.Mechanical_Head.label>Mechanical Head</DMS_Mech_Krepost.tools.Mechanical_Head.label>
+  <!-- EN: Left Leg -->
+  <DMS_Mech_Krepost.tools.Left_Leg.label>Left Leg</DMS_Mech_Krepost.tools.Left_Leg.label>
+  <!-- EN: Right Leg -->
+  <DMS_Mech_Krepost.tools.Right_Leg.label>Right Leg</DMS_Mech_Krepost.tools.Right_Leg.label>
+  
+</LanguageData>

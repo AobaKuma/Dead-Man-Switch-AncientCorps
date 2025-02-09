@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 磨坊 Molot-->
+  <ThingDef ParentName="BaseAutomatroidRace">
+    <defName>DMS_Mech_Molot</defName>
+    <label>Molot</label>
+    <description>A medium-sized automatroid capable of equipping and utilizing light to medium infantry weapons. Designed in an era marked by the rapid increase in armored unmanned systems, it was conceived as an infantry combat platform within armored units. It boasts excellent combat capabilities, a simple structure, and superior weapon-loading capacity.</description>
+    <statBases>
+      <StaggerDurationFactor>0.25</StaggerDurationFactor>
+      <MoveSpeed>3.6</MoveSpeed>                                                              <!--移動速度-->
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>                                            <!--護甲-->
+      <ArmorRating_Sharp>0.61</ArmorRating_Sharp>
+      <ArmorRating_Heat>1.0</ArmorRating_Heat>
+      <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>                 <!--帶寬消耗-->
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge> <!--充電/培養時產出廢料-->
+      <AimingDelayFactor>1.25</AimingDelayFactor>                                            <!--瞄準延遲-->
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>10</mechFixedSkillLevel>
+      <body>DMS_Humanoid_TypeB</body>                                                       <!--身體(另外的def)-->
+      <nameGenerator>DMS_VanguardMechHeavy</nameGenerator>
+      <baseBodySize>1.6</baseBodySize>
+      <baseHealthScale>1.5</baseHealthScale>
+      <mechWeightClass>Heavy</mechWeightClass>
+    </race>
+    <modExtensions>
+      <li Class="DMS.MechWeaponExtension">
+        <EnableWeaponFilter>true</EnableWeaponFilter>
+        <UsableWeaponTags>
+          <li MayRequire="vanillaexpanded.vwehw">HeavyGun</li><!--重型武器拓展-->
+          <li>DMS_MechWeaponLight</li>
+          <li>DMS_MechWeaponMeduim</li>
+          <li>DMS_MechWeaponHeavy</li>
+          <li>DMS_MechWeaponLongRifle</li>
+          <li>A_SuppressWeapon</li>
+          <li>DMS_Gun_Recoilless</li>
+          <li>DMS_PKM</li>
+          <li>DMS_KordMachineGun</li>
+			    <li>DMS_VladimirovMachineGun</li>
+          <li>DMS_AtlantGrenadeLauncher</li>
+          <li>A_MG_GrenadeLauncher</li>
+        </UsableWeaponTags>
+        <BypassUsableWeapons/>
+        <EnableTechLevelFilter>true</EnableTechLevelFilter>
+        <UsableTechLevels>
+          <li>Industrial</li>
+        </UsableTechLevels>
+      </li>
+    </modExtensions>
+    <butcherProducts>
+      <DMS_ChunkSlag>1</DMS_ChunkSlag>
+      <Steel>35</Steel>
+    </butcherProducts>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseAncientAutomatroidKind" Name="DMS_BaseMolotKind">
+    <defName>DMS_Mech_Molot</defName>
+    <label>molot</label>
+    <race>DMS_Mech_Molot</race>
+    <nameMaker>DMS_AncientMechStandard</nameMaker>
+    <isFighter>true</isFighter>
+    <combatPower>50</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/molot</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/molot</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>DMS_MechWeaponMeduim</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DMS_BaseMolotKind">
+    <defName>DMS_Mech_Molot_Sweeper</defName>
+    <label>molot sweeper</label>
+    <combatPower>70</combatPower>
+    <weaponTags Inherit="False">
+      <li>DMS_PKM</li>
+      <li>DMS_KordMachineGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DMS_BaseMolotKind">
+    <defName>DMS_Mech_Molot_Grinder</defName>
+    <label>molot grinder</label>
+    <combatPower>90</combatPower>
+    <weaponMoney>1600~9999</weaponMoney>
+    <weaponTags Inherit="False">
+			<li>DMS_VladimirovMachineGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DMS_BaseMolotKind">
+    <defName>DMS_Mech_Molot_Grenader</defName>
+    <label>molot grenader</label>
+    <combatPower>120</combatPower>
+    <weaponTags Inherit="False">
+			<li>DMS_AtlantGrenadeLauncher</li>
+    </weaponTags>
+  </PawnKindDef>
+</Defs>

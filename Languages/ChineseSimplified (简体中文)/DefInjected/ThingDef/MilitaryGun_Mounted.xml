@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Kord HMG -->
+  <DMS_Gun_Kord.label>Kord</DMS_Gun_Kord.label>
+  <!-- EN: A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements. -->
+  <DMS_Gun_Kord.description>现代化重型机枪，具有相当的可靠性</DMS_Gun_Kord.description>
+  <!-- EN: Kord HMG -->
+  <DMS_Gun_Kord.verbs.Verb_Shoot.label>Kord</DMS_Gun_Kord.verbs.Verb_Shoot.label>
+  
+</LanguageData>
