@@ -4,7 +4,7 @@
   <ThingDef ParentName="BaseAutomatroidRace">
     <defName>DMS_Mech_Krepost</defName>
     <label>Krepost</label>
-    <description>6M41 / BR-6 "Krepost" NATO nicknamed "TankHead". Huge and bulky walker, used as a bridgehead and mobile battery to maintain frontal battlefield firepower, Krepost is equipped with several active shields and reactive armors to resist incoming projectiles. Even if the shields are exhausted, its huge size and weapon systems are sufficient at holding off incoming enemies until reinforcements arrive.</description>
+    <description>6M41 / BR-6 "Krepost" NATO nicknamed "TankHead". Huge and bulky walker, used as a bridgehead and mobile battery to maintain frontal battlefield firepower, Krepost is equipped with several active protection system and reactive armors to resist incoming projectiles. Even if the shields are exhausted, its huge size and weapon systems are sufficient at holding off incoming enemies until reinforcements arrive.</description>
     <statBases>
       <MoveSpeed>3.7</MoveSpeed>
       <ArmorRating_Sharp>1.8</ArmorRating_Sharp><!--銳抗-->
@@ -277,6 +277,10 @@
 			<li>DMS_DragoonGun</li>
     </weaponTags>
     <weaponMoney>6730~9999</weaponMoney>
+    <abilities>
+      <!-- <li>DMSAC_ShieldLauncher</li> -->
+      <li>DMSAC_APS</li>
+    </abilities>
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_BaseKrepostKind">

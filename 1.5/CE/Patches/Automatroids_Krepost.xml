@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DMS_Mech_Krepost"]/comps/li[@Class="DMS.CompPropertiesMultipleTurretGun"]/subTurrets/li[ID="forward machinegun"]/turret</xpath>
+		<value>
+			<turret>DMS_Tarbosaurus_SubMachineGun</turret>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DMS_Mech_Krepost"]/comps/li[@Class="DMS.CompPropertiesMultipleTurretGun"]/subTurrets/li[ID="top machinegun"]/turret</xpath>
+		<value>
+			<turret>DMS_Krepost_KordMG</turret>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationSequence">
 		<operations>
 			<!-- ========== PawnKind Patches ========== -->
@@ -60,7 +74,7 @@
 			
 			
 
-			<!-- ======Tarbosaurus (mech boss1)======-->
+			<!-- ======Krepost (mech boss1)======-->
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="DMS_Mech_Krepost"]/statBases/ShootingAccuracyPawn</xpath>
 				<value>

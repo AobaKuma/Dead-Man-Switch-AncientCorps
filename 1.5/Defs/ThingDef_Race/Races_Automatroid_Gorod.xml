@@ -104,6 +104,38 @@
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_BaseGorodKind">
+    <defName>DMS_Mech_Gorod_Cornetist</defName>
+    <label>gorod cornetist</label>
+    <combatPower>120</combatPower>
+    <maxPerGroup>10</maxPerGroup>
+    <weaponTags Inherit="False">
+			<li>DMS_VladimirovMachineGun</li>
+			<li>DMS_AerialAutocannon</li>
+    </weaponTags>
+    <lifeStages Inherit="false">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/gorod_AT</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/gorod_AT</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>DMSAC_ATGMLauncher</li>
+    </abilities>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="DMS_BaseGorodKind">
     <defName>DMS_Mech_Gorod_Gunner</defName>
     <label>gorod gunner</label>
     <combatPower>120</combatPower>
@@ -112,6 +144,25 @@
 			<li>DMS_VladimirovMachineGun</li>
 			<li>DMS_AerialAutocannon</li>
     </weaponTags>
+    <lifeStages Inherit="false">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/gorod_MG</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/gorod_MG</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <extraSkillLevels>16</extraSkillLevels>
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_BaseGorodKind">

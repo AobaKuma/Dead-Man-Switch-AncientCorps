@@ -47,7 +47,7 @@ namespace AncientCorps
                 float num = ArcHeightFactor * GenMath.InverseParabola(base.DistanceCoveredFraction);
                 Vector3 drawPos = DrawPos;
                 Vector3 vector = drawPos + new Vector3(0f, 0f, 1f) * num;
-                compAfterBurner.ThrowExhaust(vector + LookTowards.normalized * 0.5f, Progress);
+                compAfterBurner.ThrowExhaust(vector + LookTowards.normalized * 0.05f, Progress);
             }
         }
     }

@@ -73,6 +73,7 @@
 				<xpath>Defs/PawnKindDef[
 					defName="DMS_Mech_Gorod" or
 					defName="DMS_Mech_Gorod_Gunner" or
+					defName="DMS_Mech_Gorod_Cornetist" or
 					defName="DMS_Mech_Gorod_Grenader"
 					]</xpath>
 				<value>

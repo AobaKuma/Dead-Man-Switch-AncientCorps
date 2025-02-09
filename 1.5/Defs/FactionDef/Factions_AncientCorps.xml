@@ -69,6 +69,7 @@
           <DMS_Mech_Molot_Sweeper>10</DMS_Mech_Molot_Sweeper>
           <DMS_Mech_Molot_Grinder>2</DMS_Mech_Molot_Grinder>
           <DMS_Mech_Gorod_Gunner>2</DMS_Mech_Gorod_Gunner>
+          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
           <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
           <DMS_Mech_Gorod_Grenader>1</DMS_Mech_Gorod_Grenader>
         </options>
@@ -83,6 +84,7 @@
           <DMS_Mech_Gorod_Gunner>6</DMS_Mech_Gorod_Gunner>
           <DMS_Mech_Molot_Sweeper>10</DMS_Mech_Molot_Sweeper>
           <DMS_Mech_Molot_Grinder>6</DMS_Mech_Molot_Grinder>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
         </options>
       </li>
       <li>
@@ -92,6 +94,7 @@
           <DMS_Mech_Molot>10</DMS_Mech_Molot>
           <DMS_Mech_Molot_Sweeper>10</DMS_Mech_Molot_Sweeper>
           <DMS_Mech_Molot_Grinder>6</DMS_Mech_Molot_Grinder>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
           <DMS_Mech_Gorod_Grenader>4</DMS_Mech_Gorod_Grenader>
           <DMS_Mech_Gorod_Gunner>6</DMS_Mech_Gorod_Gunner>
           <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
@@ -103,8 +106,9 @@
         <kindDef>Combat</kindDef>
         <commonality>10</commonality>
         <options>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
           <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
-          <DMS_Mech_Krepost_Sweeper>10</DMS_Mech_Krepost_Sweeper>
+          <DMS_Mech_Krepost_Sweeper>3</DMS_Mech_Krepost_Sweeper>
         </options>
       </li>
     </pawnGroupMakers>

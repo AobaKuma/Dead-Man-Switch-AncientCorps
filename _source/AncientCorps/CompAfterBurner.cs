@@ -36,17 +36,6 @@ namespace AncientCorps
         {
             if (parent.Position.ShouldSpawnMotesAt(parent.MapHeld))
             {
-                //if (originVector == Vector3.zero)
-                //{
-                //    FieldInfo origin = typeof(Projectile).GetField("origin", BindingFlags.NonPublic | BindingFlags.Instance);
-                //    originVector = (Vector3)origin.GetValue(projectile);
-                //}
-                //if (destinationVector == Vector3.zero)
-                //{
-                //    FieldInfo destination = typeof(Projectile).GetField("destination", BindingFlags.NonPublic | BindingFlags.Instance);
-                //    destinationVector = (Vector3)destination.GetValue(projectile);
-                //}
-
                 if (Props.ExhaustFleck != null)
                 {
                     FleckCreationData dataStatic = FleckMaker.GetDataStatic(drawPos, Projectile.MapHeld, Props.ExhaustFleck);

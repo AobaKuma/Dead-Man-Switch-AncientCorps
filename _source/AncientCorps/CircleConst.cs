@@ -7,7 +7,7 @@ namespace AncientCorps
     {
         public static Vector3 GetAngle(float ang)
         {
-            return circleAngleVector[(int)(ang / 10f)];
+            return circleAngleVector[(int)((Mathf.Abs(ang %= 360)) / 10f)];
         }
         public static readonly Vector3[] circleAngleVector = new Vector3[]
         { // x , 0 , y       
