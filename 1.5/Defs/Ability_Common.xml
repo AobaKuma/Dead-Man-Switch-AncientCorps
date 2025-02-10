@@ -110,7 +110,7 @@
 			<verbClass>DMS.Verb_CastAbilityArcSprayProjectile</verbClass>
 			<defaultProjectile>DMSAC_Bullet_S8Rocket</defaultProjectile>
 			<warmupTime>3</warmupTime>
-			<minRange>9.9</minRange>
+			<minRange>19.9</minRange>
 			<range>44.9</range>
 			<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
 			<sprayWidth>3</sprayWidth>

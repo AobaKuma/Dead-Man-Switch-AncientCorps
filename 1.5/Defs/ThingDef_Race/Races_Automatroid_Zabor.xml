@@ -23,7 +23,7 @@
       <mechWeightClass>Heavy</mechWeightClass>
     </race>
     <comps>
-		  <!-- <li Class="DMS.CompProperties_VehicleWeapon">
+		  <li Class="DMS.CompProperties_VehicleWeapon">
         <drawData>
           <dataEast>
             <offset>(0.2,0,-0.3)</offset>
@@ -41,7 +41,7 @@
         </drawData>
 			  <turretRotationFollowPawn>true</turretRotationFollowPawn>			  
         <rotationSmoothTime>0.12</rotationSmoothTime>
-      </li> -->
+      </li>
     </comps>
     <modExtensions>
       <li Class="DMS.MechWeaponExtension">
