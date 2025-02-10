@@ -48,7 +48,7 @@
 				<defaultProjectile>Bullet_DMS_LightMachineGun</defaultProjectile>
 				<warmupTime>1.7</warmupTime>
 				<range>29.9</range>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>5</burstShotCount>
 				<soundCast>DMS_MachineGunLight_Shot</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
@@ -275,7 +275,7 @@
 				<range>29.9</range>
 				<forcedMissRadius>2</forcedMissRadius>
 				<burstShotCount>3</burstShotCount>
-				<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 				<soundCast>Shot_IncendiaryLauncher</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>14</muzzleFlashScale>

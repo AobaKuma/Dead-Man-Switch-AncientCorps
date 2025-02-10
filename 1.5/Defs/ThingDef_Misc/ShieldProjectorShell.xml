@@ -7,7 +7,7 @@
       <texPath>Things/Projectiles/DMS_9M133Missile/projectile</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <drawSize>1.5</drawSize>
+      <drawSize>1.25</drawSize>
     </graphicData>
     <thingClass>AncientCorps.Projectile_Parabola</thingClass>
     <projectile>
@@ -41,6 +41,56 @@
           <points>
             <li>(0,5)</li>
             <li>(0.5,2)</li>
+            <li>(0.9,1)</li>
+            <li>(1,0.5)</li>
+          </points>
+        </SmokeCurve>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>DMSAC_Bullet_S8Rocket</defName>
+    <label>swarm rocket</label>
+    <graphicData>
+      <texPath>Things/Projectiles/DMS_S8Rocket/projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.25</drawSize>
+    </graphicData>
+    <thingClass>AncientCorps.Projectile_Parabola</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <speed>48</speed>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <explosionRadius>1.9</explosionRadius>
+      <explosionChanceToStartFire>0.8</explosionChanceToStartFire>
+      <damageAmountBase>80</damageAmountBase>
+      <flyOverhead>true</flyOverhead>
+      <explosionRadiusDisplayPadding>3</explosionRadiusDisplayPadding>
+      <arcHeightFactor>3</arcHeightFactor>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_Rocket</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
+    <comps>
+      <li Class="AncientCorps.CompProperties_AfterBurner">
+        <lifeTime>30</lifeTime>
+        <ExhaustFleck>DMS_Fleck_RocketFlame</ExhaustFleck>
+        <ExhaustCurve>
+          <points>
+            <li>(0,5)</li>
+            <li>(0.15,4)</li>
+            <li>(0.5,3)</li>
+            <li>(0.75,0)</li>
+          </points>
+        </ExhaustCurve>
+        <SmokeFleck>DMS_Fleck_RocketSmokeTrail</SmokeFleck>
+        <SmokeCurve>
+          <points>
+            <li>(0,1)</li>
+            <li>(0.5,1)</li>
             <li>(0.9,1)</li>
             <li>(1,0.5)</li>
           </points>
@@ -87,10 +137,9 @@
         <SmokeFleck>DMS_Fleck_RocketSmokeTrail</SmokeFleck>
         <SmokeCurve>
           <points>
-            <li>(0,5)</li>
-            <li>(0.5,2)</li>
-            <li>(0.9,1)</li>
-            <li>(1,0.5)</li>
+            <li>(0,2)</li>
+            <li>(0.5,1)</li>
+            <li>(1,0.25)</li>
           </points>
         </SmokeCurve>
       </li>

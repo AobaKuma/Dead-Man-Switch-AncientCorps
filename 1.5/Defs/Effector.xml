@@ -1,3 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>DMS_Fleck_RocketSmokeTrail</defName>
+        <graphicData>
+            <texPath>Things/Mote/Smoke</texPath>
+            <shaderType>Transparent</shaderType>
+            <color>(1, 1, 1,0.3)</color>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.14</fadeInTime>
+        <solidTime>0.5</solidTime>
+        <fadeOutTime>5</fadeOutTime>
+        <growthRate>0.5</growthRate>
+    </FleckDef>
+
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>DMS_Fleck_RocketFlame</defName>
+        <graphicData>
+            <texPath>Things/Mote/FireGlow</texPath>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.01</fadeInTime>
+        <solidTime>0.2</solidTime>
+        <fadeOutTime>0.05</fadeOutTime>
+        <growthRate>-5</growthRate>
+    </FleckDef>
 </Defs>

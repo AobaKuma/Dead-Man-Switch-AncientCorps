@@ -388,11 +388,12 @@
                     <li>CE_AI_Suppressive</li>
                     <li>NoSwitch</li>
                     <li>V_Gatling30mm</li>
+                    <li>DMS_Gsh30Gatlinggun</li>
                     <li>DMS_MechWeaponUltraHeavy</li>
                 </weaponTags>
             </li>
             <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_GAU8Gatlinggun"]/verbs</xpath>
+                <xpath>Defs/ThingDef[defName="DMS_Gsh30Gatlinggun"]/verbs</xpath>
                 <value>
                     <verbs>
                         <li Class="CombatExtended.VerbPropertiesCE">

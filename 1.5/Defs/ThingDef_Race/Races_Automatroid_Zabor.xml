@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseAutomatroidHumanRace">
+    <defName>DMS_Mech_Zabor</defName>
+    <label>zabor</label>
+    <description>6M29U / BR4G "Zabor", NATO nicknamed "Incisor". It is an armored automatroid with extra frontial armour, designed as a cost-effective and durable mechanical infantry. Thanks to its outstanding systems engineering, modernized variants of this model continue to serve in many Midworld militaries today. It has also become a highly sought-after model for replication and production by local warlords and pirates in the Rimworld.</description>
+    <statBases>
+      <MoveSpeed>2.7</MoveSpeed><!--移動速度-->
+      <AimingDelayFactor>0.9</AimingDelayFactor>
+      <StaggerDurationFactor>0.25</StaggerDurationFactor>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp><!--銳抗-->
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt><!--鈍抗-->
+      <ArmorRating_Heat>1.3</ArmorRating_Heat>  <!--能抗-->
+      <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">3</BandwidthCost>        <!--帶寬消耗-->
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge><!--充電/培養時產出廢料-->
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>10</mechFixedSkillLevel>
+      <body>DMS_Humanoid_Soldat</body>
+      <nameGenerator>DMS_AncientMechHeavy</nameGenerator>
+      <baseBodySize>2.1</baseBodySize>
+      <baseHealthScale>2.2</baseHealthScale>
+      <mechWeightClass>Heavy</mechWeightClass>
+    </race>
+    <comps>
+		  <!-- <li Class="DMS.CompProperties_VehicleWeapon">
+        <drawData>
+          <dataEast>
+            <offset>(0.2,0,-0.3)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.2,0,0.6)</offset>
+            <layer>-20</layer>
+          </dataWest>
+          <dataSouth>
+              <offset>(-0.7,0,0.2)</offset>
+          </dataSouth>
+          <dataNorth> 
+              <offset>(0.7,0,0.2)</offset>
+          </dataNorth>
+        </drawData>
+			  <turretRotationFollowPawn>true</turretRotationFollowPawn>			  
+        <rotationSmoothTime>0.12</rotationSmoothTime>
+      </li> -->
+    </comps>
+    <modExtensions>
+      <li Class="DMS.MechWeaponExtension">
+        <EnableWeaponFilter>true</EnableWeaponFilter>
+        <UsableWeaponTags> 
+          <li>SimpleGun</li>
+          <li MayRequire="vanillaexpanded.vwehw">HeavyGun</li><!--重型武器拓展-->
+          <li>DMS_MechWeaponLongRifle</li>
+          <li>DMS_MechWeaponLight</li>
+          <li>A_BR_LongRifle</li>
+          <li>GrenadeSmoke</li>
+          <li>A_MG_Heavy</li>
+          <li>A_SuppressWeapon</li>
+          <li>ShortShots</li>
+        </UsableWeaponTags>
+        <EnableTechLevelFilter>true</EnableTechLevelFilter>
+        <UsableTechLevels>
+          <li>Industrial</li>
+        </UsableTechLevels>
+        <BypassUsableWeapons/>
+      </li>
+    </modExtensions>
+    <butcherProducts>
+      <DMS_ChunkSlag>1</DMS_ChunkSlag>
+      <Steel>30</Steel>
+    </butcherProducts>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseAncientAutomatroidKind" Name="DMS_BaseZaborKind">
+    <defName>DMS_Mech_Zabor</defName>
+    <label>zabor</label>
+    <race>DMS_Mech_Zabor</race>
+    <nameMaker>DMS_AncientMechHeavy</nameMaker>
+    <isFighter>true</isFighter>
+    <combatPower>300</combatPower>
+    <maxPerGroup>4</maxPerGroup>
+    <weaponMoney>2000~4000</weaponMoney>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/zabor</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/zabor</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags Inherit="False">
+      <li>H_Gatling127mm</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <!-- 棺木，帶溫壓火箭打擊技能的 -->
+  <PawnKindDef ParentName="DMS_BaseZaborKind">
+    <defName>DMS_Mech_Zabor_Grenader</defName>
+    <label>shkatulka</label>
+    <combatPower>400</combatPower>
+    <weaponTags Inherit="False">
+			<li>DMS_AtlantGrenadeLauncher</li>
+			<li>A_MG_GrenadeLauncher</li>
+    </weaponTags>
+    <lifeStages Inherit="false">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/zabor_RP</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/zabor_RP</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>DMSAC_Rocket</li>
+    </abilities>
+  </PawnKindDef>
+</Defs>

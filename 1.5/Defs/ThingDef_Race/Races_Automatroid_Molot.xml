@@ -8,9 +8,9 @@
     <description>A medium-sized automatroid capable of equipping and utilizing light to medium infantry weapons. Designed in an era marked by the rapid increase in armored unmanned systems, it was conceived as an infantry combat platform within armored units. It boasts excellent combat capabilities, a simple structure, and superior weapon-loading capacity.</description>
     <statBases>
       <StaggerDurationFactor>0.25</StaggerDurationFactor>
-      <MoveSpeed>3.6</MoveSpeed>                                                              <!--移動速度-->
-      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>                                            <!--護甲-->
-      <ArmorRating_Sharp>0.61</ArmorRating_Sharp>
+      <MoveSpeed>2.55</MoveSpeed>                                                              <!--移動速度-->
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>                                            <!--護甲-->
+      <ArmorRating_Sharp>0.31</ArmorRating_Sharp>
       <ArmorRating_Heat>1.0</ArmorRating_Heat>
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>                 <!--帶寬消耗-->
       <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge> <!--充電/培養時產出廢料-->
@@ -31,15 +31,14 @@
           <li MayRequire="vanillaexpanded.vwehw">HeavyGun</li><!--重型武器拓展-->
           <li>DMS_MechWeaponLight</li>
           <li>DMS_MechWeaponMeduim</li>
-          <li>DMS_MechWeaponHeavy</li>
           <li>DMS_MechWeaponLongRifle</li>
           <li>A_SuppressWeapon</li>
           <li>DMS_Gun_Recoilless</li>
           <li>DMS_PKM</li>
           <li>DMS_KordMachineGun</li>
-			    <li>DMS_VladimirovMachineGun</li>
-          <li>DMS_AtlantGrenadeLauncher</li>
-          <li>A_MG_GrenadeLauncher</li>
+          <li>A_SG_LongRifle</li>
+          <li>A_BR_LongRifle</li>
+			    <li>DMS_AtlantGrenadeLauncher</li>
         </UsableWeaponTags>
         <BypassUsableWeapons/>
         <EnableTechLevelFilter>true</EnableTechLevelFilter>
@@ -60,7 +59,7 @@
     <race>DMS_Mech_Molot</race>
     <nameMaker>DMS_AncientMechStandard</nameMaker>
     <isFighter>true</isFighter>
-    <combatPower>50</combatPower>
+    <combatPower>150</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -80,6 +79,7 @@
       </li>
     </lifeStages>
     <weaponTags>
+      <li>A_BR_LongRifle</li>
       <li>DMS_MechWeaponMeduim</li>
     </weaponTags>
   </PawnKindDef>
@@ -87,27 +87,26 @@
   <PawnKindDef ParentName="DMS_BaseMolotKind">
     <defName>DMS_Mech_Molot_Sweeper</defName>
     <label>molot sweeper</label>
-    <combatPower>70</combatPower>
+    <combatPower>150</combatPower>
     <weaponTags Inherit="False">
       <li>DMS_PKM</li>
-      <li>DMS_KordMachineGun</li>
     </weaponTags>
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_BaseMolotKind">
     <defName>DMS_Mech_Molot_Grinder</defName>
     <label>molot grinder</label>
-    <combatPower>90</combatPower>
+    <combatPower>150</combatPower>
     <weaponMoney>1600~9999</weaponMoney>
     <weaponTags Inherit="False">
-			<li>DMS_VladimirovMachineGun</li>
+			<li>A_SG_LongRifle</li>
     </weaponTags>
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_BaseMolotKind">
     <defName>DMS_Mech_Molot_Grenader</defName>
     <label>molot grenader</label>
-    <combatPower>120</combatPower>
+    <combatPower>240</combatPower>
     <weaponTags Inherit="False">
 			<li>DMS_AtlantGrenadeLauncher</li>
     </weaponTags>

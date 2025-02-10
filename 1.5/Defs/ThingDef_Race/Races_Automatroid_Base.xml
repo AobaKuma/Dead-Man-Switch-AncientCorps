@@ -97,6 +97,7 @@
     <allowInMechClusters>false</allowInMechClusters>    <!--是否出現在機械集群-->
     <isFighter>true</isFighter>
     <destroyGearOnDrop>true</destroyGearOnDrop>
+    <canUseAvoidGrid>true</canUseAvoidGrid>
     <canStrip>false</canStrip>
     <factionHostileOnDeath>false</factionHostileOnDeath>
     <factionHostileOnKill>false</factionHostileOnKill>

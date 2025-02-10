@@ -49,7 +49,7 @@
 				<defaultProjectile>Bullet_DMS_HeavyMachineGun</defaultProjectile>
 				<warmupTime>3</warmupTime>
 				<range>39.9</range>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>5</burstShotCount>
 				<soundCast>DMS_MachineGunHeavy_Shot</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
@@ -120,7 +120,7 @@
 				<defaultProjectile>Bullet_DMS_VladimirovMG</defaultProjectile>
 				<warmupTime>3</warmupTime>
 				<range>44.9</range>
-				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>6</burstShotCount>
 				<soundCast>DMS_AC_Shot_MachineGunSound</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -205,7 +205,7 @@
 				<defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
 				<warmupTime>2.8</warmupTime>
 				<range>34.9</range>
-				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>Shot_Autocannon</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -275,7 +275,7 @@
 				<warmupTime>3</warmupTime>
 				<minRange>8</minRange>
 				<range>39.9</range>
-				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 				<burstShotCount>18</burstShotCount>
 				<soundCast>Shot_TurretSniper</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>

@@ -6,7 +6,7 @@
     <label>Krepost</label>
     <description>6M41 / BR-6 "Krepost" NATO nicknamed "TankHead". Huge and bulky walker, used as a bridgehead and mobile battery to maintain frontal battlefield firepower, Krepost is equipped with several active protection system and reactive armors to resist incoming projectiles. Even if the shields are exhausted, its huge size and weapon systems are sufficient at holding off incoming enemies until reinforcements arrive.</description>
     <statBases>
-      <MoveSpeed>3.7</MoveSpeed>
+      <MoveSpeed>2.7</MoveSpeed>
       <ArmorRating_Sharp>1.8</ArmorRating_Sharp><!--銳抗-->
       <ArmorRating_Blunt>1.2</ArmorRating_Blunt><!--鈍抗-->
       <ArmorRating_Heat>2</ArmorRating_Heat>  <!--能抗-->
@@ -241,7 +241,7 @@
     <race>DMS_Mech_Krepost</race>
     <nameMaker>DMS_AncientMechHeavy</nameMaker>
     <isFighter>true</isFighter>
-    <combatPower>500</combatPower>                                               <!--威脅點數-->
+    <combatPower>1000</combatPower>                                               <!--威脅點數-->
     <maxPerGroup>2</maxPerGroup>                                                 <!--單個集群內的數量-->
     <isBoss>true</isBoss>
     <lifeStages>                                                                 <!--身體圖片-->
@@ -278,7 +278,6 @@
     </weaponTags>
     <weaponMoney>6730~9999</weaponMoney>
     <abilities>
-      <!-- <li>DMSAC_ShieldLauncher</li> -->
       <li>DMSAC_APS</li>
     </abilities>
   </PawnKindDef>
@@ -286,11 +285,10 @@
   <PawnKindDef ParentName="DMS_BaseKrepostKind">
     <defName>DMS_Mech_Krepost_Sweeper</defName>
     <label>krepost sweeper</label>
-    <combatPower>450</combatPower>
+    <combatPower>1200</combatPower>
     <weaponTags Inherit="False">
 			<li>2A38M</li>
-			<li>DMS_DragoonGun</li>
-      <li>DMS_VladimirovMachineGun</li>
+			<li>DMS_Gsh30Gatlinggun</li>
     </weaponTags>
   </PawnKindDef>
 </Defs>
