@@ -258,8 +258,8 @@
 			</researchPrerequisites>
 		</recipeMaker>
 		<costList>
-			<Tungsteel>190</Tungsteel>
-			<ComponentStamped>8</ComponentStamped>
+			<Tungsteel>240</Tungsteel>
+			<ComponentStamped>15</ComponentStamped>
 		</costList>
 		<verbs>
 			<li>

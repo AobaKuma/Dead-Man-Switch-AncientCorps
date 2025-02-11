@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- ========== DMS_Mech_Gorod Patches ========== -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_ATGMLauncher"]/comps/li[@Class="CompProperties_AbilityLaunchProjectile"]/projectileDef</xpath>
+				<value>
+					<projectileDef>DMSAC_Bullet_9M133_HEAT</projectileDef>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/defaultProjectile</xpath>
+				<value>
+					<defaultProjectile>Bullet_50mmRocket_HE</defaultProjectile>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

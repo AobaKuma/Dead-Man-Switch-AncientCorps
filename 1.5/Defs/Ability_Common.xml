@@ -30,6 +30,9 @@
 				<fleckDef>DMS_SplashedPieces_Center</fleckDef>
 				<interceptedFleckDef>DMS_Fleck_RocketFlame</interceptedFleckDef>
 				<soundIntercepted>Explosion_Thump</soundIntercepted>
+				<interceptThings>
+					<li>Bullet_CataphractCentipede_FY</li>
+				</interceptThings>
 			</li>
 		</comps>
 	</AbilityDef>
@@ -71,7 +74,7 @@
 		<description>Launch an anti tank missile.</description>
 		<iconPath>UI/Ability/Smoke</iconPath>
 		<aiCanUse>true</aiCanUse>
-		<cooldownTicksRange>3000~3600</cooldownTicksRange>
+		<cooldownTicksRange>24000~36000</cooldownTicksRange>
 		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
 		<charges>2</charges>
 		<cooldownPerCharge>true</cooldownPerCharge>
