@@ -67,6 +67,7 @@
 				<burstShotCount>1</burstShotCount>
 				<soundCast>Explosion_EMP</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
+				<forcedMissRadius>1</forcedMissRadius>
 				<recoilPattern>Mounted</recoilPattern>
 				<targetParams>
 					<canTargetMechs>true</canTargetMechs>

@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: gorod -->
+  <!-- EN: BR-4 "Gorod" -->
   <DMS_Mech_Gorod.label>BR-4 "城邦"</DMS_Mech_Gorod.label>
   
-  <!-- EN: cornetist -->
+  <!-- EN: BR-4/UKS "Cornetist" -->
   <DMS_Mech_Gorod_Cornetist.label>BR-4/UKS "短號手"</DMS_Mech_Gorod_Cornetist.label>
   
-  <!-- EN: piper -->
+  <!-- EN: BR-4/HR "Piper" -->
   <DMS_Mech_Gorod_Gunner.label>BR-4/HR "吹笛人"</DMS_Mech_Gorod_Gunner.label>
   
-  <!-- EN: organist -->
+  <!-- EN: BR-4/MMR "Organist" -->
   <DMS_Mech_Gorod_Organist.label>BR-4/MMR "風琴手"</DMS_Mech_Gorod_Organist.label>
   
 </LanguageData>

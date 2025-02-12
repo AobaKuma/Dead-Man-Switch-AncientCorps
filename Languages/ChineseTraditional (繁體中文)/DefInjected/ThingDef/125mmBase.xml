@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 125mm 3OF26 cannon shell (HE) -->
+  <Ammo_125mmTC_HE.label>125mm毫米加農砲彈(HE)</Ammo_125mmTC_HE.label>
+  <!-- EN: 
+\n\nHigh-explosive:
+\nThe high-explosive charge detonates on impact, scattering lethal shell fragments in a large area.
+\n\n使用者:
+\n\nHigh-explosive:
+\nThe high-explosive charge detonates on impact, scattering lethal shell fragments in a large area.
+\n\n使用者: -->
+  
+  <!-- EN: 125mm 3BK18M cannon shell (HEAT) -->
+  <Ammo_Ru125mmTC_HEAT.label>125mm毫米加農砲彈(HEAT)</Ammo_Ru125mmTC_HEAT.label>
+  <!-- EN: 
+\n\nHigh-explosive anti-tank:
+\nShaped charge warhead. Detonates on impact, creating a super-heated stream of molten metal that punches through enemy armor.
+\n\n使用者:
+\n\nHigh-explosive anti-tank:
+\nShaped charge warhead. Detonates on impact, creating a super-heated stream of molten metal that punches through enemy armor.
+\n\n使用者: -->
+  
+  <!-- EN: 125mm 3BM60 cannon shell (APFSDS) -->
+  <Ammo_Ru125mmTC_Sabot.label>125mm毫米加農砲彈(APFSDS)</Ammo_Ru125mmTC_Sabot.label>
+  <!-- EN: 
+\n\nArmor-piercing discarding sabot:
+\nUses a discarding sabot to fire an undersized projectile at higher muzzle velocities, greatly improving armor penetration.
+\n\n使用者:
+\n\nArmor-piercing discarding sabot:
+\nUses a discarding sabot to fire an undersized projectile at higher muzzle velocities, greatly improving armor penetration.
+\n\n使用者: -->
+  
+  <!-- EN: 125mm 3BM59 cannon shell (APFSDS) -->
+  <Ammo_Ru125mmTCADV_Sabot.label>125mm毫米先進加農砲彈(APFSDS)</Ammo_Ru125mmTCADV_Sabot.label>
+  <!-- EN: 
+\n\nArmor-piercing discarding sabot:
+\nUses a discarding sabot to fire an undersized projectile at higher muzzle velocities, greatly improving armor penetration.
+\n\n使用者:
+\n\nArmor-piercing discarding sabot:
+\nUses a discarding sabot to fire an undersized projectile at higher muzzle velocities, greatly improving armor penetration.
+\n\n使用者: -->
+  
+  <!-- EN: 125mm 3OF26 cannon shell (HE) -->
+  <Bullet_125mmTC_HE.label>125mm毫米加農砲彈(HE)</Bullet_125mmTC_HE.label>
+  
+  <!-- EN: 125mm 3BK18M cannon shell (HEAT) -->
+  <Bullet_Ru125mmTC_HEAT.label>125mm毫米加農砲彈(HEAT)</Bullet_Ru125mmTC_HEAT.label>
+  
+  <!-- EN: 125mm 3BM60 cannon shell (APFSDS) -->
+  <Bullet_Ru125mmTC_Sabot.label>125mm毫米加農砲彈(APFSDS)</Bullet_Ru125mmTC_Sabot.label>
+  
+  <!-- EN: 125mm 3BM59 cannon shell (APFSDS) -->
+  <Bullet_Ru125mmTCADV_Sabot.label>125mm毫米先進加農砲彈(APFSDS)</Bullet_Ru125mmTCADV_Sabot.label>
+  
+  <!-- EN: Fragments -->
+  <Fragment_APFSDS.label>破片</Fragment_APFSDS.label>
+  
+</LanguageData>

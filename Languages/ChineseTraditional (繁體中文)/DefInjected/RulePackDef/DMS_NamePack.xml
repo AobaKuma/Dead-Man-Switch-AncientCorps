@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN:
     <li>r_name(p=6)->[namefile]-[Code]</li>
     <li>r_name->[exoticname]-[Code]</li>
@@ -58,7 +58,7 @@
     <li>Callsign->恩尼格</li>
     <li>Callsign->機關</li>
   </DMS_AncientArmy.rulePack.rulesStrings>
-
+  
   <!-- EN:
     <li>r_name->[BrigadeNum0][BrigadeNum1][BrigadeNum2] [BrigadeType] Division</li>
     <li>BrigadeType->Battle</li>
@@ -134,7 +134,7 @@
     <li>BrigadeNum2->8</li>
     <li>BrigadeNum2->9</li>
   </DMS_AncientFaction.rulePack.rulesStrings>
-
+  
   <!-- EN:
     <li>r_name->[MechType] [BrigadeNum0]-[BrigadeNum1] "[Callsign]"</li>
     <li>MechType->Pivot</li>
@@ -231,7 +231,7 @@
     <li>Callsign->恩尼格</li>
     <li>Callsign->機關</li>
   </DMS_AncientMechHeavy.rulePack.rulesStrings>
-
+  
   <!-- EN:
     <li>r_name->[MechType] [BrigadeNum0]-[BrigadeNum1] "[Callsign][Code]"</li>
     <li>MechType->Standard</li>
@@ -333,5 +333,5 @@
     <li>Callsign->豹貓</li>
     <li>Callsign->骨架</li>
   </DMS_AncientMechStandard.rulePack.rulesStrings>
-
+  
 </LanguageData>

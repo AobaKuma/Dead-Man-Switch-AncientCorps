@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: make 125mm 3OF26 HE cannon shells x5 -->
+  <MakeAmmo_125mmTC_HE.label>製作125毫米榴彈x5</MakeAmmo_125mmTC_HE.label>
+  <!-- EN: Craft 5 125mm 3OF26 HE cannon shells. -->
+  <MakeAmmo_125mmTC_HE.description>製作125毫米榴彈</MakeAmmo_125mmTC_HE.description>
+  <!-- EN: Making 5 125mm 3OF26 HE cannon shells. -->
+  <MakeAmmo_125mmTC_HE.jobString>製作125毫米榴彈中</MakeAmmo_125mmTC_HE.jobString>
+  
+  <!-- EN: make 125mm 3BK18M HEAT cannon shells x5 -->
+  <MakeAmmo_Ru125mmTC_HEAT.label>製作125毫米破甲彈x5</MakeAmmo_Ru125mmTC_HEAT.label>
+  <!-- EN: Craft 5 125mm 3BK18M HEAT cannon shells. -->
+  <MakeAmmo_Ru125mmTC_HEAT.description>製作125毫米破甲彈</MakeAmmo_Ru125mmTC_HEAT.description>
+  <!-- EN: Making 5 125mm 3BK18M HEAT cannon shells. -->
+  <MakeAmmo_Ru125mmTC_HEAT.jobString>製作125毫米破甲彈中</MakeAmmo_Ru125mmTC_HEAT.jobString>
+  
+  <!-- EN: make 125mm 3BM60 APFSDS cannon shells x5 -->
+  <MakeAmmo_Ru125mmTC_Sabot.label>製作125毫米脫殼穿甲彈x5</MakeAmmo_Ru125mmTC_Sabot.label>
+  <!-- EN: Craft 5 125mm 3BM60 APFSDS cannon shells. -->
+  <MakeAmmo_Ru125mmTC_Sabot.description>製作125毫米脫殼穿甲彈</MakeAmmo_Ru125mmTC_Sabot.description>
+  <!-- EN: Making 5 125mm 3BM60 APFSDS cannon shells. -->
+  <MakeAmmo_Ru125mmTC_Sabot.jobString>製作125毫米脫殼穿甲彈中</MakeAmmo_Ru125mmTC_Sabot.jobString>
+  
+  <!-- EN: make 125mm 3BM59 APFSDS cannon shells x5 -->
+  <MakeAmmo_Ru125mmTCADV_Sabot.label>製作125毫米先進脫殼穿甲彈x5</MakeAmmo_Ru125mmTCADV_Sabot.label>
+  <!-- EN: Craft 5 125mm 3BM59 APFSDS cannon shells. -->
+  <MakeAmmo_Ru125mmTCADV_Sabot.description>製作125毫米先進脫殼穿甲彈</MakeAmmo_Ru125mmTCADV_Sabot.description>
+  <!-- EN: Making 5 125mm 3BM59 APFSDS cannon shells. -->
+  <MakeAmmo_Ru125mmTCADV_Sabot.jobString>製作125毫米先進脫殼穿甲彈中</MakeAmmo_Ru125mmTCADV_Sabot.jobString>
+  
+</LanguageData>

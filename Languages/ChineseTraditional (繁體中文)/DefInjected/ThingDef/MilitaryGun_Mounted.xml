@@ -6,8 +6,12 @@
   
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.label>電磁反制系統</DMS_Gun_ECMSystem.label>
-  <!-- EN: A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also neutralize enemy by igniting it. -->
-  <DMS_Gun_ECMSystem.description>一種掛載式脈衝能量武器，透過定向電磁幹擾使指向方位的電子設備失效。它在工作時會使目標產生高溫，因此也能透過點燃的方式來癱瘓敵人。</DMS_Gun_ECMSystem.description>
+  <!-- EN: A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it. -->
+  <DMS_Gun_ECMSystem.description>一種掛載式脈衝能量武器，透過定向電磁幹擾使指向方位的電子設備失效。在工作時會使目標產生高溫，因此也能透過點燃的方式來癱瘓敵人。</DMS_Gun_ECMSystem.description>
+  <!-- EN: barrel -->
+  <DMS_Gun_ECMSystem.tools.barrel.label>槍管</DMS_Gun_ECMSystem.tools.barrel.label>
+  <!-- EN: muzzle -->
+  <DMS_Gun_ECMSystem.tools.muzzle.label>槍口</DMS_Gun_ECMSystem.tools.muzzle.label>
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>ECM</DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>
   
@@ -15,7 +19,14 @@
   <DMS_Gun_KordTurret.label>科夫羅夫機槍</DMS_Gun_KordTurret.label>
   <!-- EN: A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements. -->
   <DMS_Gun_KordTurret.description>一種可靠的制式機槍，能夠有效的在遠距離交火中擊穿大部分中小型目標的裝甲並造成殺傷。</DMS_Gun_KordTurret.description>
+  <!-- EN: barrel -->
+  <DMS_Gun_KordTurret.tools.barrel.label>槍管</DMS_Gun_KordTurret.tools.barrel.label>
+  <!-- EN: muzzle -->
+  <DMS_Gun_KordTurret.tools.muzzle.label>槍口</DMS_Gun_KordTurret.tools.muzzle.label>
   <!-- EN: Kord HMG -->
+  <DMS_Gun_KordTurret.verbs.Verb_ShootCE.label>Kord</DMS_Gun_KordTurret.verbs.Verb_ShootCE.label>
+  
+  <!-- UNUSED -->
   <DMS_Gun_KordTurret.verbs.Verb_Shoot.label>Kord</DMS_Gun_KordTurret.verbs.Verb_Shoot.label>
   
 </LanguageData>

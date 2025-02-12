@@ -72,9 +72,7 @@
 				</value>
 			</li>
 			
-			
-
-			<!-- ======Krepost (mech boss1)======-->
+			<!-- ======Krepost (mech boss2)======-->
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="DMS_Mech_Krepost"]/statBases/ShootingAccuracyPawn</xpath>
 				<value>

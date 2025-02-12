@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: grenade round -->
-  <Bullet_DMS_AtlantLauncher.label>低速榴彈</Bullet_DMS_AtlantLauncher.label>
-  
-  <!-- EN: solid slug -->
-  <Bullet_DMS_CombatShotgun.label>金屬獨頭彈</Bullet_DMS_CombatShotgun.label>
-  
   <!-- EN: Atlant Grenade Launcher -->
   <DMS_AtlantGrenadeLauncher.label>阿蘭特榴彈機槍</DMS_AtlantGrenadeLauncher.label>
   <!-- EN: A fully automatic grenade launcher designed for handheld use, highly lethal against soft targets concealed behind cover. However, due to the intense recoil from continuous firing, it is typically not used in full-auto mode. -->
@@ -15,7 +9,12 @@
   <DMS_AtlantGrenadeLauncher.tools.stock.label>槍托</DMS_AtlantGrenadeLauncher.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_AtlantGrenadeLauncher.tools.barrel.label>槍管</DMS_AtlantGrenadeLauncher.tools.barrel.label>
+  <!-- EN: muzzle -->
+  <DMS_AtlantGrenadeLauncher.tools.muzzle.label>槍口</DMS_AtlantGrenadeLauncher.tools.muzzle.label>
   <!-- EN: Atlant Grenade Launcher -->
+  <DMS_AtlantGrenadeLauncher.verbs.Verb_ShootMortarCE.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_ShootMortarCE.label>
+  
+  <!-- UNUSED -->
   <DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>
   
   <!-- EN: Tula combat shotgun -->
@@ -26,7 +25,12 @@
   <DMS_KS23K.tools.stock.label>槍托</DMS_KS23K.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_KS23K.tools.barrel.label>槍管</DMS_KS23K.tools.barrel.label>
+  <!-- EN: muzzle -->
+  <DMS_KS23K.tools.muzzle.label>槍口</DMS_KS23K.tools.muzzle.label>
   <!-- EN: Tula combat shotgun -->
+  <DMS_KS23K.verbs.Verb_ShootCE.label>KS23K</DMS_KS23K.verbs.Verb_ShootCE.label>
+  
+  <!-- UNUSED -->
   <DMS_KS23K.verbs.Verb_Shoot.label>KS23K</DMS_KS23K.verbs.Verb_Shoot.label>
   
   <!-- EN: Mikhail Machinegun -->
@@ -37,7 +41,12 @@
   <DMS_PKM.tools.stock.label>槍托</DMS_PKM.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_PKM.tools.barrel.label>槍管</DMS_PKM.tools.barrel.label>
+  <!-- EN: muzzle -->
+  <DMS_PKM.tools.muzzle.label>槍口</DMS_PKM.tools.muzzle.label>
   <!-- EN: Mikhail Machinegun -->
+  <DMS_PKM.verbs.Verb_ShootCE.label>PKMB</DMS_PKM.verbs.Verb_ShootCE.label>
+  
+  <!-- UNUSED -->
   <DMS_PKM.verbs.Verb_Shoot.label>PKMB</DMS_PKM.verbs.Verb_Shoot.label>
   
   <!-- EN: Yekaterin Rifle -->
@@ -48,7 +57,12 @@
   <DMS_YekaterinRifle.tools.stock.label>槍托</DMS_YekaterinRifle.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_YekaterinRifle.tools.barrel.label>槍管</DMS_YekaterinRifle.tools.barrel.label>
+  <!-- EN: muzzle -->
+  <DMS_YekaterinRifle.tools.muzzle.label>槍口</DMS_YekaterinRifle.tools.muzzle.label>
   <!-- EN: Yekaterin Rifle -->
+  <DMS_YekaterinRifle.verbs.Verb_ShootCE.label>KSVK</DMS_YekaterinRifle.verbs.Verb_ShootCE.label>
+  
+  <!-- UNUSED -->
   <DMS_YekaterinRifle.verbs.Verb_Shoot.label>KSVK</DMS_YekaterinRifle.verbs.Verb_Shoot.label>
   
 </LanguageData>
