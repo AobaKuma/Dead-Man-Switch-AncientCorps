@@ -12,7 +12,7 @@
       <ArmorRating_Blunt>0.4</ArmorRating_Blunt>                                            <!--護甲-->
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
       <ArmorRating_Heat>1.0</ArmorRating_Heat>
-      <ShootingAccuracyPawn>0.9</ShootingAccuracyPawn>
+      <ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>                 <!--帶寬消耗-->
       <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge> <!--充電/培養時產出廢料-->
       <AimingDelayFactor>1.25</AimingDelayFactor>                                            <!--瞄準延遲-->

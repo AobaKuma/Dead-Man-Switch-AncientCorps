@@ -5,7 +5,7 @@
 	<AbilityDef>
 		<defName>DMSAC_APS</defName>
 		<label>active protection system</label>
-		<description>開啟主動防禦系統，在短時間內攔截鄰近的有害威脅。</description>
+		<description>Activate the active defense system to intercept nearby low-speed and explosive projectiles in a short period of time.</description>
 		<iconPath>UI/Ability/Grenade</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<cooldownTicksRange>16000~17200</cooldownTicksRange>
@@ -103,7 +103,7 @@
 	<AbilityDef>
 		<defName>DMSAC_Rocket</defName>
 		<label>rocket barrage</label>
-		<description>Launch a rocket barrage in a specific direction.</description>
+		<description>Launch a rocket barrage to a specific direction.</description>
 		<iconPath>UI/Ability/Strafing</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
