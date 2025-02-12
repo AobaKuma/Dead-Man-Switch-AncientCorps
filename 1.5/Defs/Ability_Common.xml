@@ -74,7 +74,7 @@
 		<description>Launch an anti tank missile.</description>
 		<iconPath>UI/Ability/Smoke</iconPath>
 		<aiCanUse>true</aiCanUse>
-		<cooldownTicksRange>24000~36000</cooldownTicksRange>
+		<cooldownTicksRange>60000~72000</cooldownTicksRange>
 		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
 		<charges>2</charges>
 		<cooldownPerCharge>true</cooldownPerCharge>
@@ -82,8 +82,9 @@
 			<defaultCooldownTime>1</defaultCooldownTime>
 			<verbClass>Verb_CastAbility</verbClass>
 			<onlyManualCast>false</onlyManualCast>
-			<range>49.9</range>
-			<warmupTime>2</warmupTime>
+			<minRange>9.9</minRange>
+			<range>29.9</range>
+			<warmupTime>4</warmupTime>
 			<soundCast>DMS_AC_Shot_GuidedMissile</soundCast>
 			<requireLineOfSight>true</requireLineOfSight>
 			<targetParams>
@@ -107,21 +108,20 @@
 		<aiCanUse>true</aiCanUse>
 		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
 		<warmupStartSound>TurretAcquireTarget</warmupStartSound>
-		<showOnCharacterCard>false</showOnCharacterCard>
-		<cooldownTicksRange>12000</cooldownTicksRange>
+		<showOnCharacterCard>true</showOnCharacterCard>
+		<cooldownTicksRange>60000~72000</cooldownTicksRange>
 		<verbProperties>
 			<verbClass>DMS.Verb_CastAbilityArcSprayProjectile</verbClass>
 			<defaultProjectile>DMSAC_Bullet_S8Rocket</defaultProjectile>
 			<warmupTime>3</warmupTime>
 			<minRange>19.9</minRange>
 			<range>44.9</range>
-			<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-			<sprayWidth>3</sprayWidth>
-			<sprayArching>6</sprayArching>
-			<sprayThicknessCells>3</sprayThicknessCells>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<sprayWidth>6</sprayWidth>
+			<sprayArching>10</sprayArching>
+			<sprayThicknessCells>1</sprayThicknessCells>
 			<sprayNumExtraCells>30</sprayNumExtraCells>
 			<burstShotCount>7</burstShotCount>
-				
 			<soundCast>RocketswarmLauncher_Fire</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>15</muzzleFlashScale>

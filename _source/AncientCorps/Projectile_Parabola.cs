@@ -37,6 +37,7 @@ namespace AncientCorps
         {
             base.Launch(launcher, origin, usedTarget, intendedTarget, hitFlags, preventFriendlyFire, equipment, targetCoverDef);
             compAfterBurner = this.TryGetComp<CompAfterBurner>();
+            compAfterBurner?.ThrowLaunchSmoke(origin, (origin - destination).ToAngleFlat() + 90);
         }
         public override void Tick()
         {
@@ -47,7 +48,7 @@ namespace AncientCorps
                 float num = ArcHeightFactor * GenMath.InverseParabola(base.DistanceCoveredFraction);
                 Vector3 drawPos = DrawPos;
                 Vector3 vector = drawPos + new Vector3(0f, 0f, 1f) * num;
-                compAfterBurner.ThrowExhaust(vector + LookTowards.normalized * 0.05f, Progress);
+                compAfterBurner.ThrowExhaust(vector - LookTowards.normalized * 0.1f, Progress);
             }
         }
     }

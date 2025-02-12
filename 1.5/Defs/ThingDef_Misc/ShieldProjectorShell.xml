@@ -11,14 +11,14 @@
     </graphicData>
     <thingClass>AncientCorps.Projectile_Parabola</thingClass>
     <projectile>
-      <damageDef>Demolish</damageDef>
+      <damageDef>Bomb</damageDef>
       <speed>40</speed>
       <armorPenetrationBase>1.8</armorPenetrationBase>
-      <explosionRadius>2.9</explosionRadius>
-      <damageAmountBase>80</damageAmountBase>
+      <explosionRadius>1.5</explosionRadius>
+      <damageAmountBase>120</damageAmountBase>
       <flyOverhead>true</flyOverhead>
       <explosionRadiusDisplayPadding>3</explosionRadiusDisplayPadding>
-      <arcHeightFactor>2</arcHeightFactor>
+      <arcHeightFactor>1</arcHeightFactor>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
       <soundExplode>MortarBomb_Explode</soundExplode>
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
@@ -30,17 +30,16 @@
         <ExhaustFleck>DMS_Fleck_RocketFlame</ExhaustFleck>
         <ExhaustCurve>
           <points>
-            <li>(0,5)</li>
-            <li>(0.15,4)</li>
-            <li>(0.5,3)</li>
-            <li>(0.75,0)</li>
+            <li>(0,3)</li>
+            <li>(0.15,2)</li>
+            <li>(0.5,1)</li>
           </points>
         </ExhaustCurve>
         <SmokeFleck>DMS_Fleck_RocketSmokeTrail</SmokeFleck>
         <SmokeCurve>
           <points>
-            <li>(0,5)</li>
-            <li>(0.5,2)</li>
+            <li>(0,3)</li>
+            <li>(0.5,1)</li>
             <li>(0.9,1)</li>
             <li>(1,0.5)</li>
           </points>

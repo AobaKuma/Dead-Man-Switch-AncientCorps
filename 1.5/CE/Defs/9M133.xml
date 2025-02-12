@@ -2,8 +2,8 @@
 <Defs MayNotRequire="rimthunder.core">
 	<!-- ================== Projectiles ================== -->
 	<ThingDef ParentName="BaseExplosiveBullet">
-		<defName>DMSAC_Bullet_9M133_HEAT</defName>
-		<label>9M133 "Kornet"AntiTank missile(HEAT)</label>
+		<defName>DMSAC_Bullet_StugnaATGM</defName>
+		<label>9M133 "Stugna" AntiTank missile</label>
 		<graphicData>
 			<texPath>Things/Projectiles/DMS_9M133Missile/projectile</texPath>
 			<shaderType>TransparentPostLight</shaderType>
@@ -12,10 +12,10 @@
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>600</damageAmountBase>
+			<damageAmountBase>450</damageAmountBase>
 			<speed>55</speed>
 			<soundAmbient>RocketPropelledLoop_Small</soundAmbient>
-			<armorPenetrationSharp>1200</armorPenetrationSharp>
+			<armorPenetrationSharp>600</armorPenetrationSharp>
 			<armorPenetrationBlunt>117.3</armorPenetrationBlunt>
 		</projectile>
 		<comps>
@@ -47,7 +47,7 @@
 				</FleckDatas>
 			</li>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
-				<damageAmountBase>375</damageAmountBase>
+				<damageAmountBase>60</damageAmountBase>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 				<explosiveRadius>4.0</explosiveRadius>
 				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -55,8 +55,8 @@
 			</li>
 			<li Class="CombatExtended.CompProperties_Fragments">
 				<fragments>
-					<Fragment_Large>18</Fragment_Large>
-					<Fragment_Small>36</Fragment_Small>
+					<Fragment_Large>9</Fragment_Large>
+					<Fragment_Small>18</Fragment_Small>
 				</fragments>
 			</li>
 		</comps>

@@ -2,64 +2,64 @@
 <LanguageData>
   
   <!-- EN: vladimirov HMG bullet -->
-  <Bullet_DMS_VladimirovMG.label>TODO</Bullet_DMS_VladimirovMG.label>
+  <Bullet_DMS_VladimirovMG.label>重机枪弹</Bullet_DMS_VladimirovMG.label>
   
   <!-- EN: Aerial autocannon -->
-  <DMS_AerialAutocannon.label>TODO</DMS_AerialAutocannon.label>
+  <DMS_AerialAutocannon.label>航空机砲</DMS_AerialAutocannon.label>
   <!-- EN: An automatroid weapon based on a lightweight aircraft cannon, adapted to fire 30mm cannon rounds. While it is versatile across multiple platforms, overheating issues limit its ground use to only burst shots. -->
-  <DMS_AerialAutocannon.description>TODO</DMS_AerialAutocannon.description>
+  <DMS_AerialAutocannon.description>一种基于轻量化航空机砲改装的机兵武器，作为一款使用30毫米口径机砲弹的武器而言适用平台相当广泛，但过热问题使得它在地面上使用时只能以短点射方式射击。</DMS_AerialAutocannon.description>
   <!-- EN: stock -->
-  <DMS_AerialAutocannon.tools.stock.label>TODO</DMS_AerialAutocannon.tools.stock.label>
+  <DMS_AerialAutocannon.tools.stock.label>枪托</DMS_AerialAutocannon.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_AerialAutocannon.tools.barrel.label>TODO</DMS_AerialAutocannon.tools.barrel.label>
+  <DMS_AerialAutocannon.tools.barrel.label>枪管</DMS_AerialAutocannon.tools.barrel.label>
   <!-- EN: Aerial autocannon -->
-  <DMS_AerialAutocannon.verbs.Verb_Shoot.label>TODO</DMS_AerialAutocannon.verbs.Verb_Shoot.label>
+  <DMS_AerialAutocannon.verbs.Verb_Shoot.label>GSh-30-1</DMS_AerialAutocannon.verbs.Verb_Shoot.label>
   
   <!-- EN: armor piercing sabot -->
-  <DMS_Bullet_JusticeGavel.label>TODO</DMS_Bullet_JusticeGavel.label>
+  <DMS_Bullet_JusticeGavel.label>稳定翼脱壳穿甲钢针</DMS_Bullet_JusticeGavel.label>
   
   <!-- EN: Gsh30-6 "Flogger" -->
-  <DMS_Gsh30Gatlinggun.label>TODO</DMS_Gsh30Gatlinggun.label>
+  <DMS_Gsh30Gatlinggun.label>鞭笞者机砲</DMS_Gsh30Gatlinggun.label>
   <!-- EN: A lightweight multi-barrel gatling gun originally designed for aircraft, modified for ground-based platforms. It boasts an extremely high rate of fire for rapid enemy suppression, but the lack of an effective rapid cooling system prevents it from sustaining fire for extended periods. -->
-  <DMS_Gsh30Gatlinggun.description>TODO</DMS_Gsh30Gatlinggun.description>
+  <DMS_Gsh30Gatlinggun.description>一种安装于航空载具上的轻量化多管机枪，在经过改造后安装于陆军平台上。具有极高的射速来快速的压制敌方，但由于缺乏有效的快速冷却系统因此无法长时间的持续射击。</DMS_Gsh30Gatlinggun.description>
   <!-- EN: stock -->
-  <DMS_Gsh30Gatlinggun.tools.stock.label>TODO</DMS_Gsh30Gatlinggun.tools.stock.label>
+  <DMS_Gsh30Gatlinggun.tools.stock.label>枪托</DMS_Gsh30Gatlinggun.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_Gsh30Gatlinggun.tools.barrel.label>TODO</DMS_Gsh30Gatlinggun.tools.barrel.label>
+  <DMS_Gsh30Gatlinggun.tools.barrel.label>枪管</DMS_Gsh30Gatlinggun.tools.barrel.label>
   <!-- EN: Gsh30-6 "Flogger" -->
-  <DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>TODO</DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>
+  <DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>Gsh-30-6</DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>
   
   <!-- EN: 2A46M "Justice Gavel" -->
-  <DMS_Gun_JusticeGavel.label>TODO</DMS_Gun_JusticeGavel.label>
+  <DMS_Gun_JusticeGavel.label>正义法槌</DMS_Gun_JusticeGavel.label>
   <!-- EN: A semi-automatic anti-tank cannon carried by ultra-heavy automatrons, known for its simple and reliable structure. It is widely used on various armored platforms to engage heavily armed and armored targets such as tanks and heavy mechs. -->
-  <DMS_Gun_JusticeGavel.description>TODO</DMS_Gun_JusticeGavel.description>
+  <DMS_Gun_JusticeGavel.description>一种由超重型机兵搭载的半自动反坦克加农炮，结构简单可靠。被广泛用于各类装甲平台来对付如战车与大型机甲等具有重武装与重装甲的大型目标。</DMS_Gun_JusticeGavel.description>
   <!-- EN: stock -->
-  <DMS_Gun_JusticeGavel.tools.stock.label>TODO</DMS_Gun_JusticeGavel.tools.stock.label>
+  <DMS_Gun_JusticeGavel.tools.stock.label>枪托</DMS_Gun_JusticeGavel.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_Gun_JusticeGavel.tools.barrel.label>TODO</DMS_Gun_JusticeGavel.tools.barrel.label>
+  <DMS_Gun_JusticeGavel.tools.barrel.label>枪管</DMS_Gun_JusticeGavel.tools.barrel.label>
   <!-- EN: 2A46M "Justice Gavel" -->
-  <DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>TODO</DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>
+  <DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>2A46M</DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>
   
   <!-- EN: Kord Machinegun -->
-  <DMS_KordMachineGun.label>TODO</DMS_KordMachineGun.label>
+  <DMS_KordMachineGun.label>科夫罗夫机枪</DMS_KordMachineGun.label>
   <!-- EN: A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements. -->
-  <DMS_KordMachineGun.description>TODO</DMS_KordMachineGun.description>
+  <DMS_KordMachineGun.description>一种可靠的制式机枪，能够有效的在远距离交火中击穿大部分中小型目标的装甲并造成杀伤。</DMS_KordMachineGun.description>
   <!-- EN: stock -->
-  <DMS_KordMachineGun.tools.stock.label>TODO</DMS_KordMachineGun.tools.stock.label>
+  <DMS_KordMachineGun.tools.stock.label>枪托</DMS_KordMachineGun.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_KordMachineGun.tools.barrel.label>TODO</DMS_KordMachineGun.tools.barrel.label>
+  <DMS_KordMachineGun.tools.barrel.label>枪管</DMS_KordMachineGun.tools.barrel.label>
   <!-- EN: Kord Machinegun -->
-  <DMS_KordMachineGun.verbs.Verb_Shoot.label>TODO</DMS_KordMachineGun.verbs.Verb_Shoot.label>
+  <DMS_KordMachineGun.verbs.Verb_Shoot.label>Kord</DMS_KordMachineGun.verbs.Verb_Shoot.label>
   
   <!-- EN: Vladimirov HMG -->
-  <DMS_VladimirovMachineGun.label>TODO</DMS_VladimirovMachineGun.label>
+  <DMS_VladimirovMachineGun.label>弗拉基米罗夫重机枪</DMS_VladimirovMachineGun.label>
   <!-- EN: A large-caliber heavy machine gun named after its designer, deployed as a standard weapon by colonial fleets in full-scale wars against various interstellar threats. It ensures that automatroid units can deliver effective and immediate lethal damage to most hostile lifeforms and machines. -->
-  <DMS_VladimirovMachineGun.description>TODO</DMS_VladimirovMachineGun.description>
+  <DMS_VladimirovMachineGun.description>一种冠以设计者之名的大口径重型机枪，在殖民舰队与各类星际威胁进行全面战争的战场上被作为制式武器来确保机兵部队能对大部分敌对生命与机械都能造成有效且即时的致命杀伤。</DMS_VladimirovMachineGun.description>
   <!-- EN: stock -->
-  <DMS_VladimirovMachineGun.tools.stock.label>TODO</DMS_VladimirovMachineGun.tools.stock.label>
+  <DMS_VladimirovMachineGun.tools.stock.label>枪托</DMS_VladimirovMachineGun.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_VladimirovMachineGun.tools.barrel.label>TODO</DMS_VladimirovMachineGun.tools.barrel.label>
+  <DMS_VladimirovMachineGun.tools.barrel.label>枪管</DMS_VladimirovMachineGun.tools.barrel.label>
   <!-- EN: Vladimirov HMG -->
-  <DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>TODO</DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>
+  <DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>KPV</DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>
   
 </LanguageData>

@@ -2,9 +2,9 @@
 <Defs>
   <BackstoryDef>
     <defName>AMC_CivilianChild01</defName>
-    <title>量產兒童</title>
-    <titleShort>速生兒</titleShort>
-    <description>[PAWN_nameDef]是透過人工合成胚胎量產的純正人類，這類技術所生產的人類雖然與基線人類差異不大，但免疫系統具有不可避免的瑕疵。[PAWN_pronoun]的童年是與自己上千個外貌相似的兄弟姊妹們一同接受軍事訓練與教育來為數年後可能參與的全面戰爭進行準備。</description>
+    <title>produced child</title>
+    <titleShort>vat kid</titleShort>
+    <description>[PAWN_nameDef] is a baseliner human being mass-produced through artificial embryos. Although the humans produced by this technology are not much different from baseline humans, their immune systems have inevitable flaws. [PAWN_pronoun] spent his childhood receiving military training and education alongside thousands of his similar-looking brothers and sisters, preparing for the all-out war they would be involved in years later.</description>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>AMCCommon</li>

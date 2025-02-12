@@ -45,4 +45,74 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+
+	<ThingDef ParentName="DMS_AutomatroidTurretGun">
+		<defName>DMS_Gun_ECMSystem</defName>
+		<label>ECM system</label>
+		<description>A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it.</description>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_ECMS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.99</AccuracyTouch>
+			<AccuracyShort>0.99</AccuracyShort>
+			<AccuracyMedium>0.99</AccuracyMedium>
+			<AccuracyLong>0.99</AccuracyLong>
+		</statBases>
+		<verbs>
+			<li>
+				<aimingTargetEffecter>DMS_Sustainer_EMP</aimingTargetEffecter>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DMS_Bullet_Electronic</defaultProjectile>
+				<requireLineOfSight>false</requireLineOfSight>
+				<warmupTime>5</warmupTime>
+				<minRange>5</minRange>
+				<range>29.9</range>
+				<burstShotCount>1</burstShotCount>
+				<forcedMissRadius>1</forcedMissRadius>
+				<soundCast>Explosion_EMP</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<targetParams>
+					<canTargetMechs>true</canTargetMechs>
+					<canTargetBuildings>true</canTargetBuildings>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>DMS_Bullet_Electronic</defName>
+		<label>electronic jamming</label>
+		<graphicData>
+			<texPath>Things/None</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Burn</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<stoppingPower>2</stoppingPower>
+			<speed>999</speed>
+			<flyOverhead>true</flyOverhead>
+			<bulletChanceToStartFire>1</bulletChanceToStartFire>
+			<doExplosionVFX>false</doExplosionVFX>
+		</projectile>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1.5</explosiveRadius>
+				<explosiveDamageType>EMP</explosiveDamageType>
+				<damageAmountBase>10</damageAmountBase>
+				<explodeOnDestroyed>true</explodeOnDestroyed>
+				<explodeOnKilled>true</explodeOnKilled>
+				<doSoundEffects>false</doSoundEffects>
+				<doVisualEffects>false</doVisualEffects>
+				<chanceToStartFire>0.8</chanceToStartFire>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>

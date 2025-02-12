@@ -184,7 +184,7 @@
 			<AccuracyMedium>0.8</AccuracyMedium>
 			<AccuracyLong>0.7</AccuracyLong>
 			<Mass>16.21</Mass>
-			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.12</MoveSpeed>
@@ -341,7 +341,7 @@
 			<Tungsteel>350</Tungsteel>
 			<ComponentStamped>20</ComponentStamped>
       		<ReinforcedBarrel>3</ReinforcedBarrel>
-      		<ComponentFireControl>1</ComponentFireControl>
+      		<ComponentFireControl>2</ComponentFireControl>
 		</costList>
 		<comps Inherit="False">
 			<li>
@@ -356,7 +356,7 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<defaultProjectile>DMS_Bullet_JusticeGavel</defaultProjectile>
 				<requireLineOfSight>true</requireLineOfSight>
-				<warmupTime>3</warmupTime>
+				<warmupTime>6</warmupTime>
 				<minRange>4.9</minRange>
 				<range>58</range>
 				<ai_AvoidFriendlyFireRadius>6.9</ai_AvoidFriendlyFireRadius>
@@ -384,6 +384,7 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+
 	<ThingDef ParentName="BaseBullet">
 		<defName>DMS_Bullet_JusticeGavel</defName>
 		<label>armor piercing sabot</label>

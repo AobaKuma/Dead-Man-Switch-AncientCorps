@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: anti tank missile -->
+  <DMSAC_Bullet_9M133Missile.label>反坦克导弹</DMSAC_Bullet_9M133Missile.label>
+  
+  <!-- EN: swarm rocket -->
+  <DMSAC_Bullet_S8Rocket.label>火箭弹</DMSAC_Bullet_S8Rocket.label>
+  
+  <!-- EN: disposable shield projector -->
+  <DMSAC_Bullet_ShieldProjectorShell.label>抛弃式脉冲盾发生器</DMSAC_Bullet_ShieldProjectorShell.label>
+  
+  <!-- EN: disposable phase-shield -->
+  <DMSAC_ShieldProjectorShell.label>抛弃式脉冲盾发生器</DMSAC_ShieldProjectorShell.label>
+  <!-- EN: Burnout in -->
+  <DMSAC_ShieldProjectorShell.comps.CompDestroyAfterDelay.countdownLabel>耗尽于</DMSAC_ShieldProjectorShell.comps.CompDestroyAfterDelay.countdownLabel>
+  
+  <!-- EN: disposable phase-shield -->
+  <DMSAC_ShieldProjectorShell_Water.label>抛弃式脉冲盾发生器</DMSAC_ShieldProjectorShell_Water.label>
+  <!-- EN: Burnout in -->
+  <DMSAC_ShieldProjectorShell_Water.comps.CompDestroyAfterDelay.countdownLabel>耗尽于</DMSAC_ShieldProjectorShell_Water.comps.CompDestroyAfterDelay.countdownLabel>
+  
+</LanguageData>

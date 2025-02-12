@@ -6,10 +6,17 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/AbilityDef[defName="DMSAC_ATGMLauncher"]/comps/li[@Class="CompProperties_AbilityLaunchProjectile"]/projectileDef</xpath>
 				<value>
-					<projectileDef>DMSAC_Bullet_9M133_HEAT</projectileDef>
+					<projectileDef>DMSAC_Bullet_StugnaATGM</projectileDef>
 				</value>
 			</li>
 			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/verbClass</xpath>
+				<value>
+					<verbClass>DMSCE.Verb_CastAbilityArcSprayProjectileCE</verbClass>
+				</value>
+			</li>
+
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/defaultProjectile</xpath>
 				<value>

@@ -8,8 +8,8 @@
       <MoveSpeed>2.7</MoveSpeed><!--移動速度-->
       <AimingDelayFactor>0.9</AimingDelayFactor>
       <StaggerDurationFactor>0.25</StaggerDurationFactor>
-      <ArmorRating_Sharp>0.75</ArmorRating_Sharp><!--銳抗-->
-      <ArmorRating_Blunt>0.5</ArmorRating_Blunt><!--鈍抗-->
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp><!--銳抗-->
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt><!--鈍抗-->
       <ArmorRating_Heat>1.3</ArmorRating_Heat>  <!--能抗-->
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">3</BandwidthCost>        <!--帶寬消耗-->
       <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge><!--充電/培養時產出廢料-->
@@ -72,7 +72,7 @@
   
   <PawnKindDef ParentName="BaseAncientAutomatroidKind" Name="DMS_BaseZaborKind">
     <defName>DMS_Mech_Zabor</defName>
-    <label>zabor</label>
+    <label>BR-4U "Zabor"</label>
     <race>DMS_Mech_Zabor</race>
     <nameMaker>DMS_AncientMechHeavy</nameMaker>
     <isFighter>true</isFighter>
@@ -86,6 +86,10 @@
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
       <li>
@@ -94,6 +98,10 @@
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -102,10 +110,10 @@
     </weaponTags>
   </PawnKindDef>
 
-  <!-- 棺木，帶溫壓火箭打擊技能的 -->
+  <!-- 八音盒，帶溫壓火箭打擊技能的 -->
   <PawnKindDef ParentName="DMS_BaseZaborKind">
     <defName>DMS_Mech_Zabor_Grenader</defName>
-    <label>shkatulka</label>
+    <label>BR-4U/FG "Shkatulka"</label>
     <combatPower>400</combatPower>
     <weaponTags Inherit="False">
 			<li>DMS_AtlantGrenadeLauncher</li>
@@ -118,6 +126,10 @@
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
       <li>
@@ -126,6 +138,10 @@
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>

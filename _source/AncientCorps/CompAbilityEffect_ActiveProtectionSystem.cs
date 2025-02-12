@@ -83,11 +83,11 @@ namespace AncientCorps
                             }
                             for (int k = 0; k < 3; k++)
                             {
-                                float angle = (Pawn.DrawPos - Vector3.Lerp(Pawn.DrawPos, pos, 0.2f)).AngleFlat() + Rand.Range(-90f, 90f);
+                                float angle = (Vector3.Lerp(Pawn.DrawPos, pos, 0.2f) - Pawn.DrawPos).AngleFlat() + Rand.Range(-90f, 90f);
 
                                 FleckCreationData dataStatic = FleckMaker.GetDataStatic(Pawn.DrawPos, Pawn.Map, FleckDefOf.AirPuff);
                                 dataStatic.spawnPosition = Pawn.DrawPos + CircleConst.GetAngle(angle) * 2f;
-                                dataStatic.scale = Rand.Range(3f, 4.9f);
+                                dataStatic.scale = Rand.Range(1f, 4.9f);
                                 dataStatic.rotationRate = Rand.Range(-30f, 30f) / dataStatic.scale;
                                 dataStatic.velocityAngle = angle;
                                 dataStatic.velocitySpeed = 5 - dataStatic.scale;

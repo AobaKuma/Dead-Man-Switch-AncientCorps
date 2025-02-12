@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: vladimirov HMG bullet -->
+  <Bullet_DMS_VladimirovMG.label>重機槍彈</Bullet_DMS_VladimirovMG.label>
+  
+  <!-- EN: Aerial autocannon -->
+  <DMS_AerialAutocannon.label>航空機砲</DMS_AerialAutocannon.label>
+  <!-- EN: An automatroid weapon based on a lightweight aircraft cannon, adapted to fire 30mm cannon rounds. While it is versatile across multiple platforms, overheating issues limit its ground use to only burst shots. -->
+  <DMS_AerialAutocannon.description>一種基於輕量化航空機砲改裝的機兵武器，作為一款使用30毫米口徑機砲彈的武器而言適用平台相當廣泛，但過熱問題使得它在地面上使用時只能以短點射方式射擊。</DMS_AerialAutocannon.description>
+  <!-- EN: stock -->
+  <DMS_AerialAutocannon.tools.stock.label>槍托</DMS_AerialAutocannon.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_AerialAutocannon.tools.barrel.label>槍管</DMS_AerialAutocannon.tools.barrel.label>
+  <!-- EN: Aerial autocannon -->
+  <DMS_AerialAutocannon.verbs.Verb_Shoot.label>GSh-30-1</DMS_AerialAutocannon.verbs.Verb_Shoot.label>
+  
+  <!-- EN: armor piercing sabot -->
+  <DMS_Bullet_JusticeGavel.label>穩定翼脫殼穿甲鋼針</DMS_Bullet_JusticeGavel.label>
+  
+  <!-- EN: Gsh30-6 "Flogger" -->
+  <DMS_Gsh30Gatlinggun.label>鞭笞者機砲</DMS_Gsh30Gatlinggun.label>
+  <!-- EN: A lightweight multi-barrel gatling gun originally designed for aircraft, modified for ground-based platforms. It boasts an extremely high rate of fire for rapid enemy suppression, but the lack of an effective rapid cooling system prevents it from sustaining fire for extended periods. -->
+  <DMS_Gsh30Gatlinggun.description>一種安裝於航空載具上的輕量化多管機槍，在經過改造後安裝於陸軍平台上。具有極高的射速來快速的壓制敵方，但由於缺乏有效的快速冷卻系統因此無法長時間的持續射擊。</DMS_Gsh30Gatlinggun.description>
+  <!-- EN: stock -->
+  <DMS_Gsh30Gatlinggun.tools.stock.label>槍托</DMS_Gsh30Gatlinggun.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Gsh30Gatlinggun.tools.barrel.label>槍管</DMS_Gsh30Gatlinggun.tools.barrel.label>
+  <!-- EN: Gsh30-6 "Flogger" -->
+  <DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>Gsh-30-6</DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>
+  
+  <!-- EN: 2A46M "Justice Gavel" -->
+  <DMS_Gun_JusticeGavel.label>正義法槌</DMS_Gun_JusticeGavel.label>
+  <!-- EN: A semi-automatic anti-tank cannon carried by ultra-heavy automatrons, known for its simple and reliable structure. It is widely used on various armored platforms to engage heavily armed and armored targets such as tanks and heavy mechs. -->
+  <DMS_Gun_JusticeGavel.description>一種由超重型機兵搭載的半自動反坦克加農炮，結構簡單可靠。被廣泛用於各類裝甲平台來對付如戰車與大型機甲等具有重武裝與重裝甲的大型目標。</DMS_Gun_JusticeGavel.description>
+  <!-- EN: stock -->
+  <DMS_Gun_JusticeGavel.tools.stock.label>槍托</DMS_Gun_JusticeGavel.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_Gun_JusticeGavel.tools.barrel.label>槍管</DMS_Gun_JusticeGavel.tools.barrel.label>
+  <!-- EN: 2A46M "Justice Gavel" -->
+  <DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>2A46M</DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Kord Machinegun -->
+  <DMS_KordMachineGun.label>科夫羅夫機槍</DMS_KordMachineGun.label>
+  <!-- EN: A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements. -->
+  <DMS_KordMachineGun.description>一種可靠的制式機槍，能夠有效的在遠距離交火中擊穿大部分中小型目標的裝甲並造成殺傷。</DMS_KordMachineGun.description>
+  <!-- EN: stock -->
+  <DMS_KordMachineGun.tools.stock.label>槍托</DMS_KordMachineGun.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_KordMachineGun.tools.barrel.label>槍管</DMS_KordMachineGun.tools.barrel.label>
+  <!-- EN: Kord Machinegun -->
+  <DMS_KordMachineGun.verbs.Verb_Shoot.label>Kord</DMS_KordMachineGun.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Vladimirov HMG -->
+  <DMS_VladimirovMachineGun.label>弗拉基米羅夫重機槍</DMS_VladimirovMachineGun.label>
+  <!-- EN: A large-caliber heavy machine gun named after its designer, deployed as a standard weapon by colonial fleets in full-scale wars against various interstellar threats. It ensures that automatroid units can deliver effective and immediate lethal damage to most hostile lifeforms and machines. -->
+  <DMS_VladimirovMachineGun.description>一種冠以設計者之名的大口徑重型機槍，在殖民艦隊與各類星際威脅進行全面戰爭的戰場上被作為制式武器來確保機兵部隊能對大部分敵對生命與機械都能造成有效且即時的致命殺傷。</DMS_VladimirovMachineGun.description>
+  <!-- EN: stock -->
+  <DMS_VladimirovMachineGun.tools.stock.label>槍托</DMS_VladimirovMachineGun.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_VladimirovMachineGun.tools.barrel.label>槍管</DMS_VladimirovMachineGun.tools.barrel.label>
+  <!-- EN: Vladimirov HMG -->
+  <DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>KPV</DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>
+  
+</LanguageData>

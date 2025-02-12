@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN:  -->
   <AMC_CivilianChild01.description>[PAWN_nameDef]是透过人工合成胚胎量产的纯正人类，这类技术所生产的人类虽然与基线人类差异不大，但免疫系统具有不可避免的瑕疵。[PAWN_pronoun]的童年是与自己上千个外貌相似的兄弟姊妹们一同接受军事训练与教育来为数年后可能参与的全面战争进行准备。</AMC_CivilianChild01.description>
-  <!-- EN: 量产儿童 -->
   <AMC_CivilianChild01.title>量产儿童</AMC_CivilianChild01.title>
-  <!-- EN: 速生儿 -->
   <AMC_CivilianChild01.titleShort>速生儿</AMC_CivilianChild01.titleShort>
   
 </LanguageData>

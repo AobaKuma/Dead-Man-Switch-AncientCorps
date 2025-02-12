@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN:
     <li>r_name(p=6)->[namefile]-[Code]</li>
     <li>r_name->[exoticname]-[Code]</li>
@@ -32,8 +32,33 @@
     <li>Code->yezi</li>
     <li>Code->zulu</li>
   -->
-  <DMS_AncientArmy.rulePack.rulesStrings>TODO</DMS_AncientArmy.rulePack.rulesStrings>
-  
+  <DMS_AncientArmy.rulePack.rulesStrings>
+    <li>r_name(p=6)->[namefile]-[Callsign]</li>
+    <li>r_name->[exoticname]-[Callsign]</li>
+    <li>name->[Callsign]-[Color]</li>
+    <li>Callsign->阿尔法</li>
+    <li>Callsign->贝塔</li>
+    <li>Callsign->德尔塔</li>
+    <li>Callsign->枷马</li>
+    <li>Callsign->矛头</li>
+    <li>Callsign->重锤</li>
+    <li>Callsign->钨钢</li>
+    <li>Callsign->不朽</li>
+    <li>Callsign->白银</li>
+    <li>Callsign->铁路</li>
+    <li>Callsign->攻城锤</li>
+    <li>Callsign->要塞</li>
+    <li>Callsign->城塞</li>
+    <li>Callsign->棱堡</li>
+    <li>Callsign->龙</li>
+    <li>Callsign->蜗牛</li>
+    <li>Callsign->犀牛</li>
+    <li>Callsign->虎</li>
+    <li>Callsign->伊尼亚克</li>
+    <li>Callsign->恩尼格</li>
+    <li>Callsign->机关</li>
+  </DMS_AncientArmy.rulePack.rulesStrings>
+
   <!-- EN:
     <li>r_name->[BrigadeNum0][BrigadeNum1][BrigadeNum2] [BrigadeType] Division</li>
     <li>BrigadeType->Battle</li>
@@ -72,8 +97,44 @@
     <li>BrigadeNum2->8th</li>
     <li>BrigadeNum2->9th</li>
   -->
-  <DMS_AncientFaction.rulePack.rulesStrings>TODO</DMS_AncientFaction.rulePack.rulesStrings>
-  
+  <DMS_AncientFaction.rulePack.rulesStrings>
+    <li>r_name->第[BrigadeNum0][BrigadeNum1][BrigadeNum2][BrigadeType]师</li>
+    <li>BrigadeType->战斗</li>
+    <li>BrigadeType->强袭</li>
+    <li>BrigadeType->特遣</li>
+    <li>BrigadeType->自律</li>
+    <li>BrigadeType->合成</li>
+    <li>BrigadeNum0->1</li>
+    <li>BrigadeNum0->2</li>
+    <li>BrigadeNum0->3</li>
+    <li>BrigadeNum0->4</li>
+    <li>BrigadeNum0->5</li>
+    <li>BrigadeNum0->6</li>
+    <li>BrigadeNum0->7</li>
+    <li>BrigadeNum0->8</li>
+    <li>BrigadeNum0->9</li>
+    <li>BrigadeNum1->0</li>
+    <li>BrigadeNum1->1</li>
+    <li>BrigadeNum1->2</li>
+    <li>BrigadeNum1->3</li>
+    <li>BrigadeNum1->4</li>
+    <li>BrigadeNum1->5</li>
+    <li>BrigadeNum1->6</li>
+    <li>BrigadeNum1->7</li>
+    <li>BrigadeNum1->8</li>
+    <li>BrigadeNum1->9</li>
+    <li>BrigadeNum2->0</li>
+    <li>BrigadeNum2->1</li>
+    <li>BrigadeNum2->2</li>
+    <li>BrigadeNum2->3</li>
+    <li>BrigadeNum2->4</li>
+    <li>BrigadeNum2->5</li>
+    <li>BrigadeNum2->6</li>
+    <li>BrigadeNum2->7</li>
+    <li>BrigadeNum2->8</li>
+    <li>BrigadeNum2->9</li>
+  </DMS_AncientFaction.rulePack.rulesStrings>
+
   <!-- EN:
     <li>r_name->[MechType] [BrigadeNum0]-[BrigadeNum1] "[Callsign]"</li>
     <li>MechType->Pivot</li>
@@ -122,8 +183,55 @@
     <li>Callsign->Enigma</li>
     <li>Callsign->Automata</li>
   -->
-  <DMS_AncientMechHeavy.rulePack.rulesStrings>TODO</DMS_AncientMechHeavy.rulePack.rulesStrings>
-  
+  <DMS_AncientMechHeavy.rulePack.rulesStrings>
+    <li>r_name->[MechType]-[BrigadeNum0][BrigadeNum1] "[Callsign]"</li>
+    <li>MechType->枢轴</li>
+    <li>MechType->重型</li>
+    <li>MechType->装甲</li>
+    <li>MechType->支点</li>
+    <li>MechType->要塞</li>
+    <li>BrigadeNum0->1</li>
+    <li>BrigadeNum0->2</li>
+    <li>BrigadeNum0->3</li>
+    <li>BrigadeNum0->4</li>
+    <li>BrigadeNum0->5</li>
+    <li>BrigadeNum0->6</li>
+    <li>BrigadeNum0->7</li>
+    <li>BrigadeNum0->8</li>
+    <li>BrigadeNum0->9</li>
+    <li>BrigadeNum1->0</li>
+    <li>BrigadeNum1->1</li>
+    <li>BrigadeNum1->2</li>
+    <li>BrigadeNum1->3</li>
+    <li>BrigadeNum1->4</li>
+    <li>BrigadeNum1->5</li>
+    <li>BrigadeNum1->6</li>
+    <li>BrigadeNum1->7</li>
+    <li>BrigadeNum1->8</li>
+    <li>BrigadeNum1->9</li>
+    <li>Callsign->阿尔法</li>
+    <li>Callsign->贝塔</li>
+    <li>Callsign->德尔塔</li>
+    <li>Callsign->枷马</li>
+    <li>Callsign->矛头</li>
+    <li>Callsign->重锤</li>
+    <li>Callsign->钨钢</li>
+    <li>Callsign->不朽</li>
+    <li>Callsign->白银</li>
+    <li>Callsign->铁路</li>
+    <li>Callsign->攻城锤</li>
+    <li>Callsign->要塞</li>
+    <li>Callsign->城塞</li>
+    <li>Callsign->棱堡</li>
+    <li>Callsign->龙</li>
+    <li>Callsign->蜗牛</li>
+    <li>Callsign->犀牛</li>
+    <li>Callsign->虎</li>
+    <li>Callsign->伊尼亚克</li>
+    <li>Callsign->恩尼格</li>
+    <li>Callsign->机关</li>
+  </DMS_AncientMechHeavy.rulePack.rulesStrings>
+
   <!-- EN:
     <li>r_name->[MechType] [BrigadeNum0]-[BrigadeNum1] "[Callsign][Code]"</li>
     <li>MechType->Standard</li>
@@ -187,6 +295,43 @@
     <li>Code->Yankee</li>
     <li>Code->Zulu</li>
   -->
-  <DMS_AncientMechStandard.rulePack.rulesStrings>TODO</DMS_AncientMechStandard.rulePack.rulesStrings>
-  
+  <DMS_AncientMechStandard.rulePack.rulesStrings>
+    <li>r_name->[MechType] [BrigadeNum0]-[BrigadeNum1] "[Callsign]"</li>
+    <li>MechType->常规</li>
+    <li>MechType->阵地</li>
+    <li>MechType->作战</li>
+    <li>MechType->战斗</li>
+    <li>MechType->单元</li>
+    <li>BrigadeNum0->1</li>
+    <li>BrigadeNum0->2</li>
+    <li>BrigadeNum0->3</li>
+    <li>BrigadeNum0->4</li>
+    <li>BrigadeNum0->5</li>
+    <li>BrigadeNum0->6</li>
+    <li>BrigadeNum0->7</li>
+    <li>BrigadeNum0->8</li>
+    <li>BrigadeNum0->9</li>
+    <li>BrigadeNum1->0</li>
+    <li>BrigadeNum1->1</li>
+    <li>BrigadeNum1->2</li>
+    <li>BrigadeNum1->3</li>
+    <li>BrigadeNum1->4</li>
+    <li>BrigadeNum1->5</li>
+    <li>BrigadeNum1->6</li>
+    <li>BrigadeNum1->7</li>
+    <li>BrigadeNum1->8</li>
+    <li>BrigadeNum1->9</li>
+    <li>Callsign->骷髅</li>
+    <li>Callsign->铁盾</li>
+    <li>Callsign->钢铁</li>
+    <li>Callsign->岩石</li>
+    <li>Callsign->钢盔</li>
+    <li>Callsign->壮汉</li>
+    <li>Callsign->野狼</li>
+    <li>Callsign->狐貍</li>
+    <li>Callsign->猎犬</li>
+    <li>Callsign->豹猫</li>
+    <li>Callsign->骨架</li>
+  </DMS_AncientMechStandard.rulePack.rulesStrings>
+
 </LanguageData>

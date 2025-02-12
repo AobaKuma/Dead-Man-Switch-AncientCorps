@@ -2,53 +2,53 @@
 <LanguageData>
   
   <!-- EN: grenade round -->
-  <Bullet_DMS_AtlantLauncher.label>TODO</Bullet_DMS_AtlantLauncher.label>
+  <Bullet_DMS_AtlantLauncher.label>低速榴弹</Bullet_DMS_AtlantLauncher.label>
   
   <!-- EN: solid slug -->
-  <Bullet_DMS_CombatShotgun.label>TODO</Bullet_DMS_CombatShotgun.label>
+  <Bullet_DMS_CombatShotgun.label>金属独头弹</Bullet_DMS_CombatShotgun.label>
   
   <!-- EN: Atlant Grenade Launcher -->
-  <DMS_AtlantGrenadeLauncher.label>TODO</DMS_AtlantGrenadeLauncher.label>
+  <DMS_AtlantGrenadeLauncher.label>阿兰特榴弹机枪</DMS_AtlantGrenadeLauncher.label>
   <!-- EN: A fully automatic grenade launcher designed for handheld use, highly lethal against soft targets concealed behind cover. However, due to the intense recoil from continuous firing, it is typically not used in full-auto mode. -->
-  <DMS_AtlantGrenadeLauncher.description>TODO</DMS_AtlantGrenadeLauncher.description>
+  <DMS_AtlantGrenadeLauncher.description>一种能手持使用的全自动榴弹发射器，对处于掩体中隐蔽的软目标有极大的杀伤力。但由于连续发射带来的剧烈震动因此通常不会全自动射击。</DMS_AtlantGrenadeLauncher.description>
   <!-- EN: stock -->
-  <DMS_AtlantGrenadeLauncher.tools.stock.label>TODO</DMS_AtlantGrenadeLauncher.tools.stock.label>
+  <DMS_AtlantGrenadeLauncher.tools.stock.label>枪托</DMS_AtlantGrenadeLauncher.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_AtlantGrenadeLauncher.tools.barrel.label>TODO</DMS_AtlantGrenadeLauncher.tools.barrel.label>
+  <DMS_AtlantGrenadeLauncher.tools.barrel.label>枪管</DMS_AtlantGrenadeLauncher.tools.barrel.label>
   <!-- EN: Atlant Grenade Launcher -->
-  <DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>TODO</DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>
+  <DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>
   
   <!-- EN: Tula combat shotgun -->
-  <DMS_KS23K.label>TODO</DMS_KS23K.label>
+  <DMS_KS23K.label>图拉战斗霰弹枪</DMS_KS23K.label>
   <!-- EN: A modernized large-caliber shotgun, fed by detachable box magazines to deliver sustained fire suppression. The metal slugs it uses are remarkably effective even against heavily armored targets. -->
-  <DMS_KS23K.description>TODO</DMS_KS23K.description>
+  <DMS_KS23K.description>一种现代化的大口径霰弹枪，透过可拆卸盒式弹匣供弹来提供持续的火力压制。使用的金属独头弹即使是对付重装甲目标也能有不俗的效果。</DMS_KS23K.description>
   <!-- EN: stock -->
-  <DMS_KS23K.tools.stock.label>TODO</DMS_KS23K.tools.stock.label>
+  <DMS_KS23K.tools.stock.label>枪托</DMS_KS23K.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_KS23K.tools.barrel.label>TODO</DMS_KS23K.tools.barrel.label>
+  <DMS_KS23K.tools.barrel.label>枪管</DMS_KS23K.tools.barrel.label>
   <!-- EN: Tula combat shotgun -->
-  <DMS_KS23K.verbs.Verb_Shoot.label>TODO</DMS_KS23K.verbs.Verb_Shoot.label>
+  <DMS_KS23K.verbs.Verb_Shoot.label>KS23K</DMS_KS23K.verbs.Verb_Shoot.label>
   
   <!-- EN: Mikhail Machinegun -->
-  <DMS_PKM.label>TODO</DMS_PKM.label>
+  <DMS_PKM.label>米哈伊尔通用机枪</DMS_PKM.label>
   <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
-  <DMS_PKM.description>TODO</DMS_PKM.description>
+  <DMS_PKM.description>一种使用无托设计的轻量化机枪，即使是人类也能毫无压力的使用，在面对大量轻装甲目标时能提供长时间且有效的火力压制。</DMS_PKM.description>
   <!-- EN: stock -->
-  <DMS_PKM.tools.stock.label>TODO</DMS_PKM.tools.stock.label>
+  <DMS_PKM.tools.stock.label>枪托</DMS_PKM.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_PKM.tools.barrel.label>TODO</DMS_PKM.tools.barrel.label>
+  <DMS_PKM.tools.barrel.label>枪管</DMS_PKM.tools.barrel.label>
   <!-- EN: Mikhail Machinegun -->
-  <DMS_PKM.verbs.Verb_Shoot.label>TODO</DMS_PKM.verbs.Verb_Shoot.label>
+  <DMS_PKM.verbs.Verb_Shoot.label>PKMB</DMS_PKM.verbs.Verb_Shoot.label>
   
   <!-- EN: Yekaterin Rifle -->
-  <DMS_YekaterinRifle.label>TODO</DMS_YekaterinRifle.label>
+  <DMS_YekaterinRifle.label>叶卡捷琳步枪</DMS_YekaterinRifle.label>
   <!-- EN: A bullpup anti-materiel rifle, designed to enable law enforcement units to neutralize heavy automatroid. Its structure is greatly simplified to ensure that even non-enhanced humans can carry and operate this rifle. -->
-  <DMS_YekaterinRifle.description>TODO</DMS_YekaterinRifle.description>
+  <DMS_YekaterinRifle.description>一种无托反器材步枪，被设计用于使治安单位在涉及重型机兵滋事的案件中能对其进行无害化。发射结构被极大的简化以确保没有任何强化的人类也能够单人携带与操作该步枪。</DMS_YekaterinRifle.description>
   <!-- EN: stock -->
-  <DMS_YekaterinRifle.tools.stock.label>TODO</DMS_YekaterinRifle.tools.stock.label>
+  <DMS_YekaterinRifle.tools.stock.label>枪托</DMS_YekaterinRifle.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_YekaterinRifle.tools.barrel.label>TODO</DMS_YekaterinRifle.tools.barrel.label>
+  <DMS_YekaterinRifle.tools.barrel.label>枪管</DMS_YekaterinRifle.tools.barrel.label>
   <!-- EN: Yekaterin Rifle -->
-  <DMS_YekaterinRifle.verbs.Verb_Shoot.label>TODO</DMS_YekaterinRifle.verbs.Verb_Shoot.label>
+  <DMS_YekaterinRifle.verbs.Verb_Shoot.label>KSVK</DMS_YekaterinRifle.verbs.Verb_Shoot.label>
   
 </LanguageData>

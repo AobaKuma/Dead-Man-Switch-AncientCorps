@@ -2,19 +2,19 @@
 <LanguageData>
   
   <!-- EN: electronic jamming -->
-  <DMS_Bullet_Electronic.label>电子干扰</DMS_Bullet_Electronic.label>
+  <DMS_Bullet_Electronic.label>電子干擾</DMS_Bullet_Electronic.label>
   
   <!-- EN: ECM system -->
-  <DMS_Gun_ECMSystem.label>电磁反制系统</DMS_Gun_ECMSystem.label>
+  <DMS_Gun_ECMSystem.label>電磁反制系統</DMS_Gun_ECMSystem.label>
   <!-- EN: A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also neutralize enemy by igniting it. -->
-  <DMS_Gun_ECMSystem.description>一种挂载式脉冲能量武器，透过定向电磁干扰使指向方位的电子设备失效。它在工作时会使目标产生高温，因此也能透过点燃的方式来瘫痪敌人。</DMS_Gun_ECMSystem.description>
+  <DMS_Gun_ECMSystem.description>一種掛載式脈衝能量武器，透過定向電磁幹擾使指向方位的電子設備失效。它在工作時會使目標產生高溫，因此也能透過點燃的方式來癱瘓敵人。</DMS_Gun_ECMSystem.description>
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>ECM</DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>
   
   <!-- EN: Kord HMG -->
-  <DMS_Gun_KordTurret.label>科夫罗夫机枪</DMS_Gun_KordTurret.label>
+  <DMS_Gun_KordTurret.label>科夫羅夫機槍</DMS_Gun_KordTurret.label>
   <!-- EN: A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements. -->
-  <DMS_Gun_KordTurret.description>一种可靠的制式机枪，能够有效的在远距离交火中击穿大部分中小型目标的装甲并造成杀伤。</DMS_Gun_KordTurret.description>
+  <DMS_Gun_KordTurret.description>一種可靠的制式機槍，能夠有效的在遠距離交火中擊穿大部分中小型目標的裝甲並造成殺傷。</DMS_Gun_KordTurret.description>
   <!-- EN: Kord HMG -->
   <DMS_Gun_KordTurret.verbs.Verb_Shoot.label>Kord</DMS_Gun_KordTurret.verbs.Verb_Shoot.label>
   

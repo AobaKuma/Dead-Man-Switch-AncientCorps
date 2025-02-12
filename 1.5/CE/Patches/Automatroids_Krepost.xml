@@ -14,6 +14,13 @@
 			<turret>DMS_Krepost_KordMG</turret>
 		</value>
 	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="DMS_Mech_Krepost"]/comps/li[@Class="DMS.CompPropertiesMultipleTurretGun"]/subTurrets/li[ID="ECM"]/turret</xpath>
+		<value>
+			<turret>DMS_Krepost_ECMSystem</turret>
+		</value>
+	</Operation>
+	
 
 	<Operation Class="PatchOperationSequence">
 		<operations>
@@ -26,8 +33,8 @@
 				<value>
 					<li Class="CombatExtended.LoadoutPropertiesExtension">
 						<primaryMagazineCount>
-							<min>7</min>
-							<max>12</max>
+							<min>20</min>
+							<max>40</max>
 						</primaryMagazineCount>
 						<sidearms>
 							<li>
@@ -71,8 +78,8 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="DMS_Mech_Krepost"]/statBases/ShootingAccuracyPawn</xpath>
 				<value>
-					<CarryWeight>175</CarryWeight> <!--ridiculously overweight and over bulk weapon system and ammo :(-->
-					<CarryBulk>120</CarryBulk>
+					<CarryWeight>200</CarryWeight> <!--ridiculously overweight and over bulk weapon system and ammo :(-->
+					<CarryBulk>150</CarryBulk>
 					<AimingAccuracy>1.2</AimingAccuracy>
 					<ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
 					<MeleeDodgeChance>0.04</MeleeDodgeChance>

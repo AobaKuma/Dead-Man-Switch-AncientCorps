@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: active protection system -->
+  <DMSAC_APS.label>主動防禦系統</DMSAC_APS.label>
+  <!-- EN: 開啟主動防禦系統，在短時間內攔截鄰近的有害威脅。 -->
+  <DMSAC_APS.description>開啟主動防禦系統，在短時間內攔截鄰近的低速與爆炸投射物</DMSAC_APS.description>
+  
+  <!-- EN: anti tank missile -->
+  <DMSAC_ATGMLauncher.label>短號導彈</DMSAC_ATGMLauncher.label>
+  <!-- EN: Launch an anti tank missile. -->
+  <DMSAC_ATGMLauncher.description>發射機體上安裝的一枚9M133"短號"導彈，對目標造成高額穿甲傷害。</DMSAC_ATGMLauncher.description>
+  
+  <!-- EN: rocket barrage -->
+  <DMSAC_Rocket.label>火箭彈幕</DMSAC_Rocket.label>
+  <!-- EN: Launch a rocket barrage in a specific direction. -->
+  <DMSAC_Rocket.description>發射機體上搭載的S5火箭艙，對目標區域進行徐進彈幕打擊。</DMSAC_Rocket.description>
+  
+  <!-- EN: shield projector deploy -->
+  <DMSAC_ShieldLauncher.label>機動護盾部屬</DMSAC_ShieldLauncher.label>
+  <!-- EN: Launch a shield projector shell intercept incoming munitions. -->
+  <DMSAC_ShieldLauncher.description>發射一枚火箭推進的拋射式脈衝盾，在落地後展開的期間攔截所有投射物。</DMSAC_ShieldLauncher.description>
+  
+</LanguageData>

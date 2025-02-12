@@ -9,9 +9,10 @@
     <statBases>
       <StaggerDurationFactor>0.25</StaggerDurationFactor>
       <MoveSpeed>2.55</MoveSpeed>                                                              <!--移動速度-->
-      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>                                            <!--護甲-->
-      <ArmorRating_Sharp>0.31</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>                                            <!--護甲-->
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
       <ArmorRating_Heat>1.0</ArmorRating_Heat>
+      <ShootingAccuracyPawn>0.9</ShootingAccuracyPawn>
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>                 <!--帶寬消耗-->
       <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge> <!--充電/培養時產出廢料-->
       <AimingDelayFactor>1.25</AimingDelayFactor>                                            <!--瞄準延遲-->
@@ -55,7 +56,7 @@
 
   <PawnKindDef ParentName="BaseAncientAutomatroidKind" Name="DMS_BaseMolotKind">
     <defName>DMS_Mech_Molot</defName>
-    <label>molot</label>
+    <label>BR-3 "Molot"</label>
     <race>DMS_Mech_Molot</race>
     <nameMaker>DMS_AncientMechStandard</nameMaker>
     <isFighter>true</isFighter>
@@ -86,7 +87,7 @@
 
   <PawnKindDef ParentName="DMS_BaseMolotKind">
     <defName>DMS_Mech_Molot_Sweeper</defName>
-    <label>molot sweeper</label>
+    <label>BR-3/GP "Reservoir"</label>
     <combatPower>150</combatPower>
     <weaponTags Inherit="False">
       <li>DMS_PKM</li>
@@ -95,7 +96,7 @@
 
   <PawnKindDef ParentName="DMS_BaseMolotKind">
     <defName>DMS_Mech_Molot_Grinder</defName>
-    <label>molot grinder</label>
+    <label>BR-3/MK "Mosta"</label>
     <combatPower>150</combatPower>
     <weaponMoney>1600~9999</weaponMoney>
     <weaponTags Inherit="False">
@@ -105,7 +106,7 @@
 
   <PawnKindDef ParentName="DMS_BaseMolotKind">
     <defName>DMS_Mech_Molot_Grenader</defName>
-    <label>molot grenader</label>
+    <label>BR-3/FG "Kamin"</label>
     <combatPower>240</combatPower>
     <weaponTags Inherit="False">
 			<li>DMS_AtlantGrenadeLauncher</li>

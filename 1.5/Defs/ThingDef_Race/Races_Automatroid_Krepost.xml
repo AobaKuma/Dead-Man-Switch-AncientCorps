@@ -8,7 +8,7 @@
     <statBases>
       <MoveSpeed>2.7</MoveSpeed>
       <ArmorRating_Sharp>1.8</ArmorRating_Sharp><!--銳抗-->
-      <ArmorRating_Blunt>1.2</ArmorRating_Blunt><!--鈍抗-->
+      <ArmorRating_Blunt>1.15</ArmorRating_Blunt><!--鈍抗-->
       <ArmorRating_Heat>2</ArmorRating_Heat>  <!--能抗-->
       <StaggerDurationFactor>0</StaggerDurationFactor>
       <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
@@ -42,7 +42,7 @@
             <offset>(0.6,0,-0.6)</offset>
           </dataEast>
           <dataWest>
-            <offset>(-0.4,0,1.2)</offset>
+            <offset>(-0.4,0,1.1)</offset>
             <layer>-20</layer>
           </dataWest>
           <dataSouth>
@@ -118,6 +118,41 @@
                     <dataNorth>
                       <offset>(-0.45,0,-0.5)</offset> 
                       <rotationOffset>0</rotationOffset>
+                    </dataNorth>
+                  </drawData>
+                </li>
+              </renderNodeProperties>
+            </li>
+            <li>
+              <ID>ECM</ID>
+              <turret>DMS_Gun_ECMSystem</turret>
+              <autoAttack>true</autoAttack>
+              <warmingTime>5</warmingTime>
+              <angleOffset>-90</angleOffset>
+              <IdleAngleOffset>-51</IdleAngleOffset>
+              <renderNodeProperties>
+                <li>
+                  <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
+                  <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                  <parentTagDef>Body</parentTagDef>
+                  <drawSize>0.75</drawSize>
+                  <baseLayer>20</baseLayer>
+                  <pawnType>Any</pawnType>
+                  <drawData>
+                    <dataEast>
+                      <offset>(1.2,0,1)</offset>
+                      <layer>-1</layer>
+                    </dataEast>
+                    <dataWest>
+                      <offset>(-1.15,0,-0.55)</offset>
+                      <rotationOffset>180</rotationOffset>
+                    </dataWest>
+                    <dataSouth>
+                      <offset>(0.85,0,-1.1)</offset>
+                    </dataSouth>
+                    <dataNorth>
+                      <offset>(-0.85,0,0.7)</offset>
+                      <layer>-1</layer>
                     </dataNorth>
                   </drawData>
                 </li>
@@ -237,11 +272,11 @@
 
   <PawnKindDef ParentName="BaseAncientAutomatroidKind" Name="DMS_BaseKrepostKind">
     <defName>DMS_Mech_Krepost</defName>
-    <label>krepost</label>
+    <label>BR-6 "Krepost"</label>
     <race>DMS_Mech_Krepost</race>
     <nameMaker>DMS_AncientMechHeavy</nameMaker>
     <isFighter>true</isFighter>
-    <combatPower>1000</combatPower>                                               <!--威脅點數-->
+    <combatPower>2400</combatPower>                                               <!--威脅點數-->
     <maxPerGroup>2</maxPerGroup>                                                 <!--單個集群內的數量-->
     <isBoss>true</isBoss>
     <lifeStages>                                                                 <!--身體圖片-->
@@ -251,7 +286,6 @@
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>4</drawSize>
-          <color>(102,102,98)</color>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -264,7 +298,6 @@
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>4</drawSize>
-          <color>(112,108,106)</color>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -284,8 +317,8 @@
 
   <PawnKindDef ParentName="DMS_BaseKrepostKind">
     <defName>DMS_Mech_Krepost_Sweeper</defName>
-    <label>krepost sweeper</label>
-    <combatPower>1200</combatPower>
+    <label>BR-6/GP "Bashnya"</label>
+    <combatPower>1800</combatPower>
     <weaponTags Inherit="False">
 			<li>2A38M</li>
 			<li>DMS_Gsh30Gatlinggun</li>
