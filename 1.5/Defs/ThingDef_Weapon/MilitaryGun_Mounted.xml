@@ -110,7 +110,7 @@
 				<explodeOnKilled>true</explodeOnKilled>
 				<doSoundEffects>false</doSoundEffects>
 				<doVisualEffects>false</doVisualEffects>
-				<chanceToStartFire>0.8</chanceToStartFire>
+				<chanceToStartFire>0.2</chanceToStartFire>
 				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			</li>
 		</comps>

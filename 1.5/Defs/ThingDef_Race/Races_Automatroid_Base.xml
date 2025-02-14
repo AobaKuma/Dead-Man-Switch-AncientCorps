@@ -9,10 +9,10 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <StaggerDurationFactor>0.5</StaggerDurationFactor>
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">1</BandwidthCost>
-      <ControlTakingTime MayRequire="Ludeon.Rimworld.Biotech">5</ControlTakingTime>
+      <ControlTakingTime MayRequire="Ludeon.Rimworld.Biotech">8</ControlTakingTime>
       <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
-      <MechEnergyLossPerHP MayRequire="Ludeon.Rimworld.Biotech">0.2</MechEnergyLossPerHP>
-      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">1</WastepacksPerRecharge>      <!--充電/培養時產出廢料-->
+      <MechEnergyLossPerHP MayRequire="Ludeon.Rimworld.Biotech">0.5</MechEnergyLossPerHP>
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">2</WastepacksPerRecharge>      <!--充電/培養時產出廢料-->
       <WorkSpeedGlobal MayRequire="Ludeon.Rimworld.Biotech">0.8</WorkSpeedGlobal>
       <PsychicSensitivity>0</PsychicSensitivity>
     </statBases>

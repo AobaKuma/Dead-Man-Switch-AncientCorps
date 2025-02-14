@@ -158,7 +158,7 @@
       <destroySound>BuildingDestroyed_Metal_Small</destroySound>
       <ai_chillDestination>false</ai_chillDestination>
       <isEdifice>false</isEdifice>
-      <destroyEffecter>Broadshield_Burnout</destroyEffecter>
+      <destroyEffecter>DisposableShield_Burnout</destroyEffecter>
     </building>
     <comps>
       <li Class="CompProperties_ProjectileInterceptor">
@@ -170,7 +170,7 @@
         <idlePulseSpeed>3</idlePulseSpeed>
         <minIdleAlpha>0.05</minIdleAlpha>
         <disarmedByEmpForTicks>60</disarmedByEmpForTicks>
-        <activeSound>Broadshield_Ambience</activeSound>
+        <activeSound>TurretAcquireTarget</activeSound>
       </li>
       <li Class="CompProperties_DestroyAfterDelay">
         <delayTicks>1200</delayTicks>

@@ -4,9 +4,9 @@
 	<!-- 通用的技能，比如各種發射物 -->
 	<AbilityDef>
 		<defName>DMSAC_APS</defName>
-		<label>active protection system</label>
-		<description>Activate the active defense system to intercept nearby low-speed and explosive projectiles in a short period of time.</description>
-		<iconPath>UI/Ability/Grenade</iconPath>
+		<label>APS</label>
+		<description>Activate the Active Defense System to intercept nearby low-speed and explosive projectiles in a short period of time.</description>
+		<iconPath>UI/Ability/DMSAC_APS</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<cooldownTicksRange>16000~17200</cooldownTicksRange>
 		<verbProperties>
@@ -24,7 +24,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="AncientCorps.CompProperties_ActiveProtectionSystem">
-				<Radius>18</Radius>
+				<Radius>16</Radius>
 				<chanceToFail>0.95</chanceToFail>
 				<spawnLeaving>Filth_Ash</spawnLeaving>
 				<fleckDef>DMS_SplashedPieces_Center</fleckDef>
@@ -72,7 +72,7 @@
 		<defName>DMSAC_ATGMLauncher</defName>
 		<label>anti tank missile</label>
 		<description>Launch an anti tank missile.</description>
-		<iconPath>UI/Ability/Smoke</iconPath>
+		<iconPath>UI/Ability/DMSAC_ATGM</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<cooldownTicksRange>60000~72000</cooldownTicksRange>
 		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
@@ -104,9 +104,8 @@
 		<defName>DMSAC_Rocket</defName>
 		<label>rocket barrage</label>
 		<description>Launch a rocket barrage to a specific direction.</description>
-		<iconPath>UI/Ability/Strafing</iconPath>
+		<iconPath>UI/Ability/DMSAC_RocketPod</iconPath>
 		<aiCanUse>true</aiCanUse>
-		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
 		<warmupStartSound>TurretAcquireTarget</warmupStartSound>
 		<showOnCharacterCard>true</showOnCharacterCard>
 		<cooldownTicksRange>60000~72000</cooldownTicksRange>
@@ -127,6 +126,7 @@
 			<muzzleFlashScale>15</muzzleFlashScale>
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
+				<canTargetBuildings>true</canTargetBuildings>
 			</targetParams>
 			<forcedMissRadius>4</forcedMissRadius>
 		</verbProperties>

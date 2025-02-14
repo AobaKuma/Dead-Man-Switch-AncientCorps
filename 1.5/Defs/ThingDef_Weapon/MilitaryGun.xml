@@ -271,7 +271,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_DMS_AtlantLauncher</defaultProjectile>
 				<warmupTime>3.5</warmupTime>
-				<minRange>10</minRange>
+				<minRange>8</minRange>
 				<range>29.9</range>
 				<forcedMissRadius>2</forcedMissRadius>
 				<burstShotCount>3</burstShotCount>

@@ -357,7 +357,7 @@
 				<defaultProjectile>DMS_Bullet_JusticeGavel</defaultProjectile>
 				<requireLineOfSight>true</requireLineOfSight>
 				<warmupTime>6</warmupTime>
-				<minRange>4.9</minRange>
+				<minRange>7</minRange>
 				<range>58</range>
 				<ai_AvoidFriendlyFireRadius>6.9</ai_AvoidFriendlyFireRadius>
 				<burstShotCount>1</burstShotCount>
@@ -391,9 +391,9 @@
 		<thingClass>DMS.Projectile_ConeExplosive</thingClass>
 		<tickerType>Normal</tickerType>
 		<graphicData>
-			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<texPath>Things/Projectiles/Ammo_3BM60</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>2</drawSize>
+			<drawSize>1.5</drawSize>
 		</graphicData>
 		<projectile>
 			<flyOverhead>true</flyOverhead>
@@ -401,7 +401,7 @@
 			<soundExplode>Explosion_Rocket</soundExplode>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>120</damageAmountBase>
-			<armorPenetrationBase>1.1</armorPenetrationBase>
+			<armorPenetrationBase>1.2</armorPenetrationBase>
 			<stoppingPower>10</stoppingPower>
 			<speed>110</speed>
 			<arcHeightFactor>0.1</arcHeightFactor>

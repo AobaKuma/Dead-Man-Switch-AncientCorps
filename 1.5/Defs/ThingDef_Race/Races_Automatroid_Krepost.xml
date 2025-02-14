@@ -7,13 +7,13 @@
     <description>6M41 / BR-6 "Krepost" NATO nicknamed "TankHead". Huge and bulky walker, used as a bridgehead and mobile battery to maintain frontal battlefield firepower, Krepost is equipped with several active protection system and reactive armors to resist incoming projectiles. Even if the shields are exhausted, its huge size and weapon systems are sufficient at holding off incoming enemies until reinforcements arrive.</description>
     <statBases>
       <MoveSpeed>2.7</MoveSpeed>
-      <ArmorRating_Sharp>1.8</ArmorRating_Sharp><!--銳抗-->
-      <ArmorRating_Blunt>1.15</ArmorRating_Blunt><!--鈍抗-->
-      <ArmorRating_Heat>2</ArmorRating_Heat>  <!--能抗-->
+      <ArmorRating_Sharp>1.65</ArmorRating_Sharp><!--銳抗-->
+      <ArmorRating_Blunt>1.00</ArmorRating_Blunt><!--鈍抗-->
+      <ArmorRating_Heat>1.8</ArmorRating_Heat>  <!--能抗-->
       <StaggerDurationFactor>0</StaggerDurationFactor>
       <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">6</BandwidthCost>        <!--帶寬消耗-->
-      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">4</WastepacksPerRecharge><!--充電/培養時產出廢料-->
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">6</WastepacksPerRecharge><!--充電/培養時產出廢料-->
     </statBases>
     <race>
       <mechFixedSkillLevel>12</mechFixedSkillLevel>

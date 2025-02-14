@@ -11,7 +11,7 @@
     <factionIconPath>UI/Faction/AncientIcon</factionIconPath>
     <canStageAttacks>true</canStageAttacks>
     <styles>
-      <li>DMS_Facility</li>
+      <li MayRequire="ludeon.rimworld.royalty">DMS_Facility</li>
     </styles>
     <colorSpectrum>
       <li>(0.78, 0.79, 0.71)</li>
@@ -50,7 +50,7 @@
     <earliestRaidDays>45</earliestRaidDays>
     <permanentEnemyToEveryoneExcept>
       <li>DMS_Army</li>
-      <li>OutlanderRefugee</li>
+      <li MayRequire="ludeon.rimworld.royalty">OutlanderRefugee</li>
       <li>Ancients</li>
       <li>PlayerColony</li>
     </permanentEnemyToEveryoneExcept>

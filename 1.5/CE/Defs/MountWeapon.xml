@@ -56,9 +56,8 @@
 			<Mass>10</Mass>
 		</statBases>
 		<verbs>
-			<li Class="CombatExtended.VerbPropertiesCE">
-				<recoilAmount>0</recoilAmount>
-				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<li >
+				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>DMS_Bullet_Electronic</defaultProjectile>
 				<warmupTime>5</warmupTime>
@@ -68,7 +67,6 @@
 				<soundCast>Explosion_EMP</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 				<forcedMissRadius>1</forcedMissRadius>
-				<recoilPattern>Mounted</recoilPattern>
 				<targetParams>
 					<canTargetMechs>true</canTargetMechs>
 					<canTargetBuildings>true</canTargetBuildings>

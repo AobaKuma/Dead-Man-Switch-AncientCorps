@@ -326,8 +326,8 @@
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_AerialAutocannon</defName>
                 <statBases>
-                    <Mass>16.21</Mass>
-                    <Bulk>13.98</Bulk>
+                    <Mass>53</Mass>
+                    <Bulk>39.98</Bulk>
                     <SwayFactor>3.12</SwayFactor>
                     <ShotSpread>0.04</ShotSpread>
                     <SightsEfficiency>1</SightsEfficiency>
@@ -382,7 +382,7 @@
                     <aiUseBurstMode>false</aiUseBurstMode>
                     <noSingleShot>true</noSingleShot>
                     <aiAimMode>SuppressFire</aiAimMode>
-                    <aimedBurstShotCount>30</aimedBurstShotCount>
+                    <aimedBurstShotCount>10</aimedBurstShotCount>
                 </FireModes>
                 <weaponTags>
                     <li>CE_AI_Suppressive</li>
@@ -453,7 +453,6 @@
                 <FireModes>
                     <aiUseBurstMode>true</aiUseBurstMode>
                     <aiAimMode>AimedShot</aiAimMode>
-                    <aimedBurstShotCount>2</aimedBurstShotCount>
                 </FireModes>
             </li>
         </operations>

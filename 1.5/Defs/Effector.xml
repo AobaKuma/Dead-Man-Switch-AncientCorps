@@ -27,4 +27,18 @@
         <fadeOutTime>0.05</fadeOutTime>
         <growthRate>-5</growthRate>
     </FleckDef>
+
+    <EffecterDef>
+        <defName>DisposableShield_Burnout</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <positionRadius>1.2</positionRadius>
+                <fleckDef>ElectricalSpark</fleckDef>
+                <burstCount>3~5</burstCount>
+                <scale>2</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
 </Defs>

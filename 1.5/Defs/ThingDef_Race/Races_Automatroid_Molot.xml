@@ -9,13 +9,13 @@
     <statBases>
       <StaggerDurationFactor>0.25</StaggerDurationFactor>
       <MoveSpeed>2.55</MoveSpeed>                                                              <!--移動速度-->
-      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>                                            <!--護甲-->
-      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <ArmorRating_Heat>1.0</ArmorRating_Heat>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>                                            <!--護甲-->
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.6</ArmorRating_Heat>
       <ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>                 <!--帶寬消耗-->
       <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge> <!--充電/培養時產出廢料-->
-      <AimingDelayFactor>1.25</AimingDelayFactor>                                            <!--瞄準延遲-->
+      <AimingDelayFactor>1.05</AimingDelayFactor>                                            <!--瞄準延遲-->
     </statBases>
     <race>
       <mechFixedSkillLevel>10</mechFixedSkillLevel>

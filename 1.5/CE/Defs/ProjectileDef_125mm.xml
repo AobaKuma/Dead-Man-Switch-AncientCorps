@@ -22,7 +22,7 @@
 		<defName>Ammo125mmTC</defName>
 		<label>125mm cannon shell</label>
 		<parent>AmmoShells</parent>
-		<iconPath>Things/UI/Icons/Ammo_125mmTC_Shell</iconPath>
+		<iconPath>UI/Icons/Ammo_125mmTC_Shell</iconPath>
 	</ThingCategoryDef>
 
 	<!-- ==================== AmmoSet ========================== -->
