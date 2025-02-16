@@ -76,8 +76,8 @@
     <race>DMS_Mech_Gorod</race>
     <nameMaker>DMS_AncientMechHeavy</nameMaker>
     <isFighter>true</isFighter>
-    <combatPower>120</combatPower>
-    <maxPerGroup>6</maxPerGroup>
+    <combatPower>300</combatPower>
+    <maxPerGroup>3</maxPerGroup>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -115,7 +115,7 @@
   <PawnKindDef ParentName="DMS_BaseGorodKind">
     <defName>DMS_Mech_Gorod_Cornetist</defName>
     <label>BR-4/UKS "Cornetist"</label>
-    <combatPower>400</combatPower>
+    <combatPower>600</combatPower>
     <weaponTags Inherit="False">
 			<li>DMS_VladimirovMachineGun</li>
 			<li>DMS_AerialAutocannon</li>
@@ -123,7 +123,7 @@
     <lifeStages Inherit="false">
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/gorod_AT</texPath>
+          <texPath>Things/Automatroid/cornetist</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
@@ -135,7 +135,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/gorod_AT</texPath>
+          <texPath>Things/Automatroid/cornetist</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
@@ -163,7 +163,7 @@
     <lifeStages Inherit="false">
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/gorod_AT</texPath>
+          <texPath>Things/Automatroid/organist</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
@@ -175,7 +175,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/gorod_AT</texPath>
+          <texPath>Things/Automatroid/organist</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
@@ -187,13 +187,13 @@
       </li>
     </lifeStages>
     <abilities>
-      <li>DMSAC_ATGMLauncher</li>
+      <li>DMSAC_ExplosiveFlamer</li>
     </abilities>
   </PawnKindDef>
   
   <!-- 吹笛人 -->
   <PawnKindDef ParentName="DMS_BaseGorodKind">
-    <defName>DMS_Mech_Gorod_Gunner</defName>
+    <defName>DMS_Mech_Gorod_Piper</defName>
     <label>BR-4/HR "Piper"</label>
     <combatPower>300</combatPower>
     <weaponTags Inherit="False">
@@ -203,7 +203,7 @@
     <lifeStages Inherit="false">
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/gorod_MG</texPath>
+          <texPath>Things/Automatroid/piper</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
@@ -215,7 +215,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/gorod_MG</texPath>
+          <texPath>Things/Automatroid/piper</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>

@@ -77,7 +77,7 @@
     <nameMaker>DMS_AncientMechHeavy</nameMaker>
     <isFighter>true</isFighter>
     <combatPower>300</combatPower>
-    <maxPerGroup>4</maxPerGroup>
+    <maxPerGroup>3</maxPerGroup>
     <weaponMoney>2000~4000</weaponMoney>
     <lifeStages>
       <li>
@@ -112,7 +112,7 @@
 
   <!-- 八音盒，帶溫壓火箭打擊技能的 -->
   <PawnKindDef ParentName="DMS_BaseZaborKind">
-    <defName>DMS_Mech_Zabor_Grenader</defName>
+    <defName>DMS_Mech_Zabor_Shkatulka</defName>
     <label>BR-4U/FG "Shkatulka"</label>
     <combatPower>400</combatPower>
     <weaponTags Inherit="False">

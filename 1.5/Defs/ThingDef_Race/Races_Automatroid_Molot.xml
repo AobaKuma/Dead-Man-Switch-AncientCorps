@@ -61,13 +61,14 @@
     <nameMaker>DMS_AncientMechStandard</nameMaker>
     <isFighter>true</isFighter>
     <combatPower>150</combatPower>
+    <maxPerGroup>5</maxPerGroup>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>Things/Automatroid/molot</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2</drawSize>
+          <drawSize>2.25</drawSize>
         </bodyGraphicData>
       </li>
       <li>
@@ -75,7 +76,7 @@
           <texPath>Things/Automatroid/molot</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2</drawSize>
+          <drawSize>2.25</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>

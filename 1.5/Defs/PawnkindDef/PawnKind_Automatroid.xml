@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+ <PawnKindDef ParentName="BaseAutomatroidKind">
+    <defName>DMS_Mech_Mushketer_AR</defName>
+    <label>mushketer</label>
+    <race>DMS_Mech_Arquebusier</race>
+    <isFighter>true</isFighter>
+    <combatPower>180</combatPower>
+    <maxPerGroup>12</maxPerGroup>
+    <weaponStyleDef MayRequire="ludeon.rimworld.ideology">DMS_PECA_AssaultRifle</weaponStyleDef>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/mushketer</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/mushketer</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>A_AR_LongRifle</li>
+    </weaponTags>
+    <aiAvoidCover>false</aiAvoidCover>
+  </PawnKindDef>
+  
+ <PawnKindDef ParentName="BaseAutomatroidKind">
+    <defName>DMS_Mech_Mushketer_SAR</defName>
+    <label>mushketer</label>
+    <race>DMS_Mech_Arquebusier</race>
+    <isFighter>true</isFighter>
+    <combatPower>180</combatPower>
+    <maxPerGroup>12</maxPerGroup>
+    <weaponStyleDef MayRequire="ludeon.rimworld.ideology">DMS_PECA_SemiAutoRifle</weaponStyleDef>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/mushketer</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/mushketer</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>A_SAR_LongRifle</li>
+    </weaponTags>
+    <aiAvoidCover>false</aiAvoidCover>
+  </PawnKindDef>
+</Defs>

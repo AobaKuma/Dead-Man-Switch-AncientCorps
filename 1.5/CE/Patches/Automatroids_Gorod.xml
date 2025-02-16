@@ -72,7 +72,7 @@
 			<li Class="PatchOperationAddModExtension">
 				<xpath>Defs/PawnKindDef[
 					defName="DMS_Mech_Gorod" or
-					defName="DMS_Mech_Gorod_Gunner" or
+					defName="DMS_Mech_Gorod_Piper" or
 					defName="DMS_Mech_Gorod_Cornetist" or
 					defName="DMS_Mech_Gorod_Organist"
 					]</xpath>

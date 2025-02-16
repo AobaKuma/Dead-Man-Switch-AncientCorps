@@ -72,7 +72,7 @@
 			<li Class="PatchOperationAddModExtension">
 				<xpath>Defs/PawnKindDef[
 					defName="DMS_Mech_Zabor" or
-					defName="DMS_Mech_Zabor_Grenader"
+					defName="DMS_Mech_Zabor_Shkatulka"
 					]</xpath>
 				<value>
 					<li Class="CombatExtended.LoadoutPropertiesExtension">

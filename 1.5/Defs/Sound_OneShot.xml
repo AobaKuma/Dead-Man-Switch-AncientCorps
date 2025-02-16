@@ -20,8 +20,8 @@
   <!-- 14.5 -->
   <SoundDef>
     <defName>DMS_AC_Shot_MachineGunSound</defName>  
-    <context>MapOnly</context>  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>

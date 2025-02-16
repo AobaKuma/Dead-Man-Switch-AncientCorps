@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <ThingDef ParentName="MoteBase">
+        <defName>DMS_Missile_Aim</defName>
+        <thingClass>MoteDualAttached</thingClass>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.15</fadeInTime>
+            <fadeOutTime>0.3</fadeOutTime>
+            <solidTime>999999</solidTime>
+            <needsMaintenance>True</needsMaintenance>
+            <rotateTowardsTarget>True</rotateTowardsTarget>
+            <scaleToConnectTargets>True</scaleToConnectTargets>
+            <fadeOutUnmaintained>True</fadeOutUnmaintained>
+        </mote>
+        <graphicData>
+            <texPath>Things/Mote/DMS_Missile_Aim</texPath>
+            <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+            <shaderType>MoteHellfireCannon_Aim</shaderType>
+            <shaderParameters>
+                <_DistortionTex>/Things/Mote/Cloudy_C</_DistortionTex>
+                <_NumFrames>10</_NumFrames>
+                <_FramesPerSec>1.35</_FramesPerSec>
+                <_DistortionScrollSpeed>1.35</_DistortionScrollSpeed>
+                <_Intensity>3</_Intensity>
+                <_DistortionScale>0.082</_DistortionScale>
+            </shaderParameters>
+            <drawSize>(3, 0.9)</drawSize>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>DMS_Missile_Target</defName>
+        <thingClass>MoteAttached</thingClass>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.5</fadeInTime>
+            <fadeOutTime>0.3</fadeOutTime>
+            <solidTime>999999</solidTime>
+            <needsMaintenance>True</needsMaintenance>
+        </mote>
+        <graphicData>
+            <texPath>Things/Mote/DMS_Missile_Target</texPath>
+            <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+            <shaderType>MoteHellfireCannon_Target</shaderType>
+            <shaderParameters>
+                <_ScanTex>/Things/Mote/DMS_Missile_Scan</_ScanTex>
+                <_ScanMask>/Things/Mote/DMS_Missile_Scan_Mask</_ScanMask>
+            </shaderParameters>
+            <drawSize>(8, 8)</drawSize>
+        </graphicData>
+    </ThingDef>
+
+
     <FleckDef ParentName="FleckBase_Thrown">
         <defName>DMS_Fleck_RocketSmokeTrail</defName>
         <graphicData>
@@ -38,6 +90,63 @@
                 <burstCount>3~5</burstCount>
                 <scale>2</scale>
                 <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>DMSAC_Fire_Blast</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.15</positionRadius>
+                <fleckDef>FireSpew_A</fleckDef>
+                <chancePerTick>1</chancePerTick>
+                <speed>15.5~30.5</speed>
+                <scale>1.0~2.2</scale>
+                <angle>-3~3</angle>
+                <positionLerpFactor>0.85</positionLerpFactor>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.3</positionRadius>
+                <fleckDef>FireSpew_A</fleckDef>
+                <chancePerTick>0.8</chancePerTick>
+                <speed>15.5~30.5</speed>
+                <scale>1.0~2.2</scale>
+                <angle>-3~3</angle>
+                <positionLerpFactor>0.60</positionLerpFactor>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.1</positionRadius>
+                <fleckDef>FireSpew_Base</fleckDef>
+                <chancePerTick>0.5</chancePerTick>
+                <speed>1~4</speed>
+                <scale>0.5~1.8</scale>
+                <angle>-9~9</angle>
+                <positionLerpFactor>0.9</positionLerpFactor>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.1</positionRadius>
+                <moteDef>Mote_SparkThrownFast</moteDef>
+                <chancePerTick>0.85</chancePerTick>
+                <speed>5.3~8</speed>
+                <scale>1.1~1.2</scale>
+                <angle>-12~12</angle>
+                <positionLerpFactor>0.8</positionLerpFactor>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <positionRadius>0.2</positionRadius>
+                <fleckDef>FireSpew_Glow</fleckDef>
+                <chancePerTick>0.16</chancePerTick>
+                <positionLerpFactor>0.65</positionLerpFactor>
             </li>
         </children>
     </EffecterDef>
