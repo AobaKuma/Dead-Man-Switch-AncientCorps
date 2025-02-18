@@ -119,7 +119,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_DMS_VladimirovMG</defaultProjectile>
 				<warmupTime>3</warmupTime>
-				<range>30.9</range>
+				<range>35.9</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>6</burstShotCount>
 				<soundCast>DMS_AC_Shot_MachineGunSound</soundCast>
@@ -204,7 +204,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
 				<warmupTime>2.8</warmupTime>
-				<range>31.9</range>
+				<range>34.9</range>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>Shot_Autocannon</soundCast>
