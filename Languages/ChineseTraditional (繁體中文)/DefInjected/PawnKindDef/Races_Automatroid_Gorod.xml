@@ -7,10 +7,10 @@
   <!-- EN: BR-4/UKS "Cornetist" -->
   <DMS_Mech_Gorod_Cornetist.label>BR-4/UKS "短號手"</DMS_Mech_Gorod_Cornetist.label>
   
-  <!-- EN: BR-4/HR "Piper" -->
-  <DMS_Mech_Gorod_Piper.label>BR-4/HR "吹笛人"</DMS_Mech_Gorod_Piper.label>
-  
   <!-- EN: BR-4/MMR "Organist" -->
   <DMS_Mech_Gorod_Organist.label>BR-4/MMR "風琴手"</DMS_Mech_Gorod_Organist.label>
+  
+  <!-- EN: BR-4/HR "Piper" -->
+  <DMS_Mech_Gorod_Piper.label>BR-4/HR "吹笛人"</DMS_Mech_Gorod_Piper.label>
   
 </LanguageData>

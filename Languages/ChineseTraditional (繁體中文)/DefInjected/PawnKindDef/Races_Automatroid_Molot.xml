@@ -5,12 +5,12 @@
   <DMS_Mech_Molot.label>BR-3 "磨坊"</DMS_Mech_Molot.label>
   
   <!-- EN: BR-3/FG "Kamin" -->
-  <DMS_Mech_Molot_Grenader.label>BR-3/FG "煙囪"</DMS_Mech_Molot_Grenader.label>
+  <DMS_Mech_Molot_Kamin.label>BR-3/FG "煙囪"</DMS_Mech_Molot_Kamin.label>
   
   <!-- EN: BR-3/MK "Mosta" -->
-  <DMS_Mech_Molot_Grinder.label>BR-3/MK "橋敦"</DMS_Mech_Molot_Grinder.label>
+  <DMS_Mech_Molot_Mosta.label>BR-3/MK "橋敦"</DMS_Mech_Molot_Mosta.label>
   
   <!-- EN: BR-3/GP "Reservoir" -->
-  <DMS_Mech_Molot_Sweeper.label>BR-3/GP "水庫"</DMS_Mech_Molot_Sweeper.label>
+  <DMS_Mech_Molot_Reservoir.label>BR-3/GP "水庫"</DMS_Mech_Molot_Reservoir.label>
   
 </LanguageData>

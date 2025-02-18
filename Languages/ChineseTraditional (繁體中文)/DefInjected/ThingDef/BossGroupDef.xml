@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Ancient Decoy Antenna -->
+  <DMS_AncientDecoyRadio.label>古代誘導天線</DMS_AncientDecoyRadio.label>
+  <!-- EN: A modified signal transponder which is rigged to send a high power burst transmission. Once activated it puts out a powerful decoy signal which will attract a feral group of automatroid forces to attack your colony. If you can defeat them, you can collect the advanced technology from their corpses. The signal pulse burns out the transmitter, so this building can only be used once. -->
+  <DMS_AncientDecoyRadio.description>經過改裝的信號轉發器。在啟動後它會發出強大的誘餌信號並吸引重型機兵部隊前來攻擊。如果你能打敗它，你就可以從它的殘骸中收集特殊技術。信號脈衝會燒壞發射器所以這座建築只能夠使用一次。</DMS_AncientDecoyRadio.description>
+  <!-- EN: Attract krepost threat -->
+  <DMS_AncientDecoyRadio.comps.CompUsable.useLabel>吸引稜堡襲擊</DMS_AncientDecoyRadio.comps.CompUsable.useLabel>
+  
+</LanguageData>

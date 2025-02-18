@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- DMS_Mech_Krepost -->
+  <BossDef>
+    <defName>DMS_Boss_Krepost</defName>
+    <kindDef>DMS_Mech_Krepost</kindDef>
+    <appearAfterTicks>360000</appearAfterTicks><!-- 1 years -->
+  </BossDef>
+  <BossgroupDef ParentName="BaseBossgroupNonMechanitor">
+    <defName>DMS_Krepost</defName>
+    <boss>DMS_Boss_Krepost</boss>
+    <waves>
+      <li> <!-- 0 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>2</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Molot>1</DMS_Mech_Molot>
+          <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+        </escorts>
+      </li>
+      <li> <!-- 1 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>6</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Molot>2</DMS_Mech_Molot>
+          <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Gorod_Organist>2</DMS_Mech_Gorod_Organist>
+        </escorts>
+      </li>
+      <li> <!-- 2 - Repeat starts here -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>6</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Molot_Reservoir>3</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>2</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
+          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
+        </escorts>
+      </li>
+      <li> <!-- 3 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>8</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Molot_Reservoir>3</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
+        </escorts>
+      </li>
+      <li> <!-- 4 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>6</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>3</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>3</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
+        </escorts>
+        <bossApparel>
+          <li><thing>Apparel_HeavyShield</thing></li>
+        </bossApparel>
+      </li>
+      <li> <!-- 5 -->
+        <bossCount>2</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>2</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Zabor>3</DMS_Mech_Zabor>
+          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
+        </escorts>
+        <bossApparel>
+          <li><thing>Apparel_HeavyShield</thing></li>
+        </bossApparel>
+      </li>
+      <li> <!-- 6 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Gorod>2</DMS_Mech_Gorod>
+          <DMS_Mech_Zabor>6</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+        </escorts>
+        <bossApparel>
+          <li><thing>Apparel_HeavyShield</thing></li>
+        </bossApparel>
+      </li>
+      <li> <!-- 7 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Gorod>4</DMS_Mech_Gorod>
+          <DMS_Mech_Zabor>4</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>3</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>
+        </escorts>
+        <bossApparel>
+          <li><thing>Apparel_HeavyShield</thing></li>
+        </bossApparel>
+      </li>
+    </waves>
+    <leaderDescription>This {LEADERKIND_label} was one of machines deployed as a vanguard for the Colonial Forces hundreds of years ago. It has been out of command due to the loss of its operator for an unknown amount of time and gone feral.</leaderDescription>
+    <rewardDef>ComponentTransmitter</rewardDef>
+  </BossgroupDef>
+
+  <ThingDef ParentName="DMS_BossCallerBase">
+    <defName>DMS_AncientDecoyRadio</defName>
+    <label>Ancient Decoy Antenna</label>
+    <description>A modified signal transponder which is rigged to send a high power burst transmission. Once activated it puts out a powerful decoy signal which will attract a feral group of automatroid forces to attack your colony. If you can defeat them, you can collect the advanced technology from their corpses. The signal pulse burns out the transmitter, so this building can only be used once.</description>
+    <graphicData>
+      <texPath>Things/Building/Facility_Decoy</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(1.7, 0.75, 0.8)</volume>
+        <offset>(0.15, 0, 0)</offset>
+      </shadowData>
+    </graphicData>  
+    <uiIconScale>0.5</uiIconScale>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>TriggerObject</useJob>
+        <useLabel>Attract krepost threat</useLabel>
+        <useDuration>900</useDuration>
+        <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
+      </li>
+      <li Class="DMS.CompProperties_UseEffectSummonRaid">
+        <bossgroupDef>DMS_Krepost</bossgroupDef>
+        <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <delayTicks>120</delayTicks>
+        <spawnKilledLeavings>true</spawnKilledLeavings>
+        <effecterDef>MechbandBuildingDestroyed</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

@@ -87,7 +87,7 @@
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_BaseMolotKind">
-    <defName>DMS_Mech_Molot_Sweeper</defName>
+    <defName>DMS_Mech_Molot_Reservoir</defName>
     <label>BR-3/GP "Reservoir"</label>
     <combatPower>150</combatPower>
     <weaponTags Inherit="False">
@@ -96,7 +96,7 @@
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_BaseMolotKind">
-    <defName>DMS_Mech_Molot_Grinder</defName>
+    <defName>DMS_Mech_Molot_Mosta</defName>
     <label>BR-3/MK "Mosta"</label>
     <combatPower>150</combatPower>
     <weaponMoney>1600~9999</weaponMoney>
@@ -106,7 +106,7 @@
   </PawnKindDef>
 
   <PawnKindDef ParentName="DMS_BaseMolotKind">
-    <defName>DMS_Mech_Molot_Grenader</defName>
+    <defName>DMS_Mech_Molot_Kamin</defName>
     <label>BR-3/FG "Kamin"</label>
     <combatPower>240</combatPower>
     <weaponTags Inherit="False">

@@ -71,9 +71,9 @@
 			<li Class="PatchOperationAddModExtension">
 				<xpath>Defs/PawnKindDef[
 					defName="DMS_Mech_Molot" or
-					defName="DMS_Mech_Molot_Grinder" or
-					defName="DMS_Mech_Molot_Grenader" or
-					defName="DMS_Mech_Molot_Sweeper"
+					defName="DMS_Mech_Molot_Mosta" or
+					defName="DMS_Mech_Molot_Kamin" or
+					defName="DMS_Mech_Molot_Reservoir"
 					]</xpath>
 				<value>
 					<li Class="CombatExtended.LoadoutPropertiesExtension">

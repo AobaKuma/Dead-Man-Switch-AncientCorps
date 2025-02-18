@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: zabor -->
+  <!-- EN: BR-4U "Zabor" -->
   <DMS_Mech_Zabor.label>BR-4U "篱笆"</DMS_Mech_Zabor.label>
   
-  <!-- EN: shkatulka -->
+  <!-- EN: BR-4U/FG "Shkatulka" -->
   <DMS_Mech_Zabor_Shkatulka.label>BR-4U/FG "八音盒"</DMS_Mech_Zabor_Shkatulka.label>
   
 </LanguageData>
