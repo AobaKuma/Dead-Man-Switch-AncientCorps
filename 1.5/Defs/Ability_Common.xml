@@ -75,7 +75,7 @@
 		<iconPath>UI/Ability/DMSAC_ATGM</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<cooldownTicksRange>60000~72000</cooldownTicksRange>
-		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+		<!-- <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets> -->
 		<charges>2</charges>
 		<cooldownPerCharge>true</cooldownPerCharge>
 		<verbProperties>
@@ -153,7 +153,7 @@
 		<iconPath>UI/Ability/DMSAC_FlameBlast</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<cooldownTicksRange>54000~60000</cooldownTicksRange>
-		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+		<!-- <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets> -->
 		<charges>1</charges>
 		<cooldownPerCharge>true</cooldownPerCharge>
 		<verbProperties>

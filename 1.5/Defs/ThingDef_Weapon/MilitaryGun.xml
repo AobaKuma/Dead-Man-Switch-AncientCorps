@@ -272,7 +272,7 @@
 				<defaultProjectile>Bullet_DMS_AtlantLauncher</defaultProjectile>
 				<warmupTime>3.5</warmupTime>
 				<minRange>8</minRange>
-				<range>29.9</range>
+				<range>24.9</range>
 				<forcedMissRadius>2</forcedMissRadius>
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>

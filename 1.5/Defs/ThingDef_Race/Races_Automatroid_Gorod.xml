@@ -10,7 +10,7 @@
       <StaggerDurationFactor>0.35</StaggerDurationFactor>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp><!--銳抗-->
       <ArmorRating_Blunt>0.6</ArmorRating_Blunt><!--鈍抗-->
-      <ArmorRating_Heat>1.0</ArmorRating_Heat>  <!--能抗-->
+      <ArmorRating_Heat>0.8</ArmorRating_Heat>  <!--能抗-->
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>        <!--帶寬消耗-->
       <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">2</WastepacksPerRecharge><!--充電/培養時產出廢料-->
     </statBases>
@@ -76,7 +76,7 @@
     <race>DMS_Mech_Gorod</race>
     <nameMaker>DMS_AncientMechHeavy</nameMaker>
     <isFighter>true</isFighter>
-    <combatPower>300</combatPower>
+    <combatPower>400</combatPower>
     <maxPerGroup>3</maxPerGroup>
     <lifeStages>
       <li>

@@ -68,7 +68,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>DMS_Bullet_Electronic</defaultProjectile>
 				<requireLineOfSight>false</requireLineOfSight>
-				<warmupTime>5</warmupTime>
+				<warmupTime>10</warmupTime>
 				<minRange>5</minRange>
 				<range>29.9</range>
 				<burstShotCount>1</burstShotCount>

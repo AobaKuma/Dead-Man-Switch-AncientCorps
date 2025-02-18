@@ -14,11 +14,11 @@
       <damageDef>Bomb</damageDef>
       <speed>40</speed>
       <armorPenetrationBase>1.8</armorPenetrationBase>
-      <explosionRadius>1.5</explosionRadius>
-      <damageAmountBase>120</damageAmountBase>
+      <explosionRadius>1.95</explosionRadius>
+      <damageAmountBase>200</damageAmountBase>
       <flyOverhead>true</flyOverhead>
       <explosionRadiusDisplayPadding>3</explosionRadiusDisplayPadding>
-      <arcHeightFactor>1</arcHeightFactor>
+      <arcHeightFactor>0.1</arcHeightFactor>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
       <soundExplode>MortarBomb_Explode</soundExplode>
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
