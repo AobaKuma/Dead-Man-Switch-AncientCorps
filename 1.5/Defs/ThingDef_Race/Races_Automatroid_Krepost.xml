@@ -277,7 +277,7 @@
     <nameMaker>DMS_AncientMechHeavy</nameMaker>
     <isFighter>true</isFighter>
     <combatPower>2400</combatPower>                                               <!--威脅點數-->
-    <maxPerGroup>2</maxPerGroup>                                                 <!--單個集群內的數量-->
+    <maxPerGroup>1</maxPerGroup>                                                 <!--單個集群內的數量-->
     <isBoss>true</isBoss>
     <lifeStages>                                                                 <!--身體圖片-->
       <li>
@@ -285,7 +285,7 @@
           <texPath>Things/Automatroid/krepost</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>4</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -297,7 +297,7 @@
           <texPath>Things/Automatroid/krepost</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>4</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -319,6 +319,7 @@
     <defName>DMS_Mech_Krepost_Sweeper</defName>
     <label>BR-6/GP "Bashnya"</label>
     <combatPower>1800</combatPower>
+	<maxPerGroup>2</maxPerGroup>   
     <weaponTags Inherit="False">
 			<li>2A38M</li>
 			<li>DMS_Gsh30Gatlinggun</li>
