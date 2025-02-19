@@ -48,7 +48,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_DMS_HeavyMachineGun</defaultProjectile>
 				<warmupTime>3</warmupTime>
-				<range>33.9</range>
+				<range>32.9</range>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>5</burstShotCount>
 				<soundCast>DMS_MachineGunHeavy_Shot</soundCast>
@@ -119,7 +119,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_DMS_VladimirovMG</defaultProjectile>
 				<warmupTime>3</warmupTime>
-				<range>34.9</range>
+				<range>33.9</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>6</burstShotCount>
 				<soundCast>DMS_AC_Shot_MachineGunSound</soundCast>
@@ -274,7 +274,7 @@
 				<defaultProjectile>DMS_Bullet_CIWS</defaultProjectile>
 				<warmupTime>3</warmupTime>
 				<minRange>8</minRange>
-				<range>39.9</range>
+				<range>36.9</range>
 				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 				<burstShotCount>18</burstShotCount>
 				<soundCast>Shot_TurretSniper</soundCast>

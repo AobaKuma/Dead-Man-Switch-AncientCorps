@@ -64,7 +64,7 @@
       <armorPenetrationBase>0.2</armorPenetrationBase>
       <explosionRadius>1.9</explosionRadius>
       <explosionChanceToStartFire>0.8</explosionChanceToStartFire>
-      <damageAmountBase>80</damageAmountBase>
+      <damageAmountBase>60</damageAmountBase>
       <flyOverhead>true</flyOverhead>
       <explosionRadiusDisplayPadding>3</explosionRadiusDisplayPadding>
       <arcHeightFactor>3</arcHeightFactor>

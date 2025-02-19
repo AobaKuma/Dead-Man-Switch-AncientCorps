@@ -313,7 +313,7 @@
 		<projectile>
 			<speed>38</speed>
 			<damageDef>Bomb</damageDef>
-			<damageAmountBase>24</damageAmountBase>
+			<damageAmountBase>20</damageAmountBase>
 			<stoppingPower>1.5</stoppingPower>
 			<explosionRadius>1.8</explosionRadius>
 			<ai_IsIncendiary>false</ai_IsIncendiary>

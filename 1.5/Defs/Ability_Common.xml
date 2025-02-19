@@ -128,7 +128,7 @@
 			<defaultProjectile>DMSAC_Bullet_S8Rocket</defaultProjectile>
 			<warmupTime>3</warmupTime>
 			<minRange>19.9</minRange>
-			<range>44.9</range>
+			<range>34.9</range>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<sprayWidth>6</sprayWidth>
 			<sprayArching>10</sprayArching>
