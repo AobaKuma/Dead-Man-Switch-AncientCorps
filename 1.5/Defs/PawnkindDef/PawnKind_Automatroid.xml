@@ -38,7 +38,7 @@
     <race>DMS_Mech_Arquebusier</race>
     <isFighter>true</isFighter>
     <combatPower>180</combatPower>
-    <maxPerGroup>12</maxPerGroup>
+    <maxPerGroup>6</maxPerGroup>
     <weaponStyleDef MayRequire="ludeon.rimworld.ideology">DMS_PECA_SemiAutoRifle</weaponStyleDef>
     <lifeStages>
       <li>

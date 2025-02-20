@@ -5,14 +5,14 @@
         <operations>
         
             <!--Remove projectile-->
-            <li Class="PatchOperationRemove">
+            <!-- <li Class="PatchOperationRemove">
                 <xpath>Defs/ThingDef[
                     defName="Bullet_DMS_VladimirovMG" or
                     defName="DMS_Bullet_JusticeGavel" or
                     defName="Bullet_DMS_CombatShotgun" or
                     defName="Bullet_DMS_AtlantLauncher"
                     ]</xpath>
-            </li>
+            </li> -->
             <!--Remove speed penalty-->
             <li Class="PatchOperationRemove">
                 <xpath>Defs/ThingDef[

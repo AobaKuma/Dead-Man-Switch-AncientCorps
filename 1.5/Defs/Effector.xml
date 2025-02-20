@@ -94,6 +94,114 @@
         </children>
     </EffecterDef>
 
+
+    <FleckDef ParentName="FleckBase_Thrown" Name="DMSAC_BaseDiscardingShell">
+        <defName>DMSAC_Fleck_DiscardingShell_A</defName>
+        <graphicData>
+            <texPath>Things/Mote/DMS_discardingShell_A</texPath>
+            <shaderType>Transparent</shaderType>
+            <color>(1, 1, 1, 1)</color>
+        </graphicData>
+        <altitudeLayer>MoteOverheadLow</altitudeLayer>
+        <fadeInTime>0.05</fadeInTime>
+        <solidTime>0</solidTime>
+        <fadeOutTime>1.45</fadeOutTime>
+        <collide>true</collide>
+        <speedPerTime>-2~-1</speedPerTime>
+        <landSound>BulletImpact_Metal</landSound>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <acceleration>(0, 0, -1.7326)</acceleration>
+        <archDuration>0.5</archDuration>
+    </FleckDef>
+    
+    <FleckDef ParentName="DMSAC_BaseDiscardingShell">
+        <defName>DMSAC_Fleck_DiscardingShell_B</defName>
+        <graphicData>
+            <texPath>Things/Mote/DMS_discardingShell_B</texPath>
+        </graphicData>
+    </FleckDef>
+    
+    <FleckDef ParentName="DMSAC_BaseDiscardingShell">
+        <defName>DMSAC_Fleck_DiscardingShell_C</defName>
+        <graphicData>
+            <texPath>Things/Mote/DMS_discardingShell_C</texPath>
+        </graphicData>
+    </FleckDef>
+
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>DMS_Fleck_DiscardingStock</defName>
+        <graphicData>
+            <texPath>Things/Mote/DMS_discardingStock</texPath>
+            <shaderType>Transparent</shaderType>
+            <color>(1, 1, 1,0.9)</color>
+        </graphicData>
+        <altitudeLayer>MoteOverheadLow</altitudeLayer>
+        <altitudeLayerIncOffset>-0.1</altitudeLayerIncOffset>
+        <fadeInTime>0.01</fadeInTime>
+        <solidTime>0</solidTime>
+        <fadeOutTime>1.49</fadeOutTime>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <collide>true</collide>
+        <acceleration>(0, 0, -1)</acceleration>
+    </FleckDef>
+
+    <EffecterDef>
+        <defName>DMSAC_SabotShell</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>DMSAC_Fleck_DiscardingShell_B</fleckDef>
+                <burstCount>1</burstCount>
+                <speed>16~20</speed>
+                <scale>1.15</scale>
+                <angle>-6~-3</angle>
+                <rotationRate>-45~30</rotationRate>
+                <airTime>1~2</airTime>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <positionLerpFactor>0.96</positionLerpFactor>
+				<absoluteAngle>false</absoluteAngle>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>DMSAC_Fleck_DiscardingShell_C</fleckDef>
+                <burstCount>1</burstCount>
+                <speed>16~20</speed>
+                <scale>1.15</scale>
+                <angle>3~6</angle>
+                <rotationRate>30~45</rotationRate>
+                <airTime>1~2</airTime>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <positionLerpFactor>0.96</positionLerpFactor>
+				<absoluteAngle>false</absoluteAngle>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>DMS_Fleck_DiscardingStock</fleckDef>
+                <burstCount>1</burstCount>
+                <speed>28~40</speed>
+                <scale>1.15</scale>
+                <angle>0</angle>
+                <airTime>1.2~2.2</airTime>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <positionLerpFactor>0.98</positionLerpFactor>
+				<absoluteAngle>false</absoluteAngle>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>DMSAC_Fleck_DiscardingShell_A</fleckDef>
+                <burstCount>1</burstCount>
+                <speed>16~20</speed>
+                <scale>1.15</scale>
+                <angle>0</angle>
+                <rotationRate>120~120</rotationRate>
+                <airTime>1~2</airTime>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <positionLerpFactor>0.96</positionLerpFactor>
+				<absoluteAngle>false</absoluteAngle>
+            </li>
+        </children>
+    </EffecterDef>
+
     <EffecterDef>
         <defName>DMSAC_Fire_Blast</defName>
         <children>
