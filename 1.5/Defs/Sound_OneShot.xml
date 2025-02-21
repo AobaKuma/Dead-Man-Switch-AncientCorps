@@ -29,7 +29,8 @@
             <clipPath>AncientCorps/MachineGun_Shot</clipPath>
           </li>
         </grains>      
-        <volumeRange>50~50</volumeRange>
+        <volumeRange>20~30</volumeRange>
+        <pitchRange>0.86~0.945882</pitchRange>
       </li>
     </subSounds>
   </SoundDef>

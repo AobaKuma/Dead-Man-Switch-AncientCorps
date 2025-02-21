@@ -94,7 +94,6 @@
         </children>
     </EffecterDef>
 
-
     <FleckDef ParentName="FleckBase_Thrown" Name="DMSAC_BaseDiscardingShell">
         <defName>DMSAC_Fleck_DiscardingShell_A</defName>
         <graphicData>
@@ -104,13 +103,13 @@
         </graphicData>
         <altitudeLayer>MoteOverheadLow</altitudeLayer>
         <fadeInTime>0.05</fadeInTime>
-        <solidTime>0</solidTime>
-        <fadeOutTime>1.45</fadeOutTime>
+        <solidTime>0.45</solidTime>
+        <fadeOutTime>0.5</fadeOutTime>
         <collide>true</collide>
         <speedPerTime>-2~-1</speedPerTime>
         <landSound>BulletImpact_Metal</landSound>
         <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
-        <acceleration>(0, 0, -1.7326)</acceleration>
+        <acceleration>(0, 0, -2.7326)</acceleration>
         <archDuration>0.5</archDuration>
     </FleckDef>
     
@@ -137,9 +136,9 @@
         </graphicData>
         <altitudeLayer>MoteOverheadLow</altitudeLayer>
         <altitudeLayerIncOffset>-0.1</altitudeLayerIncOffset>
-        <fadeInTime>0.01</fadeInTime>
+        <fadeInTime>0.1</fadeInTime>
         <solidTime>0</solidTime>
-        <fadeOutTime>1.49</fadeOutTime>
+        <fadeOutTime>0.9</fadeOutTime>
         <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
         <collide>true</collide>
         <acceleration>(0, 0, -1)</acceleration>
@@ -152,26 +151,28 @@
                 <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
                 <fleckDef>DMSAC_Fleck_DiscardingShell_B</fleckDef>
                 <burstCount>1</burstCount>
-                <speed>16~20</speed>
+                <speed>18~24</speed>
                 <scale>1.15</scale>
                 <angle>-6~-3</angle>
-                <rotationRate>-45~30</rotationRate>
-                <airTime>1~2</airTime>
+                <rotationRate>-15~-10</rotationRate>
+                <useTargetAInitialRotation>true</useTargetAInitialRotation>
+                <airTime>0~2</airTime>
                 <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
-                <positionLerpFactor>0.96</positionLerpFactor>
+                <positionLerpFactor>0.95</positionLerpFactor>
 				<absoluteAngle>false</absoluteAngle>
             </li>
             <li>
                 <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
                 <fleckDef>DMSAC_Fleck_DiscardingShell_C</fleckDef>
                 <burstCount>1</burstCount>
-                <speed>16~20</speed>
+                <speed>18~24</speed>
                 <scale>1.15</scale>
                 <angle>3~6</angle>
-                <rotationRate>30~45</rotationRate>
-                <airTime>1~2</airTime>
+                <rotationRate>10~15</rotationRate>
+                <useTargetAInitialRotation>true</useTargetAInitialRotation>
+                <airTime>0~2</airTime>
                 <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
-                <positionLerpFactor>0.96</positionLerpFactor>
+                <positionLerpFactor>0.95</positionLerpFactor>
 				<absoluteAngle>false</absoluteAngle>
             </li>
             <li>
@@ -190,13 +191,14 @@
                 <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
                 <fleckDef>DMSAC_Fleck_DiscardingShell_A</fleckDef>
                 <burstCount>1</burstCount>
-                <speed>16~20</speed>
+                <speed>18~24</speed>
                 <scale>1.15</scale>
                 <angle>0</angle>
-                <rotationRate>120~120</rotationRate>
-                <airTime>1~2</airTime>
+                <rotationRate>-30~30</rotationRate>
+                <useTargetAInitialRotation>true</useTargetAInitialRotation>
+                <airTime>0~2</airTime>
                 <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
-                <positionLerpFactor>0.96</positionLerpFactor>
+                <positionLerpFactor>0.95</positionLerpFactor>
 				<absoluteAngle>false</absoluteAngle>
             </li>
         </children>

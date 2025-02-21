@@ -60,7 +60,7 @@
 				<def>MF_StandardMuzzleFalsh</def>
 				<drawSize>(0.5,0.5)</drawSize>
 				<offsets>
-					<li>(0.75,0)</li>
+					<li>(0.6,0)</li>
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
@@ -90,7 +90,7 @@
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_KS23K</texPath>
-			<drawSize>1.1</drawSize>
+			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
@@ -131,7 +131,7 @@
 				<def>MF_StandardMuzzleFalsh</def>
 				<drawSize>(0.5,0.5)</drawSize>
 				<offsets>
-					<li>(0.75,0)</li>
+					<li>(0.5,0)</li>
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
@@ -149,7 +149,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 			<color>(255,255,255)</color>
-			<drawSize>1</drawSize>
+			<drawSize>0.9</drawSize>
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
@@ -217,9 +217,9 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
 				<def>MF_StandardMuzzleFalsh</def>
-				<drawSize>(0.5,0.5)</drawSize>
+				<drawSize>(1.5,1.5)</drawSize>
 				<offsets>
-					<li>(1,0)</li>
+					<li>(0.6,0)</li>
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
@@ -276,7 +276,7 @@
 				<forcedMissRadius>2</forcedMissRadius>
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
-				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCast>DMS_Shot_VasilekSound</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>14</muzzleFlashScale>
 				<targetParams>
@@ -321,5 +321,10 @@
 			<arcHeightFactor>3</arcHeightFactor>
 			<shadowSize>0.6</shadowSize>
 		</projectile>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMS_LaunchDust_Grenade</effecterDef>
+			</li>
+		</comps>
 	</ThingDef>
 </Defs>

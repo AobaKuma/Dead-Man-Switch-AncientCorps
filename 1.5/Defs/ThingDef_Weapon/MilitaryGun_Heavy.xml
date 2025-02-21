@@ -59,9 +59,9 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
 				<def>MF_StandardMuzzleFalsh</def>
-				<drawSize>(0.75,0.75)</drawSize>
+				<drawSize>1</drawSize>
 				<offsets>
-					<li>(0.75,0)</li>
+					<li>(0.9,0)</li>
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
@@ -130,9 +130,9 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
 				<def>MF_StandardMuzzleFalsh</def>
-				<drawSize>(0.75,0.75)</drawSize>
+				<drawSize>1.25</drawSize>
 				<offsets>
-					<li>(0.75,0)</li>
+					<li>(1,0)</li>
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
@@ -155,6 +155,11 @@
 			<stoppingPower>4</stoppingPower>
 			<speed>75</speed>
 		</projectile>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMS_LaunchDust_Grenade</effecterDef>
+			</li>
+		</comps>
 	</ThingDef>
 
 	<!--航空機砲-->
@@ -215,9 +220,9 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
 				<def>MF_StandardMuzzleFalsh</def>
-				<drawSize>(0.75,0.75)</drawSize>
+				<drawSize>(1.15,0.75)</drawSize>
 				<offsets>
-					<li>(0.75,0)</li>
+					<li>(1.25,0)</li>
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
@@ -373,7 +378,7 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
 				<def>MF_StandardMuzzleFalsh</def>
-				<drawSize>(3,3)</drawSize>
+				<drawSize>(5,5)</drawSize>
 				<offsets>
 					<li>(2.1,0)</li>
 				</offsets>
@@ -420,6 +425,9 @@
 			</li>
 		</modExtensions>
 		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMS_LaunchDust</effecterDef>
+			</li>
 			<li Class="CompProperties_ProjectileEffecter">
 				<effecterDef>DMSAC_SabotShell</effecterDef>
 			</li>
