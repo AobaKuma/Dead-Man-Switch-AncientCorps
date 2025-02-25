@@ -1,5 +1,268 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!--Zlobin Revolver-->
+	<ThingDef ParentName="DMS_AutomatroidGun">
+		<defName>DMS_ZlobinRevolver</defName>
+		<label>Zlobin Revolver</label>
+		<description>A hunting revolver named after its designer, it uses large-caliber subsonic ammunition that is enough to stop large animals with a single shot. Its more stable recoil than other weapons of the same caliber makes it very popular among explorers and pirate groups on the edge of the world.</description>
+		<weaponClasses>
+		  <li>LongShots</li>
+		  <li>Ranged</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>DMS_ZlobinRevolver</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_RSh12</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<statBases>
+			<WorkToMake>4500</WorkToMake>
+			<AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyShort>0.68</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<Mass>2.2</Mass>
+			<RangedWeapon_Cooldown>1.62</RangedWeapon_Cooldown>
+		</statBases>
+		<recipeMaker>
+		    <researchPrerequisites>
+      			<li>Gunsmithing</li>
+      			<li>DMS_EquipmentAdvanced</li>
+    		</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Steel>37</Steel>
+			<ComponentStamped>1</ComponentStamped>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_DMS_Subsonic_Pistol</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<range>17.9</range>
+				<soundCast>Shot_Revolver</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.75,0.75)</drawSize>
+				<offsets>
+					<li>(0.5,0)</li>
+				</offsets>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>AverageHumanCanUse</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_DMS_Subsonic_Pistol</defName>
+		<label>subsonic bullet</label>
+		<graphicData>
+		  	<texPath>Things/Projectile/Bullet_Big</texPath>
+		  	<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<projectile>
+		  	<damageDef>Bullet</damageDef>
+		  	<stoppingPower>2</stoppingPower>
+		 	<armorPenetrationBase>0.4</armorPenetrationBase>
+		  	<damageAmountBase>12</damageAmountBase>
+			<speed>48</speed>
+		</projectile>
+	</ThingDef>
+
+	<!--Zlobin Rifle-->
+	<ThingDef ParentName="DMS_AutomatroidGun">
+		<defName>DMS_ZlobinRifle</defName>
+		<label>Zlobin Rifle</label>
+		<description>A special assault rifle named after its designer. during urban combat, it is capable of effectively penetrating the armor of most small and medium-sized mechanoids and causing damage.. However, its long-range accuracy is quite limited due to its speciallized subsonic bullet.\n\nIt also equipped with an underbarrel launcher capable of firing small-caliber grenades.</description>
+		<weaponClasses>
+		  <li>LongShots</li>
+		  <li>Ranged</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>DMS_MechWeaponLongRifle</li>
+			<li>DMS_ZlobinRifle</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_ASh12</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<soundInteract>Interact_AssaultRifle</soundInteract>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<AccuracyTouch>0.8</AccuracyTouch>
+			<AccuracyShort>0.73</AccuracyShort>
+			<AccuracyMedium>0.64</AccuracyMedium>
+			<AccuracyLong>0.14</AccuracyLong>
+			<Mass>5.2</Mass>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+		  <HuntingStealth>0.25</HuntingStealth>
+		</equippedStatOffsets>
+		<recipeMaker>
+		    <researchPrerequisites>
+      			<li>PrecisionRifling</li>
+      			<li>DMS_EquipmentAdvanced</li>
+    		</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Steel>55</Steel>
+			<ComponentStamped>2</ComponentStamped>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_DMS_Subsonic_Rifle</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<range>27.9</range>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.3,0.3)</drawSize>
+				<offsets>
+					<li>(0.65,0)</li>
+				</offsets>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>AverageHumanCanUse</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_DMS_Subsonic_Rifle</defName>
+		<label>subsonic bullet</label>
+		<graphicData>
+		  	<texPath>Things/Projectile/Bullet_Big</texPath>
+		  	<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<projectile>
+		  	<damageDef>Bullet</damageDef>
+		  	<stoppingPower>1.8</stoppingPower>
+		 	<armorPenetrationBase>0.37</armorPenetrationBase>
+		  	<damageAmountBase>18</damageAmountBase>
+			<speed>48</speed>
+		</projectile>
+	</ThingDef>
+
+
+	<!--VKS-->
+	<ThingDef ParentName="DMS_AutomatroidGun">
+		<defName>DMS_VykhlopRifle</defName>
+		<label>Vykhlop Rifle</label>
+		<description>A lightweight, large-caliber suppressed rifle capable of penetrating lightly armored and body armored targets at long range. A special silencer that occupies the entire length of the barrel ensures its concealment.</description>
+		<weaponClasses>
+		  <li>LongShots</li>
+		  <li>Ranged</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>DMS_VykhlopRifle</li>
+			<li>DMS_MechWeaponLongRifle</li>
+			<li>A_SAR_LongRifle</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_VKS12</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<statBases>
+			<WorkToMake>42500</WorkToMake>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.63</AccuracyShort>
+			<AccuracyMedium>0.68</AccuracyMedium>
+			<AccuracyLong>0.71</AccuracyLong>
+			<Mass>6.93</Mass>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+		  <HuntingStealth>0.75</HuntingStealth>
+		</equippedStatOffsets>
+		<recipeMaker>
+		    <researchPrerequisites>
+      			<li>PrecisionRifling</li>
+    		</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Steel>65</Steel>
+			<ComponentStamped>3</ComponentStamped>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_DMS_Subsonic_Sniper</defaultProjectile>
+				<warmupTime>2.25</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<range>37.9</range>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>3</muzzleFlashScale>
+				<forcedMissRadius>0.1</forcedMissRadius>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.25,0.25)</drawSize>
+				<offsets>
+					<li>(0.725,0)</li>
+				</offsets>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>AverageHumanCanUse</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_DMS_Subsonic_Sniper</defName>
+		<label>subsonic bullet</label>
+		<graphicData>
+		  	<texPath>Things/Projectile/Bullet_Big</texPath>
+		  	<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<projectile>
+		  	<damageDef>Bullet</damageDef>
+		  	<stoppingPower>3</stoppingPower>
+		 	<armorPenetrationBase>0.57</armorPenetrationBase>
+		  	<damageAmountBase>25</damageAmountBase>
+			<speed>48</speed>
+		</projectile>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1</explosiveRadius>
+				<explosiveDamageType>EMP</explosiveDamageType>
+				<damageAmountBase>40</damageAmountBase>
+				<explodeOnDestroyed>true</explodeOnDestroyed>
+				<explodeOnKilled>true</explodeOnKilled>
+				<doSoundEffects>false</doSoundEffects>
+				<doVisualEffects>false</doVisualEffects>
+				<applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+			</li>
+		</comps>
+	</ThingDef>
+
 	<!-- DMS_PKM -->
 	<ThingDef ParentName="DMS_AutomatroidGun">
 		<defName>DMS_PKM</defName>
@@ -19,7 +282,7 @@
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_PKM</texPath>
-			<drawSize>1.1</drawSize>
+			<drawSize>1.25</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
@@ -90,7 +353,7 @@
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_KS23K</texPath>
-			<drawSize>1.2</drawSize>
+			<drawSize>1.25</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
@@ -155,7 +418,7 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>24</damageAmountBase>
 			<stoppingPower>5</stoppingPower>
-			<armorPenetrationBase>0.5</armorPenetrationBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
 			<speed>55</speed>
 		</projectile>
 	</ThingDef>
@@ -176,7 +439,7 @@
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_KSVK</texPath>
-			<drawSize>1.5</drawSize>
+			<drawSize>1.75</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>

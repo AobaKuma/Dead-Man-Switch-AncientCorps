@@ -3,17 +3,7 @@
 <Patch>
     <Operation Class="PatchOperationSequence">
         <operations>
-        
-            <!--Remove projectile-->
-            <!-- <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[
-                    defName="Bullet_DMS_VladimirovMG" or
-                    defName="DMS_Bullet_JusticeGavel" or
-                    defName="Bullet_DMS_CombatShotgun" or
-                    defName="Bullet_DMS_AtlantLauncher"
-                    ]</xpath>
-            </li> -->
-            <!--Remove speed penalty-->
+            <!--RemovespeedPenalty-->
             <li Class="PatchOperationRemove">
                 <xpath>Defs/ThingDef[
                     defName="DMS_KordMachineGun" or
@@ -26,7 +16,202 @@
                     ]/equippedStatOffsets/MoveSpeed</xpath>
             </li>
 
-            <!--===== DMS_KS23K =====-->
+            <!--DMS_ZlobinRevolver=====-->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>DMS_ZlobinRevolver</defName>
+                <statBases>
+                    <Mass>2.2</Mass>
+                    <RangedWeapon_Cooldown>0.49</RangedWeapon_Cooldown>
+                    <SightsEfficiency>0.7</SightsEfficiency>
+                    <ShotSpread>0.16</ShotSpread>
+                    <SwayFactor>1.39</SwayFactor>
+                    <Bulk>3.49</Bulk>
+                    <WorkToMake>4500</WorkToMake>
+                </statBases>
+                <costList>
+                    <Steel>37</Steel>
+                    <ComponentStamped>1</ComponentStamped>
+                </costList>
+                <Properties>
+                    <recoilAmount>2.25</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_127x55mm_FMJ</defaultProjectile>
+                    <warmupTime>0.6</warmupTime>
+                    <range>15.9</range>
+                    <soundCast>Shot_Revolver</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>5</magazineSize>
+                    <reloadTime>4.6</reloadTime>
+                    <ammoSet>AmmoSet_127x55mm</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    <aiAimMode>Snapshot</aiAimMode>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_Sidearm</li>
+                    <li>CE_AI_BROOM</li>
+                    <li>CE_OneHandedWeapon</li>
+                </weaponTags>
+            </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="DMS_ZlobinRevolver"]</xpath>
+                <value>
+                    <li Class="CombatExtended.GunDrawExtension">
+                        <DrawOffset>0.0,-0.04</DrawOffset>
+                        <DropCasingWhenReload>true</DropCasingWhenReload>
+                        <AdvancedCasingVariables>true</AdvancedCasingVariables>
+                        <CasingRotationRandomRange>20</CasingRotationRandomRange>
+                        <CasingOffset>-0.1,0.05</CasingOffset>
+                        <CasingSpeedOverrideRange>1.5~2</CasingSpeedOverrideRange>
+                        <CasingAngleOffset>-135</CasingAngleOffset>
+                        <CasingLifeTimeMultiplier>2</CasingLifeTimeMultiplier>
+                    </li>
+                </value>
+            </li>
+
+            <!--DMS_ZlobinRifle=====-->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>DMS_ZlobinRifle</defName>
+                <statBases>
+                    <Mass>6.2</Mass>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <ShotSpread>0.07</ShotSpread>
+                    <SwayFactor>1.34</SwayFactor>
+                    <Bulk>11.03</Bulk>
+                    <WorkToMake>30000</WorkToMake>
+                </statBases>
+                <costList>
+                    <Steel>55</Steel>
+                    <Chemfuel>10</Chemfuel>
+                    <ComponentStamped>2</ComponentStamped>
+                </costList>
+                <Properties>
+                    <recoilAmount>2.25</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_127x55mm_FMJ</defaultProjectile>
+                    <warmupTime>1.1</warmupTime>
+                    <range>42</range>
+                    <burstShotCount>5</burstShotCount>
+                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                    <soundCast>Shot_AssaultRifle</soundCast>
+                    <soundCastTail>GunTail_Medium</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>20</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_127x55mm</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aimedBurstShotCount>4</aimedBurstShotCount>
+                    <aiUseBurstMode>TRUE</aiUseBurstMode>
+                    <aiAimMode>AimedShot</aiAimMode>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_AR</li>
+                </weaponTags>
+                <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+            </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="DMS_ZlobinRifle"]</xpath>
+                <value>
+                    <li Class="CombatExtended.GunDrawExtension">
+                        <DrawOffset>0.08,0.0</DrawOffset>
+                        <CasingOffset>-0.05,0</CasingOffset>
+                    </li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_ZlobinRifle"]/comps</xpath>
+                <value>
+                    <li Class="CombatExtended.CompProperties_UnderBarrel">
+                        <propsUnderBarrel>
+                            <magazineSize>3</magazineSize>
+                            <AmmoGenPerMagOverride>5</AmmoGenPerMagOverride>
+                            <reloadTime>1</reloadTime>
+                            <ammoSet>AmmoSet_30x29mmGrenade</ammoSet>
+                        </propsUnderBarrel>
+                        <verbPropsUnderBarrel>
+                            <recoilAmount>2.12</recoilAmount>
+                            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                            <hasStandardCommand>true</hasStandardCommand>
+                            <defaultProjectile>Bullet_30x29mmGrenade_HE</defaultProjectile>
+                            <warmupTime>2</warmupTime>
+				            <minRange>8</minRange>
+                            <range>32</range>
+                            <soundCast>Shot_Shotgun_NoRack</soundCast>
+                            <soundCastTail>GunTail_Medium</soundCastTail>
+                            <muzzleFlashScale>6</muzzleFlashScale>
+                        </verbPropsUnderBarrel>
+                        <propsFireModesUnderBarrel>
+                            <aiAimMode>Snapshot</aiAimMode>
+                        </propsFireModesUnderBarrel>
+                    </li>
+                </value>
+            </li>
+            <!-- ==========DMS_VykhlopRifle========== -->
+
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>DMS_VykhlopRifle</defName>
+                <statBases>
+                    <Mass>7</Mass>
+                    <RangedWeapon_Cooldown>1.16</RangedWeapon_Cooldown>
+                    <SightsEfficiency>2.6</SightsEfficiency>
+                    <ShotSpread>0.05</ShotSpread>
+                    <SwayFactor>1.35</SwayFactor>
+                    <Bulk>11.92</Bulk>
+                    <WorkToMake>42500</WorkToMake>
+                </statBases>
+                <costList>
+                    <Steel>60</Steel>
+                    <ComponentIndustrial>5</ComponentIndustrial>
+                    <Chemfuel>15</Chemfuel>
+                </costList>
+                <Properties>
+                    <recoilAmount>1.65</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_127x55mm_FMJ</defaultProjectile>
+                    <warmupTime>1.8</warmupTime>
+                    <range>63</range>
+                    <soundCast>Shot_SniperRifle</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>5</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_127x55mm</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>AimedShot</aiAimMode>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_SR</li>
+                    <li>Bipod_DMR</li>
+                </weaponTags>
+                <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                <AllowWithRunAndGun>false</AllowWithRunAndGun>
+            </li>
+
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="DMS_VykhlopRifle"]</xpath>
+                <value>
+                    <li Class="CombatExtended.GunDrawExtension">
+                        <DrawOffset>0.2,0.0</DrawOffset>
+                        <CasingOffset>-0.3,0.04</CasingOffset>
+                    </li>
+                </value>
+            </li>
+
+            <!--DMS_KS23K=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_KS23K</defName>
                 <statBases>
@@ -63,8 +248,7 @@
                     <li>CE_AI_AssaultWeapon</li>
                 </weaponTags>
             </li>
-
-            <!--===== DMS_YekaterinRifle =====-->
+            <!--=====DMS_YekaterinRifle=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_YekaterinRifle</defName>
                 <statBases>
@@ -100,14 +284,24 @@
                 </weaponTags>
             </li>
             <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="DMS_AntiMaterialRifle"]/modExtensions/li[@Class="DMS.HeavyEquippableExtension"]</xpath>
+                <xpath>
+                    Defs/ThingDef[defName="DMS_AntiMaterialRifle"]/modExtensions/li[@Class="DMS.HeavyEquippableExtension"]</xpath>
                 <value>
                     <li Class="DMS.HeavyEquippableExtension">
                         <EquippableDef>AverageHumanCanUse</EquippableDef>
                     </li>
                 </value>
             </li>
-            <!--===== DMS_AtlantGrenadeLauncher =====-->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="DMS_YekaterinRifle"]</xpath>
+                <value>
+                    <li Class="CombatExtended.GunDrawExtension">
+                        <DrawOffset>0.25,0.0</DrawOffset>
+                        <CasingOffset>-0.05,0</CasingOffset>
+                    </li>
+                </value>
+            </li>
+            <!--=====DMS_AtlantGrenadeLauncher=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_AtlantGrenadeLauncher</defName>
                 <statBases>
@@ -150,8 +344,7 @@
                     <li>CE_AI_AOE</li>
                 </weaponTags>
             </li>
-
-            <!--===== DMS_PKM =====-->
+            <!--=====DMS_PKM=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_PKM</defName>
                 <statBases>
@@ -194,8 +387,7 @@
                     <li>bipodSAW</li>
                 </weaponTags>
             </li>
-
-            <!--===== DMS_KordMachineGun =====-->
+            <!--=====DMS_KordMachineGun=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_KordMachineGun</defName>
                 <statBases>
@@ -207,7 +399,7 @@
                     <RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
                 </statBases>
                 <Properties>
-				    <recoilAmount>1.50</recoilAmount>
+                    <recoilAmount>1.50</recoilAmount>
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_127x108mm_FMJ</defaultProjectile>
@@ -239,8 +431,7 @@
                     <li>Bipod_LMG</li>
                 </weaponTags>
             </li>
-
-            <!-- Kord Mount -->
+            <!--=====DMS_Gun_KordTurret=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_Gun_KordTurret</defName>
                 <statBases>
@@ -276,8 +467,7 @@
                     <li>NoSwitch</li>
                 </weaponTags>
             </li>
-
-            <!--===== DMS_VladimirovMachineGun =====-->
+            <!--=====DMS_VladimirovMachineGun=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_VladimirovMachineGun</defName>
                 <statBases>
@@ -321,8 +511,7 @@
                     <li>Bipod_LMG</li>
                 </weaponTags>
             </li>
-
-            <!--===== DMS_AerialAutocannon =====-->
+            <!--=====DMS_AerialAutocannon=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_AerialAutocannon</defName>
                 <statBases>
@@ -361,8 +550,7 @@
                     <li>CE_AI_Suppressive</li>
                 </weaponTags>
             </li>
-
-            <!-- DMS_Gsh30Gatlinggun -->
+            <!--=====DMS_Gsh30Gatlinggun=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_Gsh30Gatlinggun</defName>
                 <statBases>
@@ -416,8 +604,7 @@
                     </verbs>
                 </value>
             </li>
-
-            <!-- DMS_Gun_JusticeGavel -->
+            <!--=====DMS_Gun_JusticeGavel=====-->
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_Gun_JusticeGavel</defName>
                 <statBases>
@@ -454,6 +641,20 @@
                     <aiUseBurstMode>true</aiUseBurstMode>
                     <aiAimMode>AimedShot</aiAimMode>
                 </FireModes>
+            </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="DMS_Gun_JusticeGavel"]</xpath>
+                <value>
+                    <li Class="CombatExtended.GunDrawExtension">
+                        <DropCasingWhenReload>true</DropCasingWhenReload>
+                        <AdvancedCasingVariables>true</AdvancedCasingVariables>
+                        <CasingRotationRandomRange>0</CasingRotationRandomRange>
+                        <CasingOffset>-1,0</CasingOffset>
+                        <CasingSpeedOverrideRange>3~4</CasingSpeedOverrideRange>
+                        <CasingAngleOffset>-135</CasingAngleOffset>
+                        <CasingLifeTimeMultiplier>2</CasingLifeTimeMultiplier>
+                    </li>
+                </value>
             </li>
         </operations>
     </Operation>

@@ -1,8 +1,9 @@
 ﻿using RimWorld;
+using Verse;
 
 namespace AncientCorps
 {
-    [RimWorld.DefOf]
+    [RimWorld.DefOf,StaticConstructorOnStartup]
     public static class DMS_DefOf
     {
         static DMS_DefOf()
@@ -10,5 +11,7 @@ namespace AncientCorps
             DefOfHelper.EnsureInitializedInCtor(typeof(DMS_DefOf));
         }
         public static FactionDef DMS_AncientCorps;
+        public static JobDef DMS_EjectDeactivatedMech;
+        public static JobDef DMS_HackDeactivatedMech;
     }
 }

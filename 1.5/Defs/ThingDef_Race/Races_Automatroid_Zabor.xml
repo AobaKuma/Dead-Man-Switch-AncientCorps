@@ -85,7 +85,7 @@
           <texPath>Things/Automatroid/zabor</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3</drawSize>
+          <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -97,7 +97,7 @@
           <texPath>Things/Automatroid/zabor</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3</drawSize>
+          <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -106,6 +106,7 @@
       </li>
     </lifeStages>
     <weaponTags Inherit="False">
+      <li>DMS_PKM</li>
       <li>H_Gatling127mm</li>
     </weaponTags>
   </PawnKindDef>
@@ -122,10 +123,10 @@
     <lifeStages Inherit="false">
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/zabor_RP</texPath>
+          <texPath>Things/Automatroid/shkatulka</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3</drawSize>
+          <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>
@@ -134,10 +135,10 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/zabor_RP</texPath>
+          <texPath>Things/Automatroid/shkatulka</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3</drawSize>
+          <drawSize>3.3</drawSize>
           <shadowData>
             <volume>(1.25,1,1.25)</volume>
             <offset>(0,0,-0.5)</offset>

@@ -1,5 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>DMS_Gun_MobileMortar</defName>
+		<label>2B9MS vasilek</label>
+		<description>An ancient design of rapid fire indirect artillery piece capabler of firing four mortar rounds in one burst.</description>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Gun_MobileMortar</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>3.75</drawSize>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.95</AccuracyTouch>
+			<AccuracyShort>0.90</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.80</AccuracyLong>
+			<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>DMS_Gun_MobileMortar</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>Bullet_Shell_HighExplosive</defaultProjectile>
+				<requireLineOfSight>false</requireLineOfSight>
+				<warmupTime>5</warmupTime>
+				<forcedMissRadius>8</forcedMissRadius>
+				<minRange>39.9</minRange>
+				<range>89.9</range>
+				<ai_AvoidFriendlyFireRadius>7.9</ai_AvoidFriendlyFireRadius>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
+				<soundCast>DMS_Shot_VasilekSound</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>10</muzzleFlashScale>
+				<consumeFuelPerShot>1</consumeFuelPerShot>
+				<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
 	<ThingDef ParentName="DMS_AutomatroidTurretGun">
 		<defName>DMS_Gun_KordTurret</defName>
 		<label>Kord HMG</label>

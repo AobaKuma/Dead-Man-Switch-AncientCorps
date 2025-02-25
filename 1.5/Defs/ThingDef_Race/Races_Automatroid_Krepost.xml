@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
+
   <ThingDef ParentName="BaseAutomatroidRace">
     <defName>DMS_Mech_Krepost</defName>
     <label>Krepost</label>
@@ -36,7 +36,7 @@
       </detritusLeavings>
     </race>
     <comps>
-		  <li Class="DMS.CompProperties_VehicleWeapon">
+      <li Class="DMS.CompProperties_VehicleWeapon">
         <drawData>
           <dataEast>
             <offset>(0.6,0,-0.6)</offset>
@@ -46,119 +46,119 @@
             <layer>-20</layer>
           </dataWest>
           <dataSouth>
-              <offset>(-1.1,0,-0.2)</offset>
+            <offset>(-1.1,0,-0.2)</offset>
           </dataSouth>
           <dataNorth>
-              <offset>(1.1,0,0.2)</offset>
+            <offset>(1.1,0,0.2)</offset>
           </dataNorth>
         </drawData>
-			  <turretRotationFollowPawn>true</turretRotationFollowPawn>			  
+        <turretRotationFollowPawn>true</turretRotationFollowPawn>
         <rotationSmoothTime>0.12</rotationSmoothTime>
       </li>
-		  <li Class="DMS.CompPropertiesMultipleTurretGun">
-          <subTurrets>
-            <li>
-              <ID>forward machinegun</ID>
-              <turret>DMS_HeavyMachineGunMounted</turret>
-              <autoAttack>true</autoAttack>
-              <warmingTime>5</warmingTime>
-              <angleOffset>-90</angleOffset>
-              <renderNodeProperties>
-                <li>
-                  <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
-                  <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
-                  <parentTagDef>Body</parentTagDef>
-                  <drawSize>1.75</drawSize>
-                  <baseLayer>-5</baseLayer>
-                  <pawnType>Any</pawnType>
-                  <drawData>
-                    <dataEast>
-                        <offset>(1.4,0,-0.05)</offset>
-                    </dataEast>
-                    <dataWest>
-                        <offset>(-1.4,0,-0.05)</offset>
-                        <rotationOffset>180</rotationOffset>
-                    </dataWest>
-                    <dataSouth>
-                        <offset>(0.15,0,-1.30)</offset>
-                    </dataSouth>
-                    <dataNorth>
-                        <offset>(-0.15,0,0.65)</offset>
-                    </dataNorth>
-                  </drawData>
-                </li>
-              </renderNodeProperties>
-            </li>
-            <li>
-              <ID>top machinegun</ID>
-              <turret>DMS_Gun_KordTurret</turret>
-              <autoAttack>true</autoAttack>
-              <warmingTime>8</warmingTime>
-              <angleOffset>-90</angleOffset>
-              <renderNodeProperties>
-                <li>
-                  <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
-                  <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
-                  <parentTagDef>Body</parentTagDef>
-                  <drawSize>2</drawSize>
-                  <baseLayer>20</baseLayer>
-                  <pawnType>Any</pawnType>
-                  <drawData>
-                    <dataEast>
-                      <offset>(-0.25,0,1)</offset>
-                    </dataEast>
-                    <dataWest>
-                      <offset>(0.3,0,0.1)</offset>
-                      <rotationOffset>180</rotationOffset>
-                    </dataWest>
-                    <dataSouth>
-                      <offset>(0.45,0,0.5)</offset>
-                      <rotationOffset>0</rotationOffset>
-                    </dataSouth>
-                    <dataNorth>
-                      <offset>(-0.45,0,-0.5)</offset> 
-                      <rotationOffset>0</rotationOffset>
-                    </dataNorth>
-                  </drawData>
-                </li>
-              </renderNodeProperties>
-            </li>
-            <li>
-              <ID>ECM</ID>
-              <turret>DMS_Gun_ECMSystem</turret>
-              <autoAttack>true</autoAttack>
-              <warmingTime>5</warmingTime>
-              <angleOffset>-90</angleOffset>
-              <IdleAngleOffset>-51</IdleAngleOffset>
-              <renderNodeProperties>
-                <li>
-                  <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
-                  <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
-                  <parentTagDef>Body</parentTagDef>
-                  <drawSize>0.75</drawSize>
-                  <baseLayer>20</baseLayer>
-                  <pawnType>Any</pawnType>
-                  <drawData>
-                    <dataEast>
-                      <offset>(1.2,0,1)</offset>
-                      <layer>-1</layer>
-                    </dataEast>
-                    <dataWest>
-                      <offset>(-1.15,0,-0.55)</offset>
-                      <rotationOffset>180</rotationOffset>
-                    </dataWest>
-                    <dataSouth>
-                      <offset>(0.85,0,-1.1)</offset>
-                    </dataSouth>
-                    <dataNorth>
-                      <offset>(-0.85,0,0.7)</offset>
-                      <layer>-1</layer>
-                    </dataNorth>
-                  </drawData>
-                </li>
-              </renderNodeProperties>
-            </li>
-          </subTurrets>
+      <li Class="DMS.CompPropertiesMultipleTurretGun">
+        <subTurrets>
+          <li>
+            <ID>forward machinegun</ID>
+            <turret>DMS_HeavyMachineGunMounted</turret>
+            <autoAttack>true</autoAttack>
+            <warmingTime>5</warmingTime>
+            <angleOffset>-90</angleOffset>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
+                <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <drawSize>1.75</drawSize>
+                <baseLayer>-5</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataEast>
+                    <offset>(1.4,0,-0.05)</offset>
+                  </dataEast>
+                  <dataWest>
+                    <offset>(-1.4,0,-0.05)</offset>
+                    <rotationOffset>180</rotationOffset>
+                  </dataWest>
+                  <dataSouth>
+                    <offset>(0.15,0,-1.30)</offset>
+                  </dataSouth>
+                  <dataNorth>
+                    <offset>(-0.15,0,0.65)</offset>
+                  </dataNorth>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <ID>top machinegun</ID>
+            <turret>DMS_Gun_KordTurret</turret>
+            <autoAttack>true</autoAttack>
+            <warmingTime>8</warmingTime>
+            <angleOffset>-90</angleOffset>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
+                <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <drawSize>2</drawSize>
+                <baseLayer>20</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataEast>
+                    <offset>(-0.25,0,1)</offset>
+                  </dataEast>
+                  <dataWest>
+                    <offset>(0.3,0,0.1)</offset>
+                    <rotationOffset>180</rotationOffset>
+                  </dataWest>
+                  <dataSouth>
+                    <offset>(0.45,0,0.5)</offset>
+                    <rotationOffset>0</rotationOffset>
+                  </dataSouth>
+                  <dataNorth>
+                    <offset>(-0.45,0,-0.5)</offset>
+                    <rotationOffset>0</rotationOffset>
+                  </dataNorth>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <ID>ECM</ID>
+            <turret>DMS_Gun_ECMSystem</turret>
+            <autoAttack>true</autoAttack>
+            <warmingTime>5</warmingTime>
+            <angleOffset>-90</angleOffset>
+            <IdleAngleOffset>-51</IdleAngleOffset>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
+                <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <drawSize>0.75</drawSize>
+                <baseLayer>20</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataEast>
+                    <offset>(1.2,0,1)</offset>
+                    <layer>-1</layer>
+                  </dataEast>
+                  <dataWest>
+                    <offset>(-1.15,0,-0.55)</offset>
+                    <rotationOffset>180</rotationOffset>
+                  </dataWest>
+                  <dataSouth>
+                    <offset>(0.85,0,-1.1)</offset>
+                  </dataSouth>
+                  <dataNorth>
+                    <offset>(-0.85,0,0.7)</offset>
+                    <layer>-1</layer>
+                  </dataNorth>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+        </subTurrets>
       </li>
       <li Class="DMS.CompProperties_MeleeSweep">
         <damageDef>Blunt</damageDef>
@@ -200,7 +200,7 @@
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.08</chanceFactor>
-		    <surpriseAttack>
+        <surpriseAttack>
           <extraMeleeDamages>
             <li>
               <def>Stun</def>
@@ -219,7 +219,7 @@
         <linkedBodyPartsGroup>LeftMechanicalLeg</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
-		    <surpriseAttack>
+        <surpriseAttack>
           <extraMeleeDamages>
             <li>
               <def>Stun</def>
@@ -307,7 +307,7 @@
     </lifeStages>
     <weaponTags Inherit="False">
       <li>DMS_MechWeaponTankGun</li>
-			<li>DMS_DragoonGun</li>
+      <li>DMS_DragoonGun</li>
     </weaponTags>
     <weaponMoney>6730~9999</weaponMoney>
     <abilities>
@@ -319,10 +319,10 @@
     <defName>DMS_Mech_Krepost_Sweeper</defName>
     <label>BR-6/GP "Bashnya"</label>
     <combatPower>1800</combatPower>
-	<maxPerGroup>2</maxPerGroup>   
+    <maxPerGroup>2</maxPerGroup>
     <weaponTags Inherit="False">
-			<li>2A38M</li>
-			<li>DMS_Gsh30Gatlinggun</li>
+      <li>2A38M</li>
+      <li>DMS_Gsh30Gatlinggun</li>
     </weaponTags>
   </PawnKindDef>
 </Defs>

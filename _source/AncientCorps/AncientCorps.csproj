@@ -76,6 +76,9 @@
     <Compile Include="CompAfterBurner.cs" />
     <Compile Include="DMS_DefOf.cs" />
     <Compile Include="HarmonyEntry.cs" />
+    <Compile Include="Building_DeactivatedMech.cs" />
+    <Compile Include="JobDriver_OpenMech.cs" />
+    <Compile Include="ModExtension_DeactivatedMech.cs" />
     <Compile Include="Patch_GoodwillSituationWorker_MemeCompatibility.cs" />
     <Compile Include="Patch_GoodwillSituationWorker_SameIdeo.cs" />
     <Compile Include="Projectile_Parabola.cs" />

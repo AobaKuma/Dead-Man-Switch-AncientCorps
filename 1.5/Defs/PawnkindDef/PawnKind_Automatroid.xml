@@ -4,10 +4,11 @@
     <defName>DMS_Mech_Mushketer_AR</defName>
     <label>mushketer</label>
     <race>DMS_Mech_Arquebusier</race>
+    <defaultFactionType>DMS_AncientCorps</defaultFactionType>
     <isFighter>true</isFighter>
     <combatPower>180</combatPower>
-    <maxPerGroup>12</maxPerGroup>
-    <weaponStyleDef MayRequire="ludeon.rimworld.ideology">DMS_PECA_AssaultRifle</weaponStyleDef>
+    <maxPerGroup>8</maxPerGroup>
+    <!-- <weaponStyleDef MayRequire="ludeon.rimworld.ideology">DMS_PECA_AssaultRifle</weaponStyleDef> -->
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -27,19 +28,22 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>A_AR_LongRifle</li>
+      <li>DMS_ZlobinRifle</li>
+      <li>DMS_ZlobinRevolver</li>
     </weaponTags>
     <aiAvoidCover>false</aiAvoidCover>
+    <extraSkillLevels>7</extraSkillLevels>
   </PawnKindDef>
   
  <PawnKindDef ParentName="BaseAutomatroidKind">
     <defName>DMS_Mech_Mushketer_SAR</defName>
     <label>mushketer</label>
     <race>DMS_Mech_Arquebusier</race>
+    <defaultFactionType>DMS_AncientCorps</defaultFactionType>
     <isFighter>true</isFighter>
     <combatPower>180</combatPower>
-    <maxPerGroup>6</maxPerGroup>
-    <weaponStyleDef MayRequire="ludeon.rimworld.ideology">DMS_PECA_SemiAutoRifle</weaponStyleDef>
+    <maxPerGroup>4</maxPerGroup>
+    <!-- <weaponStyleDef MayRequire="ludeon.rimworld.ideology">DMS_PECA_SemiAutoRifle</weaponStyleDef> -->
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -59,8 +63,9 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>A_SAR_LongRifle</li>
+      <li>DMS_VykhlopRifle</li>
     </weaponTags>
     <aiAvoidCover>false</aiAvoidCover>
+    <extraSkillLevels>9</extraSkillLevels>
   </PawnKindDef>
 </Defs>

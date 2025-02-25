@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 花圃 Tsvetnik-->
+  <ThingDef ParentName="BaseAutomatroidRace">
+    <defName>DMS_Mech_Tsvetnik</defName>
+    <label>Tsvetnik</label>
+    <thingClass>Pawn</thingClass>
+    <description>A medium-sized automatroid capable of equipping and utilizing light to medium infantry weapons. Designed in an era marked by the rapid increase in armored unmanned systems, it was conceived as an infantry combat platform within armored units. It boasts excellent combat capabilities, a simple structure, and superior weapon-loading capacity.</description>
+    <statBases>
+      <MoveSpeed>2.5</MoveSpeed>                                                            <!--移動速度-->
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>                                            <!--護甲-->
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.3</ArmorRating_Heat>
+      <ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+      <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">3</BandwidthCost>                 <!--帶寬消耗-->
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge> <!--充電/培養時產出廢料-->
+      <AimingDelayFactor>1.5</AimingDelayFactor>                                            <!--瞄準延遲-->
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>13</mechFixedSkillLevel>
+      <body>DMS_Humanoid_TypeB</body>                                                       <!--身體(另外的def)-->
+      <baseBodySize>1.4</baseBodySize>
+      <baseHealthScale>1.25</baseHealthScale>
+      <mechWeightClass>Heavy</mechWeightClass>
+    </race>
+    <comps>
+      <li Class="DMS.CompProperties_VehicleWeapon">
+        <defaultWeapon>DMS_Gun_MobileMortar</defaultWeapon>
+        <turretRotationFollowPawn>true</turretRotationFollowPawn>
+        <rotationSmoothTime>0.5</rotationSmoothTime>
+        <drawData>
+          <dataEast>
+            <offset>(-0.5,0,0.5)</offset>
+            <rotationOffset>-30</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5,0,0.5)</offset>
+            <rotationOffset>30</rotationOffset>
+          </dataWest>
+          <dataSouth>
+            <offset>(0,0,0.75)</offset>
+          </dataSouth>
+        </drawData>
+      </li>
+    </comps>
+    <butcherProducts>
+      <DMS_ChunkSlag>1</DMS_ChunkSlag>
+      <Steel>35</Steel>
+    </butcherProducts>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseAncientAutomatroidKind">
+    <defName>DMS_Mech_Tsvetnik</defName>
+    <label>SR-4/2B9 "Tsvetnik"</label>
+    <race>DMS_Mech_Tsvetnik</race>
+    <nameMaker>DMS_AncientMechStandard</nameMaker>
+    <isFighter>true</isFighter>
+    <combatPower>300</combatPower>
+    <maxPerGroup>2</maxPerGroup>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/tsvetnik</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/tsvetnik</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+		<weaponTags>
+			<li>DMS_Gun_MobileMortar</li>
+		</weaponTags>
+  </PawnKindDef>
+</Defs>
