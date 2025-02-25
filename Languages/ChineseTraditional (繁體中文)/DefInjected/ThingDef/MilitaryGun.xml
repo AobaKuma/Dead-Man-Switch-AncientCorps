@@ -3,7 +3,6 @@
   
   <!-- EN: grenade round -->
   <Bullet_DMS_AtlantLauncher.label>槍榴彈</Bullet_DMS_AtlantLauncher.label>
-  
   <!-- EN: solid slug -->
   <Bullet_DMS_CombatShotgun.label>實心獨頭彈</Bullet_DMS_CombatShotgun.label>
   
@@ -37,6 +36,55 @@
   <DMS_KS23K.tools.muzzle.label>槍口</DMS_KS23K.tools.muzzle.label>
   <DMS_KS23K.verbs.Verb_ShootCE.label>KS23K</DMS_KS23K.verbs.Verb_ShootCE.label>
   
+  <!-- EN: Zlobin Revolver -->
+  <DMS_ZlobinRevolver.label>佐羅賓手槍</DMS_ZlobinRevolver.label>
+  <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
+  <DMS_ZlobinRevolver.description>一種冠以設計者之名的狩獵用左輪手槍，使用的大口徑亞音速彈藥足夠一槍撂倒大型動物，相對於同口徑武器而言更加穩定的後座力這使得它在邊緣世界的探險家與海盜團體中非常受歡迎。</DMS_ZlobinRevolver.description>
+  <!-- EN: stock -->
+  <DMS_ZlobinRevolver.tools.stock.label>槍托</DMS_ZlobinRevolver.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_ZlobinRevolver.tools.barrel.label>槍管</DMS_ZlobinRevolver.tools.barrel.label>
+  <!-- EN: Zlobin Revolver -->
+  <DMS_ZlobinRevolver.verbs.Verb_Shoot.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_Shoot.label>
+  <!-- UNUSED -->
+  <DMS_ZlobinRevolver.tools.muzzle.label>槍口</DMS_ZlobinRevolver.tools.muzzle.label>
+  <DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>
+  <!-- EN: subsonic bullet -->
+  <Bullet_DMS_Subsonic_Pistol.label>亞音速手槍彈</Bullet_DMS_Subsonic_Pistol.label>
+
+
+  <!-- EN: Zlobin Rifle -->
+  <DMS_ZlobinRifle.label>佐羅賓步槍</DMS_ZlobinRifle.label>
+  <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
+  <DMS_ZlobinRifle.description>一種冠以設計者之名的特種突擊步槍，能夠在巷戰中有效的擊穿大部分中小型機械體的防護並造成有效傷害。但其遠距離準確性頗為有限，配備有一具下掛轉輪式榴彈發射器能夠發射小口徑榴彈。</DMS_ZlobinRifle.description>
+  <!-- EN: stock -->
+  <DMS_ZlobinRifle.tools.stock.label>槍托</DMS_ZlobinRifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_ZlobinRifle.tools.barrel.label>槍管</DMS_ZlobinRifle.tools.barrel.label>
+  <!-- EN: Zlobin Rifle -->
+  <DMS_ZlobinRifle.verbs.Verb_Shoot.label>ShAK12</DMS_ZlobinRifle.verbs.Verb_Shoot.label>
+  <!-- UNUSED -->
+  <DMS_ZlobinRifle.tools.muzzle.label>槍口</DMS_ZlobinRifle.tools.muzzle.label>
+  <DMS_ZlobinRifle.verbs.Verb_ShootCE.label>ShAK12</DMS_ZlobinRifle.verbs.Verb_ShootCE.label>
+  <!-- EN: subsonic bullet -->
+  <Bullet_DMS_Subsonic_Rifle.label>亞音速步槍彈</Bullet_DMS_Subsonic_Rifle.label>
+  
+  <!-- EN: Vykhlop Rifle -->
+  <DMS_VykhlopRifle.label>排氣者步槍</DMS_VykhlopRifle.label>
+  <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
+  <DMS_VykhlopRifle.description>一種輕量化的大口徑微聲步槍，能在遠距離擊穿裝備輕型動力裝甲或防彈衣的敵對目標。佔據了半個槍身長度的特製消音器能確保其射擊隱密性。</DMS_VykhlopRifle.description>
+  <!-- EN: stock -->
+  <DMS_VykhlopRifle.tools.stock.label>槍托</DMS_VykhlopRifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_VykhlopRifle.tools.barrel.label>槍管</DMS_VykhlopRifle.tools.barrel.label>
+  <!-- EN: Vykhlop Rifle -->
+  <DMS_VykhlopRifle.verbs.Verb_Shoot.label>VKS12</DMS_VykhlopRifle.verbs.Verb_Shoot.label>
+  <!-- UNUSED -->
+  <DMS_VykhlopRifle.tools.muzzle.label>槍口</DMS_VykhlopRifle.tools.muzzle.label>
+  <DMS_VykhlopRifle.verbs.Verb_ShootCE.label>VKS12</DMS_VykhlopRifle.verbs.Verb_ShootCE.label>
+  <!-- EN: subsonic bullet -->
+  <Bullet_DMS_Subsonic_Sniper.label>亞音速狙擊槍彈</Bullet_DMS_Subsonic_Sniper.label>
+
   <!-- EN: Mikhail Machinegun -->
   <DMS_PKM.label>米哈伊爾通用機槍</DMS_PKM.label>
   <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
@@ -47,7 +95,6 @@
   <DMS_PKM.tools.barrel.label>槍管</DMS_PKM.tools.barrel.label>
   <!-- EN: Mikhail Machinegun -->
   <DMS_PKM.verbs.Verb_Shoot.label>PKMB</DMS_PKM.verbs.Verb_Shoot.label>
-  
   <!-- UNUSED -->
   <DMS_PKM.tools.muzzle.label>槍口</DMS_PKM.tools.muzzle.label>
   <DMS_PKM.verbs.Verb_ShootCE.label>PKMB</DMS_PKM.verbs.Verb_ShootCE.label>

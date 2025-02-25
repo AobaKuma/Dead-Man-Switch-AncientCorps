@@ -20,8 +20,32 @@ namespace AncientCorps
         }
         private Faction PawnFaction => Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps) ?? Faction.OfAncients;
         private ModExtension_DeactivatedMech Extension => this.def.GetModExtension<ModExtension_DeactivatedMech>();
-        public bool HasPawn => !innerContainer.NullOrEmpty() && innerContainer.First() is Pawn;
-		public Pawn Pawn => (Pawn)this.innerContainer?.First();
+        public bool HasPawn
+        {
+            get
+            {
+                if (!innerContainer.NullOrEmpty())
+                {
+                    if(innerContainer.First() is Pawn || innerContainer.First() is Corpse)
+                    return true;
+                }
+                return  false;
+            }
+        }
+
+        public Pawn Pawn
+        {
+            get
+            {
+                if (this != null && !this.innerContainer.NullOrEmpty())
+                {
+                    if (innerContainer.First() is Pawn) return innerContainer?.First() as Pawn;
+                    if (innerContainer.First() is Corpse) return (innerContainer?.First() as Corpse).InnerPawn;
+                }
+                return null;
+            }
+        }
+
         private Vector3 weaponDrawOffset = Vector3.zero;
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -39,14 +63,19 @@ namespace AncientCorps
                 if (Rand.Chance(0.5f))
                 {
                     bodyPart = Pawn.RaceProps.body.AllParts.Where(p => !p.IsCorePart).RandomElement();
-                    Pawn.health.hediffSet.AddDirect(HediffMaker.MakeHediff(HediffDefOf.MissingBodyPart, Pawn, bodyPart));
+                    if (!Pawn.health.hediffSet.HasMissingPartFor(bodyPart))
+                    {
+                        Pawn.health.hediffSet.AddDirect(HediffMaker.MakeHediff(HediffDefOf.MissingBodyPart, Pawn, bodyPart));
+                    }
                 }
                 if (!Rand.Chance(Extension.weaponChance))
                 {
                     Pawn.equipment.DestroyAllEquipment();
-                    weaponDrawOffset = Rand.InsideUnitCircleVec3 * Extension.weaponscatterRange;
+                    Pawn.inventory.DestroyAll();
+                    weaponDrawOffset = new Vector3(Rand.Gaussian(), 0, Rand.Gaussian()) * Extension.weaponscatterRange;
                 }
             }
+            if (!HasPawn) Destroy(DestroyMode.Vanish);
         }
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
 		{
@@ -70,13 +99,13 @@ namespace AncientCorps
             this.bottomGraphic?.Draw(base.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Item), this.Rotation, this, 0f);
             base.DrawAt(drawLoc, flip);
         }
-        public override void Destroy(DestroyMode mode = DestroyMode.KillFinalize)
-		{
-			if (this.HasPawn)
-			{
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        {
+            if (mode != DestroyMode.Vanish && this.HasPawn)
+            {
                 EjectContents(killPawn: true);
             }
-            base.Destroy(mode);
+            base.DeSpawn(mode);
         }
         public void GetChildHolders(List<IThingHolder> outChildren)
 		{
@@ -107,11 +136,11 @@ namespace AncientCorps
                     }
                     else if (selPawn.mechanitor.TotalBandwidth - selPawn.mechanitor.UsedBandwidth < Pawn.GetStatValue(StatDefOf.BandwidthCost))
                     {
-                        yield return DisableOption("AncientCorps.Reason_NoEnoughBandwidth".Translate().CapitalizeFirst());
+                        yield return DisableOption("AncientCorps.Reason_NoEnoughBandwidth".Translate(Pawn.GetStatValue(StatDefOf.BandwidthCost)).CapitalizeFirst());
                     }
                     else
                     {
-                        yield return new FloatMenuOption("AncientCorps.DeactivatedMech_TryHack".Translate(), delegate ()
+                        yield return new FloatMenuOption("AncientCorps.DeactivatedMech_TryHack".Translate(Pawn.LabelCap), delegate ()
                         {
                             selPawn.jobs.TryTakeOrderedJob(new Job(DMS_DefOf.DMS_HackDeactivatedMech, this));
                         });
@@ -146,10 +175,10 @@ namespace AncientCorps
             {
                 if (!Pawn.Dead)
                 {
-                    DamageInfo damage = new DamageInfo(DamageDefOf.Crush, Rand.Range(100, 1000), 99999, -1, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown);
-                    Pawn.Kill(damage);
                     Pawn.SetFactionDirect(Faction.OfAncients);
+                    Pawn?.Kill(null);
                 }
+                if(!innerContainer.NullOrEmpty())
                 innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
             }
             else
@@ -164,10 +193,10 @@ namespace AncientCorps
                     }
                     usedBy.relations.AddDirectRelation(PawnRelationDefOf.Overseer, Pawn);
                 }
-                innerContainer.TryDrop(Pawn, ThingPlaceMode.Near, out Thing p);
+                innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
             }
-            this.DeSpawn();
-            this.Destroy();
+            DeSpawnOrDeselect();
+            Destroy(DestroyMode.Vanish);
         }
 		private Graphic bottomGraphic;
 		public ThingOwner innerContainer;

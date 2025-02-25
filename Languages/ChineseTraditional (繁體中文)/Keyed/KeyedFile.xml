@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <AncientCorps.DeactivatedMech_Disable>拆解機體</AncientCorps.DeactivatedMech_Disable>
+  <AncientCorps.Reason_WorkTypeDisabled>工作類型禁用</AncientCorps.Reason_WorkTypeDisabled>
+  <AncientCorps.Reason_NotMechanitor>必須是機械師</AncientCorps.Reason_NotMechanitor>
+  <AncientCorps.Reason_NoEnoughBandwidth>需要帶寬:{0}</AncientCorps.Reason_NoEnoughBandwidth>
+  <AncientCorps.DeactivatedMech_TryHack>嘗試駭入{0}</AncientCorps.DeactivatedMech_TryHack>
+  <AncientCorps.DeactivatedMech_CannotHack>無法駭入</AncientCorps.DeactivatedMech_CannotHack>
+  
+</LanguageData>

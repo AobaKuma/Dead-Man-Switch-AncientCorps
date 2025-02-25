@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <AncientCorps.DeactivatedMech_Disable>deactivate Mech</AncientCorps.DeactivatedMech_Disable>
+  <AncientCorps.Reason_WorkTypeDisabled>work type disabled</AncientCorps.Reason_WorkTypeDisabled>
+  <AncientCorps.Reason_NotMechanitor>not a mechanitor</AncientCorps.Reason_NotMechanitor>
+  <AncientCorps.Reason_NoEnoughBandwidth>need bandwidth:{0}</AncientCorps.Reason_NoEnoughBandwidth>
+  <AncientCorps.DeactivatedMech_TryHack>Try hacking {0}</AncientCorps.DeactivatedMech_TryHack>
+  <AncientCorps.DeactivatedMech_CannotHack>Cannot hacking</AncientCorps.DeactivatedMech_CannotHack>
+  
+</LanguageData>

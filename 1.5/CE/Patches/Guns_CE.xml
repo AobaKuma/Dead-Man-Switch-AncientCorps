@@ -656,6 +656,69 @@
                     </li>
                 </value>
             </li>
+
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>DMS_Gun_MobileMortar</defName>
+				<statBases>
+					<AimingAccuracy>1</AimingAccuracy>
+					<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+					<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+					<SightsEfficiency>0.5</SightsEfficiency>
+					<ShotSpread>2</ShotSpread>
+					<SwayFactor>2</SwayFactor>
+					<Bulk>101</Bulk>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
+					<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_81mmMortarShell_HE</defaultProjectile>
+					<warmupTime>2.1</warmupTime>
+					<minRange>20</minRange>
+					<range>200</range>
+					<burstShotCount>4</burstShotCount>
+					<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+					<soundCast>DMS_Shot_VasilekSound</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>  
+					<muzzleFlashScale>50</muzzleFlashScale>
+					<requireLineOfSight>false</requireLineOfSight>
+					<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+					<ignorePartialLoSBlocker>True</ignorePartialLoSBlocker>
+					<circularError>5</circularError>
+					<indirectFirePenalty>0.35</indirectFirePenalty>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+					<recoilPattern>Mounted</recoilPattern>
+					<recoilAmount>1.21</recoilAmount>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>4</magazineSize>
+					<reloadTime>12</reloadTime>
+					<ammoSet>AmmoSet_81mmMortarShell</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<noSingleShot>false</noSingleShot>
+					<aiUseBurstMode>true</aiUseBurstMode>
+					<aiAimMode>AimedShot</aiAimMode>
+					<aimedBurstShotCount>2</aimedBurstShotCount>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DMS_Gun_MobileMortar"]/comps</xpath>
+				<value>
+					<li Class="CombatExtended.CompProperties_Charges">
+						<chargeSpeeds>
+							<li>50</li>
+							<li>60</li>
+							<li>70</li>
+							<li>90</li>
+							<li>110</li>
+							<li>130</li>
+						</chargeSpeeds>
+					</li>
+				</value>
+			</li>
         </operations>
     </Operation>
 </Patch>

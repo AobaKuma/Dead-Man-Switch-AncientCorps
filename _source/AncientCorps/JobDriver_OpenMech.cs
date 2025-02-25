@@ -21,7 +21,7 @@ namespace AncientCorps
         }
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            yield return Toils_Goto.GotoCell(this.Target.Position, PathEndMode.OnCell);
+            yield return Toils_Goto.GotoCell(this.Target.Position, PathEndMode.Touch);
             yield return Toils_General.WaitWith(TargetIndex.A, 250, true, true, false, face: TargetIndex.A).WithEffect(EffecterDefOf.Hacking, TargetIndex.A);
             Toil gearDown = new Toil()
             {
