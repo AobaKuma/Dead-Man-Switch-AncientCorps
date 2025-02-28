@@ -7,6 +7,7 @@
       <deconstructible>false</deconstructible>
     </building>
     <pathCost>100</pathCost>
+    <defaultPlacingRot>2</defaultPlacingRot>
     <passability>PassThroughOnly</passability>
     <designationCategory>Misc</designationCategory>
   </ThingDef>
@@ -47,6 +48,33 @@
     </colorGenerator>
   </ThingDef>
   
+  <ThingDef ParentName="BaseDerelictMech">
+    <defName>DMSAC_Building_DerelictMech_Alligator</defName>
+    <label>large automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/Wreck/alligator</texPath>
+      <drawOffset>(0,0,0)</drawOffset>
+      <drawSize>7</drawSize>
+      <shadowData>
+            <volume>(2.25,1,2.25)</volume>
+            <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(3,6)</size>
+    <passability>Impassable</passability>
+    <fillPercent>0.8</fillPercent>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <Steel>60~180</Steel>
+      <ComponentStamped>4~12</ComponentStamped>
+      <Plasfiber>10~75</Plasfiber>
+      <Tungsteel>10~150</Tungsteel>
+      <DMS_ChunkSlag>3~5</DMS_ChunkSlag>
+    </killedLeavingsRanges>
+  </ThingDef>
+
   <ThingDef ParentName="BaseDerelictMech">
     <defName>DMSAC_Building_DerelictMech_Large</defName>
     <label>large automatroid derelict</label>

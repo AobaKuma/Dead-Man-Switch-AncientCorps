@@ -157,7 +157,6 @@
                 </value>
             </li>
             <!-- ==========DMS_VykhlopRifle========== -->
-
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_VykhlopRifle</defName>
                 <statBases>
@@ -229,7 +228,7 @@
                     <warmupTime>0.6</warmupTime>
                     <range>17</range>
                     <burstShotCount>3</burstShotCount>
-                    <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                    <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
                     <soundCast>Shot_Shotgun</soundCast>
                     <soundCastTail>GunTail_Heavy</soundCastTail>
                     <muzzleFlashScale>9</muzzleFlashScale>

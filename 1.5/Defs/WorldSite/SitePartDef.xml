@@ -12,7 +12,7 @@
     <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
-    <minMapSize>(100, 1, 100)</minMapSize>
+    <minMapSize>(120, 1, 120)</minMapSize>
     <tags>
       <li>DMSAC_Graveyard</li>
     </tags>
