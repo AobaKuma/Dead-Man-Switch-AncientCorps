@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <WorldObjectDef>
+    <defName>DMSAC_Graveyard</defName>
+    <label>automatroid graveyard</label>
+    <!-- <description>An open graveyard that deposed numerous derelict automatroids by the Corps, they were often used by the local scavengers to be the source of parts to produce new or restored automatroids.</description> -->
+    <worldObjectClass>Site</worldObjectClass>
+    <texture>World/WorldObjects/JourneyDestination</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>70</expandingIconPriority>
+    <canBePlayerHome>false</canBePlayerHome>
+    <blockExitGridUntilBattleIsWon>true</blockExitGridUntilBattleIsWon>
+    <canHaveFaction>true</canHaveFaction>
+    <comps>
+      <li Class="WorldObjectCompProperties_Abandon" />
+      <li Class="WorldObjectCompProperties_TradeRequest" />
+      <li Class="WorldObjectCompProperties_FormCaravan" />
+      <li Class="WorldObjectCompProperties_EnterCooldown" />
+    </comps>
+    <modExtensions>
+      <!-- **This is needed to be spawned at generation** -->
+      <li Class="KCSG.SpawnAtWorldGen">
+        <!-- Number to spawn-->
+        <spawnPartOfFaction>DMS_AncientCorps</spawnPartOfFaction>
+        <spawnCount>5</spawnCount>
+        <parts>
+          <li>DMSAC_Graveyard</li>
+        </parts>
+      </li>
+    </modExtensions>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
+</Defs>

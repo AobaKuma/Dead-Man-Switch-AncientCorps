@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SitePartDef>
+    <defName>DMSAC_Graveyard</defName>
+    <label>Automatroid graveyard</label>
+    <description>An open graveyard that deposed numerous derelict automatroids by the Corps, they were often used by the local scavengers to be the source of parts to produce new or restored automatroids.</description>
+    <siteTexture>UI/Icons/Graveyard_Site</siteTexture>
+    <expandingIconTexture>UI/Icons/Graveyard_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(100, 1, 100)</minMapSize>
+    <tags>
+      <li>DMSAC_Graveyard</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_Graveyard</defName>
+    <linkWithSite>DMSAC_Graveyard</linkWithSite>
+    <order>450</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_Graveyard_A</li>
+        <li>DMSAC_Graveyard_B</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <!-- <tiledStructures>
+        <li>DMSAC_GraveyardTileStructure</li>
+      </tiledStructures> -->
+      <filthTypes>
+        <li>Filth_Dirt</li>
+        <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
+      </filthTypes>
+      <symbolResolvers>
+        <li>kcsg_randomdamage</li>
+        <li>kcsg_randomfilth</li>
+        <li>kcsg_randomterrainremoval</li>
+        <li>kcsg_randomroofremoval</li>
+        <li>kcsg_randomitemremoval</li>
+        <li>kcsg_removeperishable</li>
+        <li>kcsg_scatterstuffaround</li>
+      </symbolResolvers>
+    </genStep>
+  </GenStepDef>
+
+  <KCSG.TiledStructureDef>
+    <defName>DMSAC_GraveyardTileStructure</defName>
+    <centerTileDefs>
+      <li>DMSAC_GraveyardTile_Medium</li>
+    </centerTileDefs>
+    <maxDistanceFromCenter>10</maxDistanceFromCenter>
+    <increaseTerrainDef>Concrete</increaseTerrainDef>
+    <allowedTileDefs>
+      <li>
+        <def>DMSAC_GraveyardTile_Medium</def>
+        <count>(2,6)</count>
+      </li>
+      <li>
+        <def>DMSAC_GraveyardTile_Small</def>
+        <count>(2,4)</count>
+      </li>
+    </allowedTileDefs>
+    <tilesNumberRange>1~4</tilesNumberRange>
+    <placeTileAdjacent>false</placeTileAdjacent>
+  </KCSG.TiledStructureDef>
+
+  <KCSG.TileDef>
+    <defName>DMSAC_GraveyardTile_Large</defName>
+    <tileLayouts>
+      <li>DMSAC_Graveyard_Large_A</li>
+      <li>DMSAC_Graveyard_Large_B</li>
+    </tileLayouts>
+  </KCSG.TileDef>
+
+  <KCSG.TileDef>
+    <defName>DMSAC_GraveyardTile_Medium</defName>
+    <tileLayouts>
+      <li>DMSAC_Graveyard_Medium_A</li>
+      <li>DMSAC_Graveyard_Medium_B</li>
+      <li>DMSAC_Graveyard_Medium_C</li>
+      <li>DMSAC_Graveyard_Medium_D</li>
+      <li>DMSAC_Graveyard_Medium_E</li>
+    </tileLayouts>
+  </KCSG.TileDef>
+
+  <KCSG.TileDef>
+    <defName>DMSAC_GraveyardTile_Small</defName>
+    <tileLayouts>
+      <li>DMSAC_Graveyard_Small_A</li>
+      <li>DMSAC_Graveyard_Small_B</li>
+      <li>DMSAC_Graveyard_Small_C</li>
+      <li>DMSAC_Graveyard_Small_D</li>
+    </tileLayouts>
+  </KCSG.TileDef>
+</Defs>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <SitePartDef>
-    <defName>DMSAC_Graveyard</defName>
+    <defName>DMSAC_AUR_Graveyard</defName>
     <label>Graveyard</label>
     <description>An open graveyard that deposed numerous derelict automatroids by the Corps, they were often used by the local scavengers to be the source of parts to produce new or restored automatroids.</description>
     <workerClass>AncientMarket_Libraray.SitePartWorker_CustomMap</workerClass>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Large_East</defName>
+    <thing>DMSAC_Building_DerelictMech_Large</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedLargeMech_East</defName>
+    <thing>DMSAC_Building_DeactivatedLargeMech</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Large_South</defName>
+    <thing>DMSAC_Building_DerelictMech_Large</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedLargeMech_South</defName>
+    <thing>DMSAC_Building_DeactivatedLargeMech</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedMediumMech_West</defName>
+    <thing>DMSAC_Building_DeactivatedMediumMech</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedMediumMech_South</defName>
+    <thing>DMSAC_Building_DeactivatedMediumMech</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Small_West</defName>
+    <thing>DMSAC_Building_DerelictMech_Small</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_ChunkSlag_Old</defName>
+    <thing>DMS_ChunkSlag_Old</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Large_West</defName>
+    <thing>DMSAC_Building_DerelictMech_Large</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Small_East</defName>
+    <thing>DMSAC_Building_DerelictMech_Small</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Large_North</defName>
+    <thing>DMSAC_Building_DerelictMech_Large</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Small_North</defName>
+    <thing>DMSAC_Building_DerelictMech_Small</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedSmallMech_West</defName>
+    <thing>DMSAC_Building_DeactivatedSmallMech</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedSmallMech_East</defName>
+    <thing>DMSAC_Building_DeactivatedSmallMech</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Small_South</defName>
+    <thing>DMSAC_Building_DerelictMech_Small</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedSmallMech_South</defName>
+    <thing>DMSAC_Building_DeactivatedSmallMech</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedLargeMech_West</defName>
+    <thing>DMSAC_Building_DeactivatedLargeMech</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Mech_Mushketer_Static</defName>
+    <pawnKindDef>DMS_Mech_Mushketer_AR</pawnKindDef>
+    <defendSpawnPoint>true</defendSpawnPoint>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Mech_Mushketer_AR</defName>
+    <pawnKindDef>DMS_Mech_Mushketer_AR</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
+    <defendSpawnPoint>true</defendSpawnPoint>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Mech_Dogge</defName>
+    <pawnKindDef>DMS_Mech_Dogge</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Mech_Zabor</defName>
+    <pawnKindDef>DMS_Mech_Zabor</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Mech_Mushketer_SAR</defName>
+    <pawnKindDef>DMS_Mech_Mushketer_SAR</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
+    <defendSpawnPoint>true</defendSpawnPoint>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Medium_East</defName>
+    <thing>DMSAC_Building_DerelictMech_Medium</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Medium_West</defName>
+    <thing>DMSAC_Building_DerelictMech_Medium</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Medium_South</defName>
+    <thing>DMSAC_Building_DerelictMech_Medium</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Medium_North</defName>
+    <thing>DMSAC_Building_DerelictMech_Medium</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+  <defName>DMSAC_Building_DeactivatedMediumMech_North</defName>
+  <thing>DMSAC_Building_DeactivatedMediumMech</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>DMS_Turret_Okhotnik</defName>
+  <thing>DMS_Turret_Okhotnik</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>DMSAC_Building_DeactivatedMediumMech_East</defName>
+  <thing>DMSAC_Building_DeactivatedMediumMech</thing>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+</Defs>

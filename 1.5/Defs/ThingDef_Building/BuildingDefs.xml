@@ -1,5 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+  <ThingDef ParentName="BuildingBase" Name="DMSAC_BaseBuilding" Abstract="true">
+    <building>
+      <claimable>false</claimable>
+      <repairable>false</repairable>
+      <deconstructible>false</deconstructible>
+    </building>
+    <pathCost>100</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Misc</designationCategory>
+  </ThingDef>
+
+  <!--裝飾性殘骸。 -->
+  <ThingDef ParentName="DMSAC_BaseBuilding" Name="BaseDerelictMech" Abstract="true">
+    <description>a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were mostly removed. waiting for people to discover its remaining value.</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Never</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <altitudeLayer>Building</altitudeLayer>
+    <useHitPoints>true</useHitPoints>
+    <passability>PassThroughOnly</passability>
+    <surfaceType>Item</surfaceType>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <only>(255, 255, 255)</only>
+        </li>
+        <li>
+          <only>(250, 250, 250)</only>
+        </li>
+        <li>
+          <only>(252, 252, 252)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseDerelictMech">
+    <defName>DMSAC_Building_DerelictMech_Large</defName>
+    <label>large automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/Wreck/large</texPath>
+      <drawOffset>(0,0,0.25)</drawOffset>
+      <drawSize>4.2</drawSize>
+      <shadowData>
+            <volume>(2.25,1,2.25)</volume>
+            <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(3,3)</size>
+    <fillPercent>0.7</fillPercent>
+    <statBases>
+      <MaxHitPoints>1800</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <Steel>20~60</Steel>
+      <ComponentStamped>0~4</ComponentStamped>
+      <Plasfiber>0~75</Plasfiber>
+      <Tungsteel>0~75</Tungsteel>
+      <DMS_ChunkSlag>1~5</DMS_ChunkSlag>
+    </killedLeavingsRanges>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseDerelictMech">
+    <defName>DMSAC_Building_DerelictMech_Medium</defName>
+    <label>medium automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/Wreck/medium</texPath>
+      <drawSize>2.75</drawSize>
+      <shadowData>
+            <volume>(1.75,1,1.75)</volume>
+            <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(2,2)</size>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <Steel>10~30</Steel>
+      <ComponentStamped>0~2</ComponentStamped>
+      <Plasfiber>10~35</Plasfiber>
+      <Tungsteel>10~35</Tungsteel>
+      <DMS_ChunkSlag>1~2</DMS_ChunkSlag>
+    </killedLeavingsRanges>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseDerelictMech">
+    <defName>DMSAC_Building_DerelictMech_Small</defName>
+    <label>small automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/Wreck/small</texPath>
+      <drawSize>1.9</drawSize>
+      <shadowData>
+            <volume>(1.2,1,1.2)</volume>
+            <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <fillPercent>0.35</fillPercent>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <Steel>5~12</Steel>
+      <ComponentStamped>0~1</ComponentStamped>
+      <Plasfiber>0~15</Plasfiber>
+      <Tungsteel>0~15</Tungsteel>
+      <DMS_ChunkSlag>0~2</DMS_ChunkSlag>
+    </killedLeavingsRanges>
+  </ThingDef>
+
+  <!-- 可以駭入的殘骸，以及相關工作。 -->
   <JobDef>
     <defName>DMS_HackDeactivatedMech</defName>
     <reportString>hacking mech</reportString>
@@ -12,27 +137,22 @@
     <driverClass>AncientCorps.JobDriver_DisableMech</driverClass>
   </JobDef>
 
-  <!-- 殘骸 -->
-  <ThingDef ParentName="BuildingBase" Name="BaseDeactivatedMech" Abstract="true">
+  <ThingDef ParentName="DMSAC_BaseBuilding" Name="BaseDeactivatedMech" Abstract="true">
     <thingClass>AncientCorps.Building_DeactivatedMech</thingClass>
-    <description>a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed waiting for people to discover its remaining value.</description>
+    <description>a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed. waiting for people to discover its remaining value.</description>
     <graphicData>
       <texPath>Things/Building/derelict</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <drawerType>MapMeshAndRealTime</drawerType>
     <tickerType>Normal</tickerType>
-    <canOverlapZones>false</canOverlapZones>
     <altitudeLayer>Building</altitudeLayer>
     <designationCategory>Misc</designationCategory>
+    <rotatable>true</rotatable>
     <building>
-      <claimable>false</claimable>
-      <repairable>false</repairable>
       <spawnedConceptLearnOpportunity>DMSAC_Hacking</spawnedConceptLearnOpportunity>
     </building>
     <useHitPoints>false</useHitPoints>
-    <pathCost>100</pathCost>
-    <passability>PassThroughOnly</passability>
     <surfaceType>Item</surfaceType>
   </ThingDef>
 
@@ -51,7 +171,7 @@
           <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
         </possibleGeneratePawn>
         <age>300~400</age>
-        <innerPawnDrawOffset>(0,0.01,0)</innerPawnDrawOffset>
+        <innerPawnDrawOffset>(0,0.001,0.5)</innerPawnDrawOffset>
         <weaponscatterRange>0.75</weaponscatterRange>
       </li>
     </modExtensions>
@@ -75,8 +195,8 @@
           <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
         </possibleGeneratePawn>
         <age>300~400</age>
-        <innerPawnDrawOffset>(0,0.01,0)</innerPawnDrawOffset>
-        <weaponscatterRange>0.5</weaponscatterRange>
+        <innerPawnDrawOffset>(0,0.001,0)</innerPawnDrawOffset>
+        <weaponscatterRange>0.25</weaponscatterRange>
       </li>
     </modExtensions>
   </ThingDef>
@@ -97,7 +217,7 @@
           <DMS_Mech_Mushketer_AR>3</DMS_Mech_Mushketer_AR>
         </possibleGeneratePawn>
         <age>300~400</age>
-        <innerPawnDrawOffset>(0,0.01,0)</innerPawnDrawOffset>
+        <innerPawnDrawOffset>(0,0.001,0.25)</innerPawnDrawOffset>
         <weaponscatterRange>0.25</weaponscatterRange>
       </li>
     </modExtensions>
