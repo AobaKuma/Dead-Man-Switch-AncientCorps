@@ -130,15 +130,19 @@
       <li Class="CompProperties_Usable">
         <useJob>TriggerObject</useJob>
         <useLabel>Attract krepost threat</useLabel>
-        <useDuration>900</useDuration>
+        <useDuration>500</useDuration>
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
       <li Class="DMS.CompProperties_UseEffectSummonRaid">
         <bossgroupDef>DMS_Krepost</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>
+      <!-- <li Class="AncientCorps.CompProperties_UseEffectPlaySong">
+        <song>DMSAC_Boss_A</song>
+        <delayTicks>750</delayTicks>
+      </li> -->
       <li Class="CompProperties_UseEffectDestroySelf">
-        <delayTicks>120</delayTicks>
+        <delayTicks>750</delayTicks>
         <spawnKilledLeavings>true</spawnKilledLeavings>
         <effecterDef>MechbandBuildingDestroyed</effecterDef>
       </li>

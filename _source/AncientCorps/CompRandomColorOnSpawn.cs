@@ -1,11 +1,13 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using Verse;
+using Verse.Sound;
 
 namespace AncientCorps
 {
     public class CompRandomColorOnSpawn : ThingComp
     {
+
         public CompProperties_RandomColorOnSpawn Props => (CompProperties_RandomColorOnSpawn)this.props;
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {

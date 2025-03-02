@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>  
+<!-- Krepost Attack -->
+
+  <MusicTransitionDef>
+    <defName>DMSAC_KrepostAttack</defName>
+    <workerType>AncientCorps.KrepostAttackTransition</workerType>
+    <overridesInterruptions>true</overridesInterruptions>
+    <sequence>DMSAC_KrepostAttack</sequence>
+    <priority>600</priority>
+  </MusicTransitionDef>
+  <MusicSequenceDef>
+    <defName>DMSAC_KrepostAttack</defName>
+    <canBeInterrupted>false</canBeInterrupted>
+    <loop>true</loop>
+    <fadeoutLastSongDuration>4</fadeoutLastSongDuration>
+    <fadeInDuration>4</fadeInDuration> <!-- this starts suddenly, so ease it in -->
+    <overrideFadeout>4</overrideFadeout>
+    <song>DMSAC_Boss_A</song>
+    <loopFadeout>true</loopFadeout>
+    <pausedVolumeFactor>0.5</pausedVolumeFactor>
+  </MusicSequenceDef>
+	<SongDef>
+		<defName>DMSAC_Boss_A</defName>
+    <label>Black knight</label>
+		<clipPath>AncientCorps/BossMusic_BlackKnight</clipPath>
+		<volume>1.0</volume>
+		<tense>true</tense>
+		<commonality>0</commonality>
+	</SongDef>
+</Defs>
