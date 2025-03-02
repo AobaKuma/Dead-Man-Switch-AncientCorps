@@ -104,7 +104,7 @@
       </li>
     </waves>
     <leaderDescription>This {LEADERKIND_label} was one of machines deployed as a vanguard for the Colonial Forces hundreds of years ago. It has been out of command due to the loss of its operator for an unknown amount of time and gone feral.</leaderDescription>
-    <rewardDef>ComponentTransmitter</rewardDef>
+    <rewardDef>DMS_FacilityIntel</rewardDef>
   </BossgroupDef>
 
   <ThingDef ParentName="DMS_BossCallerBase">

@@ -7,8 +7,8 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]/statBases</xpath>
 				<value>
-					<CarryWeight>60</CarryWeight>
-					<CarryBulk>50</CarryBulk>
+					<CarryWeight>85</CarryWeight>
+					<CarryBulk>150</CarryBulk>
 					<AimingAccuracy>0.95</AimingAccuracy>
 					<ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
 					<MeleeDodgeChance>0.05</MeleeDodgeChance>
@@ -38,7 +38,6 @@
 					<ArmorRating_Heat>0.3</ArmorRating_Heat>
 				</value>
 			</li>
-
 			<li Class="PatchOperationConditional">
 				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]/comps</xpath>
 				<nomatch Class="PatchOperationAdd">
@@ -70,16 +69,85 @@
 			</li>
 			
 			<li Class="PatchOperationAddModExtension">
-				<xpath>Defs/PawnKindDef[
-					defName="DMS_Mech_Tsvetnik"
-					]</xpath>
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>QuadrupedTall</bodyShape>
+					</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/PawnKindDef[defName="DMS_Mech_Tsvetnik"]</xpath>
 				<value>
 					<li Class="CombatExtended.LoadoutPropertiesExtension">
-						<primaryMagazineCount>
-							<min>3</min>
-							<max>7</max>
-						</primaryMagazineCount>
+						<sidearms>
+							<li>
+								<generateChance>0.25</generateChance>
+								<sidearmMoney>
+									<min>500</min>
+									<max>1250</max>
+								</sidearmMoney>
+								<weaponTags>
+									<li>A_Pistol</li>
+								</weaponTags>
+								<magazineCount>
+									<min>2</min>
+									<max>5</max>
+								</magazineCount>
+							</li>
+						</sidearms>
 					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[defName="DMS_Mech_Tsvetnik"] </xpath>
+				<value>
+					<inventoryOptions>
+						<skipChance>0</skipChance>
+						<subOptionsChooseOne>
+							<li>
+								<choiceChance>40</choiceChance>
+								<thingDef>Shell_HighExplosive</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+							<li>
+								<choiceChance>15</choiceChance>
+								<thingDef>Shell_HighExplosive_HFuzed</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+							<li>
+								<choiceChance>30</choiceChance>
+								<thingDef>Shell_Incendiary</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+							<li>
+								<choiceChance>10</choiceChance>
+								<thingDef>Shell_EMP</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+							<li>
+								<choiceChance>5</choiceChance>
+								<thingDef>Shell_Toxic</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+						</subOptionsChooseOne>
+					</inventoryOptions>
 				</value>
 			</li>
 		</operations>

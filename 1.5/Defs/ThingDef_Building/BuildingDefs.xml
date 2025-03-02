@@ -7,11 +7,12 @@
       <claimable>false</claimable>
       <repairable>false</repairable>
       <deconstructible>false</deconstructible>
+      <neverBuildable>true</neverBuildable>
     </building>
     <pathCost>120</pathCost>
     <defaultPlacingRot>2</defaultPlacingRot>
     <passability>PassThroughOnly</passability>
-    <designationCategory>Misc</designationCategory>
+    <!-- <designationCategory>Misc</designationCategory> -->
   </ThingDef>
 
   <!--裝飾性殘骸。 -->
@@ -178,7 +179,6 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <tickerType>Normal</tickerType>
     <altitudeLayer>Building</altitudeLayer>
-    <designationCategory>Misc</designationCategory>
     <rotatable>true</rotatable>
     <building>
       <spawnedConceptLearnOpportunity>DMSAC_Hacking</spawnedConceptLearnOpportunity>

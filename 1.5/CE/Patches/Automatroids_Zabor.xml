@@ -7,8 +7,8 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="DMS_Mech_Zabor"]/statBases</xpath>
 				<value>
-					<CarryWeight>60</CarryWeight>
-					<CarryBulk>50</CarryBulk>
+					<CarryWeight>80</CarryWeight>
+					<CarryBulk>75</CarryBulk>
 					<AimingAccuracy>0.95</AimingAccuracy>
 					<ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
 					<MeleeDodgeChance>0.05</MeleeDodgeChance>
@@ -94,7 +94,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="DMS_Mech_Zabor_Pirate"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
-					<ArmorRating_Sharp>20</ArmorRating_Sharp>
+					<ArmorRating_Sharp>36</ArmorRating_Sharp>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -138,8 +138,8 @@
 				<value>
 					<li Class="CombatExtended.LoadoutPropertiesExtension">
 						<primaryMagazineCount>
-							<min>7</min>
-							<max>10</max>
+							<min>2</min>
+							<max>4</max>
 						</primaryMagazineCount>
 						<sidearms>
 							<li>

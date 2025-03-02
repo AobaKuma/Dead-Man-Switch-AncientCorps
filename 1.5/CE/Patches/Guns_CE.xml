@@ -96,10 +96,10 @@
                     <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                     <hasStandardCommand>true</hasStandardCommand>
                     <defaultProjectile>Bullet_127x55mm_FMJ</defaultProjectile>
-                    <warmupTime>1.1</warmupTime>
+                    <warmupTime>0.8</warmupTime>
                     <range>42</range>
                     <burstShotCount>5</burstShotCount>
-                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                    <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
                     <soundCast>Shot_AssaultRifle</soundCast>
                     <soundCastTail>GunTail_Medium</soundCastTail>
                     <muzzleFlashScale>9</muzzleFlashScale>
@@ -144,11 +144,14 @@
                             <hasStandardCommand>true</hasStandardCommand>
                             <defaultProjectile>Bullet_30x29mmGrenade_HE</defaultProjectile>
                             <warmupTime>2</warmupTime>
-				            <minRange>8</minRange>
+                            <minRange>8</minRange>
                             <range>32</range>
                             <soundCast>Shot_Shotgun_NoRack</soundCast>
                             <soundCastTail>GunTail_Medium</soundCastTail>
                             <muzzleFlashScale>6</muzzleFlashScale>
+                            <targetParams>
+                                <canTargetLocations>true</canTargetLocations>
+                            </targetParams>
                         </verbPropsUnderBarrel>
                         <propsFireModesUnderBarrel>
                             <aiAimMode>Snapshot</aiAimMode>
@@ -662,10 +665,10 @@
 					<AimingAccuracy>1</AimingAccuracy>
 					<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
 					<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
-					<SightsEfficiency>0.5</SightsEfficiency>
+					<SightsEfficiency>1.0</SightsEfficiency>
 					<ShotSpread>2</ShotSpread>
 					<SwayFactor>2</SwayFactor>
-					<Bulk>101</Bulk>
+					<Bulk>0</Bulk>
 				</statBases>
 				<Properties>
 					<verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
@@ -675,7 +678,7 @@
 					<warmupTime>2.1</warmupTime>
 					<minRange>20</minRange>
 					<range>200</range>
-					<burstShotCount>4</burstShotCount>
+					<burstShotCount>2</burstShotCount>
 					<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
 					<soundCast>DMS_Shot_VasilekSound</soundCast>
 					<soundCastTail>GunTail_Heavy</soundCastTail>  
@@ -684,7 +687,7 @@
 					<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 					<ignorePartialLoSBlocker>True</ignorePartialLoSBlocker>
 					<circularError>5</circularError>
-					<indirectFirePenalty>0.35</indirectFirePenalty>
+					<indirectFirePenalty>0.6</indirectFirePenalty>
 					<targetParams>
 						<canTargetLocations>true</canTargetLocations>
 					</targetParams>
@@ -699,7 +702,7 @@
 				<FireModes>
 					<noSingleShot>false</noSingleShot>
 					<aiUseBurstMode>true</aiUseBurstMode>
-					<aiAimMode>AimedShot</aiAimMode>
+					<aiAimMode>SuppressFire</aiAimMode>
 					<aimedBurstShotCount>2</aimedBurstShotCount>
 				</FireModes>
 			</li>

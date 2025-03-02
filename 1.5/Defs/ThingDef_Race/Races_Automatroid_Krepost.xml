@@ -264,7 +264,7 @@
       <ComponentStamped>4</ComponentStamped>
     </butcherProducts>
     <killedLeavingsPlayerHostile>
-      <ComponentFireControl>1</ComponentFireControl>
+      <DMS_FacilityIntel>1</DMS_FacilityIntel>
     </killedLeavingsPlayerHostile>
     <castEdgeShadows>false</castEdgeShadows>
     <staticSunShadowHeight>0</staticSunShadowHeight>

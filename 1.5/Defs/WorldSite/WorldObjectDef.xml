@@ -36,6 +36,16 @@
         <parts>
           <li>DMSAC_Graveyard</li>
         </parts>
+        <disallowedBiomes>
+          <li>IceSheet</li>
+          <li>SeaIce</li>
+          <li>Lake</li>
+          <li>Ocean</li>
+          <li>TropicalRainforest</li>
+          <li>TropicalSwamp</li>
+          <li>TemperateSwamp</li>
+          <li>ColdBog</li>
+        </disallowedBiomes>
       </li>
     </modExtensions>
     <IncidentTargetTags>

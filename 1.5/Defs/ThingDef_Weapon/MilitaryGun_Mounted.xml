@@ -16,7 +16,7 @@
 			<AccuracyLong>0.80</AccuracyLong>
 			<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
 		</statBases>
-		<weaponTags>
+		<weaponTags Inherit="false">
 			<li>DMS_Gun_MobileMortar</li>
 		</weaponTags>
 		<verbs>
@@ -36,7 +36,7 @@
 				<muzzleFlashScale>10</muzzleFlashScale>
 				<consumeFuelPerShot>1</consumeFuelPerShot>
 				<targetParams>
-				<canTargetLocations>true</canTargetLocations>
+					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
 			</li>
 		</verbs>

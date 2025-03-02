@@ -57,7 +57,7 @@
     <nameMaker>DMS_AncientMechStandard</nameMaker>
     <isFighter>true</isFighter>
     <combatPower>300</combatPower>
-    <maxPerGroup>2</maxPerGroup>
+    <maxPerGroup>3</maxPerGroup>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -84,8 +84,9 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-		<weaponTags>
-			<li>DMS_Gun_MobileMortar</li>
-		</weaponTags>
+    <weaponMoney>2000~9999</weaponMoney>
+    <weaponTags>
+      <li>DMS_Gun_MobileMortar</li>
+    </weaponTags>
   </PawnKindDef>
 </Defs>
