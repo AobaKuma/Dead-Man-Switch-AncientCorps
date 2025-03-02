@@ -1,11 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <AncientCorps.DeactivatedMech_Disable>拆解机体</AncientCorps.DeactivatedMech_Disable>
   <AncientCorps.Reason_WorkTypeDisabled>工作类型禁用</AncientCorps.Reason_WorkTypeDisabled>
   <AncientCorps.Reason_NotMechanitor>必须是机械师</AncientCorps.Reason_NotMechanitor>
-  <AncientCorps.Reason_NoEnoughBandwidth>需要带宽:{0}</AncientCorps.Reason_NoEnoughBandwidth>
+  <AncientCorps.Reason_NoEnoughBandwidth>需要带宽: {0}</AncientCorps.Reason_NoEnoughBandwidth>
   <AncientCorps.DeactivatedMech_TryHack>尝试骇入{0}</AncientCorps.DeactivatedMech_TryHack>
   <AncientCorps.DeactivatedMech_CannotHack>无法骇入</AncientCorps.DeactivatedMech_CannotHack>
   
+  <DMSAC_CorpNeutral>通讯</DMSAC_CorpNeutral>
+  <DMSAC_CorpNeutralDesc>"代码5，识别到登记对象。"\n"这里是{0}，已同步敌我识别代码，交火中止。"\n\n这支古老的机兵指挥系统认出了{1}的身分。并出于对{1}战斗能力的尊重暂时中止了识别。</DMSAC_CorpNeutralDesc>
+  <DMSAC_CorpAlly>通讯</DMSAC_CorpAlly>
+  <DMSAC_CorpAllyDesc>"代码5，识别到登记对象。"\n"这里是{0}，如果有任何资源需求请向{0}后勤办事处正式递交军剩品征用申请表。"\n\n古老的机兵指挥系统出于对{1}的信任，对殖民者的行为睁一只眼闭一只眼，但出于流程需要发出了警告。</DMSAC_CorpAllyDesc>
+  <DMSAC_CorpAllyDown>通讯</DMSAC_CorpAllyDown>
+  <DMSAC_CorpAllyDownDesc>"代码5，识别到登记对象。"\n"这里是{0}，在此向扎尔塔的屠戮者致敬，并感谢您对殖民计划做出的贡献。"\n\n这个古老的机兵指挥系统识别出{1}的身分。并出于对{1}的尊重授权了殖民者在这里自由活动的权力。</DMSAC_CorpAllyDownDesc>
+  <DMSAC_CorpHostile>增援</DMSAC_CorpHostile>
+  <DMSAC_CorpHostileDesc>一支机兵巡逻队发现了入侵军事设施的殖民者，它们将在准备一段时间后将对你的殖民者实施驱逐。\n\n根据截获的通讯频率波动，来自周围的其他机兵巡逻队可能正在前来支援的路上。</DMSAC_CorpHostileDesc>
 </LanguageData>

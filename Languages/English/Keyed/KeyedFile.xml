@@ -7,5 +7,16 @@
   <AncientCorps.Reason_NoEnoughBandwidth>need bandwidth:{0}</AncientCorps.Reason_NoEnoughBandwidth>
   <AncientCorps.DeactivatedMech_TryHack>Try hacking {0}</AncientCorps.DeactivatedMech_TryHack>
   <AncientCorps.DeactivatedMech_CannotHack>Cannot hacking</AncientCorps.DeactivatedMech_CannotHack>
-  
+
+  <DMSAC_CorpNeutral>Communication</DMSAC_CorpNeutral>
+  <DMSAC_CorpNeutralDesc>"Code 5, registered personal identified."\n"This is {0}, IFF codes synchronized, cease fire."\n\nThis ancient automatroid command system recognized {1}'s identity. Out of respect for {1}, it has temporarily halted hostilities to your colonists.</DMSAC_CorpNeutralDesc>
+
+  <DMSAC_CorpAlly>Communication</DMSAC_CorpAlly>
+  <DMSAC_CorpAllyDesc>"Code 5, registered personal identified."\n"This is {0}, if you require any resources, please formally submit a military surplus requisition form to the {0} logistics office."\n\nOut of trust in {1}, the ancient automatroid command system turned a blind eye to the colonists' actions but issued a warning as per protocol.</DMSAC_CorpAllyDesc>
+
+  <DMSAC_CorpAllyDown>Communication</DMSAC_CorpAllyDown>
+  <DMSAC_CorpAllyDownDesc>"Code 5, registered personal identified."\n"This is {0}, paying tribute to the Slayer of Zalta and thanking you for your contributions to the colonization project."\n\nThis ancient automatroid command system recognized {1}'s identity. Out of respect for {1}, it has authorized the colonists to operate freely in this area.</DMSAC_CorpAllyDownDesc>
+
+  <DMSAC_CorpHostile>Reinforcement</DMSAC_CorpHostile>
+  <DMSAC_CorpHostileDesc>An automatroid patrol has discovered colonists intruding into a military facility. After a brief preparation period, they will attempt to expel your colonists.\n\nBased on intercepted communication frequency fluctuations, nearby automatroid patrols in this area may be on their way to reinforcement.</DMSAC_CorpHostileDesc>
 </LanguageData>

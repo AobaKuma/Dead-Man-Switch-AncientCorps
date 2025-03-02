@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,16 +8,16 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using static System.Collections.Specialized.BitVector32;
 
 namespace AncientCorps
 {
-
     //在遺跡裡面生成的機體，玩家能夠駭入來獲取，並有機率失敗。
     public class Building_DeactivatedMech : Building, IThingHolder
     {
         public Building_DeactivatedMech()
-		{
-			this.innerContainer = new ThingOwner<Pawn>(this, false, LookMode.Deep);
+        {
+            this.innerContainer = new ThingOwner<Pawn>(this, false, LookMode.Deep);
         }
         private Faction PawnFaction => Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps) ?? Faction.OfAncients;
         private ModExtension_DeactivatedMech Extension => this.def.GetModExtension<ModExtension_DeactivatedMech>();
@@ -26,10 +27,10 @@ namespace AncientCorps
             {
                 if (!innerContainer.NullOrEmpty())
                 {
-                    if(innerContainer.First() is Pawn || innerContainer.First() is Corpse)
-                    return true;
+                    if (innerContainer.First() is Pawn || innerContainer.First() is Corpse)
+                        return true;
                 }
-                return  false;
+                return false;
             }
         }
 
@@ -78,15 +79,15 @@ namespace AncientCorps
             if (!HasPawn) Destroy(DestroyMode.Vanish);
         }
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
-		{
-			if (this.HasPawn)
-			{
+        {
+            if (this.HasPawn)
+            {
                 Vector3 drawLoc2 = base.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.BuildingOnTop) + (Extension != null ? Extension.innerPawnDrawOffset : Vector3.zero);
                 this.Pawn.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc2 - (weaponDrawOffset / 2), this.Rotation, false);
                 this.Pawn.equipment.Primary?.DynamicDrawPhaseAt(phase, drawLoc2 + weaponDrawOffset);
             }
-			base.DynamicDrawPhaseAt(phase, drawLoc, flip);
-		}
+            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+        }
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (Extension.bottomGraphic != null)
@@ -108,9 +109,9 @@ namespace AncientCorps
             base.DeSpawn(mode);
         }
         public void GetChildHolders(List<IThingHolder> outChildren)
-		{
-			ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, this.GetDirectlyHeldThings());
-		}
+        {
+            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, this.GetDirectlyHeldThings());
+        }
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
         {
             foreach (FloatMenuOption option in base.GetFloatMenuOptions(selPawn))
@@ -157,19 +158,19 @@ namespace AncientCorps
             return new FloatMenuOption("AncientCorps.DeactivatedMech_CannotHack".Translate() + ": " + reason, null);
         }
         public ThingOwner GetDirectlyHeldThings()
-		{
-			return this.innerContainer;
-		}
-		public override void ExposeData()
-		{
-			base.ExposeData();
-			Scribe_Deep.Look<ThingOwner>(ref this.innerContainer, "innerContainer", new object[]
-			{
+        {
+            return this.innerContainer;
+        }
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Deep.Look<ThingOwner>(ref this.innerContainer, "innerContainer", new object[]
+            {
                 this
-			});
+            });
             Scribe_Values.Look(ref this.weaponDrawOffset, "weaponDrawOffset", Vector3.zero, false);
-		}
-		public void EjectContents(Pawn usedBy = null,bool killPawn = false)
+        }
+        public void EjectContents(Pawn usedBy = null, bool killPawn = false)
         {
             if (killPawn)//非駭入的情況下，機體會被摧毀。
             {
@@ -178,19 +179,31 @@ namespace AncientCorps
                     Pawn.SetFactionDirect(Faction.OfAncients);
                     Pawn?.Kill(null);
                 }
-                if(!innerContainer.NullOrEmpty())
-                innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
+                if (!innerContainer.NullOrEmpty())
+                    innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
             }
             else
             {
-                Pawn.SetFaction(Faction.OfPlayer);
-                if (usedBy != null && MechanitorUtility.IsMechanitor(usedBy))
+                if (usedBy.skills.GetSkill(SkillDefOf.Intellectual).Level < 10 && Rand.Chance(0.25f))//駭入行蹤洩漏。
                 {
-                    if(usedBy.mechanitor.TotalBandwidth - usedBy.mechanitor.UsedBandwidth < Pawn.GetStatValue(StatDefOf.BandwidthCost))
-                    if (MechanitorUtility.EverControllable(Pawn))
-                    {
-                        Pawn.GetOverseer()?.relations.RemoveDirectRelation(PawnRelationDefOf.Overseer, Pawn);
-                    }
+                    //駭入失敗，
+                    Find.LetterStack.ReceiveLetter("DMSAC_HackFailed".Translate(), "DMSAC_HackFailedDesc".Translate(), LetterDefOf.NegativeEvent);
+                    AncientCorpsUltility.SetHostileToPlayer(base.Map);
+                }
+                if (usedBy.skills.GetSkill(SkillDefOf.Crafting).Level < 10 && Rand.Chance(0.25f))//駭入失敗，機體會暴走。
+                {
+                    Find.LetterStack.ReceiveLetter("DMSAC_HackFailed".Translate(), "DMSAC_HackFailedDesc".Translate(), LetterDefOf.NegativeEvent);
+                    Pawn.SetFaction(null);
+                    Pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk);
+                }
+                else if (usedBy != null && MechanitorUtility.IsMechanitor(usedBy))
+                {
+                    Pawn.SetFaction(Faction.OfPlayer);
+                    if (usedBy.mechanitor.TotalBandwidth - usedBy.mechanitor.UsedBandwidth < Pawn.GetStatValue(StatDefOf.BandwidthCost))
+                        if (MechanitorUtility.EverControllable(Pawn))
+                        {
+                            Pawn.GetOverseer()?.relations.RemoveDirectRelation(PawnRelationDefOf.Overseer, Pawn);
+                        }
                     usedBy.relations.AddDirectRelation(PawnRelationDefOf.Overseer, Pawn);
                 }
                 innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
@@ -198,7 +211,7 @@ namespace AncientCorps
             DeSpawnOrDeselect();
             Destroy(DestroyMode.Vanish);
         }
-		private Graphic bottomGraphic;
-		public ThingOwner innerContainer;
+        private Graphic bottomGraphic;
+        public ThingOwner innerContainer;
     }
 }

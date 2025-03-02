@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Defs>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
   <!-- 120 -->
   <SoundDef>
-    <defName>DMS_AC_Shot_MBTCannonSound</defName>  
-    <context>MapOnly</context>  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <defName>DMS_AC_Shot_MBTCannonSound</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>AncientCorps/MainCannon_Shot</clipPath>
           </li>
-        </grains>      
+        </grains>
         <volumeRange>60~60</volumeRange>
       </li>
     </subSounds>
@@ -19,7 +19,7 @@
 
   <!-- 14.5 -->
   <SoundDef>
-    <defName>DMS_AC_Shot_MachineGunSound</defName>  
+    <defName>DMS_AC_Shot_MachineGunSound</defName>
     <context>MapOnly</context>
     <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
@@ -28,7 +28,7 @@
           <li Class="AudioGrain_Clip">
             <clipPath>AncientCorps/MachineGun_Shot</clipPath>
           </li>
-        </grains>      
+        </grains>
         <volumeRange>20~30</volumeRange>
         <pitchRange>0.86~0.945882</pitchRange>
       </li>
@@ -37,16 +37,16 @@
 
   <!-- GM -->
   <SoundDef>
-    <defName>DMS_AC_Shot_GuidedMissile</defName>  
-    <context>MapOnly</context>  
-    <maxSimultaneous>2</maxSimultaneous>  
+    <defName>DMS_AC_Shot_GuidedMissile</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>AncientCorps/GuidedMissile_Shot</clipPath>
           </li>
-        </grains>      
+        </grains>
         <volumeRange>40~40</volumeRange>
       </li>
     </subSounds>

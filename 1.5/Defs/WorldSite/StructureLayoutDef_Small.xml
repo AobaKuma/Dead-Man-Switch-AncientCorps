@@ -33,6 +33,7 @@
     <forceGenerateRoof>true</forceGenerateRoof>
     <needRoofClearance>true</needRoofClearance>
     <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
+    <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>
     </tags>
@@ -75,6 +76,7 @@
     <forceGenerateRoof>true</forceGenerateRoof>
     <needRoofClearance>true</needRoofClearance>
     <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
+    <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>
     </tags>
@@ -109,6 +111,7 @@
     <forceGenerateRoof>true</forceGenerateRoof>
     <needRoofClearance>true</needRoofClearance>
     <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
+    <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>
     </tags>
@@ -151,6 +154,7 @@
     <forceGenerateRoof>true</forceGenerateRoof>
     <needRoofClearance>true</needRoofClearance>
     <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
+    <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>
     </tags>

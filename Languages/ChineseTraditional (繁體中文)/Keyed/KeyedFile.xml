@@ -4,8 +4,18 @@
   <AncientCorps.DeactivatedMech_Disable>拆解機體</AncientCorps.DeactivatedMech_Disable>
   <AncientCorps.Reason_WorkTypeDisabled>工作類型禁用</AncientCorps.Reason_WorkTypeDisabled>
   <AncientCorps.Reason_NotMechanitor>必須是機械師</AncientCorps.Reason_NotMechanitor>
-  <AncientCorps.Reason_NoEnoughBandwidth>需要帶寬:{0}</AncientCorps.Reason_NoEnoughBandwidth>
+  <AncientCorps.Reason_NoEnoughBandwidth>需要帶寬: {0}</AncientCorps.Reason_NoEnoughBandwidth>
   <AncientCorps.DeactivatedMech_TryHack>嘗試駭入{0}</AncientCorps.DeactivatedMech_TryHack>
   <AncientCorps.DeactivatedMech_CannotHack>無法駭入</AncientCorps.DeactivatedMech_CannotHack>
   
+  <DMSAC_CorpNeutral>通訊</DMSAC_CorpNeutral>
+  <DMSAC_CorpNeutralDesc>"代碼5，識別到登記對象。"\n"這裡是{0}，已同步敵我識別代碼，交火中止。" \n\n這支古老的機兵指揮系統認出了{1}的身分。並出於對{1}戰鬥能力的尊重暫時中止了識別。</DMSAC_CorpNeutralDesc>
+
+  <DMSAC_CorpAlly>通訊</DMSAC_CorpAlly>
+  <DMSAC_CorpAllyDesc>"代碼5，識別到登記對象。"\n"這裡是{0}，如果有任何資源需求請向{0}後勤辦事處正式遞交軍剩品徵用申請表。" \n\n古老的機兵指揮系統出於對{1}的信任，對殖民者的行為睜一隻眼閉一隻眼，但出於流程需要發出了警告。</DMSAC_CorpAllyDesc>
+  <DMSAC_CorpAllyDown>通訊</DMSAC_CorpAllyDown>
+  <DMSAC_CorpAllyDownDesc>"代碼5，識別到登記對象。"\n"這裡是{0}，在此向扎爾塔的屠戮者致敬，並感謝您對殖民計畫做出的貢獻。" \n\n這個古老的機兵指揮系統識別出{1}的身分。並出於對{1}的尊重授權了殖民者在這裡自由活動的權力。</DMSAC_CorpAllyDownDesc>
+  <DMSAC_CorpHostile>增援</DMSAC_CorpHostile>
+  <DMSAC_CorpHostileDesc>一支機兵巡邏隊發現了入侵軍事設施的殖民者，它們將在準備一段時間後將對你的殖民者實施驅逐。\n\n根據截獲的通訊頻率波動，來自周圍的其他機兵巡邏隊可能正在前來支援的路上。</DMSAC_CorpHostileDesc>
+
 </LanguageData>

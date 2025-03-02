@@ -83,7 +83,7 @@
 	<!--Zlobin Rifle-->
 	<ThingDef ParentName="DMS_AutomatroidGun">
 		<defName>DMS_ZlobinRifle</defName>
-		<label>Zlobin Rifle</label>
+		<label>Zlobin rifle</label>
 		<description>A special assault rifle named after its designer. during urban combat, it is capable of effectively penetrating the armor of most small and medium-sized mechanoids and causing damage.. However, its long-range accuracy is quite limited due to its speciallized subsonic bullet.\n\nIt also equipped with an underbarrel launcher capable of firing small-caliber grenades.</description>
 		<weaponClasses>
 		  <li>LongShots</li>
@@ -169,7 +169,7 @@
 	<!--VKS-->
 	<ThingDef ParentName="DMS_AutomatroidGun">
 		<defName>DMS_VykhlopRifle</defName>
-		<label>Vykhlop Rifle</label>
+		<label>Vykhlop rifle</label>
 		<description>A lightweight, large-caliber suppressed rifle capable of penetrating lightly armored and body armored targets at long range. A special silencer that occupies the entire length of the barrel ensures its concealment.</description>
 		<weaponClasses>
 		  <li>LongShots</li>

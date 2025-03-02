@@ -4,13 +4,11 @@ using Verse;
 using Verse.Noise;
 using System.Reflection;
 using System;
+using static RimWorld.RitualStage_InteractWithRole;
+using System.Collections.Generic;
 
 namespace AncientCorps
 {
-    public class CompLaunchEffect : ThingComp
-    { 
-    
-    }
     public class CompAfterBurner : ThingComp
     {
         public CompProperties_AfterBurner Props => (CompProperties_AfterBurner)this.props;

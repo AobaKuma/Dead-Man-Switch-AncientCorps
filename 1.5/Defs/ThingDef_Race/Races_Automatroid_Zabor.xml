@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="BaseAutomatroidHumanRace">
+  <ThingDef ParentName="BaseAutomatroidHumanRace" Name="BaseZaborRace">
     <defName>DMS_Mech_Zabor</defName>
     <label>zabor</label>
     <description>6M29U / BR4G "Zabor", NATO nicknamed "Incisor". It is an armored automatroid with extra frontial armour, designed as a cost-effective and durable mechanical infantry. Thanks to its outstanding systems engineering, modernized variants of this model continue to serve in many Midworld militaries today. It has also become a highly sought-after model for replication and production by local warlords and pirates in the Rimworld.</description>
@@ -148,6 +148,73 @@
     </lifeStages>
     <abilities>
       <li>DMSAC_Rocket</li>
+    </abilities>
+  </PawnKindDef>
+
+  
+  <ThingDef ParentName="BaseZaborRace">
+    <defName>DMS_Mech_Zabor_Pirate</defName>
+    <label>zabor</label>
+    <description>6M29U / BR4G "Zabor", NATO nicknamed "Incisor". It is an armored automatroid with extra frontial armour, designed as a cost-effective and durable mechanical infantry. Thanks to its outstanding systems engineering, modernized variants of this model continue to serve in many Midworld militaries today. It has also become a highly sought-after model for replication and production by local warlords and pirates in the Rimworld.</description>
+    <statBases>
+      <MoveSpeed>2.5</MoveSpeed><!--移動速度-->
+      <AimingDelayFactor>1.1</AimingDelayFactor>
+      <StaggerDurationFactor>1.4</StaggerDurationFactor>
+      <ArmorRating_Sharp>0.9</ArmorRating_Sharp><!--銳抗-->
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt><!--鈍抗-->
+      <ArmorRating_Heat>1.1</ArmorRating_Heat>  <!--能抗-->
+      <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>        <!--帶寬消耗-->
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">3</WastepacksPerRecharge><!--充電/培養時產出廢料-->
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>6</mechFixedSkillLevel>
+      <body>DMS_Humanoid_Soldat</body>
+      <nameGenerator>DMS_AncientMechHeavy</nameGenerator>
+      <baseBodySize>2.1</baseBodySize>
+      <baseHealthScale>2</baseHealthScale>
+      <mechWeightClass>Heavy</mechWeightClass>
+    </race>
+  </ThingDef>
+
+  <!-- 海盜籬笆 -->
+  <PawnKindDef ParentName="DMS_BaseZaborKind">
+    <defName>DMS_Mech_Zabor_Pirate</defName>
+    <label>Daddy red</label>
+    <combatPower>400</combatPower>
+    <race>DMS_Mech_Zabor_Pirate</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <weaponTags Inherit="False">
+			<li>DMS_AtlantGrenadeLauncher</li>
+      <li>DMS_VladimirovMachineGun</li>
+    </weaponTags>
+    <lifeStages Inherit="false">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/zaborP</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/zaborP</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li MayRequire="ludeon.rimworld.ideology">Smokepop</li>
     </abilities>
   </PawnKindDef>
 </Defs>

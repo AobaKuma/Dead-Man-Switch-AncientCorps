@@ -156,18 +156,45 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-  <defName>DMSAC_Building_DeactivatedMediumMech_North</defName>
-  <thing>DMSAC_Building_DeactivatedMediumMech</thing>
-</KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedMediumMech_North</defName>
+    <thing>DMSAC_Building_DeactivatedMediumMech</thing>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>DMS_Turret_Okhotnik</defName>
-  <thing>DMS_Turret_Okhotnik</thing>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>DMS_Turret_Okhotnik</defName>
+    <thing>DMS_Turret_Okhotnik</thing>
+  </KCSG.SymbolDef>
 
-<KCSG.SymbolDef>
-  <defName>DMSAC_Building_DeactivatedMediumMech_East</defName>
-  <thing>DMSAC_Building_DeactivatedMediumMech</thing>
-  <rotation>East</rotation>
-</KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DeactivatedMediumMech_East</defName>
+    <thing>DMSAC_Building_DeactivatedMediumMech</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Alligator_North</defName>
+    <thing>DMSAC_Building_DerelictMech_Alligator</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Alligator_West</defName>
+    <thing>DMSAC_Building_DerelictMech_Alligator</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Alligator_East</defName>
+    <thing>DMSAC_Building_DerelictMech_Alligator</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_ChunkSlag</defName>
+    <thing>DMS_ChunkSlag</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_DerelictMech_Alligator_South</defName>
+    <thing>DMSAC_Building_DerelictMech_Alligator</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
 </Defs>

@@ -89,6 +89,7 @@
     </terrainGrid>
     <needRoofClearance>true</needRoofClearance>
     <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
+    <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>
     </tags>
@@ -302,6 +303,7 @@
     </terrainColorGrid>
     <needRoofClearance>true</needRoofClearance>
     <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
+    <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>
     </tags>

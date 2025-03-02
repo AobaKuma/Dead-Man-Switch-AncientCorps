@@ -6,13 +6,13 @@
     <description>An open graveyard that deposed numerous derelict automatroids by the Corps, they were often used by the local scavengers to be the source of parts to produce new or restored automatroids.</description>
     <siteTexture>UI/Icons/Graveyard_Site</siteTexture>
     <expandingIconTexture>UI/Icons/Graveyard_Icon</expandingIconTexture>
-    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>
     <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
-    <minMapSize>(120, 1, 120)</minMapSize>
+    <minMapSize>(150, 1, 150)</minMapSize>
     <tags>
       <li>DMSAC_Graveyard</li>
     </tags>
@@ -27,11 +27,9 @@
       <structureLayoutDefs>
         <li>DMSAC_Graveyard_A</li>
         <li>DMSAC_Graveyard_B</li>
+        <li>DMSAC_Graveyard_C</li>
       </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
-      <!-- <tiledStructures>
-        <li>DMSAC_GraveyardTileStructure</li>
-      </tiledStructures> -->
       <filthTypes>
         <li>Filth_Dirt</li>
         <li>Filth_Trash</li>

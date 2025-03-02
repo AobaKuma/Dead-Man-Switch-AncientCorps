@@ -7,6 +7,7 @@
     <worldObjectClass>Site</worldObjectClass>
     <texture>World/WorldObjects/JourneyDestination</texture>
     <expandingIcon>true</expandingIcon>
+    <expandingIconDrawSize>1.25</expandingIconDrawSize>
     <expandingIconPriority>70</expandingIconPriority>
     <canBePlayerHome>false</canBePlayerHome>
     <blockExitGridUntilBattleIsWon>true</blockExitGridUntilBattleIsWon>
@@ -14,6 +15,15 @@
     <comps>
       <li Class="WorldObjectCompProperties_Abandon" />
       <li Class="WorldObjectCompProperties_TradeRequest" />
+      <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
+        <possibleGeneratePawn>
+          <DMS_Mech_Molot_Kamin>0.5</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>1</DMS_Mech_Molot>
+          <DMS_Mech_Mushketer_SAR>1</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_BattleWalker>2</DMS_Mech_BattleWalker>
+          <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+        </possibleGeneratePawn>
+      </li>
       <li Class="WorldObjectCompProperties_FormCaravan" />
       <li Class="WorldObjectCompProperties_EnterCooldown" />
     </comps>

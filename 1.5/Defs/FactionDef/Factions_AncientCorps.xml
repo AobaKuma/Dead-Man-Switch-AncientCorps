@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <FactionDef ParentName="FactionBase">
     <defName>DMS_AncientCorps</defName>
@@ -18,8 +18,8 @@
     </colorSpectrum>
     <raidCommonalityFromPointsCurve>
       <points>
-        <li>(300,  0)</li>
-        <li>(700,  1)</li>
+        <li>(300, 0)</li>
+        <li>(700, 1)</li>
         <li>(1400, 1.8)</li>
         <li>(2800, 2.2)</li>
         <li>(5000, 2.6)</li>
@@ -32,11 +32,11 @@
         <li>DMS_Ceramics</li>
       </thingDefs>
     </apparelStuffFilter>
-    <raidLootMaker>AMC_LootMaker</raidLootMaker>
+    <raidLootMaker>DMSAC_MechDropLoot</raidLootMaker>
     <raidLootValueFromPointsCurve>
       <points>
-        <li>(35,     8)</li>
-        <li>(100,   60)</li>
+        <li>(35, 8)</li>
+        <li>(100, 60)</li>
         <li>(1000, 250)</li>
         <li>(2000, 400)</li>
         <li>(6000, 1000)</li>
@@ -59,7 +59,7 @@
       <points>
         <li>(400,200)</li>
         <li>(900,300)</li>
-		<li>(6000,2500)</li>
+        <li>(6000,2500)</li>
         <li>(100000,10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
@@ -69,13 +69,14 @@
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-          <DMS_Mech_Mushketer_SAR>15</DMS_Mech_Mushketer_SAR>
-          <DMS_Mech_Mushketer_AR>10</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_AR>18</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>12</DMS_Mech_Mushketer_SAR>
           <DMS_Mech_Molot>4</DMS_Mech_Molot>
           <DMS_Mech_Molot_Reservoir>3</DMS_Mech_Molot_Reservoir>
           <DMS_Mech_Molot_Mosta>2</DMS_Mech_Molot_Mosta>
           <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
           <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
           <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
           <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
           <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
@@ -135,28 +136,4 @@
     <dropPodActive>ActiveDropPodMechanoid</dropPodActive>
     <dropPodIncoming>DropPodIncomingMechanoid</dropPodIncoming>
   </FactionDef>
-  
-  <ThingSetMakerDef>
-    <defName>AMC_LootMaker</defName>
-    <root Class="ThingSetMaker_MarketValue">
-      <fixedParams>
-        <filter>
-          <thingDefs>
-            <li>Tungsteel</li>
-            <li>ComponentStamped</li>
-            <li>Plasfiber</li>
-            <li>Neurocomputer</li>
-            <li>DMS_CeramicsPlating</li>
-            <li>DMS_Ceramics</li>
-            <li>DMS_CombatRation</li>
-            <li>DMS_NutrientPort</li>
-            <li>DMS_ProstheticLeg</li>
-            <li>DMS_ProstheticArm</li>
-            <li>DMS_ProstheticEye</li>
-          </thingDefs>
-        </filter>
-      </fixedParams>
-    </root>
-  </ThingSetMakerDef>
-
 </Defs>

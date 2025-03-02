@@ -72,7 +72,8 @@
 			<li Class="PatchOperationAddModExtension">
 				<xpath>Defs/PawnKindDef[
 					defName="DMS_Mech_Zabor" or
-					defName="DMS_Mech_Zabor_Shkatulka"
+					defName="DMS_Mech_Zabor_Shkatulka" or
+					defName="DMS_Mech_Zabor_Pirate"
 					]</xpath>
 				<value>
 					<li Class="CombatExtended.LoadoutPropertiesExtension">
@@ -80,6 +81,83 @@
 							<min>7</min>
 							<max>10</max>
 						</primaryMagazineCount>
+					</li>
+				</value>
+			</li>
+			<!-- Zabor(P)-->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Zabor_Pirate"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>28</ArmorRating_Blunt>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Zabor_Pirate"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>20</ArmorRating_Sharp>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Zabor_Pirate"]/statBases/ArmorRating_Heat</xpath>
+				<value>
+					<ArmorRating_Heat>0.4</ArmorRating_Heat>
+				</value>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Zabor_Pirate"]/comps</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DMS_Mech_Zabor_Pirate"]</xpath>
+					<value>
+						<comps />
+					</value>
+				</nomatch>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Zabor_Pirate"]/comps</xpath>
+				<value>
+					<li Class="CombatExtended.CompProperties_ArmorDurability">
+						<Durability>1400</Durability>
+						<Regenerates>true</Regenerates>
+						<RegenInterval>1250</RegenInterval>
+						<RegenValue>5</RegenValue>
+						<Repairable>true</Repairable>
+						<RepairIngredients>
+							<Steel>10</Steel>
+						</RepairIngredients>
+						<RepairTime>300</RepairTime>
+						<RepairValue>200</RepairValue>
+						<CanOverHeal>true</CanOverHeal>
+						<MaxOverHeal>135</MaxOverHeal>
+						<MinArmorPct>0.6</MinArmorPct>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/PawnKindDef[defName="DMS_Mech_Zabor_Pirate"]</xpath>
+				<value>
+					<li Class="CombatExtended.LoadoutPropertiesExtension">
+						<primaryMagazineCount>
+							<min>7</min>
+							<max>10</max>
+						</primaryMagazineCount>
+						<sidearms>
+							<li>
+								<generateChance>0.85</generateChance>
+								<sidearmMoney>
+									<min>500</min>
+									<max>1250</max>
+								</sidearmMoney>
+								<weaponTags>
+									<li>DMS_Kanon</li>
+									<li>DMS_Grenadier</li>
+								</weaponTags>
+								<magazineCount>
+									<min>2</min>
+									<max>5</max>
+								</magazineCount>
+							</li>				
+						</sidearms>
 					</li>
 				</value>
 			</li>
