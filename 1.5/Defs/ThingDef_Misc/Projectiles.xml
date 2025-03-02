@@ -13,7 +13,7 @@
     <projectile>
       <damageDef>Bomb</damageDef>
       <speed>40</speed>
-      <armorPenetrationBase>1.8</armorPenetrationBase>
+      <armorPenetrationBase>1.1</armorPenetrationBase>
       <explosionRadius>1.95</explosionRadius>
       <damageAmountBase>200</damageAmountBase>
       <flyOverhead>true</flyOverhead>

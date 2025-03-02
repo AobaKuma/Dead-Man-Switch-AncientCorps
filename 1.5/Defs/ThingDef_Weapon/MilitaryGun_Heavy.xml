@@ -406,7 +406,7 @@
 			<soundExplode>Explosion_Rocket</soundExplode>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>120</damageAmountBase>
-			<armorPenetrationBase>1.2</armorPenetrationBase>
+			<armorPenetrationBase>1.1</armorPenetrationBase>
 			<stoppingPower>10</stoppingPower>
 			<speed>110</speed>
 			<arcHeightFactor>0.1</arcHeightFactor>
@@ -434,7 +434,7 @@
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>1.1</explosiveRadius>
 				<explosiveDamageType>Bullet</explosiveDamageType>
-				<armorPenetrationBase>0.9</armorPenetrationBase>
+				<armorPenetrationBase>0.4</armorPenetrationBase>
 				<damageAmountBase>100</damageAmountBase>
 				<explodeOnDestroyed>true</explodeOnDestroyed>
 				<explodeOnKilled>true</explodeOnKilled>
