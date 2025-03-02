@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 125mm 3OF26 cannon shell (HE) -->
+  <Ammo_125mmTC_HE.label>125mm毫米加农砲弹(HE)</Ammo_125mmTC_HE.label>
+  
+  <!-- EN: 125mm 3BK18M cannon shell (HEAT) -->
+  <Ammo_Ru125mmTC_HEAT.label>125mm毫米加农砲弹(HEAT)</Ammo_Ru125mmTC_HEAT.label>
+  
+  <!-- EN: 125mm 3BM60 cannon shell (APFSDS) -->
+  <Ammo_Ru125mmTC_Sabot.label>125mm毫米加农砲弹(APFSDS)</Ammo_Ru125mmTC_Sabot.label>
+  
+  <!-- EN: 125mm 3BM59 cannon shell (APFSDS) -->
+  <Ammo_Ru125mmTCADV_Sabot.label>125mm毫米先进加农砲弹(APFSDS)</Ammo_Ru125mmTCADV_Sabot.label>
+  
+  <!-- EN: 125mm 3OF26 cannon shell (HE) -->
+  <Bullet_125mmTC_HE.label>125mm毫米加农砲弹(HE)</Bullet_125mmTC_HE.label>
+  
+  <!-- EN: 125mm 3BK18M cannon shell (HEAT) -->
+  <Bullet_Ru125mmTC_HEAT.label>125mm毫米加农砲弹(HEAT)</Bullet_Ru125mmTC_HEAT.label>
+  
+  <!-- EN: 125mm 3BM60 cannon shell (APFSDS) -->
+  <Bullet_Ru125mmTC_Sabot.label>125mm毫米加农砲弹(APFSDS)</Bullet_Ru125mmTC_Sabot.label>
+  
+  <!-- EN: 125mm 3BM59 cannon shell (APFSDS) -->
+  <Bullet_Ru125mmTCADV_Sabot.label>125mm毫米先进加农砲弹(APFSDS)</Bullet_Ru125mmTCADV_Sabot.label>
+  
+  <!-- EN: Fragments -->
+  <Fragment_APFSDS.label>破片</Fragment_APFSDS.label>
+  
+</LanguageData>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: facility intel -->
+  <DMS_FacilityIntel.label>设施情报</DMS_FacilityIntel.label>
+  <!-- EN: A intel map about the location of a military facility. -->
+  <DMS_FacilityIntel.description>一个用于纪录部队日志的战斗纪录仪，可以透过分析内部数据来得到古代机兵部队设施的情报</DMS_FacilityIntel.description>
+  <!-- EN: Analyzing facility intel -->
+  <DMS_FacilityIntel.comps.CompUsable.useLabel>分析设施情报</DMS_FacilityIntel.comps.CompUsable.useLabel>
+  
+</LanguageData>

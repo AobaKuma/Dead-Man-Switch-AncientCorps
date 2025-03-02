@@ -23,10 +23,9 @@
     <questDescriptionRules>
       <rulesStrings>
         <!-- No asker -->
-        <li>questDescription(askerIsNull==true)->We've intercepted messages about a collection of valuable items worth [itemStashContentsValue] not far from [map_definite]. The collection consists of:\n\n[itemStashContents]\n\nIt seems that [allSitePartsDescriptionsExceptFirst]</li>
-
+        <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
         <!-- Faction leader asker -->
-        <li>questDescription(asker_factionLeader==True)->[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], has informed us of a collection of valuable items worth [itemStashContentsValue] not far from us. The collection consists of:\n\n[itemStashContents]\n\n[asker_label] says that [allSitePartsDescriptionsExceptFirst]</li>
+        <li>questDescription(asker_factionLeader==True)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
@@ -34,8 +33,8 @@
         <li Class="QuestNode_SubScript">
           <def>Util_RandomizePointsChallengeRating</def>
           <parms>
-            <pointsFactorTwoStar>1.5</pointsFactorTwoStar>
-            <pointsFactorThreeStar>2</pointsFactorThreeStar>
+            <pointsFactorTwoStar>3</pointsFactorTwoStar>
+            <pointsFactorThreeStar>4</pointsFactorThreeStar>
           </parms>
         </li>
         <li Class="QuestNode_SubScript">
@@ -68,6 +67,7 @@
 
         <li Class="QuestNode_GetSiteTile">
           <storeAs>siteTile</storeAs>
+          <allowCaravans>true</allowCaravans>
           <preferCloserTiles>false</preferCloserTiles>
         </li>
 

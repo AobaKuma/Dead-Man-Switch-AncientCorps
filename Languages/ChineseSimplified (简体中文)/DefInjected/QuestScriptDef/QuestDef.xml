@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN:
+    <li>questDescription(askerIsNull==true)->We've intercepted messages about a collection of valuable items worth [itemStashContentsValue] not far from [map_definite]. The collection consists of:\n\n[itemStashContents]\n\nIt seems that [allSitePartsDescriptionsExceptFirst]</li>
+    <li>questDescription(asker_factionLeader==True)->[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], has informed us of a collection of valuable items worth [itemStashContentsValue] not far from us. The collection consists of:\n\n[itemStashContents]\n\n[asker_label] says that [allSitePartsDescriptionsExceptFirst]</li>
+  -->
+  <DMSAC_OpportunitySite_Graveyard.questDescriptionRules.rulesStrings>    
+    <li>questDescription(askerIsNull==true)->根据分析的数据，我们在距离不远的地方定位了一处古代机兵部队的军用设施。n\n按照日志[allSitePartsDescriptions]</li>
+    <li>questDescription(asker_factionLeader==True)->根据分析的数据结合此前来自[asker_faction_name]的[asker_faction_leaderTitle][asker_nameDef]所透漏的模糊讯息。，我们确认不远处有一处古代机兵部队的军用设施。n\n[asker_label]曾表示这里可能[allSitePartsDescriptions]</li>
+</DMSAC_OpportunitySite_Graveyard.questDescriptionRules.rulesStrings>
+
+  <DMSAC_OpportunitySite_Graveyard.questNameRules.rulesStrings>
+    <li>questName(priority=1)->[asker_nameDef]的[stash][treasure]</li>
+    <li>questName->[stash][treasure]</li>
+    <li>stash->残骸集散地</li>
+    <li>stash->临时弃置点</li>
+    <li>stash->机兵坟场</li>
+    <li>treasure->拾荒</li>
+    <li>treasure->回收</li>
+    <li>treasure->袭击</li>
+    <li>treasure->潜入</li>
+    <li>treasure->盗窃</li>
+  </DMSAC_OpportunitySite_Graveyard.questNameRules.rulesStrings>
+
+  <DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>任务过期: [resolvedQuestName]</DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>
+  <DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>截获的通讯表示该弃置点内的废弃机兵已被拾荒者回收。任务[resolvedQuestName]已过期。</DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>
+  
+</LanguageData>
