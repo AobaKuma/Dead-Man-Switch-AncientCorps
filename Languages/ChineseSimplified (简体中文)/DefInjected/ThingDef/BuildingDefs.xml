@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: large automatroid derelict -->
+  <DMSAC_Building_DeactivatedLargeMech.label>大型废弃机兵</DMSAC_Building_DeactivatedLargeMech.label>
+  <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed. waiting for people to discover its remaining value. -->
+  <DMSAC_Building_DeactivatedLargeMech.description>一架因严重老化或损坏而应期退役的机兵。其内部仪器已部分拆除用来维修那些仍然在服役的同型机。而剩余的部分则静静等待着人们去发现它的价值。 \n\n这架机体的完整性相对的高，或许只要一个有足够带宽的机械师就能够将其重新启动。</DMSAC_Building_DeactivatedLargeMech.description>
+  
+  <!-- EN: medium automatroid derelict -->
+  <DMSAC_Building_DeactivatedMediumMech.label>中型废弃机兵</DMSAC_Building_DeactivatedMediumMech.label>
+  <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed. waiting for people to discover its remaining value. -->
+  <DMSAC_Building_DeactivatedMediumMech.description>一架因严重老化或损坏而应期退役的机兵。其内部仪器已部分拆除用来维修那些仍然在服役的同型机。而剩余的部分则静静等待着人们去发现它的价值。 \n\n这架机体的完整性相对的高，或许只要一个有足够带宽的机械师就能够将其重新启动。</DMSAC_Building_DeactivatedMediumMech.description>
+  
+  <!-- EN: small automatroid derelict -->
+  <DMSAC_Building_DeactivatedSmallMech.label>小型废弃机兵</DMSAC_Building_DeactivatedSmallMech.label>
+  <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed. waiting for people to discover its remaining value. -->
+  <DMSAC_Building_DeactivatedSmallMech.description>一架因严重老化或损坏而应期退役的机兵。其内部仪器已部分拆除用来维修那些仍然在服役的同型机。而剩余的部分则静静等待着人们去发现它的价值。 \n\n这架机体的完整性相对的高，或许只要一个有足够带宽的机械师就能够将其重新启动。</DMSAC_Building_DeactivatedSmallMech.description>
+  
+  <!-- EN: large automatroid derelict -->
+  <DMSAC_Building_DerelictMech_Alligator.label>大型废弃机兵</DMSAC_Building_DerelictMech_Alligator.label>
+  <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were mostly removed. waiting for people to discover its remaining value. -->
+  <DMSAC_Building_DerelictMech_Alligator.description>一架因严重老化或损坏而应期退役的机兵。其内部仪器已部分拆除用来维修那些仍然在服役的同型机。而剩余的部分则静静等待着人们去发现它的价值。</DMSAC_Building_DerelictMech_Alligator.description>
+  
+  <!-- EN: large automatroid derelict -->
+  <DMSAC_Building_DerelictMech_Large.label>大型废弃机兵</DMSAC_Building_DerelictMech_Large.label>
+  <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were mostly removed. waiting for people to discover its remaining value. -->
+  <DMSAC_Building_DerelictMech_Large.description>一架因严重老化或损坏而应期退役的机兵。其内部仪器已部分拆除用来维修那些仍然在服役的同型机。而剩余的部分则静静等待着人们去发现它的价值。</DMSAC_Building_DerelictMech_Large.description>
+  
+  <!-- EN: medium automatroid derelict -->
+  <DMSAC_Building_DerelictMech_Medium.label>中型废弃机兵</DMSAC_Building_DerelictMech_Medium.label>
+  <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were mostly removed. waiting for people to discover its remaining value. -->
+  <DMSAC_Building_DerelictMech_Medium.description>一架因严重老化或损坏而应期退役的机兵。其内部仪器已部分拆除用来维修那些仍然在服役的同型机。而剩余的部分则静静等待着人们去发现它的价值。</DMSAC_Building_DerelictMech_Medium.description>
+  
+  <!-- EN: small automatroid derelict -->
+  <DMSAC_Building_DerelictMech_Small.label>小型废弃机兵</DMSAC_Building_DerelictMech_Small.label>
+  <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were mostly removed. waiting for people to discover its remaining value. -->
+  <DMSAC_Building_DerelictMech_Small.description>一架因严重老化或损坏而应期退役的机兵。其内部仪器已部分拆除用来维修那些仍然在服役的同型机。而剩余的部分则静静等待着人们去发现它的价值。</DMSAC_Building_DerelictMech_Small.description>
+  
+  <!-- EN: cargo container -->
+  <DMSAC_Cargo.label>军剩品货柜</DMSAC_Cargo.label>
+  <!-- EN: A standard issue container containing military supplies. -->
+  <DMSAC_Cargo.description>一个装有军用物资的标准运输货柜。</DMSAC_Cargo.description>
+  
+</LanguageData>

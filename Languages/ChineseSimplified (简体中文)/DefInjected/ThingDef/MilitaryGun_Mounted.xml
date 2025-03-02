@@ -7,9 +7,13 @@
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.label>电磁反制系统</DMS_Gun_ECMSystem.label>
   <!-- EN: A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it. -->
-  <DMS_Gun_ECMSystem.description>一种挂载式脉冲能量武器，透过定向电磁干扰使指向方位的电子设备失效。它在工作时会使目标产生高温，因此也能透过点燃的方式来瘫痪敌人。</DMS_Gun_ECMSystem.description>
+  <DMS_Gun_ECMSystem.description>一种挂载式脉冲能量武器，透过定向电磁干扰使指向方位的电子设备失效。在工作时会使目标产生高温，因此也能透过点燃的方式来瘫痪敌人。</DMS_Gun_ECMSystem.description>
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>ECM</DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
+  <DMS_Gun_ECMSystem.tools.barrel.label>枪管</DMS_Gun_ECMSystem.tools.barrel.label>
+  <DMS_Gun_ECMSystem.tools.muzzle.label>枪口</DMS_Gun_ECMSystem.tools.muzzle.label>
   
   <!-- EN: Kord HMG -->
   <DMS_Gun_KordTurret.label>科夫罗夫机枪</DMS_Gun_KordTurret.label>
@@ -17,5 +21,17 @@
   <DMS_Gun_KordTurret.description>一种可靠的制式机枪，能够有效的在远距离交火中击穿大部分中小型目标的装甲并造成杀伤。</DMS_Gun_KordTurret.description>
   <!-- EN: Kord HMG -->
   <DMS_Gun_KordTurret.verbs.Verb_Shoot.label>Kord</DMS_Gun_KordTurret.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
+  <DMS_Gun_KordTurret.tools.barrel.label>枪管</DMS_Gun_KordTurret.tools.barrel.label>
+  <DMS_Gun_KordTurret.tools.muzzle.label>枪口</DMS_Gun_KordTurret.tools.muzzle.label>
+  <DMS_Gun_KordTurret.verbs.Verb_ShootCE.label>Kord</DMS_Gun_KordTurret.verbs.Verb_ShootCE.label>
+  
+  <!-- EN: 2B9MS vasilek -->
+  <DMS_Gun_MobileMortar.label>2B9MS矢车菊</DMS_Gun_MobileMortar.label>
+  <!-- EN: An ancient design of rapid fire indirect artillery piece capabler of firing four mortar rounds in one burst. -->
+  <DMS_Gun_MobileMortar.description>一种古老但有效的速射迫击炮设计，能在一轮射击中快速发射4枚迫击炮弹对目标范围进行覆盖打击。\n\n这是一种专门用于装备在中型机体上的轻量化版本。</DMS_Gun_MobileMortar.description>
+  <!-- EN: 2B9MS vasilek -->
+  <DMS_Gun_MobileMortar.verbs.Verb_Shoot.label>2B9MS矢车菊</DMS_Gun_MobileMortar.verbs.Verb_Shoot.label>
   
 </LanguageData>

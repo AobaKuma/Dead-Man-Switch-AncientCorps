@@ -2,10 +2,19 @@
 <LanguageData>
   
   <!-- EN: grenade round -->
-  <Bullet_DMS_AtlantLauncher.label>低速榴弹</Bullet_DMS_AtlantLauncher.label>
+  <Bullet_DMS_AtlantLauncher.label>枪榴弹</Bullet_DMS_AtlantLauncher.label>
   
   <!-- EN: solid slug -->
-  <Bullet_DMS_CombatShotgun.label>金属独头弹</Bullet_DMS_CombatShotgun.label>
+  <Bullet_DMS_CombatShotgun.label>实心独头弹</Bullet_DMS_CombatShotgun.label>
+  
+  <!-- EN: subsonic bullet -->
+  <Bullet_DMS_Subsonic_Pistol.label>亚音速手枪弹</Bullet_DMS_Subsonic_Pistol.label>
+  
+  <!-- EN: subsonic bullet -->
+  <Bullet_DMS_Subsonic_Rifle.label>亚音速步枪弹</Bullet_DMS_Subsonic_Rifle.label>
+  
+  <!-- EN: subsonic bullet -->
+  <Bullet_DMS_Subsonic_Sniper.label>亚音速狙击枪弹</Bullet_DMS_Subsonic_Sniper.label>
   
   <!-- EN: Atlant Grenade Launcher -->
   <DMS_AtlantGrenadeLauncher.label>阿兰特榴弹机枪</DMS_AtlantGrenadeLauncher.label>
@@ -15,6 +24,12 @@
   <DMS_AtlantGrenadeLauncher.tools.stock.label>枪托</DMS_AtlantGrenadeLauncher.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_AtlantGrenadeLauncher.tools.barrel.label>枪管</DMS_AtlantGrenadeLauncher.tools.barrel.label>
+  <!-- EN: Atlant Grenade Launcher -->
+  <DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
+  <DMS_AtlantGrenadeLauncher.tools.muzzle.label>枪口</DMS_AtlantGrenadeLauncher.tools.muzzle.label>
+  <DMS_AtlantGrenadeLauncher.verbs.Verb_ShootMortarCE.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_ShootMortarCE.label>
   
   <!-- EN: Tula combat shotgun -->
   <DMS_KS23K.label>图拉战斗霰弹枪</DMS_KS23K.label>
@@ -24,47 +39,13 @@
   <DMS_KS23K.tools.stock.label>枪托</DMS_KS23K.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_KS23K.tools.barrel.label>枪管</DMS_KS23K.tools.barrel.label>
-
-
-  <!-- EN: Zlobin Revolver -->
-  <DMS_ZlobinRevolver.label>茲洛宾手枪</DMS_ZlobinRevolver.label>
-  <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
-  <DMS_ZlobinRevolver.description>一种冠以设计者之名的狩猎用左轮手枪，使用的大口径亚音速弹药足够一枪撂倒大型动物，相对于同口径武器而言更加稳定的后座力这使得它在边缘世界的探险家与海盗团体中非常受欢迎。</DMS_ZlobinRevolver.description>
-  <!-- EN: stock -->
-  <DMS_ZlobinRevolver.tools.stock.label>枪托</DMS_ZlobinRevolver.tools.stock.label>
-  <!-- EN: barrel -->
-  <DMS_ZlobinRevolver.tools.barrel.label>枪管</DMS_ZlobinRevolver.tools.barrel.label>
-  <!-- UNUSED -->
-  <DMS_ZlobinRevolver.tools.muzzle.label>枪口</DMS_ZlobinRevolver.tools.muzzle.label>
-  <!-- EN: subsonic bullet -->
-  <Bullet_DMS_Subsonic_Pistol.label>亚音速手枪弹</Bullet_DMS_Subsonic_Pistol.label>
-
-  <!-- EN: Zlobin Rifle -->
-  <DMS_ZlobinRifle.label>茲洛宾步枪</DMS_ZlobinRifle.label>
-  <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
-  <DMS_ZlobinRifle.description>一种冠以设计者之名的特种突击步枪，能够在巷战中有效的击穿大部分中小型机械体的防护并造成有效伤害。但其远距离准确性颇为有限，配备有一具下挂转轮式榴弹发射器能够发射小口径榴弹。</DMS_ZlobinRifle.description>
-  <!-- EN: stock -->
-  <DMS_ZlobinRifle.tools.stock.label>枪托</DMS_ZlobinRifle.tools.stock.label>
-  <!-- EN: barrel -->
-  <DMS_ZlobinRifle.tools.barrel.label>枪管</DMS_ZlobinRifle.tools.barrel.label>
-  <!-- UNUSED -->
-  <DMS_ZlobinRifle.tools.muzzle.label>枪口</DMS_ZlobinRifle.tools.muzzle.label>
-  <!-- EN: subsonic bullet -->
-  <Bullet_DMS_Subsonic_Rifle.label>亚音速步枪弹</Bullet_DMS_Subsonic_Rifle.label>
+  <!-- EN: Tula combat shotgun -->
+  <DMS_KS23K.verbs.Verb_Shoot.label>KS23K</DMS_KS23K.verbs.Verb_Shoot.label>
   
-  <!-- EN: Vykhlop Rifle -->
-  <DMS_VykhlopRifle.label>排气者步枪</DMS_VykhlopRifle.label>
-  <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
-  <DMS_VykhlopRifle.description>一种轻量化的大口径微声步枪，能在远距离击穿装备轻型动力装甲或防弹衣的敌对目标。占据了半个枪身长度的特制消音器能确保其射击隐密性。</DMS_VykhlopRifle.description>
-  <!-- EN: stock -->
-  <DMS_VykhlopRifle.tools.stock.label>枪托</DMS_VykhlopRifle.tools.stock.label>
-  <!-- EN: barrel -->
-  <DMS_VykhlopRifle.tools.barrel.label>枪管</DMS_VykhlopRifle.tools.barrel.label>
   <!-- UNUSED -->
-  <DMS_VykhlopRifle.tools.muzzle.label>枪口</DMS_VykhlopRifle.tools.muzzle.label>
-  <!-- EN: subsonic bullet -->
-  <Bullet_DMS_Subsonic_Sniper.label>亚音速狙击枪弹</Bullet_DMS_Subsonic_Sniper.label>
-
+  <DMS_KS23K.tools.muzzle.label>枪口</DMS_KS23K.tools.muzzle.label>
+  <DMS_KS23K.verbs.Verb_ShootCE.label>KS23K</DMS_KS23K.verbs.Verb_ShootCE.label>
+  
   <!-- EN: Mikhail Machinegun -->
   <DMS_PKM.label>米哈伊尔通用机枪</DMS_PKM.label>
   <!-- EN: A lightweight machine gun utilizing a bullpup design, which can be effortlessly operated even by humans, providing prolonged and effective fire suppression against numerous lightly armored targets. -->
@@ -73,6 +54,27 @@
   <DMS_PKM.tools.stock.label>枪托</DMS_PKM.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_PKM.tools.barrel.label>枪管</DMS_PKM.tools.barrel.label>
+  <!-- EN: Mikhail Machinegun -->
+  <DMS_PKM.verbs.Verb_Shoot.label>PKMB</DMS_PKM.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
+  <DMS_PKM.tools.muzzle.label>枪口</DMS_PKM.tools.muzzle.label>
+  <DMS_PKM.verbs.Verb_ShootCE.label>PKMB</DMS_PKM.verbs.Verb_ShootCE.label>
+  
+  <!-- EN: Vykhlop rifle -->
+  <DMS_VykhlopRifle.label>排气者步枪</DMS_VykhlopRifle.label>
+  <!-- EN: A lightweight, large-caliber suppressed rifle capable of penetrating lightly armored and body armored targets at long range. A special silencer that occupies the entire length of the barrel ensures its concealment. -->
+  <DMS_VykhlopRifle.description>一种轻量化的大口径微声步枪，能在远距离击穿装备轻型动力装甲或防弹衣的敌对目标。占据了半个枪身长度的特制消音器能确保其射击隐密性。</DMS_VykhlopRifle.description>
+  <!-- EN: stock -->
+  <DMS_VykhlopRifle.tools.stock.label>枪托</DMS_VykhlopRifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_VykhlopRifle.tools.barrel.label>枪管</DMS_VykhlopRifle.tools.barrel.label>
+  <!-- EN: Vykhlop rifle -->
+  <DMS_VykhlopRifle.verbs.Verb_Shoot.label>VKS12</DMS_VykhlopRifle.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
+  <DMS_VykhlopRifle.tools.muzzle.label>枪口</DMS_VykhlopRifle.tools.muzzle.label>
+  <DMS_VykhlopRifle.verbs.Verb_ShootCE.label>VKS12</DMS_VykhlopRifle.verbs.Verb_ShootCE.label>
   
   <!-- EN: Yekaterin Rifle -->
   <DMS_YekaterinRifle.label>叶卡捷琳步枪</DMS_YekaterinRifle.label>
@@ -82,5 +84,41 @@
   <DMS_YekaterinRifle.tools.stock.label>枪托</DMS_YekaterinRifle.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_YekaterinRifle.tools.barrel.label>枪管</DMS_YekaterinRifle.tools.barrel.label>
+  <!-- EN: Yekaterin Rifle -->
+  <DMS_YekaterinRifle.verbs.Verb_Shoot.label>KSVK</DMS_YekaterinRifle.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
+  <DMS_YekaterinRifle.tools.muzzle.label>枪口</DMS_YekaterinRifle.tools.muzzle.label>
+  <DMS_YekaterinRifle.verbs.Verb_ShootCE.label>KSVK</DMS_YekaterinRifle.verbs.Verb_ShootCE.label>
+  
+  <!-- EN: Zlobin Revolver -->
+  <DMS_ZlobinRevolver.label>茲洛宾手枪</DMS_ZlobinRevolver.label>
+  <!-- EN: A hunting revolver named after its designer, it uses large-caliber subsonic ammunition that is enough to stop large animals with a single shot. Its more stable recoil than other weapons of the same caliber makes it very popular among explorers and pirate groups on the edge of the world. -->
+  <DMS_ZlobinRevolver.description>一种冠以设计者之名的狩猎用左轮手枪，使用的大口径亚音速弹药足够一枪撂倒大型动物，相对于同口径武器而言更加稳定的后座力这使得它在边缘世界的探险家与海盗团体中非常受欢迎。</DMS_ZlobinRevolver.description>
+  <!-- EN: stock -->
+  <DMS_ZlobinRevolver.tools.stock.label>枪托</DMS_ZlobinRevolver.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_ZlobinRevolver.tools.barrel.label>枪管</DMS_ZlobinRevolver.tools.barrel.label>
+  <!-- EN: Zlobin Revolver -->
+  <DMS_ZlobinRevolver.verbs.Verb_Shoot.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
+  <DMS_ZlobinRevolver.tools.muzzle.label>枪口</DMS_ZlobinRevolver.tools.muzzle.label>
+  <DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>
+  
+  <!-- EN: Zlobin rifle -->
+  <DMS_ZlobinRifle.label>茲洛宾突击步枪</DMS_ZlobinRifle.label>
+  <!-- EN: A special assault rifle named after its designer. during urban combat, it is capable of effectively penetrating the armor of most small and medium-sized mechanoids and causing damage.. However, its long-range accuracy is quite limited due to its speciallized subsonic bullet.\n\nIt also equipped with an underbarrel launcher capable of firing small-caliber grenades. -->
+  <DMS_ZlobinRifle.description>一种冠以设计者之名的特种突击步枪，能够在巷战中有效的击穿大部分中小型机械体的防护并造成有效伤害。但其远距离准确性颇为有限，配备有一具下挂转轮式榴弹发射器能够发射小口径榴弹。</DMS_ZlobinRifle.description>
+  <!-- EN: stock -->
+  <DMS_ZlobinRifle.tools.stock.label>枪托</DMS_ZlobinRifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <DMS_ZlobinRifle.tools.barrel.label>枪管</DMS_ZlobinRifle.tools.barrel.label>
+  <!-- EN: Zlobin rifle -->
+  <DMS_ZlobinRifle.verbs.Verb_Shoot.label>ShAK12</DMS_ZlobinRifle.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
+  <DMS_ZlobinRifle.tools.muzzle.label>枪口</DMS_ZlobinRifle.tools.muzzle.label>
+  <DMS_ZlobinRifle.verbs.Verb_ShootCE.label>ShAK12</DMS_ZlobinRifle.verbs.Verb_ShootCE.label>
   
 </LanguageData>

@@ -3,7 +3,7 @@
   <SitePartDef>
     <defName>DMSAC_Graveyard</defName>
     <label>Automatroid graveyard</label>
-    <description>An open graveyard that deposed numerous derelict automatroids by the Corps, they were often used by the local scavengers to be the source of parts to produce new or restored automatroids.</description>
+    <description>An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid platoon garrison.</description>
     <siteTexture>UI/Icons/Graveyard_Site</siteTexture>
     <expandingIconTexture>UI/Icons/Graveyard_Icon</expandingIconTexture>
     <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>

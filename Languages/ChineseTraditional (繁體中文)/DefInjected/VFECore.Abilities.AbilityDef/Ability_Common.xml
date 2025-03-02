@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: active protection system -->
+  <!-- EN: APS -->
   <DMSAC_APS.label>主動防禦系統</DMSAC_APS.label>
-  <!-- EN: 開啟主動防禦系統，在短時間內攔截鄰近的有害威脅。 -->
+  <!-- EN: Activate the Active Defense System to intercept nearby low-speed and explosive projectiles in a short period of time. -->
   <DMSAC_APS.description>激活機體上的隨動式防禦系統，這種高度耗能且反應速度極快的主動防禦系統能在啟動期間內攔截鄰近的低速與爆炸投射物。</DMSAC_APS.description>
   
   <!-- EN: anti tank missile -->
@@ -11,9 +11,14 @@
   <!-- EN: Launch an anti tank missile. -->
   <DMSAC_ATGMLauncher.description>發射安裝在機體上的9M133"短號"導彈，對目標造成高額穿甲傷害。</DMSAC_ATGMLauncher.description>
   
+  <!-- EN: explosive flamer -->
+  <DMSAC_ExplosiveFlamer.label>爆破噴焰</DMSAC_ExplosiveFlamer.label>
+  <!-- EN: Ignite the contained gunpowder, causing it to explode and eject highly flammable fuel, creating a long-range flaming blast. -->
+  <DMSAC_ExplosiveFlamer.description>發射安裝在機體上的TPO-50火焰發射器，其透過點燃內部裝藥來在瞬間噴射出大量易燃的燃料。具有非常長的射程。</DMSAC_ExplosiveFlamer.description>
+  
   <!-- EN: rocket barrage -->
   <DMSAC_Rocket.label>火箭彈幕</DMSAC_Rocket.label>
-  <!-- EN: Launch a rocket barrage in a specific direction. -->
+  <!-- EN: Launch a rocket barrage to a specific direction. -->
   <DMSAC_Rocket.description>發射安裝在機體上的S5火箭莢艙，對目標區域進行徐進彈幕打擊。</DMSAC_Rocket.description>
   
   <!-- EN: shield projector deploy -->

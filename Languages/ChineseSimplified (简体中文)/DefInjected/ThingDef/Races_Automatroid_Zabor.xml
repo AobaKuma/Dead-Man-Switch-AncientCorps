@@ -10,6 +10,17 @@
   <!-- EN: left fist -->
   <DMS_Mech_Zabor.tools.left_fist.label>左机械臂</DMS_Mech_Zabor.tools.left_fist.label>
   <!-- EN: right fist -->
-  <DMS_Mech_Zabor.tools.right_fist.label>左机械臂</DMS_Mech_Zabor.tools.right_fist.label>
+  <DMS_Mech_Zabor.tools.right_fist.label>右机械臂</DMS_Mech_Zabor.tools.right_fist.label>
+  
+  <!-- EN: zabor -->
+  <DMS_Mech_Zabor_Pirate.label>红老爹</DMS_Mech_Zabor_Pirate.label>
+  <!-- EN: 6M29U / BR4G "Zabor", NATO nicknamed "Incisor". It is an armored automatroid with extra frontial armour, designed as a cost-effective and durable mechanical infantry. Thanks to its outstanding systems engineering, modernized variants of this model continue to serve in many Midworld militaries today. It has also become a highly sought-after model for replication and production by local warlords and pirates in the Rimworld. -->
+  <DMS_Mech_Zabor_Pirate.description>6M29U / BR4U "篱笆"是城邦的改进型号，移除了位于胸前的辅助系统转而安装了正面装甲。其设计理念是作为一种廉价且耐用的大型机械步兵，由于其优秀的系统工程设计在如今的许多中寰世界仍有它的现代化改进型号在军队中服役。并在如今的边缘世界也成为了许多地方军阀与海盗争相仿制与生产的机兵型号。</DMS_Mech_Zabor_Pirate.description>
+  <!-- EN: head -->
+  <DMS_Mech_Zabor_Pirate.tools.head.label>机身</DMS_Mech_Zabor_Pirate.tools.head.label>
+  <!-- EN: left fist -->
+  <DMS_Mech_Zabor_Pirate.tools.left_fist.label>左机械臂</DMS_Mech_Zabor_Pirate.tools.left_fist.label>
+  <!-- EN: right fist -->
+  <DMS_Mech_Zabor_Pirate.tools.right_fist.label>右机械臂</DMS_Mech_Zabor_Pirate.tools.right_fist.label>
   
 </LanguageData>

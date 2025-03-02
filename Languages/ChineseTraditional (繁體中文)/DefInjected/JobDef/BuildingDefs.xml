@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: disabling mech -->
+  <DMS_EjectDeactivatedMech.reportString>拆解機械體中</DMS_EjectDeactivatedMech.reportString>
+  
+  <!-- EN: hacking mech -->
+  <DMS_HackDeactivatedMech.reportString>駭入機械體中</DMS_HackDeactivatedMech.reportString>
+  
+</LanguageData>

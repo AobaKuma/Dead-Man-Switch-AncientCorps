@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Automatroid graveyard -->
+  <DMSAC_Graveyard.label>机兵坟场</DMSAC_Graveyard.label>
+  <!-- EN: An open graveyard that deposed numerous derelict automatroids by the Corps, they were often used by the local scavengers to be the source of parts to produce new or restored automatroids. -->
+  <DMSAC_Graveyard.description>一个露天弃置场，堆积了大量主战机兵师退役的机兵，当地的拾荒者与强盗经常潜入并盗窃其中的零件用来维修他们的机兵，因此主战师在此部属了一支机兵排驻防其中。</DMSAC_Graveyard.description>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_Graveyard.approachingReportString>入侵{0}</DMSAC_Graveyard.approachingReportString>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_Graveyard.approachOrderString>入侵{0}</DMSAC_Graveyard.approachOrderString>
+  
+</LanguageData>

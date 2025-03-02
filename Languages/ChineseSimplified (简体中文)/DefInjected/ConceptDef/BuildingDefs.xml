@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: hacking deactivated mech -->
+  <DMSAC_Hacking.label>骇入未启动的机械体</DMSAC_Hacking.label>
+  <!-- EN: You discovered a mech that is not yet activated. If you have a mechanitor colonists capable of hacking it, you may be able to claim it as your own. -->
+  <DMSAC_Hacking.helpText>你的殖民者发现了一个尚未启动的机械体。如果你拥有一名机械师那也许可以将其重启并据为己有。</DMSAC_Hacking.helpText>
+  
+</LanguageData>

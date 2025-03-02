@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Tsvetnik -->
+  <DMS_Mech_Tsvetnik.label>花圃</DMS_Mech_Tsvetnik.label>
+  <!-- EN: A medium-sized automatroid capable of equipping and utilizing light to medium infantry weapons. Designed in an era marked by the rapid increase in armored unmanned systems, it was conceived as an infantry combat platform within armored units. It boasts excellent combat capabilities, a simple structure, and superior weapon-loading capacity. -->
+  <DMS_Mech_Tsvetnik.description>一种为空降部队提供曲射支援的中型机兵，装备有一门迫击砲来提供即时的曲射与直射支援。</DMS_Mech_Tsvetnik.description>
+  <!-- EN: head -->
+  <DMS_Mech_Tsvetnik.tools.head.label>机体</DMS_Mech_Tsvetnik.tools.head.label>
+  
+</LanguageData>

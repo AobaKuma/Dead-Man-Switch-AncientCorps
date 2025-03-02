@@ -27,4 +27,11 @@
   <DMS_Gun_KordTurret.tools.muzzle.label>槍口</DMS_Gun_KordTurret.tools.muzzle.label>
   <DMS_Gun_KordTurret.verbs.Verb_ShootCE.label>Kord</DMS_Gun_KordTurret.verbs.Verb_ShootCE.label>
   
+  <!-- EN: 2B9MS vasilek -->
+  <DMS_Gun_MobileMortar.label>2B9MS矢車菊</DMS_Gun_MobileMortar.label>
+  <!-- EN: An ancient design of rapid fire indirect artillery piece capabler of firing four mortar rounds in one burst. -->
+  <DMS_Gun_MobileMortar.description>一種古老但有效的速射迫擊炮設計，能在一輪射擊中快速發射4枚迫擊炮彈對目標范圍進行覆蓋打擊。\n\n這是一種專門用於裝備在中型機體上的輕量化版本。</DMS_Gun_MobileMortar.description>
+  <!-- EN: 2B9MS vasilek -->
+  <DMS_Gun_MobileMortar.verbs.Verb_Shoot.label>2B9MS矢車菊</DMS_Gun_MobileMortar.verbs.Verb_Shoot.label>
+  
 </LanguageData>
