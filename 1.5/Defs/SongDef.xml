@@ -7,14 +7,15 @@
     <workerType>AncientCorps.KrepostAttackTransition</workerType>
     <overridesInterruptions>true</overridesInterruptions>
     <sequence>DMSAC_KrepostAttack</sequence>
-    <priority>600</priority>
+    <priority>100</priority>
+    <dangerRequirement>RequiresDanger</dangerRequirement>
   </MusicTransitionDef>
   <MusicSequenceDef>
     <defName>DMSAC_KrepostAttack</defName>
-    <canBeInterrupted>false</canBeInterrupted>
+    <canBeInterrupted>true</canBeInterrupted>
     <loop>true</loop>
-    <fadeoutLastSongDuration>4</fadeoutLastSongDuration>
-    <fadeInDuration>4</fadeInDuration> <!-- this starts suddenly, so ease it in -->
+    <fadeoutLastSongDuration>1</fadeoutLastSongDuration>
+    <fadeInDuration>1</fadeInDuration> <!-- this starts suddenly, so ease it in -->
     <overrideFadeout>4</overrideFadeout>
     <song>DMSAC_Boss_A</song>
     <loopFadeout>true</loopFadeout>

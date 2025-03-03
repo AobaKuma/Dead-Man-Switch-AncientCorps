@@ -14,7 +14,7 @@
   <Bullet_DMS_Subsonic_Rifle.label>亞音速步槍彈</Bullet_DMS_Subsonic_Rifle.label>
   
   <!-- EN: subsonic bullet -->
-  <Bullet_DMS_Subsonic_Sniper.label>亞音速狙擊槍彈</Bullet_DMS_Subsonic_Sniper.label>
+  <Bullet_DMS_Subsonic_Sniper.label>亞音速電磁狙擊彈</Bullet_DMS_Subsonic_Sniper.label>
   
   <!-- EN: Atlant Grenade Launcher -->
   <DMS_AtlantGrenadeLauncher.label>阿蘭特榴彈機槍</DMS_AtlantGrenadeLauncher.label>
@@ -64,7 +64,7 @@
   <!-- EN: Vykhlop rifle -->
   <DMS_VykhlopRifle.label>排氣者步槍</DMS_VykhlopRifle.label>
   <!-- EN: A lightweight, large-caliber suppressed rifle capable of penetrating lightly armored and body armored targets at long range. A special silencer that occupies the entire length of the barrel ensures its concealment. -->
-  <DMS_VykhlopRifle.description>一種輕量化的大口徑微聲步槍，能在遠距離擊穿裝備輕型動力裝甲或防彈衣的敵對目標。佔據了半個槍身長度的特製消音器能確保其射擊隱密性。</DMS_VykhlopRifle.description>
+  <DMS_VykhlopRifle.description>一種輕量化的大口徑微聲步槍，能發射具備電磁脈衝能力的特種狙擊彈並在遠距離擊穿裝備輕型動力裝甲或防彈衣的敵對目標。佔據了半個槍身長度的特製消音器能確保其射擊隱密性。</DMS_VykhlopRifle.description>
   <!-- EN: stock -->
   <DMS_VykhlopRifle.tools.stock.label>槍托</DMS_VykhlopRifle.tools.stock.label>
   <!-- EN: barrel -->

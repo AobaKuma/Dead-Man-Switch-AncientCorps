@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>The Dead Man's Switch - AncientCorps</name>
-	<modIconPath IgnoreIfNoMatchingField="True">UI/NaraLogo</modIconPath>
-  	<author>AobaKuma</author>
-    <supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/Faction/AncientIcon</modIconPath>
+	<author>AobaKuma</author>
+	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
 	<packageId>Aoba.DeadManSwitch.AncientCorps</packageId>
-    <modDependencies>
-        <li>
-			<packageId>Aoba.DeadManSwitch.Core</packageId>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3121742525</steamWorkshopUrl>
-			<displayName>Dead Man Switch</displayName>
-		</li>
-        <li>
+	<modDependencies>
+		<li>
 			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
 			<displayName>Vanilla Expanded Framework</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
 		</li>
+		<li>
+			<packageId>Aoba.DeadManSwitch.Core</packageId>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3121742525</steamWorkshopUrl>
+			<displayName>Dead Man Switch</displayName>
+		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>Aoba.DeadManSwitch.Core</li>
-  	</loadAfter>
+	</loadAfter>
 	<description>For some reason, a main combat corps belonging to an former-visited colonial fleet left on this planet for hundreds of years. Now, the underground military facilities built for total war are operating once again, and those ancient automatroid war machines are gathering on the surface again.\n\nHowever, we still don't know who their enemy is...</description>
 </ModMetaData>

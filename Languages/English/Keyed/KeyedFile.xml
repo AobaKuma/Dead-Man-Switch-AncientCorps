@@ -8,6 +8,9 @@
   <AncientCorps.DeactivatedMech_TryHack>Try hacking {0}</AncientCorps.DeactivatedMech_TryHack>
   <AncientCorps.DeactivatedMech_CannotHack>Cannot hacking</AncientCorps.DeactivatedMech_CannotHack>
 
+  <DMSAC_HackFailed>Hacking failed</DMSAC_HackFailed>
+  <DMSAC_HackFailedDesc>Due to {0}'s mistakes, mech was not getting controlled as expected.</DMSAC_HackFailedDesc>
+
   <DMSAC_CorpNeutral>Communication</DMSAC_CorpNeutral>
   <DMSAC_CorpNeutralDesc>"Code 5, registered personal identified."\n"This is {0}, IFF codes synchronized, cease fire."\n\nThis ancient automatroid command system recognized {1}'s identity. Out of respect for {1}, it has temporarily halted hostilities to your colonists.</DMSAC_CorpNeutralDesc>
 

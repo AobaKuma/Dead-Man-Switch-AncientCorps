@@ -6,13 +6,16 @@
   <!-- EN: work type disabled -->
   <AncientCorps.Reason_WorkTypeDisabled>工作類型禁用</AncientCorps.Reason_WorkTypeDisabled>
   <!-- EN: not a mechanitor -->
-  <AncientCorps.Reason_NotMechanitor>必須是機械師</AncientCorps.Reason_NotMechanitor>
+  <AncientCorps.Reason_NotMechanitor>必須是御機使</AncientCorps.Reason_NotMechanitor>
   <!-- EN: need bandwidth:{0} -->
   <AncientCorps.Reason_NoEnoughBandwidth>需要帶寬: {0}</AncientCorps.Reason_NoEnoughBandwidth>
   <!-- EN: Try hacking {0} -->
   <AncientCorps.DeactivatedMech_TryHack>嘗試駭入{0}</AncientCorps.DeactivatedMech_TryHack>
   <!-- EN: Cannot hacking -->
   <AncientCorps.DeactivatedMech_CannotHack>無法駭入</AncientCorps.DeactivatedMech_CannotHack>
+
+  <DMSAC_HackFailed>駭入失敗</DMSAC_HackFailed>
+  <DMSAC_HackFailedDesc>由於操作上的失誤{0}，機械體並沒有如預期的受到控制。</DMSAC_HackFailedDesc>
 
   <!-- EN: Communication -->
   <DMSAC_CorpNeutral>通訊</DMSAC_CorpNeutral>

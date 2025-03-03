@@ -209,7 +209,7 @@
       </li>
     </modExtensions>
   </ThingDef>
-
+  <!-- 00900 -->
   <ThingDef ParentName="BaseDeactivatedMech">
     <defName>DMSAC_Building_DeactivatedMediumMech</defName>
     <label>medium automatroid derelict</label>

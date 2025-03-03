@@ -21,7 +21,7 @@
   <GenStepDef>
     <defName>DMSAC_Graveyard</defName>
     <linkWithSite>DMSAC_Graveyard</linkWithSite>
-    <order>450</order>
+    <order>470</order>
     <genStep Class="KCSG.GenStep_CustomStructureGen">
       <fullClear>true</fullClear>
       <structureLayoutDefs>
@@ -36,64 +36,13 @@
         <li>Filth_RubbleBuilding</li>
       </filthTypes>
       <symbolResolvers>
+        <li>kcsg_storagezone</li>
         <li>kcsg_randomdamage</li>
         <li>kcsg_randomfilth</li>
         <li>kcsg_randomterrainremoval</li>
         <li>kcsg_randomroofremoval</li>
         <li>kcsg_randomitemremoval</li>
-        <li>kcsg_removeperishable</li>
-        <li>kcsg_scatterstuffaround</li>
       </symbolResolvers>
     </genStep>
   </GenStepDef>
-
-  <KCSG.TiledStructureDef>
-    <defName>DMSAC_GraveyardTileStructure</defName>
-    <centerTileDefs>
-      <li>DMSAC_GraveyardTile_Medium</li>
-    </centerTileDefs>
-    <maxDistanceFromCenter>10</maxDistanceFromCenter>
-    <increaseTerrainDef>Concrete</increaseTerrainDef>
-    <allowedTileDefs>
-      <li>
-        <def>DMSAC_GraveyardTile_Medium</def>
-        <count>(2,6)</count>
-      </li>
-      <li>
-        <def>DMSAC_GraveyardTile_Small</def>
-        <count>(2,4)</count>
-      </li>
-    </allowedTileDefs>
-    <tilesNumberRange>1~4</tilesNumberRange>
-    <placeTileAdjacent>false</placeTileAdjacent>
-  </KCSG.TiledStructureDef>
-
-  <KCSG.TileDef>
-    <defName>DMSAC_GraveyardTile_Large</defName>
-    <tileLayouts>
-      <li>DMSAC_Graveyard_Large_A</li>
-      <li>DMSAC_Graveyard_Large_B</li>
-    </tileLayouts>
-  </KCSG.TileDef>
-
-  <KCSG.TileDef>
-    <defName>DMSAC_GraveyardTile_Medium</defName>
-    <tileLayouts>
-      <li>DMSAC_Graveyard_Medium_A</li>
-      <li>DMSAC_Graveyard_Medium_B</li>
-      <li>DMSAC_Graveyard_Medium_C</li>
-      <li>DMSAC_Graveyard_Medium_D</li>
-      <li>DMSAC_Graveyard_Medium_E</li>
-    </tileLayouts>
-  </KCSG.TileDef>
-
-  <KCSG.TileDef>
-    <defName>DMSAC_GraveyardTile_Small</defName>
-    <tileLayouts>
-      <li>DMSAC_Graveyard_Small_A</li>
-      <li>DMSAC_Graveyard_Small_B</li>
-      <li>DMSAC_Graveyard_Small_C</li>
-      <li>DMSAC_Graveyard_Small_D</li>
-    </tileLayouts>
-  </KCSG.TileDef>
 </Defs>

@@ -14,7 +14,7 @@
   <Bullet_DMS_Subsonic_Rifle.label>亚音速步枪弹</Bullet_DMS_Subsonic_Rifle.label>
   
   <!-- EN: subsonic bullet -->
-  <Bullet_DMS_Subsonic_Sniper.label>亚音速狙击枪弹</Bullet_DMS_Subsonic_Sniper.label>
+  <Bullet_DMS_Subsonic_Sniper.label>亚音速电磁狙击弹</Bullet_DMS_Subsonic_Sniper.label>
   
   <!-- EN: Atlant Grenade Launcher -->
   <DMS_AtlantGrenadeLauncher.label>阿兰特榴弹机枪</DMS_AtlantGrenadeLauncher.label>
@@ -64,7 +64,7 @@
   <!-- EN: Vykhlop rifle -->
   <DMS_VykhlopRifle.label>排气者步枪</DMS_VykhlopRifle.label>
   <!-- EN: A lightweight, large-caliber suppressed rifle capable of penetrating lightly armored and body armored targets at long range. A special silencer that occupies the entire length of the barrel ensures its concealment. -->
-  <DMS_VykhlopRifle.description>一种轻量化的大口径微声步枪，能在远距离击穿装备轻型动力装甲或防弹衣的敌对目标。占据了半个枪身长度的特制消音器能确保其射击隐密性。</DMS_VykhlopRifle.description>
+  <DMS_VykhlopRifle.description>一种轻量化的大口径微声步枪，能发射具备电磁脉冲能力的特种狙击弹并在远距离击穿装备轻型动力装甲或防弹衣的敌对目标。占据了半个枪身长度的特制消音器能确保其射击隐密性。</DMS_VykhlopRifle.description>
   <!-- EN: stock -->
   <DMS_VykhlopRifle.tools.stock.label>枪托</DMS_VykhlopRifle.tools.stock.label>
   <!-- EN: barrel -->
@@ -92,7 +92,7 @@
   <DMS_YekaterinRifle.verbs.Verb_ShootCE.label>KSVK</DMS_YekaterinRifle.verbs.Verb_ShootCE.label>
   
   <!-- EN: Zlobin Revolver -->
-  <DMS_ZlobinRevolver.label>茲洛宾手枪</DMS_ZlobinRevolver.label>
+  <DMS_ZlobinRevolver.label>兹洛宾手枪</DMS_ZlobinRevolver.label>
   <!-- EN: A hunting revolver named after its designer, it uses large-caliber subsonic ammunition that is enough to stop large animals with a single shot. Its more stable recoil than other weapons of the same caliber makes it very popular among explorers and pirate groups on the edge of the world. -->
   <DMS_ZlobinRevolver.description>一种冠以设计者之名的狩猎用左轮手枪，使用的大口径亚音速弹药足够一枪撂倒大型动物，相对于同口径武器而言更加稳定的后座力这使得它在边缘世界的探险家与海盗团体中非常受欢迎。</DMS_ZlobinRevolver.description>
   <!-- EN: stock -->
@@ -107,7 +107,7 @@
   <DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>
   
   <!-- EN: Zlobin rifle -->
-  <DMS_ZlobinRifle.label>茲洛宾突击步枪</DMS_ZlobinRifle.label>
+  <DMS_ZlobinRifle.label>兹洛宾突击步枪</DMS_ZlobinRifle.label>
   <!-- EN: A special assault rifle named after its designer. during urban combat, it is capable of effectively penetrating the armor of most small and medium-sized mechanoids and causing damage.. However, its long-range accuracy is quite limited due to its speciallized subsonic bullet.\n\nIt also equipped with an underbarrel launcher capable of firing small-caliber grenades. -->
   <DMS_ZlobinRifle.description>一种冠以设计者之名的特种突击步枪，能够在巷战中有效的击穿大部分中小型机械体的防护并造成有效伤害。但其远距离准确性颇为有限，配备有一具下挂转轮式榴弹发射器能够发射小口径榴弹。</DMS_ZlobinRifle.description>
   <!-- EN: stock -->

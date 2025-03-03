@@ -11,7 +11,7 @@ namespace AncientCorps
     {
         public List<PawnGenOption> possibleGeneratePawn;
         public int averagePawnCount = 5;
-        public int spawnCountSigma = 3;
+        public int spawnCountSigma = 5;
         public WorldObjectCompProperties_PatrolSquad()
         {
             compClass = typeof(WorldObjectComp_PatrolSquad);
@@ -46,14 +46,17 @@ namespace AncientCorps
             timeToSpawn = new IntRange(15000, latestPatrolTick).RandomInRange;
             latestPatrolTick = (int)Mathf.Clamp((timeToSpawn * 0.8f), 60000, 999999);
         }
-
         public override void CompTick()
         {
-            base.CompTick();
             if (!base.ParentHasMap || !parent.IsHashIntervalTick(timeToSpawn))
             {
                 return;
             }
+            SpawnPatrol();
+            timeToSpawn = new IntRange(60000, 180000).RandomInRange;
+        }
+        public void SpawnPatrol()
+        {
             Map map = ((MapParent)parent).Map;
             if (map != null && RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal + 0.2f))
             {
@@ -76,10 +79,8 @@ namespace AncientCorps
                 }
                 if (!greetTriggered) AncientCorpsUltility.SetHostileToPlayer(map, group.RandomElement());
                 greetTriggered = true;
-                timeToSpawn = new IntRange(60000, 180000).RandomInRange;
             }
         }
-
         public override void PostExposeData()
         {
             base.PostExposeData();

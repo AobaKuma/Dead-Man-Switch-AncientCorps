@@ -69,21 +69,11 @@
           <storeAs>siteTile</storeAs>
           <allowCaravans>true</allowCaravans>
           <preferCloserTiles>false</preferCloserTiles>
+          <sitePartDefs>$sitePartDefs</sitePartDefs>
         </li>
-
-        <li Class="QuestNode_ViolentQuestsAllowed">
-          <node Class="QuestNode_Set">
-            <name>siteThreatChance</name>
-            <value>0.85</value>
-          </node>
-          <elseNode Class="QuestNode_Set">
-            <name>siteThreatChance</name>
-            <value>0</value>
-          </elseNode>
-        </li>
+        
         <li Class="VFECore.QuestNode_GetFaction">
 					<allowEnemy>true</allowEnemy>
-					<mustBePermanentEnemy>true</mustBePermanentEnemy>
 					<storeAs>siteFaction</storeAs>
 					<factionDef>DMS_AncientCorps</factionDef>
 				</li>

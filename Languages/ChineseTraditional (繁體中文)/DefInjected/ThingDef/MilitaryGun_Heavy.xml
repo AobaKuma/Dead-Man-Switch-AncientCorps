@@ -44,7 +44,7 @@
   <!-- EN: 2A46M "Justice Gavel" -->
   <DMS_Gun_JusticeGavel.label>正義法槌</DMS_Gun_JusticeGavel.label>
   <!-- EN: A semi-automatic anti-tank cannon carried by ultra-heavy automatrons, known for its simple and reliable structure. It is widely used on various armored platforms to engage heavily armed and armored targets such as tanks and heavy mechs. -->
-  <DMS_Gun_JusticeGavel.description>一種由超重型機兵搭載的半自動反坦克加農炮，結構簡單可靠。被廣泛用於各類裝甲平台來對付如戰車與大型機甲等具有重武裝與重裝甲的大型目標。</DMS_Gun_JusticeGavel.description>
+  <DMS_Gun_JusticeGavel.description>一種由超重型機兵搭載的半自動反戰車加農炮，結構簡單可靠。被廣泛用於各類裝甲平台來對付如戰車與大型機甲等具有重武裝與重裝甲的大型目標。</DMS_Gun_JusticeGavel.description>
   <!-- EN: stock -->
   <DMS_Gun_JusticeGavel.tools.stock.label>砲閘</DMS_Gun_JusticeGavel.tools.stock.label>
   <!-- EN: barrel -->

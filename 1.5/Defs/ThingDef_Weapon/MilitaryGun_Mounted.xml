@@ -27,7 +27,7 @@
 				<warmupTime>5</warmupTime>
 				<forcedMissRadius>8</forcedMissRadius>
 				<minRange>39.9</minRange>
-				<range>89.9</range>
+				<range>99.9</range>
 				<ai_AvoidFriendlyFireRadius>7.9</ai_AvoidFriendlyFireRadius>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 				<burstShotCount>2</burstShotCount>
@@ -65,8 +65,9 @@
 				<requireLineOfSight>true</requireLineOfSight>
 				<warmupTime>1.5</warmupTime>
 				<range>39.9</range>
+				<minRange>8</minRange>
 				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<burstShotCount>10</burstShotCount>
+				<burstShotCount>3</burstShotCount>
 				<soundCast>Shot_Autocannon</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>10</muzzleFlashScale>

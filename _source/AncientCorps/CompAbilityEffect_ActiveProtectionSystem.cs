@@ -32,7 +32,7 @@ namespace AncientCorps
             }
             if (parent.CanCast && !parent.Casting)
             {
-                foreach (IntVec3 cell in GenAdj.OccupiedRect(Pawn).ExpandedBy(Props.Radius))
+                foreach (IntVec3 cell in GenAdj.OccupiedRect(Pawn).ExpandedBy(Props.Radius).ClipInsideMap(Pawn.Map))
                 {
                     List<Thing> list = Pawn.MapHeld.thingGrid.ThingsListAt(cell).Where((v) => v is Projectile).ToList();
                     for (int i = 0; i < list.Count; i++)
@@ -55,7 +55,7 @@ namespace AncientCorps
         {
             if (!isActive) return;
             interceptCount = 0;
-            foreach (IntVec3 cell in GenAdj.OccupiedRect(Pawn).ExpandedBy(Props.Radius))
+            foreach (IntVec3 cell in GenAdj.OccupiedRect(Pawn).ExpandedBy(Props.Radius).ClipInsideMap(Pawn.Map))
             {
                 List<Thing> list = Pawn.MapHeld.thingGrid.ThingsListAt(cell).Where((v) => v is Projectile p && p.Launcher?.Faction != Pawn.Faction).ToList();
                 for (int i = 0; i < list.Count; i++)

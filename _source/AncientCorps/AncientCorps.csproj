@@ -82,6 +82,7 @@
     <Compile Include="Building_DeactivatedMech.cs" />
     <Compile Include="JobDriver_OpenMech.cs" />
     <Compile Include="Building_SurplusContainer.cs" />
+    <Compile Include="KrepostAttackTransition.cs" />
     <Compile Include="ModExtension_Container.cs" />
     <Compile Include="ModExtension_DeactivatedMech.cs" />
     <Compile Include="Patch_GoodwillSituationWorker_MemeCompatibility.cs" />

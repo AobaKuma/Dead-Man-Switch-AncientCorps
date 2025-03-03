@@ -8,6 +8,9 @@
   <AncientCorps.DeactivatedMech_TryHack>尝试骇入{0}</AncientCorps.DeactivatedMech_TryHack>
   <AncientCorps.DeactivatedMech_CannotHack>无法骇入</AncientCorps.DeactivatedMech_CannotHack>
   
+  <DMSAC_HackFailed>骇入失败</DMSAC_HackFailed>
+  <DMSAC_HackFailedDesc>由于操作上的失误{0}，机械体并没有如预期的受到控制。</DMSAC_HackFailedDesc>
+
   <DMSAC_CorpNeutral>通讯</DMSAC_CorpNeutral>
   <DMSAC_CorpNeutralDesc>"代码5，识别到登记对象。"\n"这里是{0}，已同步敌我识别代码，交火中止。"\n\n这支古老的机兵指挥系统认出了{1}的身分。并出于对{1}战斗能力的尊重暂时中止了识别。</DMSAC_CorpNeutralDesc>
   <DMSAC_CorpAlly>通讯</DMSAC_CorpAlly>

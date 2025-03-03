@@ -4,17 +4,6 @@ using Verse;
 
 namespace AncientCorps
 {
-    public class KrepostAttackTransition : MusicTransition
-    {
-        public override bool IsTransitionSatisfied()
-        {
-            if (!base.IsTransitionSatisfied())
-            {
-                return false;
-            }
-            return Find.BossgroupManager.ReservedByBossgroup(bossgroupKidDef: DMS_DefOf.DMS_Mech_Krepost);
-        }
-    }
 
     public class CompUseEffect_PlaySong : CompUseEffect
     {
