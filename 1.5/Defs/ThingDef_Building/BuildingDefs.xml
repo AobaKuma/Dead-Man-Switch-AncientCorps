@@ -12,7 +12,7 @@
     <pathCost>120</pathCost>
     <defaultPlacingRot>2</defaultPlacingRot>
     <passability>PassThroughOnly</passability>
-    <!-- <designationCategory>Misc</designationCategory> -->
+    <designationCategory>Misc</designationCategory>
   </ThingDef>
 
   <!--裝飾性殘骸。 -->
@@ -157,18 +157,6 @@
   </ThingDef>
 
   <!-- 可以駭入的殘骸，以及相關工作。 -->
-  <JobDef>
-    <defName>DMS_HackDeactivatedMech</defName>
-    <reportString>hacking mech</reportString>
-    <driverClass>AncientCorps.JobDriver_OpenMech</driverClass>
-  </JobDef>
-
-  <JobDef>
-    <defName>DMS_EjectDeactivatedMech</defName>
-    <reportString>disabling mech</reportString>
-    <driverClass>AncientCorps.JobDriver_DisableMech</driverClass>
-  </JobDef>
-
   <ThingDef ParentName="DMSAC_BaseBuilding" Name="BaseDeactivatedMech" Abstract="true">
     <thingClass>AncientCorps.Building_DeactivatedMech</thingClass>
     <description>a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed. waiting for people to discover its remaining value.</description>
@@ -186,7 +174,6 @@
     <useHitPoints>false</useHitPoints>
     <surfaceType>Item</surfaceType>
   </ThingDef>
-
   <ThingDef ParentName="BaseDeactivatedMech">
     <defName>DMSAC_Building_DeactivatedLargeMech</defName>
     <label>large automatroid derelict</label>
@@ -204,12 +191,33 @@
           <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
         </possibleGeneratePawn>
         <age>300~400</age>
-        <innerPawnDrawOffset>(0,0.001,0.5)</innerPawnDrawOffset>
-        <weaponscatterRange>0.75</weaponscatterRange>
+        <innerPawnDrawOffset>(0,0.01,0.5)</innerPawnDrawOffset>
+        <spawnChance>0.1</spawnChance>
+        <weaponChance>0.15</weaponChance>
+        <weaponRandomRotRange>-25~25</weaponRandomRotRange>
+        <weaponDraw>
+          <dataEast>
+            <offset>(-0.25,0,-1.0)</offset>
+            <rotationOffset>90</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.25,0,1.1)</offset>
+            <rotationOffset>270</rotationOffset>
+            <layer>-1</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-1.2,0,0)</offset>
+            <rotationOffset>180</rotationOffset>
+            <layer>-1</layer>
+          </dataSouth>
+          <dataNorth>
+            <offset>(1.2,0,0)</offset>
+            <layer>-1</layer>
+          </dataNorth>
+        </weaponDraw>
       </li>
     </modExtensions>
   </ThingDef>
-  <!-- 00900 -->
   <ThingDef ParentName="BaseDeactivatedMech">
     <defName>DMSAC_Building_DeactivatedMediumMech</defName>
     <label>medium automatroid derelict</label>
@@ -230,12 +238,32 @@
           <DMS_Mech_BattleWalker>2</DMS_Mech_BattleWalker>
         </possibleGeneratePawn>
         <age>300~400</age>
-        <innerPawnDrawOffset>(0,0.001,0)</innerPawnDrawOffset>
-        <weaponscatterRange>0.25</weaponscatterRange>
+        <innerPawnDrawOffset>(0,0.01,0)</innerPawnDrawOffset>
+        <spawnChance>0.15</spawnChance>
+        <weaponChance>0.15</weaponChance>
+        <weaponRandomRotRange>-25~25</weaponRandomRotRange>
+        <weaponDraw>
+          <dataEast>
+            <offset>(-0.1,0,-0.5)</offset>
+            <rotationOffset>100</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.15,0,0.75)</offset>
+            <rotationOffset>270</rotationOffset>
+            <layer>-1</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-0.15,0,-0.75)</offset>
+            <rotationOffset>90</rotationOffset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.75,0,0)</offset>
+            <layer>-1</layer>
+          </dataNorth>
+        </weaponDraw>
       </li>
     </modExtensions>
   </ThingDef>
-
   <ThingDef ParentName="BaseDeactivatedMech">
     <defName>DMSAC_Building_DeactivatedSmallMech</defName>
     <label>small automatroid derelict</label>
@@ -253,17 +281,140 @@
           <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
         </possibleGeneratePawn>
         <age>300~400</age>
-        <innerPawnDrawOffset>(0,0.001,0.25)</innerPawnDrawOffset>
-        <weaponscatterRange>0.25</weaponscatterRange>
+        <innerPawnDrawOffset>(0,0.008,0.25)</innerPawnDrawOffset>
+        <spawnChance>0.4</spawnChance>
+        <weaponChance>0.15</weaponChance>
       </li>
     </modExtensions>
   </ThingDef>
 
+  <!-- 停的比較整齊的版本 -->
+
+  <ThingDef ParentName="BaseDeactivatedMech" Name="BaseInactivatedMech" Abstract="true">
+    <description>an automatroid that has been completely shut down for maintenance, with most of its parts intact and ready for use.</description>
+    <graphicData>
+      <texPath>Things/None</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+  </ThingDef>
+  <ThingDef ParentName="BaseInactivatedMech">
+    <defName>DMSAC_Building_InactivatedLargeMech</defName>
+    <label>large inactivated automatroid</label>
+    <size>(3,3)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+          <DMS_Mech_Zabor>3</DMS_Mech_Zabor>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+        </possibleGeneratePawn>
+        <innerPawnDrawOffset>(0,0.001,0.25)</innerPawnDrawOffset>
+        <spawnChance>0.1</spawnChance>
+        <weaponChance>0.5</weaponChance>
+        <weaponRandomRotRange>-15~25</weaponRandomRotRange>
+        <weaponDraw>
+          <dataEast>
+            <offset>(-0.25,0,-1.0)</offset>
+            <rotationOffset>90</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.25,0,1.1)</offset>
+            <rotationOffset>270</rotationOffset>
+            <layer>-1</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-1.2,0,0)</offset>
+            <rotationOffset>180</rotationOffset>
+            <layer>-1</layer>
+          </dataSouth>
+          <dataNorth>
+            <offset>(1.2,0,0)</offset>
+            <layer>-1</layer>
+          </dataNorth>
+        </weaponDraw>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseInactivatedMech">
+    <defName>DMSAC_Building_InactivatedMediumMech</defName>
+    <label>medium inactivated automatroid</label>
+    <size>(2,2)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+          <DMS_Mech_Molot_Reservoir>2</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>2</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+          <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_BattleWalker>2</DMS_Mech_BattleWalker>
+        </possibleGeneratePawn>
+        <age>300~400</age>
+        <innerPawnDrawOffset>(0,0.001,0.175)</innerPawnDrawOffset>
+        <spawnChance>0.3</spawnChance>
+        <weaponChance>0.5</weaponChance>
+        <weaponRandomRotRange>-15~25</weaponRandomRotRange>
+        <innerPawnScatterRange>0</innerPawnScatterRange>
+        <weaponDraw>
+          <dataEast>
+            <offset>(-0.1,0,-0.5)</offset>
+            <rotationOffset>100</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.15,0,0.75)</offset>
+            <rotationOffset>270</rotationOffset>
+            <layer>-1</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-0.15,0,-0.75)</offset>
+            <rotationOffset>90</rotationOffset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.75,0,0)</offset>
+            <layer>-1</layer>
+          </dataNorth>
+        </weaponDraw>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseInactivatedMech">
+    <defName>DMSAC_Building_InactivatedSmallMech</defName>
+    <label>small inactivated automatroid</label>
+    <size>(1,1)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+          <DMS_Mech_Molot_Kamin>0.5</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>3</DMS_Mech_Molot>
+          <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+        </possibleGeneratePawn>
+        <innerPawnDrawOffset>(0,0.005,0.25)</innerPawnDrawOffset>
+        <spawnChance>0.5</spawnChance>
+        <weaponChance>0.5</weaponChance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- 00900 -->
   <ConceptDef ParentName="NotedOpportunisticBase">
     <defName>DMSAC_Hacking</defName>
     <label>hacking deactivated mech</label>
     <helpText>You discovered a mech that is not yet activated. If you have a mechanitor colonists capable of hacking it, you may be able to claim it as your own.</helpText>
   </ConceptDef>
+  <JobDef>
+    <defName>DMS_HackDeactivatedMech</defName>
+    <reportString>hacking mech</reportString>
+    <driverClass>AncientCorps.JobDriver_OpenMech</driverClass>
+  </JobDef>
+  <JobDef>
+    <defName>DMS_EjectDeactivatedMech</defName>
+    <reportString>disabling mech</reportString>
+    <driverClass>AncientCorps.JobDriver_DisableMech</driverClass>
+  </JobDef>
 
   <!-- 可以開啟的戰利品箱子。 -->
   <ThingDef ParentName="DMSAC_BaseBuilding" Name="DMSAC_BaseLootBox" Abstract="True">
@@ -280,9 +431,6 @@
     <statBases>
       <MaxHitPoints>1000</MaxHitPoints>
     </statBases>
-    <killedLeavingsRanges>
-      <ChunkSlagSteel>1~4</ChunkSlagSteel>
-    </killedLeavingsRanges>
     <pathCost>90</pathCost>
     <fillPercent>1</fillPercent>
   </ThingDef>
@@ -305,35 +453,13 @@
       <shaderType>CutoutComplex</shaderType>
       <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
     </graphicData>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <weight>10</weight>
-          <only>(0.33,0.33,0.33)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.65,0.65,0.65)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <only>(0.4,0.3,0.15)</only>
-        </li>
-        <li>
-          <weight>15</weight>
-          <min>(0.3,0.3,0.3)</min>
-          <max>(0.5,0.5,0.5)</max>
-        </li>
-        <li>
-          <weight>6</weight>
-          <min>(0.5,0.5,0.5)</min>
-          <max>(1,1,1)</max>
-        </li>
-      </options>
-    </colorGenerator>
+    <fillPercent>0.6</fillPercent>
+    <killedLeavingsRanges>
+      <ChunkSlagSteel>2~4</ChunkSlagSteel>
+    </killedLeavingsRanges>
     <staticSunShadowHeight>0.7</staticSunShadowHeight>
     <size>(2,4)</size>
-    <defaultPlacingRot>1</defaultPlacingRot>
+    <defaultPlacingRot>0</defaultPlacingRot>
     <comps>
       <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
         <colorDefs>
@@ -357,6 +483,61 @@
         <loots>
           <li>DMSAC_CargoLoots</li>
           <li>DMSAC_LootMaker</li>
+        </loots>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseLootBox">
+    <defName>DMSAC_Crate</defName>
+    <label>military crate</label>
+    <!-- 一個裝有軍用裝備的標準物資運輸箱。這些裝備與箱子似乎都是在最近才生產的，並隨著機兵部隊的任務被送到各處。 -->
+    <description>A standard issue equipmet crate containing military supplies.These equipment and boxes seemed to have been produced recently and sent to various locations along with the missions.</description>
+		<rotatable>true</rotatable>
+    <tickerType>Normal</tickerType>
+    <building>
+      <deconstructible>true</deconstructible>
+      <paintable>true</paintable>
+    </building>
+    <graphicData>
+      <texPath>Things/Building/Crate/crate</texPath>
+      <drawSize>(3,2)</drawSize>
+      <drawOffset>(0,0.01,0)</drawOffset>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Cutout</shaderType>
+    </graphicData>
+    <fillPercent>0.3</fillPercent>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <size>(2,1)</size>
+    <defaultPlacingRot>2</defaultPlacingRot>
+    <comps>
+      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+        <colorChance>0.34</colorChance>
+        <colorDefs>
+          <li>Structure_White</li>
+          <li>Structure_GrayLight</li>
+          <li>Structure_Cream</li>
+          <li>Structure_Limestone</li>
+        </colorDefs>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_Lootbox">
+        <sound>CrateOpeningStarted</sound>
+        <openedGraphicdata>
+          <texPath>Things/Building/Crate/crateOpen</texPath>
+          <drawSize>(3,2)</drawSize>
+          <drawOffset>(0,0.01,0)</drawOffset>
+          <graphicClass>Graphic_Random</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
+        </openedGraphicdata>
+        <loots>
+          <li>DMSAC_CrateLoots</li>
+          <li MayRequire="ceteam.combatextended">DMSAC_CrateLootsCE</li>
         </loots>
       </li>
     </modExtensions>

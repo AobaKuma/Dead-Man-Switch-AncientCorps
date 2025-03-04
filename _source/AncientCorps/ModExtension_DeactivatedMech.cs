@@ -9,10 +9,10 @@ namespace AncientCorps
     {
         public float spawnChance = 0.25f;
         public float weaponChance = 0.25f;
-        public float weaponscatterRange = 1.25f;
+        public float innerPawnScatterRange = 0f;
         public Vector3 innerPawnDrawOffset;
-        public FloatRange innerPawnRandomRotation = new FloatRange(0f, 0f);
-        public GraphicData bottomGraphic;
+        public DrawData weaponDraw = null;
+        public FloatRange weaponRandomRotRange = new FloatRange(-1, 1);
         public List<PawnGenOption> possibleGeneratePawn;
         public IntRange age;
     }

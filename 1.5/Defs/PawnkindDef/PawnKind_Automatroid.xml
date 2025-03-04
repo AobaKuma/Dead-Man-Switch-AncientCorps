@@ -42,12 +42,6 @@
       <li>DMS_RepairMode</li>
     </abilities>
     <aiAvoidCover>false</aiAvoidCover>
-    <skills>
-      <li>
-        <skill>Shooting</skill>
-        <range>6~10</range>
-      </li>
-    </skills>
   </PawnKindDef>
 
   <PawnKindDef ParentName="BaseAutomatroidKind">

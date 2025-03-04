@@ -75,6 +75,7 @@
     <Compile Include="CompBuildingExtraRenderer.cs" />
     <Compile Include="CompAfterBurner.cs" />
     <Compile Include="AncientCorpsUltility.cs" />
+    <Compile Include="CompGuided.cs" />
     <Compile Include="CompRandomColorOnSpawn.cs" />
     <Compile Include="CompUseEffect_PlaySong.cs" />
     <Compile Include="DMS_DefOf.cs" />

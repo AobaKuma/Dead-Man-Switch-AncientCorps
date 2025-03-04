@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingSetMakerDef>
+    <defName>DMSAC_CrateLootsCE</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <categories>
+            <li>Ammo125mmTC</li>
+            <li>Ammo127x108mm</li>
+            <li>Ammo30x165mm</li>
+            <li>Ammo762x54mmR</li>
+            <li>Ammo57mmRocket</li>
+            <li>Ammo23x75mmR</li>
+          </categories>
+        </filter>
+        <maxTotalMass>60</maxTotalMass>
+        <totalMarketValueRange>500~1000</totalMarketValueRange>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+</Defs>

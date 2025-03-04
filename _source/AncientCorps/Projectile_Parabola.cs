@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 using Verse;
 
 namespace AncientCorps
@@ -6,6 +8,7 @@ namespace AncientCorps
     public class Projectile_Parabola : Projectile_Explosive
     {
         protected CompAfterBurner compAfterBurner;
+        protected CompGuided compGuided;
         public override Vector3 ExactPosition
         {
             get
@@ -37,10 +40,22 @@ namespace AncientCorps
         {
             base.Launch(launcher, origin, usedTarget, intendedTarget, hitFlags, preventFriendlyFire, equipment, targetCoverDef);
             compAfterBurner = this.TryGetComp<CompAfterBurner>();
+            compGuided = this.TryGetComp<CompGuided>();
             compAfterBurner?.ThrowLaunchSmoke(origin, (origin - destination).ToAngleFlat() + 90);
+        }
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            if (respawningAfterLoad)
+            {
+                compAfterBurner = this.TryGetComp<CompAfterBurner>();
+                compGuided = this.TryGetComp<CompGuided>();
+            }
         }
         public override void Tick()
         {
+            Log.Message(compGuided != null);
+            if (compGuided != null) Guide();
             base.Tick();
             if (Spawned && compAfterBurner != null)
             {
@@ -50,6 +65,39 @@ namespace AncientCorps
                 Vector3 vector = drawPos + new Vector3(0f, 0f, 1f) * num;
                 compAfterBurner.ThrowExhaust(vector - LookTowards.normalized * 0.1f, Progress);
             }
+        }
+        private Pawn TargetPawn;
+        private void Guide()
+        {
+            if (Find.TickManager.TicksThisFrame - this.TickSpawned == 1)
+            {
+                Pawn firstPawn = base.DestinationCell.GetFirstPawn(base.Map);
+                if (firstPawn == null)
+                {
+                    List<IntVec3> list = new List<IntVec3>();
+                    list = GenRadial.RadialCellsAround(base.DestinationCell, 5, useCenter: true).ToList();
+                    foreach (IntVec3 item in list)
+                    {
+                        if (item.GetFirstPawn(base.Map) != null)
+                        {
+                            firstPawn = item.GetFirstPawn(base.Map);
+                        }
+                    }
+                }
+                if (firstPawn != null)
+                {
+                    TargetPawn = firstPawn;
+                }
+            }
+            if ((this.Progress > 0 && this.Progress < 0.9f) & (TargetPawn != null))
+            {
+                Log.Message($"Guiding {TargetPawn.Name}");
+                destination = TargetPawn.DrawPos;
+            }
+        }
+        public override void ExposeData()
+        {
+            base.ExposeData();
         }
     }
 }

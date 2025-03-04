@@ -3,14 +3,12 @@ using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
 using Verse.Noise;
-using static System.Collections.Specialized.BitVector32;
+using static Verse.HediffCompProperties_RandomizeSeverityPhases;
 
 namespace AncientCorps
 {
@@ -48,9 +46,6 @@ namespace AncientCorps
                 return null;
             }
         }
-
-        private Vector3 weaponDrawOffset = Vector3.zero;
-
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -71,32 +66,30 @@ namespace AncientCorps
                 {
                     Pawn.equipment?.DestroyAllEquipment();
                     Pawn.inventory?.DestroyAll();
-                    weaponDrawOffset = new Vector3(Rand.Gaussian(), 0, Rand.Gaussian()) * Extension.weaponscatterRange;
                 }
             }
             if (!HasPawn) Destroy(DestroyMode.Vanish);
         }
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
         {
-            if (this.HasPawn)
-            {
-                Vector3 drawLoc2 = base.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.BuildingOnTop) + (Extension != null ? Extension.innerPawnDrawOffset : Vector3.zero);
-                this.Pawn.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc2 - (weaponDrawOffset / 2), this.Rotation, false);
-                this.Pawn.equipment.Primary?.DynamicDrawPhaseAt(phase, drawLoc2 + weaponDrawOffset * 2);
-            }
             base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+            if (HasPawn && phase == DrawPhase.Draw)
+            {
+                Vector3 drawLoc2 = drawLoc + (Extension != null ? Extension.innerPawnDrawOffset + Rand.InsideUnitCircleVec3 * Extension.innerPawnScatterRange : Vector3.zero);
+                Pawn.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc2, Rotation, false);
+            }
         }
+        private int Seed => this.ThingID.GetHashCodeSafe();
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
-            if (Extension.bottomGraphic != null)
+            base.DrawAt(drawLoc, flip); 
+            if (Pawn.equipment?.Primary != null && Extension.weaponDraw != null)
             {
-                if (this.bottomGraphic == null)
-                {
-                    this.bottomGraphic = this.Extension.bottomGraphic.GraphicColoredFor(this);
-                }
+                Vector3 drawLoc3 = drawLoc + Extension.weaponDraw.OffsetForRot(Rotation);
+                drawLoc3.y += Altitudes.AltInc * Extension.weaponDraw.LayerForRot(Rotation, 1);
+                float aimAngle = (Extension.weaponDraw.RotationOffsetForRot(Rotation) + Extension.weaponRandomRotRange.RandomInRangeSeeded(Seed)) % 360f;
+                PawnRenderUtility.DrawEquipmentAiming(Pawn.equipment.Primary, drawLoc3, aimAngle);
             }
-            this.bottomGraphic?.Draw(base.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Item), this.Rotation, this, 0f);
-            base.DrawAt(drawLoc, flip);
         }
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
@@ -166,7 +159,6 @@ namespace AncientCorps
             {
                 this
             });
-            Scribe_Values.Look(ref this.weaponDrawOffset, "weaponDrawOffset", Vector3.zero, false);
         }
         public void EjectContents(Pawn usedBy = null, bool killPawn = false)
         {
@@ -231,7 +223,6 @@ namespace AncientCorps
                 lord.AddPawn(Pawn);
             }
         }
-        private Graphic bottomGraphic;
         public ThingOwner innerContainer;
     }
 }

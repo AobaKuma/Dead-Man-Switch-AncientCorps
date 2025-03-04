@@ -14,6 +14,7 @@ namespace AncientCorps
             base.PostSpawnSetup(respawningAfterLoad);
             if(!respawningAfterLoad)
             {
+                if (!Rand.Chance(Props.colorChance)) return;
                 if (parent is Building building)
                 {   if (Props.colorDefs.NullOrEmpty()) return;
                     building.ChangePaint(Props.colorDefs.RandomElement());
@@ -30,6 +31,7 @@ namespace AncientCorps
     {
         public CompProperties_RandomColorOnSpawn() { this.compClass = typeof(CompRandomColorOnSpawn); }
         public ColorGenerator colorGenerator = null;
+        public float colorChance = 0.5f;
         public List<ColorDef> colorDefs = new List<ColorDef>();
     }
 }

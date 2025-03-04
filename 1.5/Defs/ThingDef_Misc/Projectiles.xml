@@ -45,6 +45,7 @@
           </points>
         </SmokeCurve>
       </li>
+      <li><compClass>AncientCorps.CompGuided</compClass></li>
     </comps>
   </ThingDef>
 
@@ -60,7 +61,7 @@
     <thingClass>AncientCorps.Projectile_Parabola</thingClass>
     <projectile>
       <damageDef>Bomb</damageDef>
-      <speed>48</speed>
+      <speed>80</speed>
       <armorPenetrationBase>0.2</armorPenetrationBase>
       <explosionRadius>1.9</explosionRadius>
       <explosionChanceToStartFire>0.8</explosionChanceToStartFire>

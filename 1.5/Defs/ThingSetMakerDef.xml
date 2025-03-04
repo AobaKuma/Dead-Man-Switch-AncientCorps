@@ -50,10 +50,24 @@
       </fixedParams>
     </root>
   </ThingSetMakerDef>
+
   <ThingSetMakerDef>
     <defName>DMSAC_CargoLoots</defName>
     <root Class="ThingSetMaker_RandomOption">
       <options>
+        <li MayRequire="aoba.deadmanswitch.mobiledragoon">
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>DMS_Module</li>
+                </categories>
+              </filter>
+              <countRange>1~2</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
         <li>
           <weight>1</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
@@ -79,7 +93,7 @@
                   <li>ComponentTransmitter</li>
                 </thingDefs>
               </filter>
-              <countRange>1~2</countRange>
+              <countRange>1~1</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -151,6 +165,88 @@
                 </thingDefs>
               </filter>
               <countRange>10~40</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
+  <ThingSetMakerDef>
+    <defName>DMSAC_CrateLoots</defName>
+    <root Class="ThingSetMaker_RandomOption">
+      <options>
+        <li>
+          <weight>0.1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>DMS_MechLink</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>8</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>DMS_MechLink_Nerfed</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>13</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>DMS_Apparel_PowerSkelton</li>
+                  <li>DMS_Apparel_HazardSuit</li>
+                  <li>DMSAC_StugnaATGM</li>
+                  <li>DMS_DeposableRocketLauncher</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~2</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>20</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>DMS_YekaterinRifle</li>
+                  <li>DMS_KS23K</li>
+                  <li>DMS_PKM</li>
+                  <li>DMS_ZlobinRifle</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>30</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>Shell_HighExplosive</li>
+                  <li>Shell_EMP</li>
+                  <li>Shell_Smoke</li>
+                  <li>Shell_Incendiary</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~4</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
