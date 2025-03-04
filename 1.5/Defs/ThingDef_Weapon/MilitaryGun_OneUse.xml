@@ -147,27 +147,4 @@
 			<li Class="CompProperties_Styleable"></li>
 		</comps>
 	</ThingDef>
-
-	<ThingDef ParentName="BaseBullet">
-		<defName>DMS_Bullet_DR</defName>
-		<label>Demolisher Rocket Round</label>
-		<graphicData>
-			<texPath>Things/Ammo/84mmRecoillessRocket/Projectile</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-			<drawSize>1.5</drawSize>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<speed>100</speed>
-			<damageDef>Demolish</damageDef>
-			<soundExplode>MortarBomb_Explode</soundExplode>
-			<damageAmountBase>50</damageAmountBase>
-			<stoppingPower>2</stoppingPower>
-			<explosionRadius>1.5</explosionRadius>
-			<ai_IsIncendiary>false</ai_IsIncendiary>
-			<armorPenetrationBase>0.8</armorPenetrationBase>
-			<shadowSize>0.6</shadowSize>
-		</projectile>
-	</ThingDef>
 </Defs>

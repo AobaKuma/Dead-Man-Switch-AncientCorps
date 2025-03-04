@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Stugna missile launcher -->
+  <DMSAC_StugnaATGM.label>短號導彈發射器</DMSAC_StugnaATGM.label>
+  <!-- EN: A single use anti tank guided missile designed to be fired and discarded. It is effective againist heavy mechs and even tanks. however to lock on target, it requires a long aiming time and clear line of sight. -->
+  <DMSAC_StugnaATGM.description>設計為用後即丟的一次性反坦克導彈發射裝置。對付重型機甲乃至主力戰車都十分有效。然而要鎖定目標需要較長的瞄準時間和清晰的射擊視野。</DMSAC_StugnaATGM.description>
+  <!-- EN: charge -->
+  <DMSAC_StugnaATGM.comps.CompApparelReloadable.chargeNoun>導彈</DMSAC_StugnaATGM.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMSAC_StugnaATGM.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMSAC_StugnaATGM.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: Stugna missile launcher -->
+  <DMSAC_StugnaATGM.verbs.Verb_Shoot.label>短號導彈發射器</DMSAC_StugnaATGM.verbs.Verb_Shoot.label>
+  
+</LanguageData>

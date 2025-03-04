@@ -14,7 +14,9 @@
   <!-- EN: Cannot hacking -->
   <AncientCorps.DeactivatedMech_CannotHack>無法駭入</AncientCorps.DeactivatedMech_CannotHack>
 
+  <!-- EN: Hacking failed -->
   <DMSAC_HackFailed>駭入失敗</DMSAC_HackFailed>
+  <!-- EN: Due to {0}'s mistakes, mech was not getting controlled as expected. -->
   <DMSAC_HackFailedDesc>由於操作上的失誤{0}，機械體並沒有如預期的受到控制。</DMSAC_HackFailedDesc>
 
   <!-- EN: Communication -->
