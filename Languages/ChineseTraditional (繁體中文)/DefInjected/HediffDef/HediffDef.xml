@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: structural damage -->
+  <DMSAC_StructuralDamage.label>結構性損傷</DMSAC_StructuralDamage.label>
+  <!-- EN: A permanent structural damage to a mechanical part. these are caused by fatal damage or long-term service, which will affect the operation and are difficult to repair from the outside. it can only be effectively repaired through thorough factory disassembly. But usually it's more cost-effective to produce a new one. -->
+  <DMSAC_StructuralDamage.description>由於致命損壞或長期使用造成的永久性結構損壞。會影響機體性能並且由於受損位置很難從外部修復，因此只有透過返廠維修才能徹底修復。\n\n不過通常對於主戰師團而言生產一架全新的機體更符合經濟效益。</DMSAC_StructuralDamage.description>
+  <!-- EN: A permanent structural damage on mechanical part. -->
+  <DMSAC_StructuralDamage.labelNoun>一個在機械結構上的老化或嚴重受損。</DMSAC_StructuralDamage.labelNoun>
+  
+</LanguageData>

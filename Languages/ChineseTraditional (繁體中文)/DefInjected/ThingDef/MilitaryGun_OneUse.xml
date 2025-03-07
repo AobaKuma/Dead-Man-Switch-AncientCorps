@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  
   <!-- EN: Stugna missile launcher -->
   <DMSAC_StugnaATGM.label>短號導彈發射器</DMSAC_StugnaATGM.label>
   <!-- EN: A single use anti tank guided missile designed to be fired and discarded. It is effective againist heavy mechs and even tanks. however to lock on target, it requires a long aiming time and clear line of sight. -->

@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+    <!-- EN: field maintenance base -->
+  <DMSAC_Garage.label>前线维修站</DMSAC_Garage.label>
+  <!-- EN: A temporary field repair workshop and logistic center to offer maintenance for frontline operations. maintenance stations like this will constantly change locations as the Corps division moves their task forces.\n\nDepending on their importance, some long-term maintenance stations will have reinforced fortifications and garrisons. -->
+  <DMSAC_Garage.description>一个为机兵提供维修与弹药补给的前线中转站，用来在一线或二线为执行任务的机兵部队进行检修与装备补给。这里会存有大量几乎全新的机兵与一定的弹药装备储备，不过像这样的维修站会随着机兵师在地表上的活动而不断的更换位置。</DMSAC_Garage.description>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_Garage.approachingReportString>入侵{0}</DMSAC_Garage.approachingReportString>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_Garage.approachOrderString>入侵{0}</DMSAC_Garage.approachOrderString>
   
   <!-- EN: Automatroid graveyard -->
   <DMSAC_Graveyard.label>机兵坟场</DMSAC_Graveyard.label>

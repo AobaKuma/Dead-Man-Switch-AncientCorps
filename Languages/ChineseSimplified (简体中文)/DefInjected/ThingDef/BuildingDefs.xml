@@ -51,6 +51,11 @@
   <!-- EN: an automatroid that has been completely shut down for maintenance, with most of its parts intact and ready for use. -->
   <DMSAC_Building_InactivatedSmallMech.description>一架处于维修状态而完全关闭的小型机兵，其零件大部分都完整并状态良好，随时都能够重新启动并投入战斗。</DMSAC_Building_InactivatedSmallMech.description>
   
+  <!-- EN: rolling door -->
+  <DMSAC_Building_RollingDoor.label>卷帘门</DMSAC_Building_RollingDoor.label>
+  <!-- EN: a locked rolling door. -->
+  <DMSAC_Building_RollingDoor.description>一个上锁的卷帘门。</DMSAC_Building_RollingDoor.description>
+  
   <!-- EN: cargo container -->
   <DMSAC_Cargo.label>军剩品货柜</DMSAC_Cargo.label>
   <!-- EN: A standard issue container containing military supplies. -->

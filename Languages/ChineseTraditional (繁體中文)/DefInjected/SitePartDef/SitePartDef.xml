@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: field maintenance base -->
+  <DMSAC_Garage.label>前線維修站</DMSAC_Garage.label>
+  <!-- EN: A temporary field repair workshop and logistic center to offer maintenance for frontline operations. maintenance stations like this will constantly change locations as the Corps division moves their task forces.\n\nDepending on their importance, some long-term maintenance stations will have reinforced fortifications and garrisons. -->
+  <DMSAC_Garage.description>一個為機兵提供維修與彈藥補給的前線中轉站，用來在一線或二線為執行任務的機兵部隊進行檢修與裝備補給。這裡會存有大量幾乎全新的機兵與一定的彈藥裝備儲備，不過像這樣的維修站會隨著機兵師在地表上的活動而不斷的更換位置。</DMSAC_Garage.description>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_Garage.approachingReportString>入侵{0}</DMSAC_Garage.approachingReportString>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_Garage.approachOrderString>入侵{0}</DMSAC_Garage.approachOrderString>
+  
   <!-- EN: Automatroid graveyard -->
-  <DMSAC_Graveyard.label>兵器墳場</DMSAC_Graveyard.label>
+  <DMSAC_Graveyard.label>機兵墳場</DMSAC_Graveyard.label>
   <!-- EN: An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid platoon garrison. -->
   <DMSAC_Graveyard.description>一個露天棄置場，堆積了大量主戰機兵師退役的機兵，當地的拾荒者與強盜經常潛入並盜竊其中的零件用來維修他們的機兵，因此主戰師在此部屬了一支機兵排駐防其中。</DMSAC_Graveyard.description>
   <!-- EN: Investigate {0} -->
   <DMSAC_Graveyard.approachingReportString>入侵{0}</DMSAC_Graveyard.approachingReportString>
   <!-- EN: Investigate {0} -->
   <DMSAC_Graveyard.approachOrderString>入侵{0}</DMSAC_Graveyard.approachOrderString>
-
-  <!-- EN: Automatroid graveyard -->
-  <DMSAC_Graveyard.label>前線維修站</DMSAC_Graveyard.label>
-  <!-- EN: An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid platoon garrison. -->
-  <DMSAC_Graveyard.description>一個為機兵提供維修與補給的中轉站，用來在一線或二線為執行任務的機兵部隊進行檢修與裝備補給。像這樣的維修站會隨著機兵師在地表上的活動而不斷的更換位置。</DMSAC_Graveyard.description>
-  <!-- EN: Investigate {0} -->
-  <DMSAC_Graveyard.approachingReportString>入侵{0}</DMSAC_Graveyard.approachingReportString>
-  <!-- EN: Investigate {0} -->
-  <DMSAC_Graveyard.approachOrderString>入侵{0}</DMSAC_Graveyard.approachOrderString>
+  
 </LanguageData>
