@@ -339,6 +339,7 @@
   <KCSG.SymbolDef>
     <defName>DMS_Mech_Tsvetnik</defName>
     <pawnKindDef>DMS_Mech_Tsvetnik</pawnKindDef>
+    <defendSpawnPoint>true</defendSpawnPoint>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -368,11 +369,13 @@
     <defName>DMS_CombatRation</defName>
     <thing>DMS_CombatRation</thing>
     <replacementDef>MealSurvivalPack</replacementDef>
+    <maxStackSize>5</maxStackSize>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
     <defName>DMS_NuclearBattery</defName>
     <thing>DMS_NuclearBattery</thing>
+    <maxStackSize>1</maxStackSize>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -390,6 +393,7 @@
   <KCSG.SymbolDef>
     <defName>DMS_CeramicsPlating</defName>
     <thing>DMS_CeramicsPlating</thing>
+    <maxStackSize>1</maxStackSize>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -467,6 +471,7 @@
   <KCSG.SymbolDef>
     <defName>DMS_BF_ExtendCargo</defName>
     <thing>DMS_BF_ExtendCargo</thing>
+    <maxStackSize>1</maxStackSize>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>

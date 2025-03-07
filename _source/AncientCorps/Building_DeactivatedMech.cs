@@ -72,7 +72,9 @@ namespace AncientCorps
                 {
                     for (int i = 0; i < num; i++)
                     {
-                        Pawn.health.AddHediff(DMS_DefOf.DMSAC_StructuralDamage, Pawn.RaceProps.body.AllParts.RandomElement());
+                        var part = Pawn.RaceProps.body.AllParts.RandomElement();
+                        if (!Pawn.health.hediffSet.HasMissingPartFor(part)) Pawn.health.AddHediff(DMS_DefOf.DMSAC_StructuralDamage, part);
+                        else i--;
                     }
                 }
             }
