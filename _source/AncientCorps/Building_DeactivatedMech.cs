@@ -67,6 +67,14 @@ namespace AncientCorps
                     Pawn.equipment?.DestroyAllEquipment();
                     Pawn.inventory?.DestroyAll();
                 }
+                var num = Extension.damageCount.RandomInRange;
+                if (num > 0)
+                {
+                    for (int i = 0; i < num; i++)
+                    {
+                        Pawn.health.AddHediff(DMS_DefOf.DMSAC_StructuralDamage, Pawn.RaceProps.body.AllParts.RandomElement());
+                    }
+                }
             }
             if (!HasPawn) Destroy(DestroyMode.Vanish);
         }

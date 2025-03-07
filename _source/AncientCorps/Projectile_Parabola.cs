@@ -46,16 +46,11 @@ namespace AncientCorps
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (respawningAfterLoad)
-            {
-                compAfterBurner = this.TryGetComp<CompAfterBurner>();
-                compGuided = this.TryGetComp<CompGuided>();
-            }
+            compAfterBurner = this.TryGetComp<CompAfterBurner>();
+            compGuided = this.TryGetComp<CompGuided>();
         }
         public override void Tick()
         {
-            Log.Message(compGuided != null);
-            if (compGuided != null) Guide();
             base.Tick();
             if (Spawned && compAfterBurner != null)
             {
@@ -65,6 +60,8 @@ namespace AncientCorps
                 Vector3 vector = drawPos + new Vector3(0f, 0f, 1f) * num;
                 compAfterBurner.ThrowExhaust(vector - LookTowards.normalized * 0.1f, Progress);
             }
+            Log.Message(compGuided != null);
+            if (compGuided != null) Guide();
         }
         private Pawn TargetPawn;
         private void Guide()

@@ -15,8 +15,6 @@ namespace AncientCorps
         Projectile Projectile => parent as Projectile;
         public bool drawOnProjectile = false;
         private int lifeTime = 0;
-        //Vector3 originVector = Vector3.zero;
-        //Vector3 destinationVector = Vector3.zero;
 
         private Vector3 postPosition = Vector3.zero;
         public override void PostPostMake()

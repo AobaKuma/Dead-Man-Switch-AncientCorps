@@ -45,4 +45,43 @@
       </symbolResolvers>
     </genStep>
   </GenStepDef>
+
+  <SitePartDef>
+    <defName>DMSAC_Garage</defName>
+    <label>field maintenance base</label>
+    <description>A temporary field repair workshop and logistic center to offer maintenance for frontline operations. maintenance stations like this will constantly change locations as the Corps division moves their task forces.\n\nDepending on their importance, some long-term maintenance stations will have reinforced fortifications and garrisons.</description>
+    <siteTexture>UI/Icons/Graveyard_Site</siteTexture>
+    <expandingIconTexture>UI/Icons/Graveyard_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(150, 1, 150)</minMapSize>
+    <tags>
+      <li>DMSAC_Garage</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_Garage</defName>
+    <linkWithSite>DMSAC_Garage</linkWithSite>
+    <order>470</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_Garage_A</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <filthTypes>
+        <li>Filth_Trash</li>
+      </filthTypes>
+      <symbolResolvers>
+        <li>kcsg_storagezone</li>
+        <li>kcsg_randomfilth</li>
+        <li>kcsg_randomitemremoval</li>
+      </symbolResolvers>
+    </genStep>
+  </GenStepDef>
 </Defs>

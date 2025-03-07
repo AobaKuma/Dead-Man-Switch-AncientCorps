@@ -10,6 +10,7 @@ namespace AncientCorps
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(DMS_DefOf));
         }
+        public static HediffDef DMSAC_StructuralDamage;
         public static FactionDef DMS_AncientCorps;
         public static JobDef DMS_EjectDeactivatedMech;
         public static JobDef DMS_HackDeactivatedMech;

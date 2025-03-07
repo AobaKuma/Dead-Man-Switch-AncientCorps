@@ -3,7 +3,6 @@
   <WorldObjectDef>
     <defName>DMSAC_Graveyard</defName>
     <label>automatroid graveyard</label>
-    <!-- <description>An open graveyard that deposed numerous derelict automatroids by the Corps, they were often used by the local scavengers to be the source of parts to produce new or restored automatroids.</description> -->
     <worldObjectClass>Site</worldObjectClass>
     <texture>World/WorldObjects/JourneyDestination</texture>
     <expandingIcon>true</expandingIcon>

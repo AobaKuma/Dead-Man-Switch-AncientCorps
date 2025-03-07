@@ -77,11 +77,40 @@
 					<storeAs>siteFaction</storeAs>
 					<factionDef>DMS_AncientCorps</factionDef>
 				</li>
-        <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
-          <storeAs>sitePartDefs</storeAs>
-          <sitePartsTags>
-            <li><tag>DMSAC_Graveyard</tag></li>
-          </sitePartsTags>
+        <!-- 隨機三選一 -->
+        <li Class="QuestNode_RandomNode">
+          <nodes>
+            <!-- 地下設施 -->
+            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+              <storeAs>sitePartDefs</storeAs>
+              <selectionWeight>0.25</selectionWeight>
+              <sitePartsTags>
+                <li>
+                  <tag>DMSAC_Graveyard</tag>
+                </li>
+              </sitePartsTags>
+            </li>
+            <!-- 維修站 -->
+            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+              <storeAs>sitePartDefs</storeAs>
+              <selectionWeight>0.5</selectionWeight>
+              <sitePartsTags>
+                <li>
+                  <tag>DMSAC_Garage</tag>
+                </li>
+              </sitePartsTags>
+            </li>
+            <!-- 廢棄墳場 -->
+            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+              <storeAs>sitePartDefs</storeAs>
+              <selectionWeight>1</selectionWeight>
+              <sitePartsTags>
+                <li>
+                  <tag>DMSAC_Graveyard</tag>
+                </li>
+              </sitePartsTags>
+            </li>
+          </nodes>
         </li>
 
         <li Class="QuestNode_GetDefaultSitePartsParams">
