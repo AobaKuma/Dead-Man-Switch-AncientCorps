@@ -103,6 +103,7 @@
   <KCSG.SymbolDef>
     <defName>DMS_Mech_Mushketer_Static</defName>
     <pawnKindDef>DMS_Mech_Mushketer_AR</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
   </KCSG.SymbolDef>
 
@@ -117,12 +118,14 @@
     <defName>DMS_Mech_Dogge</defName>
     <pawnKindDef>DMS_Mech_Dogge</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
+    <defendSpawnPoint>true</defendSpawnPoint>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
     <defName>DMS_Mech_Zabor</defName>
     <pawnKindDef>DMS_Mech_Zabor</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
+    <defendSpawnPoint>true</defendSpawnPoint>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -265,6 +268,8 @@
   <KCSG.SymbolDef>
     <defName>DMS_Mech_BattleWalker</defName>
     <pawnKindDef>DMS_Mech_BattleWalker</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
+    <defendSpawnPoint>true</defendSpawnPoint>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -339,6 +344,7 @@
   <KCSG.SymbolDef>
     <defName>DMS_Mech_Tsvetnik</defName>
     <pawnKindDef>DMS_Mech_Tsvetnik</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
   </KCSG.SymbolDef>
 
@@ -534,5 +540,136 @@
     <thing>DMSAC_Crate</thing>
     <color>Structure_Limestone</color>
     <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Crate_White_South</defName>
+    <thing>DMSAC_Crate</thing>
+    <color>Structure_White</color>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Cargo_Rustred_West</defName>
+    <thing>DMSAC_Cargo</thing>
+    <color>DMSAC_Structure_Rust</color>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Cargo_Olive_West</defName>
+    <thing>DMSAC_Cargo</thing>
+    <color>DMSAC_Structure_Olive</color>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Mech_Molot_Reservoir</defName>
+    <pawnKindDef>DMS_Mech_Molot_Reservoir</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
+    <defendSpawnPoint>true</defendSpawnPoint>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Polyester</defName>
+    <thing>Polyester</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_RollingDoor_North</defName>
+    <thing>DMSAC_Building_RollingDoor</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Crate_Lightgray_West</defName>
+    <thing>DMSAC_Crate</thing>
+    <color>Structure_GrayLight</color>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Recharger_West</defName>
+    <thing>DMS_Recharger</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Crate_Cream_South</defName>
+    <thing>DMSAC_Crate</thing>
+    <color>Structure_Cream</color>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Crate_White_East</defName>
+    <thing>DMSAC_Crate</thing>
+    <color>Structure_White</color>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Crate_Cream_East</defName>
+    <thing>DMSAC_Crate</thing>
+    <color>Structure_Cream</color>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Crate_Limestone_South</defName>
+    <thing>DMSAC_Crate</thing>
+    <color>Structure_Limestone</color>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Wall_Steel_Olive</defName>
+    <thing>Wall</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Olive</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Shelf_Steel_Olive_North</defName>
+    <thing>Shelf</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Olive</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Shelf_Steel_Olive_East</defName>
+    <thing>Shelf</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Olive</color>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Shelf_Steel_Olive_West</defName>
+    <thing>Shelf</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Olive</color>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Shelf_Steel_Olive_South</defName>
+    <thing>Shelf</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Olive</color>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Wall_Steel_Teal</defName>
+    <thing>Wall</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Door_Steel_Teal</defName>
+    <thing>Door</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Green</color>
   </KCSG.SymbolDef>
 </Defs>

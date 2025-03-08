@@ -72,6 +72,7 @@
       <fullClear>true</fullClear>
       <structureLayoutDefs>
         <li>DMSAC_Garage_A</li>
+        <li>DMSAC_Garage_B</li>
       </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
       <filthTypes>

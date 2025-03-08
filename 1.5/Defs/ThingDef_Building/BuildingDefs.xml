@@ -454,7 +454,6 @@
       <MaxHitPoints>1000</MaxHitPoints>
     </statBases>
     <pathCost>90</pathCost>
-    <fillPercent>1</fillPercent>
   </ThingDef>
   <ThingDef ParentName="DMSAC_BaseLootBox">
     <defName>DMSAC_Cargo</defName>
@@ -474,7 +473,7 @@
       <shaderType>CutoutComplex</shaderType>
       <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
     </graphicData>
-    <fillPercent>0.6</fillPercent>
+    <fillPercent>1</fillPercent>
     <killedLeavingsRanges>
       <ChunkSlagSteel>2~4</ChunkSlagSteel>
     </killedLeavingsRanges>
@@ -488,6 +487,9 @@
           <li>DMSAC_Structure_Green</li>
           <li>DMSAC_Structure_Rust</li>
         </colorDefs>
+      </li>
+      <li Class="AncientCorps.CompProperties_SpawnChance">
+        <spawnChance>0.5</spawnChance>
       </li>
     </comps>
     <modExtensions>
@@ -526,7 +528,7 @@
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>Cutout</shaderType>
     </graphicData>
-    <fillPercent>0.3</fillPercent>
+    <fillPercent>0.4</fillPercent>
     <costList>
       <WoodLog>20</WoodLog>
     </costList>
@@ -542,6 +544,9 @@
           <li>Structure_Cream</li>
           <li>Structure_Limestone</li>
         </colorDefs>
+      </li>
+      <li Class="AncientCorps.CompProperties_SpawnChance">
+        <spawnChance>0.75</spawnChance>
       </li>
     </comps>
     <modExtensions>

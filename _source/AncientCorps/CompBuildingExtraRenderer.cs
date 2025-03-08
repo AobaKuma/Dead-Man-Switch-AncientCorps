@@ -7,7 +7,6 @@ using Verse;
 
 namespace AncientCorps
 {
-
     public class CompBuildingExtraRenderer : ThingComp
     {
         public CompProperties_BuildingExtraRenderer Props => (CompProperties_BuildingExtraRenderer)props;
