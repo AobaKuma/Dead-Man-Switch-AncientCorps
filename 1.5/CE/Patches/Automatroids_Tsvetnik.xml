@@ -10,7 +10,6 @@
 					<CarryWeight>85</CarryWeight>
 					<CarryBulk>150</CarryBulk>
 					<AimingAccuracy>0.95</AimingAccuracy>
-					<ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
 					<MeleeDodgeChance>0.05</MeleeDodgeChance>
 					<MeleeCritChance>0.075</MeleeCritChance>
 					<MeleeParryChance>0.18</MeleeParryChance>
