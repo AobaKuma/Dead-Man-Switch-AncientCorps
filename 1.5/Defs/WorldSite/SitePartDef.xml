@@ -50,8 +50,8 @@
     <defName>DMSAC_Garage</defName>
     <label>field maintenance base</label>
     <description>A temporary field repair workshop and logistic center to offer maintenance for frontline operations. maintenance stations like this will constantly change locations as the Corps division moves their task forces.\n\nDepending on their importance, some long-term maintenance stations will have reinforced fortifications and garrisons.</description>
-    <siteTexture>UI/Icons/Graveyard_Site</siteTexture>
-    <expandingIconTexture>UI/Icons/Graveyard_Icon</expandingIconTexture>
+    <siteTexture>UI/Icons/Station_Site</siteTexture>
+    <expandingIconTexture>UI/Icons/Station_Icon</expandingIconTexture>
     <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>

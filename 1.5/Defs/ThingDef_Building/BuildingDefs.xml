@@ -488,9 +488,6 @@
           <li>DMSAC_Structure_Rust</li>
         </colorDefs>
       </li>
-      <li Class="AncientCorps.CompProperties_SpawnChance">
-        <spawnChance>0.5</spawnChance>
-      </li>
     </comps>
     <modExtensions>
       <li Class="AncientCorps.ModExtension_Lootbox">
@@ -544,9 +541,6 @@
           <li>Structure_Cream</li>
           <li>Structure_Limestone</li>
         </colorDefs>
-      </li>
-      <li Class="AncientCorps.CompProperties_SpawnChance">
-        <spawnChance>0.75</spawnChance>
       </li>
     </comps>
     <modExtensions>

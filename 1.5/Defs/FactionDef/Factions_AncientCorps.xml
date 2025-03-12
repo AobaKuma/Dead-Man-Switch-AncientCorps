@@ -10,9 +10,9 @@
     <factionNameMaker>DMS_AncientFaction</factionNameMaker>
     <factionIconPath>UI/Faction/AncientIcon</factionIconPath>
     <canStageAttacks>true</canStageAttacks>
-    <styles>
-      <li MayRequire="ludeon.rimworld.royalty">DMS_Facility</li>
-    </styles>
+    <!-- <styles MayRequire="ludeon.rimworld.royalty">
+      <li>DMS_Facility</li>
+    </styles> -->
     <colorSpectrum>
       <li>(0.78, 0.79, 0.71)</li>
     </colorSpectrum>
