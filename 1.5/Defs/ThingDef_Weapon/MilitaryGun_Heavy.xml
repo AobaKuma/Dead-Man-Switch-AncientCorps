@@ -372,7 +372,7 @@
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
-				<forcedMissRadius>1</forcedMissRadius>
+				<forcedMissRadius>0.25</forcedMissRadius>
 			</li>
 		</verbs>
 		<modExtensions>
@@ -405,8 +405,8 @@
 			<explosionDelay>1</explosionDelay>
 			<soundExplode>Explosion_Rocket</soundExplode>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>120</damageAmountBase>
-			<armorPenetrationBase>1.1</armorPenetrationBase>
+			<damageAmountBase>150</damageAmountBase>
+			<armorPenetrationBase>1.5</armorPenetrationBase>
 			<stoppingPower>10</stoppingPower>
 			<speed>110</speed>
 			<arcHeightFactor>0.1</arcHeightFactor>
@@ -416,7 +416,7 @@
 			<li Class="DMS.ExplosiveExtension">
 				<damage>Bullet</damage>
 				<damageAmount>40</damageAmount>
-				<armorPen>0.8</armorPen>
+				<armorPen>1.1</armorPen>
 				<preExplosionOffset>4</preExplosionOffset>
 				<range>19</range>
 				<swayAngle>8</swayAngle>
