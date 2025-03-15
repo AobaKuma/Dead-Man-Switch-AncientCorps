@@ -21,7 +21,7 @@
             <li>DMS_ProstheticSpine</li>
           </thingDefs>
         </filter>
-        <totalMarketValueRange>200~1500</totalMarketValueRange>
+        <totalMarketValueRange>200~1000</totalMarketValueRange>
       </fixedParams>
     </root>
   </ThingSetMakerDef>
@@ -177,19 +177,6 @@
     <root Class="ThingSetMaker_RandomOption">
       <options>
         <li>
-          <weight>0.1</weight>
-          <thingSetMaker Class="ThingSetMaker_StackCount">
-            <fixedParams>
-              <filter>
-                <thingDefs>
-                  <li>DMS_MechLink</li>
-                </thingDefs>
-              </filter>
-              <countRange>1~1</countRange>
-            </fixedParams>
-          </thingSetMaker>
-        </li>
-        <li>
           <weight>8</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
@@ -210,8 +197,8 @@
                 <thingDefs>
                   <li>DMS_Apparel_PowerSkelton</li>
                   <li>DMS_Apparel_HazardSuit</li>
-                  <li>DMSAC_StugnaATGM</li>
-                  <li>DMS_DeposableRocketLauncher</li>
+                  <li>DMS_PKM</li>
+                  <li>DMS_YekaterinRifle</li>
                 </thingDefs>
               </filter>
               <countRange>1~2</countRange>
@@ -224,13 +211,25 @@
             <fixedParams>
               <filter>
                 <thingDefs>
-                  <li>DMS_YekaterinRifle</li>
                   <li>DMS_KS23K</li>
-                  <li>DMS_PKM</li>
                   <li>DMS_ZlobinRifle</li>
                 </thingDefs>
               </filter>
               <countRange>1~1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>30</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>DMSAC_StugnaATGM</li>
+                  <li>DMS_DeposableRocketLauncher</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~4</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -247,6 +246,98 @@
                 </thingDefs>
               </filter>
               <countRange>1~4</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
+  <ThingSetMakerDef>
+    <defName>DMSAC_PackLoots</defName>
+    <root Class="ThingSetMaker_RandomOption">
+      <options>
+        <li>
+          <weight>10</weight>
+          <thingSetMaker Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>Manufactured</li>
+                  <li>Medicine</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Manufactured</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Electronics</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Tool</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_SpecialComp</li>
+                </categories>
+              </filter>
+              <countRange></countRange>
+              <totalMarketValueRange>1000~2000</totalMarketValueRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>10</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>MealSurvivalPack</li>
+                </thingDefs>
+              </filter>
+              <countRange>40</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
+<!-- 聯動邊雷的引擎戰利品 -->
+  <ThingSetMakerDef>
+    <defName>DMSAC_RTC_CompLoots</defName>
+    <root Class="ThingSetMaker_RandomOption">
+      <options>
+        <li MayRequire="rimthunder.core">
+          <weight>10</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>EngineTurbine</li>
+                  <li>EngineJet</li>
+                  <li>EngineHeavy</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li MayRequire="rimthunder.core">
+          <weight>10</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>EngineMedium</li>
+                  <li>EngineLight</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~3</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>10</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>ComponentIndustrial</li>
+                  <li>ComponentStamped</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~8</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>

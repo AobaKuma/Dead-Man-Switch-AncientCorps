@@ -55,6 +55,10 @@ namespace AncientCorps
             SpawnPatrol();
             timeToSpawn = new IntRange(60000, 180000).RandomInRange;
         }
+        public override void PostPostRemove()
+        {
+            base.PostPostRemove();
+        }
         public void SpawnPatrol()
         {
             Map map = ((MapParent)parent).Map;

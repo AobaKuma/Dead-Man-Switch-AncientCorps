@@ -88,7 +88,6 @@
       <li>PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile,PavedTile</li>
     </terrainGrid>
     <needRoofClearance>true</needRoofClearance>
-    <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
     <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>
@@ -302,7 +301,6 @@
       <li>.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.</li>
     </terrainColorGrid>
     <needRoofClearance>true</needRoofClearance>
-    <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
     <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>

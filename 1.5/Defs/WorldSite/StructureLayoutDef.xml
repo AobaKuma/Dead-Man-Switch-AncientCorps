@@ -475,7 +475,6 @@
       <li>.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,Structure_Marble,Structure_Marble,Structure_Marble,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.</li>
     </terrainColorGrid>
     <forceGenerateRoof>true</forceGenerateRoof>
-    <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
     <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>
@@ -904,7 +903,6 @@
       <li>.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.</li>
     </terrainColorGrid>
     <forceGenerateRoof>true</forceGenerateRoof>
-    <randomizeWallStuffAtGen>true</randomizeWallStuffAtGen>
     <randomRotation>true</randomRotation>
     <tags>
       <li>DMSAC_Graveyard</li>

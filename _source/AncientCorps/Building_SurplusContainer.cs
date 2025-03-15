@@ -6,10 +6,7 @@ namespace AncientCorps
 {
     public class Building_SurplusContainer : Building_Casket
     {
-        public int tickToOpen = 200;
-
         public bool initialized = false;
-
         public Graphic openedGraphic = null;
 
         public ModExtension_Lootbox Extension => def.GetModExtension<ModExtension_Lootbox>();
@@ -40,6 +37,12 @@ namespace AncientCorps
             base.SpawnSetup(map, respawningAfterLoad);
             contentsKnown = false;
             if (initialized) return;
+            if (Extension == null) return;
+            if (!DebugSettings.godMode && Rand.Chance(Extension.chanceNotSpawn))
+            {
+                initialized = true;
+                return;
+            };
             Extension.loots.RandomElement().root.Generate().ForEach(delegate (Thing t)
             {
                 if (t.Spawned)
@@ -50,21 +53,18 @@ namespace AncientCorps
             });
             initialized = true;
         }
-
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref initialized, "initialized", defaultValue: false);
-            Scribe_Values.Look(ref tickToOpen, "tickToOpen", 0);
         }
     }
     public class ModExtension_Lootbox : DefModExtension
     {
         public SoundDef sound;
-
         public GraphicData openedGraphicdata;
+        public float chanceNotSpawn = 0.25f;
 
         public List<ThingSetMakerDef> loots = new List<ThingSetMakerDef>();
     }
-
 }

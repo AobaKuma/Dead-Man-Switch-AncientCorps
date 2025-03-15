@@ -12,7 +12,7 @@
     <pathCost>120</pathCost>
     <defaultPlacingRot>2</defaultPlacingRot>
     <passability>PassThroughOnly</passability>
-    <!-- <designationCategory>Misc</designationCategory> -->
+    <designationCategory>Misc</designationCategory>
   </ThingDef>
 
   <ThingDef ParentName="DMSAC_BaseBuilding">
@@ -28,6 +28,231 @@
     <size>(4,1)</size>
     <fillPercent>1</fillPercent>
     <staticSunShadowHeight>1</staticSunShadowHeight>
+    <passability>Impassable</passability>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_BarrierGate</defName>
+		<label>Barrier Gate</label>
+		<description>A barrier gate.</description>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/Props/BarrierGate</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+      <shadowData>
+        <offset>(1.5,0,0)</offset>
+        <volume>(0.65,0.5,0.65)</volume>
+      </shadowData>
+		</graphicData>
+		<size>(4,1)</size>
+    <fillPercent>0.2</fillPercent>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_RoadBlock</defName>
+		<label>road barrier</label>
+		<description>A road barrier designed to block vehicle, it also provides cover on gun fighting.</description>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/Props/roadBlock</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2.24,1.12)</drawSize>
+      <drawOffsetEast>(0,0,0.12)</drawOffsetEast>
+      <drawOffsetWest>(0,0,0.12)</drawOffsetWest>
+      <shadowData>
+        <volume>(2,0.75,1)</volume>
+      </shadowData>
+		</graphicData>
+    <statBases>
+      <MaxHitPoints>700</MaxHitPoints>
+      <Mass>50</Mass>
+    </statBases>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+		<size>(2,1)</size>
+    <fillPercent>0.75</fillPercent>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_FuelBarrel</defName>
+		<label>fuel barrel</label>
+		<description>A barrel filled with fuel.</description>
+    <tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Building/Props/barrel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+      <shadowData>
+        <offset>(0,0,-0.2)</offset>
+        <volume>(0.5,0.5,0.5)</volume>
+      </shadowData>
+		</graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.25</Flammability>
+      <Mass>10</Mass>
+    </statBases>
+		<filthLeaving>Filth_Fuel</filthLeaving>
+		<defaultPlacingRot>North</defaultPlacingRot>
+    <rotatable>false</rotatable>
+    <canScatterOver>true</canScatterOver>
+    <building>
+      <alwaysDeconstructible>true</alwaysDeconstructible>
+      <deconstructible>true</deconstructible>
+    </building>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <chanceToStartFire>0.5</chanceToStartFire>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <startWickOnDamageTaken>
+          <li>EMP</li>
+          <li>Flame</li>
+          <li>Bomb</li>
+          <li>BombSuper</li>
+        </startWickOnDamageTaken>
+        <wickTicks>30~60</wickTicks>
+      </li>
+      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+        <colorChance>1</colorChance>
+        <colorDefs>
+          <li>DMSAC_Structure_Olive</li>
+          <li>DMSAC_Structure_Green</li>
+          <li>DMSAC_Structure_Rust</li>
+          <li>Structure_GreenFaded</li>
+          <li>Structure_OrangePastel</li>
+          <li>Structure_Red</li>
+        </colorDefs>
+      </li>
+    </comps>
+    <costList>
+      <Steel>15</Steel>
+      <Chemfuel>75</Chemfuel>
+    </costList>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<size>(1,1)</size>
+    <fillPercent>0.35</fillPercent>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_AirFan</defName>
+		<label>ventilation fan</label>
+		<description>An active ventilation fan,it seems to be used to discharge heat from underground spaces.</description>
+		<defaultPlacingRot>North</defaultPlacingRot>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Props/Fan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+      <drawOffset>(0,1.92,0)</drawOffset>
+      <shadowData>
+        <volume>(2,0.5,2)</volume>
+      </shadowData>
+		</graphicData>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <ChunkSlagSteel>2~4</ChunkSlagSteel>
+    </killedLeavingsRanges>
+    <comps>
+      <li Class="AncientCorps.CompProperties_Effector">
+        <effecter>DMSAC_AirExhaust</effecter>
+        <offset>(0,0,0.5)</offset>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusher</compClass>
+        <heatPerSecond>40</heatPerSecond>
+        <heatPushMaxTemperature>80</heatPushMaxTemperature>
+      </li>
+    </comps>  
+		<size>(2,2)</size>
+    <fillPercent>1</fillPercent>
+    <passability>Impassable</passability>
+  </ThingDef>
+  <EffecterDef>
+    <defName>DMSAC_AirExhaust</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <fleckDef>AirPuff</fleckDef>
+        <ticksBetweenMotes>30</ticksBetweenMotes>
+        <spawnLocType>OnSource</spawnLocType>
+        <scale>0.5~2</scale>
+        <angle>30~70</angle>
+        <speed>0.09~0.15</speed>
+        <airTime>0.1</airTime>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>AirPuff</fleckDef>
+        <spawnLocType>OnSource</spawnLocType>
+        <rotationRate>-10~10</rotationRate>
+        <speed>0.1~0.35</speed>
+        <scale>0.8~2</scale>
+        <chancePerTick>0.08</chancePerTick>
+        <positionOffset>(0,0,0.5)</positionOffset>
+        <airTime>0.1</airTime>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_LiftShaft</defName>
+		<label>lift Shaft</label>
+    <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+    <rotatable>false</rotatable>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/liftShaft</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(12,12)</drawSize>
+      <shadowData>
+        <offset>(1.5,0,0)</offset>
+        <volume>(0.65,0.5,0.65)</volume>
+      </shadowData>
+		</graphicData>
+		<size>(9,9)</size>
+    <ignoreConfigErrors>true</ignoreConfigErrors>
+    <fillPercent>0</fillPercent>
+    <passability>Impassable</passability>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_LiftShaft_Bottom</defName>
+		<label>lift Shaft</label>
+    <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+    <rotatable>false</rotatable>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/liftShaft_Bottom</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(12,12)</drawSize>
+      <shadowData>
+        <offset>(1.5,0,0)</offset>
+        <volume>(0.65,0.5,0.65)</volume>
+      </shadowData>
+		</graphicData>
+		<size>(9,9)</size>
+    <ignoreConfigErrors>true</ignoreConfigErrors>
+    <fillPercent>0</fillPercent>
     <passability>Impassable</passability>
   </ThingDef>
 
@@ -68,7 +293,6 @@
       </options>
     </colorGenerator>
   </ThingDef>
-  
   <ThingDef ParentName="BaseDerelictMech">
     <defName>DMSAC_Building_DerelictMech_Alligator</defName>
     <label>large automatroid derelict</label>
@@ -96,7 +320,6 @@
       <DMS_ChunkSlag>3~7</DMS_ChunkSlag>
     </killedLeavingsRanges>
   </ThingDef>
-
   <ThingDef ParentName="BaseDerelictMech">
     <defName>DMSAC_Building_DerelictMech_Large</defName>
     <label>large automatroid derelict</label>
@@ -123,7 +346,6 @@
       <DMS_ChunkSlag>1~5</DMS_ChunkSlag>
     </killedLeavingsRanges>
   </ThingDef>
-
   <ThingDef ParentName="BaseDerelictMech">
     <defName>DMSAC_Building_DerelictMech_Medium</defName>
     <label>medium automatroid derelict</label>
@@ -148,7 +370,6 @@
       <DMS_ChunkSlag>1~2</DMS_ChunkSlag>
     </killedLeavingsRanges>
   </ThingDef>
-
   <ThingDef ParentName="BaseDerelictMech">
     <defName>DMSAC_Building_DerelictMech_Small</defName>
     <label>small automatroid derelict</label>
@@ -486,6 +707,10 @@
           <li>DMSAC_Structure_Olive</li>
           <li>DMSAC_Structure_Green</li>
           <li>DMSAC_Structure_Rust</li>
+          <li>Structure_GreenFaded</li>
+          <li>Structure_OrangePastel</li>
+          <li>Structure_Red</li>
+          <li>Structure_White</li>
         </colorDefs>
       </li>
     </comps>
@@ -502,6 +727,7 @@
         </openedGraphicdata>
         <loots>
           <li>DMSAC_CargoLoots</li>
+          <li>DMSAC_RTC_CompLoots</li>
           <li>DMSAC_LootMaker</li>
         </loots>
       </li>
@@ -557,6 +783,69 @@
         <loots>
           <li>DMSAC_CrateLoots</li>
           <li MayRequire="ceteam.combatextended">DMSAC_CrateLootsCE</li>
+        </loots>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseLootBox">
+    <defName>DMSAC_PackCrate</defName>
+    <label>military parcel</label>
+    <!-- 一個用於運輸軍用補給品的標準運輸包。裡面的內容物跟包裹本身似乎都是在最近才製造的，並隨著機兵部隊的任務被送到各處。 -->
+    <description>A Standard issue parcel containing supplies for military logistics. These parcel seemed to have been produced recently and sent to various locations.</description>
+		<rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <building>
+      <deconstructible>true</deconstructible>
+      <paintable>true</paintable>
+    </building>
+    <graphicData>
+      <texPath>Things/Building/Crate/packCrate</texPath>
+      <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0.01,0)</drawOffset>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <offset>(0,0,0)</offset>
+        <volume>(2,0.8,2)</volume>
+      </shadowData>
+    </graphicData>
+    <fillPercent>0.5</fillPercent>
+    <costList>
+      <Cloth>40</Cloth>
+    </costList>
+    <size>(2,2)</size>
+    <defaultPlacingRot>0</defaultPlacingRot>
+    <comps>
+      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+        <colorChance>1</colorChance>
+        <colorDefs>
+          <li>DMSAC_Structure_Green</li>
+          <li>DMSAC_Structure_Olive</li>
+          <li>DMSAC_Structure_Rust</li>
+          <li>Structure_GreenFaded</li>
+          <li>Structure_OrangePastel</li>
+          <li>Structure_Red</li>
+          <li>Structure_White</li>
+        </colorDefs>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_Lootbox">
+        <sound>CrateOpeningStarted</sound>
+        <openedGraphicdata>
+          <texPath>Things/Building/Crate/packCrateOpen</texPath>
+          <drawSize>(3,3)</drawSize>
+          <graphicClass>Graphic_Random</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
+          <shadowData>
+            <offset>(0,0,0)</offset>
+            <volume>(2,0.25,2)</volume>
+          </shadowData>
+        </openedGraphicdata>
+        <loots>
+          <li>DMSAC_PackLoots</li>
         </loots>
       </li>
     </modExtensions>
