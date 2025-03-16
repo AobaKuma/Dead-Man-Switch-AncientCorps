@@ -11,6 +11,23 @@
   <DMSAC_HackFailed>骇入失败</DMSAC_HackFailed>
   <DMSAC_HackFailedDesc>由于操作上的失误{0}，机械体并没有如预期的受到控制。</DMSAC_HackFailedDesc>
 
+  <DMSAC_World_Takeover>接管</DMSAC_World_Takeover>
+  <DMSAC_World_Takeover_Desc>根据最新的消息，一支隶属于{0}的部队接管了原属于{1}的{2}，现在该基地被重新命名为{3}</DMSAC_World_Takeover_Desc>
+
+  <DMSAC_Level_Rise>戒备提升</DMSAC_Level_Rise>
+  <DMSAC_Level_Rise_Desc>由于近期发生的事件使得{0}指挥部提高了其部队的警戒等级，现在它们的警戒等级为</DMSAC_Level_Rise_Desc>
+  
+  <DMSAC_Level_Down>戒备降低</DMSAC_Level_Down>
+  <DMSAC_Level_Down_Desc>根据近期观察的活动变化，{0}指挥部下降了其内部的警戒等级，现在它们的警戒等级为</DMSAC_Level_Down_Desc>
+  
+  <DMSAC_Level.0>O级警戒:   {0}仅保留最低限度的设施巡逻编制，并解散了部队中的中型机兵返回驻地进行检修。</DMSAC_Level.0>
+  <DMSAC_Level.1>I级警戒:   {0}在其地面设施之间部属了全天候的巡逻部队使受袭设施的增援间隔缩短，并且在巡逻队伍配置中型机兵。</DMSAC_Level.1>
+  <DMSAC_Level.2>II级警戒:  根据近期当前局势，{0}将部分的大型机兵重启并随时调动，并编制少量的装甲排作为对地面设施增援的特遣部队。</DMSAC_Level.2>
+  <DMSAC_Level.3>III级警戒: 由于近期的紧张局势，超重型机兵已进入战备状态并部属在各区域随时增援，{0}将根据殖民舰队公约的戒备状态条例对邻近的非法军事站点进行武装驱离。</DMSAC_Level.3>
+  <DMSAC_Level.4>IV级警戒:  {0}确认海牙第一公约已不再适用于当前状况，并根据海牙第三公约进行正式的宣战布告。\n\n此外根据海牙第二公约第二条，处于未占领区拿起武器对抗{0}部队的平民将被视为战争法所定义的战斗员。</DMSAC_Level.4>
+  <DMSAC_Level.5>V级警戒:   根据殖民舰队公约的戒备状态条例，{0}确认当前状况已达到必须展开进攻并调动重型装甲旅来执行作战的合规条件。\n\n{0}将在遵守国际人道法和《罗马规约》条例的前提下对已识别的敌对控制区进行占领与接管，并根据比例原则对袭击设施的敌对势力予以对等打击。</DMSAC_Level.5>
+
+
   <DMSAC_CorpNeutral>通讯</DMSAC_CorpNeutral>
   <DMSAC_CorpNeutralDesc>"代码5，识别到登记对象。"\n"这里是{0}，已同步敌我识别代码，交火中止。"\n\n这支古老的机兵指挥系统认出了{1}的身分。并出于对{1}战斗能力的尊重暂时中止了识别。</DMSAC_CorpNeutralDesc>
   <DMSAC_CorpAlly>通讯</DMSAC_CorpAlly>

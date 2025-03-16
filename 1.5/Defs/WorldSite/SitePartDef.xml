@@ -3,13 +3,13 @@
   <SitePartDef>
     <defName>DMSAC_Graveyard</defName>
     <label>Automatroid graveyard</label>
-    <description>An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid platoon garrison.</description>
+    <description>An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid garrison.</description>
     <siteTexture>UI/Icons/Graveyard_Site</siteTexture>
     <expandingIconTexture>UI/Icons/Graveyard_Icon</expandingIconTexture>
     <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>
-    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+    <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
     <minMapSize>(150, 1, 150)</minMapSize>
@@ -46,6 +46,50 @@
     </genStep>
   </GenStepDef>
 
+
+  <SitePartDef>
+    <defName>DMSAC_Checkpoint</defName>
+    <label>military checkpoint</label>
+    <description>A military checkpoint on the path, also serves as a transit station for the mechanized patrol unit, several automatroid garrisons are protecting this position.</description>
+    <siteTexture>UI/Icons/Checkpoint_Site</siteTexture>
+    <expandingIconTexture>UI/Icons/Checkpoint_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(100, 1, 100)</minMapSize>
+    <tags>
+      <li>DMSAC_Checkpoint</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_Checkpoint</defName>
+    <linkWithSite>DMSAC_Checkpoint</linkWithSite>
+    <order>470</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_Checkpoint_A</li>
+        <li>DMSAC_Checkpoint_B</li>
+        <li>DMSAC_Checkpoint_C</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <filthTypes>
+        <li>Filth_Dirt</li>
+        <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
+      </filthTypes>
+      <symbolResolvers>
+        <li>kcsg_storagezone</li>
+        <li>kcsg_randomfilth</li>
+        <li>kcsg_randomitemremoval</li>
+      </symbolResolvers>
+    </genStep>
+  </GenStepDef>
+
   <SitePartDef>
     <defName>DMSAC_Garage</defName>
     <label>field maintenance base</label>
@@ -55,7 +99,7 @@
     <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>
-    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+    <arrivedLetterDef>ThreatBig</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
     <minMapSize>(150, 1, 150)</minMapSize>
@@ -77,6 +121,7 @@
       <preventBridgeable>true</preventBridgeable>
       <filthTypes>
         <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
       </filthTypes>
       <symbolResolvers>
         <li>kcsg_storagezone</li>

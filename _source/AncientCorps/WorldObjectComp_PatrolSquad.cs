@@ -10,8 +10,11 @@ namespace AncientCorps
     public class WorldObjectCompProperties_PatrolSquad : WorldObjectCompProperties
     {
         public List<PawnGenOption> possibleGeneratePawn;
+        public List<PawnGenOption> possibleGeneratePawn_Medium;
+        public List<PawnGenOption> possibleGeneratePawn_Heavy;
         public int averagePawnCount = 5;
         public int spawnCountSigma = 5;
+        public int MBTTime = 30000;
         public WorldObjectCompProperties_PatrolSquad()
         {
             compClass = typeof(WorldObjectComp_PatrolSquad);
@@ -33,18 +36,22 @@ namespace AncientCorps
             }
         }
     }
-
     public class WorldObjectComp_PatrolSquad : WorldObjectComp
     {
         private bool greetTriggered = false;
         public int timeToSpawn = 0;
         protected int latestPatrolTick = 180000;
+
+        protected GameComponent_DefconLevel Defcon => Current.Game.GetComponent<GameComponent_DefconLevel>();
+        private int Level => Defcon.Level;
+
         public WorldObjectCompProperties_PatrolSquad Props => props as WorldObjectCompProperties_PatrolSquad;
         public override void PostMapGenerate()
         {
             base.PostMapGenerate();
-            timeToSpawn = new IntRange(15000, latestPatrolTick).RandomInRange;
-            latestPatrolTick = (int)Mathf.Clamp((timeToSpawn * 0.8f), 60000, 999999);
+            timeToSpawn = (int)(new IntRange(Props.MBTTime, latestPatrolTick).RandomInRange * Defcon.GetCurrentScale);
+            latestPatrolTick = (int)(Mathf.Clamp(timeToSpawn*Rand.Range(0.25f,0.75f), Props.MBTTime, timeToSpawn) * Defcon.GetCurrentScale);
+            Log.Message(timeToSpawn + " " + latestPatrolTick);
         }
         public override void CompTick()
         {
@@ -53,25 +60,33 @@ namespace AncientCorps
                 return;
             }
             SpawnPatrol();
-            timeToSpawn = new IntRange(60000, 180000).RandomInRange;
-        }
-        public override void PostPostRemove()
-        {
-            base.PostPostRemove();
         }
         public void SpawnPatrol()
         {
             Map map = ((MapParent)parent).Map;
             if (map != null && RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal + 0.2f))
             {
-                Faction faction = Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
+                Faction faction = AncientCorpsUltility.Corps;
+                float weightSelector(PawnGenOption PawnGenOption) => PawnGenOption.selectionWeight;
+
                 List<Pawn> group = new List<Pawn>();
-                for (int i = 0; i < Rand.Gaussian(Props.averagePawnCount - 1, Props.spawnCountSigma) + 1; i++)
+                for (int i = 0; i < Rand.Gaussian(Props.averagePawnCount - 1, Props.spawnCountSigma / Defcon.GetCurrentScale) + 1; i++)
                 {
-                    float weightSelector(PawnGenOption PawnGenOption) => PawnGenOption.selectionWeight;
                     Pawn pawn = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(Props.possibleGeneratePawn.RandomElementByWeight(weightSelector).kind, faction), result, map, Rot4.Random);
                     group.Add(pawn);
                 }
+                if (Level > 0 && !Props.possibleGeneratePawn_Medium.NullOrEmpty()) //Defcon I及以上會加派中型機兵
+                    for (int i = 0; i < 3 / Defcon.GetCurrentScale; i++)
+                    {
+                        Pawn pawn = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(Props.possibleGeneratePawn_Medium.RandomElementByWeight(weightSelector).kind, faction), result, map, Rot4.Random);
+                        group.Add(pawn);
+                    }
+                if (Level > 3 && !Props.possibleGeneratePawn_Heavy.NullOrEmpty()) //Defcon III及以上會加派重型機兵
+                    for (int i = 0; i < 1 / Defcon.GetCurrentScale; i++)
+                    {
+                        Pawn pawn = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(Props.possibleGeneratePawn_Heavy.RandomElementByWeight(weightSelector).kind, faction), result, map, Rot4.Random);
+                        group.Add(pawn);
+                    }
                 Lord lord = map.lordManager.lords.Find((Lord l2) => l2.LordJob.GetType() == typeof(LordJob_StageThenAttack));
                 if (lord == null)
                 {
@@ -84,6 +99,8 @@ namespace AncientCorps
                 if (!greetTriggered) AncientCorpsUltility.SetHostileToPlayer(map, group.RandomElement());
                 greetTriggered = true;
             }
+            timeToSpawn = new IntRange(Props.MBTTime, latestPatrolTick).RandomInRange;
+            latestPatrolTick = (int)(Mathf.Clamp(timeToSpawn * Rand.Range(0.25f, 0.75f), Props.MBTTime, timeToSpawn) * Defcon.GetCurrentScale);
         }
         public override void PostExposeData()
         {

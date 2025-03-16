@@ -8,6 +8,20 @@
   <AncientCorps.DeactivatedMech_TryHack>Try hacking {0}</AncientCorps.DeactivatedMech_TryHack>
   <AncientCorps.DeactivatedMech_CannotHack>Cannot hacking</AncientCorps.DeactivatedMech_CannotHack>
 
+  <DMSAC_World_Takeover>takeover</DMSAC_World_Takeover>
+  <DMSAC_World_Takeover_Desc>According to the latest news, a force belonging to {0} took over {2}, which originally belonged to {1}, and now the base has been renamed {3}</DMSAC_World_Takeover_Desc>
+  <DMSAC_Level_Rise>raised Defcon</DMSAC_Level_Rise>
+  <DMSAC_Level_Rise_Desc>Due to recent events, the {0} command has raised the defend condition level of its units. Their Defcon level is now</DMSAC_Level_Rise_Desc>
+  <DMSAC_Level_Down>lowered Defcon</DMSAC_Level_Down>
+  <DMSAC_Level_Down_Desc>Based on recent changes in observed activity, {0} Command has lowered its internal alert level. Their Defcon level is now</DMSAC_Level_Down_Desc>
+  
+  <DMSAC_Level.0>Level O   {0} retained a minimum number of facility patrols and recalled the medium-sized automatroids in the unit and returned them to their bases for maintenance.</DMSAC_Level.0>
+  <DMSAC_Level.1>Level I   {0} deployed all-weather patrols between its ground facilities to shorten the reinforcement intervals for attacked facilities, and deployed medium-sized automatroids in the patrol teams.</DMSAC_Level.1>
+  <DMSAC_Level.2>Level II  Based on the current situation, {0} will restart some of its large automatroids and mobilize them at any time, and organize a small number of armored platoons as a task force to reinforce ground facilities.</DMSAC_Level.2>
+  <DMSAC_Level.3>Level III Due to the recent tense situation, ultra-heavy automatroids have been put on combat readiness and deployed in various areas to provide reinforcement at any time. {0} will carry out armed expulsion of neighboring illegal military sites in accordance with the Colonial Fleet Convention's alert status regulations.</DMSAC_Level.3>
+  <DMSAC_Level.4>Level IV  {0} confirmed that the First Hague Convention was no longer applicable to the current situation and issued a formal declaration of war in accordance with the Third Hague Convention. \n\nIn addition, according to Article 2 of the Second Hague Convention, civilians in non-occupied areas who take up arms against {0} forces will be considered combatants as defined by the laws of war.</DMSAC_Level.4>
+  <DMSAC_Level.5>Level V   In accordance with the Colonial Fleet Convention's alert regulations, {0} has determined that conditions have been met to warrant an offensive and the mobilization of a heavy armored brigade to conduct the operation. \n\n{0} will occupy and take over identified hostile-controlled areas in compliance with international humanitarian law and the Rome Statute, and strike back at hostile forces that attack facilities in a proportional manner.</DMSAC_Level.5>
+
   <DMSAC_HackFailed>Hacking failed</DMSAC_HackFailed>
   <DMSAC_HackFailedDesc>Due to {0}'s mistakes, mech was not getting controlled as expected.</DMSAC_HackFailedDesc>
 

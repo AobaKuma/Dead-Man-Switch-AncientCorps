@@ -100,6 +100,26 @@
                 </li>
               </sitePartsTags>
             </li>
+            <!-- 哨卡(必定生成在道路上) -->
+            <li Class="QuestNode_Sequence">
+              <selectionWeight>0.75</selectionWeight>
+              <nodes>
+                <li Class="AncientCorps.QuestNode_GetSiteTileOnRoad">
+                  <storeAs>siteTile</storeAs>
+                  <allowCaravans>true</allowCaravans>
+                  <preferCloserTiles>false</preferCloserTiles>
+                  <sitePartDefs>$sitePartDefs</sitePartDefs>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                  <storeAs>sitePartDefs</storeAs>
+                  <sitePartsTags>
+                    <li>
+                      <tag>DMSAC_Checkpoint</tag>
+                    </li>
+                  </sitePartsTags>
+                </li>
+              </nodes>
+            </li>
             <!-- 廢棄墳場 -->
             <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
               <storeAs>sitePartDefs</storeAs>
@@ -112,7 +132,6 @@
             </li>
           </nodes>
         </li>
-
         <li Class="QuestNode_GetDefaultSitePartsParams">
           <tile>$siteTile</tile>
           <faction>$siteFaction</faction>
@@ -140,7 +159,7 @@
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestExpired">Intercepted communications indicate the item stash has been claimed by others. The quest [resolvedQuestName] has expired.</text>
+                <text TKey="LetterTextQuestExpired">Intercepted communications indicate the facility has moved position or being claimed by others. The quest [resolvedQuestName] has expired.</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>

@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="CircleConst.cs" />
     <Compile Include="CompAbilityEffect_ActiveProtectionSystem.cs" />
+    <Compile Include="CompanyDef.cs" />
     <Compile Include="CompBuildingExtraRenderer.cs" />
     <Compile Include="CompAfterBurner.cs" />
     <Compile Include="AncientCorpsUltility.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="CompRandomColorOnSpawn.cs" />
     <Compile Include="CompUseEffect_PlaySong.cs" />
     <Compile Include="DMS_DefOf.cs" />
+    <Compile Include="GameComponent_DefconLevel.cs" />
     <Compile Include="HarmonyEntry.cs" />
     <Compile Include="Building_DeactivatedMech.cs" />
     <Compile Include="JobDriver_OpenMech.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Patch_GoodwillSituationWorker_SameIdeo.cs" />
     <Compile Include="Projectile_Parabola.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestNode_GetSiteTile.cs" />
     <Compile Include="WorldObjectComp_PatrolSquad.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
