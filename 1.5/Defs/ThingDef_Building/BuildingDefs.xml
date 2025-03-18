@@ -232,6 +232,13 @@
     <ignoreConfigErrors>true</ignoreConfigErrors>
     <fillPercent>0</fillPercent>
     <passability>Impassable</passability>
+      <modExtensions>
+        <li MayRequire="xmb.ancienturbanruins.mo" Class="AncientMarket_Libraray.ModExtension_Map">
+          <maps>
+            <li>DMSAC_UndergroundBaseA</li>
+          </maps>
+        </li>
+      </modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="DMSAC_BaseBuilding">
@@ -254,6 +261,11 @@
     <ignoreConfigErrors>true</ignoreConfigErrors>
     <fillPercent>0</fillPercent>
     <passability>Impassable</passability>
+		<modExtensions>
+      <li MayRequire="xmb.ancienturbanruins.mo" Class="AncientMarket_Libraray.ModExtension_Portal">
+        <distance>2</distance>
+      </li>
+    </modExtensions> 
   </ThingDef>
 
   <!--裝飾性殘骸。 -->
