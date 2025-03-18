@@ -3,14 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
+using static HarmonyLib.Code;
+using Verse.AI.Group;
+using Verse.AI;
+using UnityEngine.Diagnostics;
+using UnityEngine;
 
 namespace AncientCorps
 {
     [StaticConstructorOnStartup]
-    public class GameComponent_DefconLevel : GameComponent
+    public partial class GameComponent_DefconLevel : GameComponent
     {
         public int Level => level;
-        
+
         private int level = 0;//0級開始，最高五級
         private int historicalLevel = 0;
 
@@ -76,7 +81,7 @@ namespace AncientCorps
         }
         public void LevelDown()
         {
-            if (level == 0){ResetInterval(); return;}
+            if (level == 0) { ResetInterval(); return; }
             level--;
             if (level < 0) level = 0;
             ResetInterval();
@@ -154,7 +159,7 @@ namespace AncientCorps
                     if (Rand.Chance(0.4f)) { AncientCorpsUltility.GenerateQuest(DMS_DefOf.DMSAC_OpportunitySite_Graveyard); return; }
 
                     //對最近的敵對NPC基地實施攻擊，有50%機率佔領。
-                    if (Rand.Chance(0.5f)) { AncientCorpsUltility.TriggerTakeover();return;}
+                    if (Rand.Chance(0.5f)) { AncientCorpsUltility.TriggerTakeover(); return; }
 
                     //對玩家實施連級襲擊
                     break;
@@ -180,6 +185,45 @@ namespace AncientCorps
             Scribe_Values.Look(ref interval, "Interval", 0);
             Scribe_Values.Look(ref historicalLevel, "HistoricalLevel", 0);
             Scribe_Values.Look(ref actionInterval, "ActionInterval", 0);
+        }
+    }
+    public partial class GameComponent_DefconLevel
+    {
+        public void RaidCompany(Map map, CompanyDef company, int raidPoint, int LordID)
+        {
+            Faction faction = Find.FactionManager.FirstFactionOfDef(company.defaultFaction);
+            if (faction == null) { Log.Error("Company faction have null faction, using pirate instead"); faction = Find.FactionManager.OfPirates; }
+
+            //訊息
+            Find.LetterStack.ReceiveLetter("DMSAC_CompanyRaid".Translate(), "DMSAC_CompanyRaid_Desc".Translate(), LetterDefOf.ThreatBig);
+
+            for (int i = 0; i < company.squadCountRange.RandomInRange; i++)
+            {
+                PlatoonMaker maker = company.squads.RandomElement();
+
+                if (map != null && RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal + 0.2f))
+                {
+                    Pawn leaderPawn = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(maker.leaderKindDef.RandomElement(), faction), result, map, WipeMode.VanishOrMoveAside);
+
+                    List<Pawn> group = new List<Pawn>();
+                    foreach (PawnGenOption pawnOption in maker.fixedPawnkind)
+                    {
+                        for (int j = 0; j < (int)pawnOption.selectionWeight; j++)
+                        {
+                            Pawn squadPawnFix = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(pawnOption.kind, faction), result, map, WipeMode.VanishOrMoveAside);
+                            group.Add(squadPawnFix);
+                        }
+                    }
+
+                    for (int k = 0; k < maker.memberCountRange.RandomInRange; k++)
+                    {
+                        Pawn squadPawnFix = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(maker.memberKindDefs.RandomElement(), faction), result, map, WipeMode.VanishOrMoveAside);
+                        group.Add(squadPawnFix);
+                    }
+                    LordMaker.MakeNewLord(faction, new LordJob_StageThenAttack(faction, result, Rand.Range(1, 10)), map, new List<Pawn>() { leaderPawn });
+                    //TODO，分配Pawn
+                }
+            }
         }
     }
 }

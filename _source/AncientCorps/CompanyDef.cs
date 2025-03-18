@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace AncientCorps
@@ -9,7 +10,7 @@ namespace AncientCorps
     public class CompanyDef : Def
     {
         public RulePackDef NamePack;
-        public int count = 1;
+        public IntRange squadCountRange = new IntRange(1, 2);
         public List<PlatoonMaker> squads;
         public FactionDef defaultFaction = DMS_DefOf.DMS_AncientCorps;
 
@@ -37,18 +38,13 @@ namespace AncientCorps
         public RulePackDef nameDef;
         public List<PawnKindDef> leaderKindDef;
 
-        public List<PawnKindDef> fixedPawnkind;
+        public List<PawnGenOption> fixedPawnkind;
         public IntRange memberCountRange;
         public List<PawnKindDef> memberKindDefs;
 
         public IEnumerable<PawnKindDef> GeneratePawnKind()
         {
             yield return leaderKindDef.RandomElement();
-            if (!fixedPawnkind.NullOrEmpty())
-                foreach (PawnKindDef item in fixedPawnkind)
-                {
-                    yield return item;
-                }
             for (int i = 0; i < memberCountRange.RandomInRange; i++)
             {
                 yield return leaderKindDef.RandomElement();

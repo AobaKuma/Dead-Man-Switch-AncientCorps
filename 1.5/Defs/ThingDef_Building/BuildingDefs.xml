@@ -850,4 +850,218 @@
       </li>
     </modExtensions>
   </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Hole_Empty</defName>
+    <label>facility dormer</label>
+    <description>A structure flooring with a opened hole, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/hole</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(9,5)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <fillPercent>0</fillPercent>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <size>(7,3)</size>
+    <building>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Hole_PowerGen</defName>
+    <label>facility power generator</label>
+    <description>A large power generation facility half buried in the structure, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/PowerGen/Generator</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(9,5)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <fillPercent>0</fillPercent>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <size>(7,3)</size>
+    <building>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-7500</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(80,112,180,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>30</heatPerSecond>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="DMSAC_Wall" ParentName="DMSAC_BaseBuilding" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <rect>(0.35,0.1,0.3,0.7)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+      <shadowData>
+        <volume>(1, 0.5, 0.45)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Flammability>0</Flammability>
+      <WorkToBuild>135</WorkToBuild>
+      <MeditationFocusStrength>0.22</MeditationFocusStrength>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <holdsRoof>true</holdsRoof>
+    <blockWind>true</blockWind>
+    <blockLight>true</blockLight>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <coversFloor>true</coversFloor>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <fertility>0</fertility>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <paintable>false</paintable>
+      <isInert>true</isInert>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <ai_chillDestination>false</ai_chillDestination>
+      <supportsWallAttachments>true</supportsWallAttachments>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <comps>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Minimal</li>
+        </focusTypes>
+      </li>
+    </comps>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_Wall">
+    <defName>DMSAC_Wall_A</defName>
+    <label>facility wall</label>
+    <description>A structure with waterproof layers, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/Wall/Wall_Atlas_Concrete</texPath>
+    </graphicData>
+    <uiIconPath>Things/Building/Wall/Wall_Atlas_Concrete_UI</uiIconPath>
+    <building>
+      <paintable>true</paintable>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="DMSAC_Wall">
+    <defName>DMSAC_Wall_B</defName>
+    <label>facility wall</label>
+    <description>A structure with waterproof layers, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/Wall/Wall_Atlas_LoadBearing</texPath>
+    </graphicData>
+    <uiIconPath>Things/Building/Wall/Wall_Atlas_LoadBearing_UI</uiIconPath>
+    <building>
+      <paintable>true</paintable>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_Wall">
+    <defName>DMSAC_Wall_C</defName>
+    <label>facility wall</label>
+    <description>A structure with waterproof layers, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/Wall/Wall_Atlas_Concrete_Icon</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <uiIconPath>Things/Building/Wall/Wall_Atlas_Concrete_Icon_UI</uiIconPath>
+    <building>
+      <paintable>true</paintable>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>DMSAC_RCFloor</defName>
+    <label>reinforced concrete floor</label>
+    <texturePath>Terrain/Surfaces/Concrete</texturePath>
+    <color>(140,140,140)</color>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>350</renderPrecedence>
+    <pathCost>1</pathCost>
+    <statBases>
+      <Beauty>-2</Beauty>
+      <BeautyOutdoors>0</BeautyOutdoors>
+    </statBases>
+    <scatterType>SoftGray</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+	  <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>0.00</fertility>
+    <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
+    <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
+    <pollutionColor>(1, 1, 1, 0.8)</pollutionColor>
+    <pollutionOverlayScale>(0.75, 0.75)</pollutionOverlayScale>
+  </TerrainDef>
 </Defs>
