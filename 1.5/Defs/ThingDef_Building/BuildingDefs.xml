@@ -1100,6 +1100,7 @@
       <alwaysDeconstructible>false</alwaysDeconstructible>
     </building>
   </ThingDef>
+
   <ThingDef ParentName="DMSAC_Wall">
     <defName>DMSAC_Wall_B</defName>
     <label>facility wall</label>
@@ -1165,7 +1166,7 @@
   <ThingDef ParentName="DMSACDoorBase">
     <defName>DMSAC_RCdoor</defName>
     <label>facility door</label>
-    <description>Divides rooms.allows people to move through the door without slowing down.</description>
+    <description>Divides rooms. allows people to move through the door without slowing down.</description>
     <statBases>
       <WorkToBuild>1100</WorkToBuild>
     </statBases>
@@ -1182,7 +1183,7 @@
     </costList>
     <designationHotKey>Misc2</designationHotKey>
   </ThingDef>
-  
+
   <ThingDef ParentName="DMSACLampBase">
     <defName>DMSAC_WallLamp</defName>
     <label>facility wall lamp</label>
@@ -1213,7 +1214,6 @@
     <passability>Standable</passability>
     <terrainAffordanceNeeded IsNull="True" />
     <pathCost>0</pathCost>
-
     <building>
       <isEdifice>false</isEdifice>
       <isAttachment>true</isAttachment>
@@ -1241,7 +1241,7 @@
       </li>
     </comps>
   </ThingDef>
-  
+
   <ThingDef ParentName="DMSACLampBase">
     <defName>DMSAC_FloorLamp</defName>
     <label>facility floor lamp</label>
@@ -1250,24 +1250,22 @@
     <graphicData>
       <texPath>Things/Building/DMSAC_FloorLamp/FloorLamp</texPath>
       <shaderType>CutoutComplex</shaderType>
-	  <color>(140,140,140)</color>
+      <color>(140,140,140)</color>
     </graphicData>
     <costList>
       <Steel>2</Steel>
     </costList>
-	
-	<holdsRoof>true</holdsRoof>
-	<useHitPoints>false</useHitPoints>
-	<selectable>false</selectable>
-	<passability>Standable</passability>
-	
-	<building>
+    <holdsRoof>true</holdsRoof>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <passability>Standable</passability>
+    <building>
       <paintable>true</paintable>
-    </building>	
+    </building>
     <statBases>
       <WorkToBuild>330</WorkToBuild>
       <Mass>2</Mass>
-	  <Flammability>0</Flammability>
+      <Flammability>0</Flammability>
     </statBases>
     <uiOrder>2990</uiOrder>
     <comps>
@@ -1279,5 +1277,115 @@
         <darklightToggle>true</darklightToggle>
       </li>
     </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_GestaltEngine</defName>
+    <label>Centralized Command Core</label>
+    <description>A command core used to command large mechanized corps, with the ability to independently command and support a combined combat brigade.</description>
+    <graphicData>
+      <texPath>Things/Building/CentralCommandCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <shadowData>
+        <volume>(5.03,1.0,4.25)</volume>
+        <offset>(0,0,-0.25)</offset>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <defaultPlacingRot>0</defaultPlacingRot>
+    <uiIconPath>Things/Building/CentralCommandCore</uiIconPath>
+    <size>(5,5)</size>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <canOverlapZones>false</canOverlapZones>
+    <fillPercent>1</fillPercent>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <costList>
+      <Tungsteel>250</Tungsteel>
+      <Steel>350</Steel>
+      <Neurocomputer>6</Neurocomputer>
+      <ComponentControlChip>1</ComponentControlChip>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-3)</interactionCellOffset>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <ai_chillDestination>false</ai_chillDestination>
+      <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+      <deconstructible>false</deconstructible>
+    </building>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>30</glowRadius>
+        <glowColor>(180,100,100,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>40</heatPerSecond>
+      </li>
+      <!-- 到時候加個CompUseEffect來提供玩家把它關掉的功能。 -->
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_BandNode</defName>
+    <label>Process Array</label>
+    <description>An array machine processes the received signal and directs it to a specific mechanitor. This adds 4 bandwidth to that mechanitor's total, allowing them to control more mechanoids.\n\nOnce a process array is constructed, it can be quickly tuned to a mechanitor. However, returning a band node to a different mechanitor takes significantly longer.\n\nThis Device follows the N.A.C.S. protocol so only Mechlinks with following the protocol can receieve the service.</description>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <fillPercent>0.7</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/computeArray</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(1.5, 0.35, 1.2)</volume>
+        <offset>(0, 0, 0)</offset>
+      </shadowData>
+    </graphicData>
+    <defaultPlacingRot>0</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>10000</WorkToBuild>
+      <Flammability>0.25</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </costList>
+    <comps>
+      <li Class="AncientCorps.CompProperties_Effector">
+        <effecter>BandNodeTuned</effecter>
+        <offset>(0,0,0)</offset>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(180,100,100,0)</glowColor>
+      </li>
+    </comps>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
   </ThingDef>
 </Defs>
