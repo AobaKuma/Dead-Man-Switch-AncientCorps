@@ -22052,8 +22052,7 @@
         </allPositions>
       </li>
       <li>
-        <def>Door</def>
-        <stuff>Steel</stuff>
+        <def>DMSAC_RCdoor</def>
         <rotation>1</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>160</hitPoint>
@@ -22067,8 +22066,7 @@
         </allPositions>
       </li>
       <li>
-        <def>Door</def>
-        <stuff>Steel</stuff>
+        <def>DMSAC_RCdoor</def>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>160</hitPoint>
         <colorDef>DMSAC_Structure_Olive</colorDef>
@@ -22243,16 +22241,14 @@
         </allPositions>
       </li>
       <li>
-        <def>Autodoor</def>
-        <stuff>Steel</stuff>
+        <def>DMSAC_RCdoor</def>
         <rotation>1</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>160</hitPoint>
         <position>(87,0,31)</position>
       </li>
       <li>
-        <def>Autodoor</def>
-        <stuff>Steel</stuff>
+        <def>DMSAC_RCdoor</def>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>160</hitPoint>
         <allPositions>
@@ -22261,8 +22257,7 @@
         </allPositions>
       </li>
       <li>
-        <def>Autodoor</def>
-        <stuff>Steel</stuff>
+        <def>DMSAC_RCdoor</def>
         <rotation>1</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>160</hitPoint>
@@ -22273,8 +22268,7 @@
         </allPositions>
       </li>
       <li>
-        <def>Autodoor</def>
-        <stuff>Steel</stuff>
+        <def>DMSAC_RCdoor</def>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>160</hitPoint>
         <colorDef>DMSAC_Structure_Olive</colorDef>
@@ -22286,8 +22280,7 @@
         </allPositions>
       </li>
       <li>
-        <def>Autodoor</def>
-        <stuff>Steel</stuff>
+        <def>DMSAC_RCdoor</def>
         <rotation>1</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>115</hitPoint>
@@ -22437,14 +22430,14 @@
         <position>(36,0,93)</position>
       </li>
       <li>
-        <def>WallLamp</def>
+        <def>DMSAC_WallLamp</def>
         <rotation>2</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>9</hitPoint>
         <position>(67,0,94)</position>
       </li>
       <li>
-        <def>WallLamp</def>
+        <def>DMSAC_WallLamp</def>
         <rotation>2</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>35</hitPoint>
@@ -22459,7 +22452,7 @@
         </allPositions>
       </li>
       <li>
-        <def>WallLamp</def>
+        <def>DMSAC_WallLamp</def>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>35</hitPoint>
         <allPositions>
@@ -22882,7 +22875,7 @@
         </allPositions>
       </li>
       <li>
-        <def>WallLamp</def>
+        <def>DMSAC_WallLamp</def>
         <rotation>3</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>35</hitPoint>
@@ -22902,7 +22895,7 @@
         </allPositions>
       </li>
       <li>
-        <def>WallLamp</def>
+        <def>DMSAC_WallLamp</def>
         <rotation>1</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>35</hitPoint>
@@ -22935,8 +22928,7 @@
         </allPositions>
       </li>
       <li>
-        <def>Autodoor</def>
-        <stuff>WoodLog</stuff>
+        <def>DMSAC_RCdoor</def>
         <rotation>1</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>104</hitPoint>

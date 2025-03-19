@@ -14,6 +14,88 @@
     <passability>PassThroughOnly</passability>
     <designationCategory>Misc</designationCategory>
   </ThingDef>
+  
+   <ThingDef ParentName="BuildingBase" Name="DMSACDoorBase" Abstract="True">
+    <thingClass>Building_Door</thingClass>
+    <category>Building</category>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2010</uiOrder>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+      <isInert>true</isInert>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Door/Door_Blueprint</texPath>
+      </blueprintGraphicData>
+      <ai_chillDestination>false</ai_chillDestination>
+      <paintable>true</paintable>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable">
+        <allowNonPlayer>true</allowNonPlayer>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_DoorLearnOpeningSpeed</li>
+    </placeWorkers>
+  </ThingDef>
+  
+   <ThingDef Abstract="True" Name="DMSACLampBase" ParentName="BuildingBase">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>14</pathCost>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2800</uiOrder>
+    <rotatable>false</rotatable>
+    <uiIconOffset>(0, 0.03)</uiIconOffset>
+
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <placeWorkers>
+      <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
 
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_RollingDoor</defName>
@@ -1076,4 +1158,124 @@
     <pollutionColor>(1, 1, 1, 0.8)</pollutionColor>
     <pollutionOverlayScale>(0.75, 0.75)</pollutionOverlayScale>
   </TerrainDef>
+  
+  
+  <ThingDef ParentName="DMSACDoorBase">
+    <defName>DMSAC_RCdoor</defName>
+    <label>facility door</label>
+    <description>Divides rooms.allows people to move through the door without slowing down.</description>
+    <statBases>
+      <WorkToBuild>1100</WorkToBuild>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/door/DMS_Door_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/door/DMS_Door_MenuIcon</uiIconPath>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSACLampBase">
+    <defName>DMSAC_WallLamp</defName>
+    <label>facility wall lamp</label>
+    <description>A wall-mounted lamp that lights an area using electricity. It is less powerful than a standing lamp, but can be mounted on walls.</description>
+    <rotatable>true</rotatable>
+    <graphicData>
+      <texPath>Things/Building/WallLamp/WallLamp</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+      <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+      <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/WallLamp/WallLamp_MenuIcon</uiIconPath>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <statBases>
+      <WorkToBuild>330</WorkToBuild>
+      <MaxHitPoints>35</MaxHitPoints>
+      <Mass>2</Mass>
+    </statBases>
+    <uiOrder>2991</uiOrder>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded IsNull="True" />
+    <pathCost>0</pathCost>
+
+    <building>
+      <isEdifice>false</isEdifice>
+      <isAttachment>true</isAttachment>
+    </building>
+    <placeWorkers>
+      <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+        <powerUpgrades>
+          <li>
+            <researchProject>ColoredLights</researchProject>
+            <factor>0.5</factor>
+          </li>
+        </powerUpgrades>
+      </li>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>11</glowRadius>
+        <glowColor>(214,148,94,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSACLampBase">
+    <defName>DMSAC_FloorLamp</defName>
+    <label>facility floor lamp</label>
+    <description>An emergency floor light with built-in energy source that can illuminate a small area.</description>
+    <designationHotKey>Misc11</designationHotKey>
+    <graphicData>
+      <texPath>Things/Building/DMSAC_FloorLamp/FloorLamp</texPath>
+      <shaderType>CutoutComplex</shaderType>
+	  <color>(140,140,140)</color>
+    </graphicData>
+    <costList>
+      <Steel>2</Steel>
+    </costList>
+	
+	<holdsRoof>true</holdsRoof>
+	<useHitPoints>false</useHitPoints>
+	<passability>Standable</passability>
+	<selectable>false</selectable>
+	
+	<building>
+      <paintable>true</paintable>
+    </building>	
+    <statBases>
+      <WorkToBuild>330</WorkToBuild>
+      <Mass>2</Mass>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <uiOrder>2990</uiOrder>
+    <comps>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(214,148,94,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
+      </li>
+    </comps>
+  </ThingDef>
 </Defs>
