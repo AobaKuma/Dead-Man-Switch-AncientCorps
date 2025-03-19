@@ -959,6 +959,8 @@
     <passability>Impassable</passability>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <size>(7,3)</size>
+	<useHitPoints>false</useHitPoints>
+	<selectable>false</selectable>
     <building>
       <isTargetable>false</isTargetable>
       <ai_neverTrashThis>true</ai_neverTrashThis>
@@ -1256,8 +1258,8 @@
 	
 	<holdsRoof>true</holdsRoof>
 	<useHitPoints>false</useHitPoints>
-	<passability>Standable</passability>
 	<selectable>false</selectable>
+	<passability>Standable</passability>
 	
 	<building>
       <paintable>true</paintable>
