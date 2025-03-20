@@ -159,7 +159,7 @@
 			<onlyManualCast>false</onlyManualCast>
 			<minRange>4.9</minRange>
 			<range>24.9</range>
-			<warmupTime>4</warmupTime>
+			<warmupTime>2</warmupTime>
 			<soundCast>DMS_AC_Shot_GuidedMissile</soundCast>
 			<requireLineOfSight>true</requireLineOfSight>
 			<targetParams>
