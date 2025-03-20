@@ -15,7 +15,7 @@
     <!-- <designationCategory>Misc</designationCategory> -->
   </ThingDef>
   
-   <ThingDef ParentName="BuildingBase" Name="DMSACDoorBase" Abstract="True">
+   <ThingDef ParentName="DMSAC_BaseBuilding" Name="DMSACDoorBase" Abstract="True">
     <thingClass>Building_Door</thingClass>
     <category>Building</category>
     <altitudeLayer>DoorMoveable</altitudeLayer>
@@ -31,8 +31,6 @@
     <rotatable>false</rotatable>
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Misc</designationCategory>
-    <uiOrder>2010</uiOrder>
     <holdsRoof>true</holdsRoof>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
     <blockLight>true</blockLight>
@@ -61,10 +59,9 @@
     </placeWorkers>
   </ThingDef>
   
-   <ThingDef Abstract="True" Name="DMSACLampBase" ParentName="BuildingBase">
+   <ThingDef Abstract="True" Name="DMSACLampBase" ParentName="DMSAC_BaseBuilding">
     <thingClass>Building</thingClass>
     <category>Building</category>
-
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <selectable>true</selectable>
@@ -72,11 +69,8 @@
     <pathCost>14</pathCost>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <designationCategory>Misc</designationCategory>
-    <uiOrder>2800</uiOrder>
     <rotatable>false</rotatable>
     <uiIconOffset>(0, 0.03)</uiIconOffset>
-
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <damageData>
@@ -761,14 +755,14 @@
     <rotatable>true</rotatable>
     <useHitPoints>true</useHitPoints>
     <destroyable>true</destroyable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
     <building>
       <expandHomeArea>false</expandHomeArea>
       <claimable>true</claimable>
       <deconstructible>false</deconstructible>
     </building>
-    <statBases>
-      <MaxHitPoints>1000</MaxHitPoints>
-    </statBases>
     <pathCost>90</pathCost>
   </ThingDef>
   <ThingDef ParentName="DMSAC_BaseLootBox">
@@ -960,8 +954,8 @@
     <passability>Impassable</passability>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <size>(7,3)</size>
-	<useHitPoints>false</useHitPoints>
-	<selectable>false</selectable>
+	  <useHitPoints>false</useHitPoints>
+	  <selectable>false</selectable>
     <building>
       <isTargetable>false</isTargetable>
       <ai_neverTrashThis>true</ai_neverTrashThis>
@@ -984,6 +978,11 @@
     <passability>Impassable</passability>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <size>(7,3)</size>
+    <useHitPoints>true</useHitPoints>
+    <destroyable>true</destroyable>
+    <statBases>
+      <MaxHitPoints>2000</MaxHitPoints>
+    </statBases>
     <building>
       <isTargetable>false</isTargetable>
       <ai_neverTrashThis>true</ai_neverTrashThis>

@@ -41,7 +41,7 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_DMS_Subsonic_Pistol</defaultProjectile>
-				<warmupTime>0.3</warmupTime>
+				<warmupTime>0.5</warmupTime>
 				<burstShotCount>1</burstShotCount>
 				<range>17.9</range>
 				<soundCast>Shot_Revolver</soundCast>
@@ -125,7 +125,7 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_DMS_Subsonic_Rifle</defaultProjectile>
-				<warmupTime>0.5</warmupTime>
+				<warmupTime>0.85</warmupTime>
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<range>27.9</range>

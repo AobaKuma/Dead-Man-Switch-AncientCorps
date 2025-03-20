@@ -25304,5 +25304,16 @@
         <position>(95,0,88)</position>
       </li>
     </thingDatas>
+    <pawns>
+      <DMS_Mech_Mushketer_SAR>18</DMS_Mech_Mushketer_SAR>
+      <DMS_Mech_Mushketer_AR>16</DMS_Mech_Mushketer_AR>
+      <DMS_Mech_Molot>10</DMS_Mech_Molot>
+      <DMS_Mech_Molot_Reservoir>10</DMS_Mech_Molot_Reservoir>
+      <DMS_Mech_Molot_Mosta>6</DMS_Mech_Molot_Mosta>
+      <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+      <DMS_Mech_Zabor>4</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Piper>6</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+    </pawns>
   </AncientMarket_Libraray.CustomMapDataDef>
 </Defs>
