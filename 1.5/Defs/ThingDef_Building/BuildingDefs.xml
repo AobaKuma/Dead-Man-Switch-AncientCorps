@@ -296,7 +296,7 @@
 
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_LiftShaft</defName>
-		<label>lift Shaft</label>
+		<label>lift shaft</label>
     <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
 		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
     <rotatable>false</rotatable>
@@ -313,6 +313,7 @@
 		<size>(9,9)</size>
     <ignoreConfigErrors>true</ignoreConfigErrors>
     <fillPercent>0</fillPercent>
+    <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
       <modExtensions>
         <li MayRequire="xmb.ancienturbanruins.mo" Class="AncientMarket_Libraray.ModExtension_Map">
@@ -1060,9 +1061,6 @@
       <isPlaceOverableWall>true</isPlaceOverableWall>
       <ai_chillDestination>false</ai_chillDestination>
       <supportsWallAttachments>true</supportsWallAttachments>
-      <blueprintGraphicData>
-        <texPath>Things/Building/Wall_Blueprint_Atlas</texPath>
-      </blueprintGraphicData>
     </building>
     <comps>
       <li Class="CompProperties_MeditationFocus">
@@ -1282,7 +1280,8 @@
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_GestaltEngine</defName>
     <label>Centralized Command Core</label>
-    <description>A command core used to command large mechanized corps, with the ability to independently command and support a combined combat brigade.</description>
+    <!-- 一種用於指揮機兵大兵團的控制核心，具有獨自指揮並保障一支合成作戰旅的能力。 -->
+    <description>A command core used to coordinate large-scaled automatroid squads, it have the ability to independently command and support an entire combined combat brigade without any further assist.</description>
     <graphicData>
       <texPath>Things/Building/CentralCommandCore</texPath>
       <graphicClass>Graphic_Single</graphicClass>
