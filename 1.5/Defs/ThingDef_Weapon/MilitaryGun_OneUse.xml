@@ -132,7 +132,7 @@
 				</targetParams>
 				<requireLineOfSight>true</requireLineOfSight>
 				<beamTargetsGround>true</beamTargetsGround>
-				<forcedMissRadius>0.5</forcedMissRadius>
+				<forcedMissRadius>0.1</forcedMissRadius>
 				<consumeFuelPerShot>1</consumeFuelPerShot>
 			</li>
 		</verbs>

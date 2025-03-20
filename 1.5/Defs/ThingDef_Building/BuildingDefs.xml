@@ -12,7 +12,7 @@
     <pathCost>120</pathCost>
     <defaultPlacingRot>2</defaultPlacingRot>
     <passability>PassThroughOnly</passability>
-    <designationCategory>Misc</designationCategory>
+    <!-- <designationCategory>Misc</designationCategory> -->
   </ThingDef>
   
    <ThingDef ParentName="BuildingBase" Name="DMSACDoorBase" Abstract="True">
