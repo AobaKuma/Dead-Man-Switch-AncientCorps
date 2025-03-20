@@ -45,7 +45,7 @@
           </points>
         </SmokeCurve>
       </li>
-      <li><compClass>AncientCorps.CompGuided</compClass></li>
+      <!-- <li><compClass>AncientCorps.CompGuided</compClass></li> -->
     </comps>
   </ThingDef>
 
