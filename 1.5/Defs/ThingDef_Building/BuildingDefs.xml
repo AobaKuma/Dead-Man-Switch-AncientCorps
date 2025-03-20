@@ -305,7 +305,7 @@
       </shadowData>
 		</graphicData>
 		<size>(9,9)</size>
-    <ignoreConfigErrors>true</ignoreConfigErrors>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <fillPercent>0</fillPercent>
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
@@ -335,8 +335,9 @@
       </shadowData>
 		</graphicData>
 		<size>(9,9)</size>
-    <ignoreConfigErrors>true</ignoreConfigErrors>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <fillPercent>0</fillPercent>
+    <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
 		<modExtensions>
       <li MayRequire="xmb.ancienturbanruins.mo" Class="AncientMarket_Libraray.ModExtension_Portal">

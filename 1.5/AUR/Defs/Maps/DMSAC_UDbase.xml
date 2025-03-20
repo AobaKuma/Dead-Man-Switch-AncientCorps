@@ -24818,7 +24818,7 @@
         <def>DMSAC_Hole_PowerGen</def>
         <rotation>2</rotation>
         <faction>DMS_AncientCorps</faction>
-        <hitPoint>100</hitPoint>
+        <hitPoint>2000</hitPoint>
         <allPositions>
           <li>(20, 0, 95)</li>
           <li>(94, 0, 62)</li>
@@ -24829,7 +24829,7 @@
         <def>DMSAC_Hole_PowerGen</def>
         <rotation>3</rotation>
         <faction>DMS_AncientCorps</faction>
-        <hitPoint>100</hitPoint>
+        <hitPoint>2000</hitPoint>
         <position>(3,0,5)</position>
       </li>
       <li>
