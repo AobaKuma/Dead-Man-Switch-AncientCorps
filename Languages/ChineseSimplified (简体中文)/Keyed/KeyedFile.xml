@@ -1,39 +1,67 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
+  <!-- EN: deactivate Mech -->
   <AncientCorps.DeactivatedMech_Disable>拆解机体</AncientCorps.DeactivatedMech_Disable>
+  <!-- EN: work type disabled -->
   <AncientCorps.Reason_WorkTypeDisabled>工作类型禁用</AncientCorps.Reason_WorkTypeDisabled>
-  <AncientCorps.Reason_NotMechanitor>必须是机械师</AncientCorps.Reason_NotMechanitor>
+  <!-- EN: not a mechanitor -->
+  <AncientCorps.Reason_NotMechanitor>必须是御机使</AncientCorps.Reason_NotMechanitor>
+  <!-- EN: need bandwidth:{0} -->
   <AncientCorps.Reason_NoEnoughBandwidth>需要带宽: {0}</AncientCorps.Reason_NoEnoughBandwidth>
+  <!-- EN: Try hacking {0} -->
   <AncientCorps.DeactivatedMech_TryHack>尝试骇入{0}</AncientCorps.DeactivatedMech_TryHack>
+  <!-- EN: Cannot hacking -->
   <AncientCorps.DeactivatedMech_CannotHack>无法骇入</AncientCorps.DeactivatedMech_CannotHack>
-  
-  <DMSAC_HackFailed>骇入失败</DMSAC_HackFailed>
-  <DMSAC_HackFailedDesc>由于操作上的失误{0}，机械体并没有如预期的受到控制。</DMSAC_HackFailedDesc>
 
+  <!-- EN: takeover -->
   <DMSAC_World_Takeover>接管</DMSAC_World_Takeover>
+  <!-- EN: According to the latest news, a force belonging to {0} took over {2}, which originally belonged to {1}, and now the base has been renamed {3} -->
   <DMSAC_World_Takeover_Desc>根据最新的消息，一支隶属于{0}的部队接管了原属于{1}的{2}，现在该基地被重新命名为{3}</DMSAC_World_Takeover_Desc>
-
+  <!-- EN: raised Defcon -->
   <DMSAC_Level_Rise>戒备提升</DMSAC_Level_Rise>
+  <!-- EN: Due to recent events, the {0} command has raised the defend condition level of its units. Their Defcon level is now -->
   <DMSAC_Level_Rise_Desc>由于近期发生的事件使得{0}指挥部提高了其部队的警戒等级，现在它们的警戒等级为</DMSAC_Level_Rise_Desc>
-  
+  <!-- EN: lowered Defcon -->
   <DMSAC_Level_Down>戒备降低</DMSAC_Level_Down>
+  <!-- EN: Based on recent changes in observed activity, {0} Command has lowered its internal alert level. Their Defcon level is now -->
   <DMSAC_Level_Down_Desc>根据近期观察的活动变化，{0}指挥部下降了其内部的警戒等级，现在它们的警戒等级为</DMSAC_Level_Down_Desc>
   
+  <!-- EN: Level O   {0} retained a minimum number of facility patrols and recalled the medium-sized automatroids in the unit and returned them to their bases for maintenance. -->
   <DMSAC_Level.0>O级警戒:   {0}仅保留最低限度的设施巡逻编制，并解散了部队中的中型机兵返回驻地进行检修。</DMSAC_Level.0>
+  <!-- EN: Level I   {0} deployed all-weather patrols between its ground facilities to shorten the reinforcement intervals for attacked facilities, and deployed medium-sized automatroids in the patrol teams. -->
   <DMSAC_Level.1>I级警戒:   {0}在其地面设施之间部属了全天候的巡逻部队使受袭设施的增援间隔缩短，并且在巡逻队伍配置中型机兵。</DMSAC_Level.1>
+  <!-- EN: Level II  Based on the current situation, {0} will restart some of its large automatroids and mobilize them at any time, and organize a small number of armored platoons as a task force to reinforce ground facilities. -->
   <DMSAC_Level.2>II级警戒:  根据近期当前局势，{0}将部分的大型机兵重启并随时调动，并编制少量的装甲排作为对地面设施增援的特遣部队。</DMSAC_Level.2>
+  <!-- EN: Level III Due to the recent tense situation, ultra-heavy automatroids have been put on combat readiness and deployed in various areas to provide reinforcement at any time. {0} will carry out armed expulsion of neighboring illegal military sites in accordance with the Colonial Fleet Convention's alert status regulations. -->
   <DMSAC_Level.3>III级警戒: 由于近期的紧张局势，超重型机兵已进入战备状态并部属在各区域随时增援，{0}将根据殖民舰队公约的戒备状态条例对邻近的非法军事站点进行武装驱离。</DMSAC_Level.3>
+  <!-- EN: Level IV  {0} confirmed that the First Hague Convention was no longer applicable to the current situation and issued a formal declaration of war in accordance with the Third Hague Convention. \n\nIn addition, according to Article 2 of the Second Hague Convention, civilians in non-occupied areas who take up arms against {0} forces will be considered combatants as defined by the laws of war. -->
   <DMSAC_Level.4>IV级警戒:  {0}确认海牙第一公约已不再适用于当前状况，并根据海牙第三公约进行正式的宣战布告。\n\n此外根据海牙第二公约第二条，处于未占领区拿起武器对抗{0}部队的平民将被视为战争法所定义的战斗员。</DMSAC_Level.4>
+  <!-- EN: Level V   In accordance with the Colonial Fleet Convention's alert regulations, {0} has determined that conditions have been met to warrant an offensive and the mobilization of a heavy armored brigade to conduct the operation. \n\n{0} will occupy and take over identified hostile-controlled areas in compliance with international humanitarian law and the Rome Statute, and strike back at hostile forces that attack facilities in a proportional manner. -->
   <DMSAC_Level.5>V级警戒:   根据殖民舰队公约的戒备状态条例，{0}确认当前状况已达到必须展开进攻并调动重型装甲旅来执行作战的合规条件。\n\n{0}将在遵守国际人道法和《罗马规约》条例的前提下对已识别的敌对控制区进行占领与接管，并根据比例原则对袭击设施的敌对势力予以对等打击。</DMSAC_Level.5>
 
+  <!-- EN: Hacking failed -->
+  <DMSAC_HackFailed>骇入失败</DMSAC_HackFailed>
+  <!-- EN: Due to {0}'s mistakes, mech was not getting controlled as expected. -->
+  <DMSAC_HackFailedDesc>由于操作上的失误{0}，机械体并没有如预期的受到控制。</DMSAC_HackFailedDesc>
 
+  <!-- EN: Communication -->
   <DMSAC_CorpNeutral>通讯</DMSAC_CorpNeutral>
-  <DMSAC_CorpNeutralDesc>"代码5，识别到登记对象。"\n"这里是{0}，已同步敌我识别代码，交火中止。"\n\n这支古老的机兵指挥系统认出了{1}的身分。并出于对{1}战斗能力的尊重暂时中止了识别。</DMSAC_CorpNeutralDesc>
+  <!-- EN: "Code 5, registered personal identified."\n"This is {0}, IFF codes synchronized, cease fire."\n\nThis ancient automatroid command system recognized {1}'s identity. Out of respect for {1}, it has temporarily halted hostilities to your colonists. -->
+  <DMSAC_CorpNeutralDesc>"代码5，识别到登记对象。"\n"这里是{0}，已同步敌我识别代码，交火中止。" \n\n这支古老的机兵指挥系统认出了{1}的身分。并出于对{1}战斗能力的尊重暂时中止了识别。</DMSAC_CorpNeutralDesc>
+
+  <!-- EN: Communication -->
   <DMSAC_CorpAlly>通讯</DMSAC_CorpAlly>
-  <DMSAC_CorpAllyDesc>"代码5，识别到登记对象。"\n"这里是{0}，如果有任何资源需求请向{0}后勤办事处正式递交军剩品征用申请表。"\n\n古老的机兵指挥系统出于对{1}的信任，对殖民者的行为睁一只眼闭一只眼，但出于流程需要发出了警告。</DMSAC_CorpAllyDesc>
+  <!-- EN: "Code 5, registered personal identified."\n"This is {0}, if you require any resources, please formally submit a military surplus requisition form to the {0} logistics office."\n\nOut of trust in {1}, the ancient automatroid command system turned a blind eye to the colonists' actions but issued a warning as per protocol. -->
+  <DMSAC_CorpAllyDesc>"代码5，识别到登记对象。"\n"这里是{0}，如果有任何资源需求请向{0}后勤办事处正式递交军剩品征用申请表。" \n\n古老的机兵指挥系统出于对{1}的信任，对殖民者的行为睁一只眼闭一只眼，但出于流程需要发出了警告。</DMSAC_CorpAllyDesc>
+
+  <!-- EN: Communication -->
   <DMSAC_CorpAllyDown>通讯</DMSAC_CorpAllyDown>
-  <DMSAC_CorpAllyDownDesc>"代码5，识别到登记对象。"\n"这里是{0}，在此向扎尔塔的屠戮者致敬，并感谢您对殖民计划做出的贡献。"\n\n这个古老的机兵指挥系统识别出{1}的身分。并出于对{1}的尊重授权了殖民者在这里自由活动的权力。</DMSAC_CorpAllyDownDesc>
+  <!-- EN: "Code 5, registered personal identified."\n"This is {0}, paying tribute to the Slayer of Zalta and thanking you for your contributions to the colonization project."\n\nThis ancient automatroid command system recognized {1}'s identity. Out of respect for {1}, it has authorized the colonists to operate freely in this area. -->
+  <DMSAC_CorpAllyDownDesc>"代码5，识别到登记对象。"\n"这里是{0}，在此向扎尔塔的屠戮者致敬，并感谢您对殖民计划做出的贡献。" \n\n这个古老的机兵指挥系统识别出{1}的身分。并出于对{1}的尊重授权了殖民者在这里自由活动的权力。</DMSAC_CorpAllyDownDesc>
+
+  <!-- EN: Reinforcement -->
   <DMSAC_CorpHostile>增援</DMSAC_CorpHostile>
+  <!-- EN: An automatroid patrol has discovered colonists intruding into a military facility. After a brief preparation period, they will attempt to expel your colonists.\n\nBased on intercepted communication frequency fluctuations, nearby automatroid patrols in this area may be on their way to reinforcement. -->
   <DMSAC_CorpHostileDesc>一支机兵巡逻队发现了入侵军事设施的殖民者，它们将在准备一段时间后将对你的殖民者实施驱逐。\n\n根据截获的通讯频率波动，来自周围的其他机兵巡逻队可能正在前来支援的路上。</DMSAC_CorpHostileDesc>
 </LanguageData>

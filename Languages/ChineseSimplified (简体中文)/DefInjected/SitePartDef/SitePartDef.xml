@@ -1,9 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-    <!-- EN: field maintenance base -->
+  
+  <!-- EN: military checkpoint -->
+  <DMSAC_Checkpoint.label>军事哨站</DMSAC_Checkpoint.label>
+  <!-- EN: A military checkpoint on the path, also serves as a transit station for the mechanized patrol unit, several automatroid garrisons are protecting this position. -->
+  <DMSAC_Checkpoint.description>位于交通要道的军事检查站，也是机兵巡逻部队的充电站。通常来说会有一支常设的机兵部队驻扎。</DMSAC_Checkpoint.description>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_Checkpoint.approachingReportString>入侵{0}</DMSAC_Checkpoint.approachingReportString>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_Checkpoint.approachOrderString>入侵{0}</DMSAC_Checkpoint.approachOrderString>
+  
+  <!-- EN: underground facility -->
+  <DMSAC_FacilityEnterance.label>地下设施</DMSAC_FacilityEnterance.label>
+  <!-- EN: A ground entrance shaft to an underground complex, which may not be it's only exit, but the exterior of the shaft facility contains a large amount of military supplies waiting to be circulated. -->
+  <DMSAC_FacilityEnterance.description>通往地下的地面竖井设施，这可能不是这个设施建筑群的唯一出口，但竖井设施的外部堆放着大量等待流通的军用物资。由于设施的重要性主战师通常会在该处部署重型装备。</DMSAC_FacilityEnterance.description>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_FacilityEnterance.approachingReportString>入侵{0}</DMSAC_FacilityEnterance.approachingReportString>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_FacilityEnterance.approachOrderString>入侵{0}</DMSAC_FacilityEnterance.approachOrderString>
+  
+  <!-- EN: field maintenance base -->
   <DMSAC_Garage.label>前线维修站</DMSAC_Garage.label>
   <!-- EN: A temporary field repair workshop and logistic center to offer maintenance for frontline operations. maintenance stations like this will constantly change locations as the Corps division moves their task forces.\n\nDepending on their importance, some long-term maintenance stations will have reinforced fortifications and garrisons. -->
-  <DMSAC_Garage.description>一个为机兵提供维修与弹药补给的前线中转站，用来在一线或二线为执行任务的机兵部队进行检修与装备补给。这里会存有大量几乎全新的机兵与一定的弹药装备储备，不过像这样的维修站会随着机兵师在地表上的活动而不断的更换位置。</DMSAC_Garage.description>
+  <DMSAC_Garage.description>为机兵提供维修与弹药补给的前线中转站，用来在一线或二线为执行任务的机兵部队进行检修与装备补给。这里会存有大量几乎全新的机兵与一定的弹药装备储备，不过像这样的维修站会随着机兵师在地表上的活动而不断的更换位置。</DMSAC_Garage.description>
   <!-- EN: Investigate {0} -->
   <DMSAC_Garage.approachingReportString>入侵{0}</DMSAC_Garage.approachingReportString>
   <!-- EN: Investigate {0} -->
@@ -11,8 +30,8 @@
   
   <!-- EN: Automatroid graveyard -->
   <DMSAC_Graveyard.label>机兵坟场</DMSAC_Graveyard.label>
-  <!-- EN: An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid platoon garrison. -->
-  <DMSAC_Graveyard.description>一个露天弃置场，堆积了大量主战机兵师退役的机兵，当地的拾荒者与强盗经常潜入并盗窃其中的零件用来维修他们的机兵，因此主战师在此部属了一支机兵排驻防其中。</DMSAC_Graveyard.description>
+  <!-- EN: An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid garrison. -->
+  <DMSAC_Graveyard.description>堆积了大量主战机兵师退役机兵的露天弃置场，当地的拾荒者与强盗经常潜入并盗窃其中的零件用来维修他们的机兵，因此主战师在此部属了一支机兵排驻防其中。</DMSAC_Graveyard.description>
   <!-- EN: Investigate {0} -->
   <DMSAC_Graveyard.approachingReportString>入侵{0}</DMSAC_Graveyard.approachingReportString>
   <!-- EN: Investigate {0} -->
