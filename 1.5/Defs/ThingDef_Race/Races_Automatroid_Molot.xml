@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- 磨坊 Molot-->
-  <ThingDef ParentName="BaseAutomatroidRace">
+  <ThingDef ParentName="BaseAncientAutomatroidRace">
     <defName>DMS_Mech_Molot</defName>
     <label>Molot</label>
     <description>A medium-sized automatroid capable of equipping and utilizing light to medium infantry weapons. Designed in an era marked by the rapid increase in armored unmanned systems, it was conceived as an infantry combat platform within armored units. It boasts excellent combat capabilities, a simple structure, and superior weapon-loading capacity.</description>

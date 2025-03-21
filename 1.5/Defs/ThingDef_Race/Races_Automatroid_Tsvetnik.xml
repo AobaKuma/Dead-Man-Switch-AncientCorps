@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- 花圃 Tsvetnik-->
-  <ThingDef ParentName="BaseAutomatroidRace">
+  <ThingDef ParentName="BaseAncientAutomatroidRace">
     <defName>DMS_Mech_Tsvetnik</defName>
     <label>Tsvetnik</label>
     <thingClass>Pawn</thingClass>
@@ -55,7 +55,7 @@
     <label>SR-4/2B9 "Tsvetnik"</label>
     <race>DMS_Mech_Tsvetnik</race>
     <nameMaker>DMS_AncientMechStandard</nameMaker>
-    <isFighter>true</isFighter>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
     <combatPower>300</combatPower>
     <maxPerGroup>3</maxPerGroup>
     <lifeStages>

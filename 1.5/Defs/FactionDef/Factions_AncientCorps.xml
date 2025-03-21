@@ -77,11 +77,7 @@
           <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
           <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
           <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
-          <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
-          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
           <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
-          <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
-          <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
         </options>
       </li>
       <li>
@@ -95,9 +91,6 @@
           <DMS_Mech_Molot_Mosta>3</DMS_Mech_Molot_Mosta>
           <DMS_Mech_Gorod_Piper>3</DMS_Mech_Gorod_Piper>
           <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
-          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
-          <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
-          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
         </options>
       </li>
       <li>
@@ -109,11 +102,8 @@
           <DMS_Mech_Molot>10</DMS_Mech_Molot>
           <DMS_Mech_Molot_Reservoir>10</DMS_Mech_Molot_Reservoir>
           <DMS_Mech_Molot_Mosta>6</DMS_Mech_Molot_Mosta>
-          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
-          <DMS_Mech_Zabor>4</DMS_Mech_Zabor>
           <DMS_Mech_Gorod_Piper>6</DMS_Mech_Gorod_Piper>
           <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
-          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
         </options>
       </li>
       <li>
@@ -121,10 +111,9 @@
         <kindDef>Combat</kindDef>
         <commonality>10</commonality>
         <options>
-          <DMS_Mech_Krepost>10</DMS_Mech_Krepost>
-          <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>
           <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
-          <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Tsvetnik>6</DMS_Mech_Tsvetnik>
         </options>
       </li>
     </pawnGroupMakers>
