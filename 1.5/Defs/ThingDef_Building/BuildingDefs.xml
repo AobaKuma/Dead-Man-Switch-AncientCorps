@@ -349,6 +349,33 @@
       </li>
     </modExtensions> 
   </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_LiftShaft_Bottom_B</defName>
+		<label>lift Shaft</label>
+    <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+    <rotatable>false</rotatable>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/liftShaft_Bottom_B</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(12,12)</drawSize>
+      <shadowData>
+        <offset>(1.5,0,0)</offset>
+        <volume>(0.65,0.5,0.65)</volume>
+      </shadowData>
+		</graphicData>
+		<size>(9,9)</size>
+    <ignoreConfigErrors>true</ignoreConfigErrors>
+    <fillPercent>0</fillPercent>
+    <passability>Impassable</passability>
+		<modExtensions>
+      <li MayRequire="xmb.ancienturbanruins.mo" Class="AncientMarket_Libraray.ModExtension_Portal">
+        <distance>2</distance>
+      </li>
+    </modExtensions> 
+  </ThingDef>
 
   <!--裝飾性殘骸。 -->
   <ThingDef ParentName="DMSAC_BaseBuilding" Name="BaseDerelictMech" Abstract="true">
