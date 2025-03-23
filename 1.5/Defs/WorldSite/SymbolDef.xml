@@ -36,6 +36,46 @@
     <thing>DMSAC_Building_DeactivatedMediumMech</thing>
     <rotation>South</rotation>
   </KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>Wall_Steel_MG</defName>
+    <thing>Wall</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Door_WoodLog_MG</defName>
+    <thing>Door</thing>
+    <stuff>WoodLog</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Autodoor_Steel_MG</defName>
+    <thing>Autodoor</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Mech_Molot_Mosta</defName>
+    <pawnKindDef>DMS_Mech_Molot_Mosta</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
+    <defendSpawnPoint>true</defendSpawnPoint>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Mech_Krepost</defName>
+    <pawnKindDef>DMS_Mech_Krepost</pawnKindDef>
+    <faction>DMS_AncientCorps</faction>
+    <defendSpawnPoint>true</defendSpawnPoint>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Wall_A_MG</defName>
+    <thing>DMSAC_Wall_A</thing>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Small_West</defName>
@@ -343,12 +383,6 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Cargo_East</defName>
-    <thing>DMSAC_Cargo</thing>
-    <rotation>East</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
     <defName>DMSAC_Cargo_North</defName>
     <thing>DMSAC_Cargo</thing>
     <rotation>North</rotation>
@@ -425,12 +459,6 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Cargo_West</defName>
-    <thing>DMSAC_Cargo</thing>
-    <rotation>West</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
     <defName>DMS_TableMachinePrinter_West</defName>
     <thing>DMS_TableMachinePrinter</thing>
     <rotation>West</rotation>
@@ -443,19 +471,6 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_LG_North</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_GrayLight</color>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_W_South</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_White</color>
-    <rotation>South</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
     <defName>DMSAC_Building_InactivatedMediumMech_West</defName>
     <thing>DMSAC_Building_InactivatedMediumMech</thing>
     <rotation>West</rotation>
@@ -464,19 +479,6 @@
   <KCSG.SymbolDef>
     <defName>DMS_Recharger_North</defName>
     <thing>DMS_Recharger</thing>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_L_West</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_Limestone</color>
-    <rotation>West</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Cargo_RG_North</defName>
-    <thing>DMSAC_Cargo</thing>
-    <color>DMSAC_Structure_Rust</color>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -498,34 +500,6 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_L_South</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_Limestone</color>
-    <rotation>South</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_White_South</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_White</color>
-    <rotation>South</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Cargo_Rustred_West</defName>
-    <thing>DMSAC_Cargo</thing>
-    <color>DMSAC_Structure_Rust</color>
-    <rotation>West</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Cargo_Olive_West</defName>
-    <thing>DMSAC_Cargo</thing>
-    <color>DMSAC_Structure_Olive</color>
-    <rotation>West</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
     <defName>Polyester</defName>
     <thing>Polyester</thing>
   </KCSG.SymbolDef>
@@ -536,44 +510,9 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_Lightgray_West</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_GrayLight</color>
-    <rotation>West</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
     <defName>DMS_Recharger_West</defName>
     <thing>DMS_Recharger</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_Cream_South</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_Cream</color>
-    <rotation>South</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_White_East</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_White</color>
-    <rotation>East</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_Cream_East</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_Cream</color>
-    <rotation>East</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_Limestone_South</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_Limestone</color>
-    <rotation>South</rotation>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -597,18 +536,6 @@
     <color>DMSAC_Structure_Olive</color>
     <rotation>East</rotation>
   </KCSG.SymbolDef>
-  <KCSG.SymbolDef>
-    <defName>DMSAC_PackCrate_Teal</defName>
-    <thing>DMSAC_PackCrate</thing>
-    <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_PackCrate_Rustred</defName>
-    <thing>DMSAC_PackCrate</thing>
-    <color>DMSAC_Structure_Rust</color>
-  </KCSG.SymbolDef>
-
 
   <KCSG.SymbolDef>
     <defName>Shelf_Steel_Olive_West</defName>
@@ -653,21 +580,8 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Building_FuelBarrel_Rustred</defName>
+    <defName>DMSAC_Building_FuelBarrel</defName>
     <thing>DMSAC_Building_FuelBarrel</thing>
-    <color>DMSAC_Structure_Rust</color>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Building_FuelBarrel_Red</defName>
-    <thing>DMSAC_Building_FuelBarrel</thing>
-    <color>Structure_Red</color>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Building_FuelBarrel_Fadedgreen</defName>
-    <thing>DMSAC_Building_FuelBarrel</thing>
-    <color>Structure_GreenFaded</color>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -695,34 +609,14 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Cargo_Pastelorange_North</defName>
-    <thing>DMSAC_Cargo</thing>
-    <color>Structure_OrangePastel</color>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_Lightgray_South</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_GrayLight</color>
-    <rotation>South</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
-    <defName>DMSAC_PackCrate_Fadedgreen</defName>
-    <thing>DMSAC_PackCrate</thing>
-    <color>Structure_GreenFaded</color>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
     <defName>DMSAC_Building_RoadBlock_West</defName>
     <thing>DMSAC_Building_RoadBlock</thing>
     <rotation>West</rotation>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Cargo_Red_West</defName>
+    <defName>DMSAC_Cargo_West</defName>
     <thing>DMSAC_Cargo</thing>
-    <color>Structure_Red</color>
     <rotation>West</rotation>
   </KCSG.SymbolDef>
 
@@ -731,31 +625,115 @@
     <thing>DMSAC_Building_RoadBlock</thing>
     <rotation>South</rotation>
   </KCSG.SymbolDef>
+
   <KCSG.SymbolDef>
-    <defName>DMSAC_Crate_Lightgray_North</defName>
-    <thing>DMSAC_Crate</thing>
-    <color>Structure_GrayLight</color>
-  </KCSG.SymbolDef>
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Building_FuelBarrel_Pastelorange</defName>
-    <thing>DMSAC_Building_FuelBarrel</thing>
-    <color>Structure_OrangePastel</color>
+    <defName>DMSAC_PackCrate</defName>
+    <thing>DMSAC_PackCrate</thing>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Building_FuelBarrel_Olive</defName>
-    <thing>DMSAC_Building_FuelBarrel</thing>
-    <color>DMSAC_Structure_Olive</color>
-  </KCSG.SymbolDef>
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Building_FuelBarrel_Teal</defName>
-    <thing>DMSAC_Building_FuelBarrel</thing>
+    <defName>Wall_Steel_Structure_Green</defName>
+    <thing>Wall</thing>
+    <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_PackCrate_Olive</defName>
-    <thing>DMSAC_PackCrate</thing>
-    <color>DMSAC_Structure_Olive</color>
+    <defName>Door_WoodLog_Structure_Green</defName>
+    <thing>Door</thing>
+    <stuff>WoodLog</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Wall_Tungsteel_Structure_Green</defName>
+    <thing>Wall</thing>
+    <stuff>Tungsteel</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Cargo_East</defName>
+    <thing>DMSAC_Cargo</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_AirFan</defName>
+    <thing>DMSAC_Building_AirFan</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_WallLamp_North</defName>
+    <thing>DMSAC_WallLamp</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Autodoor_Steel_Structure_Green</defName>
+    <thing>Autodoor</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_FloorLamp</defName>
+    <thing>DMSAC_FloorLamp</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_WallLamp_East</defName>
+    <thing>DMSAC_WallLamp</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Turret_GateKeeper_North</defName>
+    <thing>DMS_Turret_GateKeeper</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_WallLamp_West</defName>
+    <thing>DMSAC_WallLamp</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Hole_Empty_West</defName>
+    <thing>DMSAC_Hole_Empty</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Hole_PowerGen_West</defName>
+    <thing>DMSAC_Hole_PowerGen</thing>
+    <rotation>West</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Wall_A_Structure_Green</defName>
+    <thing>DMSAC_Wall_A</thing>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Hole_PowerGen_South</defName>
+    <thing>DMSAC_Hole_PowerGen</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_LiftShaft</defName>
+    <thing>DMSAC_Building_LiftShaft</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_BandNode</defName>
+    <thing>DMSAC_BandNode</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Hole_Empty_South</defName>
+    <thing>DMSAC_Hole_Empty</thing>
+    <rotation>South</rotation>
   </KCSG.SymbolDef>
 </Defs>

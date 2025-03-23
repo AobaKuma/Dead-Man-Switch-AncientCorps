@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: Process Array -->
+  <DMSAC_BandNode.label>處理陣列</DMSAC_BandNode.label>
+  <!-- EN: An array machine processes the received signal and directs it to a specific mechanitor. This adds 4 bandwidth to that mechanitor's total, allowing them to control more mechanoids.\n\nOnce a process array is constructed, it can be quickly tuned to a mechanitor. However, returning a band node to a different mechanitor takes significantly longer.\n\nThis Device follows the N.A.C.S. protocol so only Mechlinks with following the protocol can receieve the service. -->
+  <DMSAC_BandNode.description>一個用於為中央司令核心提供算力的濕件電腦，通常會大量的設置於一處來方便進行使用與檢修。</DMSAC_BandNode.description>
+  
+  <!-- EN: ventilation fan -->
+  <DMSAC_Building_AirFan.label>負壓排風扇</DMSAC_Building_AirFan.label>
+  <!-- EN: An active ventilation fan,it seems to be used to discharge heat from underground spaces. -->
+  <DMSAC_Building_AirFan.description>一個主動式負壓風扇，是用來主動排出地下空間的廢棄來使地下設施的進風口能夠更加隱蔽而設置的。</DMSAC_Building_AirFan.description>
+  
+  <!-- EN: Barrier Gate -->
+  <DMSAC_Building_BarrierGate.label>升降門</DMSAC_Building_BarrierGate.label>
+  <!-- EN: A barrier gate. -->
+  <DMSAC_Building_BarrierGate.description>一個象徵性阻攔通行的升降杆，當然如果你執意要越過那麼就會有別的東西來阻饒你。</DMSAC_Building_BarrierGate.description>
+  
   <!-- EN: large automatroid derelict -->
   <DMSAC_Building_DeactivatedLargeMech.label>大型廢棄機兵</DMSAC_Building_DeactivatedLargeMech.label>
   <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed. waiting for people to discover its remaining value. -->
@@ -36,6 +51,11 @@
   <!-- EN: a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were mostly removed. waiting for people to discover its remaining value. -->
   <DMSAC_Building_DerelictMech_Small.description>一架因嚴重老化或損壞而應期退役的小型機兵。其內部儀器已部分拆除用來維修那些仍然在服役的同型機。而剩餘的部分則靜靜等待著人們去發現它的價值。</DMSAC_Building_DerelictMech_Small.description>
   
+  <!-- EN: fuel barrel -->
+  <DMSAC_Building_FuelBarrel.label>燃料桶</DMSAC_Building_FuelBarrel.label>
+  <!-- EN: A barrel filled with fuel. -->
+  <DMSAC_Building_FuelBarrel.description>一個裝滿了化合燃料的鐵桶，一旦被點燃就會發生爆炸。</DMSAC_Building_FuelBarrel.description>
+  
   <!-- EN: large inactivated automatroid -->
   <DMSAC_Building_InactivatedLargeMech.label>大型未啟動機兵</DMSAC_Building_InactivatedLargeMech.label>
   <!-- EN: an automatroid that has been completely shut down for maintenance, with most of its parts intact and ready for use. -->
@@ -51,6 +71,21 @@
   <!-- EN: an automatroid that has been completely shut down for maintenance, with most of its parts intact and ready for use. -->
   <DMSAC_Building_InactivatedSmallMech.description>一架處於維修狀態而完全關閉的小型機兵，其零件大部分都完整並狀態良好，隨時都能夠重新啟動並投入戰鬥。</DMSAC_Building_InactivatedSmallMech.description>
   
+  <!-- EN: lift shaft -->
+  <DMSAC_Building_LiftShaft.label>設施升降井</DMSAC_Building_LiftShaft.label>
+  <!-- EN: A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate. -->
+  <DMSAC_Building_LiftShaft.description>一座能通向設施地下樓層的巨型電梯豎井，其平台本身大到足以運輸載具。但很顯然升降平台本身被這座設施的安全系統鎖定了，不過似乎可以透過檢修用的梯子進入。</DMSAC_Building_LiftShaft.description>
+  
+  <!-- EN: lift Shaft -->
+  <DMSAC_Building_LiftShaft_Bottom.label>設施升降井</DMSAC_Building_LiftShaft_Bottom.label>
+  <!-- EN: A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate. -->
+  <DMSAC_Building_LiftShaft_Bottom.description>一座能通向設施地下樓層的巨型電梯豎井，其平台本身大到足以運輸載具。但很顯然升降平台本身被這座設施的安全系統鎖定了，不過似乎可以透過檢修用的梯子進入。</DMSAC_Building_LiftShaft_Bottom.description>
+  
+  <!-- EN: road barrier -->
+  <DMSAC_Building_RoadBlock.label>水泥路障</DMSAC_Building_RoadBlock.label>
+  <!-- EN: A road barrier designed to block vehicle, it also provides cover on gun fighting. -->
+  <DMSAC_Building_RoadBlock.description>用於阻擋車輛的實心水泥路障，也能在槍戰中提供掩護。</DMSAC_Building_RoadBlock.description>
+  
   <!-- EN: rolling door -->
   <DMSAC_Building_RollingDoor.label>鐵捲門</DMSAC_Building_RollingDoor.label>
   <!-- EN: a locked rolling door. -->
@@ -65,5 +100,55 @@
   <DMSAC_Crate.label>軍用板條箱</DMSAC_Crate.label>
   <!-- EN: A standard issue equipmet crate containing military supplies.These equipment and boxes seemed to have been produced recently and sent to various locations along with the missions. -->
   <DMSAC_Crate.description>一個裝有軍用裝備的標準物資運輸箱。根據上面印刷的文字，這些裝備似乎都是在最近幾十年間生產出來的，並隨著機兵部隊的任務被送到各處。</DMSAC_Crate.description>
+  
+  <!-- EN: facility floor lamp -->
+  <DMSAC_FloorLamp.label>設施地燈</DMSAC_FloorLamp.label>
+  <!-- EN: An emergency floor light with built-in energy source that can illuminate a small area. -->
+  <DMSAC_FloorLamp.description>內建能源的緊急落地燈，能夠照亮小面積區域。</DMSAC_FloorLamp.description>
+  
+  <!-- EN: Centralized Command Core -->
+  <DMSAC_GestaltEngine.label>中央司令核心</DMSAC_GestaltEngine.label>
+  <!-- EN: A command core used to coordinate large-scaled automatroid squads, it have the ability to independently command and support an entire combined combat brigade without any further assist. -->
+  <DMSAC_GestaltEngine.description>一種用於指揮機兵部隊的大型控制核心，具有獨自指揮並保障一支合成作戰旅的能力。在過去的次世代戰爭發生前無數這樣的控制核心直接或間接的指揮著地球上近九成的正規軍隊，並在五個各據一方的AI指揮下讓地球上近半的陸地與海洋都淪為了它們的交戰區。</DMSAC_GestaltEngine.description>
+  
+  <!-- EN: facility dormer -->
+  <DMSAC_Hole_Empty.label>設施天井</DMSAC_Hole_Empty.label>
+  <!-- EN: A structure flooring with a opened hole, commonly found in underground facilities. -->
+  <DMSAC_Hole_Empty.description>一個在天花板上的開孔結構，被用來給設施的地下結構提供光照與通風。</DMSAC_Hole_Empty.description>
+  
+  <!-- EN: facility power generator -->
+  <DMSAC_Hole_PowerGen.label>設施發電機</DMSAC_Hole_PowerGen.label>
+  <!-- EN: A large power generation facility half buried in the structure, commonly found in underground facilities. -->
+  <DMSAC_Hole_PowerGen.description>一種半埋於設施結構中的大型發電機，在大型的永備避難所與軍用設施中相當常見。</DMSAC_Hole_PowerGen.description>
+  
+  <!-- EN: military parcel -->
+  <DMSAC_PackCrate.label>軍用補給箱</DMSAC_PackCrate.label>
+  <!-- EN: A Standard issue parcel containing supplies for military logistics. These parcel seemed to have been produced recently and sent to various locations. -->
+  <DMSAC_PackCrate.description>一個用於運輸軍用補給品的標準運輸包。裡面的內容物跟包裹本身似乎都是在最近才製造的，並隨著機兵部隊的任務被送到各處。</DMSAC_PackCrate.description>
+  
+  <!-- EN: facility door -->
+  <DMSAC_RCdoor.label>設施門</DMSAC_RCdoor.label>
+  <!-- EN: Divides rooms. allows people to move through the door without slowing down. -->
+  <DMSAC_RCdoor.description>分隔房間的門。允許人們不減慢速度地穿過。</DMSAC_RCdoor.description>
+  
+  <!-- EN: facility wall -->
+  <DMSAC_Wall_A.label>設施內牆</DMSAC_Wall_A.label>
+  <!-- EN: A structure with waterproof layers, commonly found in underground facilities. -->
+  <DMSAC_Wall_A.description>常見於地下設施具有複合塗層的鋼筋混凝土結構牆，為了支撐內部結構而被建造的無堅不摧。</DMSAC_Wall_A.description>
+  
+  <!-- EN: facility wall -->
+  <DMSAC_Wall_B.label>設施內牆</DMSAC_Wall_B.label>
+  <!-- EN: A structure with waterproof layers, commonly found in underground facilities. -->
+  <DMSAC_Wall_B.description>常見於地下設施具有複合塗層的鋼筋混凝土結構牆，為了支撐內部結構而被建造的無堅不摧。</DMSAC_Wall_B.description>
+  
+  <!-- EN: facility wall -->
+  <DMSAC_Wall_C.label>設施內牆</DMSAC_Wall_C.label>
+  <!-- EN: A structure with waterproof layers, commonly found in underground facilities. -->
+  <DMSAC_Wall_C.description>常見於地下設施具有複合塗層的鋼筋混凝土結構牆，為了支撐內部結構而被建造的無堅不摧。</DMSAC_Wall_C.description>
+  
+  <!-- EN: facility wall lamp -->
+  <DMSAC_WallLamp.label>設施牆燈</DMSAC_WallLamp.label>
+  <!-- EN: A wall-mounted lamp that lights an area using electricity. It is less powerful than a standing lamp, but can be mounted on walls. -->
+  <DMSAC_WallLamp.description>使用電力照亮區域的壁燈。它的功率不如落地燈，但可以安裝在牆上。</DMSAC_WallLamp.description>
   
 </LanguageData>

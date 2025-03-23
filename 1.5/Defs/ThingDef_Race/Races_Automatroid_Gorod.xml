@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="BaseAutomatroidHumanRace">
+  <ThingDef ParentName="BaseAncientAutomatroidRace">
     <defName>DMS_Mech_Gorod</defName>
     <label>gorod</label>
     <description>6M29 / BR4 "Gorod", NATO nicknamed "ChunkSteel". It is a burly, heavily armored automatroid, designed as a cost-effective and durable mechanical infantry. Thanks to its outstanding systems engineering, modernized variants of this model continue to serve in many Midworld militaries today. It has also become a highly sought-after model for replication and production by local warlords and pirates in the Rimworld.</description>

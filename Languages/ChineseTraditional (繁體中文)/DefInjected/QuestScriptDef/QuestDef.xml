@@ -36,7 +36,7 @@
   </DMSAC_OpportunitySite_Graveyard.questNameRules.rulesStrings>
   <!-- EN: Quest expired: [resolvedQuestName] -->
   <DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>任務過期: [resolvedQuestName]</DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>
-  <!-- EN: Intercepted communications indicate the item stash has been claimed by others. The quest [resolvedQuestName] has expired. -->
+  <!-- EN: Intercepted communications indicate the facility has moved position or being claimed by others. The quest [resolvedQuestName] has expired. -->
   <DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>截獲的通訊表示該棄置點內的廢棄機兵已被拾荒者回收。任務[resolvedQuestName]已過期。</DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>
   
 </LanguageData>

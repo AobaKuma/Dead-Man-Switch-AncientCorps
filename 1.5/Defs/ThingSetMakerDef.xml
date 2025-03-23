@@ -155,6 +155,25 @@
           </thingSetMaker>
         </li>
         <li>
+          <weight>30</weight>
+          <thingSetMaker Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Manufactured</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Electronics</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Tool</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_SpecialComp</li>
+                </categories>
+                <thingDefs>
+                  <li>ComponentIndustrial</li>
+                </thingDefs>
+              </filter>
+              <totalMarketValueRange>500~2000</totalMarketValueRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
           <weight>100</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
@@ -201,7 +220,7 @@
                   <li>DMS_YekaterinRifle</li>
                 </thingDefs>
               </filter>
-              <countRange>1~2</countRange>
+              <countRange>1~1</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -220,7 +239,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>30</weight>
+          <weight>15</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -229,7 +248,7 @@
                   <li>DMS_DeposableRocketLauncher</li>
                 </thingDefs>
               </filter>
-              <countRange>1~4</countRange>
+              <countRange>1~2</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -246,6 +265,25 @@
                 </thingDefs>
               </filter>
               <countRange>1~4</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>30</weight>
+          <thingSetMaker Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Manufactured</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Electronics</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_Tool</li>
+                  <li MayRequire="xmb.ancienturbanruins.mo">AM_SpecialComp</li>
+                </categories>
+                <thingDefs>
+                  <li>ComponentIndustrial</li>
+                </thingDefs>
+              </filter>
+              <totalMarketValueRange>50~500</totalMarketValueRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -271,7 +309,6 @@
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_SpecialComp</li>
                 </categories>
               </filter>
-              <countRange></countRange>
               <totalMarketValueRange>1000~2000</totalMarketValueRange>
             </fixedParams>
           </thingSetMaker>

@@ -15,6 +15,7 @@ namespace AncientCorps
         public int averagePawnCount = 5;
         public int spawnCountSigma = 5;
         public int MBTTime = 30000;
+        public int patrolCountToRaiseLevel = 3;
         public WorldObjectCompProperties_PatrolSquad()
         {
             compClass = typeof(WorldObjectComp_PatrolSquad);
@@ -44,13 +45,14 @@ namespace AncientCorps
 
         protected GameComponent_DefconLevel Defcon => Current.Game.GetComponent<GameComponent_DefconLevel>();
         private int Level => Defcon.Level;
+        protected int countPartol = 0;
 
         public WorldObjectCompProperties_PatrolSquad Props => props as WorldObjectCompProperties_PatrolSquad;
         public override void PostMapGenerate()
         {
             base.PostMapGenerate();
             timeToSpawn = (int)(new IntRange(Props.MBTTime, latestPatrolTick).RandomInRange * Defcon.GetCurrentScale);
-            latestPatrolTick = (int)(Mathf.Clamp(timeToSpawn*Rand.Range(0.25f,0.75f), Props.MBTTime, timeToSpawn) * Defcon.GetCurrentScale);
+            latestPatrolTick = (int)(Mathf.Clamp(timeToSpawn * Rand.Range(0.25f, 0.75f), Props.MBTTime, timeToSpawn) * Defcon.GetCurrentScale);
             Log.Message(timeToSpawn + " " + latestPatrolTick);
         }
         public override void CompTick()
@@ -97,6 +99,18 @@ namespace AncientCorps
                     lord.AddPawns(group);
                 }
                 if (!greetTriggered) AncientCorpsUltility.SetHostileToPlayer(map, group.RandomElement());
+                else
+                {
+                    //一支巡邏部隊已經抵達設施，更多的後續部隊將在更短的時間內陸續增援。
+                    Find.LetterStack.ReceiveLetter("DMSAC_PatrolSquad".Translate(), "DMSAC_PatrolSquadDesc".Translate(), LetterDefOf.ThreatSmall);
+                    countPartol++;
+                    if (countPartol >= Props.patrolCountToRaiseLevel)
+                    {
+                        Defcon.LevelRise();
+                        countPartol = 0;
+                    }
+                    Defcon.ResetActionInterval();
+                }
                 greetTriggered = true;
             }
             timeToSpawn = new IntRange(Props.MBTTime, latestPatrolTick).RandomInRange;
@@ -107,6 +121,7 @@ namespace AncientCorps
             base.PostExposeData();
             Scribe_Values.Look(ref timeToSpawn, "timeToSpawn", 0);
             Scribe_Values.Look(ref greetTriggered, "greetTriggered", false);
+            Scribe_Values.Look(ref countPartol, "countPartol", 0);
             Scribe_Values.Look(ref latestPatrolTick, "latestPatrolTick", 180000);
         }
     }

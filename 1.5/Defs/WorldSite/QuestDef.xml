@@ -25,7 +25,7 @@
         <!-- No asker -->
         <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
         <!-- Faction leader asker -->
-        <li>questDescription(asker_factionLeader==True)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+        <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
@@ -86,7 +86,7 @@
               <selectionWeight>0.25</selectionWeight>
               <sitePartsTags>
                 <li>
-                  <tag>DMSAC_Graveyard</tag>
+                  <tag>DMSAC_FacilityEnterance</tag>
                 </li>
               </sitePartsTags>
             </li>

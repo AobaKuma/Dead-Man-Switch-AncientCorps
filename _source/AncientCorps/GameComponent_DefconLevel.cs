@@ -41,7 +41,7 @@ namespace AncientCorps
         private readonly IntRange[] intervalPerLevel = new IntRange[]
         {
             new IntRange(-1,-1),
-            new IntRange(150000,300000), //2.5~5天
+            new IntRange(300000,600000), //5~10天
             new IntRange(300000,600000), //5~10天
             new IntRange(600000,1200000),//10~20天
             new IntRange(450000,900000), //7.5~15天
@@ -125,7 +125,7 @@ namespace AncientCorps
             if (level < intervalPerLevel.Length) interval = intervalPerLevel[level].RandomInRange;
         }
 
-        private void ResetActionInterval()
+        public void ResetActionInterval()
         {
             float newInterval = actionIntervalRange.RandomInRange * GetCurrentScale;//默認是4~8天*警戒等級倍率，0級 ，5級是
             actionInterval = (int)newInterval;

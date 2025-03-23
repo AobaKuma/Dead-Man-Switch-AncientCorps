@@ -2,7 +2,7 @@
 <Defs>
   <!-- Base -->
 
-  <ThingDef ParentName="BaseMechanoid" Name="BaseAncientAutomatroidRace" Abstract="True">
+  <ThingDef ParentName="BaseAutomatroidRace" Name="BaseAncientAutomatroidRace" Abstract="True">
     <statBases>
       <MoveSpeed>2.7</MoveSpeed>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
@@ -18,8 +18,15 @@
     </statBases>
     <butcherProducts>
       <Steel>10</Steel>
-    </butcherProducts>
-    <damageMultipliers>
+    </butcherProducts>    
+    <!-- <inspectorTabs Inherit="False">
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs> -->
+    <damageMultipliers Inherit="False">
       <li>
         <damageDef>EMP</damageDef>
         <multiplier>0.2</multiplier>
@@ -96,7 +103,7 @@
     <defaultFactionType>DMS_AncientCorps</defaultFactionType>
     <allowInMechClusters>false</allowInMechClusters>    <!--是否出現在機械集群-->
     <isFighter>true</isFighter>
-    <destroyGearOnDrop>true</destroyGearOnDrop>
+    <!-- <destroyGearOnDrop>true</destroyGearOnDrop> -->
     <canUseAvoidGrid>true</canUseAvoidGrid>
     <canStrip>false</canStrip>
     <factionHostileOnDeath>false</factionHostileOnDeath>

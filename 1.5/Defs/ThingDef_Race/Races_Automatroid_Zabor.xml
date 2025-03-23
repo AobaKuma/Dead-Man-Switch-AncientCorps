@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="BaseAutomatroidHumanRace" Name="BaseZaborRace">
+  <ThingDef ParentName="BaseAncientAutomatroidRace" Name="BaseZaborRace">
     <defName>DMS_Mech_Zabor</defName>
     <label>zabor</label>
     <description>6M29U / BR4G "Zabor", NATO nicknamed "Incisor". It is an armored automatroid with extra frontial armour, designed as a cost-effective and durable mechanical infantry. Thanks to its outstanding systems engineering, modernized variants of this model continue to serve in many Midworld militaries today. It has also become a highly sought-after model for replication and production by local warlords and pirates in the Rimworld.</description>
@@ -150,7 +150,6 @@
       <li>DMSAC_Rocket</li>
     </abilities>
   </PawnKindDef>
-
   
   <ThingDef ParentName="BaseZaborRace">
     <defName>DMS_Mech_Zabor_Pirate</defName>
