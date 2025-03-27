@@ -12,7 +12,7 @@
     <pathCost>120</pathCost>
     <defaultPlacingRot>2</defaultPlacingRot>
     <passability>PassThroughOnly</passability>
-    <!-- <designationCategory>Misc</designationCategory> -->
+    <designationCategory>DMSAC</designationCategory>
   </ThingDef>
   
    <ThingDef ParentName="DMSAC_BaseBuilding" Name="DMSACDoorBase" Abstract="True">
@@ -1166,7 +1166,7 @@
     <label>reinforced concrete floor</label>
     <texturePath>Terrain/Surfaces/Concrete</texturePath>
     <color>(140,140,140)</color>
-    <edgeType>FadeRough</edgeType>
+    <edgeType>Hard</edgeType>
     <renderPrecedence>350</renderPrecedence>
     <pathCost>1</pathCost>
     <statBases>
@@ -1413,5 +1413,61 @@
       </li>
     </comps>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_ArcFurnace</defName>
+    <label>electirc arc furnace</label>
+    <description>A heavy machinery that recycles all sort of metallic pieces into steel, will generates a lot of heat.</description>
+    <graphicData>
+      <texPath>Things/Building/DMSACArcFurnace/building</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>7</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <fillPercent>0.9</fillPercent>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <size>(4,4)</size>
+	  <useHitPoints>false</useHitPoints>
+    <building>
+	 <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_HeavyChem</defName>
+    <label>pyrolysis plant</label>
+    <description>A heavy machinery that recycles all sort of organic pieces into chemfuel, will generates a lot of heat.</description>
+    <graphicData>
+      <texPath>Things/Building/DMSACAutoChem/building</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>6</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <fillPercent>0.9</fillPercent>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <size>(4,4)</size>
+	  <useHitPoints>false</useHitPoints>
+    <building>
+	 <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
   </ThingDef>
 </Defs>
