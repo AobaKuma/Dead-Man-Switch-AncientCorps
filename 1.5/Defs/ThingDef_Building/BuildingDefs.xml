@@ -430,11 +430,8 @@
       <MaxHitPoints>5000</MaxHitPoints>
     </statBases>
     <killedLeavingsRanges>
-      <Steel>30~60</Steel>
-      <ComponentStamped>1~4</ComponentStamped>
-      <Tungsteel>15~30</Tungsteel>
-      <DMS_Ceramics>10~25</DMS_Ceramics>
       <DMS_ChunkSlag>3~7</DMS_ChunkSlag>
+      <ChunkSlagSteel>1~3</ChunkSlagSteel>
     </killedLeavingsRanges>
   </ThingDef>
   <ThingDef ParentName="BaseDerelictMech">
@@ -455,12 +452,8 @@
       <MaxHitPoints>3200</MaxHitPoints>
     </statBases>
     <killedLeavingsRanges>
-      <Steel>20~60</Steel>
-      <ChunkSlagSteel>1~3</ChunkSlagSteel>
-      <ComponentStamped>0~3</ComponentStamped>
-      <DMS_Ceramics>10~20</DMS_Ceramics>
-      <Tungsteel>10~15</Tungsteel>
       <DMS_ChunkSlag>1~5</DMS_ChunkSlag>
+      <ChunkSlagSteel>1~3</ChunkSlagSteel>
     </killedLeavingsRanges>
   </ThingDef>
   <ThingDef ParentName="BaseDerelictMech">
@@ -480,11 +473,8 @@
       <MaxHitPoints>1800</MaxHitPoints>
     </statBases>
     <killedLeavingsRanges>
-      <ChunkSlagSteel>1~2</ChunkSlagSteel>
-      <ComponentStamped>0~2</ComponentStamped>
-      <Polyester>5~10</Polyester>
-      <Tungsteel>5~10</Tungsteel>
       <DMS_ChunkSlag>1~2</DMS_ChunkSlag>
+      <ChunkSlagSteel>1~2</ChunkSlagSteel>
     </killedLeavingsRanges>
   </ThingDef>
   <ThingDef ParentName="BaseDerelictMech">
@@ -504,10 +494,8 @@
       <MaxHitPoints>800</MaxHitPoints>
     </statBases>
     <killedLeavingsRanges>
-      <Steel>5~10</Steel>
-      <Polyester>0~15</Polyester>
-      <Tungsteel>0~5</Tungsteel>
       <DMS_ChunkSlag>0~1</DMS_ChunkSlag>
+      <ChunkSlagSteel>0~1</ChunkSlagSteel>
     </killedLeavingsRanges>
   </ThingDef>
 
