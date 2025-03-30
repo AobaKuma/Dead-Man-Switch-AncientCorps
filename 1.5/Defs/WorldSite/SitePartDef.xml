@@ -120,6 +120,8 @@
       <structureLayoutDefs>
         <li>DMSAC_Garage_A</li>
         <li>DMSAC_Garage_B</li>
+        <li>DMSAC_Garage_C</li>
+        <li>DMSAC_Garage_D</li>
       </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
       <filthTypes>

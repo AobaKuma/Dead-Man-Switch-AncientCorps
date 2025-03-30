@@ -536,7 +536,7 @@
         <age>300~400</age>
         <innerPawnDrawOffset>(0,0.01,0.5)</innerPawnDrawOffset>
         <spawnChance>0.1</spawnChance>
-        <damageCount>4~8</damageCount>
+        <damageCount>6~10</damageCount>
         <weaponChance>0.15</weaponChance>
         <weaponRandomRotRange>-25~25</weaponRandomRotRange>
         <weaponDraw>
@@ -584,7 +584,7 @@
         <age>300~400</age>
         <innerPawnDrawOffset>(0,0.01,0)</innerPawnDrawOffset>
         <spawnChance>0.15</spawnChance>
-        <damageCount>3~6</damageCount>
+        <damageCount>5~8</damageCount>
         <weaponChance>0.15</weaponChance>
         <weaponRandomRotRange>-25~25</weaponRandomRotRange>
         <weaponDraw>
@@ -628,7 +628,7 @@
         <age>300~400</age>
         <innerPawnDrawOffset>(0,0.008,0.25)</innerPawnDrawOffset>
         <spawnChance>0.4</spawnChance>
-        <damageCount>2~4</damageCount>
+        <damageCount>4~6</damageCount>
         <weaponChance>0.15</weaponChance>
       </li>
     </modExtensions>
@@ -658,6 +658,7 @@
         </possibleGeneratePawn>
         <innerPawnDrawOffset>(0,0.001,0.25)</innerPawnDrawOffset>
         <spawnChance>0.1</spawnChance>
+        <damageCount>3~9</damageCount>
         <weaponChance>0.5</weaponChance>
         <weaponRandomRotRange>-15~25</weaponRandomRotRange>
         <weaponDraw>
@@ -702,7 +703,7 @@
         <innerPawnDrawOffset>(0,0.001,0.175)</innerPawnDrawOffset>
         <spawnChance>0.3</spawnChance>
         <innerPawnScatterRange>0</innerPawnScatterRange>
-        <damageCount>0~1</damageCount>
+        <damageCount>2~6</damageCount>
         <weaponChance>0.5</weaponChance>
         <weaponRandomRotRange>-15~25</weaponRandomRotRange>
         <weaponDraw>
@@ -742,7 +743,7 @@
         <innerPawnDrawOffset>(0,0.005,0.25)</innerPawnDrawOffset>
         <spawnChance>0.5</spawnChance>
         <weaponChance>0.5</weaponChance>
-        <damageCount>0~1</damageCount>
+        <damageCount>1~3</damageCount>
       </li>
     </modExtensions>
   </ThingDef>

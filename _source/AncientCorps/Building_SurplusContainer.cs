@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace AncientCorps
@@ -8,7 +9,6 @@ namespace AncientCorps
     {
         public bool initialized = false;
         public Graphic openedGraphic = null;
-
         public ModExtension_Lootbox Extension => def.GetModExtension<ModExtension_Lootbox>();
 
         public override Graphic Graphic

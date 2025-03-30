@@ -736,4 +736,37 @@
     <thing>DMSAC_Hole_Empty</thing>
     <rotation>South</rotation>
   </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_TableMachinePrinter_South</defName>
+    <thing>DMS_TableMachinePrinter</thing>
+    <rotation>South</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_Recharger_East</defName>
+    <thing>DMS_Recharger</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_InactivatedLargeMech_East</defName>
+    <thing>DMSAC_Building_InactivatedLargeMech</thing>
+    <rotation>East</rotation>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMS_TableMachinePrinter_North</defName>
+    <thing>DMS_TableMachinePrinter</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_InactivatedMediumMech_North</defName>
+    <thing>DMSAC_Building_InactivatedMediumMech</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Building_RoadBlock_North</defName>
+    <thing>DMSAC_Building_RoadBlock</thing>
+  </KCSG.SymbolDef>
 </Defs>
