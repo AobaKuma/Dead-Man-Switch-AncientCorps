@@ -70,4 +70,7 @@
   <!-- EN: A -->
   <DMSAC_PatrolSquadDesc>一支巡邏部隊已經抵達設施，更多的後續部隊將在更短的時間內陸續增援。</DMSAC_PatrolSquadDesc>
   
+  <DMSAC_CompanyRaid>進攻{0}</DMSAC_CompanyRaid>
+  <DMSAC_CompanyRaid_Desc>一支隸屬於{0}的機兵連隊包圍了你的殖民地，它們是{1}。這些由中繼機體所指揮的機兵將對你的殖民地發起攻擊來抑止殖民地襲擊軍用設施的行為。</DMSAC_CompanyRaid_Desc>
+
 </LanguageData>

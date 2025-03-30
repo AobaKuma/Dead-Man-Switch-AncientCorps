@@ -11,7 +11,6 @@
             <li>Plasfiber</li>
             <li>DMS_CeramicsPlating</li>
             <li>DMS_Ceramics</li>
-            <li>DMS_CombatRation</li>
             <li>DMS_NutrientPort</li>
             <li>DMS_ProstheticLeg</li>
             <li>DMS_ProstheticArm</li>
@@ -56,7 +55,7 @@
     <root Class="ThingSetMaker_RandomOption">
       <options>
         <li MayRequire="aoba.deadmanswitch.mobiledragoon">
-          <weight>1</weight>
+          <weight>10</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -69,7 +68,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>1</weight>
+          <weight>10</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -83,7 +82,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>3</weight>
+          <weight>18</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -98,7 +97,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>3</weight>
+          <weight>20</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -113,14 +112,14 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>10</weight>
+          <weight>30</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
                 <thingDefs>
                   <li>ComponentStamped</li>
-                  <li>ComponentIndustrial</li>
                   <li>ComponentSpacer</li>
+                  <li>ComponentIndustrial</li>
                 </thingDefs>
               </filter>
               <countRange>2~10</countRange>
@@ -128,7 +127,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>10</weight>
+          <weight>30</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -180,6 +179,7 @@
               <filter>
                 <thingDefs>
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_MRE</li>
+                  <li>DMS_CombatRation</li>
                   <li>MealSurvivalPack</li>
                 </thingDefs>
               </filter>

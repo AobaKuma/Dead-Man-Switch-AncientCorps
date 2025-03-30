@@ -23,6 +23,11 @@ namespace AncientCorps
             var a = Current.Game.World.worldObjects.ObjectsAt(Current.Game.CurrentMap.Tile).First();
             a.GetComponent<WorldObjectComp_PatrolSquad>()?.SpawnPatrol();
         }
+        [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
+        private static void Defcon_SpawnCompany()
+        {
+            Current.Game.GetComponent<GameComponent_RaidCompany>().RaidCompany(Find.CurrentMap, null);
+        }
 
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
         private static void Defcon_Down()
@@ -49,11 +54,10 @@ namespace AncientCorps
             Faction faction = Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
             if (faction == null) return;
 
-            if (!LastPilotCheck(faction.RelationKindWith(Faction.OfPlayer)))
-            {
-                SendWarning();
-                Current.Game.GetComponent<GameComponent_DefconLevel>().LevelRise();
-            }
+            if (LastPilotCheck(faction.RelationKindWith(Faction.OfPlayer))) return;
+
+            SendWarning();
+            Current.Game.GetComponent<GameComponent_DefconLevel>().LevelRise();
 
             bool LastPilotCheck(FactionRelationKind factionRelation)
             {

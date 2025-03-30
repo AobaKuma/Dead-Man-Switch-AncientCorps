@@ -35,6 +35,7 @@
       </li>
     </lifeStages>
     <weaponTags>
+      <li>A_MG_Light</li>
       <li>A_MG_Heavy</li>
       <li>DMS_KordMachineGun</li>
     </weaponTags>
@@ -71,6 +72,8 @@
       </li>
     </lifeStages>
     <weaponTags>
+      <li>AssaultRifle</li>
+      <li>MachinePistol</li>
       <li>DMS_ZlobinRifle</li>
       <li>DMS_ZlobinRevolver</li>
     </weaponTags>
@@ -104,6 +107,8 @@
       </li>
     </lifeStages>
     <weaponTags>
+      <li>AssaultRifle</li>
+      <li>DMS_ZlobinRifle</li>
       <li>DMS_VykhlopRifle</li>
     </weaponTags>
     <aiAvoidCover>false</aiAvoidCover>

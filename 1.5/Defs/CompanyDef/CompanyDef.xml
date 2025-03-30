@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AncientCorps.CompanyDef>
+    <defName>DMSAC_GrenadierTeam</defName>
+    <label>Grenadier Team</label>
+    <description>Grenadier Team</description>
+    <squadCountRange>1~2</squadCountRange>
+    <NamePack>DMSAC_Namer_Grenadier</NamePack>
+    <defaultFaction>DMS_AncientCorps</defaultFaction>
+    <squads>
+      <li>
+        <nameDef></nameDef>
+        <leaderKindDef>
+          <li>DMS_Mech_Gorod_Cornetist</li>
+        </leaderKindDef>
+        <fixedPawnkind>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+        </fixedPawnkind>
+        <memberCountRange>2~6</memberCountRange>
+        <memberKindDefs>
+          <li>DMS_Mech_Mushketer_AR</li>
+          <li>DMS_Mech_Mushketer_SAR</li>
+        </memberKindDefs>
+      </li>
+    </squads>
+  </AncientCorps.CompanyDef>
+
+  <RulePackDef>
+    <defName>DMSAC_Namer_Grenadier</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Num] [BrigadeType] [Brigade] company</li>
+
+        <li>BrigadeType->battle</li>
+        <li>BrigadeType->task</li>
+        <li>BrigadeType->strike</li>
+        <li>BrigadeType->patrol</li>
+        <li>BrigadeType->combined</li>
+        <li>BrigadeType->rocket</li>
+        <li>BrigadeType->support</li>
+        <li>BrigadeType->automatic</li>
+
+        <li>Brigade->sapper</li>
+        <li>Brigade->pioneer</li>
+        <li>Brigade->grenadier</li>
+        <li>Brigade->engineer</li>
+
+        <li>Num->1st</li>
+        <li>Num->2nd</li>
+        <li>Num->3rd</li>
+        <li>Num->4th</li>
+        <li>Num->5th</li>
+        <li>Num->6th</li>
+        <li>Num->7th</li>
+        <li>Num->8th</li>
+        <li>Num->9th</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

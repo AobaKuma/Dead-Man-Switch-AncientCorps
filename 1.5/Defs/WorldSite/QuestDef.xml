@@ -100,7 +100,7 @@
                 </li>
               </sitePartsTags>
             </li>
-            <!-- 哨卡(必定生成在道路上) -->
+            <!-- 哨卡(生成在道路上) -->
             <li Class="QuestNode_Sequence">
               <selectionWeight>0.75</selectionWeight>
               <nodes>

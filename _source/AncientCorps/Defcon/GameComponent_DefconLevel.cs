@@ -1,13 +1,9 @@
 ﻿using RimWorld;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using Verse;
-using static HarmonyLib.Code;
-using Verse.AI.Group;
 using Verse.AI;
-using UnityEngine.Diagnostics;
 using UnityEngine;
+using AncientCorps;
 
 namespace AncientCorps
 {
@@ -59,7 +55,6 @@ namespace AncientCorps
                 LevelDown();
                 return;
             }
-
             if (Level > 0)
             {
                 actionInterval--;
@@ -124,7 +119,6 @@ namespace AncientCorps
         {
             if (level < intervalPerLevel.Length) interval = intervalPerLevel[level].RandomInRange;
         }
-
         public void ResetActionInterval()
         {
             float newInterval = actionIntervalRange.RandomInRange * GetCurrentScale;//默認是4~8天*警戒等級倍率，0級 ，5級是
@@ -185,45 +179,6 @@ namespace AncientCorps
             Scribe_Values.Look(ref interval, "Interval", 0);
             Scribe_Values.Look(ref historicalLevel, "HistoricalLevel", 0);
             Scribe_Values.Look(ref actionInterval, "ActionInterval", 0);
-        }
-    }
-    public partial class GameComponent_DefconLevel
-    {
-        public void RaidCompany(Map map, CompanyDef company, int raidPoint, int LordID)
-        {
-            Faction faction = Find.FactionManager.FirstFactionOfDef(company.defaultFaction);
-            if (faction == null) { Log.Error("Company faction have null faction, using pirate instead"); faction = Find.FactionManager.OfPirates; }
-
-            //訊息
-            Find.LetterStack.ReceiveLetter("DMSAC_CompanyRaid".Translate(), "DMSAC_CompanyRaid_Desc".Translate(), LetterDefOf.ThreatBig);
-
-            for (int i = 0; i < company.squadCountRange.RandomInRange; i++)
-            {
-                PlatoonMaker maker = company.squads.RandomElement();
-
-                if (map != null && RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal + 0.2f))
-                {
-                    Pawn leaderPawn = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(maker.leaderKindDef.RandomElement(), faction), result, map, WipeMode.VanishOrMoveAside);
-
-                    List<Pawn> group = new List<Pawn>();
-                    foreach (PawnGenOption pawnOption in maker.fixedPawnkind)
-                    {
-                        for (int j = 0; j < (int)pawnOption.selectionWeight; j++)
-                        {
-                            Pawn squadPawnFix = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(pawnOption.kind, faction), result, map, WipeMode.VanishOrMoveAside);
-                            group.Add(squadPawnFix);
-                        }
-                    }
-
-                    for (int k = 0; k < maker.memberCountRange.RandomInRange; k++)
-                    {
-                        Pawn squadPawnFix = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(maker.memberKindDefs.RandomElement(), faction), result, map, WipeMode.VanishOrMoveAside);
-                        group.Add(squadPawnFix);
-                    }
-                    LordMaker.MakeNewLord(faction, new LordJob_StageThenAttack(faction, result, Rand.Range(1, 10)), map, new List<Pawn>() { leaderPawn });
-                    //TODO，分配Pawn
-                }
-            }
         }
     }
 }
