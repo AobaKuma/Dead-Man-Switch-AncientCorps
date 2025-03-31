@@ -113,4 +113,36 @@
     </weaponTags>
     <aiAvoidCover>false</aiAvoidCover>
   </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseAutomatroidKind">
+    <defName>DMS_Mech_CommandWalker</defName>
+    <label>relay walker</label>
+    <race>DMS_Mech_FieldCommand</race>
+    <defaultFactionType>DMS_AncientCorps</defaultFactionType>
+    <isFighter>true</isFighter>
+    <combatPower>300</combatPower>
+    <maxPerGroup>1</maxPerGroup>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/commandWalker</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.75</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/commandWalker</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.75</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>DMS_ZlobinRifle</li>
+    </weaponTags>
+    <aiAvoidCover>false</aiAvoidCover>
+  </PawnKindDef>
 </Defs>

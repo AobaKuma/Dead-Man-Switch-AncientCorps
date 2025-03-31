@@ -95,7 +95,9 @@
     <Compile Include="Projectile\Projectile_Parabola.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseGen\QuestNode_GetSiteTile.cs" />
+    <Compile Include="ThinkTree\JobGiver_AIDisarmingDistant.cs" />
     <Compile Include="ThinkTree\JobGiver_AIFightEnemiesWhenDefending.cs" />
+    <Compile Include="ThinkTree\JobGiver_AITrashColonyDoorClose.cs" />
     <Compile Include="ThinkTree\JobGiver_FollowDefendedTarget.cs" />
     <Compile Include="ThinkTree\JobGiver_PickUpDefendedTarget.cs" />
     <Compile Include="ThinkTree\JobGiver_PickUpTeammates.cs" />

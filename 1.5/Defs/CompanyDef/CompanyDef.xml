@@ -3,20 +3,19 @@
   <AncientCorps.CompanyDef>
     <defName>DMSAC_GrenadierTeam</defName>
     <label>Grenadier Team</label>
-    <description>Grenadier Team</description>
-    <squadCountRange>1~2</squadCountRange>
+    <description>Grenadier team</description>
+    <squadCountRange>1~4</squadCountRange>
     <NamePack>DMSAC_Namer_Grenadier</NamePack>
     <defaultFaction>DMS_AncientCorps</defaultFaction>
     <squads>
       <li>
-        <nameDef></nameDef>
         <leaderKindDef>
-          <li>DMS_Mech_Gorod_Cornetist</li>
+          <li>DMS_Mech_CommandWalker</li>
         </leaderKindDef>
         <fixedPawnkind>
-          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Gorod_Cornetist>3</DMS_Mech_Gorod_Cornetist>
         </fixedPawnkind>
-        <memberCountRange>2~6</memberCountRange>
+        <memberCountRange>4~15</memberCountRange>
         <memberKindDefs>
           <li>DMS_Mech_Mushketer_AR</li>
           <li>DMS_Mech_Mushketer_SAR</li>

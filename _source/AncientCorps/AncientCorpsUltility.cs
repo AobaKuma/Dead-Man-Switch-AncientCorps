@@ -28,7 +28,6 @@ namespace AncientCorps
         {
             Current.Game.GetComponent<GameComponent_RaidCompany>().RaidCompany(Find.CurrentMap, null);
         }
-
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
         private static void Defcon_Down()
         {

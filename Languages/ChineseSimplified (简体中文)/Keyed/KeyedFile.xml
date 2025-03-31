@@ -64,4 +64,8 @@
   <DMSAC_CorpHostile>增援</DMSAC_CorpHostile>
   <!-- EN: An automatroid patrol has discovered colonists intruding into a military facility. After a brief preparation period, they will attempt to expel your colonists.\n\nBased on intercepted communication frequency fluctuations, nearby automatroid patrols in this area may be on their way to reinforcement. -->
   <DMSAC_CorpHostileDesc>一支机兵巡逻队发现了入侵军事设施的殖民者，它们将在准备一段时间后将对你的殖民者实施驱逐。\n\n根据截获的通讯频率波动，来自周围的其他机兵巡逻队可能正在前来支援的路上。</DMSAC_CorpHostileDesc>
+
+  <DMSAC_CompanyRaid>进攻{0}</DMSAC_CompanyRaid>
+  <DMSAC_CompanyRaid_Desc>一支隶属于{0}的机兵连队包围了你的殖民地，它们是{1}。这些由中继机体所指挥的机兵将对殖民地发起进攻并有目的性的解除非法武装来抑止袭击军用设施的行为。</DMSAC_CompanyRaid_Desc>
+
 </LanguageData>

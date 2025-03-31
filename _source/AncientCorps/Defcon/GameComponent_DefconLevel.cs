@@ -4,6 +4,7 @@ using Verse;
 using Verse.AI;
 using UnityEngine;
 using AncientCorps;
+using System.Linq;
 
 namespace AncientCorps
 {
@@ -155,21 +156,32 @@ namespace AncientCorps
                     //對最近的敵對NPC基地實施攻擊，有50%機率佔領。
                     if (Rand.Chance(0.5f)) { AncientCorpsUltility.TriggerTakeover(); return; }
 
-                    //對玩家實施連級襲擊
+                    TryTriggerCompanyRaid();
                     break;
                 case 4://1~2天
                     //對最近的敵對NPC基地實施攻擊，有50%機率佔領。
                     if (Rand.Chance(0.5f)) { AncientCorpsUltility.TriggerTakeover(); return; }
 
-                    //對玩家實施重型機兵連襲擊
+                    TryTriggerCompanyRaid();
                     break;
                 case 5: //0.8~1.6天
                     //對最近的敵對NPC基地實施攻擊，有75%機率佔領。
                     if (Rand.Chance(0.75f)) { AncientCorpsUltility.TriggerTakeover(); return; }
 
-                    //對玩家實施稜堡洪流襲擊
+                    TryTriggerCompanyRaid();
                     //玩家攻擊設施時會遭到襲擊。
                     break;
+            }
+        }
+        public void TryTriggerCompanyRaid()
+        {
+            Faction faction = Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
+            if (faction == null && !faction.HostileTo(Faction.OfPlayer)) return;
+            Map map = Find.AnyPlayerHomeMap;
+            if (map != null)
+            {
+                CompanyDef company = DefDatabase<CompanyDef>.AllDefsListForReading.Where(x => x.defaultFaction == DMS_DefOf.DMS_AncientCorps).RandomElement();
+                Current.Game.GetComponent<GameComponent_RaidCompany>().RaidCompany(map, company);
             }
         }
         public override void ExposeData()

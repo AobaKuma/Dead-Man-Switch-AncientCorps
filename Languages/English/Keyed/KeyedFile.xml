@@ -36,4 +36,8 @@
 
   <DMSAC_CorpHostile>Reinforcement</DMSAC_CorpHostile>
   <DMSAC_CorpHostileDesc>An automatroid patrol has discovered colonists intruding into a military facility. After a brief preparation period, they will attempt to expel your colonists.\n\nBased on intercepted communication frequency fluctuations, nearby automatroid patrols in this area may be on their way to reinforcement.</DMSAC_CorpHostileDesc>
+ 
+  <DMSAC_CompanyRaid>Attack {0}</DMSAC_CompanyRaid>
+  <DMSAC_CompanyRaid_Desc>A company of automatroids belonging to {0} has surrounded your colony. They are {1}. These automatroids commanded by relay-commanders will launch attacks on colonies and purposefully disarm illegal forces to discourage attacks on their military facilities.</DMSAC_CompanyRaid_Desc>
+
 </LanguageData>

@@ -22,12 +22,12 @@ namespace AncientCorps
             LordToil_DefendTargetAndAssaultColony lordToil_Attack = new LordToil_DefendTargetAndAssaultColony();
             stateGraph.AddToil(lordToil_Attack);
             
-            LordToil_ExitMap lordToil_ExitMap = new LordToil_PickUpTeammatesAndExitMap(LocomotionUrgency.Jog, true, true);
+            LordToil_ExitMap lordToil_ExitMap = new LordToil_PickUpTeammatesAndExitMap(LocomotionUrgency.Sprint, true, true);
             lordToil_ExitMap.useAvoidGrid = true;
             stateGraph.AddToil(lordToil_ExitMap);
             
             Transition transitionA = new Transition(lordToil_Attack, lordToil_ExitMap, true, true);
-            transitionA.AddTrigger(new Trigger_PawnLost(PawnLostCondition.Incapped, defendedTarget));
+            transitionA.AddTrigger(new Trigger_PawnLost(PawnLostCondition.Killed, defendedTarget));
             stateGraph.AddTransition(transitionA, true);
             
             LordToil lordToil_AssaultColony = new LordToil_AssaultColony(false, false);
@@ -35,7 +35,7 @@ namespace AncientCorps
             stateGraph.AddToil(lordToil_AssaultColony);
             
             Transition transitionB = new Transition(lordToil_Attack, lordToil_AssaultColony, true, true);
-            transitionB.AddTrigger(new Trigger_PawnLost(PawnLostCondition.Undefined, defendedTarget));
+            transitionB.AddTrigger(new Trigger_PawnLost(PawnLostCondition.Incapped, defendedTarget));
             stateGraph.AddTransition(transitionB, false);
 
             int timeoutTicks = new IntRange(26000, 38000).RandomInRange;

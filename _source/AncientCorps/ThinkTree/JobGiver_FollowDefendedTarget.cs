@@ -15,9 +15,11 @@ namespace AncientCorps
                 return null;
             }
             Job job = JobMaker.MakeJob(JobDefOf.Follow, pawnToFollow);
-            job.locomotionUrgency = LocomotionUrgency.Walk;
+            job.locomotionUrgency = LocomotionUrgency.Sprint;
+            job.canBashDoors = true;
+            job.canUseRangedWeapon = true;
             job.checkOverrideOnExpire = true;
-            job.expiryInterval = 120;
+            job.expiryInterval = 240;
             return job;
         }
         public const float FollowDistance = 15f;

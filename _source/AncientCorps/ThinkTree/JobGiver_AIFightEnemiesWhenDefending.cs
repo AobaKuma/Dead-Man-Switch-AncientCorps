@@ -25,13 +25,13 @@ namespace AncientCorps
         }
         private static bool HasWeapon(Pawn pawn)
         {
-            if (pawn.equipment.Primary != null)
+            if (pawn.equipment?.Primary != null)
             {
                 return true;
             }
             foreach (var comp in pawn.AllComps)
             {
-                if (comp is CompTurretGun gun && gun.AutoAttack)
+                if (comp.GetType().IsAssignableFrom(typeof(CompTurretGun)) && (comp as CompTurretGun).AutoAttack)
                 {
                     return true;
                 }

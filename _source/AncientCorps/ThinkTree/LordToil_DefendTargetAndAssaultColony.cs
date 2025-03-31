@@ -12,7 +12,7 @@ namespace AncientCorps
         private static void LetPawnExit(Pawn victim)
         {
             PawnDuty pawnDuty = new PawnDuty(DutyDefOf.ExitMapBest);
-            pawnDuty.locomotion = LocomotionUrgency.Jog;
+            pawnDuty.locomotion = LocomotionUrgency.Sprint;
             pawnDuty.canDig = false;
             victim.mindState.duty = pawnDuty;
             if (victim.jobs.curJob != null)
