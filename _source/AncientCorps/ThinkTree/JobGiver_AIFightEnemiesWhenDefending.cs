@@ -10,13 +10,13 @@ namespace AncientCorps
     {
         protected override bool ExtraTargetValidator(Pawn pawn, Thing target)
         {
-            if (!base.ExtraTargetValidator(pawn,target))
+            if (!base.ExtraTargetValidator(pawn, target))
             {
                 return false;
             }
             if (target is Pawn pawnTarget)
             {
-                if (!HasWeapon(pawnTarget)  && (pawn.Position - pawnTarget.Position).SqrMagnitude >= 5 * 5)
+                if (!HasWeapon(pawnTarget) && (pawn.Position - pawnTarget.Position).SqrMagnitude >= 5 * 5)
                 {
                     return false;
                 }

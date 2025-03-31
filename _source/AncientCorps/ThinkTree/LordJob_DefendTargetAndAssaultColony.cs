@@ -27,7 +27,8 @@ namespace AncientCorps
             stateGraph.AddToil(lordToil_ExitMap);
             
             Transition transitionA = new Transition(lordToil_Attack, lordToil_ExitMap, true, true);
-            transitionA.AddTrigger(new Trigger_PawnLost(PawnLostCondition.Killed, defendedTarget));
+            transitionA.AddTrigger(new Trigger_PawnLost(PawnLostCondition.Undefined, defendedTarget));
+            transitionA.AddPreAction(new TransitionAction_Message("MessageRaidersLeaving".Translate(this.AssaulterFaction.def.pawnsPlural.CapitalizeFirst(), this.AssaulterFaction.Name), null, 1f));
             stateGraph.AddTransition(transitionA, true);
             
             LordToil lordToil_AssaultColony = new LordToil_AssaultColony(false, false);
@@ -35,7 +36,7 @@ namespace AncientCorps
             stateGraph.AddToil(lordToil_AssaultColony);
             
             Transition transitionB = new Transition(lordToil_Attack, lordToil_AssaultColony, true, true);
-            transitionB.AddTrigger(new Trigger_PawnLost(PawnLostCondition.Incapped, defendedTarget));
+            transitionB.AddTrigger(new Trigger_PawnLost(PawnLostCondition.Undefined, defendedTarget));
             stateGraph.AddTransition(transitionB, false);
 
             int timeoutTicks = new IntRange(26000, 38000).RandomInRange;
