@@ -522,11 +522,14 @@
     <color>DMSAC_Structure_Olive</color>
   </KCSG.SymbolDef>
 
+
+<!-- 測試 -->
   <KCSG.SymbolDef>
     <defName>Shelf_Steel_Olive_North</defName>
     <thing>Shelf</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Olive</color>
+    <thingSetMakerDef>DMSAC_CrateLoots</thingSetMakerDef>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
@@ -602,6 +605,7 @@
     <color>Structure_GrayLight</color>
     <rotation>South</rotation>
   </KCSG.SymbolDef>
+  
   <KCSG.SymbolDef>
     <defName>DMSAC_Building_BarrierGate_South</defName>
     <thing>DMSAC_Building_BarrierGate</thing>
@@ -768,5 +772,43 @@
   <KCSG.SymbolDef>
     <defName>DMSAC_Building_RoadBlock_North</defName>
     <thing>DMSAC_Building_RoadBlock</thing>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Wall_Steel_Green</defName>
+    <thing>Wall</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Wall_A_Green</defName>
+    <thing>DMSAC_Wall_A</thing>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Wall_C_Green</defName>
+    <thing>DMSAC_Wall_C</thing>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Wall_B_Green</defName>
+    <thing>DMSAC_Wall_B</thing>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Door_WoodLog_Green</defName>
+    <thing>Door</thing>
+    <stuff>WoodLog</stuff>
+    <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>Door_Steel_Green</defName>
+    <thing>Door</thing>
+    <stuff>Steel</stuff>
+    <color>DMSAC_Structure_Green</color>
   </KCSG.SymbolDef>
 </Defs>

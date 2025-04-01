@@ -782,6 +782,7 @@
     </building>
     <pathCost>90</pathCost>
   </ThingDef>
+
   <ThingDef ParentName="DMSAC_BaseLootBox">
     <defName>DMSAC_Cargo</defName>
     <label>cargo container</label>
@@ -1175,7 +1176,6 @@
     <pollutionColor>(1, 1, 1, 0.8)</pollutionColor>
     <pollutionOverlayScale>(0.75, 0.75)</pollutionOverlayScale>
   </TerrainDef>
-  
   
   <ThingDef ParentName="DMSACDoorBase">
     <defName>DMSAC_RCdoor</defName>

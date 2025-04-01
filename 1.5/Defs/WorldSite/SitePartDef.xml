@@ -51,7 +51,7 @@
   <SitePartDef>
     <defName>DMSAC_Checkpoint</defName>
     <label>military checkpoint</label>
-    <description>A military checkpoint on the path, also serves as a transit station for the mechanized patrol unit, several automatroid garrisons are protecting this position.</description>
+    <description>A military checkpoint on the path, also serves as a transit station for the automatroid patrols, several automatroid garrisons are protecting this position.</description>
     <siteTexture>UI/Icons/Checkpoint_Site</siteTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <expandingIconTexture>UI/Icons/Checkpoint_Icon</expandingIconTexture>
@@ -168,6 +168,58 @@
       <preventBridgeable>true</preventBridgeable>
       <symbolResolvers>
         <li>kcsg_storagezone</li>
+        <li>kcsg_randomitemremoval</li>
+      </symbolResolvers>
+    </genStep>
+  </GenStepDef>
+
+  
+  <SitePartDef>
+    <defName>DMSAC_LogisticTerminal</defName>
+    <label>logistic terminal</label>
+    <!-- 一個自動運行的前線物資終端站，透過自動砲塔與不間斷巡邏的機兵巡邏隊防守。這樣的小型終端站是為那些進行特遣任務的連級機兵部隊所供他們彈藥補充與回收受損的機兵。 -->
+    <description>An automatically operated frontline supply terminal, defended by automatic turrets and automatroid patrols. Such small terminals are used by company-level automatroid squads to replenish ammunition and recycle damaged automatroids.</description>
+    <siteTexture>UI/Icons/LogisticTerminal_Site</siteTexture>
+    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <expandingIconTexture>UI/Icons/LogisticTerminal_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(100, 1, 100)</minMapSize>
+    <tags>
+      <li>DMSAC_LogisticTerminal</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_LogisticTerminal</defName>
+    <linkWithSite>DMSAC_LogisticTerminal</linkWithSite>
+    <order>470</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_LogisticTerminal_A</li>
+        <li>DMSAC_LogisticTerminal_B</li>
+        <li>DMSAC_LogisticTerminal_C</li>
+        <li>DMSAC_LogisticTerminal_D</li>
+        <li>DMSAC_LogisticTerminal_E</li>
+        <li>DMSAC_LogisticTerminal_F</li>
+        <li>DMSAC_LogisticTerminal_G</li>
+        <li>DMSAC_LogisticTerminal_H</li>
+        <li>DMSAC_LogisticTerminal_I</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <filthTypes>
+        <li>Filth_Dirt</li>
+        <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
+      </filthTypes>
+      <symbolResolvers>
+        <li>kcsg_storagezone</li>
+        <li>kcsg_randomfilth</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
     </genStep>

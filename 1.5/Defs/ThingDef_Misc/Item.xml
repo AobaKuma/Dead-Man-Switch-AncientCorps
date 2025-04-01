@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 <!-- Boss召喚器 -->
-  <ThingDef ParentName="ResourceBase"> 
-    <defName>DMS_FacilityIntel</defName>
-    <label>facility intel</label>
-    <description>A intel map about the location of a military facility.</description>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Resource/EncryptedTransmitter</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
+  <ThingDef ParentName="ResourceBase" Name="DMSAC_SiteIntel" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
+    <tickerType>Normal</tickerType>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
     <useHitPoints>true</useHitPoints>
     <stackLimit>1</stackLimit>
@@ -31,6 +24,22 @@
       <li>RewardStandardCore</li>
     </thingSetMakerTags>
     <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <delayTicks>120</delayTicks>
+        <spawnKilledLeavings>false</spawnKilledLeavings>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_SiteIntel"> 
+    <defName>DMS_FacilityIntel</defName>
+    <label>facility intel</label>
+    <description>A intel map about the location of a military facility.</description>
+    <graphicData>
+      <texPath>Things/Resource/EncryptedTransmitter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <comps>  
       <li Class="CompProperties_Usable">
         <useJob>UseItem</useJob>
@@ -41,9 +50,26 @@
       <li Class="CompProperties_UseEffectGiveQuest">
         <quest>DMSAC_OpportunitySite_Graveyard</quest>
       </li>
-      <li Class="CompProperties_UseEffectDestroySelf">
-        <delayTicks>120</delayTicks>
-        <spawnKilledLeavings>false</spawnKilledLeavings>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_SiteIntel"> 
+    <defName>DMS_SiteIntel</defName>
+    <label>site intel</label>
+    <description>A intel map about the location of a small military site.</description>
+    <graphicData>
+      <texPath>Things/Resource/EncryptedTransmitter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>  
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Analyzing facility intel</useLabel>
+        <useDuration>900</useDuration>
+        <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
+      </li>
+      <li Class="CompProperties_UseEffectGiveQuest">
+        <quest>DMSAC_OpportunitySite_LogisticTerminal</quest>
       </li>
     </comps>
   </ThingDef>
