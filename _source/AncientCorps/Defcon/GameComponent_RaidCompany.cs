@@ -16,7 +16,6 @@ namespace AncientCorps
         {
             base.ExposeData();
         }
-
         public void RaidCompany(Map map, CompanyDef company)
         {
             if (company == null) company = DefDatabase<CompanyDef>.GetRandom();
