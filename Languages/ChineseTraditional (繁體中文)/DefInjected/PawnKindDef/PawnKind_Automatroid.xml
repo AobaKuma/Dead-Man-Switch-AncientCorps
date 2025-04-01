@@ -4,10 +4,13 @@
   <!-- EN: battle walker -->
   <DMS_Mech_BattleWalker.label>BF-L/M "戰鬥步行者"</DMS_Mech_BattleWalker.label>
   
+  <!-- EN: relay walker -->
+  <DMS_Mech_CommandWalker.label>BF-R/M "中繼步行者"</DMS_Mech_CommandWalker.label>
+  
   <!-- EN: mushketer -->
   <DMS_Mech_Mushketer_AR.label>MS-2A "短銃士"</DMS_Mech_Mushketer_AR.label>
   
   <!-- EN: mushketer -->
-  <DMS_Mech_Mushketer_SAR.label>MS-2A "短銃士"</DMS_Mech_Mushketer_SAR.label>
+  <DMS_Mech_Mushketer_SAR.label>MS-2A/DMR "長銃士"</DMS_Mech_Mushketer_SAR.label>
   
 </LanguageData>

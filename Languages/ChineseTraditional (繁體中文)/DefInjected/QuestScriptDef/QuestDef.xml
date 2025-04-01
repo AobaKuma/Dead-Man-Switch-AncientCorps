@@ -3,7 +3,7 @@
   
   <!-- EN:
     <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
-    <li>questDescription(asker_factionLeader==True)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+    <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
   -->
   <DMSAC_OpportunitySite_Graveyard.questDescriptionRules.rulesStrings>
     <li>questDescription(askerIsNull==true)->根據分析的數據，我們在距離不遠的地方定位了一處古代機兵部隊的軍用設施。\n\n似乎[allSitePartsDescriptions]</li>
@@ -25,9 +25,9 @@
   <DMSAC_OpportunitySite_Graveyard.questNameRules.rulesStrings>
     <li>questName(priority=1)->[asker_nameDef]的[stash][treasure]</li>
     <li>questName->[stash][treasure]</li>
-    <li>stash->殘骸集散地</li>
-    <li>stash->臨時棄置點</li>
-    <li>stash->機兵墳場</li>
+    <li>stash->集散地</li>
+    <li>stash->設施</li>
+    <li>stash->站點</li>
     <li>treasure->拾荒</li>
     <li>treasure->回收</li>
     <li>treasure->襲擊</li>
@@ -37,6 +37,44 @@
   <!-- EN: Quest expired: [resolvedQuestName] -->
   <DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>任務過期: [resolvedQuestName]</DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>
   <!-- EN: Intercepted communications indicate the facility has moved position or being claimed by others. The quest [resolvedQuestName] has expired. -->
-  <DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>截獲的通訊表示該棄置點內的廢棄機兵已被拾荒者回收。任務[resolvedQuestName]已過期。</DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>
+  <DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>截獲的通訊表示該設施已轉移位置。任務[resolvedQuestName]已過期。</DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>
+  
+  <!-- EN:
+    <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
+    <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+  -->
+  <DMSAC_OpportunitySite_LogisticTerminal.questDescriptionRules.rulesStrings>
+    <li>questDescription(askerIsNull==true)->根據分析的數據，我們在距離不遠的地方定位了一處古代機兵部隊的軍用設施。\n\n似乎[allSitePartsDescriptions]</li>
+    <li>questDescription(asker_factionLeader==True)->根據分析的數據結合此前來自[asker_faction_name]的[asker_faction_leaderTitle][asker_nameDef]所透漏的模糊訊息。我們確認不遠處有一處古代機兵部隊的軍用設施。\n\n[asker_label]曾表示這裡可能[allSitePartsDescriptions]</li>
+  </DMSAC_OpportunitySite_LogisticTerminal.questDescriptionRules.rulesStrings>
+  <!-- EN:
+    <li>questName(priority=1)->[asker_nameDef]'s [stash] of [treasure]</li>
+    <li>questName->[stash] of [treasure]</li>
+    <li>stash->Stash</li>
+    <li>stash->Cache</li>
+    <li>stash->Collection</li>
+    <li>stash->Shack</li>
+    <li>treasure->Treasure</li>
+    <li>treasure->Valuables</li>
+    <li>treasure->Fortune</li>
+    <li>treasure->Goodies</li>
+    <li>treasure->Supplies</li>
+  -->
+  <DMSAC_OpportunitySite_LogisticTerminal.questNameRules.rulesStrings>
+    <li>questName(priority=1)->[asker_nameDef]的[stash][treasure]</li>
+    <li>questName->[stash][treasure]</li>
+    <li>stash->集散地</li>
+    <li>stash->設施</li>
+    <li>stash->站點</li>
+    <li>treasure->拾荒</li>
+    <li>treasure->回收</li>
+    <li>treasure->襲擊</li>
+    <li>treasure->潛入</li>
+    <li>treasure->盜竊</li>  
+  </DMSAC_OpportunitySite_LogisticTerminal.questNameRules.rulesStrings>
+  <!-- EN: Quest expired: [resolvedQuestName] -->
+  <DMSAC_OpportunitySite_LogisticTerminal.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>任務過期: [resolvedQuestName]</DMSAC_OpportunitySite_LogisticTerminal.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>
+  <!-- EN: Intercepted communications indicate the station has moved position or being claimed by others. The quest [resolvedQuestName] has expired. -->
+  <DMSAC_OpportunitySite_LogisticTerminal.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>截獲的通訊表示該站點已轉移位置。任務[resolvedQuestName]已過期。</DMSAC_OpportunitySite_LogisticTerminal.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>
   
 </LanguageData>

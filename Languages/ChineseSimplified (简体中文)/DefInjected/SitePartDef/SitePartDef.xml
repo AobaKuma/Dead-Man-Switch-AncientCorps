@@ -36,5 +36,14 @@
   <DMSAC_Graveyard.approachingReportString>入侵{0}</DMSAC_Graveyard.approachingReportString>
   <!-- EN: Investigate {0} -->
   <DMSAC_Graveyard.approachOrderString>入侵{0}</DMSAC_Graveyard.approachOrderString>
+    
+  <!-- EN: logistic terminal -->
+  <DMSAC_LogisticTerminal.label>物流終端站</DMSAC_LogisticTerminal.label>
+  <!-- EN: An automatically operated frontline supply terminal, defended by automatic turrets and automatroid patrols. Such small terminals are used by company-level automatroid squads to replenish ammunition and recycle damaged automatroids. -->
+  <DMSAC_LogisticTerminal.description>一個自動運行的前線物流站，透過自動砲塔與不間斷巡邏的機兵巡邏隊防守。這樣的小型終端站是為那些進行特遣任務的連級機兵部隊所供它們進行彈藥補充與回收受損的機兵。</DMSAC_LogisticTerminal.description>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_LogisticTerminal.approachingReportString>入侵{0}</DMSAC_LogisticTerminal.approachingReportString>
+  <!-- EN: Investigate {0} -->
+  <DMSAC_LogisticTerminal.approachOrderString>入侵{0}</DMSAC_LogisticTerminal.approachOrderString>
   
 </LanguageData>

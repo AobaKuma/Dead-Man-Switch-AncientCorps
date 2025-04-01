@@ -4,4 +4,7 @@
   <!-- EN: automatroid graveyard -->
   <DMSAC_Graveyard.label>机兵坟场</DMSAC_Graveyard.label>
   
+    <!-- EN: logistic terminal -->
+  <DMSAC_LogisticTerminal.label>物流终端站</DMSAC_LogisticTerminal.label>
+  
 </LanguageData>

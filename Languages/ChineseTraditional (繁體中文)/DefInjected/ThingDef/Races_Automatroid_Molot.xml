@@ -7,5 +7,9 @@
   <DMS_Mech_Molot.description>6M23 / BR-3 "磨坊"是一種能裝備並使用輕中型步兵武器的中型機兵。在過去的時代是應對裝甲無人化程度遽增的軍備競賽而生，其設計理念是作為裝甲部隊中的步兵戰鬥平台。具備出色的戰鬥能力、簡單的結構與優秀的武器搭載能力。</DMS_Mech_Molot.description>
   <!-- EN: head -->
   <DMS_Mech_Molot.tools.head.label>機身</DMS_Mech_Molot.tools.head.label>
+  <!-- EN: left fist -->
+  <DMS_Mech_Molot.tools.left_fist.label>左手</DMS_Mech_Molot.tools.left_fist.label>
+  <!-- EN: right fist -->
+  <DMS_Mech_Molot.tools.right_fist.label>右手</DMS_Mech_Molot.tools.right_fist.label>
   
 </LanguageData>

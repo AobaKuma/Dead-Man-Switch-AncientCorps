@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+    <!-- EN: electirc arc furnace -->
+  <DMSAC_ArcFurnace.label>电弧炉</DMSAC_ArcFurnace.label>
+  <!-- EN: A heavy machinery that recycles all sort of metallic pieces into steel, will generates a lot of heat. -->
+  <DMSAC_ArcFurnace.description>将金属残骸与碎片回收为可用金属原料的重型机械，在运作时会产生大量的热。</DMSAC_ArcFurnace.description>
+
   <!-- EN: Process Array -->
   <DMSAC_BandNode.label>处理阵列</DMSAC_BandNode.label>
   <!-- EN: An array machine processes the received signal and directs it to a specific mechanitor. This adds 4 bandwidth to that mechanitor's total, allowing them to control more mechanoids.\n\nOnce a process array is constructed, it can be quickly tuned to a mechanitor. However, returning a band node to a different mechanitor takes significantly longer.\n\nThis Device follows the N.A.C.S. protocol so only Mechlinks with following the protocol can receieve the service. -->
@@ -14,7 +18,7 @@
   <!-- EN: Barrier Gate -->
   <DMSAC_Building_BarrierGate.label>升降门</DMSAC_Building_BarrierGate.label>
   <!-- EN: A barrier gate. -->
-  <DMSAC_Building_BarrierGate.description>一个象征性阻拦通行的升降杆，当然如果你执意要越过那么就会有别的东西来阻饶你。</DMSAC_Building_BarrierGate.description>
+  <DMSAC_Building_BarrierGate.description>一个象征性阻拦通行的升降杆，当然如果你执意要越过那幺就会有别的东西来阻饶你。</DMSAC_Building_BarrierGate.description>
   
   <!-- EN: large automatroid derelict -->
   <DMSAC_Building_DeactivatedLargeMech.label>大型废弃机兵</DMSAC_Building_DeactivatedLargeMech.label>
@@ -79,8 +83,13 @@
   <!-- EN: lift Shaft -->
   <DMSAC_Building_LiftShaft_Bottom.label>设施升降井</DMSAC_Building_LiftShaft_Bottom.label>
   <!-- EN: A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate. -->
-  <DMSAC_Building_LiftShaft_Bottom.description>一座能通向设施地下楼层的巨型电梯竖井，其平台本身大到足以运输载具。但很显然升降平台本身被这座设施的安全系统锁定了，不过似乎可以透过检修用的梯子进入。</DMSAC_Building_LiftShaft_Bottom.description>
+  <DMSAC_Building_LiftShaft_Bottom.description>一座能在地下设施楼层之间通行的巨型电梯竖井，其平台本身大到足以运输载具。但很显然升降平台本身被这座设施的安全系统锁定了，不过似乎可以透过检修用的梯子进入。</DMSAC_Building_LiftShaft_Bottom.description>
   
+  <!-- EN: lift Shaft -->
+  <DMSAC_Building_LiftShaft_Bottom_B.label>设施升降井</DMSAC_Building_LiftShaft_Bottom_B.label>
+  <!-- EN: A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate. -->
+  <DMSAC_Building_LiftShaft_Bottom_B.description>一座能在地下设施楼层之间通行的巨型电梯竖井，其平台本身大到足以运输载具。但很显然升降平台本身被这座设施的安全系统锁定了，不过似乎可以透过检修用的梯子进入。</DMSAC_Building_LiftShaft_Bottom_B.description>
+
   <!-- EN: road barrier -->
   <DMSAC_Building_RoadBlock.label>水泥路障</DMSAC_Building_RoadBlock.label>
   <!-- EN: A road barrier designed to block vehicle, it also provides cover on gun fighting. -->
@@ -110,7 +119,12 @@
   <DMSAC_GestaltEngine.label>中央司令核心</DMSAC_GestaltEngine.label>
   <!-- EN: A command core used to coordinate large-scaled automatroid squads, it have the ability to independently command and support an entire combined combat brigade without any further assist. -->
   <DMSAC_GestaltEngine.description>一种用于指挥机兵部队的大型控制核心，具有独自指挥并保障一支合成作战旅的能力。在过去的次世代战争发生前无数这样的控制核心直接或间接的指挥着地球上近九成的正规军队，并在五个各据一方的AI指挥下让地球上近半的陆地与海洋都沦为了它们的交战区。</DMSAC_GestaltEngine.description>
-  
+
+  <!-- EN: pyrolysis plant -->
+  <DMSAC_HeavyChem.label>裂解炉</DMSAC_HeavyChem.label>
+  <!-- EN: A heavy machinery that recycles all sort of organic pieces into chemfuel, will generates a lot of heat. -->
+  <DMSAC_HeavyChem.description>将有机物质回收成化合燃料的重型机械，在运作时会产生大量的热。</DMSAC_HeavyChem.description>
+    
   <!-- EN: facility dormer -->
   <DMSAC_Hole_Empty.label>设施天井</DMSAC_Hole_Empty.label>
   <!-- EN: A structure flooring with a opened hole, commonly found in underground facilities. -->

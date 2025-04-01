@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN:
+    <li>r_name->[Num] [BrigadeType] [Brigade] company</li>
+    <li>BrigadeType->battle</li>
+    <li>BrigadeType->task</li>
+    <li>BrigadeType->strike</li>
+    <li>BrigadeType->patrol</li>
+    <li>BrigadeType->combined</li>
+    <li>BrigadeType->rocket</li>
+    <li>BrigadeType->support</li>
+    <li>BrigadeType->automatic</li>
+    <li>Brigade->sapper</li>
+    <li>Brigade->pioneer</li>
+    <li>Brigade->grenadier</li>
+    <li>Brigade->engineer</li>
+    <li>Num->1st</li>
+    <li>Num->2nd</li>
+    <li>Num->3rd</li>
+    <li>Num->4th</li>
+    <li>Num->5th</li>
+    <li>Num->6th</li>
+    <li>Num->7th</li>
+    <li>Num->8th</li>
+    <li>Num->9th</li>
+  -->
+  <DMSAC_Namer_Grenadier.rulePack.rulesStrings>
+    <li>r_name->[Num][BrigadeType][Brigade]连</li>
+    <li>BrigadeType->战斗</li>
+    <li>BrigadeType->特遣</li>
+    <li>BrigadeType->强袭</li>
+    <li>BrigadeType->巡逻</li>
+    <li>BrigadeType->合成</li>
+    <li>BrigadeType->火箭</li>
+    <li>BrigadeType->先遣</li>
+    <li>BrigadeType->自动</li>
+    <li>Brigade->工兵</li>
+    <li>Brigade->支援</li>
+    <li>Brigade->掷弹兵</li>
+    <li>Brigade->工程</li>
+    <li>Num->第一</li>
+    <li>Num->第二</li>
+    <li>Num->第三</li>
+    <li>Num->第四</li>
+    <li>Num->第五</li>
+    <li>Num->第六</li>
+    <li>Num->第七</li>
+    <li>Num->第八</li>
+    <li>Num->第九</li>
+  </DMSAC_Namer_Grenadier.rulePack.rulesStrings>
+  
+</LanguageData>

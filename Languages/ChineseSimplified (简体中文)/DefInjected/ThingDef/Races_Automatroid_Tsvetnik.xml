@@ -7,5 +7,9 @@
   <DMS_Mech_Tsvetnik.description>一种为空降部队提供曲射支援的中型机兵，装备有一门迫击砲来提供即时的曲射与直射支援。</DMS_Mech_Tsvetnik.description>
   <!-- EN: head -->
   <DMS_Mech_Tsvetnik.tools.head.label>机体</DMS_Mech_Tsvetnik.tools.head.label>
+    <!-- EN: left fist -->
+  <DMS_Mech_Tsvetnik.tools.left_fist.label>左手</DMS_Mech_Tsvetnik.tools.left_fist.label>
+  <!-- EN: right fist -->
+  <DMS_Mech_Tsvetnik.tools.right_fist.label>右手</DMS_Mech_Tsvetnik.tools.right_fist.label>
   
 </LanguageData>

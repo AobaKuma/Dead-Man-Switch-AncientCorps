@@ -16,8 +16,10 @@
       <li Class="WorldObjectCompProperties_TradeRequest" />
       <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
       <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
-        <MBTTime>30000</MBTTime>
+        <MBTTime>15000</MBTTime>
         <spawnCountSigma>2</spawnCountSigma>
+        <averagePawnCount>2</averagePawnCount>
+        <patrolCountToRaiseLevel>4</patrolCountToRaiseLevel>
         <possibleGeneratePawn>
           <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
           <DMS_Mech_Molot>1</DMS_Mech_Molot>
