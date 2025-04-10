@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Pravda -->
+  <DMS_Mech_Pravda.label>真理</DMS_Mech_Pravda.label>
+  <!-- EN: Originally designed to breach fortified zones and expansive no-man's lands, this all-terrain unmanned assault gun is armed with a 155mm cannon to strike permanent fortifications from long distances. It relies on rocket-deployed explosive charges to clear safe paths through minefields. -->
+  <DMS_Mech_Pravda.description>在过去为突破工事群与其广阔无人区而设计的超重型突击砲机兵，具有一门155毫米加农砲用以在长距离外打击永固工事，并能够依靠火箭推进释放的炸药索来在地雷原中为友军清出安全通道。</DMS_Mech_Pravda.description>
+  <!-- EN: left leg -->
+  <DMS_Mech_Pravda.tools.left_leg.label>左腿</DMS_Mech_Pravda.tools.left_leg.label>
+  <!-- EN: right leg -->
+  <DMS_Mech_Pravda.tools.right_leg.label>右腿</DMS_Mech_Pravda.tools.right_leg.label>
+  <!-- EN: head -->
+  <DMS_Mech_Pravda.tools.head.label>机体</DMS_Mech_Pravda.tools.head.label>
+  
+</LanguageData>

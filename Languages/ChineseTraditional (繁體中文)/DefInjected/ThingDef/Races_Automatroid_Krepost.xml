@@ -5,16 +5,16 @@
   <DMS_Mech_Krepost.label>稜堡</DMS_Mech_Krepost.label>
   <!-- EN: 6M41 / BR-6 "Krepost" NATO nicknamed "TankHead". Huge and bulky walker, used as a bridgehead and mobile battery to maintain frontal battlefield firepower, Krepost is equipped with several active protection system and reactive armors to resist incoming projectiles. Even if the shields are exhausted, its huge size and weapon systems are sufficient at holding off incoming enemies until reinforcements arrive. -->
   <DMS_Mech_Krepost.description>龐大且笨重的步行堡壘，作為維持正面戰場火力的橋頭堡，稜堡型機兵搭載了主動式防禦系統與反應裝甲來抵禦來襲的導彈，而即便耗光了所有搭載的護盾，其巨大的體積與裝甲也足夠在後援抵達之前持續的抵擋住任何的來犯之敵。</DMS_Mech_Krepost.description>
-  <!-- EN: Mechanical Head -->
-  <DMS_Mech_Krepost.tools.Mechanical_Head.label>機身</DMS_Mech_Krepost.tools.Mechanical_Head.label>
-  <!-- EN: Left Leg -->
-  <DMS_Mech_Krepost.tools.Left_Leg.label>左機械腿</DMS_Mech_Krepost.tools.Left_Leg.label>
-  <!-- EN: Right Leg -->
-  <DMS_Mech_Krepost.tools.Right_Leg.label>右機械腿</DMS_Mech_Krepost.tools.Right_Leg.label>
+  <!-- EN: left leg -->
+  <DMS_Mech_Krepost.tools.left_leg.label>左機械腿</DMS_Mech_Krepost.tools.left_leg.label>
+  <!-- EN: right leg -->
+  <DMS_Mech_Krepost.tools.right_leg.label>右機械腿</DMS_Mech_Krepost.tools.right_leg.label>
+  <!-- EN: head -->
+  <DMS_Mech_Krepost.tools.head.label>機身</DMS_Mech_Krepost.tools.head.label>
   
   <!-- UNUSED -->
-  <DMS_Mech_Krepost.tools.left_leg.label>左機械腿</DMS_Mech_Krepost.tools.left_leg.label>
-  <DMS_Mech_Krepost.tools.right_leg.label>右機械腿</DMS_Mech_Krepost.tools.right_leg.label>
-  <DMS_Mech_Krepost.tools.head.label>機身</DMS_Mech_Krepost.tools.head.label>
+  <DMS_Mech_Krepost.tools.Mechanical_Head.label>機身</DMS_Mech_Krepost.tools.Mechanical_Head.label>
+  <DMS_Mech_Krepost.tools.Left_Leg.label>左機械腿</DMS_Mech_Krepost.tools.Left_Leg.label>
+  <DMS_Mech_Krepost.tools.Right_Leg.label>右機械腿</DMS_Mech_Krepost.tools.Right_Leg.label>
   
 </LanguageData>

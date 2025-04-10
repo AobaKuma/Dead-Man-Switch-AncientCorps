@@ -15,6 +15,13 @@
   <DMS_Gun_ECMSystem.tools.barrel.label>枪管</DMS_Gun_ECMSystem.tools.barrel.label>
   <DMS_Gun_ECMSystem.tools.muzzle.label>枪口</DMS_Gun_ECMSystem.tools.muzzle.label>
   
+  <!-- EN: 2S3M2 "Empero" -->
+  <DMS_Gun_Empero.label>2S3M2/NK-30 "帝王"</DMS_Gun_Empero.label>
+  <!-- EN: A powerful direct-firing cannon with high accuracy. -->
+  <DMS_Gun_Empero.description>一种砲口初速极高的长距离重型加农砲，在近距离下会使用减装弹药来确保曲射，但仍有极高的精度。</DMS_Gun_Empero.description>
+  <!-- EN: 2S3M2 "Empero" -->
+  <DMS_Gun_Empero.verbs.Verb_ShootMortarCE.label>2S3M2/NK-30 "帝王"</DMS_Gun_Empero.verbs.Verb_ShootMortarCE.label>
+  
   <!-- EN: Kord HMG -->
   <DMS_Gun_KordTurret.label>科夫罗夫机枪</DMS_Gun_KordTurret.label>
   <!-- EN: A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements. -->

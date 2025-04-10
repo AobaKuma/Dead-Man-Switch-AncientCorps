@@ -70,7 +70,7 @@
     <li>treasure->回收</li>
     <li>treasure->襲擊</li>
     <li>treasure->潛入</li>
-    <li>treasure->盜竊</li>  
+    <li>treasure->盜竊</li>
   </DMSAC_OpportunitySite_LogisticTerminal.questNameRules.rulesStrings>
   <!-- EN: Quest expired: [resolvedQuestName] -->
   <DMSAC_OpportunitySite_LogisticTerminal.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>任務過期: [resolvedQuestName]</DMSAC_OpportunitySite_LogisticTerminal.root.nodes.WorldObjectTimeout.node.nodes.Letter.label.slateRef>

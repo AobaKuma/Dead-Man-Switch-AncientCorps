@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: terrestrial -->
+  <DMS_LandCrab.label>陸蟹</DMS_LandCrab.label>
+  <!-- EN: auxiliary loading platform -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.customLabel>輔助裝彈平台</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.customLabel>
+  <!-- EN: autoloader control sensor -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.autoloader_control_sensor.customLabel>裝彈控制傳感器</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.autoloader_control_sensor.customLabel>
+  <!-- EN: remote turret sensor -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.remote_turret_sensor.customLabel>遙控砲塔傳感器</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.remote_turret_sensor.customLabel>
+  <!-- EN: left hearing sensor -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.left_hearing_sensor.customLabel>左聽覺陣列</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.left_hearing_sensor.customLabel>
+  <!-- EN: right hearing sensor -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.right_hearing_sensor.customLabel>右聽覺陣列</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.right_hearing_sensor.customLabel>
+  <!-- EN: sentry turret mount -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.customLabel>遙控砲座</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.customLabel>
+  <!-- EN: horizontal rotor -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.customLabel>遙控砲塔座圈</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.customLabel>
+  <!-- EN: vertical rotor -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.customLabel>遙控砲塔俯仰機</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.customLabel>
+  <!-- EN: ammo feeder -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.parts.ammo_feeder.customLabel>遙控砲塔供彈裝置</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.parts.ammo_feeder.customLabel>
+  <!-- EN: range finder -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.parts.range_finder.customLabel>遙控砲塔測距儀</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.parts.range_finder.customLabel>
+  <!-- EN: trigger safty -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.parts.trigger_safty.customLabel>安全閥</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.parts.trigger_safty.customLabel>
+  <!-- EN: mount lock -->
+  <DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.parts.mount_lock.customLabel>固定栓</DMS_LandCrab.corePart.parts.auxiliary_loading_platform.parts.sentry_turret_mount.parts.horizontal_rotor.parts.vertical_rotor.parts.mount_lock.customLabel>
+  <!-- EN: main weapon mount -->
+  <DMS_LandCrab.corePart.parts.main_weapon_mount.customLabel>主炮塔座圈</DMS_LandCrab.corePart.parts.main_weapon_mount.customLabel>
+  <!-- EN: horizontal hydraulic mount -->
+  <DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.customLabel>水平液壓座圈</DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.customLabel>
+  <!-- EN: vertical hydraulic mount -->
+  <DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.customLabel>液壓俯仰機</DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.customLabel>
+  <!-- EN: ammo feeder -->
+  <DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.parts.ammo_feeder.customLabel>供彈裝置</DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.parts.ammo_feeder.customLabel>
+  <!-- EN: range finder -->
+  <DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.parts.range_finder.customLabel>測距儀</DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.parts.range_finder.customLabel>
+  <!-- EN: hydraulic retractor -->
+  <DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.parts.hydraulic_retractor.customLabel>液壓制退裝置</DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.parts.hydraulic_retractor.customLabel>
+  <!-- EN: mount lock -->
+  <DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.parts.mount_lock.customLabel>主固定栓</DMS_LandCrab.corePart.parts.main_weapon_mount.parts.horizontal_hydraulic_mount.parts.vertical_hydraulic_mount.parts.mount_lock.customLabel>
+  <!-- EN: left walker leg -->
+  <DMS_LandCrab.corePart.parts.left_walker_leg.customLabel>左行走機構</DMS_LandCrab.corePart.parts.left_walker_leg.customLabel>
+  <!-- EN: left walker armour -->
+  <DMS_LandCrab.corePart.parts.left_walker_leg.parts.left_walker_armour.customLabel>左機構裝甲</DMS_LandCrab.corePart.parts.left_walker_leg.parts.left_walker_armour.customLabel>
+  <!-- EN: left foot -->
+  <DMS_LandCrab.corePart.parts.left_walker_leg.parts.left_foot.customLabel>左行走足</DMS_LandCrab.corePart.parts.left_walker_leg.parts.left_foot.customLabel>
+  <!-- EN: right leg -->
+  <DMS_LandCrab.corePart.parts.right_leg.customLabel>右行走機構</DMS_LandCrab.corePart.parts.right_leg.customLabel>
+  <!-- EN: right walker armour -->
+  <DMS_LandCrab.corePart.parts.right_leg.parts.right_walker_armour.customLabel>右機構裝甲</DMS_LandCrab.corePart.parts.right_leg.parts.right_walker_armour.customLabel>
+  <!-- EN: right foot -->
+  <DMS_LandCrab.corePart.parts.right_leg.parts.right_foot.customLabel>右行走足</DMS_LandCrab.corePart.parts.right_leg.parts.right_foot.customLabel>
+  <!-- EN: left stationary claw -->
+  <DMS_LandCrab.corePart.parts.left_stationary_claw.customLabel>左駐鋤機構</DMS_LandCrab.corePart.parts.left_stationary_claw.customLabel>
+  <!-- EN: left claw armour plate -->
+  <DMS_LandCrab.corePart.parts.left_stationary_claw.parts.left_claw_armour_plate.customLabel>左固定爪</DMS_LandCrab.corePart.parts.left_stationary_claw.parts.left_claw_armour_plate.customLabel>
+  <!-- EN: left leg armour plate -->
+  <DMS_LandCrab.corePart.parts.left_stationary_claw.parts.left_leg_armour_plate.customLabel>左腿裝甲</DMS_LandCrab.corePart.parts.left_stationary_claw.parts.left_leg_armour_plate.customLabel>
+  <!-- EN: left hydraulic joint -->
+  <DMS_LandCrab.corePart.parts.left_stationary_claw.parts.left_hydraulic_joint.customLabel>左液壓關節</DMS_LandCrab.corePart.parts.left_stationary_claw.parts.left_hydraulic_joint.customLabel>
+  <!-- EN: left hydraulic pile -->
+  <DMS_LandCrab.corePart.parts.left_stationary_claw.parts.left_hydraulic_pile.customLabel>左液壓樁</DMS_LandCrab.corePart.parts.left_stationary_claw.parts.left_hydraulic_pile.customLabel>
+  <!-- EN: right stationary claw -->
+  <DMS_LandCrab.corePart.parts.right_stationary_claw.customLabel>右駐鋤機構</DMS_LandCrab.corePart.parts.right_stationary_claw.customLabel>
+  <!-- EN: right claw armour plate -->
+  <DMS_LandCrab.corePart.parts.right_stationary_claw.parts.right_claw_armour_plate.customLabel>右固定爪</DMS_LandCrab.corePart.parts.right_stationary_claw.parts.right_claw_armour_plate.customLabel>
+  <!-- EN: right leg armour plate -->
+  <DMS_LandCrab.corePart.parts.right_stationary_claw.parts.right_leg_armour_plate.customLabel>右腿裝甲</DMS_LandCrab.corePart.parts.right_stationary_claw.parts.right_leg_armour_plate.customLabel>
+  <!-- EN: right hydraulic joint -->
+  <DMS_LandCrab.corePart.parts.right_stationary_claw.parts.right_hydraulic_joint.customLabel>右液壓關節</DMS_LandCrab.corePart.parts.right_stationary_claw.parts.right_hydraulic_joint.customLabel>
+  <!-- EN: right hydraulic pile -->
+  <DMS_LandCrab.corePart.parts.right_stationary_claw.parts.right_hydraulic_pile.customLabel>右液壓樁</DMS_LandCrab.corePart.parts.right_stationary_claw.parts.right_hydraulic_pile.customLabel>
+  <!-- EN: left armour plates -->
+  <DMS_LandCrab.corePart.parts.left_armour_plates.customLabel>左裝甲版</DMS_LandCrab.corePart.parts.left_armour_plates.customLabel>
+  <!-- EN: right armour plates -->
+  <DMS_LandCrab.corePart.parts.right_armour_plates.customLabel>右裝甲版</DMS_LandCrab.corePart.parts.right_armour_plates.customLabel>
+  <!-- EN: main battery array -->
+  <DMS_LandCrab.corePart.parts.main_battery_array.customLabel>主能源陣列</DMS_LandCrab.corePart.parts.main_battery_array.customLabel>
+  <!-- EN: secondary battery array -->
+  <DMS_LandCrab.corePart.parts.secondary_battery_array.customLabel>備用能源陣列</DMS_LandCrab.corePart.parts.secondary_battery_array.customLabel>
+  <!-- EN: main hydraulic system -->
+  <DMS_LandCrab.corePart.parts.main_hydraulic_system.customLabel>主液壓泵機</DMS_LandCrab.corePart.parts.main_hydraulic_system.customLabel>
+  <!-- EN: secondary hydraulic system -->
+  <DMS_LandCrab.corePart.parts.secondary_hydraulic_system.customLabel>備用液壓泵機</DMS_LandCrab.corePart.parts.secondary_hydraulic_system.customLabel>
+  
+</LanguageData>

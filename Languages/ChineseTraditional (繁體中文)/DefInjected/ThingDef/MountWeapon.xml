@@ -6,6 +6,9 @@
   <!-- EN: A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it. -->
   <DMS_Krepost_ECMSystem.description>一種掛載式脈衝能量武器，透過定向電磁幹擾使指向方位的電子設備失效。在工作時會使目標產生高溫，因此也能透過點燃的方式來癱瘓敵人。</DMS_Krepost_ECMSystem.description>
   <!-- EN: ECM system -->
+  <DMS_Krepost_ECMSystem.verbs.Verb_Shoot.label>電磁反制系統</DMS_Krepost_ECMSystem.verbs.Verb_Shoot.label>
+  
+  <!-- UNUSED -->
   <DMS_Krepost_ECMSystem.verbs.Verb_ShootCE.label>電磁反制系統</DMS_Krepost_ECMSystem.verbs.Verb_ShootCE.label>
   
   <!-- EN: Kord HMG turret -->

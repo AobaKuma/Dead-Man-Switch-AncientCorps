@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: GshG-7.62 gatlinggun -->
+  <DMS_GshG762Gatlinggun.label>拉戈萊夫多管機槍</DMS_GshG762Gatlinggun.label>
+  <!-- EN: A four-barreled, gas-driven machine gun that unleashes overwhelming firepower. The GShG uses high-pressure gunpowder gas to drive the barrel rotation and loading, so it can achieve a devastating rate of fire without the need for external power input. This is especially appreciated on platforms that lacks extra power supply. -->
+  <DMS_GshG762Gatlinggun.description>一種採用氣動驅動機構的四管旋轉機槍，能傾灑出壓倒性的火力。該型機槍使用高壓火藥氣體來驅動槍管旋轉與上膛，因此不需外部輸入電源即可發揮毀天滅地的射速，這點在缺乏穩定電力的平台上尤其受到好評。</DMS_GshG762Gatlinggun.description>
+  <!-- EN: stock -->
+  <DMS_GshG762Gatlinggun.tools.stock-0.label>槍托</DMS_GshG762Gatlinggun.tools.stock-0.label>
+  <!-- EN: barrel -->
+  <DMS_GshG762Gatlinggun.tools.barrel-0.label>槍管</DMS_GshG762Gatlinggun.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_GshG762Gatlinggun.tools.muzzle-0.label>槍口</DMS_GshG762Gatlinggun.tools.muzzle-0.label>
+  <!-- EN: stock -->
+  <DMS_GshG762Gatlinggun.tools.stock-1.label>槍托</DMS_GshG762Gatlinggun.tools.stock-1.label>
+  <!-- EN: barrel -->
+  <DMS_GshG762Gatlinggun.tools.barrel-1.label>槍管</DMS_GshG762Gatlinggun.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_GshG762Gatlinggun.tools.muzzle-1.label>槍口</DMS_GshG762Gatlinggun.tools.muzzle-1.label>
+  <!-- EN: GshG-7.62 gatlinggun -->
+  <DMS_GshG762Gatlinggun.verbs.Verb_ShootCE.label>GShG 7.62</DMS_GshG762Gatlinggun.verbs.Verb_ShootCE.label>
+  
+</LanguageData>

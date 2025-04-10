@@ -162,7 +162,7 @@
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>DMS_Gun_Empero</defName>
 		<label>2S3M2 "Empero"</label>
-		<description>A powerful direct-firing cannon with high accuracy.</description>
+		<description>A long-range heavy cannon with a very high muzzle velocity that uses reduced ammunition to ensure indirect fire at close ranges, but still with high accuracy.</description>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_Empero</texPath>
 			<drawSize>7</drawSize>

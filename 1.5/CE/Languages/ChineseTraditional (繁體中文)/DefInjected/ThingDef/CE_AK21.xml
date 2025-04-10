@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Izhmal autorifle -->
+  <DMS_Gun_IzhmalRifle.label>伊什瑪爾自動步槍</DMS_Gun_IzhmalRifle.label>
+  <!-- EN: An assault rifle manufactured by the Ishmael weapon company known for its military export after World War 3. This gun is chambered for the powerful 7.62×54R full-power rifle ammunition. It is one of the individual weapon systems designed by the Russian Federation for military humanoid robots and tactical exoskeletons in the mechanical soldier project. The heavy receiver and reinforced structure make it more durable than ordinary assault rifles. It is heavy, but it makes up for it in accuracy and penetration. -->
+  <DMS_Gun_IzhmalRifle.description>一把由伊什瑪爾公司生產的7.62x54R突擊步槍，使用強力的7.62×54mmR全威力步槍彈藥。是俄聯邦在機械士兵項目中為軍用人形機兵與戰術外骨骼所設計的單兵武器系統之一。厚重的機匣與加強結構讓它比一般突擊步槍更耐操耐打。儘管重量不輕，但它的準確度與穿透力足以彌補這點。</DMS_Gun_IzhmalRifle.description>
+  <!-- EN: stock -->
+  <DMS_Gun_IzhmalRifle.tools.stock-0.label>槍托</DMS_Gun_IzhmalRifle.tools.stock-0.label>
+  <!-- EN: barrel -->
+  <DMS_Gun_IzhmalRifle.tools.barrel-0.label>槍管</DMS_Gun_IzhmalRifle.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_Gun_IzhmalRifle.tools.muzzle-0.label>槍口</DMS_Gun_IzhmalRifle.tools.muzzle-0.label>
+  <!-- EN: stock -->
+  <DMS_Gun_IzhmalRifle.tools.stock-1.label>槍托</DMS_Gun_IzhmalRifle.tools.stock-1.label>
+  <!-- EN: barrel -->
+  <DMS_Gun_IzhmalRifle.tools.barrel-1.label>槍管</DMS_Gun_IzhmalRifle.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_Gun_IzhmalRifle.tools.muzzle-1.label>槍口</DMS_Gun_IzhmalRifle.tools.muzzle-1.label>
+  <!-- EN: Izhmal autorifle -->
+  <DMS_Gun_IzhmalRifle.verbs.Verb_ShootCE.label>AK21</DMS_Gun_IzhmalRifle.verbs.Verb_ShootCE.label>
+  
+</LanguageData>

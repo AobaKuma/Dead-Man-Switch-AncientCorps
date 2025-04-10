@@ -11,15 +11,18 @@
   <!-- EN: stock -->
   <DMS_AerialAutocannon.tools.stock.label>槍托</DMS_AerialAutocannon.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_AerialAutocannon.tools.barrel.label>槍管</DMS_AerialAutocannon.tools.barrel.label>
+  <DMS_AerialAutocannon.tools.barrel-0.label>槍管</DMS_AerialAutocannon.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_AerialAutocannon.tools.muzzle-0.label>槍口</DMS_AerialAutocannon.tools.muzzle-0.label>
+  <!-- EN: barrel -->
+  <DMS_AerialAutocannon.tools.barrel-1.label>槍管</DMS_AerialAutocannon.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_AerialAutocannon.tools.muzzle-1.label>槍口</DMS_AerialAutocannon.tools.muzzle-1.label>
   <!-- EN: Aerial autocannon -->
-  <DMS_AerialAutocannon.verbs.Verb_Shoot.label>GSh-30-1</DMS_AerialAutocannon.verbs.Verb_Shoot.label>
+  <DMS_AerialAutocannon.verbs.Verb_ShootCE.label>GSh-30-1</DMS_AerialAutocannon.verbs.Verb_ShootCE.label>
   
   <!-- UNUSED -->
-  <DMS_AerialAutocannon.tools.muzzle-0.label>槍口</DMS_AerialAutocannon.tools.muzzle-0.label>
-  <DMS_AerialAutocannon.tools.barrel-1.label>槍管</DMS_AerialAutocannon.tools.barrel-1.label>
-  <DMS_AerialAutocannon.tools.muzzle-1.label>槍口</DMS_AerialAutocannon.tools.muzzle-1.label>
-  <DMS_AerialAutocannon.verbs.Verb_ShootCE.label>GSh-30-1</DMS_AerialAutocannon.verbs.Verb_ShootCE.label>
+  <DMS_AerialAutocannon.verbs.Verb_Shoot.label>GSh-30-1</DMS_AerialAutocannon.verbs.Verb_Shoot.label>
   
   <!-- EN: armor piercing sabot -->
   <DMS_Bullet_JusticeGavel.label>穩定翼脫殼穿甲彈</DMS_Bullet_JusticeGavel.label>
@@ -31,15 +34,18 @@
   <!-- EN: stock -->
   <DMS_Gsh30Gatlinggun.tools.stock.label>槍托</DMS_Gsh30Gatlinggun.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_Gsh30Gatlinggun.tools.barrel.label>槍管</DMS_Gsh30Gatlinggun.tools.barrel.label>
+  <DMS_Gsh30Gatlinggun.tools.barrel-0.label>槍管</DMS_Gsh30Gatlinggun.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_Gsh30Gatlinggun.tools.muzzle-0.label>槍口</DMS_Gsh30Gatlinggun.tools.muzzle-0.label>
+  <!-- EN: barrel -->
+  <DMS_Gsh30Gatlinggun.tools.barrel-1.label>槍管</DMS_Gsh30Gatlinggun.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_Gsh30Gatlinggun.tools.muzzle-1.label>槍口</DMS_Gsh30Gatlinggun.tools.muzzle-1.label>
   <!-- EN: Gsh30-6 "Flogger" -->
-  <DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>Gsh-30-6</DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>
+  <DMS_Gsh30Gatlinggun.verbs.Verb_ShootCE.label>Gsh-30-6</DMS_Gsh30Gatlinggun.verbs.Verb_ShootCE.label>
   
   <!-- UNUSED -->
-  <DMS_Gsh30Gatlinggun.tools.muzzle-0.label>槍口</DMS_Gsh30Gatlinggun.tools.muzzle-0.label>
-  <DMS_Gsh30Gatlinggun.tools.barrel-1.label>槍管</DMS_Gsh30Gatlinggun.tools.barrel-1.label>
-  <DMS_Gsh30Gatlinggun.tools.muzzle-1.label>槍口</DMS_Gsh30Gatlinggun.tools.muzzle-1.label>
-  <DMS_Gsh30Gatlinggun.verbs.Verb_ShootCE.label>Gsh-30-6</DMS_Gsh30Gatlinggun.verbs.Verb_ShootCE.label>
+  <DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>Gsh-30-6</DMS_Gsh30Gatlinggun.verbs.Verb_ArcSprayProjectile.label>
   
   <!-- EN: 2A46M "Justice Gavel" -->
   <DMS_Gun_JusticeGavel.label>正義法槌</DMS_Gun_JusticeGavel.label>
@@ -48,15 +54,18 @@
   <!-- EN: stock -->
   <DMS_Gun_JusticeGavel.tools.stock.label>砲閘</DMS_Gun_JusticeGavel.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_Gun_JusticeGavel.tools.barrel.label>砲管</DMS_Gun_JusticeGavel.tools.barrel.label>
+  <DMS_Gun_JusticeGavel.tools.barrel-0.label>砲管</DMS_Gun_JusticeGavel.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_Gun_JusticeGavel.tools.muzzle-0.label>砲口</DMS_Gun_JusticeGavel.tools.muzzle-0.label>
+  <!-- EN: barrel -->
+  <DMS_Gun_JusticeGavel.tools.barrel-1.label>砲管</DMS_Gun_JusticeGavel.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_Gun_JusticeGavel.tools.muzzle-1.label>砲口</DMS_Gun_JusticeGavel.tools.muzzle-1.label>
   <!-- EN: 2A46M "Justice Gavel" -->
-  <DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>2A46M</DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>
+  <DMS_Gun_JusticeGavel.verbs.Verb_ShootCE.label>2A46M</DMS_Gun_JusticeGavel.verbs.Verb_ShootCE.label>
   
   <!-- UNUSED -->
-  <DMS_Gun_JusticeGavel.tools.muzzle-0.label>砲口</DMS_Gun_JusticeGavel.tools.muzzle-0.label>
-  <DMS_Gun_JusticeGavel.tools.barrel-1.label>砲管</DMS_Gun_JusticeGavel.tools.barrel-1.label>
-  <DMS_Gun_JusticeGavel.tools.muzzle-1.label>砲口</DMS_Gun_JusticeGavel.tools.muzzle-1.label>
-  <DMS_Gun_JusticeGavel.verbs.Verb_ShootCE.label>2A46M</DMS_Gun_JusticeGavel.verbs.Verb_ShootCE.label>
+  <DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>2A46M</DMS_Gun_JusticeGavel.verbs.Verb_Shoot.label>
   
   <!-- EN: Kord Machinegun -->
   <DMS_KordMachineGun.label>科夫羅夫機槍</DMS_KordMachineGun.label>
@@ -65,15 +74,18 @@
   <!-- EN: stock -->
   <DMS_KordMachineGun.tools.stock.label>槍托</DMS_KordMachineGun.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_KordMachineGun.tools.barrel.label>槍管</DMS_KordMachineGun.tools.barrel.label>
+  <DMS_KordMachineGun.tools.barrel-0.label>槍管</DMS_KordMachineGun.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_KordMachineGun.tools.muzzle-0.label>槍口</DMS_KordMachineGun.tools.muzzle-0.label>
+  <!-- EN: barrel -->
+  <DMS_KordMachineGun.tools.barrel-1.label>槍管</DMS_KordMachineGun.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_KordMachineGun.tools.muzzle-1.label>槍口</DMS_KordMachineGun.tools.muzzle-1.label>
   <!-- EN: Kord Machinegun -->
-  <DMS_KordMachineGun.verbs.Verb_Shoot.label>Kord</DMS_KordMachineGun.verbs.Verb_Shoot.label>
+  <DMS_KordMachineGun.verbs.Verb_ShootCE.label>Kord</DMS_KordMachineGun.verbs.Verb_ShootCE.label>
   
   <!-- UNUSED -->
-  <DMS_KordMachineGun.tools.muzzle-0.label>槍口</DMS_KordMachineGun.tools.muzzle-0.label>
-  <DMS_KordMachineGun.tools.barrel-1.label>槍管</DMS_KordMachineGun.tools.barrel-1.label>
-  <DMS_KordMachineGun.tools.muzzle-1.label>槍口</DMS_KordMachineGun.tools.muzzle-1.label>
-  <DMS_KordMachineGun.verbs.Verb_ShootCE.label>Kord</DMS_KordMachineGun.verbs.Verb_ShootCE.label>
+  <DMS_KordMachineGun.verbs.Verb_Shoot.label>Kord</DMS_KordMachineGun.verbs.Verb_Shoot.label>
   
   <!-- EN: Vladimirov HMG -->
   <DMS_VladimirovMachineGun.label>弗拉基米羅夫重機槍</DMS_VladimirovMachineGun.label>
@@ -82,14 +94,17 @@
   <!-- EN: stock -->
   <DMS_VladimirovMachineGun.tools.stock.label>槍托</DMS_VladimirovMachineGun.tools.stock.label>
   <!-- EN: barrel -->
-  <DMS_VladimirovMachineGun.tools.barrel.label>槍管</DMS_VladimirovMachineGun.tools.barrel.label>
+  <DMS_VladimirovMachineGun.tools.barrel-0.label>槍管</DMS_VladimirovMachineGun.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_VladimirovMachineGun.tools.muzzle-0.label>槍口</DMS_VladimirovMachineGun.tools.muzzle-0.label>
+  <!-- EN: barrel -->
+  <DMS_VladimirovMachineGun.tools.barrel-1.label>槍管</DMS_VladimirovMachineGun.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_VladimirovMachineGun.tools.muzzle-1.label>槍口</DMS_VladimirovMachineGun.tools.muzzle-1.label>
   <!-- EN: Vladimirov HMG -->
-  <DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>KPV</DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>
+  <DMS_VladimirovMachineGun.verbs.Verb_ShootCE.label>KPV</DMS_VladimirovMachineGun.verbs.Verb_ShootCE.label>
   
   <!-- UNUSED -->
-  <DMS_VladimirovMachineGun.tools.muzzle-0.label>槍口</DMS_VladimirovMachineGun.tools.muzzle-0.label>
-  <DMS_VladimirovMachineGun.tools.barrel-1.label>槍管</DMS_VladimirovMachineGun.tools.barrel-1.label>
-  <DMS_VladimirovMachineGun.tools.muzzle-1.label>槍口</DMS_VladimirovMachineGun.tools.muzzle-1.label>
-  <DMS_VladimirovMachineGun.verbs.Verb_ShootCE.label>KPV</DMS_VladimirovMachineGun.verbs.Verb_ShootCE.label>
+  <DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>KPV</DMS_VladimirovMachineGun.verbs.Verb_Shoot.label>
   
 </LanguageData>
