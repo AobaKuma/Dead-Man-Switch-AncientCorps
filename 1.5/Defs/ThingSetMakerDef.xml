@@ -24,6 +24,7 @@
       </fixedParams>
     </root>
   </ThingSetMakerDef>
+  
   <ThingSetMakerDef>
     <defName>DMSAC_LootMaker</defName>
     <root Class="ThingSetMaker_MarketValue">
@@ -149,7 +150,7 @@
                   <li>DMS_EncryptedTransmitter</li>
                 </thingDefs>
               </filter>
-              <countRange>1~5</countRange>
+              <countRange>1~3</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -173,17 +174,16 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>100</weight>
+          <weight>40</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
                 <thingDefs>
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_MRE</li>
                   <li>DMS_CombatRation</li>
-                  <li>MealSurvivalPack</li>
                 </thingDefs>
               </filter>
-              <countRange>10~40</countRange>
+              <countRange>10~25</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>

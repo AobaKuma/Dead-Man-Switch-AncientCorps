@@ -112,14 +112,14 @@
         <acceleration>(0, 0, -2.7326)</acceleration>
         <archDuration>0.5</archDuration>
     </FleckDef>
-    
+
     <FleckDef ParentName="DMSAC_BaseDiscardingShell">
         <defName>DMSAC_Fleck_DiscardingShell_B</defName>
         <graphicData>
             <texPath>Things/Mote/DMS_discardingShell_B</texPath>
         </graphicData>
     </FleckDef>
-    
+
     <FleckDef ParentName="DMSAC_BaseDiscardingShell">
         <defName>DMSAC_Fleck_DiscardingShell_C</defName>
         <graphicData>
@@ -159,7 +159,7 @@
                 <airTime>0~2</airTime>
                 <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
                 <positionLerpFactor>0.95</positionLerpFactor>
-				<absoluteAngle>false</absoluteAngle>
+                <absoluteAngle>false</absoluteAngle>
             </li>
             <li>
                 <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
@@ -173,7 +173,7 @@
                 <airTime>0~2</airTime>
                 <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
                 <positionLerpFactor>0.95</positionLerpFactor>
-				<absoluteAngle>false</absoluteAngle>
+                <absoluteAngle>false</absoluteAngle>
             </li>
             <li>
                 <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
@@ -185,7 +185,7 @@
                 <airTime>1.2~2.2</airTime>
                 <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
                 <positionLerpFactor>0.98</positionLerpFactor>
-				<absoluteAngle>false</absoluteAngle>
+                <absoluteAngle>false</absoluteAngle>
             </li>
             <li>
                 <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
@@ -199,7 +199,7 @@
                 <airTime>0~2</airTime>
                 <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
                 <positionLerpFactor>0.95</positionLerpFactor>
-				<absoluteAngle>false</absoluteAngle>
+                <absoluteAngle>false</absoluteAngle>
             </li>
         </children>
     </EffecterDef>
@@ -257,6 +257,45 @@
                 <fleckDef>FireSpew_Glow</fleckDef>
                 <chancePerTick>0.16</chancePerTick>
                 <positionLerpFactor>0.65</positionLerpFactor>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>DMSAC_ImpactDust</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>DustPuff</fleckDef>
+                <burstCount>13</burstCount>
+                <speed>0~0.1</speed>
+                <useTargetAInitialRotation>true</useTargetAInitialRotation>
+                <positionRadiusMin>3</positionRadiusMin>
+                <positionRadius>8</positionRadius>
+                <scale>2~3</scale>
+                <angle>-360~360</angle>
+                <rotationRate>-1~1</rotationRate>
+                <airTime>1~5</airTime>
+                <orbitOrigin>true</orbitOrigin>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <absoluteAngle>false</absoluteAngle>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>DustPuff</fleckDef>
+                <burstCount>8</burstCount>
+                <speed>-1.5~-1</speed>
+                <useTargetAInitialRotation>true</useTargetAInitialRotation>
+                <positionRadiusMin>1</positionRadiusMin>
+                <positionRadius>3</positionRadius>
+                <scale>2~3</scale>
+                <angle>-180~180</angle>
+                <rotationRate>-1~1</rotationRate>
+                <airTime>1~5</airTime>
+                <orbitOrigin>true</orbitOrigin>
+                <positionLerpFactor>0.9</positionLerpFactor>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <absoluteAngle>false</absoluteAngle>
             </li>
         </children>
     </EffecterDef>

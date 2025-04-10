@@ -51,7 +51,7 @@
 		<defName>DMS_Krepost_ECMSystem</defName>
 		<label>ECM system</label>
 		<graphicData>
-			<texPath>Things/Weapons/DMS_ECMS</texPath>
+			<texPath>Things/Weapons/DMS_Weapon_ECMS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>

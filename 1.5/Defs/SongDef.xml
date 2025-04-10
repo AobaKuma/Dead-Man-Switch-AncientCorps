@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Defs>  
-<!-- Krepost Attack -->
+<Defs>
 
+  <!-- Krepost Attack -->
   <MusicTransitionDef>
     <defName>DMSAC_KrepostAttack</defName>
     <workerType>AncientCorps.KrepostAttackTransition</workerType>

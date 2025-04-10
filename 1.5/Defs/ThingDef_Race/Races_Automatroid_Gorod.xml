@@ -157,8 +157,7 @@
     <label>BR-4/MMR "Organist"</label>
     <combatPower>400</combatPower>
     <weaponTags Inherit="False">
-			<li>DMS_VladimirovMachineGun</li>
-			<li>DMS_AerialAutocannon</li>
+			<li>A_SG_LongRifle</li>
     </weaponTags>
     <lifeStages Inherit="false">
       <li>
@@ -199,6 +198,7 @@
     <weaponTags Inherit="False">
 			<li>DMS_VladimirovMachineGun</li>
 			<li>DMS_AerialAutocannon</li>
+			<li>YAKB</li>
     </weaponTags>
     <lifeStages Inherit="false">
       <li>

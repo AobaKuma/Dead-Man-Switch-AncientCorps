@@ -83,6 +83,7 @@
     <weaponTags>
       <li>A_BR_LongRifle</li>
       <li>DMS_MechWeaponMeduim</li>
+      <li>AK21</li>
     </weaponTags>
   </PawnKindDef>
 
@@ -92,6 +93,7 @@
     <combatPower>150</combatPower>
     <weaponTags Inherit="False">
       <li>DMS_PKM</li>
+      <li>GSHG</li>
     </weaponTags>
   </PawnKindDef>
 

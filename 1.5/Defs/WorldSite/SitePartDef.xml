@@ -86,7 +86,6 @@
       </filthTypes>
       <symbolResolvers>
         <li>kcsg_storagezone</li>
-        <li>kcsg_randomfilth</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
     </genStep>
@@ -130,7 +129,6 @@
       </filthTypes>
       <symbolResolvers>
         <li>kcsg_storagezone</li>
-        <li>kcsg_randomfilth</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
     </genStep>
@@ -219,9 +217,9 @@
       </filthTypes>
       <symbolResolvers>
         <li>kcsg_storagezone</li>
-        <li>kcsg_randomfilth</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
+      <scaleWithQuest></scaleWithQuest>
     </genStep>
   </GenStepDef>
 </Defs>

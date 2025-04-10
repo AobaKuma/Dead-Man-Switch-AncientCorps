@@ -8,8 +8,8 @@
     <spawnThingOnRemoved>DMS_ChunkSlag_Old</spawnThingOnRemoved>
     <defaultLabelColor>(99,89,89)</defaultLabelColor>
     <hediffGivers>
-      <li Class="HediffGiver_Random">
-        <mtbDays>4</mtbDays>
+      <li Class="DMS.HediffGiver_RandomSilent">
+        <mtbDays>8</mtbDays>
         <hediff>ElectricalBurn</hediff>
         <partsToAffect>
           <li>DMS_Battery</li>

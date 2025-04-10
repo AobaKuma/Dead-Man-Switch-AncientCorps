@@ -146,7 +146,7 @@
                             <warmupTime>0.5</warmupTime>
                             <minRange>8</minRange>
                             <range>32</range>
-				            <soundCast>AGS</soundCast>
+                            <soundCast>AGS</soundCast>
                             <soundCastTail>GunTail_Medium</soundCastTail>
                             <muzzleFlashScale>6</muzzleFlashScale>
                             <targetParams>
@@ -315,7 +315,7 @@
                     <RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
                 </statBases>
                 <Properties>
-				    <recoilAmount>2.5</recoilAmount>
+                    <recoilAmount>2.5</recoilAmount>
                     <verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
                     <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
                     <hasStandardCommand>true</hasStandardCommand>
@@ -326,13 +326,13 @@
                     <warmupTime>1.5</warmupTime>
                     <range>50</range>
                     <minRange>10</minRange>
-				    <soundCast>AGS</soundCast>
+                    <soundCast>AGS</soundCast>
                     <soundCastTail>GunTail_Medium</soundCastTail>
                     <muzzleFlashScale>12</muzzleFlashScale>
                     <targetParams>
                         <canTargetLocations>true</canTargetLocations>
                     </targetParams>
-				    <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+                    <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
                 </Properties>
                 <AmmoUser>
                     <magazineSize>30</magazineSize>
@@ -661,67 +661,130 @@
             </li>
 
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-				<defName>DMS_Gun_MobileMortar</defName>
-				<statBases>
-					<AimingAccuracy>1</AimingAccuracy>
-					<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
-					<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
-					<SightsEfficiency>1.0</SightsEfficiency>
-					<ShotSpread>2</ShotSpread>
-					<SwayFactor>2</SwayFactor>
-					<Bulk>0</Bulk>
-				</statBases>
-				<Properties>
-					<verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
-					<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_81mmMortarShell_HE</defaultProjectile>
-					<warmupTime>2.1</warmupTime>
-					<minRange>20</minRange>
-					<range>200</range>
-					<burstShotCount>2</burstShotCount>
-					<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-					<soundCast>DMS_Shot_VasilekSound</soundCast>
-					<soundCastTail>GunTail_Heavy</soundCastTail>  
-					<muzzleFlashScale>50</muzzleFlashScale>
-					<requireLineOfSight>false</requireLineOfSight>
-					<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-					<ignorePartialLoSBlocker>True</ignorePartialLoSBlocker>
-					<circularError>5</circularError>
-					<indirectFirePenalty>0.6</indirectFirePenalty>
-					<targetParams>
-						<canTargetLocations>true</canTargetLocations>
-					</targetParams>
-					<recoilPattern>Mounted</recoilPattern>
-					<recoilAmount>1.21</recoilAmount>
-				</Properties>
-				<AmmoUser>
-					<magazineSize>4</magazineSize>
-					<reloadTime>12</reloadTime>
-					<ammoSet>AmmoSet_81mmMortarShell</ammoSet>
-				</AmmoUser>
-				<FireModes>
-					<noSingleShot>false</noSingleShot>
-					<aiUseBurstMode>true</aiUseBurstMode>
-					<aiAimMode>SuppressFire</aiAimMode>
-					<aimedBurstShotCount>2</aimedBurstShotCount>
-				</FireModes>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="DMS_Gun_MobileMortar"]/comps</xpath>
-				<value>
-					<li Class="CombatExtended.CompProperties_Charges">
-						<chargeSpeeds>
-							<li>50</li>
-							<li>60</li>
-							<li>70</li>
-							<li>90</li>
-							<li>110</li>
-							<li>130</li>
-						</chargeSpeeds>
-					</li>
-				</value>
-			</li>
+                <defName>DMS_Gun_MobileMortar</defName>
+                <statBases>
+                    <AimingAccuracy>1</AimingAccuracy>
+                    <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+                    <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.0</SightsEfficiency>
+                    <ShotSpread>2</ShotSpread>
+                    <SwayFactor>2</SwayFactor>
+                    <Bulk>0</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
+                    <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_81mmMortarShell_HE</defaultProjectile>
+                    <warmupTime>2.1</warmupTime>
+                    <minRange>20</minRange>
+                    <range>200</range>
+                    <burstShotCount>2</burstShotCount>
+                    <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                    <soundCast>DMS_Shot_VasilekSound</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>50</muzzleFlashScale>
+                    <requireLineOfSight>false</requireLineOfSight>
+                    <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                    <ignorePartialLoSBlocker>True</ignorePartialLoSBlocker>
+                    <circularError>5</circularError>
+                    <indirectFirePenalty>0.6</indirectFirePenalty>
+                    <targetParams>
+                        <canTargetLocations>true</canTargetLocations>
+                    </targetParams>
+                    <recoilPattern>Mounted</recoilPattern>
+                    <recoilAmount>1.21</recoilAmount>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>4</magazineSize>
+                    <reloadTime>12</reloadTime>
+                    <ammoSet>AmmoSet_81mmMortarShell</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <noSingleShot>false</noSingleShot>
+                    <aiUseBurstMode>true</aiUseBurstMode>
+                    <aiAimMode>SuppressFire</aiAimMode>
+                    <aimedBurstShotCount>2</aimedBurstShotCount>
+                </FireModes>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Gun_MobileMortar"]/comps</xpath>
+                <value>
+                    <li Class="CombatExtended.CompProperties_Charges">
+                        <chargeSpeeds>
+                            <li>50</li>
+                            <li>60</li>
+                            <li>70</li>
+                            <li>90</li>
+                            <li>110</li>
+                            <li>130</li>
+                        </chargeSpeeds>
+                    </li>
+                </value>
+            </li>
+
+            <!--=====DMS_Gun_Empero=====-->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>DMS_Gun_Empero</defName>
+                <statBases>
+                    <AimingAccuracy>2</AimingAccuracy>
+                    <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+                    <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.0</SightsEfficiency>
+                    <ShotSpread>2</ShotSpread>
+                    <SwayFactor>2</SwayFactor>
+                    <Bulk>0</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
+                    <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Bullet_155mmHowitzerShell_HE</defaultProjectile>
+                    <warmupTime>8.1</warmupTime>
+                    <minRange>20</minRange>
+				    <range>240</range>
+                    <burstShotCount>1</burstShotCount>
+                    <soundCast>DMS_Shot_JusticeGavel</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>50</muzzleFlashScale>
+                    <requireLineOfSight>false</requireLineOfSight>
+                    <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                    <ignorePartialLoSBlocker>True</ignorePartialLoSBlocker>
+                    <circularError>5</circularError>
+                    <indirectFirePenalty>0.6</indirectFirePenalty>
+                    <targetParams>
+                        <canTargetLocations>true</canTargetLocations>
+                    </targetParams>
+                    <recoilPattern>Mounted</recoilPattern>
+                    <recoilAmount>1.21</recoilAmount>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>1</magazineSize>
+                    <reloadTime>8</reloadTime>
+                    <ammoSet>AmmoSet_155mmHowitzerShell</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <noSingleShot>false</noSingleShot>
+                    <aiUseBurstMode>true</aiUseBurstMode>
+                    <aiAimMode>SuppressFire</aiAimMode>
+                    <aimedBurstShotCount>1</aimedBurstShotCount>
+                </FireModes>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_Gun_Empero"]/comps</xpath>
+                <value>
+                    <li Class="CombatExtended.CompProperties_Charges">
+                        <chargeSpeeds>
+                            <li>50</li>
+                            <li>60</li>
+                            <li>70</li>
+                            <li>90</li>
+                            <li>110</li>
+                            <li>130</li>
+                        </chargeSpeeds>
+                    </li>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

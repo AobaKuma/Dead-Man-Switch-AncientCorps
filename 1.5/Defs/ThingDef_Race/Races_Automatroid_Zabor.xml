@@ -108,6 +108,7 @@
     <weaponTags Inherit="False">
       <li>DMS_PKM</li>
       <li>H_Gatling127mm</li>
+      <li>GSHG</li>
     </weaponTags>
   </PawnKindDef>
 

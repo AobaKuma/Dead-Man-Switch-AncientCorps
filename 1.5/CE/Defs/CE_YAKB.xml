@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="DMS_AutomatroidHeavyGun">
+        <defName>DMS_YAKBGatlinggun</defName>
+        <label>YAK-B gatlinggun</label>
+        <description>A heavy and violent Soviet large-caliber rotary machine gun, used in large numbers on ground vehicles and aircraft. The Yak-B operates at high speed using a gas-driven rotation mechanism and therefore does not rely on an external power supply, which especially appreciated on platforms that lacks of it.</description>
+        <graphicData>
+		    <texPath>Things/Weapons/DMS_Weapon_YAKB</texPath>
+		    <graphicClass>Graphic_Single</graphicClass>
+		    <drawSize>2</drawSize>
+	    </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <WorkToMake>80000</WorkToMake>
+            <Mass>52</Mass>
+            <Bulk>33</Bulk>
+            <RangedWeapon_Cooldown>1.19</RangedWeapon_Cooldown>
+            <SightsEfficiency>1.2</SightsEfficiency>
+            <ShotSpread>0.05</ShotSpread>
+            <SwayFactor>1.65</SwayFactor>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>MultibarrelWeapons</li>
+            </researchPrerequisites>
+        </recipeMaker>
+		<costList>
+			<Tungsteel>130</Tungsteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<weaponTags>
+            <li>CE_AI_Suppressive</li>
+            <li>NoSwitch</li>
+            <li>A_SuppressWeapon</li>
+            <li>H_Gatling127mm</li>
+            <li>YAKB</li>
+		</weaponTags>	
+		<verbs>
+		<li Class="CombatExtended.VerbPropertiesCE">
+            <recoilAmount>1.39</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_127x108mm_FMJ</defaultProjectile>
+            <burstShotCount>14</burstShotCount>
+            <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+            <warmupTime>1</warmupTime>
+            <range>75</range>
+            <soundCast>50Cal_Browning</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>12</muzzleFlashScale>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </li>
+		</verbs>
+		<comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>300</magazineSize>
+                <reloadTime>8.5</reloadTime>
+                <ammoSet>AmmoSet_127x108mm</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <noSingleShot>true</noSingleShot>
+				<aiAimMode>Snapshot</aiAimMode>
+                <aimedBurstShotCount>7</aimedBurstShotCount>
+            </li>
+		</comps>
+		<tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.65</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>3</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>barrel</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>2.02</cooldownTime>
+                <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.65</cooldownTime>
+                <armorPenetrationBlunt>3</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+		</tools>
+    	<modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.18,-0.22</DrawOffset>
+            </li>
+
+            <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+                <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(1.1,1.1)</drawSize>
+                <offsets>
+                    <li>(0.67,-0.21)</li>
+                </offsets>
+                <isAlternately>true</isAlternately>
+            </li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>StandardAutomatroid</EquippableDef>
+			</li>
+    	</modExtensions>
+    </ThingDef>
+</Defs>

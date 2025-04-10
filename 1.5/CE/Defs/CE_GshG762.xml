@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="DMS_AutomatroidGun">
+        <defName>DMS_GshG762Gatlinggun</defName>
+        <label>GshG-7.62 gatlinggun</label>
+        <description>A four-barreled, gas-driven machine gun that unleashes overwhelming firepower. The GShG uses high-pressure gunpowder gas to drive the barrel rotation and loading, so it can achieve a devastating rate of fire without the need for external power input. This is especially appreciated on platforms that lacks extra power supply.</description>
+        <graphicData>
+		    <texPath>Things/Weapons/DMS_Weapon_GshG762</texPath>
+		    <graphicClass>Graphic_Single</graphicClass>
+		    <drawSize>1.1</drawSize>
+	    </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <WorkToMake>64500</WorkToMake>
+            <Mass>30</Mass>
+            <Bulk>35</Bulk>
+            <RangedWeapon_Cooldown>0.58</RangedWeapon_Cooldown>
+            <SightsEfficiency>1.2</SightsEfficiency>
+            <ShotSpread>0.05</ShotSpread>
+            <SwayFactor>1.58</SwayFactor>
+        </statBases>
+        <recipeMaker>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<researchPrerequisites>
+				<li>MultibarrelWeapons</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Tungsteel>90</Tungsteel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		<weaponTags>
+            <li>CE_AI_Suppressive</li>
+            <li>NoSwitch</li>
+            <li>A_SuppressWeapon</li>
+            <li>V_Gatling762mm</li>
+            <li>GSHG</li>
+		</weaponTags>	
+		<verbs>
+		<li Class="CombatExtended.VerbPropertiesCE">
+            <!--<recoilAmount>1.1</recoilAmount>-->
+            <recoilAmount>0.9</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
+            <burstShotCount>50</burstShotCount>
+            <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+            <warmupTime>1.8</warmupTime>
+            <range>75</range>
+            <soundCast>MediumMG</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>10</muzzleFlashScale>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </li>
+		</verbs>
+		<comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>300</magazineSize>
+                <reloadTime>7.8</reloadTime>
+                <ammoSet>AmmoSet_762x54mmR</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>FALSE</aiUseBurstMode>
+                <noSingleShot>true</noSingleShot>
+				<aiAimMode>Snapshot</aiAimMode>
+                <aimedBurstShotCount>10</aimedBurstShotCount>
+            </li>
+		</comps>
+		<tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.65</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>3</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>barrel</label>
+                <capacities>
+                <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>2.02</cooldownTime>
+                <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.65</cooldownTime>
+                <armorPenetrationBlunt>3</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+		</tools>
+    	<modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawOffset>0.18,-0.22</DrawOffset>
+            </li>
+            <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+                <def>MF_StandardMuzzleFalsh</def>
+                    <drawSize>(1.1,1.1)</drawSize>
+                <offsets>
+                    <li>(0.67,-0.21)</li>
+                </offsets>
+                <isAlternately>true</isAlternately>
+            </li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>AverageHumanCanUse</EquippableDef>
+			</li>
+    	</modExtensions>
+    </ThingDef>
+</Defs>

@@ -394,7 +394,6 @@
 		<defName>DMS_Bullet_JusticeGavel</defName>
 		<label>armor piercing sabot</label>
 		<thingClass>DMS.Projectile_ConeExplosive</thingClass>
-		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Projectiles/Ammo_3BM60</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

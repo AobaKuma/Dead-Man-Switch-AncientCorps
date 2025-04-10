@@ -70,13 +70,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AncientCorpsUltility.cs" />
     <Compile Include="CircleConst.cs" />
     <Compile Include="Boss\CompAbilityEffect_ActiveProtectionSystem.cs" />
     <Compile Include="Defcon\CompanyDef.cs" />
     <Compile Include="BaseGen\CompBuildingExtraRenderer.cs" />
     <Compile Include="Defcon\GameComponent_RaidCompany.cs" />
     <Compile Include="Projectile\CompAfterBurner.cs" />
-    <Compile Include="AncientCorpsUltility.cs" />
     <Compile Include="Projectile\CompEffector.cs" />
     <Compile Include="Projectile\CompGuided.cs" />
     <Compile Include="BaseGen\CompRandomColorOnSpawn.cs" />

@@ -2,18 +2,49 @@
 <Patch>
 
 	<!-- <Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[@Name="BaseAncientAutomatroidRace"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+	<xpath>Defs/ThingDef[@Name="BaseAncientAutomatroidRace"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
 		<value>
 			<li>CombatExtended.ITab_Inventory</li>
 		</value>
 	</Operation> -->
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CE_DisposableRocketLauncher"]/weaponTags</xpath>
-        <value>
-            <li>DMSAC_LAWS</li>
-        </value>
-    </Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="BaseAncientAutomatroidRace"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>1</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetrationBlunt>1.688</armorPenetrationBlunt>
+					<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>1</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetrationBlunt>1.688</armorPenetrationBlunt>
+					<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="CE_DisposableRocketLauncher"]/weaponTags</xpath>
+		<value>
+			<li>DMSAC_LAWS</li>
+		</value>
+	</Operation>
+
 	<!-- ========== Pawnkind only Patches ========== -->
 	<Operation Class="PatchOperationSequence">
 		<operations>
@@ -51,7 +82,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/PawnKindDef[defName="DMS_Mech_Mushketer_AR"]/weaponTags</xpath>
 				<value>
-      				<li>A_Pistol</li>
+					<li>A_Pistol</li>
 				</value>
 			</li>
 		</operations>

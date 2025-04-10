@@ -15,7 +15,7 @@
           </categories>
         </filter>
         <maxTotalMass>60</maxTotalMass>
-        <totalMarketValueRange>500~1000</totalMarketValueRange>
+        <totalMarketValueRange>250~500</totalMarketValueRange>
       </fixedParams>
     </root>
   </ThingSetMakerDef>

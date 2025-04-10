@@ -5,7 +5,7 @@
 		<label>2B9MS vasilek</label>
 		<description>An ancient design of rapid fire indirect artillery piece capabler of firing four mortar rounds in one burst.</description>
 		<graphicData>
-			<texPath>Things/Weapons/DMS_Gun_MobileMortar</texPath>
+			<texPath>Things/Weapons/DMS_Weapon_MobileMortar</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>3.75</drawSize>
 		</graphicData>
@@ -94,7 +94,7 @@
 		<label>ECM system</label>
 		<description>A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it.</description>
 		<graphicData>
-			<texPath>Things/Weapons/DMS_ECMS</texPath>
+			<texPath>Things/Weapons/DMS_Weapon_ECMS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -154,6 +154,112 @@
 				<doSoundEffects>false</doSoundEffects>
 				<doVisualEffects>false</doVisualEffects>
 				<chanceToStartFire>0.2</chanceToStartFire>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>DMS_Gun_Empero</defName>
+		<label>2S3M2 "Empero"</label>
+		<description>A powerful direct-firing cannon with high accuracy.</description>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_Empero</texPath>
+			<drawSize>7</drawSize>
+		</graphicData>
+		<soundInteract>Artillery_ShellLoaded</soundInteract>
+		<statBases>
+			<RangedWeapon_Cooldown>10.0</RangedWeapon_Cooldown>
+			<Mass>205</Mass>
+		</statBases>		
+		<weaponTags>
+			<li>DMS_Gun_Empero</li>
+			<li>NoSwitch</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<hasStandardCommand>true</hasStandardCommand>
+				<verbClass>Verb_Shoot</verbClass>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<warmupTime>5.0</warmupTime>
+				<forcedMissRadius>2</forcedMissRadius>
+				<forcedMissRadiusClassicMortars>4</forcedMissRadiusClassicMortars>
+				<defaultProjectile>DMS_Bullet_EmperoExplosive</defaultProjectile>
+				<requireLineOfSight>false</requireLineOfSight>
+				<minRange>29.9</minRange>
+				<range>240</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>DMS_Shot_JusticeGavel</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>100</muzzleFlashScale>
+				<sprayEffecterDef>DMS_LaunchDust</sprayEffecterDef>
+				<targetParams>
+					<canTargetBuildings>true</canTargetBuildings>
+					<canTargetPawns>true</canTargetPawns>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(5,5)</drawSize>
+				<offsets>
+					<li>(2.1,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+		</modExtensions>
+	</ThingDef>
+		
+	<ThingDef ParentName="BaseBullet">
+		<defName>DMS_Bullet_EmperoExplosive</defName>
+		<label>high-explosive shell</label>
+			<graphicData>
+			<texPath>Things/Projectile/ShellHighExplosive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>DMS.Projectile_ConeExplosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<!-- damage amount is the damage def default -->
+			<speed>60</speed>
+			<explosionRadius>3.9</explosionRadius>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+		<modExtensions>
+			<li Class="DMS.ExplosiveExtension">
+				<damage>Bullet</damage>
+				<damageAmount>100</damageAmount>
+				<armorPen>2</armorPen>
+				<preExplosionOffset>4</preExplosionOffset>
+				<range>7</range>
+				<swayAngle>60</swayAngle>
+				<doVisualEffects>false</doVisualEffects>
+				<effecterDef>DMSAC_ImpactDust</effecterDef>
+			</li>
+		</modExtensions>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMS_LaunchDust</effecterDef>
+			</li>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMS_LaunchDust</effecterDef>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>9.1</explosiveRadius>
+				<explosiveDamageType>Stun</explosiveDamageType>
+				<armorPenetrationBase>0.4</armorPenetrationBase>
+				<damageAmountBase>30</damageAmountBase>
+				<explodeOnDestroyed>true</explodeOnDestroyed>
+				<explodeOnKilled>true</explodeOnKilled>
+				<doSoundEffects>false</doSoundEffects>
+				<doVisualEffects>false</doVisualEffects>
 				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			</li>
 		</comps>
