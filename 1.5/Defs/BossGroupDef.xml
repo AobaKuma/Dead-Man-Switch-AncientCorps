@@ -1,11 +1,160 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <BossDef>
+    <defName>DMS_Boss_BattleWalker</defName>
+    <kindDef>DMS_Mech_BattleWalker</kindDef>
+    <appearAfterTicks>60000</appearAfterTicks><!--1-->
+  </BossDef>
+  
+  <BossgroupDef ParentName="BaseBossgroupNonMechanitor">
+    <defName>DMSAC_Boss_ArmedRecon</defName>
+    <boss>DMS_Boss_BattleWalker</boss>
+    <waves>
+      <li> <!-- 0 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>2</DMS_Mech_Mushketer_SAR>
+        </escorts>
+      </li>
+      <li> <!-- 1 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>6</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>3</DMS_Mech_Mushketer_SAR>
+        </escorts>
+      </li>
+      <li> <!-- 2 -->
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>6</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
+        </escorts>
+      </li>
+      <li> <!-- 3 -->
+        <bossCount>2</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>6</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_CommandWalker>1</DMS_Mech_CommandWalker>
+        </escorts>
+      </li>
+      <li> <!-- 0 -->
+        <bossCount>2</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_CommandWalker>1</DMS_Mech_CommandWalker>
+        </escorts>
+      </li>
+      <li> <!-- 0 -->
+        <bossCount>2</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>10</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Gorod_Cornetist>3</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+          <DMS_Mech_CommandWalker>1</DMS_Mech_CommandWalker>
+        </escorts>
+      </li>
+      <li> <!-- 0 -->
+        <bossCount>3</bossCount>
+        <escorts>
+          <DMS_Mech_Mushketer_AR>12</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Gorod_Cornetist>3</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Tsvetnik>2</DMS_Mech_Tsvetnik>
+          <DMS_Mech_CommandWalker>1</DMS_Mech_CommandWalker>
+        </escorts>
+      </li>
+    </waves>
+    <leaderDescription>This squad were one of automatroid squad deployed as a reconnaissance forces for the Colonial Forces hundreds of years ago. It has been out of command due to the loss of its operator for an unknown amount of time and gone feral.</leaderDescription>
+    <rewardDef>DMSAC_SiteIntel</rewardDef>
+  </BossgroupDef>
+
+  <ThingDef ParentName="ResourceBase"> 
+    <defName>DMSAC_RecoverTransmitter</defName>
+    <label>Recover Transmitter</label>
+    <description>A simple antenna group, using the code provided by colonial fleets to recover old automatroids units, but the only ones who could come because of these signals could  be those automatroids held hostage by the mechanoid legion.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/RecoverTransmitter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>ThingWithComps</thingClass>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <Mass>3</Mass>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Flammability>0.2</Flammability>
+      <MarketValue>150</MarketValue>
+    </statBases>
+    <recipeMaker>
+      <workAmount>20000</workAmount>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+        <li>DMS_TableMachinePrinter</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>5</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <tradeability>Buyable</tradeability>
+    <comps>  
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Attract armed recon threat</useLabel>
+        <useDuration>900</useDuration>
+        <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
+      </li>
+      <li Class="DMS.CompProperties_UseEffectSummonRaid">
+        <bossgroupDef>DMSAC_Boss_ArmedRecon</bossgroupDef>
+        <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechanoidsWakeUp</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <delayTicks>120</delayTicks>
+        <spawnKilledLeavings>false</spawnKilledLeavings>
+        <effecterDef>MechbandBuildingDestroyed</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
+
   <!-- DMS_Mech_Krepost -->
   <BossDef>
     <defName>DMS_Boss_Krepost</defName>
     <kindDef>DMS_Mech_Krepost</kindDef>
     <appearAfterTicks>360000</appearAfterTicks><!-- 1 years -->
   </BossDef>
+
   <BossgroupDef ParentName="BaseBossgroupNonMechanitor">
     <defName>DMS_Krepost</defName>
     <boss>DMS_Boss_Krepost</boss>
@@ -104,7 +253,7 @@
       </li>
     </waves>
     <leaderDescription>This {LEADERKIND_label} was one of machines deployed as a vanguard for the Colonial Forces hundreds of years ago. It has been out of command due to the loss of its operator for an unknown amount of time and gone feral.</leaderDescription>
-    <rewardDef>DMS_FacilityIntel</rewardDef>
+    <rewardDef>DMSAC_FacilityIntel</rewardDef>
   </BossgroupDef>
 
   <ThingDef ParentName="DMS_BossCallerBase">
@@ -123,9 +272,12 @@
     <uiIconScale>0.5</uiIconScale>
     <size>(1,1)</size>
     <costList>
-      <Steel>50</Steel>
-      <ComponentIndustrial>5</ComponentIndustrial>
+      <Tungsteel>100</Tungsteel>
+      <ComponentStamped>4</ComponentStamped>
     </costList>
+    <researchPrerequisites>
+      <li>DMS_DeadMansSwitch</li>
+    </researchPrerequisites>
     <comps>
       <li Class="CompProperties_Usable">
         <useJob>TriggerObject</useJob>
@@ -134,13 +286,9 @@
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
       <li Class="DMS.CompProperties_UseEffectSummonRaid">
-        <bossgroupDef>DMS_Krepost</bossgroupDef>
+        <bossgroupDef>DMSAC_Boss_ArmedRecon</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>
-      <!-- <li Class="AncientCorps.CompProperties_UseEffectPlaySong">
-        <song>DMSAC_Boss_A</song>
-        <delayTicks>750</delayTicks>
-      </li> -->
       <li Class="CompProperties_UseEffectDestroySelf">
         <delayTicks>750</delayTicks>
         <spawnKilledLeavings>true</spawnKilledLeavings>

@@ -14,6 +14,7 @@ namespace AncientCorps
         public static FactionDef DMS_AncientCorps;
         public static JobDef DMS_EjectDeactivatedMech;
         public static JobDef DMS_HackDeactivatedMech;
+        public static JobDef DMS_ResurrectMech;
         public static PawnKindDef DMS_Mech_Krepost;
         public static QuestScriptDef DMSAC_OpportunitySite_Graveyard;
     }

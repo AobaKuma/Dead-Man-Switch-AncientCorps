@@ -73,9 +73,13 @@
     <Compile Include="AncientCorpsUltility.cs" />
     <Compile Include="CircleConst.cs" />
     <Compile Include="Boss\CompAbilityEffect_ActiveProtectionSystem.cs" />
+    <Compile Include="CompTargetable_SingleMechCorpse.cs" />
+    <Compile Include="CompTargetEffect_ResurrectMech.cs" />
+    <Compile Include="CompUseEffect_AddHediffChance.cs" />
     <Compile Include="Defcon\CompanyDef.cs" />
     <Compile Include="BaseGen\CompBuildingExtraRenderer.cs" />
     <Compile Include="Defcon\GameComponent_RaidCompany.cs" />
+    <Compile Include="JobDriver_ResurrectMech.cs" />
     <Compile Include="Projectile\CompAfterBurner.cs" />
     <Compile Include="Projectile\CompEffector.cs" />
     <Compile Include="Projectile\CompGuided.cs" />

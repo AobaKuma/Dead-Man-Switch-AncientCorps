@@ -2,17 +2,17 @@
 <LanguageData>
   
   <!-- EN: facility intel -->
-  <DMS_FacilityIntel.label>設施情報</DMS_FacilityIntel.label>
+  <DMSAC_FacilityIntel.label>設施情報</DMSAC_FacilityIntel.label>
   <!-- EN: A intel map about the location of a military facility. -->
-  <DMS_FacilityIntel.description>一個用於紀錄部隊日誌的戰鬥紀錄儀，可以透過分析內部數據來得到古代機兵部隊設施的情報。</DMS_FacilityIntel.description>
+  <DMSAC_FacilityIntel.description>一個用於紀錄部隊日誌的戰鬥紀錄儀，可以透過分析內部數據來得到古代機兵部隊設施的情報。與那些簡易的臨時站點不同，這些軍用設施的戒備森嚴並有完整的駐防部隊，此外對這類設施的襲擊行為將很可能使軍隊提升其警戒等級。</DMSAC_FacilityIntel.description>
   <!-- EN: Analyzing facility intel -->
-  <DMS_FacilityIntel.comps.CompUsable.useLabel>分析設施情報</DMS_FacilityIntel.comps.CompUsable.useLabel>
+  <DMSAC_FacilityIntel.comps.CompUsable.useLabel>分析設施情報</DMSAC_FacilityIntel.comps.CompUsable.useLabel>
   
   <!-- EN: site intel -->
-  <DMS_SiteIntel.label>站點情報</DMS_SiteIntel.label>
+  <DMSAC_SiteIntel.label>站點情報</DMSAC_SiteIntel.label>
   <!-- EN: A intel map about the location of a small military site. -->
-  <DMS_SiteIntel.description>一個關於古代機兵部隊臨時物流終端站的情報，這些小型物流集散地通常只有少量的自動防禦設施。</DMS_SiteIntel.description>
+  <DMSAC_SiteIntel.description>一個關於古代機兵部隊臨時物流終端站的情報，這些小型物流集散地通常只有少量的自動防禦設施與週期性的巡邏隊檢查，因此成為了許多小型拾荒者與海盜團夥作案的目標。</DMSAC_SiteIntel.description>
   <!-- EN: Analyzing facility intel -->
-  <DMS_SiteIntel.comps.CompUsable.useLabel>分析站點情報</DMS_SiteIntel.comps.CompUsable.useLabel>
+  <DMSAC_SiteIntel.comps.CompUsable.useLabel>分析站點情報</DMSAC_SiteIntel.comps.CompUsable.useLabel>
   
 </LanguageData>

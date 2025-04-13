@@ -56,7 +56,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/mushketer</texPath>
+          <texPath>Things/Automatroid/mushketer_B</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.3</drawSize>
@@ -64,7 +64,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Automatroid/mushketer</texPath>
+          <texPath>Things/Automatroid/mushketer_B</texPath>
           <shaderType>CutoutComplex</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.3</drawSize>
