@@ -8,6 +8,20 @@
   <!-- EN: Analyzing facility intel -->
   <DMSAC_FacilityIntel.comps.CompUsable.useLabel>分析設施情報</DMSAC_FacilityIntel.comps.CompUsable.useLabel>
   
+  <!-- EN: Electronic repair kit -->
+  <DMSAC_Kit_Electronic.label>應急重啟套件</DMSAC_Kit_Electronic.label>
+  <!-- EN: A set of tool consumables for repairing and restarting the electronic system of an automatroid, including a micro pulse battery for restarting the automatroid. Such a forced restart doesn't restore the damaged structure, and a strong electric surge might leave structural damage. Such hidden dangers can only be repaired by a total factory reassembling. -->
+  <DMSAC_Kit_Electronic.description>一套用於在戰地環境維修並重啟機械體電子系統的工具耗材，包含一個用於重啟機體的微型脈衝電池。簡而言之，透過該套件可以將徹底停機的機兵進行最低限度的重啟，然而這樣的強行重啟並不能將受損的機械結構修復，且強烈的電湧很可能會使機體內的部分零件發生熔毀並留下結構性損傷，而這類隱患只能透過徹底的返廠維修來根治。</DMSAC_Kit_Electronic.description>
+  <!-- EN: reboot mech -->
+  <DMSAC_Kit_Electronic.comps.CompUsable.useLabel>重啟機械體</DMSAC_Kit_Electronic.comps.CompUsable.useLabel>
+  
+  <!-- EN: Mechanic repair kit -->
+  <DMSAC_Kit_Mechanic.label>機械體維修工具</DMSAC_Kit_Mechanic.label>
+  <!-- EN: . -->
+  <DMSAC_Kit_Mechanic.description>一套用於在一線戰場上臨時修復機兵受損部位的機械維修工具，其操作簡單且能夠重複使用因此能讓非機械師的一線人員接手機兵的維修工作。然而這樣的臨時修復有很小的可能性會使部分零件留下結構性損傷，而這類隱患只能透過徹底的返廠維修來根治。</DMSAC_Kit_Mechanic.description>
+  <!-- EN: repair mech -->
+  <DMSAC_Kit_Mechanic.comps.CompUsable.useLabel>維修機械體</DMSAC_Kit_Mechanic.comps.CompUsable.useLabel>
+  
   <!-- EN: site intel -->
   <DMSAC_SiteIntel.label>站點情報</DMSAC_SiteIntel.label>
   <!-- EN: A intel map about the location of a small military site. -->

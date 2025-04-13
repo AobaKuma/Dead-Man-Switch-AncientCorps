@@ -7,5 +7,12 @@
   <DMS_AncientDecoyRadio.description>经过改装的信号转发器。在启动后它会发出强大的诱饵信号并吸引重型机兵部队前来攻击。如果你能打败它，你就可以从它的残骸中收集特殊技术。信号脉冲会烧坏发射器所以这座建筑只能够使用一次。</DMS_AncientDecoyRadio.description>
   <!-- EN: Attract krepost threat -->
   <DMS_AncientDecoyRadio.comps.CompUsable.useLabel>吸引棱堡袭击</DMS_AncientDecoyRadio.comps.CompUsable.useLabel>
-  
+
+  <!-- EN: Recover Transmitter -->
+  <DMSAC_RecoverTransmitter.label>古代回收天线</DMSAC_RecoverTransmitter.label>
+  <!-- EN: A simple antenna group, using the code provided by colonial fleets to recover old automatroids units, but the only ones who could come because of these signals could  be those automatroids held hostage by the mechanoid legion. -->
+  <DMSAC_RecoverTransmitter.description>一种结构简单的天线组，在启动后会发送殖民舰队用于招回机兵部队的伪造讯号，但由于该密码早已弃用因此会因为这些讯号而来的只可能是受机械军团挟持的机体。如果你能打败它们，你就可以从它们的黑盒子纪录中找到军事站点的情报。信号脉冲会烧坏发射器所以只能够使用一次。</DMSAC_RecoverTransmitter.description>
+  <!-- EN: Attract armed recon threat -->
+  <DMSAC_RecoverTransmitter.comps.CompUsable.useLabel>吸引武装侦查袭击</DMSAC_RecoverTransmitter.comps.CompUsable.useLabel>
+
 </LanguageData>

@@ -4,8 +4,15 @@
   <!-- EN: Ancient Decoy Antenna -->
   <DMS_AncientDecoyRadio.label>古代誘導天線</DMS_AncientDecoyRadio.label>
   <!-- EN: A modified signal transponder which is rigged to send a high power burst transmission. Once activated it puts out a powerful decoy signal which will attract a feral group of automatroid forces to attack your colony. If you can defeat them, you can collect the advanced technology from their corpses. The signal pulse burns out the transmitter, so this building can only be used once. -->
-  <DMS_AncientDecoyRadio.description>經過改裝的信號轉發器。在啟動後它會發出強大的誘餌信號並吸引重型機兵部隊前來攻擊。如果你能打敗它，你就可以從它的殘骸中收集特殊技術。信號脈衝會燒壞發射器所以這座建築只能夠使用一次。</DMS_AncientDecoyRadio.description>
+  <DMS_AncientDecoyRadio.description>一種經過改裝的信號轉發器。在啟動後它會發出與火控雷達瞄準相同波段的脈衝訊號來吸引重型機兵部隊前來攻擊。如果你能打敗它，你就可以從它的殘骸中收集特殊技術。信號脈衝會燒壞發射器所以這座建築只能夠使用一次。</DMS_AncientDecoyRadio.description>
   <!-- EN: Attract krepost threat -->
   <DMS_AncientDecoyRadio.comps.CompUsable.useLabel>吸引稜堡襲擊</DMS_AncientDecoyRadio.comps.CompUsable.useLabel>
+  
+  <!-- EN: Recover Transmitter -->
+  <DMSAC_RecoverTransmitter.label>古代回收天線</DMSAC_RecoverTransmitter.label>
+  <!-- EN: A simple antenna group, using the code provided by colonial fleets to recover old automatroids units, but the only ones who could come because of these signals could  be those automatroids held hostage by the mechanoid legion. -->
+  <DMSAC_RecoverTransmitter.description>一種結構簡單的天線組，在啟動後會發送殖民艦隊用於招回機兵部隊的偽造訊號，但由於該密碼早已棄用因此會因為這些訊號而來的只可能是受機械軍團挾持的機體。如果你能打敗它們，你就可以從它們的黑盒子紀錄中找到軍事站點的情報。信號脈衝會燒壞發射器所以只能夠使用一次。</DMSAC_RecoverTransmitter.description>
+  <!-- EN: Attract armed recon threat -->
+  <DMSAC_RecoverTransmitter.comps.CompUsable.useLabel>吸引武裝偵查襲擊</DMSAC_RecoverTransmitter.comps.CompUsable.useLabel>
   
 </LanguageData>

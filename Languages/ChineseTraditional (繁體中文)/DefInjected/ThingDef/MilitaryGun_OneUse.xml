@@ -10,9 +10,9 @@
   <!-- EN: on cooldown -->
   <DMSAC_StugnaATGM.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMSAC_StugnaATGM.comps.CompApparelReloadable.cooldownGerund>
   <!-- EN: Stugna missile launcher -->
-  <DMSAC_StugnaATGM.verbs.Verb_LaunchProjectileStaticCE.label>短號導彈發射器</DMSAC_StugnaATGM.verbs.Verb_LaunchProjectileStaticCE.label>
+  <DMSAC_StugnaATGM.verbs.Verb_Shoot.label>短號導彈發射器</DMSAC_StugnaATGM.verbs.Verb_Shoot.label>
   
   <!-- UNUSED -->
-  <DMSAC_StugnaATGM.verbs.Verb_Shoot.label>短號導彈發射器</DMSAC_StugnaATGM.verbs.Verb_Shoot.label>
+  <DMSAC_StugnaATGM.verbs.Verb_LaunchProjectileStaticCE.label>短號導彈發射器</DMSAC_StugnaATGM.verbs.Verb_LaunchProjectileStaticCE.label>
   
 </LanguageData>

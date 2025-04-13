@@ -33,6 +33,11 @@ namespace AncientCorps
                 job.count = 1;
                 job.playerForced = true;
                 user.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+                this.parent.HitPoints -= 10;
+                if (this.parent.HitPoints <= 0)
+                {
+                    this.parent.Destroy();
+                }
             }
         }
     }

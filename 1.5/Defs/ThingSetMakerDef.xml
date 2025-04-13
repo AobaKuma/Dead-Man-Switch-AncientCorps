@@ -120,7 +120,6 @@
                 <thingDefs>
                   <li>ComponentStamped</li>
                   <li>ComponentSpacer</li>
-                  <li>ComponentIndustrial</li>
                 </thingDefs>
               </filter>
               <countRange>2~10</countRange>
@@ -148,9 +147,24 @@
               <filter>
                 <thingDefs>
                   <li>DMS_EncryptedTransmitter</li>
+                  <li>DMSAC_RecoverTransmitter</li>
                 </thingDefs>
               </filter>
               <countRange>1~3</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>50</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>DMSAC_Kit_Electronic</li>
+                  <li>DMSAC_Kit_Mechanic</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~2</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>

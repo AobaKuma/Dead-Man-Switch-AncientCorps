@@ -24,13 +24,12 @@
   <DMS_AtlantGrenadeLauncher.tools.stock.label>槍托</DMS_AtlantGrenadeLauncher.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_AtlantGrenadeLauncher.tools.barrel.label>槍管</DMS_AtlantGrenadeLauncher.tools.barrel.label>
-  <!-- EN: muzzle -->
-  <DMS_AtlantGrenadeLauncher.tools.muzzle.label>槍口</DMS_AtlantGrenadeLauncher.tools.muzzle.label>
   <!-- EN: Atlant Grenade Launcher -->
-  <DMS_AtlantGrenadeLauncher.verbs.Verb_ShootMortarCE.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_ShootMortarCE.label>
+  <DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>
   
   <!-- UNUSED -->
-  <DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_Shoot.label>
+  <DMS_AtlantGrenadeLauncher.tools.muzzle.label>槍口</DMS_AtlantGrenadeLauncher.tools.muzzle.label>
+  <DMS_AtlantGrenadeLauncher.verbs.Verb_ShootMortarCE.label>AGS-30</DMS_AtlantGrenadeLauncher.verbs.Verb_ShootMortarCE.label>
   
   <!-- EN: Tula combat shotgun -->
   <DMS_KS23K.label>圖拉戰鬥霰彈槍</DMS_KS23K.label>
@@ -40,13 +39,12 @@
   <DMS_KS23K.tools.stock.label>槍托</DMS_KS23K.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_KS23K.tools.barrel.label>槍管</DMS_KS23K.tools.barrel.label>
-  <!-- EN: muzzle -->
-  <DMS_KS23K.tools.muzzle.label>槍口</DMS_KS23K.tools.muzzle.label>
   <!-- EN: Tula combat shotgun -->
-  <DMS_KS23K.verbs.Verb_ShootCE.label>KS23K</DMS_KS23K.verbs.Verb_ShootCE.label>
+  <DMS_KS23K.verbs.Verb_Shoot.label>KS23K</DMS_KS23K.verbs.Verb_Shoot.label>
   
   <!-- UNUSED -->
-  <DMS_KS23K.verbs.Verb_Shoot.label>KS23K</DMS_KS23K.verbs.Verb_Shoot.label>
+  <DMS_KS23K.tools.muzzle.label>槍口</DMS_KS23K.tools.muzzle.label>
+  <DMS_KS23K.verbs.Verb_ShootCE.label>KS23K</DMS_KS23K.verbs.Verb_ShootCE.label>
   
   <!-- EN: Mikhail Machinegun -->
   <DMS_PKM.label>米哈伊爾通用機槍</DMS_PKM.label>
@@ -56,13 +54,12 @@
   <DMS_PKM.tools.stock.label>槍托</DMS_PKM.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_PKM.tools.barrel.label>槍管</DMS_PKM.tools.barrel.label>
-  <!-- EN: muzzle -->
-  <DMS_PKM.tools.muzzle.label>槍口</DMS_PKM.tools.muzzle.label>
   <!-- EN: Mikhail Machinegun -->
-  <DMS_PKM.verbs.Verb_ShootCE.label>PKMB</DMS_PKM.verbs.Verb_ShootCE.label>
+  <DMS_PKM.verbs.Verb_Shoot.label>PKMB</DMS_PKM.verbs.Verb_Shoot.label>
   
   <!-- UNUSED -->
-  <DMS_PKM.verbs.Verb_Shoot.label>PKMB</DMS_PKM.verbs.Verb_Shoot.label>
+  <DMS_PKM.tools.muzzle.label>槍口</DMS_PKM.tools.muzzle.label>
+  <DMS_PKM.verbs.Verb_ShootCE.label>PKMB</DMS_PKM.verbs.Verb_ShootCE.label>
   
   <!-- EN: Vykhlop rifle -->
   <DMS_VykhlopRifle.label>排氣者步槍</DMS_VykhlopRifle.label>
@@ -72,13 +69,12 @@
   <DMS_VykhlopRifle.tools.stock.label>槍托</DMS_VykhlopRifle.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_VykhlopRifle.tools.barrel.label>槍管</DMS_VykhlopRifle.tools.barrel.label>
-  <!-- EN: muzzle -->
-  <DMS_VykhlopRifle.tools.muzzle.label>槍口</DMS_VykhlopRifle.tools.muzzle.label>
   <!-- EN: Vykhlop rifle -->
-  <DMS_VykhlopRifle.verbs.Verb_ShootCE.label>VKS12</DMS_VykhlopRifle.verbs.Verb_ShootCE.label>
+  <DMS_VykhlopRifle.verbs.Verb_Shoot.label>VKS12</DMS_VykhlopRifle.verbs.Verb_Shoot.label>
   
   <!-- UNUSED -->
-  <DMS_VykhlopRifle.verbs.Verb_Shoot.label>VKS12</DMS_VykhlopRifle.verbs.Verb_Shoot.label>
+  <DMS_VykhlopRifle.tools.muzzle.label>槍口</DMS_VykhlopRifle.tools.muzzle.label>
+  <DMS_VykhlopRifle.verbs.Verb_ShootCE.label>VKS12</DMS_VykhlopRifle.verbs.Verb_ShootCE.label>
   
   <!-- EN: Yekaterin Rifle -->
   <DMS_YekaterinRifle.label>葉卡捷琳步槍</DMS_YekaterinRifle.label>
@@ -88,13 +84,12 @@
   <DMS_YekaterinRifle.tools.stock.label>槍托</DMS_YekaterinRifle.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_YekaterinRifle.tools.barrel.label>槍管</DMS_YekaterinRifle.tools.barrel.label>
-  <!-- EN: muzzle -->
-  <DMS_YekaterinRifle.tools.muzzle.label>槍口</DMS_YekaterinRifle.tools.muzzle.label>
   <!-- EN: Yekaterin Rifle -->
-  <DMS_YekaterinRifle.verbs.Verb_ShootCE.label>KSVK</DMS_YekaterinRifle.verbs.Verb_ShootCE.label>
+  <DMS_YekaterinRifle.verbs.Verb_Shoot.label>KSVK</DMS_YekaterinRifle.verbs.Verb_Shoot.label>
   
   <!-- UNUSED -->
-  <DMS_YekaterinRifle.verbs.Verb_Shoot.label>KSVK</DMS_YekaterinRifle.verbs.Verb_Shoot.label>
+  <DMS_YekaterinRifle.tools.muzzle.label>槍口</DMS_YekaterinRifle.tools.muzzle.label>
+  <DMS_YekaterinRifle.verbs.Verb_ShootCE.label>KSVK</DMS_YekaterinRifle.verbs.Verb_ShootCE.label>
   
   <!-- EN: Zlobin Revolver -->
   <DMS_ZlobinRevolver.label>佐羅賓手槍</DMS_ZlobinRevolver.label>
@@ -104,13 +99,12 @@
   <DMS_ZlobinRevolver.tools.stock.label>槍托</DMS_ZlobinRevolver.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_ZlobinRevolver.tools.barrel.label>槍管</DMS_ZlobinRevolver.tools.barrel.label>
-  <!-- EN: muzzle -->
-  <DMS_ZlobinRevolver.tools.muzzle.label>槍口</DMS_ZlobinRevolver.tools.muzzle.label>
   <!-- EN: Zlobin Revolver -->
-  <DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>
+  <DMS_ZlobinRevolver.verbs.Verb_Shoot.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_Shoot.label>
   
   <!-- UNUSED -->
-  <DMS_ZlobinRevolver.verbs.Verb_Shoot.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_Shoot.label>
+  <DMS_ZlobinRevolver.tools.muzzle.label>槍口</DMS_ZlobinRevolver.tools.muzzle.label>
+  <DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>
   
   <!-- EN: Zlobin rifle -->
   <DMS_ZlobinRifle.label>佐羅賓突擊步槍</DMS_ZlobinRifle.label>
@@ -120,12 +114,11 @@
   <DMS_ZlobinRifle.tools.stock.label>槍托</DMS_ZlobinRifle.tools.stock.label>
   <!-- EN: barrel -->
   <DMS_ZlobinRifle.tools.barrel.label>槍管</DMS_ZlobinRifle.tools.barrel.label>
-  <!-- EN: muzzle -->
-  <DMS_ZlobinRifle.tools.muzzle.label>槍口</DMS_ZlobinRifle.tools.muzzle.label>
   <!-- EN: Zlobin rifle -->
-  <DMS_ZlobinRifle.verbs.Verb_ShootCE.label>ShAK12</DMS_ZlobinRifle.verbs.Verb_ShootCE.label>
+  <DMS_ZlobinRifle.verbs.Verb_Shoot.label>ShAK12</DMS_ZlobinRifle.verbs.Verb_Shoot.label>
   
   <!-- UNUSED -->
-  <DMS_ZlobinRifle.verbs.Verb_Shoot.label>ShAK12</DMS_ZlobinRifle.verbs.Verb_Shoot.label>
+  <DMS_ZlobinRifle.tools.muzzle.label>槍口</DMS_ZlobinRifle.tools.muzzle.label>
+  <DMS_ZlobinRifle.verbs.Verb_ShootCE.label>ShAK12</DMS_ZlobinRifle.verbs.Verb_ShootCE.label>
   
 </LanguageData>

@@ -4,4 +4,7 @@
   <!-- EN: This {LEADERKIND_label} was one of machines deployed as a vanguard for the Colonial Forces hundreds of years ago. It has been out of command due to the loss of its operator for an unknown amount of time and gone feral. -->
   <DMS_Krepost.leaderDescription>這架{LEADERKIND_label}隸屬於一支在過去便部屬到這顆星球上的遠古機兵軍隊，由於收到了訊號而來到了這片地區並將你視為潛在的敵對目標。</DMS_Krepost.leaderDescription>
   
+  <!-- EN: This squad were one of automatroid squad deployed as a reconnaissance forces for the Colonial Forces hundreds of years ago. It has been out of command due to the loss of its operator for an unknown amount of time and gone feral. -->
+  <DMSAC_Boss_ArmedRecon.leaderDescription>這一支機兵武裝偵查小隊隸屬於一支在過去便部屬到這顆星球上的遠古機兵軍隊，由於收到了訊號而來到了這片地區並將你視為潛在的敵對目標。</DMSAC_Boss_ArmedRecon.leaderDescription>
+  
 </LanguageData>

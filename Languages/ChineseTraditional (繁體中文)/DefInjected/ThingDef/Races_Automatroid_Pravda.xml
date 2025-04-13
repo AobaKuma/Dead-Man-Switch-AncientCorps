@@ -5,11 +5,14 @@
   <DMS_Mech_Pravda.label>真理</DMS_Mech_Pravda.label>
   <!-- EN: Originally designed to breach fortified zones and expansive no-man's lands, this all-terrain unmanned assault gun is armed with a 155mm cannon to strike permanent fortifications from long distances. It relies on rocket-deployed explosive charges to clear safe paths through minefields. -->
   <DMS_Mech_Pravda.description>在過去為突破工事群與其廣闊無人區而設計的超重型突擊砲機兵，具有一門155毫米加農砲用以在長距離外打擊永固工事，並能夠依靠火箭推進釋放的炸藥索來在地雷原中為友軍清出安全通道。</DMS_Mech_Pravda.description>
-  <!-- EN: left leg -->
+  <!-- EN: Left Leg -->
+  <DMS_Mech_Pravda.tools.Left_Leg.label>左腿</DMS_Mech_Pravda.tools.Left_Leg.label>
+  <!-- EN: Right Leg -->
+  <DMS_Mech_Pravda.tools.Right_Leg.label>右腿</DMS_Mech_Pravda.tools.Right_Leg.label>
+  
+  <!-- UNUSED -->
   <DMS_Mech_Pravda.tools.left_leg.label>左腿</DMS_Mech_Pravda.tools.left_leg.label>
-  <!-- EN: right leg -->
   <DMS_Mech_Pravda.tools.right_leg.label>右腿</DMS_Mech_Pravda.tools.right_leg.label>
-  <!-- EN: head -->
   <DMS_Mech_Pravda.tools.head.label>機體</DMS_Mech_Pravda.tools.head.label>
   
 </LanguageData>

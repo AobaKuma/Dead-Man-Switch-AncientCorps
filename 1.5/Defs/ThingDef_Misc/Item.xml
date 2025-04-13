@@ -129,7 +129,7 @@
   <ThingDef ParentName="ResourceBase"> 
     <defName>DMSAC_Kit_Mechanic</defName>
     <label>Mechanic repair kit</label>
-    <description>.</description>
+    <description>A set of mechanical repair tools used to temporarily repair damaged parts of mechas on the front-line battlefield. It is simple to operate and can be reused, so non-mechanical front-line personnel can repair automatroids. However, there is a small chance that such a temporary repair will leave some parts with structural damage. Such hidden dangers can only be repaired by a total factory reassembling.</description>
     <graphicData>
       <texPath>Things/Resource/DMS_Kit_Repair</texPath>
       <graphicClass>Graphic_Single</graphicClass>

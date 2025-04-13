@@ -5,6 +5,47 @@
     <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
     <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
   -->
+  <DMSAC_OpportunitySite_Facility.questDescriptionRules.rulesStrings>
+    <li>questDescription(askerIsNull==true)->根據分析的數據，我們在距離不遠的地方定位了一處古代機兵部隊的軍用設施。\n\n似乎[allSitePartsDescriptions]</li>
+    <li>questDescription(asker_factionLeader==True)->根據分析的數據結合此前來自[asker_faction_name]的[asker_faction_leaderTitle][asker_nameDef]所透漏的模糊訊息。我們確認不遠處有一處古代機兵部隊的軍用設施。\n\n[asker_label]曾表示這裡可能[allSitePartsDescriptions]</li>
+  </DMSAC_OpportunitySite_Facility.questDescriptionRules.rulesStrings>
+  <!-- EN:
+    <li>questName(priority=1)->[asker_nameDef]'s [verb] [abj] [facility]</li>
+    <li>questName->[abj] [facility]</li>
+    <li>verb->Located</li>
+    <li>verb->Detected</li>
+    <li>verb->Exposed</li>
+    <li>abj->Military</li>
+    <li>abj->Fortified</li>
+    <li>abj->Militarized</li>
+    <li>abj->Confidential</li>
+    <li>facility->Base</li>
+    <li>facility->Facility</li>
+    <li>facility->Fortress</li>
+    <li>facility->Shelter</li>
+    <li>facility->Installation</li>
+  -->
+  <DMSAC_OpportunitySite_Facility.questNameRules.rulesStrings>
+    <li>questName(priority=1)->[asker_nameDef][verb]的[abj][facility]</li>
+    <li>questName->[Located]的[abj][facility]</li>
+    <li>verb->定位</li>
+    <li>verb->偵查</li>
+    <li>verb->暴露</li>
+    <li>abj->軍用</li>
+    <li>abj->要塞化</li>
+    <li>abj->軍事化</li>
+    <li>abj->機密</li>
+    <li>facility->基地</li>
+    <li>facility->設施</li>
+    <li>facility->要地</li>
+    <li>facility->避難所</li>
+    <li>facility->建築</li>
+  </DMSAC_OpportunitySite_Facility.questNameRules.rulesStrings>
+  
+  <!-- EN:
+    <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
+    <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+  -->
   <DMSAC_OpportunitySite_Graveyard.questDescriptionRules.rulesStrings>
     <li>questDescription(askerIsNull==true)->根據分析的數據，我們在距離不遠的地方定位了一處古代機兵部隊的軍用設施。\n\n似乎[allSitePartsDescriptions]</li>
     <li>questDescription(asker_factionLeader==True)->根據分析的數據結合此前來自[asker_faction_name]的[asker_faction_leaderTitle][asker_nameDef]所透漏的模糊訊息。我們確認不遠處有一處古代機兵部隊的軍用設施。\n\n[asker_label]曾表示這裡可能[allSitePartsDescriptions]</li>
