@@ -79,6 +79,8 @@
     <Compile Include="Defcon\CompanyDef.cs" />
     <Compile Include="BaseGen\CompBuildingExtraRenderer.cs" />
     <Compile Include="Defcon\GameComponent_RaidCompany.cs" />
+    <Compile Include="Defcon\SitePartWorker_Company.cs" />
+    <Compile Include="Defcon\Company.cs" />
     <Compile Include="JobDriver_ResurrectMech.cs" />
     <Compile Include="Projectile\CompAfterBurner.cs" />
     <Compile Include="Projectile\CompEffector.cs" />
@@ -109,6 +111,10 @@
     <Compile Include="ThinkTree\LordToil_DefendTargetAndAssaultColony.cs" />
     <Compile Include="ThinkTree\LordToil_PickUpTeammatesAndExitMap.cs" />
     <Compile Include="Defcon\WorldObjectComp_PatrolSquad.cs" />
+    <Compile Include="WorldUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QuestNode\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

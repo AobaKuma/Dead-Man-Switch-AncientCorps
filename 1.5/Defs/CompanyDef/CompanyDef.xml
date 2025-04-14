@@ -1,13 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+  <!-- 之後用 -->
+  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany" Abstract="true">
+    <defaultFaction>DMS_AncientCorps</defaultFaction>
+    <IconPath>UI/Icons/Company/Company_Default</IconPath>
+  </AncientCorps.CompanyDef>
+
+  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_Engineer" ParentName="DMSAC_BaseCompany" Abstract="true">
+    <IconPath>UI/Icons/Company/Engineer</IconPath>
+    <NamePack>DMSAC_Namer_Grenadier</NamePack>
+    <description>Grenadier team</description>
+  </AncientCorps.CompanyDef>
+
+  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_AntiTank" ParentName="DMSAC_BaseCompany" Abstract="true">
+    <IconPath>UI/Icons/Company/AntiTank</IconPath>
+    <NamePack>DMSAC_Namer_Grenadier</NamePack>
+    <description>Antipersonnel team</description>
+  </AncientCorps.CompanyDef>
+
   <!--========AGS30 配置（警戒度1）========-->
-  <AncientCorps.CompanyDef>
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Engineer">
     <defName>DMSAC_GrenadierTeam_1</defName>
     <label>Grenadier Team</label>
-    <description>Grenadier team</description>
     <squadCountRange>1~4</squadCountRange>
-    <NamePack>DMSAC_Namer_Grenadier</NamePack>
     <defaultFaction>DMS_AncientCorps</defaultFaction>
     <squads>
       <!--1xAGS30 + Gorod-->
@@ -83,13 +99,10 @@
   </AncientCorps.CompanyDef>
 
   <!--====機炮 + 9M133 + 風琴反裝甲配置（警戒度2）====-->
-  <AncientCorps.CompanyDef>
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_AntiTank">
     <defName>DMSAC_AntitankTeam_2</defName>
     <label>Antitank Team</label>
-    <description>Antipersonnel team</description>
     <squadCountRange>1~4</squadCountRange>
-    <NamePack>DMSAC_Namer_Grenadier</NamePack>
-    <defaultFaction>DMS_AncientCorps</defaultFaction>
     <squads>
       <!--1x9M133 + 輕機兵-->
       <li>
@@ -336,13 +349,10 @@
   </AncientCorps.CompanyDef>
 
   <!--======機炮 + 9M133 + 風琴反裝甲配置（警戒度3）======-->
-  <AncientCorps.CompanyDef>
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_AntiTank">
     <defName>DMSAC_AntitankTeam_3</defName>
     <label>Antitank Team</label>
-    <description>Antipersonnel team</description>
     <squadCountRange>1~4</squadCountRange>
-    <NamePack>DMSAC_Namer_Grenadier</NamePack>
-    <defaultFaction>DMS_AncientCorps</defaultFaction>
     <squads>
 
       <!--2x9M133 + 輕機兵-->
@@ -360,8 +370,6 @@
           <li>DMS_Mech_Molot</li>
         </memberKindDefs>
       </li>
-
-
       <!--1x81mm，中型機兵較多-->
       <li>
         <leaderKindDef>
@@ -499,15 +507,11 @@
   </AncientCorps.CompanyDef>
 
   <!--========重機槍 + 機炮 + 9M133 + 風琴反裝甲配置（警戒度4）========-->
-  <AncientCorps.CompanyDef>
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_AntiTank">
     <defName>DMSAC_AntitankTeam_4</defName>
     <label>Antitank Team</label>
-    <description>Antitank team</description>
     <squadCountRange>1~4</squadCountRange>
-    <NamePack>DMSAC_Namer_Grenadier</NamePack>
-    <defaultFaction>DMS_AncientCorps</defaultFaction>
     <squads>
-
       <!--2x9M133 + 輕機兵較多-->
       <li>
         <leaderKindDef>
@@ -523,7 +527,6 @@
           <li>DMS_Mech_Molot</li>
         </memberKindDefs>
       </li>
-
       <!--3x9M133，輕機兵較少-->
       <li>
         <leaderKindDef>
@@ -540,8 +543,6 @@
           <li>DMS_Mech_Molot</li>
         </memberKindDefs>
       </li>
-
-
       <!--2x9M133，2x風琴，輕機兵較多-->
       <li>
         <leaderKindDef>
@@ -558,7 +559,6 @@
           <li>DMS_Mech_Molot</li>
         </memberKindDefs>
       </li>
-
       <!--1x9M133，3x風琴，輕機兵較多-->
       <li>
         <leaderKindDef>
@@ -575,7 +575,6 @@
           <li>DMS_Mech_Molot</li>
         </memberKindDefs>
       </li>
-
     </squads>
   </AncientCorps.CompanyDef>
 
@@ -1060,7 +1059,6 @@
     <NamePack>DMSAC_Namer_Grenadier</NamePack>
     <defaultFaction>DMS_AncientCorps</defaultFaction>
     <squads>
-
       <!--2x125mm炮 + 1xGSH30-6 + 1x八音盒 + 較少的輕機兵-->
       <li>
         <leaderKindDef>

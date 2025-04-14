@@ -47,7 +47,6 @@
     </genStep>
   </GenStepDef>
 
-
   <SitePartDef>
     <defName>DMSAC_Checkpoint</defName>
     <label>military checkpoint</label>

@@ -67,5 +67,13 @@
 
   <DMSAC_CompanyRaid>进攻: {0}</DMSAC_CompanyRaid>
   <DMSAC_CompanyRaid_Desc>一支隶属于{0}的机兵连队包围了你的殖民地，它们是{1}。这些由中继机体所指挥的机兵将对殖民地发起进攻并有目的性的解除非法武装来抑止袭击军用设施的行为。</DMSAC_CompanyRaid_Desc>
-
+  <DMSAC_Company.Label>{1}</DMSAC_Company.Label>
+  <DMSAC_Company.Desc>这是一支隶属于{0}的{1}，</DMSAC_Company.Desc>
+  <DMSAC_Company.Target>它们的目标很可能是处于作战半径内的{0}</DMSAC_Company.Target>
+  <DMSAC_Company.NoTarget>它们的目标未知</DMSAC_Company.NoTarget>
+  
+  <DMSAC_World_Declaration>宣战</DMSAC_World_Declaration>
+  <DMSAC_World_Declaration_Desc>根据最新的消息，{0}广播了对本地阵营{1}的宣战公告，并提及了所有对{1}控制区域的军事行动都将在遵守战争法的前提下完成。\n\n我们尚不清楚这将会造成什么样的影响。</DMSAC_World_Declaration_Desc>
+  <DMSAC_World_WarOver>行动结束</DMSAC_World_WarOver>
+  <DMSAC_World_WarOver_Desc>在接管了最后一个基地后，{0}宣布针对{1}的军事行动已圆满结束，作为行动的结果{1}在本星球的影响力被彻底的拔除。\n\n而根据情报，这支倾巢而出的军队在完成了它们的任务后已经重新回到原来的巡逻模式。\n战争结束了...\n\n暂时的。 </DMSAC_World_WarOver_Desc>
 </LanguageData>

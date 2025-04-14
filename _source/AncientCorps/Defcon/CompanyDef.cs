@@ -13,11 +13,9 @@ namespace AncientCorps
         public IntRange squadCountRange = new IntRange(1, 2);
         public List<PlatoonMaker> squads;
         public FactionDef defaultFaction = DMS_DefOf.DMS_AncientCorps;
-
-        public override void ResolveReferences()
-        {
-            base.ResolveReferences();
-        }
+        [NoTranslate]
+        public string IconPath = "UI/Icons/Company/Default";
+        public int combatRadius = 10;
 
         public override IEnumerable<string> ConfigErrors()
         {
@@ -29,6 +27,18 @@ namespace AncientCorps
             {
                 yield return "squads is null.";
                 yield break;
+            }
+        }
+        public IEnumerable<Pawn> GeneratePawns()
+        {
+            Faction f = Find.FactionManager.FirstFactionOfDef(defaultFaction);
+            for (int i = 0; i < squadCountRange.RandomInRange; i++)
+            {
+                foreach (var kind in squads.RandomElement().GeneratePawnKind())
+                {
+                    Pawn pawn = PawnGenerator.GeneratePawn(kind, f);
+                    yield return pawn;
+                }
             }
         }
     }
@@ -45,9 +55,16 @@ namespace AncientCorps
         public IEnumerable<PawnKindDef> GeneratePawnKind()
         {
             yield return leaderKindDef.RandomElement();
+            foreach (var item in fixedPawnkind)
+            {
+                for (int i = 0; i < (int)item.selectionWeight; i++)
+                {
+                    yield return item.kind;
+                }
+            }
             for (int i = 0; i < memberCountRange.RandomInRange; i++)
             {
-                yield return leaderKindDef.RandomElement();
+                yield return memberKindDefs.RandomElement();
             }
         }
     }

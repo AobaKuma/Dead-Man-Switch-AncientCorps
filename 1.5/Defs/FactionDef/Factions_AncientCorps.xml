@@ -66,6 +66,22 @@
     <pawnGroupMakers>
       <li>
         <!-- All types-->
+        <kindDef>Settlement</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <DMS_Mech_Mushketer_AR>18</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>12</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Molot>4</DMS_Mech_Molot>
+          <DMS_Mech_Molot_Reservoir>3</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>2</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+          <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+        </options>
+      </li>
+      <li>
+        <!-- All types-->
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>

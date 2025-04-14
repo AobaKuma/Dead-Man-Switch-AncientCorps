@@ -40,4 +40,14 @@
   <DMSAC_CompanyRaid>Attack: {0}</DMSAC_CompanyRaid>
   <DMSAC_CompanyRaid_Desc>A company of automatroids belonging to {0} has surrounded your colony. They are {1}. These automatroids commanded by relay-commanders will launch attacks on colonies and purposefully disarm illegal forces to discourage attacks on their military facilities.</DMSAC_CompanyRaid_Desc>
 
+  <DMSAC_Company.Label>{1}</DMSAC_Company.Label>
+  <DMSAC_Company.Desc>This is a {1} affiliated with {0},</DMSAC_Company.Desc>
+  <DMSAC_Company.Target>their targets are likely to be {0} within their combat radius</DMSAC_Company.Target>
+  <DMSAC_Company.NoTarget>their targets are unknown</DMSAC_Company.NoTarget>
+  
+  <DMSAC_World_Declaration>War declared</DMSAC_World_Declaration>
+  <DMSAC_World_Declaration_Desc>According to the latest news, {0} broadcast a declaration of war against the local faction {1}, and mentioned that all military operations in areas controlled by {1} will be carried out in compliance with the laws of war. \n\nWe don't yet know what impact this will have.</DMSAC_World_Declaration_Desc>
+  <DMSAC_World_WarOver>War ended</DMSAC_World_WarOver>
+  <DMSAC_World_WarOver_Desc>After taking over the last base, {0} announced that the military operation against {1} had been successfully completed. As a result of the operation, {1}'s influence on the planet was completely eradicated. \n\nAccording to intelligence, this army has returned to its original patrol mode after completing its mission. \nThe war is over...\n\nFor now.</DMSAC_World_WarOver_Desc>
+
 </LanguageData>

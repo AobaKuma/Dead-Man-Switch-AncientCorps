@@ -102,7 +102,7 @@
     <recipeMaker>
       <workAmount>20000</workAmount>
       <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <researchPrerequisite>Machining</researchPrerequisite>
       <recipeUsers>
         <li>TableMachining</li>
         <li>DMS_TableMachinePrinter</li>
@@ -286,7 +286,7 @@
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
       <li Class="DMS.CompProperties_UseEffectSummonRaid">
-        <bossgroupDef>DMSAC_Boss_ArmedRecon</bossgroupDef>
+        <bossgroupDef>DMS_Krepost</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>
       <li Class="CompProperties_UseEffectDestroySelf">

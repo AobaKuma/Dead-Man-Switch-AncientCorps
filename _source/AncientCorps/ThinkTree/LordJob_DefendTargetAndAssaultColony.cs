@@ -82,7 +82,7 @@ namespace AncientCorps
         public override void ExposeData()
         {
             Scribe_References.Look(ref defendedTarget, "defendedTarget", false);
-            Scribe_Collections.Look(ref downedPawns,"downedPawns");
+            Scribe_Collections.Look(ref downedPawns,"downedPawns",LookMode.Reference);
         }
         private Faction AssaulterFaction => defendedTarget.Faction;
         public         Pawn       defendedTarget;

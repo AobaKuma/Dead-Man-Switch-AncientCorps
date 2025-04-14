@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -62,6 +63,7 @@ namespace AncientCorps
             //訊息
             Find.LetterStack.ReceiveLetter("DMSAC_CompanyRaid".Translate(name), "DMSAC_CompanyRaid_Desc".Translate(faction.Name, name), LetterDefOf.ThreatBig, new LookTargets(commanders), faction);
         }
+
         private IntVec3 GetRandomCell(Pawn pawn)//pawn是leaderPawn
         {
             CellRect rect = CellRect.CenteredOn(pawn.Position, 10);

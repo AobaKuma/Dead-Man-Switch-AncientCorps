@@ -74,4 +74,14 @@
   <DMSAC_PatrolSquad>增援</DMSAC_PatrolSquad>
   <DMSAC_PatrolSquadDesc>一支巡邏部隊已經抵達設施，更多的後續部隊將在更短的時間內陸續增援。</DMSAC_PatrolSquadDesc>
 
+  <DMSAC_Company.Label>{1}</DMSAC_Company.Label>
+  <DMSAC_Company.Desc>這是一支隸屬於{0}的{1}，</DMSAC_Company.Desc>
+  <DMSAC_Company.Target>它們的目標很可能是處於作戰半徑內的{0}</DMSAC_Company.Target>
+  <DMSAC_Company.NoTarget>它們的目標未知</DMSAC_Company.NoTarget>
+  
+  <DMSAC_World_Declaration>宣戰</DMSAC_World_Declaration>
+  <DMSAC_World_Declaration_Desc>根據最新的消息，{0}廣播了對本地陣營{1}的宣戰公告，並提及了所有對{1}控制區域的軍事行動都將在遵守戰爭法的前提下完成。\n\n我們尚不清楚這將會造成什麼樣的影響。</DMSAC_World_Declaration_Desc>
+  <DMSAC_World_WarOver>行動結束</DMSAC_World_WarOver>
+  <DMSAC_World_WarOver_Desc>在接管了最後一個基地後，{0}宣布針對{1}的軍事行動已圓滿結束，作為行動的結果{1}在本星球的影響力被徹底的拔除。\n\n而根據情報，這支傾巢而出的軍隊在完成了它們的任務後已經重新回到原來的巡邏模式。\n戰爭結束了...\n\n暫時的。 </DMSAC_World_WarOver_Desc>
+
 </LanguageData>

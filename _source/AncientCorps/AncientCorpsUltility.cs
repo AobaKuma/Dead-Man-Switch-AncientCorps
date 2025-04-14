@@ -2,19 +2,22 @@
 using RimWorld;
 using RimWorld.Planet;
 using RimWorld.QuestGen;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
+using UnityEngine;
 using Verse;
 using static HarmonyLib.Code;
 
 namespace AncientCorps
 {
 
-
     public static class AncientCorpsUltility
     {
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
-        private static void Defcon_Rise()
+        public static void Defcon_Rise()
         {
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
             comp.LevelRise();
@@ -31,7 +34,7 @@ namespace AncientCorps
             Current.Game.GetComponent<GameComponent_RaidCompany>().RaidCompany(Find.CurrentMap, null);
         }
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
-        private static void Defcon_Down()
+        public static void Defcon_Down()
         {
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
             comp.LevelDown();
@@ -109,21 +112,90 @@ namespace AncientCorps
             }
         }
         public static Faction Corps => Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
+
+        [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
+        public static void TriggerRandomCompanyAction()
+        {
+            var cs = Find.WorldObjects.AllWorldObjects.Where(s => s is Company && s.Faction == Corps);
+            if (cs.EnumerableNullOrEmpty()) return;
+            var c = cs.RandomElement();
+            (c as Company).DoAction();
+        }
+
+        [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
+        public static void TriggerRandomCompanyActionAll()
+        {
+            List<WorldObject> c = Find.WorldObjects.AllWorldObjects.Where(s => s is Company && s.Faction == Corps).ToList();
+            while (c.Count > 0)
+            {
+                (c[0] as Company).DoAction();
+                c.RemoveAt(0);
+            }
+        }
+
+        [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
+        public static void DeployCompany()
+        {
+            GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
+            comp.DepolyNewCompany();
+        }
         public static void TriggerTakeover()
         {
-            Faction faction = Find.FactionManager.AllFactions.Where(f => Corps.HostileTo(f) && !f.defeated && !f.IsPlayer).RandomElement();
-            Settlement settlement = Find.World.worldObjects.SettlementBases.Where(s => s.Faction == faction).RandomElement();
+            Faction faction = 
+                Find.FactionManager.AllFactions.Where(f => 
+                Corps.HostileTo(f) && 
+                !f.defeated && 
+                !f.IsPlayer).RandomElement();
+
+            Settlement settlement = 
+                Find.World.worldObjects.SettlementBases.Where(s => s.Faction == faction).RandomElement();
+
             if (settlement == null)
             {
-                faction = Find.FactionManager.AllFactions.Where(f => Corps.HostileTo(f) && f.def.humanlikeFaction && !f.defeated && !f.IsPlayer).RandomElement();
+                faction = 
+                    Find.FactionManager.AllFactions.Where(
+                        f => Corps.HostileTo(f) && 
+                        f.def.humanlikeFaction && 
+                        !f.defeated && 
+                        !f.IsPlayer).RandomElement();
                 settlement = Find.World.worldObjects.SettlementBases.Where(s => s.Faction == faction).RandomElement();
             }
+            TriggerTakeover(settlement);
+        }
+        public static void TriggerTakeover(Settlement settlement)
+        {
             if (settlement == null) return;
-            settlement.SetFaction(Corps);
+            TaggedString faction = settlement.Faction.NameColored.Colorize(settlement.Faction.Color);
             TaggedString oldName = settlement.Name;
-            settlement.Name = SettlementNameGenerator.GenerateSettlementName(settlement, Corps.def.settlementNameMaker);
+            int tile = settlement.Tile;
+            settlement.Destroy();
+            SettlementDefeatUtility.CheckDefeated(settlement);
+
+            Settlement newSettlement = (Settlement)WorldObjectMaker.MakeWorldObject(WorldObjectDefOf.Settlement);
+            newSettlement.Name = SettlementNameGenerator.GenerateSettlementName(newSettlement, Corps.def.settlementNameMaker);
+            newSettlement.Tile = tile;
+            newSettlement.SetFaction(Corps);
+            Find.WorldObjects.Add(newSettlement);
             //接管: 根據最新的消息，一支隸屬於{機兵師}的部隊接管了原屬於{受害者}的{基地舊名稱}，現在該基地被重新命名為{基地新名稱}。
-            Find.LetterStack.ReceiveLetter("DMSAC_World_Takeover".Translate(), "DMSAC_World_Takeover_Desc".Translate(Corps.NameColored, faction.NameColored, oldName, settlement.Name), LetterDefOf.PositiveEvent);
+            if (Rand.Chance(0.25f)) Find.LetterStack.ReceiveLetter("DMSAC_World_Takeover".Translate(), "DMSAC_World_Takeover_Desc".Translate(Corps.NameColored, faction, oldName, newSettlement.Name), LetterDefOf.PositiveEvent, lookTargets: newSettlement);
+        }
+        public static void SendDeclaration(Faction targetedFaction)
+        {
+            if (targetedFaction == null) return;
+            //宣戰: 根據最新的消息，{0}廣播了對本地陣營{受害者}的宣戰公告，並提及了所有對{1}控制區域的軍事行動都將在遵守戰爭法的前提下完成。 \n\n我們尚不清楚這將會造成什麼樣的影響。
+            Find.LetterStack.ReceiveLetter("DMSAC_World_Declaration".Translate(), "DMSAC_World_Declaration_Desc".Translate(Corps.NameColored.Colorize(Corps.Color), targetedFaction.NameColored.Colorize(targetedFaction.Color)), LetterDefOf.NeutralEvent);
+        }
+
+        public static void WarIsOver(Faction targetedFaction)
+        {
+            GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
+            if (comp.Level > 2)
+            {
+                //行動結束: 在接管了最後一個基地後，{0}宣布針對{1}的軍事行動已圓滿結束，作為行動的結果{1}在本星球的影響力被徹底的拔除。\n\n而根據情報，這支傾巢而出的軍隊在完成了它們的任務後已經重新回到原來的巡邏模式。\n戰爭結束了...\n\n暫時的。   
+                Find.LetterStack.ReceiveLetter("DMSAC_World_WarOver".Translate(), "DMSAC_World_WarOver_Desc".Translate(Corps.NameColored.Colorize(Corps.Color), targetedFaction.NameColored.Colorize(targetedFaction.Color), targetedFaction.leader.NameShortColored), LetterDefOf.NeutralEvent);
+
+                comp.LevelDown(2);
+            }
         }
     }
 }

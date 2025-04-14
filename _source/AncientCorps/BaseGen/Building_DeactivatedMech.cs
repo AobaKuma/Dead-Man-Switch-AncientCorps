@@ -182,7 +182,7 @@ namespace AncientCorps
                 if (!innerContainer.NullOrEmpty())
                 {
                     innerContainer.TryAddRangeOrTransfer(Pawn.ButcherProducts(usedBy, 0.5f), false);
-                    innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
+                    innerContainer.TryDropAll(Position, MapHeld, ThingPlaceMode.Near);
                 }
             }
             else
