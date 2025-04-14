@@ -140,6 +140,9 @@
       <li Class="CompProperties_UseEffectPlaySound">
         <soundOnUsed>MechanoidsWakeUp</soundOnUsed>
       </li>
+      <li Class="CompProperties_UseEffectGiveQuest">
+        <quest>DMSAC_OpportunitySite_LogisticTerminal</quest>
+      </li>
       <li Class="CompProperties_UseEffectDestroySelf">
         <delayTicks>120</delayTicks>
         <spawnKilledLeavings>false</spawnKilledLeavings>
