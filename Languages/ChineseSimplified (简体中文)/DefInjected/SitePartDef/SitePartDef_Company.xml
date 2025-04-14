@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: garrison camp -->
+  <DMSAC_GarrisonSite.label>驻军营地</DMSAC_GarrisonSite.label>
+  <!-- EN: A heavily armed force is stationed here and is ready to launch their operations at any time. It is wise to annihilate them before they form a battle formation, but perhaps a wiser choice is to stay as far away as possible. -->
+  <DMSAC_GarrisonSite.description>一支全副武装的部队驻扎在这里，随时准备发动行动。在他们组成战斗阵型之前将其消灭是明智之举，但也许更明智的选择是尽可能远离他们。</DMSAC_GarrisonSite.description>
+  <!-- EN: Attacking {0} -->
+  <DMSAC_GarrisonSite.approachingReportString>进攻{0}</DMSAC_GarrisonSite.approachingReportString>
+  <!-- EN: Attack {0} -->
+  <DMSAC_GarrisonSite.approachOrderString>进攻{0}</DMSAC_GarrisonSite.approachOrderString>
+  <!-- EN: There is an enemy outpost in this area. -->
+  <DMSAC_GarrisonSite.arrivedLetter>一支全副武装的部队驻扎在这里。</DMSAC_GarrisonSite.arrivedLetter>
+  
+</LanguageData>

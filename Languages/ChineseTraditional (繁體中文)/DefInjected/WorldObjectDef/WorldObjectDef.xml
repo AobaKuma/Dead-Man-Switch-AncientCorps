@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: underground facility -->
+  <DMSAC_FacilityEnterance.label>地下設施</DMSAC_FacilityEnterance.label>
+  
   <!-- EN: automatroid graveyard -->
   <DMSAC_Graveyard.label>機兵墳場</DMSAC_Graveyard.label>
   

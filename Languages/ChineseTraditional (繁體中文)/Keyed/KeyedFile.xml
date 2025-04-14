@@ -70,18 +70,26 @@
   <!-- EN: A company of automatroids belonging to {0} has surrounded your colony. They are {1}. These automatroids commanded by relay-commanders will launch attacks on colonies and purposefully disarm illegal forces to discourage attacks on their military facilities. -->
   <DMSAC_CompanyRaid_Desc>一支隸屬於{0}的機兵連隊包圍了你的殖民地，它們是{1}。這些由中繼機體所指揮的機兵將對殖民地發起進攻並有目的性的解除非法武裝來抑止襲擊軍用設施的行為。</DMSAC_CompanyRaid_Desc>
 
+  <!-- EN: {1} -->
+  <DMSAC_Company.Label>{1}</DMSAC_Company.Label>
+  <!-- EN: This is a {1} affiliated with {0}, -->
+  <DMSAC_Company.Desc>這是一支隸屬於{0}的{1}，</DMSAC_Company.Desc>
+  <!-- EN: their targets are likely to be {0} within their combat radius -->
+  <DMSAC_Company.Target>它們的目標很可能是處於作戰半徑內的{0}</DMSAC_Company.Target>
+  <!-- EN: their targets are unknown -->
+  <DMSAC_Company.NoTarget>它們的目標未知</DMSAC_Company.NoTarget>
+  
+  <!-- EN: War declared -->
+  <DMSAC_World_Declaration>宣戰</DMSAC_World_Declaration>
+  <!-- EN: According to the latest news, {0} broadcast a declaration of war against the local faction {1}, and mentioned that all military operations in areas controlled by {1} will be carried out in compliance with the laws of war. \n\nWe don't yet know what impact this will have. -->
+  <DMSAC_World_Declaration_Desc>根據最新的消息，{0}廣播了對本地陣營{1}的宣戰公告，並提及了所有對{1}控制區域的軍事行動都將在遵守戰爭法的前提下完成。\n\n我們尚不清楚這將會造成什麼樣的影響。</DMSAC_World_Declaration_Desc>
+  <!-- EN: War ended -->
+  <DMSAC_World_WarOver>行動結束</DMSAC_World_WarOver>
+  <!-- EN: After taking over the last base, {0} announced that the military operation against {1} had been successfully completed. As a result of the operation, {1}'s influence on the planet was completely eradicated. \n\nAccording to intelligence, this army has returned to its original patrol mode after completing its mission. \nThe war is over...\n\nFor now. -->
+  <DMSAC_World_WarOver_Desc>在接管了最後一個基地後，{0}宣布針對{1}的軍事行動已圓滿結束，作為行動的結果{1}在本星球的影響力被徹底的拔除。\n\n而根據情報，這支傾巢而出的軍隊在完成了它們的任務後已經重新回到原來的巡邏模式。\n戰爭結束了...\n\n暫時的。</DMSAC_World_WarOver_Desc>
+
   <!-- UNUSED -->
   <DMSAC_PatrolSquad>增援</DMSAC_PatrolSquad>
   <DMSAC_PatrolSquadDesc>一支巡邏部隊已經抵達設施，更多的後續部隊將在更短的時間內陸續增援。</DMSAC_PatrolSquadDesc>
-
-  <DMSAC_Company.Label>{1}</DMSAC_Company.Label>
-  <DMSAC_Company.Desc>這是一支隸屬於{0}的{1}，</DMSAC_Company.Desc>
-  <DMSAC_Company.Target>它們的目標很可能是處於作戰半徑內的{0}</DMSAC_Company.Target>
-  <DMSAC_Company.NoTarget>它們的目標未知</DMSAC_Company.NoTarget>
-  
-  <DMSAC_World_Declaration>宣戰</DMSAC_World_Declaration>
-  <DMSAC_World_Declaration_Desc>根據最新的消息，{0}廣播了對本地陣營{1}的宣戰公告，並提及了所有對{1}控制區域的軍事行動都將在遵守戰爭法的前提下完成。\n\n我們尚不清楚這將會造成什麼樣的影響。</DMSAC_World_Declaration_Desc>
-  <DMSAC_World_WarOver>行動結束</DMSAC_World_WarOver>
-  <DMSAC_World_WarOver_Desc>在接管了最後一個基地後，{0}宣布針對{1}的軍事行動已圓滿結束，作為行動的結果{1}在本星球的影響力被徹底的拔除。\n\n而根據情報，這支傾巢而出的軍隊在完成了它們的任務後已經重新回到原來的巡邏模式。\n戰爭結束了...\n\n暫時的。 </DMSAC_World_WarOver_Desc>
 
 </LanguageData>

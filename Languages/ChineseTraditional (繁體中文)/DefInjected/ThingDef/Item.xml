@@ -17,7 +17,7 @@
   
   <!-- EN: Mechanic repair kit -->
   <DMSAC_Kit_Mechanic.label>機械體維修工具</DMSAC_Kit_Mechanic.label>
-  <!-- EN: . -->
+  <!-- EN: A set of mechanical repair tools used to temporarily repair damaged parts of mechas on the front-line battlefield. It is simple to operate and can be reused, so non-mechanical front-line personnel can repair automatroids. However, there is a small chance that such a temporary repair will leave some parts with structural damage. Such hidden dangers can only be repaired by a total factory reassembling. -->
   <DMSAC_Kit_Mechanic.description>一套用於在一線戰場上臨時修復機兵受損部位的機械維修工具，其操作簡單且能夠重複使用因此能讓非機械師的一線人員接手機兵的維修工作。然而這樣的臨時修復有很小的可能性會使部分零件留下結構性損傷，而這類隱患只能透過徹底的返廠維修來根治。</DMSAC_Kit_Mechanic.description>
   <!-- EN: repair mech -->
   <DMSAC_Kit_Mechanic.comps.CompUsable.useLabel>維修機械體</DMSAC_Kit_Mechanic.comps.CompUsable.useLabel>
