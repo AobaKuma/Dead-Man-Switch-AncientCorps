@@ -10,7 +10,48 @@
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="DMSAC_StugnaATGM"]/verbs</xpath>
+				<xpath>Defs/ThingDef[defName="DMSAC_StugnaATGM"]/verbs/li[1]</xpath>
+				<value>
+					<li Class="CombatExtended.VerbPropertiesCE">
+						<verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+						<minRange>9.9</minRange>
+						<range>44.9</range>
+						<warmupTime>2.5</warmupTime>
+						<burstShotCount>1</burstShotCount>
+						<soundCast>DMS_AC_Shot_GuidedMissile</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>25</muzzleFlashScale>
+						<consumeFuelPerShot>1</consumeFuelPerShot>
+						<targetable>true</targetable>
+						<ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
+						<aimingLineMote>DMS_Missile_Aim</aimingLineMote>
+						<aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+						<aimingTargetMote>DMS_Missile_Target</aimingTargetMote>
+						<beamTargetsGround>true</beamTargetsGround>
+						<soundAiming>DMS_Ability_LockOn</soundAiming>
+						<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+						<ai_IsWeapon>true</ai_IsWeapon>
+						<targetParams>
+							<canTargetLocations>true</canTargetLocations>
+							<canTargetBuildings>true</canTargetBuildings>
+							<canTargetPawns>true</canTargetPawns>
+						</targetParams>
+						<hasStandardCommand>true</hasStandardCommand>
+						<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+						<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+						<defaultProjectile>DMSAC_Bullet_StugnaATGM</defaultProjectile>
+						<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMSAC_Grenade_Stugna"]/projectile/explosionRadius</xpath>
+				<value>
+					<explosionRadius>44.9</explosionRadius>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMSAC_Gun_StugnaATGM"]/verbs</xpath>
 				<value>
 					<verbs>
 						<li Class="CombatExtended.VerbPropertiesCE">

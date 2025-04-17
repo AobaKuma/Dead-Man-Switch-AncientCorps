@@ -80,7 +80,6 @@
   <!-- EN: Intercepted communications indicate the facility has moved position or being claimed by others. The quest [resolvedQuestName] has expired. -->
   <DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>截獲的通訊表示該設施已轉移位置。任務[resolvedQuestName]已過期。</DMSAC_OpportunitySite_Graveyard.root.nodes.WorldObjectTimeout.node.nodes.Letter.text.slateRef>
   
-
   <!-- EN:
     <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
     <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>

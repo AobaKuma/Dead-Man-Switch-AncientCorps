@@ -199,6 +199,16 @@
         <!-- 隨機三選一 -->
         <li Class="QuestNode_RandomNode">
           <nodes>
+            <!-- 地下設施 -->
+            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+              <storeAs>sitePartDefs</storeAs>
+              <selectionWeight>0.25</selectionWeight>
+              <sitePartsTags>
+                <li>
+                  <tag>DMSAC_FacilityEnterance</tag>
+                </li>
+              </sitePartsTags>
+            </li>
             <!-- 維修站 -->
             <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
               <storeAs>sitePartDefs</storeAs>

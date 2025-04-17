@@ -1,18 +1,44 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: stugna turret -->
+  <DMSAC_Grenade_Stugna.label>雪橇發射裝置</DMSAC_Grenade_Stugna.label>
+  
+  <!-- EN: Stugna ATGM -->
+  <DMSAC_Gun_StugnaATGM.label>短號導彈發射器</DMSAC_Gun_StugnaATGM.label>
+  <!-- EN: A Stugna anti-tank missile system mounted on a remote aiming platform. -->
+  <DMSAC_Gun_StugnaATGM.description>被部屬在遙控平台上的短號反坦克飛彈系統，基於遙控方式操控可以有效避免射手暴露於直接的危險中，然而發射裝置有被EMP與煙霧干擾的風險。</DMSAC_Gun_StugnaATGM.description>
+  <!-- EN: Stugna ATGM -->
+  <DMSAC_Gun_StugnaATGM.verbs.Verb_Shoot.label>短號導彈發射器</DMSAC_Gun_StugnaATGM.verbs.Verb_Shoot.label>
+  
   <!-- EN: Stugna missile launcher -->
   <DMSAC_StugnaATGM.label>短號導彈發射器</DMSAC_StugnaATGM.label>
-  <!-- EN: A single use anti tank guided missile designed to be fired and discarded. It is effective againist heavy mechs and even tanks. however to lock on target, it requires a long aiming time and clear line of sight. -->
+  <!-- EN: A single-use anti-tank guided missile designed to be fired and discarded. effective against heavy mechs and even tanks. however to lock on target, it requires a long aiming time and clear line of sight. -->
   <DMSAC_StugnaATGM.description>設計為用後即丟的一次性反坦克導彈發射裝置。對付重型機甲乃至主力戰車都十分有效。然而要鎖定目標需要較長的瞄準時間和清晰的射擊視野。</DMSAC_StugnaATGM.description>
   <!-- EN: charge -->
   <DMSAC_StugnaATGM.comps.CompApparelReloadable.chargeNoun>導彈</DMSAC_StugnaATGM.comps.CompApparelReloadable.chargeNoun>
   <!-- EN: on cooldown -->
   <DMSAC_StugnaATGM.comps.CompApparelReloadable.cooldownGerund>冷卻中</DMSAC_StugnaATGM.comps.CompApparelReloadable.cooldownGerund>
-  <!-- EN: Stugna missile launcher -->
-  <DMSAC_StugnaATGM.verbs.Verb_Shoot.label>短號導彈發射器</DMSAC_StugnaATGM.verbs.Verb_Shoot.label>
+  <DMSAC_StugnaATGM.verbs.Verb_Shoot.label>發射短號導彈</DMSAC_StugnaATGM.verbs.Verb_Shoot.label>
+  <!-- EN: deploy turret -->
+  <DMSAC_StugnaATGM.verbs.deploy_turret.label>部屬遙控發射平台</DMSAC_StugnaATGM.verbs.deploy_turret.label>
   
   <!-- UNUSED -->
   <DMSAC_StugnaATGM.verbs.Verb_LaunchProjectileStaticCE.label>短號導彈發射器</DMSAC_StugnaATGM.verbs.Verb_LaunchProjectileStaticCE.label>
+  
+  <!-- EN: skif remote platform -->
+  <DMSAC_Turret_StugnaATGM.label>短號導彈發射具</DMSAC_Turret_StugnaATGM.label>
+  <!-- EN: An anti-tank missile launcher platform that can be deployed and operated remotely. It will stop functioning once its battery runs out or no available rounds. If damaged sufficiently, it may explode. -->
+  <DMSAC_Turret_StugnaATGM.description>一種代號為雪橇的便攜式遙控反坦克發射平台，能夠裝載並發射短號反坦克導彈，基於遙控方式操控可以有效避免射手暴露於直接的危險中，然而發射裝置有被EMP與煙霧干擾的風險。</DMSAC_Turret_StugnaATGM.description>
+  <!-- EN: loaded missile -->
+  <DMSAC_Turret_StugnaATGM.comps.CompRefuelable.fuelGizmoLabel>裝載導彈</DMSAC_Turret_StugnaATGM.comps.CompRefuelable.fuelGizmoLabel>
+  <!-- EN: missile shots -->
+  <DMSAC_Turret_StugnaATGM.comps.CompRefuelable.fuelLabel>導彈</DMSAC_Turret_StugnaATGM.comps.CompRefuelable.fuelLabel>
+  <!-- EN: Cannot fire: Needs missile round. -->
+  <DMSAC_Turret_StugnaATGM.comps.CompRefuelable.outOfFuelMessage>無法發射: 需要再裝填</DMSAC_Turret_StugnaATGM.comps.CompRefuelable.outOfFuelMessage>
+  <!-- EN: Battery power -->
+  <DMSAC_Turret_StugnaATGM.comps.CompMechPowerCell.labelOverride>電池</DMSAC_Turret_StugnaATGM.comps.CompMechPowerCell.labelOverride>
+  <!-- EN: This turret has a limited battery life. Once it runs out, it will stop working entirely. -->
+  <DMSAC_Turret_StugnaATGM.comps.CompMechPowerCell.tooltipOverride>此砲塔的電池壽命有限。一旦耗盡，它將完全停止工作。</DMSAC_Turret_StugnaATGM.comps.CompMechPowerCell.tooltipOverride>
   
 </LanguageData>
