@@ -276,7 +276,7 @@
     <race>DMS_Mech_Krepost</race>
     <nameMaker>DMS_AncientMechHeavy</nameMaker>
     <isFighter>true</isFighter>
-    <combatPower>2400</combatPower>                                               <!--威脅點數-->
+    <combatPower>500</combatPower>                                               <!--威脅點數-->
     <maxPerGroup>1</maxPerGroup>                                                 <!--單個集群內的數量-->
     <isBoss>true</isBoss>
     <lifeStages>                                                                 <!--身體圖片-->
@@ -318,7 +318,7 @@
   <PawnKindDef ParentName="DMS_BaseKrepostKind">
     <defName>DMS_Mech_Krepost_Sweeper</defName>
     <label>BR-6/GP "Bashnya"</label>
-    <combatPower>1800</combatPower>
+    <combatPower>500</combatPower>
     <maxPerGroup>2</maxPerGroup>
     <weaponTags Inherit="False">
       <li>2A38M</li>

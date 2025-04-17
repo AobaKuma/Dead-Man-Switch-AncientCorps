@@ -87,8 +87,8 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3.3</drawSize>
           <shadowData>
-            <volume>(1.25,1,1.25)</volume>
-            <offset>(0,0,-0.5)</offset>
+            <volume>(1.1,1,1.1)</volume>
+            <offset>(0,0,-0.25)</offset>
           </shadowData>
         </bodyGraphicData>
       </li>
@@ -99,8 +99,8 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3.3</drawSize>
           <shadowData>
-            <volume>(1.25,1,1.25)</volume>
-            <offset>(0,0,-0.5)</offset>
+            <volume>(1.1,1,1.1)</volume>
+            <offset>(0,0,-0.25)</offset>
           </shadowData>
         </bodyGraphicData>
       </li>
@@ -129,8 +129,8 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3.3</drawSize>
           <shadowData>
-            <volume>(1.25,1,1.25)</volume>
-            <offset>(0,0,-0.5)</offset>
+            <volume>(1.1,1,1.1)</volume>
+            <offset>(0,0,-0.25)</offset>
           </shadowData>
         </bodyGraphicData>
       </li>
@@ -141,8 +141,8 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3.3</drawSize>
           <shadowData>
-            <volume>(1.25,1,1.25)</volume>
-            <offset>(0,0,-0.5)</offset>
+            <volume>(1.1,1,1.1)</volume>
+            <offset>(0,0,-0.25)</offset>
           </shadowData>
         </bodyGraphicData>
       </li>
@@ -195,8 +195,8 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3.3</drawSize>
           <shadowData>
-            <volume>(1.25,1,1.25)</volume>
-            <offset>(0,0,-0.5)</offset>
+            <volume>(1.1,1,1.1)</volume>
+            <offset>(0,0,-0.25)</offset>
           </shadowData>
         </bodyGraphicData>
       </li>
@@ -207,8 +207,8 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3.3</drawSize>
           <shadowData>
-            <volume>(1.25,1,1.25)</volume>
-            <offset>(0,0,-0.5)</offset>
+            <volume>(1.1,1,1.1)</volume>
+            <offset>(0,0,-0.25)</offset>
           </shadowData>
         </bodyGraphicData>
       </li>

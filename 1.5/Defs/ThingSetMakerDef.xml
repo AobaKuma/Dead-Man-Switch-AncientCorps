@@ -278,7 +278,7 @@
                   <li>Shell_Incendiary</li>
                 </thingDefs>
               </filter>
-              <countRange>1~4</countRange>
+              <countRange>4~8</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>

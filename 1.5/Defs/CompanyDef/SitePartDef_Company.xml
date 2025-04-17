@@ -63,7 +63,7 @@
     <wantsThreatPoints>true</wantsThreatPoints>
     <badEvenIfNoMap>true</badEvenIfNoMap>
     <tags>
-      <li>DMSAC_LogisticTerminal</li>
+      <li>DMSAC_Garrison</li>
     </tags>
   </SitePartDef>
 
@@ -74,7 +74,8 @@
     <genStep Class="KCSG.GenStep_CustomStructureGen">
       <fullClear>true</fullClear>
       <structureLayoutDefs>
-        <li>DMSAC_LogisticTerminal_A</li>
+        <li>DMSAC_Garrison_A</li>
+        <li>DMSAC_Garrison_B</li>
       </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
     </genStep>

@@ -12,8 +12,8 @@
     <thingClass>AncientCorps.Projectile_Parabola</thingClass>
     <projectile>
       <damageDef>Bomb</damageDef>
-      <speed>40</speed>
-      <armorPenetrationBase>1.1</armorPenetrationBase>
+      <speed>80</speed>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
       <explosionRadius>1.95</explosionRadius>
       <damageAmountBase>200</damageAmountBase>
       <flyOverhead>true</flyOverhead>

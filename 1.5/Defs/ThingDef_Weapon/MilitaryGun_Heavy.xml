@@ -89,7 +89,7 @@
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_KPV</texPath>
-			<drawSize>1.8</drawSize>
+			<drawSize>1.9</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
@@ -404,7 +404,7 @@
 			<explosionDelay>1</explosionDelay>
 			<soundExplode>Explosion_Rocket</soundExplode>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>150</damageAmountBase>
+			<damageAmountBase>225</damageAmountBase>
 			<armorPenetrationBase>1.5</armorPenetrationBase>
 			<stoppingPower>10</stoppingPower>
 			<speed>110</speed>
@@ -414,7 +414,7 @@
 		<modExtensions>
 			<li Class="DMS.ExplosiveExtension">
 				<damage>Bullet</damage>
-				<damageAmount>40</damageAmount>
+				<damageAmount>98</damageAmount>
 				<armorPen>1.1</armorPen>
 				<preExplosionOffset>4</preExplosionOffset>
 				<range>19</range>
@@ -434,7 +434,7 @@
 				<explosiveRadius>1.1</explosiveRadius>
 				<explosiveDamageType>Bullet</explosiveDamageType>
 				<armorPenetrationBase>0.4</armorPenetrationBase>
-				<damageAmountBase>100</damageAmountBase>
+				<damageAmountBase>150</damageAmountBase>
 				<explodeOnDestroyed>true</explodeOnDestroyed>
 				<explodeOnKilled>true</explodeOnKilled>
 				<doSoundEffects>false</doSoundEffects>

@@ -644,7 +644,6 @@
   </ThingDef>
 
   <!-- 停的比較整齊的版本 -->
-
   <ThingDef ParentName="BaseDeactivatedMech" Name="BaseInactivatedMech" Abstract="true">
     <description>an automatroid that has been completely shut down for maintenance, with most of its parts intact and ready for use.</description>
     <graphicData>
@@ -664,6 +663,7 @@
           <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
           <DMS_Mech_Zabor>3</DMS_Mech_Zabor>
           <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Pravda>1</DMS_Mech_Pravda>
         </possibleGeneratePawn>
         <innerPawnDrawOffset>(0,0.001,0.25)</innerPawnDrawOffset>
         <spawnChance>0.1</spawnChance>
