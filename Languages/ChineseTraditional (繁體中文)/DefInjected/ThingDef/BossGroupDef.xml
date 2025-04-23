@@ -11,7 +11,7 @@
   <!-- EN: Recover Transmitter -->
   <DMSAC_RecoverTransmitter.label>古代回收天線</DMSAC_RecoverTransmitter.label>
   <!-- EN: A simple antenna group, using the code provided by colonial fleets to recover old automatroids units, but the only ones who could come because of these signals could  be those automatroids held hostage by the mechanoid legion. -->
-  <DMSAC_RecoverTransmitter.description>一種結構簡單的天線組，在啟動後會發送殖民艦隊用於招回機兵部隊的偽造訊號，但由於該密碼早已棄用因此會因為這些訊號而來的只可能是受機械軍團挾持的機體。如果你能打敗它們，你就可以從它們的黑盒子紀錄中找到軍事站點的情報。信號脈衝會燒壞發射器所以只能夠使用一次。</DMSAC_RecoverTransmitter.description>
+  <DMSAC_RecoverTransmitter.description>一個簡單的天線組，能夠在廣播訊號後馬上截獲來自物資站的回傳訊號，不過這樣沒有經過加密請求的訊號發射勢必會引來偵查分隊的探查。信號脈衝會燒壞發射器所以這座建築只能夠使用一次。</DMSAC_RecoverTransmitter.description>
   <!-- EN: Attract armed recon threat -->
   <DMSAC_RecoverTransmitter.comps.CompUsable.useLabel>吸引武裝偵查襲擊</DMSAC_RecoverTransmitter.comps.CompUsable.useLabel>
   

@@ -4,7 +4,7 @@
   <!-- EN: gorod -->
   <DMS_Mech_Gorod.label>城邦</DMS_Mech_Gorod.label>
   <!-- EN: 6M29 / BR4 "Gorod", NATO nicknamed "ChunkSteel". It is a burly, heavily armored automatroid, designed as a cost-effective and durable mechanical infantry. Thanks to its outstanding systems engineering, modernized variants of this model continue to serve in many Midworld militaries today. It has also become a highly sought-after model for replication and production by local warlords and pirates in the Rimworld. -->
-  <DMS_Mech_Gorod.description>6M29 / BR4 "城邦" 是一種魁梧且具備輔助機械手臂的中型機兵，其設計理念是作為一種廉價且耐用的大型機械步兵，由於其優秀的系統工程設計在如今的許多中寰世界仍有它的現代化改進型號在軍隊中服役。並在如今的邊緣世界也成為了許多地方軍閥與海盜爭相仿製與生產的機兵型號。</DMS_Mech_Gorod.description>
+  <DMS_Mech_Gorod.description>6M29/BR4 "城邦" 是一款魁梧且具備輔助機械手臂用於在巷戰環境中提供優勢的大型機兵，其設計理念是作為一種廉價且耐用的大型機械步兵用於在巷戰環境提供火力支援，由於其優秀的系統工程設計在如今的許多中寰世界仍有它的現代化改進型號在軍隊中服役。並由於其零件與壁虎、戰鬥框架等機兵有著極高的通用性在邊緣世界也成為了許多地方軍閥與海盜爭相仿製與生產的機兵型號。</DMS_Mech_Gorod.description>
   <!-- EN: head -->
   <DMS_Mech_Gorod.tools.head.label>機身</DMS_Mech_Gorod.tools.head.label>
   <!-- EN: left fist -->

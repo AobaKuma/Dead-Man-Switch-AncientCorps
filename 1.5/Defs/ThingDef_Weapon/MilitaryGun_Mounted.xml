@@ -92,7 +92,7 @@
 	<ThingDef ParentName="DMS_AutomatroidTurretGun">
 		<defName>DMS_Gun_ECMSystem</defName>
 		<label>ECM system</label>
-		<description>A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it.</description>
+		<description>A mounted pulse energy weapon that disables electronic equipment in the direction it is pointed at through directional electromagnetic interference. When working, it will cause the target to generate high temperatures, so it can also shock the enemy by igniting it. \n\nThis equipment was first developed after the Europa conflict in response to NATO's "Wyvern swarms",  several armed helicopter squadrons which are completely unmanned. The power of this air force was so prominent during World War III that there are no military weapon platforms with a height higher than four meters, because they have no cover to hide from these predators.</description>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_ECMS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

@@ -4,7 +4,7 @@
   <!-- EN: Molot -->
   <DMS_Mech_Molot.label>磨坊</DMS_Mech_Molot.label>
   <!-- EN: A medium-sized automatroid capable of equipping and utilizing light to medium infantry weapons. Designed in an era marked by the rapid increase in armored unmanned systems, it was conceived as an infantry combat platform within armored units. It boasts excellent combat capabilities, a simple structure, and superior weapon-loading capacity. -->
-  <DMS_Mech_Molot.description>6M23 / BR-3 "磨坊"是一种能装备并使用轻中型步兵武器的中型机兵。在过去的时代是应对装甲无人化程度遽增的军备竞赛而生，其设计理念是作为装甲部队中的步兵战斗平台。具备出色的战斗能力、简单的结构与优秀的武器搭载能力。</DMS_Mech_Molot.description>
+  <DMS_Mech_Molot.description>一种能装备并使用轻中型步兵武器的中型机兵。在过去的时代是应对装甲无人化程度遽增的军备竞赛而生，其设计理念是作为装甲部队中的步兵战斗平台。具备出色的战斗能力、简单的结构与优秀的武器搭载能力。\n\n6M23 / BR-3 "磨坊" 北约代号"夜影"，在第三次世界大战期间是东方阵营中生产数量仅次于士兵的机兵。虽然本只是东方阵营回应北约猿人型机兵的产物，但在猿人因开发成本问题而无疾而终后成为了大多数北约特种部队的恶梦，该型机兵具有超长时的续航能力并被大量的部属在二线，在北约的特种部队试图越过交战区执行行动时经常会被其强大的火力歼灭。在三战后的混乱时期，该型机兵大量流入了第三世界国家，并导致了民间与警察部门对于大口径镇暴武器的需求。</DMS_Mech_Molot.description>
   <!-- EN: head -->
   <DMS_Mech_Molot.tools.head.label>机身</DMS_Mech_Molot.tools.head.label>
     <!-- EN: left fist -->

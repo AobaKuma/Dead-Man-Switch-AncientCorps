@@ -7,7 +7,7 @@
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.label>电磁反制系统</DMS_Gun_ECMSystem.label>
   <!-- EN: A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it. -->
-  <DMS_Gun_ECMSystem.description>一种挂载式脉冲能量武器，透过定向电磁干扰使指向方位的电子设备失效。在工作时会使目标产生高温，因此也能透过点燃的方式来瘫痪敌人。</DMS_Gun_ECMSystem.description>
+  <DMS_Gun_ECMSystem.description>一种挂载式脉冲能量武器，透过定向电磁干扰使指向方位的电子设备失效。在工作时会使目标产生高温，因此也能透过点燃的方式来瘫痪敌人。\n\n该装备最早是在欧罗巴冲突后针对北约部属在中东的"飞龙群" 一支完全无人化的武装直升机部队而研制。在三战时期这支空中部队的力量之显赫，使得在三战后的百年之内都少有高度高于四米的军用武器平台，因为这会大幅降低它们遭遇龙群时的生存能力。</DMS_Gun_ECMSystem.description>
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>ECM</DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>
   

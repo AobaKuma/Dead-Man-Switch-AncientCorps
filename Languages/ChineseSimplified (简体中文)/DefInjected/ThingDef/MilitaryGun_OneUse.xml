@@ -7,7 +7,7 @@
   <!-- EN: Stugna ATGM -->
   <DMSAC_Gun_StugnaATGM.label>短号导弹发射器</DMSAC_Gun_StugnaATGM.label>
   <!-- EN: A Stugna anti-tank missile system mounted on a remote aiming platform. -->
-  <DMSAC_Gun_StugnaATGM.description>被部属在遥控平台上的短号反坦克飞弹系统，基于遥控方式操控可以有效避免射手暴露于直接的危险中，然而发射装置有被EMP与烟雾干扰的风险。</DMSAC_Gun_StugnaATGM.description>
+  <DMSAC_Gun_StugnaATGM.description>被部属在遥控平台上的短号反坦克飞弹系统，基于遥控方式操控可以有效避免射手暴露于直接的危险中，然而自动瞄准装置有被EMP与烟雾干扰的风险。</DMSAC_Gun_StugnaATGM.description>
   <!-- EN: Stugna ATGM -->
   <DMSAC_Gun_StugnaATGM.verbs.Verb_Shoot.label>短号导弹发射器</DMSAC_Gun_StugnaATGM.verbs.Verb_Shoot.label>
   
@@ -29,7 +29,7 @@
   <!-- EN: skif remote platform -->
   <DMSAC_Turret_StugnaATGM.label>遥控发射装置</DMSAC_Turret_StugnaATGM.label>
   <!-- EN: An anti-tank missile launcher platform that can be deployed and operated remotely. It will stop functioning once its battery runs out or no available rounds. If damaged sufficiently, it may explode. -->
-  <DMSAC_Turret_StugnaATGM.description>一种代号为雪橇的便携式遥控发射平台，能够装载并发射短号反坦克导弹，基于遥控方式操控可以有效避免射手暴露于直接的危险中，然而发射装置有被EMP与烟雾干扰的风险。</DMSAC_Turret_StugnaATGM.description>
+  <DMSAC_Turret_StugnaATGM.description>一种代号为雪橇的便携式遥控发射平台，能够装载并发射短号反坦克导弹，基于遥控方式操控可以有效避免射手暴露于直接的危险中，然而自动瞄准装置有被EMP与烟雾干扰的风险。</DMSAC_Turret_StugnaATGM.description>
   <!-- EN: loaded missile -->
   <DMSAC_Turret_StugnaATGM.comps.CompRefuelable.fuelGizmoLabel>装载导弹</DMSAC_Turret_StugnaATGM.comps.CompRefuelable.fuelGizmoLabel>
   <!-- EN: missile shots -->

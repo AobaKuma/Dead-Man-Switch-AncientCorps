@@ -4,7 +4,7 @@
   <!-- EN: Krepost -->
   <DMS_Mech_Krepost.label>棱堡</DMS_Mech_Krepost.label>
   <!-- EN: 6M41 / BR-6 "Krepost" NATO nicknamed "TankHead". Huge and bulky walker, used as a bridgehead and mobile battery to maintain frontal battlefield firepower, Krepost is equipped with several active protection system and reactive armors to resist incoming projectiles. Even if the shields are exhausted, its huge size and weapon systems are sufficient at holding off incoming enemies until reinforcements arrive. -->
-  <DMS_Mech_Krepost.description>庞大且笨重的步行堡垒，作为维持正面战场火力的桥头堡，棱堡型机兵搭载了主动式防御系统与反应装甲来抵御来袭的导弹，而即便耗光了所有搭载的护盾，其巨大的体积与装甲也足够在后援抵达之前持续的抵挡住任何的来犯之敌。</DMS_Mech_Krepost.description>
+  <DMS_Mech_Krepost.description>一款高大且具备厚重装甲的超重型机兵，棱堡型机兵搭载了主动式防御系统、电子干扰装置与反应装甲来抵御来袭的导弹，其巨大的体积与装甲也足够在后援抵达之前持续的抵挡住任何的来犯之敌。\n\n6M41/BR-6 "棱堡"，北约代号"坦克头"，作为一款行走高度不超过四米的双足重型机兵，它们是冷战时期中俄罗斯机兵工业的代表性产品，其设计目的是在中亚的山地丘陵环境中与北约部队对峙并在需要的时候配合T64型主力战车进行装甲突击，在第三次世界大战期间发挥了极大的作用。并在后三战时期中加装了电子对抗系统来强化在无人武装直升机群围猎下生存的能力。在三战后该型机兵也随着军事技术共享被如朝鲜等盟国所生产。</DMS_Mech_Krepost.description>
   <!-- EN: Mechanical Head -->
   <DMS_Mech_Krepost.tools.Mechanical_Head.label>机身</DMS_Mech_Krepost.tools.Mechanical_Head.label>
   <!-- EN: Left Leg -->

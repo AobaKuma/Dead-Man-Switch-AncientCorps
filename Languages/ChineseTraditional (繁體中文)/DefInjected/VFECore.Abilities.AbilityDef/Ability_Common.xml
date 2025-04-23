@@ -19,7 +19,7 @@
   <!-- EN: rocket barrage -->
   <DMSAC_Rocket.label>火箭彈幕</DMSAC_Rocket.label>
   <!-- EN: Launch a rocket barrage to a specific direction. -->
-  <DMSAC_Rocket.description>發射安裝在機體上的S5火箭莢艙，對目標區域進行徐進彈幕打擊。</DMSAC_Rocket.description>
+  <DMSAC_Rocket.description>發射安裝在機體上的S8火箭莢艙，對目標區域進行徐進彈幕打擊。</DMSAC_Rocket.description>
   
   <!-- EN: shield projector deploy -->
   <DMSAC_ShieldLauncher.label>機動護盾部屬</DMSAC_ShieldLauncher.label>

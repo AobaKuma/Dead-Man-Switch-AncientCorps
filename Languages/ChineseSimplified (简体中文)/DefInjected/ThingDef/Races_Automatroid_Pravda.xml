@@ -4,7 +4,7 @@
   <!-- EN: Pravda -->
   <DMS_Mech_Pravda.label>真理</DMS_Mech_Pravda.label>
   <!-- EN: Originally designed to breach fortified zones and expansive no-man's lands, this all-terrain unmanned assault gun is armed with a 155mm cannon to strike permanent fortifications from long distances. It relies on rocket-deployed explosive charges to clear safe paths through minefields. -->
-  <DMS_Mech_Pravda.description>在过去为突破工事群与其广阔无人区而设计的超重型突击砲机兵，具有一门155毫米加农砲用以在长距离外打击永固工事，并能够依靠火箭推进释放的炸药索来在地雷原中为友军清出安全通道。</DMS_Mech_Pravda.description>
+  <DMS_Mech_Pravda.description>一种在过去为突破工事群与其广阔无人区而设计的超重型突击砲机兵，具有一门155毫米加农砲用以在长距离外打击永固工事，并能够依靠火箭推进释放的炸药索来在地雷原中为友军清出安全通道。\n\n2S95 / SR6-2S3M2 "真理" 北约代号"炮蟹"，是汲取俄乌战争经验后研制的自主炮兵项目成果之一，能透过数据链来与整个战场讯息整合来为战场提供砲击支援与炮兵反制。但随着下一场大战发生的可能性提高，该型机兵的生产被大大的提前，然而真正使其发挥作用的地方是在三战以后新苏联与北约智能机兵联军在乌克兰平原上长达数十年的拉锯。</DMS_Mech_Pravda.description>
   <!-- EN: left leg -->
   <DMS_Mech_Pravda.tools.left_leg.label>左腿</DMS_Mech_Pravda.tools.left_leg.label>
   <!-- EN: right leg -->

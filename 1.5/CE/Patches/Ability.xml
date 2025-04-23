@@ -51,7 +51,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/defaultProjectile</xpath>
 				<value>
-					<defaultProjectile>Bullet_57mmRocket_HE</defaultProjectile>
+					<defaultProjectile>DMSAC_Bullet_80mmS8DF_Thermobaric</defaultProjectile>
 				</value>
 			</li>
 		</operations>

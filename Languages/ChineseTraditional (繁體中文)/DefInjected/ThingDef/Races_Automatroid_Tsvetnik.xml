@@ -4,7 +4,7 @@
   <!-- EN: Tsvetnik -->
   <DMS_Mech_Tsvetnik.label>花圃</DMS_Mech_Tsvetnik.label>
   <!-- EN: A medium-sized automatroid capable of equipping and utilizing light to medium infantry weapons. Designed in an era marked by the rapid increase in armored unmanned systems, it was conceived as an infantry combat platform within armored units. It boasts excellent combat capabilities, a simple structure, and superior weapon-loading capacity. -->
-  <DMS_Mech_Tsvetnik.description>一種為空降部隊提供曲射支援的中型機兵，裝備有一門迫擊砲來提供即時的曲射與直射支援。</DMS_Mech_Tsvetnik.description>
+  <DMS_Mech_Tsvetnik.description>一種為空降部隊提供曲射支援的中型機兵，裝備有一門迫擊砲來提供即時的曲射與直射支援。\n\n2S94 / SR4-2B9 "花圃" 北約代號"小號手"，該型機兵是在汲取俄烏戰爭經驗後研製的自主炮兵項目成果之一。是作為一種能被配備給連級部隊使用的炮兵使用，其裝備有一門與數據鏈整合的2B9矢車菊迫擊砲系統。並且較輕的重量讓它能夠由直升機吊裝部屬到任何地方。在三戰之後由於其穩定的零件供應，許多第三世界國家的軍隊都裝備有移除了數據鏈系統的改造型號作為部隊中的炮兵火力補充或配合摩托化炮兵組成炮兵營。</DMS_Mech_Tsvetnik.description>
   <!-- EN: head -->
   <DMS_Mech_Tsvetnik.tools.head.label>機體</DMS_Mech_Tsvetnik.tools.head.label>
   <!-- EN: left fist -->

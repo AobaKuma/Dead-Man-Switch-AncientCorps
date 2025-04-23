@@ -107,7 +107,7 @@
   <DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>RSh12</DMS_ZlobinRevolver.verbs.Verb_ShootCE.label>
   
   <!-- EN: Zlobin rifle -->
-  <DMS_ZlobinRifle.label>兹洛宾突击步枪</DMS_ZlobinRifle.label>
+  <DMS_ZlobinRifle.label>兹洛宾步枪</DMS_ZlobinRifle.label>
   <!-- EN: A special assault rifle named after its designer. during urban combat, it is capable of effectively penetrating the armor of most small and medium-sized mechanoids and causing damage.. However, its long-range accuracy is quite limited due to its speciallized subsonic bullet.\n\nIt also equipped with an underbarrel launcher capable of firing small-caliber grenades. -->
   <DMS_ZlobinRifle.description>一种冠以设计者之名的特种突击步枪，能够在巷战中有效的击穿大部分中小型机械体的防护并造成有效伤害。但其远距离准确性颇为有限，配备有一具下挂转轮式榴弹发射器能够发射小口径榴弹。</DMS_ZlobinRifle.description>
   <!-- EN: stock -->
