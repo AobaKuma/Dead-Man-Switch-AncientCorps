@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN:
+    <li>r_name->[Num] [BrigadeType] [Brigade] company</li>
+    <li>BrigadeType->mechanoid</li>
+    <li>BrigadeType->armoured</li>
+    <li>BrigadeType->combined</li>
+    <li>BrigadeType->temporal</li>
+    <li>BrigadeType->automatic</li>
+    <li>Brigade->robot</li>
+    <li>Brigade->automata</li>
+    <li>Brigade->automatroid</li>
+    <li>Brigade->enforcer</li>
+    <li>Num->1st</li>
+    <li>Num->2nd</li>
+    <li>Num->3rd</li>
+    <li>Num->4th</li>
+    <li>Num->5th</li>
+    <li>Num->6th</li>
+    <li>Num->7th</li>
+    <li>Num->8th</li>
+    <li>Num->9th</li>
+  -->
+  <DMSAC_Namer_Combine.rulePack.rulesStrings>
+    <li>r_name->第[Num][BrigadeType][Brigade]连</li>
+    <li>BrigadeType->机械化</li>
+    <li>BrigadeType->装甲</li>
+    <li>BrigadeType->混合</li>
+    <li>BrigadeType->临时</li>
+    <li>BrigadeType->自动</li>
+    <li>Brigade->机兵</li>
+    <li>Brigade->作战</li>
+    <li>Brigade->合成</li>
+    <li>Brigade->执行</li>
+    <li>Num->一</li>
+    <li>Num->二</li>
+    <li>Num->三</li>
+    <li>Num->四</li>
+    <li>Num->五</li>
+    <li>Num->六</li>
+    <li>Num->七</li>
+    <li>Num->八</li>
+    <li>Num->九</li>
+  </DMSAC_Namer_Combine.rulePack.rulesStrings>
+  
+</LanguageData>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN:
+    <li>r_name->[Num] [BrigadeType] [Brigade] company</li>
+    <li>BrigadeType->machinegun</li>
+    <li>BrigadeType->task</li>
+    <li>BrigadeType->storm</li>
+    <li>BrigadeType->suppress</li>
+    <li>BrigadeType->armour</li>
+    <li>BrigadeType->automatic</li>
+    <li>Brigade->fireteam</li>
+    <li>Brigade->vanguard</li>
+    <li>Brigade->gunner</li>
+    <li>Brigade->schuzen</li>
+    <li>Num->1st</li>
+    <li>Num->2nd</li>
+    <li>Num->3rd</li>
+    <li>Num->4th</li>
+    <li>Num->5th</li>
+    <li>Num->6th</li>
+    <li>Num->7th</li>
+    <li>Num->8th</li>
+    <li>Num->9th</li>
+  -->
+  <DMSAC_Namer_Antipersonnel.rulePack.rulesStrings>
+    <li>r_name->第[Num][BrigadeType][Brigade]连</li>
+    <li>BrigadeType->机枪</li>
+    <li>BrigadeType->突击</li>
+    <li>BrigadeType->压制</li>
+    <li>BrigadeType->多管</li>
+    <li>BrigadeType->自动</li>
+    <li>Brigade->火力</li>
+    <li>Brigade->支援</li>
+    <li>Brigade->先锋</li>
+    <li>Brigade->机兵</li>
+    <li>Brigade->步兵</li>
+    <li>Num->一</li>
+    <li>Num->二</li>
+    <li>Num->三</li>
+    <li>Num->四</li>
+    <li>Num->五</li>
+    <li>Num->六</li>
+    <li>Num->七</li>
+    <li>Num->八</li>
+    <li>Num->九</li>
+  </DMSAC_Namer_Antipersonnel.rulePack.rulesStrings>
+  
+</LanguageData>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Heavy Armour Team -->
+  <DMSAC_HeavyArmourTeam_5.label>重型装甲部队</DMSAC_HeavyArmourTeam_5.label>
+  <!-- EN: A mixed equipment troops temporarily formed for missions -->
+  <DMSAC_HeavyArmourTeam_5.description>一支针对任务需要而临时编组的合成作战部队。</DMSAC_HeavyArmourTeam_5.description>
+  
+  <!-- EN: Heavy Mixed Team -->
+  <DMSAC_HeavyMixedTeam_51.label>重型混成部队</DMSAC_HeavyMixedTeam_51.label>
+  <!-- EN: A mixed equipment troops temporarily formed for missions -->
+  <DMSAC_HeavyMixedTeam_51.description>一支针对任务需要而临时编组的合成作战部队。</DMSAC_HeavyMixedTeam_51.description>
+  
+  <!-- EN: Heavy Mixed Team -->
+  <DMSAC_HeavyMixedTeam_52.label>重型混成部队</DMSAC_HeavyMixedTeam_52.label>
+  <!-- EN: A mixed equipment troops temporarily formed for missions -->
+  <DMSAC_HeavyMixedTeam_52.description>一支针对任务需要而临时编组的合成作战部队。</DMSAC_HeavyMixedTeam_52.description>
+  
+  <!-- EN: Medium Mixed Team -->
+  <DMSAC_MediumMixedTeam_4.label>中型混成部队</DMSAC_MediumMixedTeam_4.label>
+  <!-- EN: A mixed equipment troops temporarily formed for missions -->
+  <DMSAC_MediumMixedTeam_4.description>一支针对任务需要而临时编组的合成作战部队。</DMSAC_MediumMixedTeam_4.description>
+  
+</LanguageData>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN:
+    <li>r_name->[Num] [BrigadeType] [Brigade] squad</li>
+    <li>BrigadeType->motorized</li>
+    <li>BrigadeType->field</li>
+    <li>BrigadeType->artillery</li>
+    <li>BrigadeType->support</li>
+    <li>Brigade->mortar</li>
+    <li>Brigade->automata</li>
+    <li>Brigade->cannonier</li>
+    <li>Num->1st</li>
+    <li>Num->2nd</li>
+    <li>Num->3rd</li>
+    <li>Num->4th</li>
+    <li>Num->5th</li>
+    <li>Num->6th</li>
+    <li>Num->7th</li>
+    <li>Num->8th</li>
+    <li>Num->9th</li>
+  -->
+  <DMSAC_Namer_Mortar.rulePack.rulesStrings>
+    <li>r_name->第[Num]獨立[BrigadeType][Brigade]連</li>
+    <li>BrigadeType->摩托化</li>
+    <li>BrigadeType->野戰</li>
+    <li>BrigadeType->自動</li>
+    <li>BrigadeType->支援</li>
+    <li>Brigade->陸行炮兵</li>
+    <li>Brigade->炮兵</li>
+    <li>Num->一</li>
+    <li>Num->二</li>
+    <li>Num->三</li>
+    <li>Num->四</li>
+    <li>Num->五</li>
+    <li>Num->六</li>
+    <li>Num->七</li>
+    <li>Num->八</li>
+    <li>Num->九</li>
+  </DMSAC_Namer_Mortar.rulePack.rulesStrings>
+  
+</LanguageData>

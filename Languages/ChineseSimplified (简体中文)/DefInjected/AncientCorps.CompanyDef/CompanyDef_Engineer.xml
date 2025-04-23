@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Grenadier team -->
+  <DMSAC_GrenadierTeam_1.label>掷弹工兵部队</DMSAC_GrenadierTeam_1.label>
+  <!-- EN: An engineering company equipped with various explosive weapons and flamethrowers -->
+  <DMSAC_GrenadierTeam_1.description>一支配备各种爆炸性武器和火焰喷射器的战斗工兵部队。</DMSAC_GrenadierTeam_1.description>
+  
+  <!-- EN: Mortar grenadier team -->
+  <DMSAC_GrenadierTeam_4.label>迫击砲掷弹砲兵</DMSAC_GrenadierTeam_4.label>
+  <!-- EN: An engineering company equipped with various explosive weapons and flamethrowers -->
+  <DMSAC_GrenadierTeam_4.description>一支配备各种爆炸性武器和火焰喷射器的战斗工兵部队。</DMSAC_GrenadierTeam_4.description>
+  
+</LanguageData>
