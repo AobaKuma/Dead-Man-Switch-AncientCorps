@@ -7,9 +7,14 @@ using Verse.Grammar;
 using System.Linq;
 using Verse.Noise;
 using UnityEngine;
+using DMS;
 
 namespace AncientCorps
 {
+    public class SitePartWorker_Artillery : SitePartWorker_Company
+    { 
+    
+    }
     /// <summary>
     /// 大致上有一個Company，然後這個Company會有一個目標，然後這個Company會隨著時間進行襲擊
     /// 對於非玩家陣營來說會使基地被占領。
@@ -22,23 +27,29 @@ namespace AncientCorps
             if (sitePart.lastRaidTick != -1 && !(Find.TickManager.TicksGame > sitePart.lastRaidTick + 90000f)) return;
 
             //如果與玩家陣營敵對，則會隨著時間進行襲擊
-            if (sitePart.site?.Faction != null && !sitePart.site.HasMap && sitePart.site.Faction.HostileTo(Faction.OfPlayer))
+            if (sitePart.site?.Faction != null && !sitePart.site.HasMap)
             {
-                CompanyDef company = GetCompany(sitePart);
-                List<Map> maps = Find.Maps.Where(m => m.IsPlayerHome).ToList();
-                for (int i = 0; i < maps.Count; i++)
-                {
-                    if (maps[i].GetRangeBetweenTiles(sitePart.site.Tile) > company.combatRadius) continue;
-                    if (sitePart.site.IsHashIntervalTick(2500) && Rand.MTBEventOccurs(QuestTuning.PointsToRaidSourceRaidsMTBDaysCurve.Evaluate(sitePart.parms.threatPoints), 60000f, 2500f))
-                    {
-                        StartRaid(maps[i], sitePart);
-                    }
-                }
-                return;
+                DoAction(sitePart);
             }
             if (sitePart.site is Company site_Company)
             {
                 site_Company.DoAction();
+            }
+        }
+        protected virtual void DoAction(SitePart sitePart)
+        {
+
+            CompanyDef company = GetCompany(sitePart);
+
+            if (sitePart.site.Faction.HostileTo(Faction.OfPlayer)) return;
+            List<Map> maps = Find.Maps.Where(m => m.IsPlayerHome).ToList();
+            for (int i = 0; i < maps.Count; i++)
+            {
+                if (maps[i].GetRangeBetweenTiles(sitePart.site.Tile) > company.combatRadius) continue;
+                if (sitePart.site.IsHashIntervalTick(2500) && Rand.MTBEventOccurs(QuestTuning.PointsToRaidSourceRaidsMTBDaysCurve.Evaluate(sitePart.parms.threatPoints), 60000f, 2500f))
+                {
+                    StartRaid(maps[i], sitePart);
+                }
             }
         }
         private CompanyDef GetCompany(SitePart sitePart)
@@ -89,6 +100,11 @@ namespace AncientCorps
                 return count = site_Company.GetCompany().GeneratePawns().ToList().Count();
             }
             return 25;
+        }
+        public override void PostMapGenerate(Map map)
+        {
+            base.PostMapGenerate(map);
+            if (AncientCorpsUltility.Corps.HostileTo(Faction.OfPlayer)) AncientCorpsUltility.Defcon_Rise();
         }
         public override string GetPostProcessedThreatLabel(Site site, SitePart sitePart)
         {

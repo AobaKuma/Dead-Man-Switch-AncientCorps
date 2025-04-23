@@ -13,7 +13,6 @@ using static HarmonyLib.Code;
 
 namespace AncientCorps
 {
-
     public static class AncientCorpsUltility
     {
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
@@ -52,10 +51,9 @@ namespace AncientCorps
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
             comp.StartAction();
         }
-
         public static void SetHostileToPlayer(Map map, Pawn targetPawn = null)
         {
-            Faction faction = Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
+            Faction faction = Corps;
             if (faction == null) return;
 
             if (LastPilotCheck(faction.RelationKindWith(Faction.OfPlayer))) return;

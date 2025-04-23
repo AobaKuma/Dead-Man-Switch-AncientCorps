@@ -93,7 +93,7 @@ namespace AncientCorps
             if (name.NullOrEmpty()) name = NameGenerator.GenerateName(companyDef.NamePack);
             SetFaction(Find.FactionManager.FirstFactionOfDef(companyDef.defaultFaction));
         }
-        private Faction Corps => Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
+        private Faction Corps => AncientCorpsUltility.Corps;
         public void DoAction()
         {
             if (targetSettlement == null || targetSettlement.Destroyed || !targetSettlement.Spawned || targetSettlement.Faction == Corps) targetSettlement = null;

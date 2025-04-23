@@ -99,7 +99,6 @@
     </comps>
   </ThingDef>
 
-
   <ThingDef ParentName="BaseBullet">
     <defName>DMSAC_Bullet_ShieldProjectorShell</defName>
     <label>disposable shield projector</label>

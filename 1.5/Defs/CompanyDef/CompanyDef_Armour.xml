@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_AntiTank" ParentName="DMSAC_BaseCompany" Abstract="true">
+    <IconPath>UI/Icons/Company/AntiTank</IconPath>
+    <NamePack>DMSAC_Namer_AntiTank</NamePack>
+    <description>An anti-armor mobile combat force equipped with a large number of anti-tank missiles</description>
+  </AncientCorps.CompanyDef>
+
+  <RulePackDef>
+    <defName>DMSAC_Namer_AntiTank</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Num] [BrigadeType] [Brigade] company</li>
+
+        <li>BrigadeType->anti-tank</li>
+        <li>BrigadeType->task</li>
+        <li>BrigadeType->strike</li>
+        <li>BrigadeType->patrol</li>
+        <li>BrigadeType->missile</li>
+        <li>BrigadeType->rocket</li>
+        <li>BrigadeType->guided</li>
+        <li>BrigadeType->automatic</li>
+
+        <li>Brigade->hunter</li>
+        <li>Brigade->pioneer</li>
+        <li>Brigade->grenadier</li>
+        <li>Brigade->harpooneer</li>
+
+        <li>Num->1st</li>
+        <li>Num->2nd</li>
+        <li>Num->3rd</li>
+        <li>Num->4th</li>
+        <li>Num->5th</li>
+        <li>Num->6th</li>
+        <li>Num->7th</li>
+        <li>Num->8th</li>
+        <li>Num->9th</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!--====機炮 + 9M133 + 風琴反裝甲配置（警戒度2）====-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_AntiTank">
+    <defName>DMSAC_AntitankTeam_2</defName>
+    <label>Anti-tank Team</label>
+    <defconRating>2</defconRating>
+    <squadCountRange>2~4</squadCountRange>
+    <squads>
+      <li>DMSAC_Light_Antitank_A</li>
+      <li>DMSAC_Light_Mortar_A</li>
+      <li>DMSAC_Light_Antitank_B</li>
+      <li>DMSAC_Light_Antitank_C</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+  
+  <AncientCorps.PlatoonDef><!--1x9M133 + 輕機兵-->
+    <defName>DMSAC_Light_Antitank_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Mushketer_AR>2</DMS_Mech_Mushketer_AR>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Cornetist>3</DMS_Mech_Gorod_Cornetist>
+    </fixedPawnkind>
+    <memberCountRange>5~7</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Mosta</li>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1x81mm + 2x9M133，輕機兵較少-->
+    <defName>DMSAC_Light_Antitank_B</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Mushketer_AR>2</DMS_Mech_Mushketer_AR>
+      <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+      <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist> 
+      <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+    </fixedPawnkind>
+    <memberCountRange>2~5</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Mosta</li>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1x9M133，1x風琴，輕機兵較多-->
+    <defName>DMSAC_Light_Antitank_C</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Mushketer_AR>2</DMS_Mech_Mushketer_AR>
+      <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
+      <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist> 
+    </fixedPawnkind>
+    <memberCountRange>5~8</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Mosta</li>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+
+  <!--======機炮 + 9M133 + 風琴反裝甲配置（警戒度3）======-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_AntiTank">
+    <defName>DMSAC_AntitankTeam_3</defName>
+    <label>Antitank Team</label>
+    <defconRating>3</defconRating>
+    <squadCountRange>2~6</squadCountRange>
+    <squads>
+      <li>DMSAC_Medium_Mortar_A</li>
+      <li>DMSAC_Light_Antitank_C</li>
+      <li>DMSAC_Medium_Rocket_A</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+  
+  <AncientCorps.PlatoonDef><!--2x9M133 + 輕機兵較多-->
+    <defName>DMSAC_Medium_AntiTank_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>3</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+    </fixedPawnkind>
+    <memberCountRange>8~11</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef> 
+  <AncientCorps.PlatoonDef><!--2x9M133 + 輕機兵-->
+    <defName>DMSAC_Medium_AntiTank_B</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+    </fixedPawnkind>
+    <memberCountRange>7~9</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--4x81mm，中型機兵較多-->
+    <defName>DMSAC_Medium_Mortar_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_Tsvetnik</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>3</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Tsvetnik>3</DMS_Mech_Tsvetnik>
+    </fixedPawnkind>
+    <memberCountRange>6~8</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>   
+  </AncientCorps.PlatoonDef>
+  <!--========重機槍 + 機炮 + 9M133 + 風琴反裝甲配置（警戒度4）========-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_AntiTank">
+    <defName>DMSAC_AntitankTeam_4</defName>
+    <label>Anti-tank Team</label>
+    <defconRating>4</defconRating>
+    <squadCountRange>3~6</squadCountRange>
+    <squads>
+      <li>DMSAC_Medium_AntiTank_A</li>
+      <li>DMSAC_Medium_Rocket_A</li>
+      <li>DMSAC_Medium_Rocket_B</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+
+  <AncientCorps.PlatoonDef><!--2x9M133，2x風琴，輕機兵較多-->
+    <defName>DMSAC_Medium_Rocket_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+      <DMS_Mech_Gorod_Organist>2</DMS_Mech_Gorod_Organist> 
+    </fixedPawnkind>
+    <memberCountRange>7~10</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1x9M133，3x風琴，輕機兵較多-->
+    <defName>DMSAC_Medium_Rocket_B</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
+      <DMS_Mech_Gorod_Organist>3</DMS_Mech_Gorod_Organist> 
+    </fixedPawnkind>
+    <memberCountRange>7~10</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+</Defs>

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_Antipersonnel" ParentName="DMSAC_BaseCompany" Abstract="true">
+    <IconPath>UI/Icons/Company/Antipersonnel</IconPath>
+    <NamePack>DMSAC_Namer_Antipersonnel</NamePack>
+    <description>A unit equipped with a large amount of supporting firepower</description>
+  </AncientCorps.CompanyDef>
+
+  <RulePackDef>
+    <defName>DMSAC_Namer_Antipersonnel</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Num] [BrigadeType] [Brigade] company</li>
+
+        <li>BrigadeType->machinegun</li>
+        <li>BrigadeType->task</li>
+        <li>BrigadeType->storm</li>
+        <li>BrigadeType->suppress</li>
+        <li>BrigadeType->armour</li>
+        <li>BrigadeType->automatic</li>
+
+        <li>Brigade->fireteam</li>
+        <li>Brigade->vanguard</li>
+        <li>Brigade->gunner</li>
+        <li>Brigade->schuzen</li>
+
+        <li>Num->1st</li>
+        <li>Num->2nd</li>
+        <li>Num->3rd</li>
+        <li>Num->4th</li>
+        <li>Num->5th</li>
+        <li>Num->6th</li>
+        <li>Num->7th</li>
+        <li>Num->8th</li>
+        <li>Num->9th</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!--====機炮 + 八音盒 + 風琴反人員配置（警戒度2）====-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Antipersonnel">
+    <defName>DMSAC_AntipersonnelTeam_2</defName>
+    <label>Antipersonnel Team</label>
+    <defconRating>2</defconRating>
+    <squadCountRange>1~4</squadCountRange>
+    <squads>
+      <li>DMSAC_Light_Rocket_A</li>
+      <li>DMSAC_Light_Mortar_A</li>
+      <li>DMSAC_Light_Flamer_A</li>
+      <li>DMSAC_Light_Combine_A</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+
+  <AncientCorps.PlatoonDef><!--1x八音盒，輕機兵較多-->
+    <defName>DMSAC_Light_Rocket_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+    </fixedPawnkind>
+    <memberCountRange>4~8</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1x81mm-->
+    <defName>DMSAC_Light_Mortar_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+      <DMS_Mech_Gorod_Piper>1</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Tsvetnik>2</DMS_Mech_Tsvetnik>
+    </fixedPawnkind>
+    <memberCountRange>4~8</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1x風琴，輕機兵較多-->
+    <defName>DMSAC_Light_Flamer_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Mushketer_AR>2</DMS_Mech_Mushketer_AR>
+      <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Organist>2</DMS_Mech_Gorod_Organist> 
+    </fixedPawnkind>
+    <memberCountRange>4~8</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_SAR</li>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1x81mm + 1x八音盒，輕機兵較少-->
+    <defName>DMSAC_Light_Combine_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Mushketer_AR>2</DMS_Mech_Mushketer_AR>
+      <DMS_Mech_Gorod_Piper>1</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka> 
+      <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+    </fixedPawnkind>
+    <memberCountRange>2~4</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+
+  <!--======重機槍 + 機炮 + 八音盒 + 風琴反人員配置（警戒度3）======-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Antipersonnel">
+    <defName>DMSAC_AntipersonnelTeam_3</defName>
+    <label>Antipersonnel Team</label>
+    <defconRating>3</defconRating>
+    <squadCountRange>2~6</squadCountRange>
+    <squads>
+      <li>DMSAC_Light_Rocket_B</li>
+      <li>DMSAC_Light_Mortar_B</li>
+      <li>DMSAC_Light_Rocket_C</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+
+  <AncientCorps.PlatoonDef><!--2x八音盒 + 輕機兵-->
+    <defName>DMSAC_Light_Rocket_B</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+      <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+    </fixedPawnkind>
+    <memberCountRange>2~4</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef>
+    <defName>DMSAC_Light_Mortar_B</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+    </fixedPawnkind>
+    <memberCountRange>6~8</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef>
+    <defName>DMSAC_Light_Rocket_C</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_Zabor_Shkatulka</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor_Shkatulka>3</DMS_Mech_Zabor_Shkatulka>
+    </fixedPawnkind>
+    <memberCountRange>7~10</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_AR</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+
+  <!--========機炮 + 八音盒 + 風琴反人員配置（警戒度4）========-->
+  <AncientCorps.CompanyDef>
+    <defName>DMSAC_AntipersonnelTeam_4</defName>
+    <label>Antipersonnel Team</label>
+    <defconRating>4</defconRating>
+    <squadCountRange>3~8</squadCountRange>
+    <squads>
+      <li>DMSAC_Light_Combine_A</li>
+      <li>DMSAC_Light_Rocket_B</li>
+      <li>DMSAC_Light_Rocket_C</li>
+      <li>DMSAC_Light_Mortar_B</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+</Defs>

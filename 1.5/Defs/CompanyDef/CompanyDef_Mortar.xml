@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_Mortar" ParentName="DMSAC_BaseCompany" Abstract="true">
+    <IconPath>UI/Icons/Company/Mortar</IconPath>
+    <NamePack>DMSAC_Namer_Mortar</NamePack>
+  </AncientCorps.CompanyDef>
+
+  <RulePackDef>
+    <defName>DMSAC_Namer_Mortar</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Num] [BrigadeType] [Brigade] squad</li>
+
+        <li>BrigadeType->motorized</li>
+        <li>BrigadeType->field</li>
+        <li>BrigadeType->artillery</li>
+        <li>BrigadeType->support</li>
+
+        <li>Brigade->mortar</li>
+        <li>Brigade->automata</li>
+        <li>Brigade->cannonier</li>
+
+        <li>Num->1st</li>
+        <li>Num->2nd</li>
+        <li>Num->3rd</li>
+        <li>Num->4th</li>
+        <li>Num->5th</li>
+        <li>Num->6th</li>
+        <li>Num->7th</li>
+        <li>Num->8th</li>
+        <li>Num->9th</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!--==========81mm炮連配置（警戒度1）==========-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Mortar">
+    <defName>DMSAC_MortarTeam</defName>
+    <label>mortar battery</label>
+    <description>A mortar battery equipped with several mortar teams.</description>
+    <defconRating>1</defconRating>
+    <squadCountRange>1~4</squadCountRange>
+    <squads>
+      <li>DMSAC_Light_Mortar_A</li>
+      <li>DMSAC_Medium_Engineer_A</li>
+      <li>DMSAC_Sentry_Heavy_A</li>
+      <li>DMSAC_Medium_Engineer_B</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+
+  <!--==========155mm炮連配置（警戒度5）==========-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Mortar">
+    <defName>DMSAC_ArtilleryTeam</defName>
+    <label>artillery battery</label>
+    <description>An artillery battery equipped with heavy self-propelled artillery.</description>
+    <IconPath>UI/Icons/Company/Artillery</IconPath>
+    <defconRating>5</defconRating>
+    <squadCountRange>4</squadCountRange>
+    <squads>
+      <li>DMSAC_Heavy_Artillery_A</li>
+      <li>DMSAC_Sentry_Heavy_A</li>
+      <li>DMSAC_Heavy_Artillery_B</li>
+      <li>DMSAC_Heavy_Artillery_C</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+
+  <AncientCorps.PlatoonDef><!--4x81mm + 2x八音盒-->
+    <defName>DMSAC_MortarBattery_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Piper>1</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+      <DMS_Mech_Tsvetnik>2</DMS_Mech_Tsvetnik>     
+    </fixedPawnkind>
+    <memberCountRange>5~7</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--2x155mm + 2xGSH30-6 + 2x八音盒-->
+    <defName>DMSAC_Heavy_Artillery_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+      <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+      <DMS_Mech_Pravda>2</DMS_Mech_Pravda>
+      <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>       
+    </fixedPawnkind>
+    <memberCountRange>5~7</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--2x155mm + 2xGSH30-6 + 2x9M133-->
+    <defName>DMSAC_Heavy_Artillery_B</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+      <DMS_Mech_Pravda>2</DMS_Mech_Pravda>
+      <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>       
+    </fixedPawnkind>
+    <memberCountRange>5~7</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--2x155mm + 2x81mm + 1xGSH30-6 + 2x八音盒-->
+    <defName>DMSAC_Heavy_Artillery_C</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Piper>1</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+      <DMS_Mech_Pravda>2</DMS_Mech_Pravda>
+      <DMS_Mech_Tsvetnik>2</DMS_Mech_Tsvetnik>
+      <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>         
+    </fixedPawnkind>
+    <memberCountRange>5~7</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+</Defs>

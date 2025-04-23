@@ -11,8 +11,9 @@ namespace AncientCorps
     {
         public RulePackDef NamePack;
         public IntRange squadCountRange = new IntRange(1, 2);
-        public List<PlatoonMaker> squads;
+        public List<PlatoonDef> squads;
         public FactionDef defaultFaction = DMS_DefOf.DMS_AncientCorps;
+        public int defconRating = 0;
         [NoTranslate]
         public string IconPath = "UI/Icons/Company/Default";
         public int combatRadius = 10;
@@ -47,7 +48,6 @@ namespace AncientCorps
     {
         public RulePackDef nameDef;
         public List<PawnKindDef> leaderKindDef;
-
         public List<PawnGenOption> fixedPawnkind;
         public IntRange memberCountRange;
         public List<PawnKindDef> memberKindDefs;

@@ -35,7 +35,7 @@ namespace AncientCorps
             List<Pawn> commanders = new List<Pawn>();
             for (int i = 0; i < company.squadCountRange.RandomInRange; i++)
             {
-                PlatoonMaker maker = company.squads.RandomElement();
+                PlatoonDef maker = company.squads.RandomElement();
 
                 if (map != null && RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal + 0.2f))
                 {

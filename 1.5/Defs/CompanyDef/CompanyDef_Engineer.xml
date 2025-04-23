@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_Engineer" ParentName="DMSAC_BaseCompany" Abstract="true">
+    <IconPath>UI/Icons/Company/Engineer</IconPath>
+    <NamePack>DMSAC_Namer_Grenadier</NamePack>
+    <description>An engineering company equipped with various explosive weapons and flamethrowers</description>
+  </AncientCorps.CompanyDef>
+
+  <RulePackDef>
+    <defName>DMSAC_Namer_Grenadier</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Num] [BrigadeType] [Brigade] company</li>
+
+        <li>BrigadeType->task</li>
+        <li>BrigadeType->strike</li>
+        <li>BrigadeType->patrol</li>
+        <li>BrigadeType->combined</li>
+        <li>BrigadeType->rocket</li>
+        <li>BrigadeType->support</li>
+        <li>BrigadeType->automatic</li>
+
+        <li>Brigade->sapper</li>
+        <li>Brigade->pioneer</li>
+        <li>Brigade->grenadier</li>
+        <li>Brigade->engineer</li>
+
+        <li>Num->1st</li>
+        <li>Num->2nd</li>
+        <li>Num->3rd</li>
+        <li>Num->4th</li>
+        <li>Num->5th</li>
+        <li>Num->6th</li>
+        <li>Num->7th</li>
+        <li>Num->8th</li>
+        <li>Num->9th</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!--========AGS30 配置（警戒度1）========-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Engineer">
+    <defName>DMSAC_GrenadierTeam_1</defName>
+    <label>Grenadier team</label>
+    <defconRating>1</defconRating>
+    <squadCountRange>1~4</squadCountRange>
+    <squads>
+      <li>DMSAC_Light_Engineer_A</li>  
+      <li>DMSAC_Sentry_Light_A</li>
+      <li>DMSAC_Light_Engineer_B</li>
+      <li>DMSAC_Light_Engineer_C</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+
+  <AncientCorps.PlatoonDef><!--1xAGS30 + Gorod-->
+    <defName>DMSAC_Light_Engineer_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+      <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+    </fixedPawnkind>
+    <memberCountRange>6~8</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_SAR</li>
+      <li>DMS_Mech_Mushketer_AR</li>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1xAGS30 + Zabor-->
+    <defName>DMSAC_Light_Engineer_B</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+    </fixedPawnkind>
+    <memberCountRange>6~8</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_SAR</li>
+      <li>DMS_Mech_Mushketer_AR</li>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1xAGS30 + 1x風琴-->
+    <defName>DMSAC_Light_Engineer_C</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+      <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin> 
+    </fixedPawnkind>
+    <memberCountRange>4~6</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Mushketer_SAR</li>
+      <li>DMS_Mech_Mushketer_AR</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  
+  <!--========機炮 + AGS30 + 81迫 配置（警戒度4）========-->
+  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Engineer">
+    <defName>DMSAC_GrenadierTeam_4</defName>
+    <label>Mortar grenadier team</label>
+    <defconRating>4</defconRating>
+    <squadCountRange>3~6</squadCountRange>
+    <squads>
+      <li>DMSAC_Medium_Engineer_A</li>
+      <li>DMSAC_Medium_Engineer_B</li>
+      <li>DMSAC_Medium_Engineer_C</li>
+      <li>DMSAC_Medium_Engineer_D</li>
+    </squads>
+  </AncientCorps.CompanyDef>
+
+  <AncientCorps.PlatoonDef><!--1x81mm + 4xAGS30 + 輕機兵較多-->
+    <defName>DMSAC_Medium_Engineer_A</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Gorod>2</DMS_Mech_Gorod>
+      <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+      <DMS_Mech_Molot_Kamin>4</DMS_Mech_Molot_Kamin>
+      <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+    </fixedPawnkind>
+    <memberCountRange>8~11</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--1x81mm + 增加中型機兵 + 輕機兵較少-->
+    <defName>DMSAC_Medium_Engineer_B</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Gorod>2</DMS_Mech_Gorod>
+      <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+      <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper> 
+      <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+    </fixedPawnkind>
+    <memberCountRange>4~7</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--2xAGS30 + 1x風琴 + 輕機兵較多-->
+    <defName>DMSAC_Medium_Engineer_C</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+      <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+      <DMS_Mech_Molot_Kamin>2</DMS_Mech_Molot_Kamin> 
+    </fixedPawnkind>
+    <memberCountRange>6~9</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+  <AncientCorps.PlatoonDef><!--2xAGS30 + 1x八音盒 + 輕機兵較多-->
+    <defName>DMSAC_Medium_Engineer_D</defName>
+    <leaderKindDef>
+      <li>DMS_Mech_CommandWalker</li>
+    </leaderKindDef>
+    <fixedPawnkind>
+      <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+      <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
+      <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
+      <DMS_Mech_Molot_Kamin>2</DMS_Mech_Molot_Kamin> 
+    </fixedPawnkind>
+    <memberCountRange>7~10</memberCountRange>
+    <memberKindDefs>
+      <li>DMS_Mech_Molot_Reservoir</li>
+      <li>DMS_Mech_Molot</li>
+    </memberKindDefs>
+  </AncientCorps.PlatoonDef>
+</Defs>

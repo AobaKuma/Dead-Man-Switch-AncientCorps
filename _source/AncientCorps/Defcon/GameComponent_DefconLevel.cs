@@ -25,7 +25,7 @@ namespace AncientCorps
         public float[] Scale => scale;
         protected float[] scale;
         public int MTBAction => actionInterval;
-        public Faction CorpsFaction => Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
+        public Faction CorpsFaction => AncientCorpsUltility.Corps;
         public float GetCurrentScale => Scale[Level];
         public GameComponent_DefconLevel(Game game)
         {
@@ -49,6 +49,7 @@ namespace AncientCorps
 
         public override void GameComponentTick()
         {
+            if (CorpsFaction == null) return;
             base.GameComponentTick();
             if (interval < 0) return;
             interval--;
@@ -77,7 +78,7 @@ namespace AncientCorps
             if (level != _) //五級向上就不會跳信件了
             {
                 //由於近期發生的事件使得(機兵師)指揮部提高了其部隊的警戒等級，現在它們的警戒等級為:
-                Find.LetterStack.ReceiveLetter("DMSAC_Level_Rise".Translate(), "DMSAC_Level_Rise_Desc".Translate(AncientCorpsUltility.Corps.NameColored, level) + "\n\n" + GetLevelDesc(), Level < 2 ? LetterDefOf.NegativeEvent : Level <= 4 ? LetterDefOf.ThreatSmall : LetterDefOf.ThreatBig);
+                Find.LetterStack.ReceiveLetter("DMSAC_Level_Rise".Translate(), "DMSAC_Level_Rise_Desc".Translate(CorpsFaction.NameColored, level) + "\n\n" + GetLevelDesc(), Level < 2 ? LetterDefOf.NegativeEvent : Level <= 4 ? LetterDefOf.ThreatSmall : LetterDefOf.ThreatBig);
                 if (level == 5)
                 {
                     targetedFaction = GetFaction();
@@ -91,7 +92,7 @@ namespace AncientCorps
             if (level < 0) level = 0;
             ResetInterval();
             ResetActionInterval();
-            Find.LetterStack.ReceiveLetter("DMSAC_Level_Down".Translate(), "DMSAC_Level_Down_Desc".Translate(AncientCorpsUltility.Corps.NameColored, level) + "\n\n" + GetLevelDesc(), LetterDefOf.PositiveEvent);
+            Find.LetterStack.ReceiveLetter("DMSAC_Level_Down".Translate(), "DMSAC_Level_Down_Desc".Translate(CorpsFaction.NameColored, level) + "\n\n" + GetLevelDesc(), LetterDefOf.PositiveEvent);
         }
         public void LevelDown()
         {
@@ -101,35 +102,35 @@ namespace AncientCorps
             ResetInterval();
             ResetActionInterval();
             //根據近期觀察的活動變化，(機兵師)指揮部下降了其內部的警戒等級，現在它們的警戒等級為:
-            Find.LetterStack.ReceiveLetter("DMSAC_Level_Down".Translate(), "DMSAC_Level_Down_Desc".Translate(AncientCorpsUltility.Corps.NameColored, level) + "\n\n" + GetLevelDesc(), LetterDefOf.PositiveEvent);
+            Find.LetterStack.ReceiveLetter("DMSAC_Level_Down".Translate(), "DMSAC_Level_Down_Desc".Translate(CorpsFaction.NameColored, level) + "\n\n" + GetLevelDesc(), LetterDefOf.PositiveEvent);
         }
         private TaggedString GetLevelDesc()
         {
             // O級警戒: (機兵師)僅保留最低程度的設施間巡邏編制，並解散了部隊中的中型機兵返回駐地進行檢修。
-            var taggedString = "DMSAC_Level.0".Translate(AncientCorpsUltility.Corps.NameColored);
+            var taggedString = "DMSAC_Level.0".Translate(CorpsFaction.NameColored);
             switch (level)
             {
                 case 1:
                     // I級警戒: (機兵師)在其地面設施之間部屬了全天候的巡邏部隊使受襲設施的增援間隔縮短，並且在部隊中伴隨大型機兵。
-                    taggedString = "DMSAC_Level.1".Translate(AncientCorpsUltility.Corps.NameColored);
+                    taggedString = "DMSAC_Level.1".Translate(CorpsFaction.NameColored);
                     break;
                 case 2:
                     // II級警戒: 根據近期當前局勢，(機兵師)將部分的大型機兵重啟並隨時調動，並編制少量的裝甲排作為對地面設施增援的特遣部隊
-                    taggedString = "DMSAC_Level.2".Translate(AncientCorpsUltility.Corps.NameColored);
+                    taggedString = "DMSAC_Level.2".Translate(CorpsFaction.NameColored);
                     break;
                 case 3:
                     // III級警戒: 由於近期的緊張局勢，超重型機兵已進入戰備狀態並部屬在各區域隨時增援，(機兵師)將根據殖民艦隊公約的戒備狀態條例對鄰近的非法軍事站點進行武裝驅離。
-                    taggedString = "DMSAC_Level.3".Translate(AncientCorpsUltility.Corps.NameColored);
+                    taggedString = "DMSAC_Level.3".Translate(CorpsFaction.NameColored);
                     break;
                 case 4:
                     // IV級警戒: (機兵師)確認海牙第一公約已不再適用於當前狀況，並根據海牙第三公約進行正式的宣戰佈告。
                     // 根據海牙第二公約第二條，處於未佔領區拿起武器對抗(機兵師)部隊的平民將被視為戰爭法所定義的戰鬥員。
-                    taggedString = "DMSAC_Level.4".Translate(AncientCorpsUltility.Corps.NameColored);
+                    taggedString = "DMSAC_Level.4".Translate(CorpsFaction.NameColored);
                     break;
                 case 5:
                     // V級警戒: 根據殖民艦隊公約的戒備狀態條例，(機兵師)確認當前狀況已達到必須展開進攻並調動重型裝甲旅來執行作戰的合規條件。。
                     // 部隊將在遵守國際人道法和《羅馬規約》條例的前提下對已識別的敵對控制區進行佔領與接管，並根據比例原則對襲擊設施的敵對勢力予以對等打擊。
-                    taggedString = "DMSAC_Level.5".Translate(AncientCorpsUltility.Corps.NameColored);
+                    taggedString = "DMSAC_Level.5".Translate(CorpsFaction.NameColored);
                     break;
             }
             return taggedString;
@@ -271,7 +272,7 @@ namespace AncientCorps
             {
                 targetedFaction = Find.FactionManager.AllFactions.Where(
                         f =>
-                        f.HostileTo(Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps)) &&
+                        f.HostileTo(CorpsFaction) &&
                         f.def.humanlikeFaction &&
                         !f.Hidden &&
                         !f.defeated &&
@@ -319,10 +320,6 @@ namespace AncientCorps
         }
         public void DepolyNewCompany()
         {
-            if (!HasTarget)
-            {
-
-            }
             if (targetedFaction == null) GetFaction();
             List<Settlement> settlementsA = Find.World.worldObjects.SettlementBases
                 .Where(s => s.Faction == targetedFaction && s.Tile != -1)
@@ -350,10 +347,10 @@ namespace AncientCorps
                 Log.Warning("worldObject is null!");
                 return;
             }
-            worldObject.SetFaction(Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps));
+            worldObject.SetFaction(CorpsFaction);
 
-            //到時候根據警戒等級生成。
-            (worldObject as Company).SetCompany(DefDatabase<CompanyDef>.AllDefsListForReading.RandomElement());
+            //根據警戒等級生成單位。
+            (worldObject as Company).SetCompany(DefDatabase<CompanyDef>.AllDefsListForReading.Where(c => Level >= c.defconRating).RandomElement());
 
             int result = -1;
             if (result == -1)

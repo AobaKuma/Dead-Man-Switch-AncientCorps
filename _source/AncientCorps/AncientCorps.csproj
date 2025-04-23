@@ -40,6 +40,9 @@
       <HintPath>..\Reference\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DMS">
+      <HintPath>..\..\..\Dead-Man-Switch\1.5\Assemblies\DMS.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -79,6 +82,7 @@
     <Compile Include="Defcon\CompanyDef.cs" />
     <Compile Include="BaseGen\CompBuildingExtraRenderer.cs" />
     <Compile Include="Defcon\GameComponent_RaidCompany.cs" />
+    <Compile Include="Defcon\PlatoonDef.cs" />
     <Compile Include="Defcon\SitePartWorker_Company.cs" />
     <Compile Include="Defcon\Company.cs" />
     <Compile Include="JobDriver_ResurrectMech.cs" />
