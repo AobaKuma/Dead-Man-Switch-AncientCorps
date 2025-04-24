@@ -312,6 +312,7 @@
     <weaponMoney>6730~9999</weaponMoney>
     <abilities>
       <li>DMSAC_APS</li>
+      <li>DMS_SmokeLauncher</li>
     </abilities>
   </PawnKindDef>
 

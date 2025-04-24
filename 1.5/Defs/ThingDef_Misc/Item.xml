@@ -35,9 +35,9 @@
   <ThingDef ParentName="DMSAC_SiteIntel"> 
     <defName>DMSAC_FacilityIntel</defName>
     <label>facility intel</label>
-    <description>A intel map about the location of a military facility.</description>
+    <description>A data blackbox, which is designed to storage the operation record of an automatroid, by this it is not hard to find the information about the location of military facility it comes from.</description>
     <graphicData>
-      <texPath>Things/Resource/EncryptedTransmitter</texPath>
+      <texPath>Things/Resource/BlackBox</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.25</drawSize>
     </graphicData>
@@ -57,7 +57,7 @@
   <ThingDef ParentName="DMSAC_SiteIntel"> 
     <defName>DMSAC_SiteIntel</defName>
     <label>site intel</label>
-    <description>A intel map about the location of a small military site.</description>
+    <description>An intel map about the location of a small military site, which is one of the countless pieces of information gathered by scavengers or pirates at that time when dealing with these ancient machines that had existed in this planet for hundreds of years.</description>
     <graphicData>
       <texPath>Things/Resource/DMSAC_Intel</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -74,7 +74,7 @@
       </li>
     </comps>
   </ThingDef>
-  
+
   <ThingDef ParentName="ResourceBase"> 
     <defName>DMSAC_Kit_Electronic</defName>
     <label>Electronic repair kit</label>

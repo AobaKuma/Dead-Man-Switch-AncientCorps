@@ -156,9 +156,6 @@
       <DMS_ChunkSlag>6</DMS_ChunkSlag>
       <ComponentStamped>4</ComponentStamped>
     </butcherProducts>
-    <killedLeavingsPlayerHostile>
-      <DMSAC_FacilityIntel>1</DMSAC_FacilityIntel>
-    </killedLeavingsPlayerHostile>
     <castEdgeShadows>false</castEdgeShadows>
     <staticSunShadowHeight>0</staticSunShadowHeight>
   </ThingDef>

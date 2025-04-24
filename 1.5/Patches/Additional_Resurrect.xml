@@ -20,6 +20,7 @@
                 <xpath>Defs/RecipeDef[defName="DMS_ResurrectUltraheavyMech"]/fixedIngredientFilter/thingDefs</xpath>
                 <value>
                     <li>Corpse_DMS_Mech_Krepost</li>
+                    <li>Corpse_DMS_Mech_Pravda</li>
                 </value>
             </li>
         </operations>

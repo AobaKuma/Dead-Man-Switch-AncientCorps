@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
 	<!-- 通用的技能，比如各種發射物 -->
 	<AbilityDef>
 		<defName>DMSAC_APS</defName>

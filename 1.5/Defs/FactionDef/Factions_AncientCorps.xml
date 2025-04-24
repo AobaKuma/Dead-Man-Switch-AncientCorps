@@ -54,7 +54,7 @@
       <li>Ancients</li>
       <li>PlayerColony</li>
     </permanentEnemyToEveryoneExcept>
-    <hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+    <hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
     <maxPawnCostPerTotalPointsCurve>
       <points>
         <li>(400,200)</li>

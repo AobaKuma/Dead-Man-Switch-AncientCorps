@@ -9,7 +9,7 @@
     <defaultLabelColor>(99,89,89)</defaultLabelColor>
     <hediffGivers>
       <li Class="DMS.HediffGiver_RandomSilent">
-        <mtbDays>8</mtbDays>
+        <mtbDays>16</mtbDays>
         <hediff>ElectricalBurn</hediff>
         <partsToAffect>
           <li>DMS_Battery</li>
@@ -26,12 +26,12 @@
     </stages>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.75</partEfficiency>
+      <partEfficiency>0.8</partEfficiency>
       <betterThanNatural>false</betterThanNatural>
     </addedPartProps>
     <comps MayRequire="V1024.EBFramework">
       <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust" MayRequire="V1024.EBFramework">
-        <scaleAdjustment>-0.25</scaleAdjustment>
+        <scaleAdjustment>-0.1</scaleAdjustment>
       </li>
     </comps>
   </HediffDef>
