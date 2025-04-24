@@ -8,6 +8,39 @@
                     <li>MachinePistol</li>
                 </value>
             </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[
+                    defName="DMS_Mech_Dogge"
+                    ]/modExtensions/li[@Class="DMS.MechWeaponExtension"]/UsableWeaponTags</xpath>
+                <value>
+                    <li>DMS_PKM</li>
+                    <li>DMS_ZlobinRifle</li>
+                    <li>DMS_KS23K</li>
+                    <li>DMS_AtlantGrenadeLauncher</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[
+                    defName="DMS_Mech_Phalanx" or 
+                    defName="DMS_Mech_Pioneer"
+                    ]/modExtensions/li[@Class="DMS.MechWeaponExtension"]/UsableWeaponTags</xpath>
+                <value>
+                    <li>DMS_PKM</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[
+                    defName="DMS_Mech_Ronin" or 
+                    defName="DMS_Mech_Phalanx" or 
+                    defName="DMS_Mech_Siegebreaker" or
+                    defName="DMS_Mech_Arquebusier" or
+                    defName="DMS_Mech_Protector" or
+                    defName="DMS_Mech_Pioneer"
+                    ]/modExtensions/li[@Class="DMS.MechWeaponExtension"]/UsableWeaponTags</xpath>
+                <value>
+                    <li>DMS_ZlobinRifle</li>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

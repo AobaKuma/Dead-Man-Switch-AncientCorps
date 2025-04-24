@@ -110,6 +110,10 @@
   <DMS_ZlobinRifle.label>佐羅賓步槍</DMS_ZlobinRifle.label>
   <!-- EN: A special assault rifle named after its designer. during urban combat, it is capable of effectively penetrating the armor of most small and medium-sized mechanoids and causing damage.. However, its long-range accuracy is quite limited due to its speciallized subsonic bullet.\n\nIt also equipped with an underbarrel launcher capable of firing small-caliber grenades. -->
   <DMS_ZlobinRifle.description>一種冠以設計者之名的特種突擊步槍，能夠在巷戰中有效的擊穿大部分中小型機械體的防護並造成有效傷害。但其遠距離準確性頗為有限，配備有一具下掛轉輪式榴彈發射器能夠發射小口徑榴彈。</DMS_ZlobinRifle.description>
+  <!-- EN: grenade charge -->
+  <DMS_ZlobinRifle.comps.CompEquippableAbilityReloadable.chargeNoun>TODO</DMS_ZlobinRifle.comps.CompEquippableAbilityReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <DMS_ZlobinRifle.comps.CompEquippableAbilityReloadable.cooldownGerund>TODO</DMS_ZlobinRifle.comps.CompEquippableAbilityReloadable.cooldownGerund>
   <!-- EN: stock -->
   <DMS_ZlobinRifle.tools.stock.label>槍托</DMS_ZlobinRifle.tools.stock.label>
   <!-- EN: barrel -->

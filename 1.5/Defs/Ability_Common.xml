@@ -37,6 +37,34 @@
 	</AbilityDef>
 
 	<AbilityDef>
+		<defName>DMSAC_GrenadeLauncher</defName>
+		<label>shock grenade</label>
+		<description>Launch a shock grenade from underbarrel launcher, it is effective to stun enemy in close range.</description>
+		<iconPath>UI/Ability/DMSAC_UBGL</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<verbProperties>
+			<ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+			<defaultCooldownTime>2</defaultCooldownTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<onlyManualCast>true</onlyManualCast>
+			<range>24.9</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<requireLineOfSight>true</requireLineOfSight>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>DMS_Bullet_FlashBang</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
 		<defName>DMSAC_ShieldLauncher</defName>
 		<label>shield projector deploy</label>
 		<description>Launch a shield projector shell intercept incoming munitions.</description>

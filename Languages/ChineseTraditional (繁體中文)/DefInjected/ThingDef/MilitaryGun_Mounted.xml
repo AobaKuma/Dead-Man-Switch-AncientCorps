@@ -9,7 +9,7 @@
   
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.label>電磁反制系統</DMS_Gun_ECMSystem.label>
-  <!-- EN: A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it. -->
+  <!-- EN: A mounted pulse energy weapon that disables electronic equipment in the direction it is pointed at through directional electromagnetic interference. When working, it will cause the target to generate high temperatures, so it can also shock the enemy by igniting it. \n\nThis equipment was first developed after the Europa conflict in response to NATO's "Wyvern swarms",  several armed helicopter squadrons which are completely unmanned. The power of this air force was so prominent during World War III that there are no military weapon platforms with a height higher than four meters, because they have no cover to hide from these predators. -->
   <DMS_Gun_ECMSystem.description>一種掛載式脈衝能量武器，透過定向電磁幹擾使指向方位的電子設備失效。在工作時會使目標產生高溫，因此也能透過點燃的方式來癱瘓敵人。\n\n該裝備最早是在歐羅巴衝突後針對北約部屬在中東的"飛龍群" 一支完全無人化的武裝直升機部隊而研製。在三戰時期這支空中部隊的力量之顯赫，使得在三戰後的百年之內都少有高度高於四米的軍用武器平台，因為這會大幅降低它們遭遇龍群時的生存能力。</DMS_Gun_ECMSystem.description>
   <!-- EN: ECM system -->
   <DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>ECM</DMS_Gun_ECMSystem.verbs.Verb_Shoot.label>

@@ -134,6 +134,17 @@
 				<muzzleFlashScale>8</muzzleFlashScale>
 			</li>
 		</verbs>
+		<comps>
+			<li Class="CompProperties_EquippableAbilityReloadable">
+				<abilityDef>DMSAC_GrenadeLauncher</abilityDef>
+				<maxCharges>3</maxCharges>
+				<soundReload>Standard_Reload</soundReload>
+				<chargeNoun>grenade charge</chargeNoun>
+				<ammoDef>ComponentStamped</ammoDef>
+				<ammoCountPerCharge>1</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
 				<def>MF_StandardMuzzleFalsh</def>
@@ -164,7 +175,6 @@
 			<speed>48</speed>
 		</projectile>
 	</ThingDef>
-
 
 	<!--VKS-->
 	<ThingDef ParentName="DMS_AutomatroidGun">
