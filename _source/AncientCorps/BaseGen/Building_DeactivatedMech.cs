@@ -70,11 +70,14 @@ namespace AncientCorps
                 var num = Extension.damageCount.RandomInRange;
                 if (num > 0)
                 {
-                    for (int i = 0; i < num; i++)
+                    if (Pawn?.RaceProps != null)
                     {
-                        var part = Pawn.RaceProps.body.AllParts.RandomElement();
-                        if (!Pawn.health.hediffSet.HasMissingPartFor(part)) Pawn.health.AddHediff(DMS_DefOf.DMSAC_StructuralDamage, part);
-                        else i--;
+                        for (int i = 0; i < num; i++)
+                        {
+                            var part = Pawn.RaceProps.body.AllParts.RandomElement();
+                            if (!Pawn.health.hediffSet.HasMissingPartFor(part)) Pawn.health.AddHediff(DMS_DefOf.DMSAC_StructuralDamage, part);
+                            else i--;
+                        }
                     }
                 }
             }
