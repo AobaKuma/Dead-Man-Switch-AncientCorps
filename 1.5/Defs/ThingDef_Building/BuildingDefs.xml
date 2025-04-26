@@ -841,10 +841,10 @@
           <shaderType>CutoutComplex</shaderType>
           <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
         </openedGraphicdata>
+        <countRange>3~6</countRange>
         <loots>
           <li>DMSAC_CargoLoots</li>
           <li>DMSAC_RTC_CompLoots</li>
-          <li>DMSAC_LootMaker</li>
         </loots>
       </li>
     </modExtensions>

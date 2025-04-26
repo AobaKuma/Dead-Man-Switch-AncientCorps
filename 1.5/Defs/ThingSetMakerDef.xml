@@ -55,16 +55,16 @@
     <defName>DMSAC_CargoLoots</defName>
     <root Class="ThingSetMaker_RandomOption">
       <options>
-        <li MayRequire="aoba.deadmanswitch.mobiledragoon">
-          <weight>10</weight>
-          <thingSetMaker Class="ThingSetMaker_StackCount">
+        <li MayRequire="oskarpotocki.vanillavehiclesexpanded">
+          <weight>30</weight>
+          <thingSetMaker Class="ThingSetMaker_MarketValue">
             <fixedParams>
               <filter>
                 <categories>
-                  <li>DMS_Module</li>
+                  <li MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarParts</li>
                 </categories>
               </filter>
-              <countRange>1~2</countRange>
+              <totalMarketValueRange>500~2000</totalMarketValueRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -93,7 +93,7 @@
                   <li>ComponentTransmitter</li>
                 </thingDefs>
               </filter>
-              <countRange>1~1</countRange>
+              <countRange>1</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -102,27 +102,15 @@
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
+                <categories>
+                  <li MayRequire="aoba.deadmanswitch.mobiledragoon">DMS_Module</li>
+                </categories>
                 <thingDefs>
-                  <li>DMS_ZlobinRifle</li>
                   <li>DMS_Apparel_PowerSkelton</li>
                   <li>DMS_Apparel_HazardSuit</li>
                 </thingDefs>
               </filter>
               <countRange>2~4</countRange>
-            </fixedParams>
-          </thingSetMaker>
-        </li>
-        <li>
-          <weight>30</weight>
-          <thingSetMaker Class="ThingSetMaker_StackCount">
-            <fixedParams>
-              <filter>
-                <thingDefs>
-                  <li>ComponentStamped</li>
-                  <li>ComponentSpacer</li>
-                </thingDefs>
-              </filter>
-              <countRange>2~10</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -141,7 +129,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>50</weight>
+          <weight>20</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -150,7 +138,7 @@
                   <li>DMSAC_RecoverTransmitter</li>
                 </thingDefs>
               </filter>
-              <countRange>1~3</countRange>
+              <countRange>1</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -174,14 +162,12 @@
             <fixedParams>
               <filter>
                 <categories>
+                  <li>Manufactured</li>
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_Manufactured</li>
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_Electronics</li>
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_Tool</li>
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_SpecialComp</li>
                 </categories>
-                <thingDefs>
-                  <li>ComponentIndustrial</li>
-                </thingDefs>
               </filter>
               <totalMarketValueRange>500~2000</totalMarketValueRange>
             </fixedParams>
@@ -218,7 +204,7 @@
                   <li>DMS_MechLink_Nerfed</li>
                 </thingDefs>
               </filter>
-              <countRange>1~1</countRange>
+              <countRange>1</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
@@ -227,11 +213,13 @@
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
+                <categories>
+                  <li MayRequire="breadmo.cinders">Cinder_Amorphous</li>
+                </categories>
                 <thingDefs>
                   <li>DMS_Apparel_PowerSkelton</li>
                   <li>DMS_Apparel_HazardSuit</li>
                   <li>DMS_PKM</li>
-                  <li>DMS_YekaterinRifle</li>
                 </thingDefs>
               </filter>
               <countRange>1~1</countRange>
@@ -246,6 +234,7 @@
                 <thingDefs>
                   <li>DMS_KS23K</li>
                   <li>DMS_ZlobinRifle</li>
+                  <li>DMS_YekaterinRifle</li>
                 </thingDefs>
               </filter>
               <countRange>1~1</countRange>
@@ -253,7 +242,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>15</weight>
+          <weight>30</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -267,7 +256,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>30</weight>
+          <weight>10</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>
@@ -282,7 +271,7 @@
             </fixedParams>
           </thingSetMaker>
         </li>
-        <li>
+        <li MayRequire="xmb.ancienturbanruins.mo">
           <weight>30</weight>
           <thingSetMaker Class="ThingSetMaker_MarketValue">
             <fixedParams>
@@ -293,9 +282,6 @@
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_Tool</li>
                   <li MayRequire="xmb.ancienturbanruins.mo">AM_SpecialComp</li>
                 </categories>
-                <thingDefs>
-                  <li>ComponentIndustrial</li>
-                </thingDefs>
               </filter>
               <totalMarketValueRange>50~500</totalMarketValueRange>
             </fixedParams>
@@ -328,7 +314,21 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>10</weight>
+          <weight>5</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>ComponentStamped</li>
+                  <li>ComponentSpacer</li>
+                </thingDefs>
+              </filter>
+              <countRange>2~10</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>5</weight>
           <thingSetMaker Class="ThingSetMaker_StackCount">
             <fixedParams>
               <filter>

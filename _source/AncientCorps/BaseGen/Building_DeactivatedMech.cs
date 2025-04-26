@@ -58,6 +58,7 @@ namespace AncientCorps
                     innerContainer.TryAdd(PawnGenerator.GeneratePawn(this.Extension.possibleGeneratePawn.RandomElementByWeight(weightSelector).kind, PawnFaction));
                 }
                 while (Pawn == null);
+
                 if (Pawn.kindDef?.nameMaker != null)
                 {
                     Pawn.Name = PawnBioAndNameGenerator.GenerateFullPawnName(Pawn.def, Pawn.kindDef.nameMaker);
@@ -74,7 +75,7 @@ namespace AncientCorps
                     {
                         for (int i = 0; i < num; i++)
                         {
-                            var part = Pawn.RaceProps.body.AllParts.RandomElement();
+                            var part = Pawn.RaceProps.body.AllParts.Where(p => !p.IsCorePart).RandomElement();
                             if (!Pawn.health.hediffSet.HasMissingPartFor(part)) Pawn.health.AddHediff(DMS_DefOf.DMSAC_StructuralDamage, part);
                             else i--;
                         }
@@ -96,7 +97,7 @@ namespace AncientCorps
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             base.DrawAt(drawLoc, flip); 
-            if (Pawn.equipment?.Primary != null && Extension.weaponDraw != null)
+            if (Pawn?.equipment?.Primary != null && Extension?.weaponDraw != null)
             {
                 Vector3 drawLoc3 = drawLoc + Extension.weaponDraw.OffsetForRot(Rotation);
                 drawLoc3.y += Altitudes.AltInc * Extension.weaponDraw.LayerForRot(Rotation, 1);
@@ -104,14 +105,14 @@ namespace AncientCorps
                 PawnRenderUtility.DrawEquipmentAiming(Pawn.equipment.Primary, drawLoc3, aimAngle);
             }
         }
-        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
-        {
-            if (mode != DestroyMode.Vanish && this.HasPawn)
-            {
-                EjectContents(killPawn: true);
-            }
-            base.DeSpawn(mode);
-        }
+        //public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        //{
+        //    if (mode != DestroyMode.Vanish && this.HasPawn)
+        //    {
+        //        EjectContents(killPawn: true);
+        //    }
+        //    base.DeSpawn(mode);
+        //}
         public void GetChildHolders(List<IThingHolder> outChildren)
         {
             ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, this.GetDirectlyHeldThings());
@@ -177,15 +178,18 @@ namespace AncientCorps
         {
             if (killPawn)//非駭入的情況下，機體會被摧毀。
             {
-                if (!Pawn.Dead)
+                if (Pawn != null)
                 {
-                    Pawn.SetFactionDirect(Faction.OfAncients);
-                    Pawn?.Kill(null);
-                }
-                if (!innerContainer.NullOrEmpty())
-                {
-                    innerContainer.TryAddRangeOrTransfer(Pawn.ButcherProducts(usedBy, 0.5f), false);
-                    innerContainer.TryDropAll(Position, MapHeld, ThingPlaceMode.Near);
+                    if (innerContainer.First() is Corpse c || Pawn.health.ShouldBeDead())
+                    {
+                        innerContainer.TryDropAll(this.Position, this.Map, ThingPlaceMode.Near);
+                    }
+                    else
+                    {
+                        innerContainer.TryDrop(Pawn, ThingPlaceMode.Near, 1, out var p);
+                        p.SetFactionDirect(Faction.OfAncients);
+                        if (p is Pawn pa && !pa.Dead) pa.Kill(new DamageInfo(DamageDefOf.ExecutionCut, 200)); 
+                    }
                 }
             }
             else
@@ -199,7 +203,7 @@ namespace AncientCorps
                     Map.Parent.GetComponent<WorldObjectComp_PatrolSquad>()?.SpawnPatrol();
                     SetLordJob();
                 }
-                else 
+                else
                 if (usedBy.skills.GetSkill(SkillDefOf.Crafting).Level < 5 && Rand.Chance(0.25f) ||
                     usedBy.skills.GetSkill(SkillDefOf.Crafting).Level < 10 && Rand.Chance(0.05f) ||
                     usedBy.skills.GetSkill(SkillDefOf.Crafting).Level < 15 && Rand.Chance(0.01f)
@@ -221,8 +225,7 @@ namespace AncientCorps
                 }
                 innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
             }
-            DeSpawnOrDeselect();
-            Destroy(DestroyMode.Vanish);
+            DeSpawn(DestroyMode.Vanish);
         }
         private void SetLordJob()
         {

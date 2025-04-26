@@ -43,14 +43,17 @@ namespace AncientCorps
                 initialized = true;
                 return;
             };
-            Extension.loots.RandomElement().root.Generate().ForEach(delegate (Thing t)
+            for (int i = 0; i < Extension.countRange.RandomInRange; i++)
             {
-                if (t.Spawned)
+                Extension.loots.RandomElement().root.Generate().ForEach(delegate (Thing t)
                 {
-                    t.DeSpawn();
-                }
-                innerContainer.TryAddOrTransfer(t);
-            });
+                    if (t.Spawned)
+                    {
+                        t.DeSpawn();
+                    }
+                    innerContainer.TryAddOrTransfer(t);
+                });
+            }
             initialized = true;
         }
         public override void ExposeData()
@@ -64,6 +67,7 @@ namespace AncientCorps
         public SoundDef sound;
         public GraphicData openedGraphicdata;
         public float chanceNotSpawn = 0.25f;
+        public IntRange countRange = new IntRange(1, 3);
 
         public List<ThingSetMakerDef> loots = new List<ThingSetMakerDef>();
     }

@@ -346,7 +346,6 @@
 		</skillRequirements>
 	</RecipeDef>
 
-	
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="125mmTCBase">
 		<defName>Ammo_Ru125mmTCADV_Sabot</defName>
 		<label>125mm 3BM59 cannon shell (APFSDS)</label>
@@ -374,8 +373,8 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>420</damageAmountBase>
 			<soundExplode>MortarBomb_Explode</soundExplode>
-			<armorPenetrationSharp>690</armorPenetrationSharp>
-			<armorPenetrationBlunt>240000</armorPenetrationBlunt>
+			<armorPenetrationSharp>630</armorPenetrationSharp>
+			<armorPenetrationBlunt>120000</armorPenetrationBlunt>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
@@ -388,7 +387,7 @@
 				<fragXZAngleRange>-5~5</fragXZAngleRange>
 				<fragAngleRange>0~2</fragAngleRange>
 				<fragments>
-					<Fragment_APFSDS>10</Fragment_APFSDS>
+					<Fragment_APFSDS>8</Fragment_APFSDS>
 				</fragments>
 			</li>
 		</comps>

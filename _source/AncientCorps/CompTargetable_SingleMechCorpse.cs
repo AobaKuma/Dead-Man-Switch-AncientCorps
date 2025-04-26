@@ -53,7 +53,7 @@ namespace AncientCorps
 
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {
-            if (target.Thing is Corpse c && c.InnerPawn.RaceProps.IsMechanoid)
+            if (target.Thing is Corpse c && c.InnerPawn.RaceProps.IsMechanoid && c.InnerPawn.Faction == Faction.OfPlayer)
             {
                 return base.ValidateTarget(target.Thing, showMessages);
             }
