@@ -242,7 +242,7 @@
                 </Properties>
                 <AmmoUser>
                     <magazineSize>7</magazineSize>
-                    <reloadTime>6</reloadTime>
+                    <reloadTime>4.5</reloadTime>
                     <ammoSet>AmmoSet_23x75mmR</ammoSet>
                 </AmmoUser>
                 <FireModes>
@@ -378,8 +378,8 @@
                     </targetParams>
                 </Properties>
                 <AmmoUser>
-                    <magazineSize>50</magazineSize>
-                    <reloadTime>3.5</reloadTime>
+                    <magazineSize>75</magazineSize>
+                    <reloadTime>5</reloadTime>
                     <ammoSet>AmmoSet_762x54mmR</ammoSet>
                 </AmmoUser>
                 <FireModes>
