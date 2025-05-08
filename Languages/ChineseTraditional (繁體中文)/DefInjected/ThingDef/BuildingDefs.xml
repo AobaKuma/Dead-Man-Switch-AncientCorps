@@ -119,7 +119,9 @@
   <!-- EN: Centralized Command Core -->
   <DMSAC_GestaltEngine.label>中央司令核心</DMSAC_GestaltEngine.label>
   <!-- EN: A command core used to coordinate large-scaled automatroid squads, it have the ability to independently command and support an entire combined combat brigade without any further assist. -->
-  <DMSAC_GestaltEngine.description>一種用於指揮機兵部隊的大型控制核心，具有獨自指揮並保障一支合成作戰旅的能力。在過去的次世代戰爭發生前無數這樣的控制核心直接或間接的指揮著地球上近九成的正規軍隊，並在五個各據一方的AI指揮下讓地球上近半的陸地與海洋都淪為了它們的交戰區。</DMSAC_GestaltEngine.description>
+  <DMSAC_GestaltEngine.description>一種用於指揮機兵部隊的大型控制核心，具有獨自指揮並保障一支合成作戰旅的能力。在過去的次世代戰爭發生前無數這樣的控制核心直接或間接的指揮著地球上近九成的正規軍隊，並最終在五個各據一方的AI指揮下讓地球上近半的陸地與海洋都淪為了它們之間的交戰區。</DMSAC_GestaltEngine.description>
+  <!-- EN: disable local command -->
+  <DMSAC_GestaltEngine.comps.CompUsable.useLabel>關停司令核心</DMSAC_GestaltEngine.comps.CompUsable.useLabel>
   
   <!-- EN: pyrolysis plant -->
   <DMSAC_HeavyChem.label>裂解爐</DMSAC_HeavyChem.label>

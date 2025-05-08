@@ -119,7 +119,9 @@
   <DMSAC_GestaltEngine.label>中央司令核心</DMSAC_GestaltEngine.label>
   <!-- EN: A command core used to coordinate large-scaled automatroid squads, it have the ability to independently command and support an entire combined combat brigade without any further assist. -->
   <DMSAC_GestaltEngine.description>一种用于指挥机兵部队的大型控制核心，具有独自指挥并保障一支合成作战旅的能力。在过去的次世代战争发生前无数这样的控制核心直接或间接的指挥着地球上近九成的正规军队，并在五个各据一方的AI指挥下让地球上近半的陆地与海洋都沦为了它们的交战区。</DMSAC_GestaltEngine.description>
-
+  <!-- EN: disable local command -->
+  <DMSAC_GestaltEngine.comps.CompUsable.useLabel>关停司令核心</DMSAC_GestaltEngine.comps.CompUsable.useLabel>
+  
   <!-- EN: pyrolysis plant -->
   <DMSAC_HeavyChem.label>裂解炉</DMSAC_HeavyChem.label>
   <!-- EN: A heavy machinery that recycles all sort of organic pieces into chemfuel, will generates a lot of heat. -->
