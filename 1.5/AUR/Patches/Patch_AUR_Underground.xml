@@ -3,15 +3,13 @@
     <Operation Class="PatchOperationSequence">
         <operations>
             <li Class="PatchOperationAdd">
-                <xpath>
-                    Defs/ThingDef[defName="DMSAC_Building_LiftShaft"]</xpath>
+                <xpath>Defs/ThingDef[defName="DMSAC_Building_LiftShaft"]</xpath>
                 <value>
                     <thingClass>AncientMarket_Libraray.MapEntrance</thingClass>
                 </value>
             </li>
             <li Class="PatchOperationAdd">
-                <xpath>
-                    Defs/ThingDef[defName="DMSAC_Building_LiftShaft_Bottom"]</xpath>
+                <xpath>Defs/ThingDef[defName="DMSAC_Building_LiftShaft_Bottom"]</xpath>
                 <value>
                     <thingClass>AncientMarket_Libraray.MapExit</thingClass>
                 </value>

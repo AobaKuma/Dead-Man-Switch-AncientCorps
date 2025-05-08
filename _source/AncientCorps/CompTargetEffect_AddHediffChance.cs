@@ -4,7 +4,6 @@ using Verse.AI;
 
 namespace AncientCorps
 {
-
     public class CompProperties_TargetEffect_AddHediffChance : CompProperties
     {
         public HediffDef hediffDef;

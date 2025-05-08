@@ -19,24 +19,24 @@ namespace AncientCorps
         public static void Defcon_Rise()
         {
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
-            comp.LevelRise();
+            comp?.LevelRise();
         }
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
         private static void Site_SpawnPatrol()
         {
             var a = Current.Game.World.worldObjects.ObjectsAt(Current.Game.CurrentMap.Tile).First();
-            a.GetComponent<WorldObjectComp_PatrolSquad>()?.SpawnPatrol();
+            a?.GetComponent<WorldObjectComp_PatrolSquad>()?.SpawnPatrol();
         }
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
         private static void Defcon_SpawnCompany()
         {
-            Current.Game.GetComponent<GameComponent_RaidCompany>().RaidCompany(Find.CurrentMap, null);
+            Current.Game.GetComponent<GameComponent_RaidCompany>()?.RaidCompany(Find.CurrentMap, null);
         }
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
         public static void Defcon_Down()
         {
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
-            comp.LevelDown();
+            comp?.LevelDown();
         }
 
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]

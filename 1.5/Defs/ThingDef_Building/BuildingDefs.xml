@@ -319,9 +319,11 @@
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
       <modExtensions>
-        <li MayRequire="xmb.ancienturbanruins.mo" Class="AncientMarket_Libraray.ModExtension_Map">
+        <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Map">
           <maps>
             <li>DMSAC_UndergroundBaseA</li>
+            <li>DMSAC_UndergroundBaseB</li>
+            <li>DMSAC_UndergroundBaseC</li>
           </maps>
         </li>
       </modExtensions>
@@ -349,7 +351,7 @@
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
 		<modExtensions>
-      <li MayRequire="xmb.ancienturbanruins.mo" Class="AncientMarket_Libraray.ModExtension_Portal">
+      <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Portal">
         <distance>2</distance>
       </li>
     </modExtensions> 
@@ -1360,7 +1362,25 @@
         <compClass>CompHeatPusherPowered</compClass>
         <heatPerSecond>40</heatPerSecond>
       </li>
-      <!-- 到時候加個CompUseEffect來提供玩家把它關掉的功能。 -->
+      <li Class="CompProperties_Usable">
+        <useJob>TriggerObject</useJob>
+        <useLabel>disable local command</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <ignoreOtherReservations>true</ignoreOtherReservations>
+        <useDuration>1000</useDuration>
+        <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
+      </li>
+      <li Class="AncientCorps.CompProperties_UseEffect_DisableMechs">
+        <chance>0.25</chance>
+      </li>
+      <li Class="AncientCorps.CompProperties_UseEffect_LevelUpDefcon">
+        <chance>1</chance>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <delayTicks>500</delayTicks>
+        <spawnKilledLeavings>true</spawnKilledLeavings>
+        <effecterDef>MechbandBuildingDestroyed</effecterDef>
+      </li>
     </comps>
   </ThingDef>
 

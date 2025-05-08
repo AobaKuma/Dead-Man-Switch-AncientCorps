@@ -292,6 +292,9 @@
         <bossgroupDef>DMS_Krepost</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>
+      <li Class="AncientCorps.CompProperties_UseEffect_LevelUpDefcon">
+        <chance>0.2</chance>
+      </li>
       <li Class="CompProperties_UseEffectDestroySelf">
         <delayTicks>750</delayTicks>
         <spawnKilledLeavings>true</spawnKilledLeavings>

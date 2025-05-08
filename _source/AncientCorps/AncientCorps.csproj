@@ -79,7 +79,9 @@
     <Compile Include="Boss\CompAbilityEffect_ActiveProtectionSystem.cs" />
     <Compile Include="CompTargetable_SingleMechCorpse.cs" />
     <Compile Include="CompTargetEffect_ResurrectMech.cs" />
-    <Compile Include="CompUseEffect_AddHediffChance.cs" />
+    <Compile Include="CompTargetEffect_AddHediffChance.cs" />
+    <Compile Include="CompUseEffect_DisableMechs.cs" />
+    <Compile Include="CompUseEffect_LevelUpDefcon.cs" />
     <Compile Include="Defcon\CompanyDef.cs" />
     <Compile Include="BaseGen\CompBuildingExtraRenderer.cs" />
     <Compile Include="Defcon\GameComponent_RaidCompany.cs" />

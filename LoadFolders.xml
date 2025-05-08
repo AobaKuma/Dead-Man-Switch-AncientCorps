@@ -4,7 +4,7 @@
 	<v1.5>
 		<li>/</li>
 		<li>1.5</li>
-		<li IfModActive="xmb.ancienturbanruins.mo">1.5/AUR</li>
+		<li IfModActive="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam">1.5/AUR</li>
 		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.5/CE</li>		
 	</v1.5>
 </loadFolders>

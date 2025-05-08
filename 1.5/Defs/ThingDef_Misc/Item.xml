@@ -45,6 +45,7 @@
       <li Class="CompProperties_Usable">
         <useJob>UseItem</useJob>
         <useLabel>Analyzing facility intel</useLabel>
+        <showUseGizmo>true</showUseGizmo>
         <useDuration>900</useDuration>
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
@@ -67,6 +68,7 @@
         <useJob>UseItem</useJob>
         <useLabel>Analyzing facility intel</useLabel>
         <useDuration>120</useDuration>
+        <showUseGizmo>true</showUseGizmo>
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
       <li Class="CompProperties_UseEffectGiveQuest">
