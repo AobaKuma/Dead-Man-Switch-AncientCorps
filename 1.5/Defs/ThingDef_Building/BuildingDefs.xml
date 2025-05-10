@@ -378,7 +378,7 @@
     <fillPercent>0</fillPercent>
     <passability>Impassable</passability>
 		<modExtensions>
-      <li MayRequire="xmb.ancienturbanruins.mo" Class="AncientMarket_Libraray.ModExtension_Portal">
+      <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Portal">
         <distance>2</distance>
       </li>
     </modExtensions> 

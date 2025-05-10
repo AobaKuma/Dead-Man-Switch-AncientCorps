@@ -4,20 +4,20 @@
     <defName>DMSAC_Structure_Olive</defName>
     <label>olive</label>
     <color>(102, 105, 99)</color>
-    <displayOrder>100</displayOrder>
+    <displayOrder>999</displayOrder>
   </ColorDef>
 
   <ColorDef ParentName="StructureColorBase">
     <defName>DMSAC_Structure_Green</defName>
     <label>teal</label>
     <color>(95, 94, 87)</color>
-    <displayOrder>101</displayOrder>
+    <displayOrder>999</displayOrder>
   </ColorDef>
 
   <ColorDef ParentName="StructureColorBase">
     <defName>DMSAC_Structure_Rust</defName>
     <label>rust red</label>
     <color>(107, 97, 97)</color>
-    <displayOrder>102</displayOrder>
+    <displayOrder>999</displayOrder>
   </ColorDef>
 </Defs>
