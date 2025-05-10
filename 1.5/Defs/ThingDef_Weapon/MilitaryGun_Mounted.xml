@@ -35,6 +35,7 @@
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>10</muzzleFlashScale>
 				<consumeFuelPerShot>1</consumeFuelPerShot>
+                <hasStandardCommand>true</hasStandardCommand>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
