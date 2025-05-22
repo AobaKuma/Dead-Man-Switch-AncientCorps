@@ -9,6 +9,7 @@
 			<li>Designator_Deconstruct</li>
 		</specialDesignatorClasses>
 	</DesignationCategoryDef> -->
+  
   <ThingDef ParentName="BuildingBase" Name="DMSAC_BaseBuilding" Abstract="true">
 		<thingClass>Building</thingClass>
 		<category>Building</category>
@@ -376,6 +377,7 @@
 		<size>(9,9)</size>
     <ignoreConfigErrors>true</ignoreConfigErrors>
     <fillPercent>0</fillPercent>
+    <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
 		<modExtensions>
       <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Portal">
