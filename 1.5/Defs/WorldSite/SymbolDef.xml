@@ -576,13 +576,6 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Building_RoadBlock_Lightgray_West</defName>
-    <thing>DMSAC_Building_RoadBlock</thing>
-    <color>Structure_GrayLight</color>
-    <rotation>West</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
     <defName>DMSAC_Building_FuelBarrel</defName>
     <thing>DMSAC_Building_FuelBarrel</thing>
   </KCSG.SymbolDef>
@@ -599,12 +592,6 @@
     <rotation>East</rotation>
   </KCSG.SymbolDef>
 
-  <KCSG.SymbolDef>
-    <defName>DMSAC_Building_RoadBlock_Lightgray_South</defName>
-    <thing>DMSAC_Building_RoadBlock</thing>
-    <color>Structure_GrayLight</color>
-    <rotation>South</rotation>
-  </KCSG.SymbolDef>
   
   <KCSG.SymbolDef>
     <defName>DMSAC_Building_BarrierGate_South</defName>
@@ -613,14 +600,14 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Building_RoadBlock_West</defName>
+    <defName>DMSAC_Building_RoadBlock_East</defName>
     <thing>DMSAC_Building_RoadBlock</thing>
-    <rotation>West</rotation>
+    <rotation>East</rotation>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>DMSAC_Cargo_West</defName>
-    <thing>DMSAC_Cargo</thing>
+    <defName>DMSAC_Building_RoadBlock_West</defName>
+    <thing>DMSAC_Building_RoadBlock</thing>
     <rotation>West</rotation>
   </KCSG.SymbolDef>
 
@@ -654,6 +641,12 @@
     <thing>Wall</thing>
     <stuff>Tungsteel</stuff>
     <color>DMSAC_Structure_Green</color>
+  </KCSG.SymbolDef>
+
+  <KCSG.SymbolDef>
+    <defName>DMSAC_Cargo_West</defName>
+    <thing>DMSAC_Cargo</thing>
+    <rotation>West</rotation>
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
