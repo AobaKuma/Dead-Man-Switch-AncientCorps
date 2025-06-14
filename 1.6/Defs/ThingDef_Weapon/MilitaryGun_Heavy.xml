@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- DMS_KordMachineGun -->
+	<ThingDef ParentName="DMS_AutomatroidHeavyGun">
+		<defName>DMS_KordMachineGun</defName>
+		<label>Kord Machinegun</label>
+		<description>A reliable standard-issue machine gun, capable of effectively penetrating the armor of most small to medium-sized targets and inflicting suppression during long-range engagements.</description>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+			<li>LongShots</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>DMS_KordMachineGun</li>
+			<li>DMS_MechWeaponHeavy</li>
+			<li>A_SuppressWeaponHeavy</li>
+			<li>A_MG_Heavy</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_Kord</texPath>
+			<drawSize>1.75</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<Mass>14.50</Mass>
+			<RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>PrecisionRifling</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Tungsteel>90</Tungsteel>
+			<ComponentStamped>5</ComponentStamped>		
+		</costList>	
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_DMS_HeavyMachineGun</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>32.9</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>5</burstShotCount>
+				<soundCast>DMS_MachineGunHeavy_Shot</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>1</drawSize>
+				<offsets>
+					<li>(0.9,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>StandardAutomatroid</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!--KPV重機槍-->
+	<ThingDef ParentName="DMS_AutomatroidHeavyGun">
+		<defName>DMS_VladimirovMachineGun</defName>
+		<label>Vladimirov HMG</label>
+		<description>A large-caliber heavy machine gun named after its designer, deployed as a standard weapon by colonial fleets in full-scale wars against various interstellar threats. It ensures that automatroid units can deliver effective and immediate lethal damage to most hostile lifeforms and machines.</description>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+			<li>LongShots</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>DMS_VladimirovMachineGun</li>
+			<li>DMS_MechWeaponHeavy</li>
+			<li>A_SuppressWeaponHeavy</li>
+			<li>A_MG_Heavy</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_KPV</texPath>
+			<drawSize>1.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<statBases>
+			<WorkToMake>70000</WorkToMake>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.87</AccuracyMedium>
+			<AccuracyLong>0.80</AccuracyLong>
+			<Mass>20.50</Mass>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>PrecisionRifling</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Tungsteel>115</Tungsteel>
+			<ComponentStamped>6</ComponentStamped>		
+		</costList>	
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_DMS_VladimirovMG</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>33.9</range>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<burstShotCount>6</burstShotCount>
+				<soundCast>DMS_AC_Shot_MachineGunSound</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>11</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>1.25</drawSize>
+				<offsets>
+					<li>(1,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>HeavyAutomatroid</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_DMS_VladimirovMG</defName>
+		<label>vladimirov HMG bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>24</damageAmountBase>
+			<stoppingPower>4</stoppingPower>
+			<speed>75</speed>
+		</projectile>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMS_LaunchDust_Grenade</effecterDef>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--航空機砲-->
+	<ThingDef ParentName="DMS_AutomatroidHeavyGun">
+		<defName>DMS_AerialAutocannon</defName>
+		<label>Aerial autocannon</label>
+		<description>An automatroid weapon based on a lightweight aircraft cannon, adapted to fire 30mm cannon rounds. While it is versatile across multiple platforms, overheating issues limit its ground use to only burst shots.</description>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+			<li>LongShots</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>DMS_AerialAutocannon</li>
+			<li>DMS_MechWeaponHeavy</li>
+			<li>A_SuppressWeaponHeavy</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_Gsh30_1</texPath>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.8</AccuracyMedium>
+			<AccuracyLong>0.7</AccuracyLong>
+			<Mass>16.21</Mass>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.12</MoveSpeed>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>DMS_EquipmentHeavy</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Tungsteel>95</Tungsteel>
+			<ComponentStamped>5</ComponentStamped>		
+		</costList>	
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
+				<warmupTime>2.8</warmupTime>
+				<range>36.9</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.15,0.75)</drawSize>
+				<offsets>
+					<li>(1.25,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>HeavyAutomatroid</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!--Gsh-30/6-->
+	<ThingDef ParentName="DMS_AutomatroidHeavyGun">
+		<defName>DMS_Gsh30Gatlinggun</defName>
+		<label>Gsh30-6 "Flogger"</label>
+		<description>A lightweight multi-barrel gatling gun originally designed for aircraft, modified for ground-based platforms. It boasts an extremely high rate of fire for rapid enemy suppression, but the lack of an effective rapid cooling system prevents it from sustaining fire for extended periods.</description>
+		<weaponTags>
+			<li>DMS_VehicleWeapon</li>
+			<li>H_Gatling30mm</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_Gsh30_6</texPath>
+			<drawSize>2.75</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>140</Mass>
+			<WorkToMake>100000</WorkToMake>
+			<AccuracyTouch>0.58</AccuracyTouch>
+			<AccuracyShort>0.48</AccuracyShort>
+			<AccuracyMedium>0.48</AccuracyMedium>
+			<AccuracyLong>0.38</AccuracyLong>
+			<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<researchPrerequisites>
+				<li>MultibarrelWeapons</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Tungsteel>240</Tungsteel>
+			<ComponentStamped>15</ComponentStamped>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>DMS.Verb_ArcSprayProjectile</verbClass>
+				<sprayWidth>3</sprayWidth>
+				<sprayArching>5</sprayArching>
+				<sprayThicknessCells>3</sprayThicknessCells>
+				<sprayNumExtraCells>24</sprayNumExtraCells> <!-- 要大於或等於發射次數 -->
+				<consumeFuelPerBurst>1</consumeFuelPerBurst>
+
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DMS_Bullet_CIWS</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<minRange>8</minRange>
+				<range>36.9</range>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<burstShotCount>18</burstShotCount>
+				<soundCast>Shot_TurretSniper</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.5,1.25)</drawSize>
+				<offsets>
+					<li>(1.36,0)</li>
+				</offsets>
+				<isAlternately>false</isAlternately>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>HeavyAutomatroid</EquippableDef>
+			</li>
+			<li Class="CombatExtended.GunDrawExtension" MayRequire="ceteam.combatextended">
+				<CasingAngleOffset>110</CasingAngleOffset>
+				<CasingOffset>(-0.5,-0.5)</CasingOffset>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!--正義法槌-->
+	<ThingDef ParentName="DMS_AutomatroidHeavyGun">
+		<defName>DMS_Gun_JusticeGavel</defName>
+		<label>2A46M "Justice Gavel"</label>
+		<description>A semi-automatic anti-tank cannon carried by ultra-heavy automatrons, known for its simple and reliable structure. It is widely used on various armored platforms to engage heavily armed and armored targets such as tanks and heavy mechs.</description>
+		<weaponTags>
+			<li>DMS_Tarbosaurus_Gun</li>
+			<li>NoSwitch</li>
+			<li>DMS_MechWeaponUltraHeavy</li>
+			<li>DMS_MechWeaponTankGun</li>
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_2A46</texPath>
+			<drawSize>4</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>265</Mass>
+			<WorkToMake>120000</WorkToMake>
+		    <AccuracyTouch>0.89</AccuracyTouch>
+		    <AccuracyShort>1.00</AccuracyShort>
+		    <AccuracyMedium>1.00</AccuracyMedium>
+		    <AccuracyLong>0.99</AccuracyLong>
+		    <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>DMS_Synthroid</li>
+				<li>DMS_EquipmentHeavy</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Tungsteel>350</Tungsteel>
+			<ComponentStamped>20</ComponentStamped>
+      		<ReinforcedBarrel>3</ReinforcedBarrel>
+      		<ComponentFireControl>2</ComponentFireControl>
+		</costList>
+		<comps Inherit="False">
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Styleable"/>
+		</comps>
+		<verbs>
+			<li>
+				<hasStandardCommand>true</hasStandardCommand>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>DMS_Bullet_JusticeGavel</defaultProjectile>
+				<requireLineOfSight>true</requireLineOfSight>
+				<warmupTime>6</warmupTime>
+				<minRange>7</minRange>
+				<range>58</range>
+				<ai_AvoidFriendlyFireRadius>6.9</ai_AvoidFriendlyFireRadius>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>DMS_Shot_JusticeGavel</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>30</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<forcedMissRadius>0.25</forcedMissRadius>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(5,5)</drawSize>
+				<offsets>
+					<li>(2.1,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>UltraHeavyAutomatroid</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>DMS_Bullet_JusticeGavel</defName>
+		<label>armor piercing sabot</label>
+		<thingClass>DMS.Projectile_ConeExplosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectiles/Ammo_3BM60</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<explosionDelay>1</explosionDelay>
+			<soundExplode>Explosion_Rocket</soundExplode>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>225</damageAmountBase>
+			<armorPenetrationBase>1.5</armorPenetrationBase>
+			<stoppingPower>10</stoppingPower>
+			<speed>110</speed>
+			<arcHeightFactor>0.1</arcHeightFactor>
+			<shadowSize>0.6</shadowSize>
+		</projectile>
+		<modExtensions>
+			<li Class="DMS.ExplosiveExtension">
+				<damage>Bullet</damage>
+				<damageAmount>98</damageAmount>
+				<armorPen>1.1</armorPen>
+				<preExplosionOffset>4</preExplosionOffset>
+				<range>19</range>
+				<swayAngle>8</swayAngle>
+				<doVisualEffects>false</doVisualEffects>
+				<effecterDef>DMS_ConeExplosion</effecterDef>
+			</li>
+		</modExtensions>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMS_LaunchDust</effecterDef>
+			</li>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMSAC_SabotShell</effecterDef>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1.1</explosiveRadius>
+				<explosiveDamageType>Bullet</explosiveDamageType>
+				<armorPenetrationBase>0.4</armorPenetrationBase>
+				<damageAmountBase>150</damageAmountBase>
+				<explodeOnDestroyed>true</explodeOnDestroyed>
+				<explodeOnKilled>true</explodeOnKilled>
+				<doSoundEffects>false</doSoundEffects>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

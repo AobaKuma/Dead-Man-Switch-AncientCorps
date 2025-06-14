@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <BackstoryDef>
+    <defName>AMC_CivilianChild01</defName>
+    <title>produced child</title>
+    <titleShort>vat kid</titleShort>
+    <description>[PAWN_nameDef] is a baseliner human being mass-produced through artificial embryos. Although the humans produced by this technology are not much different from baseline humans, their immune systems have inevitable flaws. [PAWN_pronoun] spent his childhood receiving military training and education alongside thousands of his similar-looking brothers and sisters, preparing for the all-out war they would be involved in years later.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>AMCCommon</li>
+      <li>FleetChild</li>
+    </spawnCategories>
+    <forcedTraits>
+      <Delicate>0</Delicate>
+    </forcedTraits>
+  </BackstoryDef>
+</Defs>

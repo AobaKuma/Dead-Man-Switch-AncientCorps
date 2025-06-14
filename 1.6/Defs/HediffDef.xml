@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DMSAC_StructuralDamage</defName>
+    <label>structural damage</label>
+    <labelNoun>A permanent structural damage on mechanical part.</labelNoun>
+    <description>A permanent structural damage to a mechanical part. these are caused by fatal damage or long-term service, which will affect the operation and are difficult to repair from the outside. it can only be effectively repaired through thorough factory disassembly. But usually it's more cost-effective to produce a new one.</description>
+    <spawnThingOnRemoved>DMS_ChunkSlag_Old</spawnThingOnRemoved>
+    <defaultLabelColor>(99,89,89)</defaultLabelColor>
+    <hediffGivers>
+      <li Class="DMS.HediffGiver_RandomSilent">
+        <mtbDays>16</mtbDays>
+        <hediff>ElectricalBurn</hediff>
+        <partsToAffect>
+          <li>DMS_Battery</li>
+          <li>DMS_ChestBrain</li>
+          <li>DMS_CompactSenser</li>
+          <li>DMS_HeadRadar</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+    <stages>
+      <li>
+        <statOffsets />
+      </li>
+    </stages>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.8</partEfficiency>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+    <comps MayRequire="V1024.EBFramework">
+      <li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust" MayRequire="V1024.EBFramework">
+        <scaleAdjustment>-0.1</scaleAdjustment>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

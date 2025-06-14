@@ -28,17 +28,17 @@
   <DMSAC_Level_Down_Desc>根據近期觀察的活動變化，{0}指揮部下降了其內部的警戒等級，現在它們的警戒等級為</DMSAC_Level_Down_Desc>
   
   <!-- EN: Level O   {0} retained a minimum number of facility patrols and recalled the medium-sized automatroids in the unit and returned them to their bases for maintenance. -->
-  <DMSAC_Level.0>O級警戒:   {0}僅保留最低限度的設施巡邏編制，並解散了部隊中的中型機兵返回駐地進行檢修。</DMSAC_Level.0>
+  <DMSAC_Level.0>解除警戒:   {0}僅保留最低限度的設施巡邏編制，並解散了部隊中的中型機兵返回駐地進行檢修。</DMSAC_Level.0>
   <!-- EN: Level I   {0} deployed all-weather patrols between its ground facilities to shorten the reinforcement intervals for attacked facilities, and deployed medium-sized automatroids in the patrol teams. -->
-  <DMSAC_Level.1>I級警戒:   {0}在其地面設施之間部屬了全天候的巡邏部隊使受襲設施的增援間隔縮短，並且在巡邏隊伍配置中型機兵。</DMSAC_Level.1>
+  <DMSAC_Level.1>V級警戒:   {0}在其地面設施之間部屬了全天候的巡邏部隊使受襲設施的增援間隔縮短，並且在巡邏隊伍配置中型機兵。</DMSAC_Level.1>
   <!-- EN: Level II  Based on the current situation, {0} will restart some of its large automatroids and mobilize them at any time, and organize a small number of armored platoons as a task force to reinforce ground facilities. -->
-  <DMSAC_Level.2>II級警戒:  根據近期當前局勢，{0}將部分的大型機兵重啟並隨時調動，並編制少量的裝甲排作為對地面設施增援的特遣部隊。</DMSAC_Level.2>
+  <DMSAC_Level.2>IV級警戒:  根據近期當前局勢，{0}將部分的大型機兵重啟並隨時調動，並編制少量的裝甲排作為對地面設施增援的特遣部隊。</DMSAC_Level.2>
   <!-- EN: Level III Due to the recent tense situation, ultra-heavy automatroids have been put on combat readiness and deployed in various areas to provide reinforcement at any time. {0} will carry out armed expulsion of neighboring illegal military sites in accordance with the Colonial Fleet Convention's alert status regulations. -->
   <DMSAC_Level.3>III級警戒: 由於近期的緊張局勢，超重型機兵已進入戰備狀態並部屬在各區域隨時增援，{0}將根據殖民艦隊公約的戒備狀態條例對鄰近的非法軍事站點進行武裝驅離。</DMSAC_Level.3>
   <!-- EN: Level IV  {0} confirmed that the First Hague Convention was no longer applicable to the current situation and issued a formal declaration of war in accordance with the Third Hague Convention. \n\nIn addition, according to Article 2 of the Second Hague Convention, civilians in non-occupied areas who take up arms against {0} forces will be considered combatants as defined by the laws of war. -->
-  <DMSAC_Level.4>IV級警戒:  {0}確認海牙第一公約已不再適用於當前狀況，並根據海牙第三公約進行正式的宣戰佈告。\n\n此外根據海牙第二公約第二條，處於未佔領區拿起武器對抗{0}部隊的平民將被視為戰爭法所定義的戰鬥員。</DMSAC_Level.4>
+  <DMSAC_Level.4>II級警戒:  {0}確認海牙第一公約已不再適用於當前狀況，並根據海牙第三公約進行正式的宣戰佈告。\n\n此外根據海牙第二公約第二條，處於未佔領區拿起武器對抗{0}部隊的平民將被視為戰爭法所定義的戰鬥員。</DMSAC_Level.4>
   <!-- EN: Level V   In accordance with the Colonial Fleet Convention's alert regulations, {0} has determined that conditions have been met to warrant an offensive and the mobilization of a heavy armored brigade to conduct the operation. \n\n{0} will occupy and take over identified hostile-controlled areas in compliance with international humanitarian law and the Rome Statute, and strike back at hostile forces that attack facilities in a proportional manner. -->
-  <DMSAC_Level.5>V級警戒:   根據殖民艦隊公約的戒備狀態條例，{0}確認當前狀況已達到必須展開進攻並調動重型裝甲旅來執行作戰的合規條件。\n\n{0}將在遵守國際人道法和《羅馬規約》條例的前提下對已識別的敵對控制區進行佔領與接管，並根據比例原則對襲擊設施的敵對勢力予以對等打擊。</DMSAC_Level.5>
+  <DMSAC_Level.5>I級警戒:   根據殖民艦隊公約的戒備狀態條例，{0}確認當前狀況已達到必須展開進攻並調動重型裝甲旅來執行作戰的合規條件。\n\n{0}將在遵守國際人道法和《羅馬規約》條例的前提下對已識別的敵對控制區進行佔領與接管，並根據比例原則對襲擊設施的敵對勢力予以對等打擊。</DMSAC_Level.5>
 
   <!-- EN: Hacking failed -->
   <DMSAC_HackFailed>駭入失敗</DMSAC_HackFailed>

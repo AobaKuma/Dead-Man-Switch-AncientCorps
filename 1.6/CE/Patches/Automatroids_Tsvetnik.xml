@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========== DMS_Mech_Tsvetnik Patches ========== -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]/statBases</xpath>
+				<value>
+					<CarryWeight>85</CarryWeight>
+					<CarryBulk>150</CarryBulk>
+					<AimingAccuracy>0.95</AimingAccuracy>
+					<MeleeDodgeChance>0.05</MeleeDodgeChance>
+					<MeleeCritChance>0.075</MeleeCritChance>
+					<MeleeParryChance>0.18</MeleeParryChance>
+					<MaxHitPoints>200</MaxHitPoints>
+					<NightVisionEfficiency>1.25</NightVisionEfficiency>
+					<ReloadSpeed>1.4</ReloadSpeed>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>24</ArmorRating_Blunt>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>18</ArmorRating_Sharp>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]/statBases/ArmorRating_Heat</xpath>
+				<value>
+					<ArmorRating_Heat>0.3</ArmorRating_Heat>
+				</value>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]/comps</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]</xpath>
+					<value>
+						<comps />
+					</value>
+				</nomatch>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]/comps</xpath>
+				<value>
+					<li Class="CombatExtended.CompProperties_ArmorDurability">
+						<Durability>800</Durability>
+						<Regenerates>true</Regenerates>
+						<RegenInterval>1250</RegenInterval>
+						<RegenValue>5</RegenValue>
+						<Repairable>true</Repairable>
+						<RepairIngredients>
+							<Steel>10</Steel>
+						</RepairIngredients>
+						<RepairTime>300</RepairTime>
+						<RepairValue>200</RepairValue>
+						<CanOverHeal>true</CanOverHeal>
+						<MaxOverHeal>135</MaxOverHeal>
+						<MinArmorPct>0.6</MinArmorPct>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Tsvetnik"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>QuadrupedTall</bodyShape>
+					</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/PawnKindDef[defName="DMS_Mech_Tsvetnik"]</xpath>
+				<value>
+					<li Class="CombatExtended.LoadoutPropertiesExtension">
+						<sidearms>
+							<li>
+								<generateChance>0.25</generateChance>
+								<sidearmMoney>
+									<min>500</min>
+									<max>1250</max>
+								</sidearmMoney>
+								<weaponTags>
+									<li>A_Pistol</li>
+								</weaponTags>
+								<magazineCount>
+									<min>2</min>
+									<max>5</max>
+								</magazineCount>
+							</li>
+						</sidearms>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[defName="DMS_Mech_Tsvetnik"] </xpath>
+				<value>
+					<inventoryOptions>
+						<skipChance>0</skipChance>
+						<subOptionsChooseOne>
+							<li>
+								<choiceChance>40</choiceChance>
+								<thingDef>Shell_HighExplosive</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+							<li>
+								<choiceChance>15</choiceChance>
+								<thingDef>Shell_HighExplosive_HFuzed</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+							<li>
+								<choiceChance>30</choiceChance>
+								<thingDef>Shell_Incendiary</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+							<li>
+								<choiceChance>10</choiceChance>
+								<thingDef>Shell_EMP</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+							<li>
+								<choiceChance>5</choiceChance>
+								<thingDef>Shell_Toxic</thingDef>
+								<countRange>
+									<min>16</min>
+									<max>24</max>
+								</countRange>
+							</li>
+						</subOptionsChooseOne>
+					</inventoryOptions>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

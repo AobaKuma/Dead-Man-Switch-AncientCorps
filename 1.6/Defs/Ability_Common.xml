@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- 通用的技能，比如各種發射物 -->
+	<AbilityDef>
+		<defName>DMSAC_APS</defName>
+		<label>APS</label>
+		<description>Activate the Active Defense System to intercept nearby low-speed and explosive projectiles in a short period of time.</description>
+		<iconPath>UI/Ability/DMSAC_APS</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>16000~17200</cooldownTicksRange>
+		<verbProperties>
+			<defaultCooldownTime>1</defaultCooldownTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<onlyManualCast>false</onlyManualCast>
+			<range>18</range>
+			<warmupTime>0.25</warmupTime>
+			<drawAimPie>false</drawAimPie>
+			<violent>false</violent>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="AncientCorps.CompProperties_ActiveProtectionSystem">
+				<Radius>16</Radius>
+				<chanceToFail>0.97</chanceToFail>
+				<spawnLeaving>Filth_Ash</spawnLeaving>
+				<fleckDef>DMS_SplashedPieces_Center</fleckDef>
+				<interceptedFleckDef>DMS_Fleck_RocketFlame</interceptedFleckDef>
+				<soundIntercepted>Explosion_Thump</soundIntercepted>
+				<interceptThings>
+					<li>Bullet_CataphractCentipede_FY</li>
+				</interceptThings>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>DMSAC_GrenadeLauncher</defName>
+		<label>shock grenade</label>
+		<description>Launch a shock grenade from underbarrel launcher, it is effective to stun enemy in close range.</description>
+		<iconPath>UI/Ability/DMSAC_UBGL</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<verbProperties>
+			<ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+			<defaultCooldownTime>2</defaultCooldownTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<onlyManualCast>true</onlyManualCast>
+			<range>24.9</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<requireLineOfSight>true</requireLineOfSight>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>DMS_Bullet_FlashBang</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>DMSAC_ShieldLauncher</defName>
+		<label>shield projector deploy</label>
+		<description>Launch a shield projector shell intercept incoming munitions.</description>
+		<iconPath>UI/Ability/Smoke</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>30000~36000</cooldownTicksRange>
+		<charges>6</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<defaultCooldownTime>1</defaultCooldownTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<onlyManualCast>true</onlyManualCast>
+			<range>19.9</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>Mortar_LaunchA</soundCast>
+			<requireLineOfSight>false</requireLineOfSight>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<neverTargetHostileFaction>true</neverTargetHostileFaction>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>DMSAC_Bullet_ShieldProjectorShell</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>DMSAC_ATGMLauncher</defName>
+		<label>anti tank missile</label>
+		<description>Launch an anti tank missile.</description>
+		<iconPath>UI/Ability/DMSAC_ATGM</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>60000~72000</cooldownTicksRange>
+		<charges>2</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<minRange>9.9</minRange>
+			<range>29.9</range>
+			<warmupTime>4</warmupTime>
+			<ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
+			<ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+			<ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+			<aimingLineMote>DMS_Missile_Aim</aimingLineMote>
+			<aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+			<aimingTargetMote>DMS_Missile_Target</aimingTargetMote>
+			<soundAiming>DMS_Ability_LockOn</soundAiming>
+			<onlyManualCast>false</onlyManualCast>
+			<soundCast>DMS_AC_Shot_GuidedMissile</soundCast>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+			<requireLineOfSight>true</requireLineOfSight>
+			<beamTargetsGround>true</beamTargetsGround>
+			<canGoWild>false</canGoWild>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>DMSAC_Bullet_9M133Missile</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>DMSAC_Rocket</defName>
+		<label>rocket barrage</label>
+		<description>Launch a rocket barrage to a specific direction.</description>
+		<iconPath>UI/Ability/DMSAC_RocketPod</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<warmupStartSound>TurretAcquireTarget</warmupStartSound>
+		<showOnCharacterCard>true</showOnCharacterCard>
+		<cooldownTicksRange>60000~72000</cooldownTicksRange>
+		<verbProperties>
+			<ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+			<ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+			<verbClass>DMS.Verb_CastAbilityArcSprayProjectile</verbClass>
+			<defaultProjectile>DMSAC_Bullet_S8Rocket</defaultProjectile>
+			<warmupTime>3</warmupTime>
+			<minRange>19.9</minRange>
+			<range>34.9</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<sprayWidth>6</sprayWidth>
+			<sprayArching>10</sprayArching>
+			<sprayThicknessCells>1</sprayThicknessCells>
+			<sprayNumExtraCells>30</sprayNumExtraCells>
+			<burstShotCount>7</burstShotCount>
+			<soundCast>RocketswarmLauncher_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+			<forcedMissRadius>4</forcedMissRadius>
+		</verbProperties>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>DMSAC_ExplosiveFlamer</defName>
+		<label>explosive flamer</label>
+		<description>Ignite the contained gunpowder, causing it to explode and eject highly flammable fuel, creating a long-range flaming blast.</description>
+		<iconPath>UI/Ability/DMSAC_FlameBlast</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>54000~60000</cooldownTicksRange>
+		<charges>1</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+      		<verbClass>Verb_CastAbility</verbClass>
+			<onlyManualCast>false</onlyManualCast>
+			<minRange>4.9</minRange>
+			<range>24.9</range>
+			<warmupTime>2</warmupTime>
+			<soundCast>DMS_AC_Shot_GuidedMissile</soundCast>
+			<requireLineOfSight>true</requireLineOfSight>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+		<li Class="CompProperties_AbilityFireSpew">
+			<range>29.9</range>
+			<lineWidthEnd>5</lineWidthEnd>
+			<filthDef>Filth_FlammableBile</filthDef>
+			<effecterDef>DMSAC_Fire_Blast</effecterDef>
+			<canHitFilledCells>true</canHitFilledCells>
+		</li>
+		</comps>
+	</AbilityDef>
+</Defs>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SitePartDef>
+    <defName>DMSAC_Graveyard</defName>
+    <label>Automatroid graveyard</label>
+    <description>An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid garrison.</description>
+    <siteTexture>UI/Icons/Graveyard_Site</siteTexture>
+    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <expandingIconTexture>UI/Icons/Graveyard_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(150, 1, 150)</minMapSize>
+    <tags>
+      <li>DMSAC_Graveyard</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_Graveyard</defName>
+    <linkWithSite>DMSAC_Graveyard</linkWithSite>
+    <order>470</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_Graveyard_A</li>
+        <li>DMSAC_Graveyard_B</li>
+        <li>DMSAC_Graveyard_C</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <filthTypes>
+        <li>Filth_Dirt</li>
+        <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
+      </filthTypes>
+      <symbolResolvers>
+        <li>kcsg_storagezone</li>
+        <li>kcsg_randomdamage</li>
+        <li>kcsg_randomfilth</li>
+        <li>kcsg_randomterrainremoval</li>
+        <li>kcsg_randomroofremoval</li>
+        <li>kcsg_randomitemremoval</li>
+      </symbolResolvers>
+    </genStep>
+  </GenStepDef>
+
+  <SitePartDef>
+    <defName>DMSAC_Checkpoint</defName>
+    <label>military checkpoint</label>
+    <description>A military checkpoint on the path, also serves as a transit station for the automatroid patrols, several automatroid garrisons are protecting this position.</description>
+    <siteTexture>UI/Icons/Checkpoint_Site</siteTexture>
+    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <expandingIconTexture>UI/Icons/Checkpoint_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(100, 1, 100)</minMapSize>
+    <tags>
+      <li>DMSAC_Checkpoint</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_Checkpoint</defName>
+    <linkWithSite>DMSAC_Checkpoint</linkWithSite>
+    <order>470</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_Checkpoint_A</li>
+        <li>DMSAC_Checkpoint_B</li>
+        <li>DMSAC_Checkpoint_C</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <filthTypes>
+        <li>Filth_Dirt</li>
+        <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
+      </filthTypes>
+      <symbolResolvers>
+        <li>kcsg_storagezone</li>
+        <li>kcsg_randomitemremoval</li>
+      </symbolResolvers>
+    </genStep>
+  </GenStepDef>
+
+  <SitePartDef>
+    <defName>DMSAC_Garage</defName>
+    <label>field maintenance base</label>
+    <description>A temporary field repair workshop and logistic center to offer maintenance for frontline operations. maintenance stations like this will constantly change locations as the Corps division moves their task forces.\n\nDepending on their importance, some long-term maintenance stations will have reinforced fortifications and garrisons.</description>
+    <siteTexture>UI/Icons/Station_Site</siteTexture>
+    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <expandingIconTexture>UI/Icons/Station_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>ThreatBig</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(150, 1, 150)</minMapSize>
+    <tags>
+      <li>DMSAC_Garage</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_Garage</defName>
+    <linkWithSite>DMSAC_Garage</linkWithSite>
+    <order>470</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_Garage_A</li>
+        <li>DMSAC_Garage_B</li>
+        <li>DMSAC_Garage_C</li>
+        <li>DMSAC_Garage_D</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <filthTypes>
+        <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
+      </filthTypes>
+      <symbolResolvers>
+        <li>kcsg_storagezone</li>
+        <li>kcsg_randomitemremoval</li>
+      </symbolResolvers>
+    </genStep>
+  </GenStepDef>
+
+  
+  <SitePartDef>
+    <defName>DMSAC_FacilityEnterance</defName>
+    <label>underground facility</label>
+    <description>A ground entrance shaft to an underground complex, which may not be it's only exit, but the exterior of the shaft facility contains a large amount of military supplies waiting to be circulated.</description>
+    <siteTexture>UI/Icons/Enterance_Site</siteTexture>
+    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <expandingIconTexture>UI/Icons/Enterance_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>ThreatBig</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(150, 1, 150)</minMapSize>
+    <tags>
+      <li>DMSAC_FacilityEnterance</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_FacilityEnterance</defName>
+    <linkWithSite>DMSAC_FacilityEnterance</linkWithSite>
+    <order>470</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_FacilityEnterance_A</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <symbolResolvers>
+        <li>kcsg_storagezone</li>
+        <li>kcsg_randomitemremoval</li>
+      </symbolResolvers>
+    </genStep>
+  </GenStepDef>
+
+  
+  <SitePartDef>
+    <defName>DMSAC_LogisticTerminal</defName>
+    <label>logistic terminal</label>
+    <!-- 一個自動運行的前線物資終端站，透過自動砲塔與不間斷巡邏的機兵巡邏隊防守。這樣的小型終端站是為那些進行特遣任務的連級機兵部隊所供他們彈藥補充與回收受損的機兵。 -->
+    <description>An automatically operated frontline supply terminal, defended by automatic turrets and automatroid patrols. Such small terminals are used by company-level automatroid squads to replenish ammunition and recycle damaged automatroids.</description>
+    <siteTexture>UI/Icons/LogisticTerminal_Site</siteTexture>
+    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <expandingIconTexture>UI/Icons/LogisticTerminal_Icon</expandingIconTexture>
+    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(100, 1, 100)</minMapSize>
+    <tags>
+      <li>DMSAC_LogisticTerminal</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>DMSAC_LogisticTerminal</defName>
+    <linkWithSite>DMSAC_LogisticTerminal</linkWithSite>
+    <order>470</order>
+    <genStep Class="KCSG.GenStep_CustomStructureGen">
+      <fullClear>true</fullClear>
+      <structureLayoutDefs>
+        <li>DMSAC_LogisticTerminal_A</li>
+        <li>DMSAC_LogisticTerminal_B</li>
+        <li>DMSAC_LogisticTerminal_C</li>
+        <li>DMSAC_LogisticTerminal_D</li>
+        <li>DMSAC_LogisticTerminal_E</li>
+        <li>DMSAC_LogisticTerminal_F</li>
+        <li>DMSAC_LogisticTerminal_G</li>
+        <li>DMSAC_LogisticTerminal_H</li>
+        <li>DMSAC_LogisticTerminal_I</li>
+      </structureLayoutDefs>
+      <preventBridgeable>true</preventBridgeable>
+      <filthTypes>
+        <li>Filth_Dirt</li>
+        <li>Filth_Trash</li>
+        <li>Filth_RubbleBuilding</li>
+      </filthTypes>
+      <symbolResolvers>
+        <li>kcsg_storagezone</li>
+        <li>kcsg_randomitemremoval</li>
+      </symbolResolvers>
+      <scaleWithQuest></scaleWithQuest>
+    </genStep>
+  </GenStepDef>
+</Defs>

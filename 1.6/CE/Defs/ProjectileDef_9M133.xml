@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs MayNotRequire="rimthunder.core">
+	<!-- ================== Projectiles ================== -->
+	<ThingDef ParentName="BaseExplosiveBullet">
+		<defName>DMSAC_Bullet_StugnaATGM</defName>
+		<label>9M133 "Stugna" AntiTank missile</label>
+		<graphicData>
+			<texPath>Things/Projectiles/DMS_9M133Missile/projectile</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>650</damageAmountBase>
+			<speed>55</speed>
+			<soundAmbient>RocketPropelledLoop_Small</soundAmbient>
+			<armorPenetrationSharp>600</armorPenetrationSharp>
+			<armorPenetrationBlunt>117.3</armorPenetrationBlunt>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ProjectileFleck">
+				<FleckDatas>
+					<li>
+						<fleck>Fleck_CERocketFlame</fleck>
+						<emissionsPerTick>7</emissionsPerTick>
+						<flecksPerEmission>3</flecksPerEmission>
+						<scale>1.5</scale>
+						<cutoffTickRange>25~60</cutoffTickRange>
+						<originOffset>0.4</originOffset>
+					</li>
+					<li>
+						<fleck>Fleck_CERocketSmokeTrail</fleck>
+						<emissionsPerTick>1</emissionsPerTick>
+						<rotation>0~360</rotation>
+						<scale>3</scale>
+						<flecksPerEmission>1</flecksPerEmission>
+					</li>
+					<li>
+						<fleck>Fleck_CERocketSmoke</fleck>
+						<emissionsPerTick>2</emissionsPerTick>
+						<rotation>0~360</rotation>
+						<scale>2</scale>
+						<flecksPerEmission>1</flecksPerEmission>
+						<cutoffTickRange>25~60</cutoffTickRange>
+					</li>
+				</FleckDatas>
+			</li>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<damageAmountBase>80</damageAmountBase>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveRadius>4.0</explosiveRadius>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+				<explosionSound>MortarBomb_Explode</explosionSound>
+			</li>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Large>9</Fragment_Large>
+					<Fragment_Small>18</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

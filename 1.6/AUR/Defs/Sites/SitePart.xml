@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- <SitePartDef>
+    <defName>DMSAC_AUR_Graveyard</defName>
+    <label>Graveyard</label>
+    <description>An open graveyard that deposed numerous derelict automatroids by the Corps, they were often used by the local scavengers to be the source of parts to produce new or restored automatroids.</description>
+    <workerClass>AncientMarket_Libraray.SitePartWorker_CustomMap</workerClass>
+    <siteTexture>World/WorldObjects/DefaultSettlement</siteTexture>
+    <expandingIconTexture>Things/Icon/Block</expandingIconTexture>
+    <approachOrderString>Investigate {0}</approachOrderString>
+    <approachingReportString>Investigate {0}</approachingReportString>
+    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(120, 1, 120)</minMapSize>
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
+    <modExtensions>
+      <li Class="AncientMarket_Libraray.ModExtension_Map">
+        <maps>
+          <li>AM_Street_A</li>
+          <li>AM_Street_B</li>
+          <li>AM_Street_C</li>
+          <li>AM_Street_D</li>
+        </maps>
+      </li>
+    </modExtensions>
+  </SitePartDef> -->
+</Defs>

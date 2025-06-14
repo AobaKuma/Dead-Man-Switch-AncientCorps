@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseAutoTurretGun">
+		<defName>DMS_Krepost_KordMG</defName>
+		<label>Kord HMG turret</label>		
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_Kord_TurretGun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<description>heavy machine gun for mech soldier or infantry support platform.\n\nThis weapon is designed specially for mounted use, so only specific unit can equip it.</description>
+		<statBases>
+			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>0.06</ShotSpread>
+			<SwayFactor>1.46</SwayFactor>
+			<RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+			<Mass>10</Mass>
+		</statBases>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>1.25</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_127x108mm_FMJ</defaultProjectile>
+				<warmupTime>2.4</warmupTime>
+				<range>75</range>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<burstShotCount>12</burstShotCount>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>MountedWeapon</EquippableDef>
+			</li>
+            <li Class="CombatExtended.GunDrawExtension">
+                <AdvancedCasingVariables>true</AdvancedCasingVariables>
+                <CasingRotationRandomRange>15</CasingRotationRandomRange>
+                <CasingOffset>-0.1,0.05</CasingOffset>
+				<CasingSpeedOverrideRange>1.5~2</CasingSpeedOverrideRange>
+				<CasingAngleOffset>-135</CasingAngleOffset>
+				<CasingLifeTimeMultiplier>1.25</CasingLifeTimeMultiplier>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseAutoTurretGun">
+		<defName>DMS_Krepost_ECMSystem</defName>
+		<label>ECM system</label>
+		<graphicData>
+			<texPath>Things/Weapons/DMS_Weapon_ECMS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<description>A mounted energy weapon that disables electronic equipment through directional electromagnetic interference. When working, it will generate high temperature on the target, so it can also kill the enemy by igniting it.</description>
+		<statBases>
+			<SightsEfficiency>3</SightsEfficiency>
+			<ShotSpread>0.0</ShotSpread>
+			<SwayFactor>0</SwayFactor>
+			<RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+			<Mass>10</Mass>
+		</statBases>
+		<verbs>
+			<li >
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DMS_Bullet_Electronic</defaultProjectile>
+				<warmupTime>5</warmupTime>
+				<minRange>5</minRange>
+				<range>29.9</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Explosion_EMP</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<forcedMissRadius>1</forcedMissRadius>
+				<targetParams>
+					<canTargetMechs>true</canTargetMechs>
+					<canTargetBuildings>true</canTargetBuildings>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="DMS.HeavyEquippableExtension">
+				<EquippableDef>MountedWeapon</EquippableDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

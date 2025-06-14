@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef ParentName="FactionBase">
+    <defName>DMS_AncientCorps</defName>
+    <label>Ancient corps</label>
+    <description>An armored automatroid division used by a colonial fleet for executing full-scale planetary warfare. However for reasons unknown, despite their past victories against something unknown, the previous colonial fleet decided to seal this army in scattered underground facilities on this planet. It was recently reactivated for unknown reasons.</description>
+    <pawnSingular>automatroid</pawnSingular>
+    <pawnsPlural>automatroids</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <factionNameMaker>DMS_AncientFaction</factionNameMaker>
+    <factionIconPath>UI/Faction/AncientIcon</factionIconPath>
+    <canStageAttacks>true</canStageAttacks>
+    <!-- <styles MayRequire="ludeon.rimworld.royalty">
+      <li>DMS_Facility</li>
+    </styles> -->
+    <colorSpectrum>
+      <li>(0.78, 0.79, 0.71)</li>
+    </colorSpectrum>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(300, 0)</li>
+        <li>(700, 1)</li>
+        <li>(1400, 1.8)</li>
+        <li>(2800, 2.2)</li>
+        <li>(5000, 2.6)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Plasfiber</li>
+        <li>Tungsteel</li>
+        <li>DMS_Ceramics</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <raidLootMaker>DMSAC_MechDropLoot</raidLootMaker>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35, 8)</li>
+        <li>(100, 60)</li>
+        <li>(1000, 250)</li>
+        <li>(2000, 400)</li>
+        <li>(6000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>false</hidden>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>true</canUseAvoidGrid>
+    <techLevel>Industrial</techLevel>
+    <earliestRaidDays>45</earliestRaidDays>
+    <permanentEnemyToEveryoneExcept>
+      <li>DMS_Army</li>
+      <li MayRequire="ludeon.rimworld.royalty">OutlanderRefugee</li>
+      <li>Ancients</li>
+      <li>PlayerColony</li>
+    </permanentEnemyToEveryoneExcept>
+    <hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(6000,2500)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- All types-->
+        <kindDef>Settlement</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <DMS_Mech_Mushketer_AR>18</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>12</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Molot>4</DMS_Mech_Molot>
+          <DMS_Mech_Molot_Reservoir>3</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>2</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+          <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+        </options>
+      </li>
+      <li>
+        <!-- All types-->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <DMS_Mech_Mushketer_AR>18</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Mushketer_SAR>12</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Molot>4</DMS_Mech_Molot>
+          <DMS_Mech_Molot_Reservoir>3</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>2</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+          <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+        </options>
+      </li>
+      <li>
+        <!-- Ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>80</commonality>
+        <options>
+          <DMS_Mech_Mushketer_SAR>8</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Mushketer_AR>6</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Molot_Reservoir>4</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>3</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Gorod_Piper>3</DMS_Mech_Gorod_Piper>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>70</commonality>
+        <options>
+          <DMS_Mech_Mushketer_SAR>18</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Mushketer_AR>16</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Molot>10</DMS_Mech_Molot>
+          <DMS_Mech_Molot_Reservoir>10</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>6</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Gorod_Piper>6</DMS_Mech_Gorod_Piper>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+        </options>
+      </li>
+      <li>
+        <!-- heavy only -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Tsvetnik>6</DMS_Mech_Tsvetnik>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <allowedArrivalTemperatureRange>-100~200</allowedArrivalTemperatureRange>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>900</configurationListOrderPriority>
+    <dropPodActive>ActiveDropPodMechanoid</dropPodActive>
+    <dropPodIncoming>DropPodIncomingMechanoid</dropPodIncoming>
+  </FactionDef>
+</Defs>

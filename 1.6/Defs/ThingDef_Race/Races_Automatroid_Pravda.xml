@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseAncientAutomatroidRace">
+    <defName>DMS_Mech_Pravda</defName>
+    <thingClass>Pawn</thingClass>
+    <label>Pravda</label>
+    <description>Originally designed to breach fortified zones and expansive no-man's lands, this all-terrain unmanned assault gun is armed with a 155mm cannon to strike permanent fortifications from long distances. It relies on rocket-deployed explosive charges to clear safe paths through minefields.</description>
+    <statBases>
+      <MoveSpeed>2.5</MoveSpeed>
+      <ArmorRating_Sharp>1.45</ArmorRating_Sharp><!--銳抗-->
+      <ArmorRating_Blunt>1.50</ArmorRating_Blunt><!--鈍抗-->
+      <ArmorRating_Heat>1.8</ArmorRating_Heat>  <!--能抗-->
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+      <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">6</BandwidthCost>        <!--帶寬消耗-->
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">6</WastepacksPerRecharge><!--充電/培養時產出廢料-->
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>12</mechFixedSkillLevel>
+      <body>DMS_LandCrab</body>
+      <nameGenerator>DMS_AncientMechHeavy</nameGenerator>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHealthScale>6</baseHealthScale>
+      <mechWeightClass>UltraHeavy</mechWeightClass>
+      <detritusLeavings>
+        <li>
+          <def>DMS_ChunkSlag</def>
+          <texOverrideIndex>7</texOverrideIndex>
+          <spawnChance>0.4</spawnChance>
+        </li>
+        <li>
+          <def>DMS_ChunkSlag</def>
+          <texOverrideIndex>4</texOverrideIndex>
+          <spawnChance>0.4</spawnChance>
+        </li>
+      </detritusLeavings>
+    </race>
+    <comps>
+      <li Class="DMS.CompProperties_VehicleWeapon">
+        <drawData>
+          <dataEast>
+            <offset>(-0.25,0,1)</offset>
+            <rotationOffset>-30</rotationOffset>
+            <layer>40</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.25,0,1)</offset>
+            <rotationOffset>30</rotationOffset>
+            <layer>40</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(0,0,0.75)</offset>
+            <layer>40</layer>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0,0,-0.15)</offset>
+            <layer>40</layer>
+          </dataNorth>
+        </drawData>
+        <defaultWeapon>DMS_Gun_Empero</defaultWeapon>
+        <turretRotationFollowPawn>true</turretRotationFollowPawn>
+        <rotationSmoothTime>0.25</rotationSmoothTime>
+      </li>
+      <li Class="DMS.CompPropertiesMultipleTurretGun">
+        <subTurrets>
+          <li>
+            <ID>forward machinegun</ID>
+            <turret>DMS_HeavyMachineGunMounted</turret>
+            <autoAttack>true</autoAttack>
+            <warmingTime>5</warmingTime>
+            <angleOffset>-90</angleOffset>
+            <IdleAngleOffset>180</IdleAngleOffset>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
+                <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <drawSize>1.75</drawSize>
+                <baseLayer>-5</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataEast>
+                    <offset>(-1.5,0,0.5)</offset>
+                  </dataEast>
+                  <dataWest>
+                    <offset>(1.5,0,0)</offset>
+                    <rotationOffset>180</rotationOffset>
+                  </dataWest>
+                  <dataSouth>
+                    <offset>(0.5,0,1.4)</offset>
+                    <layer>-10</layer>
+                  </dataSouth>
+                  <dataNorth>
+                    <offset>(-0.5,0,-1.2)</offset>
+                    <layer>10</layer>
+                  </dataNorth>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+        </subTurrets>
+      </li>
+    </comps>
+    <tools Inherit="False">
+      <li>
+        <label>Left Leg</label>
+        <capacities>
+          <li>DMS_HeavySweep</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>5</cooldownTime>
+        <linkedBodyPartsGroup>LeftMechanicalLeg</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>16</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>Right Leg</label>
+        <capacities>
+          <li>DMS_HeavySweep</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>5</cooldownTime>
+        <linkedBodyPartsGroup>RightMechanicalLeg</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>16</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <damageMultipliers>
+      <li>
+        <damageDef>Blunt</damageDef>
+        <multiplier>0.5</multiplier>
+      </li>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.5</multiplier>
+      </li>
+    </damageMultipliers>
+    <butcherProducts>
+      <Tungsteel>100</Tungsteel>
+      <DMS_ChunkSlag>6</DMS_ChunkSlag>
+      <ComponentStamped>4</ComponentStamped>
+    </butcherProducts>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseAncientAutomatroidKind" Name="DMS_BasePravdaKind">
+    <defName>DMS_Mech_Pravda</defName>
+    <label>2S95 "Pravda"</label>
+    <race>DMS_Mech_Pravda</race>
+    <nameMaker>DMS_AncientMechHeavy</nameMaker>
+    <isFighter>true</isFighter>
+    <combatPower>500</combatPower>                                               <!--威脅點數-->
+    <maxPerGroup>1</maxPerGroup>                                                 <!--單個集群內的數量-->
+    <isBoss>true</isBoss>
+    <lifeStages>                                                                 <!--身體圖片-->
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/pravda</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.6</drawSize>
+          <shadowData>
+            <volume>(1.8,1,1.8)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/pravda</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.6</drawSize>
+          <shadowData>
+            <volume>(1.8,1,1.8)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags Inherit="False">
+      <li>DMS_Gun_Empero</li>
+    </weaponTags>
+    <weaponMoney>6730~9999</weaponMoney>
+    <abilities>
+      <li>DMSAC_APS</li>
+    </abilities>
+  </PawnKindDef>
+</Defs>

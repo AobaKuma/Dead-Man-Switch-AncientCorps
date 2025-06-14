@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		
+		<!-- ========== ATGM ========== -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_ATGMLauncher"]/comps/li[@Class="CompProperties_AbilityLaunchProjectile"]/projectileDef</xpath>
+				<value>
+					<projectileDef>DMSAC_Bullet_StugnaATGM</projectileDef>
+				</value>
+			</li>
+
+		<!-- ========== APS ========== -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="AncientCorps.CompProperties_ActiveProtectionSystem"]/Radius</xpath>
+				<value>
+					<Radius>12</Radius>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="AncientCorps.CompProperties_ActiveProtectionSystem"]/chanceToFail</xpath>
+				<value>
+					<chanceToFail>0.93</chanceToFail>
+				</value>
+			</li>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="AncientCorps.CompProperties_ActiveProtectionSystem"]</xpath>
+				<attribute>Class</attribute>
+				<value>DMSCE.CompProperties_ActiveProtectionSystem</value>
+			</li>
+
+		<!-- ========== RocketPod ========== -->
+			<li Class="PatchOperationAttributeAdd">
+				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.VerbPropertiesCE</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/verbClass</xpath>
+				<value>
+					<verbClass>DMSCE.Verb_CastAbilityArcSprayProjectile</verbClass>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/ticksBetweenBurstShots</xpath>
+				<value>
+					<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/defaultProjectile</xpath>
+				<value>
+					<defaultProjectile>DMSAC_Bullet_80mmS8DF_Thermobaric</defaultProjectile>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

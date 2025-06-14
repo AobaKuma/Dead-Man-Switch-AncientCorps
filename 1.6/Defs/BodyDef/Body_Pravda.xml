@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 重型四足平台-->
+  <BodyDef>
+    <defName>DMS_LandCrab</defName>
+    <label>terrestrial</label>
+    <corePart>
+      <def>DMS_HeavyChassis</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+      </groups>
+      <parts>
+        <!-- 步行頭部 -->
+        <li>
+          <def>MechanicalHead</def>
+          <customLabel>auxiliary loading platform</customLabel>
+          <coverage>0.01</coverage>
+          <groups>
+            <li>HeadAttackTool</li>
+					  <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+          <parts>
+            <li>
+              <def>SightSensor</def>
+              <customLabel>autoloader control sensor</customLabel>
+              <coverage>0.20</coverage>
+            </li>
+            <li>
+              <def>ArtificialBrain</def>
+              <coverage>0.05</coverage>
+              <depth>Inside</depth>
+            </li>
+            <li>
+              <def>SightSensor</def>
+              <customLabel>remote turret sensor</customLabel>
+              <coverage>0.10</coverage>
+            </li>
+            <li>
+              <def>HearingSensor</def>
+              <customLabel>left hearing sensor</customLabel>
+              <coverage>0.05</coverage>
+            </li>
+            <li>
+              <def>HearingSensor</def>
+              <customLabel>right hearing sensor</customLabel>
+              <coverage>0.05</coverage>
+            </li>
+            <li>
+              <def>SmellSensor</def>
+              <coverage>0.05</coverage>
+            </li>
+
+            <!-- 這部分是機體後方(頭部)的子砲塔 -->
+            <li>
+              <def>MechanicalShoulder</def>
+              <customLabel>sentry turret mount</customLabel>
+              <coverage>0.2</coverage>
+              <parts>
+                <li>
+                  <def>MechanicalArm</def>
+                  <customLabel>horizontal rotor</customLabel>
+                  <coverage>0.85</coverage>
+                  <parts>
+                    <li>
+                      <def>MechanicalHand</def>
+                      <customLabel>vertical rotor</customLabel>
+                      <coverage>0.2</coverage>
+                      <height>Bottom</height>
+                      <parts>
+                        <li>
+                          <def>MechanicalFinger</def>
+                          <customLabel>ammo feeder</customLabel>
+                          <coverage>0.15</coverage>
+                          <groups>
+                            <li>LeftHand</li>
+                          </groups>
+                        </li>
+                        <li>
+                          <def>MechanicalFinger</def>
+                          <customLabel>range finder</customLabel>
+                          <coverage>0.15</coverage>
+                          <groups>
+                            <li>LeftHand</li>
+                            <li>MiddleFingers</li>
+                          </groups>
+                        </li>
+                        <li>
+                          <def>MechanicalFinger</def>
+                          <customLabel>trigger safty</customLabel>
+                          <coverage>0.15</coverage>
+                          <groups>
+                            <li>LeftHand</li>
+                          </groups>
+                        </li>
+                        <li>
+                          <def>MechanicalFinger</def>
+                          <customLabel>mount lock</customLabel>
+                          <coverage>0.15</coverage>
+                          <groups>
+                            <li>LeftHand</li>
+                          </groups>
+                        </li>
+                      </parts>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <!-- 火控頭部 -->
+        <li>
+          <def>DMS_HeadRadar</def>
+          <coverage>0.01</coverage>
+          <height>Top</height>
+          <groups>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+        </li>
+        <!-- 炮身 -->
+        <li>
+          <def>MechanicalShoulder</def>
+          <customLabel>main weapon mount</customLabel>
+          <coverage>0.05</coverage>
+          <parts>
+            <li>
+              <def>MechanicalArm</def>
+              <customLabel>horizontal hydraulic mount</customLabel>
+              <coverage>0.85</coverage>
+              <parts>
+                <li>
+                  <def>MechanicalHand</def>
+                  <customLabel>vertical hydraulic mount</customLabel>
+                  <coverage>0.2</coverage>
+                  <height>Bottom</height>
+                  <parts>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>ammo feeder</customLabel>
+                      <coverage>0.15</coverage>
+                      <groups>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>range finder</customLabel>
+                      <coverage>0.15</coverage>
+                      <groups>
+                        <li>RightHand</li>
+                        <li>MiddleFingers</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>hydraulic retractor</customLabel>
+                      <coverage>0.15</coverage>
+                      <groups>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                    <li>
+                      <def>MechanicalFinger</def>
+                      <customLabel>mount lock</customLabel>
+                      <coverage>0.15</coverage>
+                      <groups>
+                        <li>RightHand</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <!-- 腿部 -->
+        <li>
+          <def>MechanicalLeg</def>
+          <customLabel>left walker leg</customLabel>
+          <coverage>0.05</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>LeftMechanicalLeg</li>
+					  <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+          <parts>
+            <li>
+              <def>DMS_ArmourPlate</def>
+              <customLabel>left walker armour</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Outside</depth>
+              <groups>
+                <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+              </groups>
+            </li>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>left foot</customLabel>
+              <coverage>0.2</coverage>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechanicalLeg</def>
+          <customLabel>right leg</customLabel>
+          <coverage>0.05</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>RightMechanicalLeg</li>
+					  <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+          <parts>
+            <li>
+              <def>DMS_ArmourPlate</def>
+              <customLabel>right walker armour</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Outside</depth>
+              <groups>
+                <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+              </groups>
+            </li>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>right foot</customLabel>
+              <coverage>0.2</coverage>
+            </li>
+          </parts>
+        </li>
+
+        <li>
+          <def>MechanicalLeg</def>
+          <customLabel>left stationary claw</customLabel>
+          <coverage>0.16</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>LeftMechanicalLeg</li>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+          <parts>
+            <li>
+              <def>DMS_ArmourPlate</def>
+              <customLabel>left claw armour plate</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Outside</depth>
+              <groups>
+                <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+              </groups>
+            </li>
+            <li>
+              <def>DMS_ArmourPlate</def>
+              <customLabel>left leg armour plate</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Outside</depth>
+              <groups>
+                <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+              </groups>
+            </li>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>left hydraulic joint</customLabel>
+              <coverage>0.2</coverage>
+            </li>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>left hydraulic pile</customLabel>
+              <coverage>0.1</coverage>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechanicalLeg</def>
+          <customLabel>right stationary claw</customLabel>
+          <coverage>0.16</coverage>
+          <height>Bottom</height>
+          <groups>
+            <li>RightMechanicalLeg</li>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+          <parts>
+            <li>
+              <def>DMS_ArmourPlate</def>
+              <customLabel>right claw armour plate</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Outside</depth>
+              <groups>
+                <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+              </groups>
+            </li>
+            <li>
+              <def>DMS_ArmourPlate</def>
+              <customLabel>right leg armour plate</customLabel>
+              <coverage>0.3</coverage>
+              <depth>Outside</depth>
+              <groups>
+                <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+              </groups>
+            </li>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>right hydraulic joint</customLabel>
+              <coverage>0.2</coverage>
+            </li>
+            <li>
+              <def>MechanicalFoot</def>
+              <customLabel>right hydraulic pile</customLabel>
+              <coverage>0.1</coverage>
+            </li>
+          </parts>
+        </li>
+
+        <!-- 其他 -->
+        <li>
+          <def>DMS_ArmourPlate</def>
+          <customLabel>left armour plates</customLabel>
+          <coverage>0.16</coverage>
+          <depth>Outside</depth>
+          <groups>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+        </li>
+        <li>
+          <def>DMS_ArmourPlate</def>
+          <customLabel>right armour plates</customLabel>
+          <coverage>0.16</coverage>
+          <depth>Outside</depth>
+          <groups>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+        </li>
+        <li>
+          <def>DMS_Battery</def>
+          <customLabel>main battery array</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>DMS_Battery</def>
+          <customLabel>secondary battery array</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <customLabel>main hydraulic system</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <customLabel>secondary hydraulic system</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+          <groups>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+          </groups>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+</Defs>

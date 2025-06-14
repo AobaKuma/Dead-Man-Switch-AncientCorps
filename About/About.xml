@@ -5,6 +5,7 @@
 	<author>AobaKuma</author>
 	<supportedVersions>
 		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<packageId>Aoba.DeadManSwitch.AncientCorps</packageId>
 	<modDependencies>

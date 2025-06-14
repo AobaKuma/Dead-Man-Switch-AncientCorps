@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!-- <DesignationCategoryDef>
+		<defName>DMSAC</defName>
+		<label>DMSAC</label>
+		<order>234</order>
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef> -->
+  
+  <ThingDef ParentName="BuildingBase" Name="DMSAC_BaseBuilding" Abstract="true">
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+    <building>
+      <claimable>false</claimable>
+      <repairable>false</repairable>
+      <deconstructible>false</deconstructible>
+      <neverBuildable>true</neverBuildable>
+    </building>
+    <pathCost>120</pathCost>
+    <defaultPlacingRot>2</defaultPlacingRot>
+    <passability>PassThroughOnly</passability>
+    <!-- <designationCategory>DMSAC</designationCategory> -->
+  </ThingDef>
+  
+   <ThingDef ParentName="DMSAC_BaseBuilding" Name="DMSACDoorBase" Abstract="True">
+    <thingClass>Building_Door</thingClass>
+    <category>Building</category>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+      <isInert>true</isInert>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Door/Door_Blueprint</texPath>
+      </blueprintGraphicData>
+      <ai_chillDestination>false</ai_chillDestination>
+      <paintable>true</paintable>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable">
+        <allowNonPlayer>true</allowNonPlayer>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_DoorLearnOpeningSpeed</li>
+    </placeWorkers>
+  </ThingDef>
+  
+   <ThingDef Abstract="True" Name="DMSACLampBase" ParentName="DMSAC_BaseBuilding">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>14</pathCost>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <rotatable>false</rotatable>
+    <uiIconOffset>(0, 0.03)</uiIconOffset>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <placeWorkers>
+      <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_RollingDoor</defName>
+    <label>rolling door</label>
+    <description>a locked rolling door.</description>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/door/RollingDoor</texPath>
+      <drawOffset>(0,0,0)</drawOffset>
+      <drawSize>(4,1)</drawSize>
+    </graphicData>
+    <size>(4,1)</size>
+    <fillPercent>1</fillPercent>
+    <staticSunShadowHeight>1</staticSunShadowHeight>
+    <passability>Impassable</passability>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_BarrierGate</defName>
+		<label>Barrier Gate</label>
+		<description>A barrier gate.</description>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/Props/BarrierGate</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+      <shadowData>
+        <offset>(1.5,0,0)</offset>
+        <volume>(0.65,0.5,0.65)</volume>
+      </shadowData>
+		</graphicData>
+		<size>(4,1)</size>
+    <fillPercent>0.2</fillPercent>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_RoadBlock</defName>
+		<label>road barrier</label>
+		<description>A road barrier designed to block vehicle, it also provides cover on gun fighting.</description>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/Props/roadBlock</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2.24,1.12)</drawSize>
+      <drawOffsetEast>(0,0,0.12)</drawOffsetEast>
+      <drawOffsetWest>(0,0,0.12)</drawOffsetWest>
+      <shadowData>
+        <volume>(2,0.75,1)</volume>
+      </shadowData>
+		</graphicData>
+    <statBases>
+      <MaxHitPoints>700</MaxHitPoints>
+      <Mass>50</Mass>
+    </statBases>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+		<size>(2,1)</size>
+    <fillPercent>0.75</fillPercent>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_FuelBarrel</defName>
+		<label>fuel barrel</label>
+		<description>A barrel filled with fuel.</description>
+    <tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Building/Props/barrel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+      <shadowData>
+        <offset>(0,0,-0.2)</offset>
+        <volume>(0.5,0.5,0.5)</volume>
+      </shadowData>
+		</graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.25</Flammability>
+      <Mass>10</Mass>
+    </statBases>
+		<filthLeaving>Filth_Fuel</filthLeaving>
+		<defaultPlacingRot>North</defaultPlacingRot>
+    <rotatable>false</rotatable>
+    <canScatterOver>true</canScatterOver>
+    <building>
+      <alwaysDeconstructible>true</alwaysDeconstructible>
+      <deconstructible>true</deconstructible>
+    </building>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <chanceToStartFire>0.5</chanceToStartFire>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <startWickOnDamageTaken>
+          <li>EMP</li>
+          <li>Flame</li>
+          <li>Bomb</li>
+          <li>BombSuper</li>
+        </startWickOnDamageTaken>
+        <wickTicks>30~60</wickTicks>
+      </li>
+      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+        <colorChance>1</colorChance>
+        <colorDefs>
+          <li>DMSAC_Structure_Olive</li>
+          <li>DMSAC_Structure_Green</li>
+          <li>DMSAC_Structure_Rust</li>
+          <li>Structure_GreenFaded</li>
+          <li>Structure_OrangePastel</li>
+          <li>Structure_Red</li>
+        </colorDefs>
+      </li>
+    </comps>
+    <costList>
+      <Steel>15</Steel>
+      <Chemfuel>75</Chemfuel>
+    </costList>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<size>(1,1)</size>
+    <fillPercent>0.35</fillPercent>
+    <passability>PassThroughOnly</passability>
+  </ThingDef>
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_AirFan</defName>
+		<label>ventilation fan</label>
+		<description>An active ventilation fan,it seems to be used to discharge heat from underground spaces.</description>
+		<defaultPlacingRot>North</defaultPlacingRot>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+		<graphicData>
+			<texPath>Things/Building/Props/Fan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+      <drawOffset>(0,1.92,0)</drawOffset>
+      <shadowData>
+        <volume>(2,0.5,2)</volume>
+      </shadowData>
+		</graphicData>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <ChunkSlagSteel>2~4</ChunkSlagSteel>
+    </killedLeavingsRanges>
+    <comps>
+      <li Class="AncientCorps.CompProperties_Effector">
+        <effecter>DMSAC_AirExhaust</effecter>
+        <offset>(0,0,0.5)</offset>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusher</compClass>
+        <heatPerSecond>40</heatPerSecond>
+        <heatPushMaxTemperature>80</heatPushMaxTemperature>
+      </li>
+    </comps>  
+		<size>(2,2)</size>
+    <fillPercent>1</fillPercent>
+    <passability>Impassable</passability>
+  </ThingDef>
+  <EffecterDef>
+    <defName>DMSAC_AirExhaust</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <fleckDef>AirPuff</fleckDef>
+        <ticksBetweenMotes>30</ticksBetweenMotes>
+        <spawnLocType>OnSource</spawnLocType>
+        <scale>0.5~2</scale>
+        <angle>30~70</angle>
+        <speed>0.09~0.15</speed>
+        <airTime>0.1</airTime>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>AirPuff</fleckDef>
+        <spawnLocType>OnSource</spawnLocType>
+        <rotationRate>-10~10</rotationRate>
+        <speed>0.1~0.35</speed>
+        <scale>0.8~2</scale>
+        <chancePerTick>0.08</chancePerTick>
+        <positionOffset>(0,0,0.5)</positionOffset>
+        <airTime>0.1</airTime>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_LiftShaft</defName>
+		<label>lift shaft</label>
+    <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+    <rotatable>false</rotatable>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/liftShaft</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(12,12)</drawSize>
+      <shadowData>
+        <offset>(1.5,0,0)</offset>
+        <volume>(0.65,0.5,0.65)</volume>
+      </shadowData>
+		</graphicData>
+		<size>(9,9)</size>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <fillPercent>0</fillPercent>
+    <useHitPoints>false</useHitPoints>
+    <passability>Impassable</passability>
+      <modExtensions>
+        <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Map">
+          <maps>
+            <li>DMSAC_UndergroundBaseA</li>
+            <li>DMSAC_UndergroundBaseB</li>
+            <li>DMSAC_UndergroundBaseC</li>
+          </maps>
+        </li>
+      </modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_LiftShaft_Bottom</defName>
+		<label>lift Shaft</label>
+    <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+    <rotatable>false</rotatable>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/liftShaft_Bottom</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(12,12)</drawSize>
+      <shadowData>
+        <offset>(1.5,0,0)</offset>
+        <volume>(0.65,0.5,0.65)</volume>
+      </shadowData>
+		</graphicData>
+		<size>(9,9)</size>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <fillPercent>0</fillPercent>
+    <useHitPoints>false</useHitPoints>
+    <passability>Impassable</passability>
+		<modExtensions>
+      <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Portal">
+        <distance>2</distance>
+      </li>
+    </modExtensions> 
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Building_LiftShaft_Bottom_B</defName>
+		<label>lift Shaft</label>
+    <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+    <rotatable>false</rotatable>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<graphicData>
+			<texPath>Things/Building/liftShaft_Bottom_B</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(12,12)</drawSize>
+      <shadowData>
+        <offset>(1.5,0,0)</offset>
+        <volume>(0.65,0.5,0.65)</volume>
+      </shadowData>
+		</graphicData>
+		<size>(9,9)</size>
+    <ignoreConfigErrors>true</ignoreConfigErrors>
+    <fillPercent>0</fillPercent>
+    <useHitPoints>false</useHitPoints>
+    <passability>Impassable</passability>
+		<modExtensions>
+      <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Portal">
+        <distance>2</distance>
+      </li>
+    </modExtensions> 
+  </ThingDef>
+
+  <!--裝飾性殘骸。 -->
+  <ThingDef ParentName="DMSAC_BaseBuilding" Name="BaseDerelictMech" Abstract="true">
+    <description>a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were mostly removed. waiting for people to discover its remaining value.</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
+    </graphicData>
+    <randomizeRotationOnSpawn>false</randomizeRotationOnSpawn>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Never</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <altitudeLayer>Building</altitudeLayer>
+    <useHitPoints>true</useHitPoints>
+    <passability>PassThroughOnly</passability>
+    <surfaceType>Item</surfaceType>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <only>(255, 255, 255)</only>
+        </li>
+        <li>
+          <only>(250, 250, 250)</only>
+        </li>
+        <li>
+          <only>(252, 252, 252)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+  <ThingDef ParentName="BaseDerelictMech">
+    <defName>DMSAC_Building_DerelictMech_Alligator</defName>
+    <label>large automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/Wreck/alligator</texPath>
+      <drawOffset>(0,0,0)</drawOffset>
+      <drawSize>7</drawSize>
+      <shadowData>
+            <volume>(2.25,1,2.25)</volume>
+            <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(3,6)</size>
+    <randomizeRotationOnSpawn>false</randomizeRotationOnSpawn>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.8</fillPercent>
+    <statBases>
+      <MaxHitPoints>5000</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <DMS_ChunkSlag>3~7</DMS_ChunkSlag>
+      <ChunkSlagSteel>1~3</ChunkSlagSteel>
+    </killedLeavingsRanges>
+  </ThingDef>
+  <ThingDef ParentName="BaseDerelictMech">
+    <defName>DMSAC_Building_DerelictMech_Large</defName>
+    <label>large automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/Wreck/large</texPath>
+      <drawOffset>(0,0,0.25)</drawOffset>
+      <drawSize>4.2</drawSize>
+      <shadowData>
+            <volume>(2.25,1,2.25)</volume>
+            <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(3,3)</size>
+    <fillPercent>0.7</fillPercent>
+    <statBases>
+      <MaxHitPoints>3200</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <DMS_ChunkSlag>1~5</DMS_ChunkSlag>
+      <ChunkSlagSteel>1~3</ChunkSlagSteel>
+    </killedLeavingsRanges>
+  </ThingDef>
+  <ThingDef ParentName="BaseDerelictMech">
+    <defName>DMSAC_Building_DerelictMech_Medium</defName>
+    <label>medium automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/Wreck/medium</texPath>
+      <drawSize>2.75</drawSize>
+      <shadowData>
+            <volume>(1.75,1,1.75)</volume>
+            <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(2,2)</size>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>1800</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <DMS_ChunkSlag>1~2</DMS_ChunkSlag>
+      <ChunkSlagSteel>1~2</ChunkSlagSteel>
+    </killedLeavingsRanges>
+  </ThingDef>
+  <ThingDef ParentName="BaseDerelictMech">
+    <defName>DMSAC_Building_DerelictMech_Small</defName>
+    <label>small automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/Wreck/small</texPath>
+      <drawSize>1.9</drawSize>
+      <shadowData>
+            <volume>(1.2,1,1.2)</volume>
+            <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <fillPercent>0.35</fillPercent>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+    </statBases>
+    <killedLeavingsRanges>
+      <DMS_ChunkSlag>0~1</DMS_ChunkSlag>
+      <ChunkSlagSteel>0~1</ChunkSlagSteel>
+    </killedLeavingsRanges>
+  </ThingDef>
+
+  <!-- 可以駭入的殘骸，以及相關工作。 -->
+  <ThingDef ParentName="DMSAC_BaseBuilding" Name="BaseDeactivatedMech" Abstract="true">
+    <thingClass>AncientCorps.Building_DeactivatedMech</thingClass>
+    <description>a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed. waiting for people to discover its remaining value.</description>
+    <graphicData>
+      <texPath>Things/Building/derelict</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>true</rotatable>
+    <building>
+      <spawnedConceptLearnOpportunity>DMSAC_Hacking</spawnedConceptLearnOpportunity>
+    </building>
+    <useHitPoints>false</useHitPoints>
+    <surfaceType>Item</surfaceType>
+  </ThingDef>
+  <ThingDef ParentName="BaseDeactivatedMech">
+    <defName>DMSAC_Building_DeactivatedLargeMech</defName>
+    <label>large automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/derelict</texPath>
+      <drawSize>3</drawSize>
+    </graphicData>
+    <size>(3,3)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+          <DMS_Mech_Zabor>3</DMS_Mech_Zabor>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+        </possibleGeneratePawn>
+        <age>300~400</age>
+        <innerPawnDrawOffset>(0,0.01,0.5)</innerPawnDrawOffset>
+        <spawnChance>0.1</spawnChance>
+        <damageCount>6~10</damageCount>
+        <weaponChance>0.15</weaponChance>
+        <weaponRandomRotRange>-25~25</weaponRandomRotRange>
+        <weaponDraw>
+          <dataEast>
+            <offset>(-0.25,0,-1.0)</offset>
+            <rotationOffset>90</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.25,0,1.1)</offset>
+            <rotationOffset>270</rotationOffset>
+            <layer>-1</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-1.2,0,0)</offset>
+            <rotationOffset>180</rotationOffset>
+            <layer>-1</layer>
+          </dataSouth>
+          <dataNorth>
+            <offset>(1.2,0,0)</offset>
+            <layer>-1</layer>
+          </dataNorth>
+        </weaponDraw>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseDeactivatedMech">
+    <defName>DMSAC_Building_DeactivatedMediumMech</defName>
+    <label>medium automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/derelict</texPath>
+      <drawSize>2.25</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+          <DMS_Mech_Molot_Reservoir>2</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>2</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+          <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_BattleWalker>2</DMS_Mech_BattleWalker>
+        </possibleGeneratePawn>
+        <age>300~400</age>
+        <innerPawnDrawOffset>(0,0.01,0)</innerPawnDrawOffset>
+        <spawnChance>0.15</spawnChance>
+        <damageCount>5~8</damageCount>
+        <weaponChance>0.15</weaponChance>
+        <weaponRandomRotRange>-25~25</weaponRandomRotRange>
+        <weaponDraw>
+          <dataEast>
+            <offset>(-0.1,0,-0.5)</offset>
+            <rotationOffset>100</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.15,0,0.75)</offset>
+            <rotationOffset>270</rotationOffset>
+            <layer>-1</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-0.15,0,-0.75)</offset>
+            <rotationOffset>90</rotationOffset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.75,0,0)</offset>
+            <layer>-1</layer>
+          </dataNorth>
+        </weaponDraw>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseDeactivatedMech">
+    <defName>DMSAC_Building_DeactivatedSmallMech</defName>
+    <label>small automatroid derelict</label>
+    <graphicData>
+      <texPath>Things/Building/derelict</texPath>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+          <DMS_Mech_Molot_Kamin>0.5</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>3</DMS_Mech_Molot>
+          <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+        </possibleGeneratePawn>
+        <age>300~400</age>
+        <innerPawnDrawOffset>(0,0.008,0.25)</innerPawnDrawOffset>
+        <spawnChance>0.4</spawnChance>
+        <damageCount>4~6</damageCount>
+        <weaponChance>0.15</weaponChance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- 停的比較整齊的版本 -->
+  <ThingDef ParentName="BaseDeactivatedMech" Name="BaseInactivatedMech" Abstract="true">
+    <description>an automatroid that has been completely shut down for maintenance, with most of its parts intact and ready for use.</description>
+    <graphicData>
+      <texPath>Things/None</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+  </ThingDef>
+  <ThingDef ParentName="BaseInactivatedMech">
+    <defName>DMSAC_Building_InactivatedLargeMech</defName>
+    <label>large inactivated automatroid</label>
+    <size>(3,3)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+          <DMS_Mech_Zabor>3</DMS_Mech_Zabor>
+          <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
+          <DMS_Mech_Pravda>1</DMS_Mech_Pravda>
+        </possibleGeneratePawn>
+        <innerPawnDrawOffset>(0,0.001,0.25)</innerPawnDrawOffset>
+        <spawnChance>0.1</spawnChance>
+        <damageCount>3~9</damageCount>
+        <weaponChance>0.5</weaponChance>
+        <weaponRandomRotRange>-15~25</weaponRandomRotRange>
+        <weaponDraw>
+          <dataEast>
+            <offset>(-0.25,0,-1.0)</offset>
+            <rotationOffset>90</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.25,0,1.1)</offset>
+            <rotationOffset>270</rotationOffset>
+            <layer>-1</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-1.2,0,0)</offset>
+            <rotationOffset>180</rotationOffset>
+            <layer>-1</layer>
+          </dataSouth>
+          <dataNorth>
+            <offset>(1.2,0,0)</offset>
+            <layer>-1</layer>
+          </dataNorth>
+        </weaponDraw>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseInactivatedMech">
+    <defName>DMSAC_Building_InactivatedMediumMech</defName>
+    <label>medium inactivated automatroid</label>
+    <size>(2,2)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
+          <DMS_Mech_Molot_Reservoir>2</DMS_Mech_Molot_Reservoir>
+          <DMS_Mech_Molot_Mosta>2</DMS_Mech_Molot_Mosta>
+          <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
+          <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_BattleWalker>2</DMS_Mech_BattleWalker>
+        </possibleGeneratePawn>
+        <age>300~400</age>
+        <innerPawnDrawOffset>(0,0.001,0.175)</innerPawnDrawOffset>
+        <spawnChance>0.3</spawnChance>
+        <innerPawnScatterRange>0</innerPawnScatterRange>
+        <damageCount>2~6</damageCount>
+        <weaponChance>0.5</weaponChance>
+        <weaponRandomRotRange>-15~25</weaponRandomRotRange>
+        <weaponDraw>
+          <dataEast>
+            <offset>(-0.1,0,-0.5)</offset>
+            <rotationOffset>100</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.15,0,0.75)</offset>
+            <rotationOffset>270</rotationOffset>
+            <layer>-1</layer>
+          </dataWest>
+          <dataSouth>
+            <offset>(-0.15,0,-0.75)</offset>
+            <rotationOffset>90</rotationOffset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0.75,0,0)</offset>
+            <layer>-1</layer>
+          </dataNorth>
+        </weaponDraw>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseInactivatedMech">
+    <defName>DMSAC_Building_InactivatedSmallMech</defName>
+    <label>small inactivated automatroid</label>
+    <size>(1,1)</size>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+        <possibleGeneratePawn>
+          <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+          <DMS_Mech_Molot_Kamin>0.5</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>3</DMS_Mech_Molot>
+          <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+        </possibleGeneratePawn>
+        <innerPawnDrawOffset>(0,0.005,0.25)</innerPawnDrawOffset>
+        <spawnChance>0.5</spawnChance>
+        <weaponChance>0.5</weaponChance>
+        <damageCount>1~3</damageCount>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- 00900 -->
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>DMSAC_Hacking</defName>
+    <label>hacking deactivated mech</label>
+    <helpText>You discovered a mech that is not yet activated. If you have a mechanitor colonists capable of hacking it, you may be able to claim it as your own.</helpText>
+  </ConceptDef>
+  <!-- 可以開啟的戰利品箱子。 -->
+  <ThingDef ParentName="DMSAC_BaseBuilding" Name="DMSAC_BaseLootBox" Abstract="True">
+    <category>Building</category>
+    <thingClass>AncientCorps.Building_SurplusContainer</thingClass>
+    <rotatable>true</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <destroyable>true</destroyable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+      <claimable>true</claimable>
+      <deconstructible>false</deconstructible>
+    </building>
+    <pathCost>90</pathCost>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseLootBox">
+    <defName>DMSAC_Cargo</defName>
+    <label>cargo container</label>
+    <description>A standard issue container containing military supplies.</description>
+		<rotatable>true</rotatable>
+    <tickerType>Normal</tickerType>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <graphicData>
+      <color>(0.5,0.5,0.5)</color>
+      <texPath>Things/Building/cargo</texPath>
+      <drawSize>(4.3,6.45)</drawSize>
+      <drawOffset>(0,0.03,0)</drawOffset>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
+    </graphicData>
+    <fillPercent>1</fillPercent>
+    <killedLeavingsRanges>
+      <ChunkSlagSteel>2~4</ChunkSlagSteel>
+    </killedLeavingsRanges>
+    <staticSunShadowHeight>0.7</staticSunShadowHeight>
+    <size>(2,4)</size>
+    <defaultPlacingRot>0</defaultPlacingRot>
+    <comps>
+      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+        <colorDefs>
+          <li>DMSAC_Structure_Olive</li>
+          <li>DMSAC_Structure_Green</li>
+          <li>DMSAC_Structure_Rust</li>
+          <li>Structure_GreenFaded</li>
+          <li>Structure_OrangePastel</li>
+          <li>Structure_Red</li>
+          <li>Structure_White</li>
+        </colorDefs>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_Lootbox">
+        <sound>CrateOpeningStarted</sound>
+        <openedGraphicdata>
+          <texPath>Things/Building/cargoOpen</texPath>
+          <drawSize>(4.3,6.45)</drawSize>
+          <drawOffset>(0,0.03,0)</drawOffset>
+          <graphicClass>Graphic_Random</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
+        </openedGraphicdata>
+        <countRange>3~6</countRange>
+        <loots>
+          <li>DMSAC_CargoLoots</li>
+          <li>DMSAC_RTC_CompLoots</li>
+        </loots>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="DMSAC_BaseLootBox">
+    <defName>DMSAC_Crate</defName>
+    <label>military crate</label>
+    <!-- 一個裝有軍用裝備的標準物資運輸箱。這些裝備與箱子似乎都是在最近才生產的，並隨著機兵部隊的任務被送到各處。 -->
+    <description>A standard issue equipmet crate containing military supplies.These equipment and boxes seemed to have been produced recently and sent to various locations along with the missions.</description>
+		<rotatable>true</rotatable>
+    <tickerType>Normal</tickerType>
+    <building>
+      <deconstructible>true</deconstructible>
+      <paintable>true</paintable>
+    </building>
+    <graphicData>
+      <texPath>Things/Building/Crate/crate</texPath>
+      <drawSize>(3,2)</drawSize>
+      <drawOffset>(0,0.01,0)</drawOffset>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Cutout</shaderType>
+    </graphicData>
+    <fillPercent>0.4</fillPercent>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <size>(2,1)</size>
+    <defaultPlacingRot>2</defaultPlacingRot>
+    <comps>
+      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+        <colorChance>0.34</colorChance>
+        <colorDefs>
+          <li>Structure_White</li>
+          <li>Structure_GrayLight</li>
+          <li>Structure_Cream</li>
+          <li>Structure_Limestone</li>
+        </colorDefs>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_Lootbox">
+        <sound>CrateOpeningStarted</sound>
+        <openedGraphicdata>
+          <texPath>Things/Building/Crate/crateOpen</texPath>
+          <drawSize>(3,2)</drawSize>
+          <drawOffset>(0,0.01,0)</drawOffset>
+          <graphicClass>Graphic_Random</graphicClass>
+          <shaderType>Cutout</shaderType>
+          <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
+        </openedGraphicdata>
+        <loots>
+          <li>DMSAC_CrateLoots</li>
+          <li MayRequire="ceteam.combatextended">DMSAC_CrateLootsCE</li>
+        </loots>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseLootBox">
+    <defName>DMSAC_PackCrate</defName>
+    <label>military parcel</label>
+    <!-- 一個用於運輸軍用補給品的標準運輸包。裡面的內容物跟包裹本身似乎都是在最近才製造的，並隨著機兵部隊的任務被送到各處。 -->
+    <description>A Standard issue parcel containing supplies for military logistics. These parcel seemed to have been produced recently and sent to various locations.</description>
+		<rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <building>
+      <deconstructible>true</deconstructible>
+      <paintable>true</paintable>
+    </building>
+    <graphicData>
+      <texPath>Things/Building/Crate/packCrate</texPath>
+      <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0.01,0)</drawOffset>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <offset>(0,0,0)</offset>
+        <volume>(2,0.8,2)</volume>
+      </shadowData>
+    </graphicData>
+    <fillPercent>0.5</fillPercent>
+    <costList>
+      <Cloth>40</Cloth>
+    </costList>
+    <size>(2,2)</size>
+    <defaultPlacingRot>0</defaultPlacingRot>
+    <comps>
+      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+        <colorChance>1</colorChance>
+        <colorDefs>
+          <li>DMSAC_Structure_Green</li>
+          <li>DMSAC_Structure_Olive</li>
+          <li>DMSAC_Structure_Rust</li>
+          <li>Structure_GreenFaded</li>
+          <li>Structure_OrangePastel</li>
+          <li>Structure_Red</li>
+          <li>Structure_White</li>
+        </colorDefs>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="AncientCorps.ModExtension_Lootbox">
+        <sound>CrateOpeningStarted</sound>
+        <openedGraphicdata>
+          <texPath>Things/Building/Crate/packCrateOpen</texPath>
+          <drawSize>(3,3)</drawSize>
+          <graphicClass>Graphic_Random</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <onGroundRandomRotateAngle>5</onGroundRandomRotateAngle>
+          <shadowData>
+            <offset>(0,0,0)</offset>
+            <volume>(2,0.25,2)</volume>
+          </shadowData>
+        </openedGraphicdata>
+        <loots>
+          <li>DMSAC_PackLoots</li>
+        </loots>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Hole_Empty</defName>
+    <label>facility dormer</label>
+    <description>A structure flooring with a opened hole, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/hole</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(9,5)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <fillPercent>0</fillPercent>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <size>(7,3)</size>
+	  <useHitPoints>false</useHitPoints>
+	  <selectable>false</selectable>
+    <building>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_Hole_PowerGen</defName>
+    <label>facility power generator</label>
+    <description>A large power generation facility half buried in the structure, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/PowerGen/Generator</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(9,5)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <fillPercent>0</fillPercent>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <size>(7,3)</size>
+    <useHitPoints>true</useHitPoints>
+    <destroyable>true</destroyable>
+    <statBases>
+      <MaxHitPoints>2000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-7500</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(80,112,180,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>30</heatPerSecond>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="DMSAC_Wall" ParentName="DMSAC_BaseBuilding" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <rect>(0.35,0.1,0.3,0.7)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+      <shadowData>
+        <volume>(1, 0.5, 0.45)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Flammability>0</Flammability>
+      <WorkToBuild>135</WorkToBuild>
+      <MeditationFocusStrength>0.22</MeditationFocusStrength>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <holdsRoof>true</holdsRoof>
+    <blockWind>true</blockWind>
+    <blockLight>true</blockLight>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <coversFloor>true</coversFloor>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <fertility>0</fertility>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <paintable>false</paintable>
+      <isInert>true</isInert>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <ai_chillDestination>false</ai_chillDestination>
+      <supportsWallAttachments>true</supportsWallAttachments>
+    </building>
+    <comps>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Minimal</li>
+        </focusTypes>
+      </li>
+    </comps>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_Wall">
+    <defName>DMSAC_Wall_A</defName>
+    <label>facility wall</label>
+    <description>A structure with waterproof layers, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/Wall/Wall_Atlas_Concrete</texPath>
+    </graphicData>
+    <uiIconPath>Things/Building/Wall/Wall_Atlas_Concrete_UI</uiIconPath>
+    <building>
+      <paintable>true</paintable>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_Wall">
+    <defName>DMSAC_Wall_B</defName>
+    <label>facility wall</label>
+    <description>A structure with waterproof layers, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/Wall/Wall_Atlas_LoadBearing</texPath>
+    </graphicData>
+    <uiIconPath>Things/Building/Wall/Wall_Atlas_LoadBearing_UI</uiIconPath>
+    <building>
+      <paintable>true</paintable>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_Wall">
+    <defName>DMSAC_Wall_C</defName>
+    <label>facility wall</label>
+    <description>A structure with waterproof layers, commonly found in underground facilities.</description>
+    <graphicData>
+      <texPath>Things/Building/Wall/Wall_Atlas_Concrete_Icon</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <uiIconPath>Things/Building/Wall/Wall_Atlas_Concrete_Icon_UI</uiIconPath>
+    <building>
+      <paintable>true</paintable>
+      <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>DMSAC_RCFloor</defName>
+    <label>reinforced concrete floor</label>
+    <texturePath>Terrain/Surfaces/Concrete</texturePath>
+    <color>(140,140,140)</color>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>350</renderPrecedence>
+    <pathCost>1</pathCost>
+    <statBases>
+      <Beauty>-2</Beauty>
+      <BeautyOutdoors>0</BeautyOutdoors>
+    </statBases>
+    <scatterType>SoftGray</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+	  <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>0.00</fertility>
+    <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
+    <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
+    <pollutionColor>(1, 1, 1, 0.8)</pollutionColor>
+    <pollutionOverlayScale>(0.75, 0.75)</pollutionOverlayScale>
+  </TerrainDef>
+  
+  <ThingDef ParentName="DMSACDoorBase">
+    <defName>DMSAC_RCdoor</defName>
+    <label>facility door</label>
+    <description>Divides rooms. allows people to move through the door without slowing down.</description>
+    <statBases>
+      <WorkToBuild>1100</WorkToBuild>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/door/DMS_Door_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/door/DMS_Door_MenuIcon</uiIconPath>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSACLampBase">
+    <defName>DMSAC_WallLamp</defName>
+    <label>facility wall lamp</label>
+    <description>A wall-mounted lamp that lights an area using electricity. It is less powerful than a standing lamp, but can be mounted on walls.</description>
+    <rotatable>true</rotatable>
+    <graphicData>
+      <texPath>Things/Building/WallLamp/WallLamp</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+      <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+      <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/WallLamp/WallLamp_MenuIcon</uiIconPath>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <statBases>
+      <WorkToBuild>330</WorkToBuild>
+      <MaxHitPoints>35</MaxHitPoints>
+      <Mass>2</Mass>
+    </statBases>
+    <uiOrder>2991</uiOrder>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded IsNull="True" />
+    <pathCost>0</pathCost>
+    <building>
+      <isEdifice>false</isEdifice>
+      <isAttachment>true</isAttachment>
+    </building>
+    <placeWorkers>
+      <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+        <powerUpgrades>
+          <li>
+            <researchProject>ColoredLights</researchProject>
+            <factor>0.5</factor>
+          </li>
+        </powerUpgrades>
+      </li>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>11</glowRadius>
+        <glowColor>(214,148,94,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSACLampBase">
+    <defName>DMSAC_FloorLamp</defName>
+    <label>facility floor lamp</label>
+    <description>An emergency floor light with built-in energy source that can illuminate a small area.</description>
+    <designationHotKey>Misc11</designationHotKey>
+    <graphicData>
+      <texPath>Things/Building/DMSAC_FloorLamp/FloorLamp</texPath>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(140,140,140)</color>
+    </graphicData>
+    <costList>
+      <Steel>2</Steel>
+    </costList>
+    <holdsRoof>true</holdsRoof>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <passability>Standable</passability>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <WorkToBuild>330</WorkToBuild>
+      <Mass>2</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <uiOrder>2990</uiOrder>
+    <comps>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(214,148,94,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_GestaltEngine</defName>
+    <label>Centralized Command Core</label>
+    <!-- 一種用於指揮機兵大兵團的控制核心，具有獨自指揮並保障一支合成作戰旅的能力。 -->
+    <description>A command core used to coordinate large-scaled automatroid squads, it have the ability to independently command and support an entire combined combat brigade without any further assist.</description>
+    <graphicData>
+      <texPath>Things/Building/CentralCommandCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <shadowData>
+        <volume>(5.03,1.0,4.25)</volume>
+        <offset>(0,0,-0.25)</offset>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <defaultPlacingRot>0</defaultPlacingRot>
+    <uiIconPath>Things/Building/CentralCommandCore</uiIconPath>
+    <size>(5,5)</size>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <canOverlapZones>false</canOverlapZones>
+    <fillPercent>1</fillPercent>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <costList>
+      <Tungsteel>250</Tungsteel>
+      <Steel>350</Steel>
+      <Neurocomputer>6</Neurocomputer>
+      <ComponentControlChip>1</ComponentControlChip>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-3)</interactionCellOffset>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <ai_chillDestination>false</ai_chillDestination>
+      <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+      <deconstructible>false</deconstructible>
+    </building>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>30</glowRadius>
+        <glowColor>(180,100,100,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>40</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>TriggerObject</useJob>
+        <useLabel>disable local command</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <ignoreOtherReservations>true</ignoreOtherReservations>
+        <useDuration>1000</useDuration>
+        <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
+      </li>
+      <li Class="AncientCorps.CompProperties_UseEffect_DisableMechs">
+        <chance>0.25</chance>
+      </li>
+      <li Class="AncientCorps.CompProperties_UseEffect_LevelUpDefcon">
+        <chance>1</chance>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <delayTicks>500</delayTicks>
+        <spawnKilledLeavings>true</spawnKilledLeavings>
+        <effecterDef>MechbandBuildingDestroyed</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_BandNode</defName>
+    <label>Process Array</label>
+    <description>An array machine processes the received signal and directs it to a specific mechanitor. This adds 4 bandwidth to that mechanitor's total, allowing them to control more mechanoids.\n\nOnce a process array is constructed, it can be quickly tuned to a mechanitor. However, returning a band node to a different mechanitor takes significantly longer.\n\nThis Device follows the N.A.C.S. protocol so only Mechlinks with following the protocol can receieve the service.</description>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <fillPercent>0.7</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/computeArray</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(1.5, 0.35, 1.2)</volume>
+        <offset>(0, 0, 0)</offset>
+      </shadowData>
+    </graphicData>
+    <defaultPlacingRot>0</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>10000</WorkToBuild>
+      <Flammability>0.25</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </costList>
+    <comps>
+      <li Class="AncientCorps.CompProperties_Effector">
+        <effecter>BandNodeTuned</effecter>
+        <offset>(0,0,0)</offset>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(180,100,100,0)</glowColor>
+      </li>
+    </comps>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_ArcFurnace</defName>
+    <label>electirc arc furnace</label>
+    <description>A heavy machinery that recycles all sort of metallic pieces into steel, will generates a lot of heat.</description>
+    <graphicData>
+      <texPath>Things/Building/DMSACArcFurnace/building</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>7</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <fillPercent>0.9</fillPercent>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <size>(4,4)</size>
+	  <useHitPoints>false</useHitPoints>
+    <building>
+	 <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="DMSAC_BaseBuilding">
+    <defName>DMSAC_HeavyChem</defName>
+    <label>pyrolysis plant</label>
+    <description>A heavy machinery that recycles all sort of organic pieces into chemfuel, will generates a lot of heat.</description>
+    <graphicData>
+      <texPath>Things/Building/DMSACAutoChem/building</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>6</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <fillPercent>0.9</fillPercent>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    <size>(4,4)</size>
+	  <useHitPoints>false</useHitPoints>
+    <building>
+	 <isTargetable>false</isTargetable>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+  </ThingDef>
+</Defs>

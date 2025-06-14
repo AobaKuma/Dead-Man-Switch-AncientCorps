@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ColorDef ParentName="StructureColorBase">
+    <defName>DMSAC_Structure_Olive</defName>
+    <label>olive</label>
+    <color>(102, 105, 99)</color>
+    <displayOrder>999</displayOrder>
+  </ColorDef>
+
+  <ColorDef ParentName="StructureColorBase">
+    <defName>DMSAC_Structure_Green</defName>
+    <label>teal</label>
+    <color>(95, 94, 87)</color>
+    <displayOrder>999</displayOrder>
+  </ColorDef>
+
+  <ColorDef ParentName="StructureColorBase">
+    <defName>DMSAC_Structure_Rust</defName>
+    <label>rust red</label>
+    <color>(107, 97, 97)</color>
+    <displayOrder>999</displayOrder>
+  </ColorDef>
+</Defs>

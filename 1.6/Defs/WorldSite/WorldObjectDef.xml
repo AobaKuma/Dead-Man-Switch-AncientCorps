@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <WorldObjectDef>
+    <defName>DMSAC_LogisticTerminal</defName>
+    <label>logistic terminal</label>
+    <worldObjectClass>Site</worldObjectClass>
+    <texture>World/WorldObjects/JourneyDestination</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>70</expandingIconPriority>
+    <expandingIconDrawSize>0.8</expandingIconDrawSize>
+    <canBePlayerHome>false</canBePlayerHome>
+    <blockExitGridUntilBattleIsWon>true</blockExitGridUntilBattleIsWon>
+    <canHaveFaction>true</canHaveFaction>
+    <comps>
+      <li Class="WorldObjectCompProperties_Abandon" />
+      <li Class="WorldObjectCompProperties_TradeRequest" />
+      <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
+      <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
+        <MBTTime>15000</MBTTime>
+        <spawnCountSigma>2</spawnCountSigma>
+        <averagePawnCount>2</averagePawnCount>
+        <patrolCountToRaiseLevel>4</patrolCountToRaiseLevel>
+        <possibleGeneratePawn>
+          <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>1</DMS_Mech_Molot>
+          <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+        </possibleGeneratePawn>
+        <possibleGeneratePawn_Medium>
+          <DMS_Mech_Molot_Kamin>4</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>3</DMS_Mech_Molot>
+          <DMS_Mech_BattleWalker>2</DMS_Mech_BattleWalker>
+          <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+        </possibleGeneratePawn_Medium>
+        <possibleGeneratePawn_Heavy>
+          <DMS_Mech_Gorod>5</DMS_Mech_Gorod>
+          <DMS_Mech_Zabor>4</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>3</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+        </possibleGeneratePawn_Heavy>
+      </li>
+      <li Class="WorldObjectCompProperties_FormCaravan" />
+      <li Class="WorldObjectCompProperties_EnterCooldown" />
+    </comps>
+    <modExtensions>
+      <!-- **This is needed to be spawned at generation** -->
+      <li Class="KCSG.SpawnAtWorldGen">
+        <!-- Number to spawn-->
+        <spawnPartOfFaction>DMS_AncientCorps</spawnPartOfFaction>
+        <spawnCount>7</spawnCount>
+        <parts>
+          <li>DMSAC_LogisticTerminal</li>
+        </parts>
+        <disallowedBiomes>
+          <li>IceSheet</li>
+          <li>SeaIce</li>
+          <li>Lake</li>
+          <li>Ocean</li>
+          <li>TropicalRainforest</li>
+          <li>TropicalSwamp</li>
+          <li>TemperateSwamp</li>
+          <li>ColdBog</li>
+        </disallowedBiomes>
+      </li>
+    </modExtensions>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
+
+  <WorldObjectDef>
+    <defName>DMSAC_Graveyard</defName>
+    <label>automatroid graveyard</label>
+    <worldObjectClass>Site</worldObjectClass>
+    <texture>World/WorldObjects/JourneyDestination</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>70</expandingIconPriority>
+    <expandingIconDrawSize>0.8</expandingIconDrawSize>
+    <canBePlayerHome>false</canBePlayerHome>
+    <blockExitGridUntilBattleIsWon>true</blockExitGridUntilBattleIsWon>
+    <canHaveFaction>true</canHaveFaction>
+    <comps>
+      <li Class="WorldObjectCompProperties_Abandon" />
+      <li Class="WorldObjectCompProperties_TradeRequest" />
+      <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
+      <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
+        <possibleGeneratePawn>
+          <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>1</DMS_Mech_Molot>
+          <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+        </possibleGeneratePawn>
+        <possibleGeneratePawn_Medium>
+          <DMS_Mech_Molot_Kamin>4</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>3</DMS_Mech_Molot>
+          <DMS_Mech_BattleWalker>2</DMS_Mech_BattleWalker>
+          <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+        </possibleGeneratePawn_Medium>
+        <possibleGeneratePawn_Heavy>
+          <DMS_Mech_Gorod>5</DMS_Mech_Gorod>
+          <DMS_Mech_Zabor>4</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>3</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+        </possibleGeneratePawn_Heavy>
+      </li>
+      <li Class="WorldObjectCompProperties_FormCaravan" />
+      <li Class="WorldObjectCompProperties_EnterCooldown" />
+    </comps>
+    <modExtensions>
+      <!-- **This is needed to be spawned at generation** -->
+      <li Class="KCSG.SpawnAtWorldGen">
+        <!-- Number to spawn-->
+        <spawnPartOfFaction>DMS_AncientCorps</spawnPartOfFaction>
+        <spawnCount>3</spawnCount>
+        <parts>
+          <li>DMSAC_Graveyard</li>
+        </parts>
+        <disallowedBiomes>
+          <li>IceSheet</li>
+          <li>SeaIce</li>
+          <li>Lake</li>
+          <li>Ocean</li>
+          <li>TropicalRainforest</li>
+          <li>TropicalSwamp</li>
+          <li>TemperateSwamp</li>
+          <li>ColdBog</li>
+        </disallowedBiomes>
+      </li>
+    </modExtensions>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
+
+  
+  <WorldObjectDef>
+    <defName>DMSAC_FacilityEnterance</defName>
+    <label>underground facility</label>
+    <worldObjectClass>Site</worldObjectClass>
+    <texture>World/WorldObjects/JourneyDestination</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>70</expandingIconPriority>
+    <expandingIconDrawSize>0.8</expandingIconDrawSize>
+    <canBePlayerHome>false</canBePlayerHome>
+    <blockExitGridUntilBattleIsWon>true</blockExitGridUntilBattleIsWon>
+    <canHaveFaction>true</canHaveFaction>
+    <comps>
+      <li Class="WorldObjectCompProperties_Abandon" />
+      <li Class="WorldObjectCompProperties_TradeRequest" />
+      <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
+      <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
+        <possibleGeneratePawn>
+          <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>1</DMS_Mech_Molot>
+          <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+          <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
+          <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+        </possibleGeneratePawn>
+        <possibleGeneratePawn_Medium>
+          <DMS_Mech_Molot_Kamin>4</DMS_Mech_Molot_Kamin>
+          <DMS_Mech_Molot>3</DMS_Mech_Molot>
+          <DMS_Mech_BattleWalker>2</DMS_Mech_BattleWalker>
+          <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+        </possibleGeneratePawn_Medium>
+        <possibleGeneratePawn_Heavy>
+          <DMS_Mech_Gorod>5</DMS_Mech_Gorod>
+          <DMS_Mech_Zabor>4</DMS_Mech_Zabor>
+          <DMS_Mech_Zabor_Shkatulka>3</DMS_Mech_Zabor_Shkatulka>
+          <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
+        </possibleGeneratePawn_Heavy>
+      </li>
+      <li Class="WorldObjectCompProperties_FormCaravan" />
+      <li Class="WorldObjectCompProperties_EnterCooldown" />
+    </comps>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags>
+  </WorldObjectDef>
+</Defs>

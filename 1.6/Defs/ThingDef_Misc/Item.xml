@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!-- Boss召喚器 -->
+  <ThingDef ParentName="ResourceBase" Name="DMSAC_SiteIntel" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <tickerType>Normal</tickerType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>0.2</Mass>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Flammability>0.2</Flammability>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <delayTicks>120</delayTicks>
+        <spawnKilledLeavings>false</spawnKilledLeavings>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_SiteIntel"> 
+    <defName>DMSAC_FacilityIntel</defName>
+    <label>facility intel</label>
+    <description>A data blackbox, which is designed to storage the operation record of an automatroid, by this it is not hard to find the information about the location of military facility it comes from.</description>
+    <graphicData>
+      <texPath>Things/Resource/BlackBox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.25</drawSize>
+    </graphicData>
+    <comps>  
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Analyzing facility intel</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <useDuration>900</useDuration>
+        <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
+      </li>
+      <li Class="CompProperties_UseEffectGiveQuest">
+        <quest>DMSAC_OpportunitySite_Graveyard</quest>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="DMSAC_SiteIntel"> 
+    <defName>DMSAC_SiteIntel</defName>
+    <label>site intel</label>
+    <description>An intel map about the location of a small military site, which is one of the countless pieces of information gathered by scavengers or pirates at that time when dealing with these ancient machines that had existed in this planet for hundreds of years.</description>
+    <graphicData>
+      <texPath>Things/Resource/DMSAC_Intel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>  
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Analyzing facility intel</useLabel>
+        <useDuration>120</useDuration>
+        <showUseGizmo>true</showUseGizmo>
+        <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
+      </li>
+      <li Class="CompProperties_UseEffectGiveQuest">
+        <quest>DMSAC_OpportunitySite_LogisticTerminal</quest>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase"> 
+    <defName>DMSAC_Kit_Electronic</defName>
+    <label>Electronic repair kit</label>
+    <description>A set of tool consumables for repairing and restarting the electronic system of an automatroid, including a micro pulse battery for restarting the automatroid. Such a forced restart doesn't restore the damaged structure, and a strong electric surge might leave structural damage. Such hidden dangers can only be repaired by a total factory reassembling.</description>
+    <graphicData>
+      <texPath>Things/Resource/DMS_Kit_Electric</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>ThingWithComps</thingClass>
+    <tickerType>Normal</tickerType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>5</Mass>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Flammability>0.2</Flammability>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>reboot mech</useLabel>
+        <useDuration>300</useDuration>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_Targetable">
+        <compClass>AncientCorps.CompTargetable_SingleMechCorpse</compClass>
+        <nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
+      </li>
+      <li Class="CompProperties_TargetEffectResurrect">
+        <compClass>AncientCorps.CompTargetEffect_ResurrectMech</compClass>
+      </li>
+      <li Class="AncientCorps.CompProperties_TargetEffect_AddHediffChance">
+        <sideHediffDef>DMSAC_StructuralDamage</sideHediffDef>
+        <chance>.1</chance>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase"> 
+    <defName>DMSAC_Kit_Mechanic</defName>
+    <label>Mechanic repair kit</label>
+    <description>A set of mechanical repair tools used to temporarily repair damaged parts of mechas on the front-line battlefield. It is simple to operate and can be reused, so non-mechanical front-line personnel can repair automatroids. However, there is a small chance that such a temporary repair will leave some parts with structural damage. Such hidden dangers can only be repaired by a total factory reassembling.</description>
+    <graphicData>
+      <texPath>Things/Resource/DMS_Kit_Repair</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>ThingWithComps</thingClass>
+    <tickerType>Normal</tickerType>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>7.5</Mass>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Flammability>0.2</Flammability>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>repair mech</useLabel>
+        <useDuration>150</useDuration>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_Targetable">
+        <compClass>AncientCorps.CompTargetable_SingleMech</compClass>
+      </li>
+      <li Class="CompProperties_TargetEffectResurrect">
+        <compClass>AncientCorps.CompTargetEffect_RepairMech</compClass>
+      </li>
+      <li Class="AncientCorps.CompProperties_TargetEffect_AddHediffChance">
+        <sideHediffDef>DMSAC_StructuralDamage</sideHediffDef>
+        <chance>.01</chance>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <JobDef>
+    <defName>DMS_ResurrectMech</defName>
+    <driverClass>AncientCorps.JobDriver_ResurrectMech</driverClass>
+    <reportString>rebooting TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

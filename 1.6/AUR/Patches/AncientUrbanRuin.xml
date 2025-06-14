@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/AncientMarket_Libraray.CustomMapDataDef[*]/pawns</xpath>
+                <value>
+                    <DMS_Mech_Mushketer_AR>1</DMS_Mech_Mushketer_AR>
+                    <DMS_Mech_Molot_Mosta>1</DMS_Mech_Molot_Mosta>
+                    <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

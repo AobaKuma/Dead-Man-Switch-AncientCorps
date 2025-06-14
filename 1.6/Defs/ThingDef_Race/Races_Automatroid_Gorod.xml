@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseAncientAutomatroidRace">
+    <defName>DMS_Mech_Gorod</defName>
+    <label>gorod</label>
+    <description>6M29 / BR4 "Gorod", NATO nicknamed "ChunkSteel". It is a burly, heavily armored automatroid, designed as a cost-effective and durable mechanical infantry. Thanks to its outstanding systems engineering, modernized variants of this model continue to serve in many Midworld militaries today. It has also become a highly sought-after model for replication and production by local warlords and pirates in the Rimworld.</description>
+    <statBases>
+      <MoveSpeed>2.5</MoveSpeed><!--移動速度-->
+      <AimingDelayFactor>1.5</AimingDelayFactor>
+      <StaggerDurationFactor>0.35</StaggerDurationFactor>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp><!--銳抗-->
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt><!--鈍抗-->
+      <ArmorRating_Heat>0.8</ArmorRating_Heat>  <!--能抗-->
+      <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>        <!--帶寬消耗-->
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">2</WastepacksPerRecharge><!--充電/培養時產出廢料-->
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>10</mechFixedSkillLevel>
+      <body>DMS_Humanoid_Soldat</body>
+      <nameGenerator>DMS_AncientMechHeavy</nameGenerator>
+      <baseBodySize>2.25</baseBodySize>
+      <baseHealthScale>2</baseHealthScale>
+      <mechWeightClass>Heavy</mechWeightClass>
+    </race>
+    <comps>
+		  <li Class="DMS.CompProperties_VehicleWeapon">
+        <drawData>
+          <dataEast>
+            <offset>(0.2,0,-0.3)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.2,0,0.6)</offset>
+            <layer>-20</layer>
+          </dataWest>
+          <dataSouth>
+              <offset>(-0.7,0,0.2)</offset>
+          </dataSouth>
+          <dataNorth> 
+              <offset>(0.7,0,0.2)</offset>
+          </dataNorth>
+        </drawData>
+			  <turretRotationFollowPawn>true</turretRotationFollowPawn>			  
+        <rotationSmoothTime>0.12</rotationSmoothTime>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="DMS.MechWeaponExtension">
+        <EnableWeaponFilter>true</EnableWeaponFilter>
+        <UsableWeaponTags> 
+          <li>SimpleGun</li>
+          <li MayRequire="vanillaexpanded.vwehw">HeavyGun</li><!--重型武器拓展-->
+          <li>DMS_MechWeaponLongRifle</li>
+          <li>DMS_MechWeaponLight</li>
+          <li>A_BR_LongRifle</li>
+          <li>GrenadeSmoke</li>
+          <li>A_MG_Heavy</li>
+          <li>A_SuppressWeapon</li>
+          <li>ShortShots</li>
+        </UsableWeaponTags>
+        <EnableTechLevelFilter>true</EnableTechLevelFilter>
+        <UsableTechLevels>
+          <li>Industrial</li>
+        </UsableTechLevels>
+        <BypassUsableWeapons/>
+      </li>
+    </modExtensions>
+    <butcherProducts>
+      <DMS_ChunkSlag>1</DMS_ChunkSlag>
+      <Steel>30</Steel>
+    </butcherProducts>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseAncientAutomatroidKind" Name="DMS_BaseGorodKind">
+    <defName>DMS_Mech_Gorod</defName>
+    <label>BR-4 "Gorod"</label>
+    <race>DMS_Mech_Gorod</race>
+    <nameMaker>DMS_AncientMechHeavy</nameMaker>
+    <isFighter>true</isFighter>
+    <combatPower>400</combatPower>
+    <maxPerGroup>3</maxPerGroup>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/gorod</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/gorod</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags Inherit="False">
+      <li>A_MG_Heavy</li>
+      <li>A_SuppressWeapon</li>
+			<li>DMS_AerialAutocannon</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <!-- 短號手 -->
+  <PawnKindDef ParentName="DMS_BaseGorodKind">
+    <defName>DMS_Mech_Gorod_Cornetist</defName>
+    <label>BR-4/UKS "Cornetist"</label>
+    <combatPower>600</combatPower>
+    <weaponTags Inherit="False">
+			<li>DMS_VladimirovMachineGun</li>
+			<li>DMS_AerialAutocannon</li>
+    </weaponTags>
+    <lifeStages Inherit="false">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/cornetist</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/cornetist</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>DMSAC_ATGMLauncher</li>
+    </abilities>
+  </PawnKindDef>
+
+  <!-- 風琴手 -->
+  <PawnKindDef ParentName="DMS_BaseGorodKind">
+    <defName>DMS_Mech_Gorod_Organist</defName>
+    <label>BR-4/MMR "Organist"</label>
+    <combatPower>400</combatPower>
+    <weaponTags Inherit="False">
+			<li>A_SG_LongRifle</li>
+    </weaponTags>
+    <lifeStages Inherit="false">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/organist</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/organist</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>DMSAC_ExplosiveFlamer</li>
+    </abilities>
+  </PawnKindDef>
+  
+  <!-- 吹笛人 -->
+  <PawnKindDef ParentName="DMS_BaseGorodKind">
+    <defName>DMS_Mech_Gorod_Piper</defName>
+    <label>BR-4/HR "Piper"</label>
+    <combatPower>300</combatPower>
+    <weaponTags Inherit="False">
+			<li>DMS_VladimirovMachineGun</li>
+			<li>DMS_AerialAutocannon</li>
+			<li>YAKB</li>
+    </weaponTags>
+    <lifeStages Inherit="false">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/piper</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/piper</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.3</drawSize>
+          <shadowData>
+            <volume>(1.25,1,1.25)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <extraSkillLevels>10</extraSkillLevels>
+  </PawnKindDef>
+</Defs>

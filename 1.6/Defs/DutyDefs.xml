@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <DutyDef>
+        <defName>DMS_XF_Bodyguard</defName>
+        <alwaysShowWeapon>true</alwaysShowWeapon>
+        <thinkNode Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="AncientCorps.JobGiver_FollowDefendedTarget"/>
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>Abilities_Aggressive</treeDef>
+                </li>
+                <li Class="AncientCorps.JobGiver_AIFightEnemiesWhenDefending">
+                    <targetAcquireRadius>45</targetAcquireRadius>
+                    <targetKeepRadius>60</targetKeepRadius>
+                </li>
+                <li Class="AncientCorps.JobGiver_AITrashColonyDoorClose" />
+                <!-- <li Class="AncientCorps.JobGiver_AIDisarmingDistant" /> -->
+                <li Class="JobGiver_AIGotoNearestHostile" />
+                <li Class="AncientCorps.JobGiver_AIDisarmingDistant">
+                    <attackAllInert>true</attackAllInert>
+                </li>
+                <li Class="JobGiver_AISapper">
+                    <canMineNonMineables>false</canMineNonMineables>
+                </li>
+            </subNodes>
+        </thinkNode>
+    </DutyDef>
+    
+    <DutyDef>
+        <defName>DMS_XF_ExitAndPickUpTeammates</defName>
+        <thinkNode Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="AncientCorps.JobGiver_PickUpDefendedTarget"/>
+                <li Class="AncientCorps.JobGiver_PickUpTeammates"/>
+                <li Class="JobGiver_AIDefendSelf">
+                    <targetAcquireRadius>35</targetAcquireRadius>
+                    <targetKeepRadius>40</targetKeepRadius>
+                </li>
+                <li Class="JobGiver_ExitMapBest">
+                    <defaultLocomotion>Sprint</defaultLocomotion>
+                    <jobMaxDuration>120</jobMaxDuration>
+                </li>
+            </subNodes>
+        </thinkNode>
+    </DutyDef>
+</Defs>
