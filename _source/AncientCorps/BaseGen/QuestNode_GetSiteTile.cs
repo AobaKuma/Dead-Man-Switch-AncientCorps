@@ -43,7 +43,7 @@ namespace AncientCorps
             }
         }
 
-        private bool TryFindTile(Slate slate, out int tile)
+        private bool TryFindTile(Slate slate, out PlanetTile tile)
         {
             int nearThisTile = (slate.Get<Map>("map") ?? Find.RandomPlayerHomeMap)?.Tile ?? (-1);
             int num = int.MaxValue;
@@ -68,10 +68,10 @@ namespace AncientCorps
             }
             TileFinderMode tileFinderMode = (preferCloserTiles.GetValue(slate) ? TileFinderMode.Near : TileFinderMode.Random);
 
-            var t = TileFinder.TryFindPassableTileWithTraversalDistance(nearThisTile, var.min, var.max, out tile, (int x) => !Find.WorldObjects.AnyWorldObjectAt(x) && TileFinder.IsValidTileForNewSettlement(x) && !Find.WorldGrid.tiles[x].Roads.NullOrEmpty() && (!Find.World.Impassable(x) || Find.WorldGrid[x].WaterCovered), ignoreFirstTilePassability: false, tileFinderMode, canTraverseImpassable: true);
+            var t = TileFinder.TryFindPassableTileWithTraversalDistance(nearThisTile, var.min, var.max, out tile, (PlanetTile x) => !Find.WorldObjects.AnyWorldObjectAt(x) && TileFinder.IsValidTileForNewSettlement(x) && (!Find.World.Impassable(x) || Find.WorldGrid[x].WaterCovered), ignoreFirstTilePassability: false, tileFinderMode, canTraverseImpassable: true);
             if (t) return true;
             else
-            return TileFinder.TryFindNewSiteTile(out tile, var.min, var.max, allowCaravans.GetValue(slate), tileFinderMode, nearThisTile);
+                return TileFinder.TryFindNewSiteTile(out tile, var.min, var.max, allowCaravans.GetValue(slate), null, 0.5f, true, tileFinderMode);
         }
     }
 }

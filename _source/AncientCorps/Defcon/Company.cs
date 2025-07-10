@@ -105,7 +105,7 @@ namespace AncientCorps
                 {
                     AncientCorpsUltility.TriggerTakeover(targetSettlement);
 
-                    List<int> neighboringTiles = new List<int>();
+                    List<PlanetTile> neighboringTiles = new List<PlanetTile>();
                     Find.WorldGrid.GetTileNeighbors(targetSettlement.Tile, neighboringTiles);
                     var t = neighboringTiles.ClosestTileTo(this.Tile);
                     Tile = (t != -1) ? t : Tile;
@@ -124,7 +124,7 @@ namespace AncientCorps
                     destroyedSettlement.Tile = targetSettlement.Tile;
                     Find.WorldObjects.Add(destroyedSettlement);
 
-                    List<int> neighboringTiles = new List<int>();
+                    List<PlanetTile> neighboringTiles = new List<PlanetTile>();
                     Find.WorldGrid.GetTileNeighbors(targetSettlement.Tile, neighboringTiles);
                     Tile = neighboringTiles.ClosestTileTo(destroyedSettlement.Tile);
                     targetSettlement.Destroy();

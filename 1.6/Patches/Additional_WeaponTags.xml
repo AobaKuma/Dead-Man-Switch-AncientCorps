@@ -11,7 +11,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[
                     defName="DMS_Mech_Dogge"
-                    ]/modExtensions/li[@Class="DMS.MechWeaponExtension"]/UsableWeaponTags</xpath>
+                    ]/modExtensions/li[@Class="Fortified.MechWeaponExtension"]/UsableWeaponTags</xpath>
                 <value>
                     <li>DMS_PKM</li>
                     <li>DMS_ZlobinRifle</li>
@@ -23,7 +23,7 @@
                 <xpath>Defs/ThingDef[
                     defName="DMS_Mech_Phalanx" or 
                     defName="DMS_Mech_Pioneer"
-                    ]/modExtensions/li[@Class="DMS.MechWeaponExtension"]/UsableWeaponTags</xpath>
+                    ]/modExtensions/li[@Class="Fortified.MechWeaponExtension"]/UsableWeaponTags</xpath>
                 <value>
                     <li>DMS_PKM</li>
                 </value>
@@ -36,7 +36,7 @@
                     defName="DMS_Mech_Arquebusier" or
                     defName="DMS_Mech_Protector" or
                     defName="DMS_Mech_Pioneer"
-                    ]/modExtensions/li[@Class="DMS.MechWeaponExtension"]/UsableWeaponTags</xpath>
+                    ]/modExtensions/li[@Class="Fortified.MechWeaponExtension"]/UsableWeaponTags</xpath>
                 <value>
                     <li>DMS_ZlobinRifle</li>
                 </value>

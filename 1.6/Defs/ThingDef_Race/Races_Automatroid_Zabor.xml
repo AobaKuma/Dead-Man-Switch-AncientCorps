@@ -23,7 +23,7 @@
       <mechWeightClass>Heavy</mechWeightClass>
     </race>
     <comps>
-		  <li Class="DMS.CompProperties_VehicleWeapon">
+		  <li Class="Fortified.CompProperties_VehicleWeapon">
         <drawData>
           <dataEast>
             <offset>(0.2,0,-0.3)</offset>
@@ -44,7 +44,7 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="DMS.MechWeaponExtension">
+      <li Class="Fortified.MechWeaponExtension">
         <EnableWeaponFilter>true</EnableWeaponFilter>
         <UsableWeaponTags> 
           <li>SimpleGun</li>

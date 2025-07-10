@@ -36,7 +36,7 @@
       </detritusLeavings>
     </race>
     <comps>
-      <li Class="DMS.CompProperties_VehicleWeapon">
+      <li Class="Fortified.CompProperties_VehicleWeapon">
         <drawData>
           <dataEast>
             <offset>(-0.25,0,1)</offset>
@@ -61,7 +61,7 @@
         <turretRotationFollowPawn>true</turretRotationFollowPawn>
         <rotationSmoothTime>0.25</rotationSmoothTime>
       </li>
-      <li Class="DMS.CompPropertiesMultipleTurretGun">
+      <li Class="Fortified.CompPropertiesMultipleTurretGun">
         <subTurrets>
           <li>
             <ID>forward machinegun</ID>
@@ -72,8 +72,8 @@
             <IdleAngleOffset>180</IdleAngleOffset>
             <renderNodeProperties>
               <li>
-                <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
-                <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                <nodeClass>Fortified.PawnRenderNode_SubTurretGun</nodeClass>
+                <workerClass>Fortified.PawnRenderNodeWorker_SubTurretGun</workerClass>
                 <parentTagDef>Body</parentTagDef>
                 <drawSize>1.75</drawSize>
                 <baseLayer>-5</baseLayer>

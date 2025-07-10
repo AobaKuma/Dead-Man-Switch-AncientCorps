@@ -22,7 +22,7 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
-			<li Class="AncientCorps.CompProperties_ActiveProtectionSystem">
+			<li Class="Fortified.CompProperties_ActiveProtectionSystem">
 				<Radius>16</Radius>
 				<chanceToFail>0.97</chanceToFail>
 				<spawnLeaving>Filth_Ash</spawnLeaving>
@@ -150,7 +150,7 @@
 			<ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
 			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 			<ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
-			<verbClass>DMS.Verb_CastAbilityArcSprayProjectile</verbClass>
+			<verbClass>Fortified.Verb_CastAbilityArcSprayProjectile</verbClass>
 			<defaultProjectile>DMSAC_Bullet_S8Rocket</defaultProjectile>
 			<warmupTime>3</warmupTime>
 			<minRange>19.9</minRange>

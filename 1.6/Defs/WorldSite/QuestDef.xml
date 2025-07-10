@@ -73,7 +73,7 @@
           <sitePartDefs>$sitePartDefs</sitePartDefs>
         </li>
         
-        <li Class="VFECore.QuestNode_GetFaction">
+        <li Class="VEF.Storyteller.QuestNode_GetFaction">
           <allowEnemy>true</allowEnemy>
           <storeAs>siteFaction</storeAs>
           <factionDef>DMS_AncientCorps</factionDef>
@@ -165,24 +165,21 @@
           <def>Util_AdjustPointsForDistantFight</def>
         </li>
         <li Class="QuestNode_GetMap" />
-        <li Class="QuestNode_IsSet">
-          <name>asker</name>
-          <elseNode Class="QuestNode_RandomNode">
-            <nodes>
-              <li Class="QuestNode_Set">
-                <name>askerIsNull</name>
-                <value>true</value>
-                <selectionWeight>0.4</selectionWeight>
-              </li>
-              <li Class="QuestNode_GetPawn">
-                <storeAs>asker</storeAs>
-                <mustBeFactionLeader>true</mustBeFactionLeader>
-                <mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
-                <hostileWeight>0.15</hostileWeight>
-                <selectionWeight>0.6</selectionWeight>
-              </li>
-            </nodes>
-          </elseNode>
+        <li Class="QuestNode_RandomNode">
+          <nodes>
+            <li Class="QuestNode_Set">
+              <name>askerIsNull</name>
+              <value>true</value>
+              <selectionWeight>0.2</selectionWeight>
+            </li>
+            <li Class="QuestNode_GetPawn">
+              <storeAs>asker</storeAs>
+              <mustBeFactionLeader>true</mustBeFactionLeader>
+              <mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+              <hostileWeight>0.15</hostileWeight>
+              <selectionWeight>0.3</selectionWeight>
+            </li>
+          </nodes>
         </li>
         <li Class="QuestNode_GetSiteTile">
           <storeAs>siteTile</storeAs>
@@ -191,7 +188,7 @@
           <sitePartDefs>$sitePartDefs</sitePartDefs>
         </li>
         
-        <li Class="VFECore.QuestNode_GetFaction">
+        <li Class="VEF.Storyteller.QuestNode_GetFaction">
 					<allowEnemy>true</allowEnemy>
 					<storeAs>siteFaction</storeAs>
 					<factionDef>DMS_AncientCorps</factionDef>
@@ -345,7 +342,7 @@
           <preferCloserTiles>false</preferCloserTiles>
           <sitePartDefs>$sitePartDefs</sitePartDefs>
         </li>
-        <li Class="VFECore.QuestNode_GetFaction">
+        <li Class="VEF.Storyteller.QuestNode_GetFaction">
 					<allowEnemy>true</allowEnemy>
 					<storeAs>siteFaction</storeAs>
 					<factionDef>DMS_AncientCorps</factionDef>

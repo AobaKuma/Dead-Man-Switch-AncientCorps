@@ -36,7 +36,7 @@
       </detritusLeavings>
     </race>
     <comps>
-      <li Class="DMS.CompProperties_VehicleWeapon">
+      <li Class="Fortified.CompProperties_VehicleWeapon">
         <drawData>
           <dataEast>
             <offset>(0.6,0,-0.6)</offset>
@@ -55,7 +55,7 @@
         <turretRotationFollowPawn>true</turretRotationFollowPawn>
         <rotationSmoothTime>0.12</rotationSmoothTime>
       </li>
-      <li Class="DMS.CompPropertiesMultipleTurretGun">
+      <li Class="Fortified.CompPropertiesMultipleTurretGun">
         <subTurrets>
           <li>
             <ID>forward machinegun</ID>
@@ -65,8 +65,8 @@
             <angleOffset>-90</angleOffset>
             <renderNodeProperties>
               <li>
-                <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
-                <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                <nodeClass>Fortified.PawnRenderNode_SubTurretGun</nodeClass>
+                <workerClass>Fortified.PawnRenderNodeWorker_SubTurretGun</workerClass>
                 <parentTagDef>Body</parentTagDef>
                 <drawSize>1.75</drawSize>
                 <baseLayer>-5</baseLayer>
@@ -97,8 +97,8 @@
             <angleOffset>-90</angleOffset>
             <renderNodeProperties>
               <li>
-                <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
-                <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                <nodeClass>Fortified.PawnRenderNode_SubTurretGun</nodeClass>
+                <workerClass>Fortified.PawnRenderNodeWorker_SubTurretGun</workerClass>
                 <parentTagDef>Body</parentTagDef>
                 <drawSize>2</drawSize>
                 <baseLayer>20</baseLayer>
@@ -132,8 +132,8 @@
             <IdleAngleOffset>-51</IdleAngleOffset>
             <renderNodeProperties>
               <li>
-                <nodeClass>DMS.PawnRenderNode_SubTurretGun</nodeClass>
-                <workerClass>DMS.PawnRenderNodeWorker_SubTurretGun</workerClass>
+                <nodeClass>Fortified.PawnRenderNode_SubTurretGun</nodeClass>
+                <workerClass>Fortified.PawnRenderNodeWorker_SubTurretGun</workerClass>
                 <parentTagDef>Body</parentTagDef>
                 <drawSize>0.75</drawSize>
                 <baseLayer>20</baseLayer>
@@ -160,7 +160,7 @@
           </li>
         </subTurrets>
       </li>
-      <li Class="DMS.CompProperties_MeleeSweep">
+      <li Class="Fortified.CompProperties_MeleeSweep">
         <damageDef>Blunt</damageDef>
         <damage>40</damage>
         <armorPenetration>0.5</armorPenetration>
@@ -169,7 +169,7 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="DMS.MechWeaponExtension">
+      <li Class="Fortified.MechWeaponExtension">
         <EnableWeaponFilter>true</EnableWeaponFilter>
         <UsableWeaponTags>
           <li MayRequire="vanillaexpanded.vwehw">HeavyGun</li><!--重型武器拓展-->

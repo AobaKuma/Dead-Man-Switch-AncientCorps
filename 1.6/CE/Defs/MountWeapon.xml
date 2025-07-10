@@ -33,7 +33,7 @@
 			</li>
 		</verbs>
 		<modExtensions>
-			<li Class="DMS.HeavyEquippableExtension">
+			<li Class="Fortified.HeavyEquippableExtension">
 				<EquippableDef>MountedWeapon</EquippableDef>
 			</li>
             <li Class="CombatExtended.GunDrawExtension">
@@ -83,7 +83,7 @@
 			</li>
 		</verbs>
 		<modExtensions>
-			<li Class="DMS.HeavyEquippableExtension">
+			<li Class="Fortified.HeavyEquippableExtension">
 				<EquippableDef>MountedWeapon</EquippableDef>
 			</li>
 		</modExtensions>

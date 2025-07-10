@@ -352,15 +352,15 @@ namespace AncientCorps
             //根據警戒等級生成單位。
             (worldObject as Company).SetCompany(DefDatabase<CompanyDef>.AllDefsListForReading.Where(c => Level >= c.defconRating).RandomElement());
 
-            int result = -1;
+            PlanetTile result = -1;
             if (result == -1)
             {
-                if (!TileFinder.TryFindNewSiteTile(out result, maxDist: 19, allowCaravans: true, nearThisTile: target.Tile))
+                if (!TileFinder.TryFindNewSiteTile(out result, maxDist: 19, allowCaravans: true))
                 {
                     result = -1;
                 }
             }
-            else if (Find.WorldObjects.AnyWorldObjectAt(result) && !TileFinder.TryFindPassableTileWithTraversalDistance(result, 1, 50, out result, (int x) => !Find.WorldObjects.AnyWorldObjectAt(x), ignoreFirstTilePassability: false, TileFinderMode.Near))
+            else if (Find.WorldObjects.AnyWorldObjectAt(result) && !TileFinder.TryFindPassableTileWithTraversalDistance(result, 1, 50, out result, (PlanetTile x) => !Find.WorldObjects.AnyWorldObjectAt(x), ignoreFirstTilePassability: false, TileFinderMode.Near))
             {
                 result = -1;
             }

@@ -213,7 +213,7 @@
         </startWickOnDamageTaken>
         <wickTicks>30~60</wickTicks>
       </li>
-      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+      <li Class="Fortified.CompProperties_RandomColorOnSpawn">
         <colorChance>1</colorChance>
         <colorDefs>
           <li>DMSAC_Structure_Olive</li>
@@ -257,7 +257,7 @@
       <ChunkSlagSteel>2~4</ChunkSlagSteel>
     </killedLeavingsRanges>
     <comps>
-      <li Class="AncientCorps.CompProperties_Effector">
+      <li Class="Fortified.CompProperties_Effector">
         <effecter>DMSAC_AirExhaust</effecter>
         <offset>(0,0,0.5)</offset>
       </li>
@@ -315,6 +315,9 @@
       </shadowData>
 		</graphicData>
 		<size>(9,9)</size>
+    <building>
+      <isTargetable>false</isTargetable>
+    </building>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <fillPercent>0</fillPercent>
     <useHitPoints>false</useHitPoints>
@@ -375,6 +378,9 @@
       </shadowData>
 		</graphicData>
 		<size>(9,9)</size>
+    <building>
+      <isTargetable>false</isTargetable>
+    </building>
     <ignoreConfigErrors>true</ignoreConfigErrors>
     <fillPercent>0</fillPercent>
     <useHitPoints>false</useHitPoints>
@@ -514,7 +520,7 @@
 
   <!-- 可以駭入的殘骸，以及相關工作。 -->
   <ThingDef ParentName="DMSAC_BaseBuilding" Name="BaseDeactivatedMech" Abstract="true">
-    <thingClass>AncientCorps.Building_DeactivatedMech</thingClass>
+    <thingClass>Fortified.Building_DeactivatedMech</thingClass>
     <description>a derelict automatroid that has decommissioned due to severe aging or heavy damage. its instruments were partially removed. waiting for people to discover its remaining value.</description>
     <graphicData>
       <texPath>Things/Building/derelict</texPath>
@@ -539,7 +545,7 @@
     </graphicData>
     <size>(3,3)</size>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+      <li Class="Fortified.ModExtension_DeactivatedMech">
         <possibleGeneratePawn>
           <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
           <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
@@ -584,7 +590,7 @@
     </graphicData>
     <size>(2,2)</size>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+      <li Class="Fortified.ModExtension_DeactivatedMech">
         <possibleGeneratePawn>
           <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
           <DMS_Mech_Molot_Reservoir>2</DMS_Mech_Molot_Reservoir>
@@ -631,7 +637,7 @@
     </graphicData>
     <size>(1,1)</size>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+      <li Class="Fortified.ModExtension_DeactivatedMech">
         <possibleGeneratePawn>
           <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
           <DMS_Mech_Molot_Kamin>0.5</DMS_Mech_Molot_Kamin>
@@ -661,7 +667,7 @@
     <label>large inactivated automatroid</label>
     <size>(3,3)</size>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+      <li Class="Fortified.ModExtension_DeactivatedMech">
         <possibleGeneratePawn>
           <DMS_Mech_Krepost>1</DMS_Mech_Krepost>
           <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
@@ -702,7 +708,7 @@
     <label>medium inactivated automatroid</label>
     <size>(2,2)</size>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+      <li Class="Fortified.ModExtension_DeactivatedMech">
         <possibleGeneratePawn>
           <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
           <DMS_Mech_Molot_Reservoir>2</DMS_Mech_Molot_Reservoir>
@@ -746,7 +752,7 @@
     <label>small inactivated automatroid</label>
     <size>(1,1)</size>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_DeactivatedMech">
+      <li Class="Fortified.ModExtension_DeactivatedMech">
         <possibleGeneratePawn>
           <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
           <DMS_Mech_Molot_Kamin>0.5</DMS_Mech_Molot_Kamin>
@@ -770,7 +776,7 @@
   <!-- 可以開啟的戰利品箱子。 -->
   <ThingDef ParentName="DMSAC_BaseBuilding" Name="DMSAC_BaseLootBox" Abstract="True">
     <category>Building</category>
-    <thingClass>AncientCorps.Building_SurplusContainer</thingClass>
+    <thingClass>Fortified.Building_SurplusContainer</thingClass>
     <rotatable>true</rotatable>
     <useHitPoints>true</useHitPoints>
     <destroyable>true</destroyable>
@@ -811,7 +817,7 @@
     <size>(2,4)</size>
     <defaultPlacingRot>0</defaultPlacingRot>
     <comps>
-      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+      <li Class="Fortified.CompProperties_RandomColorOnSpawn">
         <colorDefs>
           <li>DMSAC_Structure_Olive</li>
           <li>DMSAC_Structure_Green</li>
@@ -824,7 +830,7 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_Lootbox">
+      <li Class="Fortified.ModExtension_Lootbox">
         <sound>CrateOpeningStarted</sound>
         <openedGraphicdata>
           <texPath>Things/Building/cargoOpen</texPath>
@@ -868,7 +874,7 @@
     <size>(2,1)</size>
     <defaultPlacingRot>2</defaultPlacingRot>
     <comps>
-      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+      <li Class="Fortified.CompProperties_RandomColorOnSpawn">
         <colorChance>0.34</colorChance>
         <colorDefs>
           <li>Structure_White</li>
@@ -879,7 +885,7 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_Lootbox">
+      <li Class="Fortified.ModExtension_Lootbox">
         <sound>CrateOpeningStarted</sound>
         <openedGraphicdata>
           <texPath>Things/Building/Crate/crateOpen</texPath>
@@ -926,7 +932,7 @@
     <size>(2,2)</size>
     <defaultPlacingRot>0</defaultPlacingRot>
     <comps>
-      <li Class="AncientCorps.CompProperties_RandomColorOnSpawn">
+      <li Class="Fortified.CompProperties_RandomColorOnSpawn">
         <colorChance>1</colorChance>
         <colorDefs>
           <li>DMSAC_Structure_Green</li>
@@ -940,7 +946,7 @@
       </li>
     </comps>
     <modExtensions>
-      <li Class="AncientCorps.ModExtension_Lootbox">
+      <li Class="Fortified.ModExtension_Lootbox">
         <sound>CrateOpeningStarted</sound>
         <openedGraphicdata>
           <texPath>Things/Building/Crate/packCrateOpen</texPath>
@@ -1063,7 +1069,7 @@
     <blockLight>true</blockLight>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
-    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <drawStyleCategory>Walls</drawStyleCategory>
     <coversFloor>true</coversFloor>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <altitudeLayer>Building</altitudeLayer>
@@ -1340,7 +1346,6 @@
     <building>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <ai_chillDestination>false</ai_chillDestination>
-      <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
       <destroySound>BuildingDestroyed_Metal_Big</destroySound>
       <deconstructible>false</deconstructible>
     </building>
@@ -1412,7 +1417,7 @@
       <Neurocomputer>1</Neurocomputer>
     </costList>
     <comps>
-      <li Class="AncientCorps.CompProperties_Effector">
+      <li Class="Fortified.CompProperties_Effector">
         <effecter>BandNodeTuned</effecter>
         <offset>(0,0,0)</offset>
       </li>

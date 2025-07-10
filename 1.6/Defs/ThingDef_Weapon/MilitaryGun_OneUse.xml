@@ -236,9 +236,6 @@
 					<li>EMP</li>
 				</adaptableDamageDefs>
 			</li>
-			<li>
-			  <compClass>DMS.CompForceTargetable</compClass>
-			</li>
 			<li Class="CompProperties_Refuelable">
 			  <fuelLabel>missile shots</fuelLabel>
 			  <fuelGizmoLabel>loaded missile</fuelGizmoLabel>
@@ -291,6 +288,9 @@
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<designationHotKey>Misc2</designationHotKey>
+		<modExtensions>
+			<li Class="Fortified.ForceTargetableExtension"/>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>DMSAC_Gun_StugnaATGM</defName>

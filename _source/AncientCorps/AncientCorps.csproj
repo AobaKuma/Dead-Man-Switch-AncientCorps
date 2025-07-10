@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -76,36 +76,20 @@
   <ItemGroup>
     <Compile Include="AncientCorpsUltility.cs" />
     <Compile Include="CircleConst.cs" />
-    <Compile Include="Boss\CompAbilityEffect_ActiveProtectionSystem.cs" />
-    <Compile Include="CompTargetable_SingleMechCorpse.cs" />
-    <Compile Include="CompTargetEffect_ResurrectMech.cs" />
-    <Compile Include="CompTargetEffect_AddHediffChance.cs" />
     <Compile Include="CompUseEffect_DisableMechs.cs" />
     <Compile Include="CompUseEffect_LevelUpDefcon.cs" />
     <Compile Include="Defcon\CompanyDef.cs" />
-    <Compile Include="BaseGen\CompBuildingExtraRenderer.cs" />
     <Compile Include="Defcon\GameComponent_RaidCompany.cs" />
     <Compile Include="Defcon\PlatoonDef.cs" />
     <Compile Include="Defcon\SitePartWorker_Company.cs" />
     <Compile Include="Defcon\Company.cs" />
     <Compile Include="JobDriver_ResurrectMech.cs" />
-    <Compile Include="Projectile\CompAfterBurner.cs" />
-    <Compile Include="Projectile\CompEffector.cs" />
-    <Compile Include="Projectile\CompGuided.cs" />
-    <Compile Include="BaseGen\CompRandomColorOnSpawn.cs" />
-    <Compile Include="Boss\CompUseEffect_PlaySong.cs" />
     <Compile Include="DMS_DefOf.cs" />
     <Compile Include="Defcon\GameComponent_DefconLevel.cs" />
     <Compile Include="Patch\HarmonyEntry.cs" />
-    <Compile Include="BaseGen\Building_DeactivatedMech.cs" />
-    <Compile Include="BaseGen\JobDriver_OpenMech.cs" />
-    <Compile Include="BaseGen\Building_SurplusContainer.cs" />
     <Compile Include="Boss\KrepostAttackTransition.cs" />
-    <Compile Include="BaseGen\ModExtension_Container.cs" />
-    <Compile Include="BaseGen\ModExtension_DeactivatedMech.cs" />
     <Compile Include="Patch\Patch_GoodwillSituationWorker_MemeCompatibility.cs" />
     <Compile Include="Patch\Patch_GoodwillSituationWorker_SameIdeo.cs" />
-    <Compile Include="Projectile\Projectile_Parabola.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseGen\QuestNode_GetSiteTile.cs" />
     <Compile Include="ThinkTree\JobGiver_AIDisarmingDistant.cs" />

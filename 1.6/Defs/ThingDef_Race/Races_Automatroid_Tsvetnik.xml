@@ -25,7 +25,7 @@
       <mechWeightClass>Heavy</mechWeightClass>
     </race>
     <comps>
-      <li Class="DMS.CompProperties_VehicleWeapon">
+      <li Class="Fortified.CompProperties_VehicleWeapon">
         <defaultWeapon>DMS_Gun_MobileMortar</defaultWeapon>
         <turretRotationFollowPawn>true</turretRotationFollowPawn>
         <rotationSmoothTime>0.5</rotationSmoothTime>

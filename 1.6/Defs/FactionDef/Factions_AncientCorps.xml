@@ -138,6 +138,6 @@
     <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>900</configurationListOrderPriority>
     <dropPodActive>ActiveDropPodMechanoid</dropPodActive>
-    <dropPodIncoming>DropPodIncomingMechanoid</dropPodIncoming>
+    <dropPodIncoming>DropPodIncomingMechanoidRapid</dropPodIncoming>
   </FactionDef>
 </Defs>

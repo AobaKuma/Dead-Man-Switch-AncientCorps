@@ -68,7 +68,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="DMS_Mech_Pravda"]/comps/li[@Class="DMS.CompPropertiesMultipleTurretGun"]/subTurrets/li[ID="forward machinegun"]/turret</xpath>
+				<xpath>Defs/ThingDef[defName="DMS_Mech_Pravda"]/comps/li[@Class="Fortified.CompPropertiesMultipleTurretGun"]/subTurrets/li[ID="forward machinegun"]/turret</xpath>
 				<value>
 					<turret>DMS_Tarbosaurus_SubMachineGun</turret>
 				</value>

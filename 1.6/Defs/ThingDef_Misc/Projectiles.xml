@@ -9,7 +9,7 @@
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>1.25</drawSize>
     </graphicData>
-    <thingClass>AncientCorps.Projectile_Parabola</thingClass>
+    <thingClass>Fortified.Projectile_Parabola</thingClass>
     <projectile>
       <damageDef>Bomb</damageDef>
       <speed>80</speed>
@@ -25,7 +25,7 @@
       <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
     <comps>
-      <li Class="AncientCorps.CompProperties_AfterBurner">
+      <li Class="Fortified.CompProperties_AfterBurner">
         <lifeTime>60</lifeTime>
         <ExhaustFleck>DMS_Fleck_RocketFlame</ExhaustFleck>
         <ExhaustCurve>
@@ -45,7 +45,6 @@
           </points>
         </SmokeCurve>
       </li>
-      <!-- <li><compClass>AncientCorps.CompGuided</compClass></li> -->
     </comps>
   </ThingDef>
 
@@ -58,7 +57,7 @@
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>1.25</drawSize>
     </graphicData>
-    <thingClass>AncientCorps.Projectile_Parabola</thingClass>
+    <thingClass>Fortified.Projectile_Parabola</thingClass>
     <projectile>
       <damageDef>Bomb</damageDef>
       <speed>80</speed>
@@ -75,7 +74,7 @@
       <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
     <comps>
-      <li Class="AncientCorps.CompProperties_AfterBurner">
+      <li Class="Fortified.CompProperties_AfterBurner">
         <lifeTime>30</lifeTime>
         <ExhaustFleck>DMS_Fleck_RocketFlame</ExhaustFleck>
         <ExhaustCurve>
@@ -107,7 +106,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
-    <thingClass>AncientCorps.Projectile_Parabola</thingClass>
+    <thingClass>Fortified.Projectile_Parabola</thingClass>
     <projectile>
       <damageDef>Smoke</damageDef>
       <speed>41</speed>
@@ -122,7 +121,7 @@
       <postExplosionSpawnThingDefWater>DMSAC_ShieldProjectorShell_Water</postExplosionSpawnThingDefWater>
     </projectile>
     <comps>
-      <li Class="AncientCorps.CompProperties_AfterBurner">
+      <li Class="Fortified.CompProperties_AfterBurner">
         <lifeTime>60</lifeTime>
         <ExhaustFleck>DMS_Fleck_RocketFlame</ExhaustFleck>
         <ExhaustCurve>

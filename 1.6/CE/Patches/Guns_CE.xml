@@ -290,9 +290,9 @@
             </li>
             <li Class="PatchOperationReplace">
                 <xpath>
-                    Defs/ThingDef[defName="DMS_AntiMaterialRifle"]/modExtensions/li[@Class="DMS.HeavyEquippableExtension"]</xpath>
+                    Defs/ThingDef[defName="DMS_AntiMaterialRifle"]/modExtensions/li[@Class="Fortified.HeavyEquippableExtension"]</xpath>
                 <value>
-                    <li Class="DMS.HeavyEquippableExtension">
+                    <li Class="Fortified.HeavyEquippableExtension">
                         <EquippableDef>AverageHumanCanUse</EquippableDef>
                     </li>
                 </value>

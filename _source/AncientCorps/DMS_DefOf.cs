@@ -12,9 +12,9 @@ namespace AncientCorps
         }
         public static HediffDef DMSAC_StructuralDamage;
         public static FactionDef DMS_AncientCorps;
-        public static JobDef DMS_EjectDeactivatedMech;
-        public static JobDef DMS_HackDeactivatedMech;
-        public static JobDef DMS_ResurrectMech;
+        public static JobDef FFF_EjectDeactivatedMech;
+        public static JobDef FFF_HackDeactivatedMech;
+        public static JobDef FFF_ResurrectMech;
         public static PawnKindDef DMS_Mech_Krepost;
         public static PawnKindDef DMS_Mech_CommandWalker;
         public static QuestScriptDef DMSAC_OpportunitySite_LogisticTerminal;

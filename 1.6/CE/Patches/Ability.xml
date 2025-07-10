@@ -13,21 +13,21 @@
 
 		<!-- ========== APS ========== -->
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="AncientCorps.CompProperties_ActiveProtectionSystem"]/Radius</xpath>
+				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="Fortified.CompProperties_ActiveProtectionSystem"]/Radius</xpath>
 				<value>
 					<Radius>12</Radius>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="AncientCorps.CompProperties_ActiveProtectionSystem"]/chanceToFail</xpath>
+				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="Fortified.CompProperties_ActiveProtectionSystem"]/chanceToFail</xpath>
 				<value>
 					<chanceToFail>0.93</chanceToFail>
 				</value>
 			</li>
 			<li Class="PatchOperationAttributeSet">
-				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="AncientCorps.CompProperties_ActiveProtectionSystem"]</xpath>
+				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="Fortified.CompProperties_ActiveProtectionSystem"]</xpath>
 				<attribute>Class</attribute>
-				<value>DMSCE.CompProperties_ActiveProtectionSystem</value>
+				<value>Fortified.CompProperties_ActiveProtectionSystem</value>
 			</li>
 
 		<!-- ========== RocketPod ========== -->
@@ -39,7 +39,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/verbClass</xpath>
 				<value>
-					<verbClass>DMSCE.Verb_CastAbilityArcSprayProjectile</verbClass>
+					<verbClass>Fortified.Verb_CastAbilityArcSprayProjectile</verbClass>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">

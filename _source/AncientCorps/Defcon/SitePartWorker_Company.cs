@@ -84,7 +84,7 @@ namespace AncientCorps
                 sitePart.lastRaidTick = Find.TickManager.TicksGame;
             }
         }
-        public override SitePartParams GenerateDefaultParams(float myThreatPoints, int tile, Faction faction)
+        public override SitePartParams GenerateDefaultParams(float myThreatPoints, PlanetTile tile, Faction faction)
         {
             SitePartParams sitePartParams = base.GenerateDefaultParams(myThreatPoints, tile, faction);
             sitePartParams.threatPoints = Mathf.Max(sitePartParams.threatPoints, faction.def.MinPointsToGeneratePawnGroup(PawnGroupKindDefOf.Combat));

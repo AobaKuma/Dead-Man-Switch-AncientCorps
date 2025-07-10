@@ -1,4 +1,5 @@
-﻿using RimWorld.Planet;
+﻿using RimWorld;
+using RimWorld.Planet;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace AncientCorps
 {
     public static class WorldUtils
     {
-        public static int ClosestTileTo(this List<int> tiles, int targetTile, List<int> ignoreTile = null)
+        public static PlanetTile ClosestTileTo(this List<PlanetTile> tiles, PlanetTile targetTile, List<PlanetTile> ignoreTile = null)
         {
             float minDistance = float.MaxValue;
             int closest = -1;
@@ -80,15 +81,15 @@ namespace AncientCorps
 
             return angle;
         }
-        public static List<int> GetNearbyTiles(int rootTileId, int maxDistance)
+        public static List<PlanetTile> GetNearbyTiles(PlanetTile rootTileId, int maxDistance)
         {
-            List<int> result = new List<int>();
+            List<PlanetTile> result = new List<PlanetTile>();
 
             // 使用 WorldFloodFiller 來搜尋
-            Find.WorldFloodFiller.FloodFill(
+            Find.WorldGrid.FirstLayerOfDef(PlanetLayerDefOf.Surface).Filler.FloodFill(
                 rootTileId,
-                (int tile) => Find.WorldGrid.tiles[tile].elevation > 0,  // 你可以加條件限制這裡
-                (int tile, int traversalDistance) =>
+                (PlanetTile tile) => tile.Tile.elevation > 0,  // 你可以加條件限制這裡
+                (PlanetTile tile, int traversalDistance) =>
                 {
                     if (traversalDistance <= maxDistance)
                     {

@@ -82,7 +82,7 @@
 
   <PawnKindDef ParentName="BaseAutomatroidKind">
     <defName>DMS_Mech_Mushketer_SAR</defName>
-    <label>mushketer</label>
+    <label>harquebusier</label>
     <race>DMS_Mech_Arquebusier</race>
     <defaultFactionType>DMS_AncientCorps</defaultFactionType>
     <isFighter>true</isFighter>

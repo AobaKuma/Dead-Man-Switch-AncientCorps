@@ -115,7 +115,7 @@
                 </offsets>
                 <isAlternately>true</isAlternately>
             </li>
-			<li Class="DMS.HeavyEquippableExtension">
+			<li Class="Fortified.HeavyEquippableExtension">
 				<EquippableDef>AverageHumanCanUse</EquippableDef>
 			</li>
     	</modExtensions>

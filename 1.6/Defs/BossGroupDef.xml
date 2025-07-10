@@ -133,7 +133,7 @@
         <useDuration>900</useDuration>
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
-      <li Class="DMS.CompProperties_UseEffectSummonRaid">
+      <li Class="Fortified.CompProperties_UseEffectSummonRaid">
         <bossgroupDef>DMSAC_Boss_ArmedRecon</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>
@@ -288,7 +288,7 @@
         <useDuration>500</useDuration>
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
-      <li Class="DMS.CompProperties_UseEffectSummonRaid">
+      <li Class="Fortified.CompProperties_UseEffectSummonRaid">
         <bossgroupDef>DMS_Krepost</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>

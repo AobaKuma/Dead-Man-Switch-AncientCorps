@@ -42,7 +42,7 @@ namespace AncientCorps
         protected override bool TryFindShootingPosition(Pawn pawn, out IntVec3 dest, Verb verbToUse = null)
         {
             Thing enemyTarget = pawn.mindState.enemyTarget;
-            bool allowManualCastWeapons = !pawn.IsColonist && !pawn.IsColonyMutant;
+            bool allowManualCastWeapons = !pawn.IsColonist && !pawn.IsSubhuman;
             Verb verb = verbToUse ?? pawn.TryGetAttackVerb(enemyTarget, allowManualCastWeapons, this.allowTurrets);
             if (verb == null)
             {

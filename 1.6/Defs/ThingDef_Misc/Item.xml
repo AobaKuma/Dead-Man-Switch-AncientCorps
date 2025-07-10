@@ -115,13 +115,13 @@
         <showUseGizmo>true</showUseGizmo>
       </li>
       <li Class="CompProperties_Targetable">
-        <compClass>AncientCorps.CompTargetable_SingleMechCorpse</compClass>
+        <compClass>Fortified.CompTargetable_SingleMechCorpse</compClass>
         <nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
       </li>
       <li Class="CompProperties_TargetEffectResurrect">
-        <compClass>AncientCorps.CompTargetEffect_ResurrectMech</compClass>
+        <compClass>Fortified.CompTargetEffect_ResurrectMech</compClass>
       </li>
-      <li Class="AncientCorps.CompProperties_TargetEffect_AddHediffChance">
+      <li Class="Fortified.CompProperties_TargetEffect_AddHediffChance">
         <sideHediffDef>DMSAC_StructuralDamage</sideHediffDef>
         <chance>.1</chance>
       </li>
@@ -166,22 +166,15 @@
         <showUseGizmo>true</showUseGizmo>
       </li>
       <li Class="CompProperties_Targetable">
-        <compClass>AncientCorps.CompTargetable_SingleMech</compClass>
+        <compClass>Fortified.CompTargetable_SingleMech</compClass>
       </li>
       <li Class="CompProperties_TargetEffectResurrect">
-        <compClass>AncientCorps.CompTargetEffect_RepairMech</compClass>
+        <compClass>Fortified.CompTargetEffect_RepairMech</compClass>
       </li>
-      <li Class="AncientCorps.CompProperties_TargetEffect_AddHediffChance">
+      <li Class="Fortified.CompProperties_TargetEffect_AddHediffChance">
         <sideHediffDef>DMSAC_StructuralDamage</sideHediffDef>
         <chance>.01</chance>
       </li>
     </comps>
   </ThingDef>
-
-  <JobDef>
-    <defName>DMS_ResurrectMech</defName>
-    <driverClass>AncientCorps.JobDriver_ResurrectMech</driverClass>
-    <reportString>rebooting TargetA.</reportString>
-    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-  </JobDef>
 </Defs>

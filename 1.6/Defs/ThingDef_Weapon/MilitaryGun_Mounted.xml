@@ -142,7 +142,7 @@
 			<stoppingPower>2</stoppingPower>
 			<speed>999</speed>
 			<flyOverhead>true</flyOverhead>
-			<bulletChanceToStartFire>1</bulletChanceToStartFire>
+			<explosionChanceToStartFire>1</explosionChanceToStartFire>
 			<doExplosionVFX>false</doExplosionVFX>
 		</projectile>
 		<comps>
@@ -221,7 +221,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
-		<thingClass>DMS.Projectile_ConeExplosive</thingClass>
+		<thingClass>Fortified.Projectile_ConeExplosive</thingClass>
 		<projectile>
 			<damageDef>Bomb</damageDef>
 			<!-- damage amount is the damage def default -->
@@ -234,7 +234,7 @@
 			<soundAmbient>MortarRound_Ambient</soundAmbient>
 		</projectile>
 		<modExtensions>
-			<li Class="DMS.ExplosiveExtension">
+			<li Class="Fortified.ExplosiveExtension">
 				<damage>Bullet</damage>
 				<damageAmount>100</damageAmount>
 				<armorPen>2</armorPen>

@@ -65,7 +65,7 @@
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
-			<li Class="DMS.HeavyEquippableExtension">
+			<li Class="Fortified.HeavyEquippableExtension">
 				<EquippableDef>StandardAutomatroid</EquippableDef>
 			</li>
 		</modExtensions>
@@ -136,7 +136,7 @@
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
-			<li Class="DMS.HeavyEquippableExtension">
+			<li Class="Fortified.HeavyEquippableExtension">
 				<EquippableDef>HeavyAutomatroid</EquippableDef>
 			</li>
 		</modExtensions>
@@ -226,7 +226,7 @@
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
-			<li Class="DMS.HeavyEquippableExtension">
+			<li Class="Fortified.HeavyEquippableExtension">
 				<EquippableDef>HeavyAutomatroid</EquippableDef>
 			</li>
 		</modExtensions>
@@ -268,7 +268,7 @@
 		</costList>
 		<verbs>
 			<li>
-				<verbClass>DMS.Verb_ArcSprayProjectile</verbClass>
+				<verbClass>Fortified.Verb_ArcSprayProjectile</verbClass>
 				<sprayWidth>3</sprayWidth>
 				<sprayArching>5</sprayArching>
 				<sprayThicknessCells>3</sprayThicknessCells>
@@ -299,7 +299,7 @@
 				</offsets>
 				<isAlternately>false</isAlternately>
 			</li>
-			<li Class="DMS.HeavyEquippableExtension">
+			<li Class="Fortified.HeavyEquippableExtension">
 				<EquippableDef>HeavyAutomatroid</EquippableDef>
 			</li>
 			<li Class="CombatExtended.GunDrawExtension" MayRequire="ceteam.combatextended">
@@ -384,7 +384,7 @@
 				</offsets>
 				<isAlternately>true</isAlternately>
 			</li>
-			<li Class="DMS.HeavyEquippableExtension">
+			<li Class="Fortified.HeavyEquippableExtension">
 				<EquippableDef>UltraHeavyAutomatroid</EquippableDef>
 			</li>
 		</modExtensions>
@@ -393,7 +393,7 @@
 	<ThingDef ParentName="BaseBullet">
 		<defName>DMS_Bullet_JusticeGavel</defName>
 		<label>armor piercing sabot</label>
-		<thingClass>DMS.Projectile_ConeExplosive</thingClass>
+		<thingClass>Fortified.Projectile_ConeExplosive</thingClass>
 		<graphicData>
 			<texPath>Things/Projectiles/Ammo_3BM60</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -412,7 +412,7 @@
 			<shadowSize>0.6</shadowSize>
 		</projectile>
 		<modExtensions>
-			<li Class="DMS.ExplosiveExtension">
+			<li Class="Fortified.ExplosiveExtension">
 				<damage>Bullet</damage>
 				<damageAmount>98</damageAmount>
 				<armorPen>1.1</armorPen>

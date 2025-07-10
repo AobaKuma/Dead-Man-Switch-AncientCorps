@@ -26,7 +26,7 @@
       <mechWeightClass>Heavy</mechWeightClass>
     </race>
     <modExtensions>
-      <li Class="DMS.MechWeaponExtension">
+      <li Class="Fortified.MechWeaponExtension">
         <EnableWeaponFilter>true</EnableWeaponFilter>
         <UsableWeaponTags>
           <li MayRequire="vanillaexpanded.vwehw">HeavyGun</li><!--重型武器拓展-->
