@@ -31,7 +31,7 @@
         <UsableWeaponTags>
           <li MayRequire="vanillaexpanded.vwehw">HeavyGun</li><!--重型武器拓展-->
           <li>DMS_MechWeaponLight</li>
-          <li>DMS_MechWeaponMeduim</li>
+          <li>DMS_MechWeaponMedium</li>
           <li>DMS_MechWeaponLongRifle</li>
           <li>A_SuppressWeapon</li>
           <li>DMS_Gun_Recoilless</li>
@@ -82,7 +82,7 @@
     </lifeStages>
     <weaponTags>
       <li>A_BR_LongRifle</li>
-      <li>DMS_MechWeaponMeduim</li>
+      <li>DMS_MechWeaponMedium</li>
       <li>AK21</li>
     </weaponTags>
   </PawnKindDef>

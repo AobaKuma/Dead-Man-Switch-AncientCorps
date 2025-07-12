@@ -449,7 +449,7 @@
       <MaxHitPoints>5000</MaxHitPoints>
     </statBases>
     <killedLeavingsRanges>
-      <DMS_ChunkSlag>3~7</DMS_ChunkSlag>
+      <DMS_ChunkSlag>0~2</DMS_ChunkSlag>
       <ChunkSlagSteel>1~3</ChunkSlagSteel>
     </killedLeavingsRanges>
   </ThingDef>
@@ -471,8 +471,8 @@
       <MaxHitPoints>3200</MaxHitPoints>
     </statBases>
     <killedLeavingsRanges>
-      <DMS_ChunkSlag>1~5</DMS_ChunkSlag>
-      <ChunkSlagSteel>1~3</ChunkSlagSteel>
+      <DMS_ChunkSlag>0~1</DMS_ChunkSlag>
+      <ChunkSlagSteel>0~2</ChunkSlagSteel>
     </killedLeavingsRanges>
   </ThingDef>
   <ThingDef ParentName="BaseDerelictMech">
@@ -492,8 +492,8 @@
       <MaxHitPoints>1800</MaxHitPoints>
     </statBases>
     <killedLeavingsRanges>
-      <DMS_ChunkSlag>1~2</DMS_ChunkSlag>
-      <ChunkSlagSteel>1~2</ChunkSlagSteel>
+      <DMS_ChunkSlag>0~1</DMS_ChunkSlag>
+      <ChunkSlagSteel>0~1</ChunkSlagSteel>
     </killedLeavingsRanges>
   </ThingDef>
   <ThingDef ParentName="BaseDerelictMech">
@@ -513,7 +513,6 @@
       <MaxHitPoints>800</MaxHitPoints>
     </statBases>
     <killedLeavingsRanges>
-      <DMS_ChunkSlag>0~1</DMS_ChunkSlag>
       <ChunkSlagSteel>0~1</ChunkSlagSteel>
     </killedLeavingsRanges>
   </ThingDef>
@@ -1106,7 +1105,6 @@
       </li>
     </damageMultipliers>
   </ThingDef>
-
   <ThingDef ParentName="DMSAC_Wall">
     <defName>DMSAC_Wall_A</defName>
     <label>facility wall</label>
@@ -1123,7 +1121,6 @@
       <alwaysDeconstructible>false</alwaysDeconstructible>
     </building>
   </ThingDef>
-
   <ThingDef ParentName="DMSAC_Wall">
     <defName>DMSAC_Wall_B</defName>
     <label>facility wall</label>
@@ -1140,7 +1137,6 @@
       <alwaysDeconstructible>false</alwaysDeconstructible>
     </building>
   </ThingDef>
-
   <ThingDef ParentName="DMSAC_Wall">
     <defName>DMSAC_Wall_C</defName>
     <label>facility wall</label>

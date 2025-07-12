@@ -27,7 +27,7 @@
 			<li Class="PatchOperationAttributeSet">
 				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="Fortified.CompProperties_ActiveProtectionSystem"]</xpath>
 				<attribute>Class</attribute>
-				<value>Fortified.CompProperties_ActiveProtectionSystem</value>
+				<value>FortifiedCE.CompProperties_ActiveProtectionSystem</value>
 			</li>
 
 		<!-- ========== RocketPod ========== -->
@@ -39,7 +39,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties/verbClass</xpath>
 				<value>
-					<verbClass>Fortified.Verb_CastAbilityArcSprayProjectile</verbClass>
+					<verbClass>FortifiedCE.Verb_CastAbilityArcSprayProjectile</verbClass>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">

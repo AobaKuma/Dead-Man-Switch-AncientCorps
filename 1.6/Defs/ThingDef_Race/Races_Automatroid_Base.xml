@@ -18,14 +18,7 @@
     </statBases>
     <butcherProducts>
       <Steel>10</Steel>
-    </butcherProducts>    
-    <!-- <inspectorTabs Inherit="False">
-      <li>ITab_Pawn_Health</li>
-      <li>ITab_Pawn_Needs</li>
-      <li>ITab_Pawn_FormingCaravan</li>
-      <li>ITab_Pawn_Gear</li>
-      <li>ITab_Pawn_Log</li>
-    </inspectorTabs> -->
+    </butcherProducts>
     <damageMultipliers Inherit="False">
       <li>
         <damageDef>EMP</damageDef>
@@ -101,9 +94,8 @@
 
   <PawnKindDef Name="BaseAncientAutomatroidKind" ParentName="BaseAutomatroidKind" Abstract="True">
     <defaultFactionType>DMS_AncientCorps</defaultFactionType>
-    <allowInMechClusters>false</allowInMechClusters>    <!--是否出現在機械集群-->
+    <allowInMechClusters>false</allowInMechClusters>
     <isFighter>true</isFighter>
-    <!-- <destroyGearOnDrop>true</destroyGearOnDrop> -->
     <canUseAvoidGrid>true</canUseAvoidGrid>
     <canStrip>false</canStrip>
     <factionHostileOnDeath>false</factionHostileOnDeath>
