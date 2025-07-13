@@ -106,7 +106,7 @@
                   <li MayRequire="aoba.deadmanswitch.mobiledragoon">DMS_Module</li>
                 </categories>
                 <thingDefs>
-                  <li>DMS_Apparel_PowerSkelton</li>
+                  <li>DMS_Apparel_PowerSkeleton</li>
                   <li>DMS_Apparel_HazardSuit</li>
                 </thingDefs>
               </filter>
@@ -217,7 +217,7 @@
                   <li MayRequire="breadmo.cinders">Cinder_Amorphous</li>
                 </categories>
                 <thingDefs>
-                  <li>DMS_Apparel_PowerSkelton</li>
+                  <li>DMS_Apparel_PowerSkeleton</li>
                   <li>DMS_Apparel_HazardSuit</li>
                   <li>DMS_PKM</li>
                 </thingDefs>
