@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Patch>
-    <Operation Class="PatchOperationSequence">
+<Patch><Operation Class="PatchOperationSequence">
         <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[
+                    defName="DMSAC_Building_LiftShaft" or
+                    defName="DMSAC_Building_LiftShaft_Bottom" or 
+                    defName="DMSAC_Building_LiftShaft_Bottom_B"]</xpath>
+                <value>
+                    <portal>
+                        <pocketMapGenerator>AM_CustomMap_Editor_Generator</pocketMapGenerator>
+                    </portal>
+                </value>
+            </li>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMSAC_Building_LiftShaft"]</xpath>
                 <value>
                     <thingClass>AncientMarket_Libraray.MapEntrance</thingClass>
                 </value>
             </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="DMSAC_Building_LiftShaft"]</xpath>
+                <value>
+                    <li Class="AncientMarket_Libraray.ModExtension_Map">
+                    <maps>
+                        <li>DMSAC_UndergroundBaseA</li>
+                        <li>DMSAC_UndergroundBaseB</li>
+                        <li>DMSAC_UndergroundBaseC</li>
+                    </maps>
+                    </li>
+                </value>
+            </li>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMSAC_Building_LiftShaft_Bottom"or defName="DMSAC_Building_LiftShaft_Bottom_B"]</xpath>
                 <value>
                     <thingClass>AncientMarket_Libraray.MapExit</thingClass>
+                </value>
+            </li>
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="DMSAC_Building_LiftShaft_Bottom"or defName="DMSAC_Building_LiftShaft_Bottom_B"]</xpath>
+                <value>
+                    <li Class="AncientMarket_Libraray.ModExtension_Portal">
+                        <distance>2</distance>
+                    </li>
                 </value>
             </li>
         </operations>

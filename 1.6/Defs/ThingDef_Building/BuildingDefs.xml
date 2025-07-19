@@ -302,7 +302,7 @@
     <defName>DMSAC_Building_LiftShaft</defName>
 		<label>lift shaft</label>
     <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
-		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
 		<defaultPlacingRot>North</defaultPlacingRot>
 		<graphicData>
@@ -322,22 +322,13 @@
     <fillPercent>0</fillPercent>
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
-      <modExtensions>
-        <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Map">
-          <maps>
-            <li>DMSAC_UndergroundBaseA</li>
-            <li>DMSAC_UndergroundBaseB</li>
-            <li>DMSAC_UndergroundBaseC</li>
-          </maps>
-        </li>
-      </modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_LiftShaft_Bottom</defName>
 		<label>lift Shaft</label>
     <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
-		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
 		<defaultPlacingRot>North</defaultPlacingRot>
 		<graphicData>
@@ -350,22 +341,20 @@
       </shadowData>
 		</graphicData>
 		<size>(9,9)</size>
+    <building>
+      <isTargetable>false</isTargetable>
+    </building>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <fillPercent>0</fillPercent>
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
-		<modExtensions>
-      <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Portal">
-        <distance>2</distance>
-      </li>
-    </modExtensions> 
   </ThingDef>
   
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_LiftShaft_Bottom_B</defName>
 		<label>lift Shaft</label>
     <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
-		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but obviously requires a pass code to activate.</description>
+		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
 		<defaultPlacingRot>North</defaultPlacingRot>
 		<graphicData>
@@ -385,11 +374,6 @@
     <fillPercent>0</fillPercent>
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
-		<modExtensions>
-      <li MayRequireAnyOf ="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam" Class="AncientMarket_Libraray.ModExtension_Portal">
-        <distance>2</distance>
-      </li>
-    </modExtensions> 
   </ThingDef>
 
   <!--裝飾性殘骸。 -->

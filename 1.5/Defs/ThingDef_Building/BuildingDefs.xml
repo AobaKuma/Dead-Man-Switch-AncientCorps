@@ -315,6 +315,9 @@
       </shadowData>
 		</graphicData>
 		<size>(9,9)</size>
+    <building>
+      <isTargetable>false</isTargetable>
+    </building>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <fillPercent>0</fillPercent>
     <useHitPoints>false</useHitPoints>
@@ -375,6 +378,9 @@
       </shadowData>
 		</graphicData>
 		<size>(9,9)</size>
+    <building>
+      <isTargetable>false</isTargetable>
+    </building>
     <ignoreConfigErrors>true</ignoreConfigErrors>
     <fillPercent>0</fillPercent>
     <useHitPoints>false</useHitPoints>
