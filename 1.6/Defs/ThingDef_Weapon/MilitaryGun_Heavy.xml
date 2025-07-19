@@ -345,8 +345,8 @@
 		<costList>
 			<Tungsteel>350</Tungsteel>
 			<ComponentStamped>20</ComponentStamped>
-      		<ReinforcedBarrel>3</ReinforcedBarrel>
-      		<ComponentFireControl>2</ComponentFireControl>
+			<ReinforcedBarrel>3</ReinforcedBarrel>
+			<ComponentFireControl>2</ComponentFireControl>
 		</costList>
 		<comps Inherit="False">
 			<li>
