@@ -29,7 +29,7 @@
 		<recipeMaker>
 		    <researchPrerequisites>
       			<li>Gunsmithing</li>
-      			<li>DMS_EquipmentAdvanced</li>
+      			<li>DMS_EquipmentBasis</li>
     		</researchPrerequisites>
 		</recipeMaker>
 		<costList>

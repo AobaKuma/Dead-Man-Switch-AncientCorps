@@ -3,8 +3,7 @@
     <Operation Class="PatchOperationSequence">
         <operations>
             <li Class="PatchOperationAdd">
-                <xpath>
-                    Defs/FactionDef[@Name="PirateBandBase" or @ParentName="PirateBandBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+                <xpath>Defs/FactionDef[@Name="PirateBandBase" or @ParentName="PirateBandBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
                 <value>
                     <DMS_Mech_Zabor_Pirate>1</DMS_Mech_Zabor_Pirate>
                 </value>
