@@ -107,7 +107,7 @@
 		<verbs>
 			<li>
 				<commandIcon>Things/Projectiles/DMS_9M133Missile/VerbIcon</commandIcon>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>Verb_LaunchProjectile</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>DMSAC_Bullet_9M133Missile</defaultProjectile>
 				<minRange>9.9</minRange>
@@ -119,7 +119,7 @@
 				<muzzleFlashScale>25</muzzleFlashScale>
 				<targetable>true</targetable>
 				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-				<ai_IsWeapon>true</ai_IsWeapon>
+				<ai_IsWeapon>false</ai_IsWeapon>
 				<ai_AvoidFriendlyFireRadius>4</ai_AvoidFriendlyFireRadius>
 				<aimingLineMote>DMS_Missile_Aim</aimingLineMote>
 				<aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
