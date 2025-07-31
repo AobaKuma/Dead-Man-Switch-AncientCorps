@@ -134,7 +134,7 @@
 				<muzzleFlashScale>8</muzzleFlashScale>
 			</li>
 		</verbs>
-		<comps>
+		<comps Inherit="false">
 			<li Class="CompProperties_EquippableAbilityReloadable">
 				<abilityDef>DMSAC_GrenadeLauncher</abilityDef>
 				<maxCharges>3</maxCharges>
@@ -143,6 +143,14 @@
 				<ammoDef>ComponentStamped</ammoDef>
 				<ammoCountPerCharge>1</ammoCountPerCharge>
 				<baseReloadTicks>60</baseReloadTicks>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Styleable"/>
+			<li Class="CompProperties_Biocodable"/>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
 			</li>
 		</comps>
 		<modExtensions>
