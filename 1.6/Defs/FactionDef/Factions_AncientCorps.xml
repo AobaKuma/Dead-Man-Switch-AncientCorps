@@ -53,6 +53,9 @@
       <li MayRequire="ludeon.rimworld.royalty">OutlanderRefugee</li>
       <li>Ancients</li>
       <li>PlayerColony</li>
+      <li MayRequire="ludeon.rimworld.royalty">GravshipCrew</li>
+      <li MayRequire="ludeon.rimworld.royalty">Cinder_PlayerFaction</li>
+      <li MayRequire="ludeon.rimworld.royalty">Cinder_OutlanderCivil</li>
     </permanentEnemyToEveryoneExcept>
     <hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
     <maxPawnCostPerTotalPointsCurve>
