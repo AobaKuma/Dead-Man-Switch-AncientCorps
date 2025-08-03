@@ -75,6 +75,18 @@
             </li>
 
             <!--DMS_ZlobinRifle=====-->
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="DMS_ZlobinRifle"]/comps/li[@Class="CompProperties_EquippableAbilityReloadable"]</xpath>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="DMS_ZlobinRifle"]/comps</xpath>
+                <value>
+                    <li>
+                        <compClass>CompEquippable</compClass>
+                    </li>
+                </value>
+            </li>
+            
             <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                 <defName>DMS_ZlobinRifle</defName>
                 <statBases>
@@ -127,9 +139,6 @@
                         <CasingOffset>-0.05,0</CasingOffset>
                     </li>
                 </value>
-            </li>
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="DMS_ZlobinRifle"]/comps/li[@Class="CompProperties_EquippableAbilityReloadable"]</xpath>
             </li>
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="DMS_ZlobinRifle"]/comps</xpath>
