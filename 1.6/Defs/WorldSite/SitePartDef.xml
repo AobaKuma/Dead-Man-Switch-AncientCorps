@@ -13,6 +13,7 @@
     <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(150, 1, 150)</minMapSize>
     <tags>
       <li>DMSAC_Graveyard</li>
@@ -60,6 +61,7 @@
     <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(100, 1, 100)</minMapSize>
     <tags>
       <li>DMSAC_Checkpoint</li>
@@ -103,6 +105,7 @@
     <arrivedLetterDef>ThreatBig</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(150, 1, 150)</minMapSize>
     <tags>
       <li>DMSAC_Garage</li>
@@ -133,7 +136,6 @@
     </genStep>
   </GenStepDef>
 
-  
   <SitePartDef>
     <defName>DMSAC_FacilityEnterance</defName>
     <label>underground facility</label>
@@ -147,6 +149,7 @@
     <arrivedLetterDef>ThreatBig</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(150, 1, 150)</minMapSize>
     <tags>
       <li>DMSAC_FacilityEnterance</li>
@@ -169,7 +172,6 @@
       </symbolResolvers>
     </genStep>
   </GenStepDef>
-
   
   <SitePartDef>
     <defName>DMSAC_LogisticTerminal</defName>
@@ -185,6 +187,7 @@
     <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
     <considerEnteringAsAttack>true</considerEnteringAsAttack>
     <wantsThreatPoints>true</wantsThreatPoints>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(100, 1, 100)</minMapSize>
     <tags>
       <li>DMSAC_LogisticTerminal</li>

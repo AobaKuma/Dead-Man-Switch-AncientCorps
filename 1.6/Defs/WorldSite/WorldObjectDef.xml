@@ -133,7 +133,6 @@
       <li>Map_Misc</li>
     </IncidentTargetTags>
   </WorldObjectDef>
-
   
   <WorldObjectDef>
     <defName>DMSAC_FacilityEnterance</defName>
