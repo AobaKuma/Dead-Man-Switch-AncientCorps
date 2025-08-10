@@ -50,6 +50,7 @@
     <earliestRaidDays>45</earliestRaidDays>
     <permanentEnemyToEveryoneExcept>
       <li>DMS_Army</li>
+      <li>DMS_Legacy</li>
       <li MayRequire="ludeon.rimworld.royalty">OutlanderRefugee</li>
       <li>Ancients</li>
       <li>PlayerColony</li>
