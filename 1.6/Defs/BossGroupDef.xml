@@ -83,10 +83,15 @@
     <defName>DMSAC_RecoverTransmitter</defName>
     <label>Recover Transmitter</label>
     <description>A simple antenna group can intercept the return signal from the supply station after broadcasting the signal, but such a signal transmission without encryption request is bound to attract detection by the reconnaissance team.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Mech_BattleFrame</ThingDef>
+      <ThingDef>DMSAC_SiteIntel</ThingDef>
+    </descriptionHyperlinks>    
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/RecoverTransmitter</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
     </graphicData>
     <thingClass>ThingWithComps</thingClass>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
@@ -102,7 +107,7 @@
     <recipeMaker>
       <workAmount>20000</workAmount>
       <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-      <researchPrerequisite>Machining</researchPrerequisite>
+      <researchPrerequisite>DMS_DeadMansSwitch</researchPrerequisite>
       <recipeUsers>
         <li>TableMachining</li>
         <li>DMS_TableMachinePrinter</li>
@@ -133,7 +138,7 @@
         <useDuration>900</useDuration>
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
-      <li Class="Fortified.CompProperties_UseEffectSummonRaid">
+      <li Class="DMS.CompPropertiesUseable_SummonRaid">
         <bossgroupDef>DMSAC_Boss_ArmedRecon</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>
@@ -263,6 +268,10 @@
     <defName>DMS_AncientDecoyRadio</defName>
     <label>Ancient Decoy Antenna</label>
     <description>A modified signal transponder which is rigged to send a high power burst transmission. Once activated it puts out a powerful decoy signal which will attract a feral group of automatroid forces to attack your colony. If you can defeat them, you can collect the advanced technology from their corpses. The signal pulse burns out the transmitter, so this building can only be used once.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Mech_Krepost</ThingDef>
+      <ThingDef>DMSAC_FacilityIntel</ThingDef>
+    </descriptionHyperlinks>    
     <graphicData>
       <texPath>Things/Building/Facility_Decoy_Ancient</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -279,7 +288,7 @@
       <ComponentStamped>4</ComponentStamped>
     </costList>
     <researchPrerequisites>
-      <li>DMS_DeadMansSwitch</li>
+      <li>DMS_Hypothesis</li>
     </researchPrerequisites>
     <comps>
       <li Class="CompProperties_Usable">
@@ -288,7 +297,7 @@
         <useDuration>500</useDuration>
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
-      <li Class="Fortified.CompProperties_UseEffectSummonRaid">
+      <li Class="DMS.CompPropertiesUseable_SummonRaid">
         <bossgroupDef>DMS_Krepost</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>
@@ -296,7 +305,7 @@
         <chance>0.2</chance>
       </li>
       <li Class="CompProperties_UseEffectDestroySelf">
-        <delayTicks>750</delayTicks>
+        <delayTicks>120</delayTicks>
         <spawnKilledLeavings>true</spawnKilledLeavings>
         <effecterDef>MechbandBuildingDestroyed</effecterDef>
       </li>

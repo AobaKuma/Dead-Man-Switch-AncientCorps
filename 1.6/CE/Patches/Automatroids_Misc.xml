@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<!-- <Operation Class="PatchOperationReplace">
-	<xpath>Defs/ThingDef[@Name="BaseAncientAutomatroidRace"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
-		<value>
-			<li>CombatExtended.ITab_Inventory</li>
-		</value>
-	</Operation> -->
-
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[@Name="BaseAncientAutomatroidRace"]/tools</xpath>
 		<value>
@@ -57,7 +50,7 @@
 				<value>
 					<li Class="CombatExtended.LoadoutPropertiesExtension">
 						<primaryMagazineCount>
-							<min>10</min>
+							<min>5</min>
 							<max>15</max>
 						</primaryMagazineCount>
 						<sidearms>
