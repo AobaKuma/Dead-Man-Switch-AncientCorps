@@ -36,6 +36,9 @@
     <defName>DMSAC_FacilityIntel</defName>
     <label>facility intel</label>
     <description>A data blackbox, which is designed to storage the operation record of an automatroid, by this it is not hard to find the information about the location of military facility it comes from.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_AncientDecoyRadio</ThingDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Resource/BlackBox</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -59,6 +62,9 @@
     <defName>DMSAC_SiteIntel</defName>
     <label>site intel</label>
     <description>An intel map about the location of a small military site, which is one of the countless pieces of information gathered by scavengers or pirates at that time when dealing with these ancient machines that had existed in this planet for hundreds of years.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMSAC_RecoverTransmitter</ThingDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Resource/DMSAC_Intel</texPath>
       <graphicClass>Graphic_Single</graphicClass>
