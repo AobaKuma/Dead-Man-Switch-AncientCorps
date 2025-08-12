@@ -78,7 +78,7 @@ namespace AncientCorps
             base.PostMake();
             AddPart(new SitePart()
             {
-                def = DMS_DefOf.DMSAC_GarrisonSite,
+                def = DMSAC_DefOf.DMSAC_GarrisonSite,
                 parms = new SitePartParams()
                 {
                     threatPoints = StorytellerUtility.DefaultThreatPointsNow(Find.AnyPlayerHomeMap)
@@ -164,7 +164,7 @@ namespace AncientCorps
                 {
                     alsoRemoveWorldObject = true;
                 }
-                else if (pawns.Where(p => p.kindDef == DMS_DefOf.DMS_Mech_CommandWalker).EnumerableNullOrEmpty())
+                else if (pawns.Where(p => p.kindDef == DMSAC_DefOf.DMS_Mech_CommandWalker).EnumerableNullOrEmpty())
                 {
                     alsoRemoveWorldObject = true;
                 }

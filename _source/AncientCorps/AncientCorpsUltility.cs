@@ -9,7 +9,6 @@ using System.Reflection;
 using System.Reflection.Emit;
 using UnityEngine;
 using Verse;
-using static HarmonyLib.Code;
 
 namespace AncientCorps
 {
@@ -109,7 +108,7 @@ namespace AncientCorps
                 QuestUtility.SendLetterQuestAvailable(quest);
             }
         }
-        public static Faction Corps => Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
+        public static Faction Corps => Find.FactionManager.FirstFactionOfDef(DMSAC_DefOf.DMS_AncientCorps);
 
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
         public static void TriggerRandomCompanyAction()

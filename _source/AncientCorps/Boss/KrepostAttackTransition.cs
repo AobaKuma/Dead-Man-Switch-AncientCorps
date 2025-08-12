@@ -16,7 +16,7 @@ namespace AncientCorps
             { 
                 return Find.CurrentMap.mapPawns.SpawnedPawnsInFaction(Faction.OfMechanoids).FirstOrDefault(p => p.kindDef.defName == "DMS_Mech_Krepost") != null;
             }
-            Faction faction = Find.FactionManager.FirstFactionOfDef(DMS_DefOf.DMS_AncientCorps);
+            Faction faction = Find.FactionManager.FirstFactionOfDef(DMSAC_DefOf.DMS_AncientCorps);
             if (faction == null || !faction.HostileTo(Faction.OfPlayer)) return false;
             var pawns = Find.CurrentMap.mapPawns.SpawnedPawnsInFaction(faction);
             if(pawns.NullOrEmpty()) return false;

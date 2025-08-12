@@ -10,7 +10,6 @@ using RimWorld.Planet;
 
 namespace AncientCorps
 {
-    [StaticConstructorOnStartup]
     public partial class GameComponent_DefconLevel : GameComponent
     {
         public int Level => level;
@@ -163,7 +162,7 @@ namespace AncientCorps
                     //5%機率自己上升
                     if (Rand.Chance(0.05f)) { LevelRise(); return; }
                     //80%生成站點
-                    if (Rand.Chance(0.8f)) AncientCorpsUltility.GenerateQuest(DMS_DefOf.DMSAC_OpportunitySite_LogisticTerminal);
+                    if (Rand.Chance(0.8f)) AncientCorpsUltility.GenerateQuest(DMSAC_DefOf.DMSAC_OpportunitySite_LogisticTerminal);
                     AdjustCompanyCount();
                     AncientCorpsUltility.TriggerRandomCompanyAction();
                     break;
@@ -172,14 +171,14 @@ namespace AncientCorps
                     if (Rand.Chance(0.01f)) { LevelRise(); return; }
 
                     //40%生成站點
-                    if (Rand.Chance(0.4f)) { AncientCorpsUltility.GenerateQuest(DMS_DefOf.DMSAC_OpportunitySite_LogisticTerminal); return; }
+                    if (Rand.Chance(0.4f)) { AncientCorpsUltility.GenerateQuest(DMSAC_DefOf.DMSAC_OpportunitySite_LogisticTerminal); return; }
 
                     //對最近的敵對NPC基地實施攻擊，有25%機率佔領。
                     AncientCorpsUltility.TriggerRandomCompanyAction();
                     break;
                 case 3://2~4天
                     //40%生成站點
-                    if (Rand.Chance(0.4f)) { AncientCorpsUltility.GenerateQuest(DMS_DefOf.DMSAC_OpportunitySite_LogisticTerminal); return; }
+                    if (Rand.Chance(0.4f)) { AncientCorpsUltility.GenerateQuest(DMSAC_DefOf.DMSAC_OpportunitySite_LogisticTerminal); return; }
 
                     //對最近的敵對NPC基地實施攻擊，有50%機率佔領。
                     if (HasTarget)
@@ -233,7 +232,7 @@ namespace AncientCorps
             Map map = Find.AnyPlayerHomeMap;
             if (map != null)
             {
-                CompanyDef company = DefDatabase<CompanyDef>.AllDefsListForReading.Where(x => x.defaultFaction == DMS_DefOf.DMS_AncientCorps).RandomElement();
+                CompanyDef company = DefDatabase<CompanyDef>.AllDefsListForReading.Where(x => x.defaultFaction == DMSAC_DefOf.DMS_AncientCorps).RandomElement();
                 Current.Game.GetComponent<GameComponent_RaidCompany>().RaidCompany(map, company);
             }
         }
@@ -341,7 +340,7 @@ namespace AncientCorps
                 return;
             }
 
-            var worldObject = WorldObjectMaker.MakeWorldObject(DMS_DefOf.DMSAC_Garrison);
+            var worldObject = WorldObjectMaker.MakeWorldObject(DMSAC_DefOf.DMSAC_Garrison);
             if (worldObject == null)
             {
                 Log.Warning("worldObject is null!");

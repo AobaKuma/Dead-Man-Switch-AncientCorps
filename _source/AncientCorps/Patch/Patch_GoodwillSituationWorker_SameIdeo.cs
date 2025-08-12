@@ -10,7 +10,7 @@ namespace AncientCorps
         public static bool Prefix(Faction other, ref int __result)
         {
 
-            if (other.def == DMS_DefOf.DMS_AncientCorps)
+            if (other.def == DMSAC_DefOf.DMS_AncientCorps)
             {
                 __result = 0;
                 return false;

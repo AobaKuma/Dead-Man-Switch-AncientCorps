@@ -12,12 +12,16 @@ namespace AncientCorps
         public RulePackDef NamePack;
         public IntRange squadCountRange = new IntRange(1, 2);
         public List<PlatoonDef> squads;
-        public FactionDef defaultFaction = DMS_DefOf.DMS_AncientCorps;
+        public FactionDef defaultFaction;
         public int defconRating = 0;
         [NoTranslate]
         public string IconPath = "UI/Icons/Company/Default";
         public int combatRadius = 10;
-
+        public override void ResolveReferences()
+        {
+            base.ResolveReferences();
+            defaultFaction = DMSAC_DefOf.DMS_AncientCorps;
+        }
         public override IEnumerable<string> ConfigErrors()
         {
             foreach (string item in base.ConfigErrors())

@@ -3,12 +3,12 @@ using Verse;
 
 namespace AncientCorps
 {
-    [RimWorld.DefOf, StaticConstructorOnStartup]
-    public static class DMS_DefOf
+    [DefOf]
+    internal static class DMSAC_DefOf
     {
-        static DMS_DefOf()
+        static DMSAC_DefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(DMS_DefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(DMSAC_DefOf));
         }
         public static HediffDef DMSAC_StructuralDamage;
         public static FactionDef DMS_AncientCorps;
@@ -19,7 +19,6 @@ namespace AncientCorps
         public static PawnKindDef DMS_Mech_CommandWalker;
         public static QuestScriptDef DMSAC_OpportunitySite_LogisticTerminal;
         public static SitePartDef DMSAC_GarrisonSite;
-
         public static WorldObjectDef DMSAC_Garrison;
     }
 }
