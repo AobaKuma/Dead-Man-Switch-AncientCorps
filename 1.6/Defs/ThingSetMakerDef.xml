@@ -179,7 +179,6 @@
             <fixedParams>
               <filter>
                 <thingDefs>
-                  <li MayRequire="xmb.ancienturbanruins.mo">AM_MRE</li>
                   <li>DMS_CombatRation</li>
                 </thingDefs>
               </filter>
