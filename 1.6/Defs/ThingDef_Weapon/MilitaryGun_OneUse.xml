@@ -19,7 +19,7 @@
 		<thingSetMakerTags>
 			<li>RewardStandardHighFreq</li>
 		</thingSetMakerTags>
-		<stackLimit>4</stackLimit>
+		<stackLimit>1</stackLimit>
 		<statBases>
 			<Mass>18</Mass>
 			<EquipDelay>3</EquipDelay>
@@ -133,7 +133,7 @@
 				</targetParams>
 				<requireLineOfSight>true</requireLineOfSight>
 				<beamTargetsGround>true</beamTargetsGround>
-				<forcedMissRadius>0.1</forcedMissRadius>
+				<forcedMissRadius>0.01</forcedMissRadius>
 				<consumeFuelPerShot>1</consumeFuelPerShot>
 			</li>
 			<li>
