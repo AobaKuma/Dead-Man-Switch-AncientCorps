@@ -137,7 +137,7 @@
 				<isAlternately>true</isAlternately>
 			</li>
 			<li Class="Fortified.HeavyEquippableExtension">
-				<EquippableDef>HeavyAutomatroid</EquippableDef>
+				<EquippableDef>TransHeavyAutomatroid</EquippableDef>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -227,7 +227,7 @@
 				<isAlternately>true</isAlternately>
 			</li>
 			<li Class="Fortified.HeavyEquippableExtension">
-				<EquippableDef>HeavyAutomatroid</EquippableDef>
+				<EquippableDef>TransHeavyAutomatroid</EquippableDef>
 			</li>
 		</modExtensions>
 	</ThingDef>
