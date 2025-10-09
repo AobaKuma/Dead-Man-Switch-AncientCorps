@@ -149,7 +149,7 @@
                             <ammoSet>AmmoSet_40x53mmVOG25Grenade</ammoSet>
                         </propsUnderBarrel>
                         <verbPropsUnderBarrel>
-                            <recoilAmount>2.71</recoilAmount>
+                            <recoilAmount>2.2</recoilAmount>
                             <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                             <hasStandardCommand>true</hasStandardCommand>
                             <defaultProjectile>Bullet_40x53mmVOG25Grenade_HE</defaultProjectile>
