@@ -307,12 +307,10 @@
     </lifeStages>
     <weaponTags Inherit="False">
       <li>DMS_MechWeaponTankGun</li>
-      <li>DMS_DragoonGun</li>
     </weaponTags>
-    <weaponMoney>6730~9999</weaponMoney>
+    <weaponMoney>7500~9999</weaponMoney>
     <abilities>
       <li>DMSAC_APS</li>
-      <li>DMS_SmokeLauncher</li>
     </abilities>
   </PawnKindDef>
 

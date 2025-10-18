@@ -43,12 +43,14 @@
 		<iconPath>UI/Ability/DMSAC_UBGL</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<verbProperties>
+			<commonality>0.25</commonality>
 			<ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
 			<defaultCooldownTime>2</defaultCooldownTime>
 			<verbClass>Verb_CastAbility</verbClass>
 			<onlyManualCast>true</onlyManualCast>
+			<minRange>2</minRange>
 			<range>24.9</range>
-			<warmupTime>0.5</warmupTime>
+			<warmupTime>1</warmupTime>
 			<soundCast>Mortar_LaunchA</soundCast>
 			<requireLineOfSight>true</requireLineOfSight>
 			<targetParams>
