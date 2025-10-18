@@ -214,7 +214,7 @@
       </li>
     </lifeStages>
     <abilities>
-      <li MayRequire="ludeon.rimworld.ideology">Smokepop</li>
+      <li MayRequire="ludeon.rimworld.royalty">Smokepop</li>
     </abilities>
   </PawnKindDef>
 </Defs>

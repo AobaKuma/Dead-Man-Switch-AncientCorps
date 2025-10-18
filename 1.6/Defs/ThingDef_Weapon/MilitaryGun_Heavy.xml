@@ -141,6 +141,7 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+	
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_DMS_VladimirovMG</defName>
 		<label>vladimirov HMG bullet</label>

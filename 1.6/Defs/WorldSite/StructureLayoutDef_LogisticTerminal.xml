@@ -919,6 +919,7 @@
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
   </KCSG.StructureLayoutDef>
+  
   <KCSG.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_I</defName>
     <spawnConduits>false</spawnConduits>

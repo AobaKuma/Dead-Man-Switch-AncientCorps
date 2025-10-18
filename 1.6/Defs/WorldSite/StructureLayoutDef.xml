@@ -2,7 +2,6 @@
 <Defs>
   <KCSG.StructureLayoutDef>
     <defName>DMSAC_Graveyard_A</defName>
-    <isStorage>true</isStorage>
     <spawnConduits>false</spawnConduits>
     <layouts>
       <li>
@@ -488,7 +487,6 @@
 
   <KCSG.StructureLayoutDef>
     <defName>DMSAC_Graveyard_B</defName>
-    <isStorage>true</isStorage>
     <spawnConduits>false</spawnConduits>
     <layouts>
       <li>

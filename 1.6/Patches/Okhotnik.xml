@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationRemove">
+  <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="DMS_Turret_Okhotnik"]/designationCategory</xpath>
+    <value>
+      <designationCategory>DMS_Category</designationCategory>
+    </value>
   </Operation>
 </Patch>
