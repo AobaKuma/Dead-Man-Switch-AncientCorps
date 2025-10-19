@@ -119,10 +119,10 @@
 	<!-- ==================== Recipes ========================== -->
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_125mmTC_HE</defName>
-		<label>make 125mm 3OF26 HE cannon shells x5</label>
-		<description>Craft 5 125mm 3OF26 HE cannon shells.</description>
-		<jobString>Making 5 125mm 3OF26 HE cannon shells.</jobString>
-		<workAmount>8800</workAmount>
+		<label>make 125mm 3OF26 (HE) cannon shells x5</label>
+		<description>Craft 5 125mm 3OF26 (HE) cannon shells.</description>
+		<jobString>Making 5 125mm 3OF26 (HE) cannon shells.</jobString>
+		<workAmount>39500</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -130,7 +130,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>126</count>
+				<count>250</count>
 			</li>
 			<li>
 				<filter>
@@ -138,22 +138,22 @@
 						<li>FSX</li>
 					</thingDefs>
 				</filter>
-				<count>6</count>
+				<count>34</count>
 			</li>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Chemfuel</li>
+						<li>ComponentIndustrial</li>
 					</thingDefs>
 				</filter>
-				<count>35</count>
+				<count>5</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Steel</li>
 				<li>FSX</li>
-				<li>Chemfuel</li>
+				<li>ComponentIndustrial</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -205,7 +205,7 @@
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>217</damageAmountBase>
+			<damageAmountBase>287</damageAmountBase>
 			<soundExplode>MortarBomb_Explode</soundExplode>
 			<armorPenetrationSharp>520</armorPenetrationSharp>
 			<armorPenetrationBlunt>70</armorPenetrationBlunt>
@@ -238,7 +238,7 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>315</damageAmountBase>
 			<soundExplode>MortarBomb_Explode</soundExplode>
-			<armorPenetrationSharp>588</armorPenetrationSharp>
+			<armorPenetrationSharp>580</armorPenetrationSharp>
 			<armorPenetrationBlunt>120000</armorPenetrationBlunt>
 		</projectile>
 		<comps>
@@ -254,10 +254,10 @@
 	<!-- ==================== Recipes ========================== -->
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_Ru125mmTC_HEAT</defName>
-		<label>make 125mm 3BK18M HEAT cannon shells x5</label>
-		<description>Craft 5 125mm 3BK18M HEAT cannon shells.</description>
-		<jobString>Making 5 125mm 3BK18M HEAT cannon shells.</jobString>
-		<workAmount>8800</workAmount>
+		<label>make 125mm 3BK18M (HEAT) cannon shells x5</label>
+		<description>Craft 5 125mm 3BK18M (HEAT) cannon shells.</description>
+		<jobString>Making 5 125mm 3BK18M (HEAT) cannon shells.</jobString>
+		<workAmount>39500</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -265,7 +265,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>60</count>
+				<count>250</count>
 			</li>
 			<li>
 				<filter>
@@ -273,7 +273,7 @@
 						<li>FSX</li>
 					</thingDefs>
 				</filter>
-				<count>4</count>
+				<count>18</count>
 			</li>
 			<li>
 				<filter>
@@ -281,7 +281,7 @@
 						<li>ComponentIndustrial</li>
 					</thingDefs>
 				</filter>
-				<count>2</count>
+				<count>5</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -301,10 +301,10 @@
 
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_Ru125mmTC_Sabot</defName>
-		<label>make 125mm 3BM60 APFSDS cannon shells x5</label>
-		<description>Craft 5 125mm 3BM60 APFSDS cannon shells.</description>
-		<jobString>Making 5 125mm 3BM60 APFSDS cannon shells.</jobString>
-		<workAmount>16800</workAmount>
+		<label>make 125mm 3BM60 (APFSDS) cannon shells x5</label>
+		<description>Craft 5 125mm 3BM60 (APFSDS) cannon shells.</description>
+		<jobString>Making 5 125mm 3BM60 (APFSDS) cannon shells.</jobString>
+		<workAmount>24350</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -312,15 +312,15 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>24</count>
+				<count>280</count>
 			</li>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Plasteel</li>
+						<li>Uranium</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>30</count>
 			</li>
 			<li>
 				<filter>
@@ -354,7 +354,7 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>60</MarketValue>
+			<MarketValue>90</MarketValue>
 			<Mass>16</Mass>
 		</statBases>
 		<ammoClass>Sabot</ammoClass>
@@ -395,10 +395,10 @@
 
 	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
 		<defName>MakeAmmo_Ru125mmTCADV_Sabot</defName>
-		<label>make 125mm 3BM59 APFSDS cannon shells x5</label>
-		<description>Craft 5 125mm 3BM59 APFSDS cannon shells.</description>
-		<jobString>Making 5 125mm 3BM59 APFSDS cannon shells.</jobString>
-		<workAmount>16800</workAmount>
+		<label>make 125mm 3BM59 (APFSDS) cannon shells x5</label>
+		<description>Craft 5 125mm 3BM59 (APFSDS) cannon shells.</description>
+		<jobString>Making 5 125mm 3BM59 (APFSDS) cannon shells.</jobString>
+		<workAmount>28950</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -406,7 +406,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>125</count>
+				<count>300</count>
 			</li>
 			<li>
 				<filter>
@@ -414,7 +414,7 @@
 						<li>Uranium</li>
 					</thingDefs>
 				</filter>
-				<count>30</count>
+				<count>60</count>
 			</li>
 			<li>
 				<filter>
@@ -422,7 +422,7 @@
 						<li>ComponentIndustrial</li>
 					</thingDefs>
 				</filter>
-				<count>3</count>
+				<count>5</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -436,7 +436,7 @@
 			<Ammo_Ru125mmTCADV_Sabot>5</Ammo_Ru125mmTCADV_Sabot>
 		</products>
 		<skillRequirements>
-			<Crafting>4</Crafting>
+			<Crafting>8</Crafting>
 		</skillRequirements>
 	</RecipeDef>
 
