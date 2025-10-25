@@ -305,6 +305,7 @@
     <description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
     <defaultPlacingRot>North</defaultPlacingRot>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
     <graphicData>
       <texPath>Things/Building/liftShaft</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -331,6 +332,7 @@
     <description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
     <defaultPlacingRot>North</defaultPlacingRot>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
     <graphicData>
       <texPath>Things/Building/liftShaft_Bottom</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -357,6 +359,7 @@
     <description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
     <defaultPlacingRot>North</defaultPlacingRot>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
     <graphicData>
       <texPath>Things/Building/liftShaft_Bottom_B</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
