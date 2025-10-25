@@ -5,7 +5,7 @@
     <kindDef>DMS_Mech_BattleWalker</kindDef>
     <appearAfterTicks>60000</appearAfterTicks><!--1-->
   </BossDef>
-  
+
   <BossgroupDef ParentName="BaseBossgroupNonMechanitor">
     <defName>DMSAC_Boss_ArmedRecon</defName>
     <boss>DMS_Boss_BattleWalker</boss>
@@ -79,14 +79,14 @@
     <rewardDef>DMSAC_SiteIntel</rewardDef>
   </BossgroupDef>
 
-  <ThingDef ParentName="ResourceBase"> 
+  <ThingDef ParentName="ResourceBase">
     <defName>DMSAC_RecoverTransmitter</defName>
     <label>Recover Transmitter</label>
     <description>A simple antenna group can intercept the return signal from the supply station after broadcasting the signal, but such a signal transmission without encryption request is bound to attract detection by the reconnaissance team.</description>
     <descriptionHyperlinks>
       <ThingDef>DMS_Mech_BattleFrame</ThingDef>
       <ThingDef>DMSAC_SiteIntel</ThingDef>
-    </descriptionHyperlinks>    
+    </descriptionHyperlinks>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/RecoverTransmitter</texPath>
@@ -131,7 +131,7 @@
       <li>RewardStandardCore</li>
     </thingSetMakerTags>
     <tradeability>Buyable</tradeability>
-    <comps>  
+    <comps>
       <li Class="CompProperties_Usable">
         <useJob>UseItem</useJob>
         <useLabel>Attract armed recon threat</useLabel>
@@ -218,7 +218,9 @@
           <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
         </escorts>
         <bossApparel>
-          <li><thing>Apparel_HeavyShield</thing></li>
+          <li>
+            <thing>Apparel_HeavyShield</thing>
+          </li>
         </bossApparel>
       </li>
       <li> <!-- 5 -->
@@ -230,7 +232,9 @@
           <DMS_Mech_Gorod_Cornetist>1</DMS_Mech_Gorod_Cornetist>
         </escorts>
         <bossApparel>
-          <li><thing>Apparel_HeavyShield</thing></li>
+          <li>
+            <thing>Apparel_HeavyShield</thing>
+          </li>
         </bossApparel>
       </li>
       <li> <!-- 6 -->
@@ -243,7 +247,9 @@
           <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
         </escorts>
         <bossApparel>
-          <li><thing>Apparel_HeavyShield</thing></li>
+          <li>
+            <thing>Apparel_HeavyShield</thing>
+          </li>
         </bossApparel>
       </li>
       <li> <!-- 7 -->
@@ -256,7 +262,9 @@
           <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>
         </escorts>
         <bossApparel>
-          <li><thing>Apparel_HeavyShield</thing></li>
+          <li>
+            <thing>Apparel_HeavyShield</thing>
+          </li>
         </bossApparel>
       </li>
     </waves>
@@ -271,7 +279,7 @@
     <descriptionHyperlinks>
       <ThingDef>DMS_Mech_Krepost</ThingDef>
       <ThingDef>DMSAC_FacilityIntel</ThingDef>
-    </descriptionHyperlinks>    
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Building/Facility_Decoy_Ancient</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -280,7 +288,7 @@
         <volume>(1.7, 0.75, 0.8)</volume>
         <offset>(0.15, 0, 0)</offset>
       </shadowData>
-    </graphicData>  
+    </graphicData>
     <uiIconScale>0.5</uiIconScale>
     <size>(1,1)</size>
     <costList>

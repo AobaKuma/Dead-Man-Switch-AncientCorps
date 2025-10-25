@@ -15,7 +15,7 @@
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
   </AncientCorps.PlatoonDef>
-  
+
   <AncientCorps.PlatoonDef><!--2x八音盒 + 2x風琴 + 較多的近戰輕機兵-->
     <defName>DMSAC_Sentry_Heavy_A</defName>
     <leaderKindDef>
@@ -24,7 +24,7 @@
     <fixedPawnkind>
       <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
       <DMS_Mech_Gorod_Organist>2</DMS_Mech_Gorod_Organist>
-      <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>    
+      <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
     </fixedPawnkind>
     <memberCountRange>9~12</memberCountRange>
     <memberKindDefs>

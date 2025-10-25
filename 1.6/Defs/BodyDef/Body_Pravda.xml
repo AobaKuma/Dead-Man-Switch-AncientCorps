@@ -19,7 +19,7 @@
           <coverage>0.01</coverage>
           <groups>
             <li>HeadAttackTool</li>
-					  <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
           </groups>
           <parts>
             <li>
@@ -183,7 +183,7 @@
           <height>Bottom</height>
           <groups>
             <li>LeftMechanicalLeg</li>
-					  <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
           </groups>
           <parts>
             <li>
@@ -209,7 +209,7 @@
           <height>Bottom</height>
           <groups>
             <li>RightMechanicalLeg</li>
-					  <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
+            <li MayRequire="ceteam.combatextended">CoveredByNaturalArmor</li>
           </groups>
           <parts>
             <li>

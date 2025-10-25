@@ -36,12 +36,12 @@
         </possibleGeneratePawn_Heavy>
       </li>
       <li Class="WorldObjectCompProperties_FormCaravan" />
-      <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
+      <li Class="WorldObjectCompProperties_TimedDetectionRaids" />
       <li Class="WorldObjectCompProperties_TradeRequest" />
       <li Class="WorldObjectCompProperties_EnterCooldown" />
     </comps>
   </WorldObjectDef>
-  
+
   <SitePartDef>
     <defName>DMSAC_GarrisonSite</defName>
     <label>garrison camp</label>

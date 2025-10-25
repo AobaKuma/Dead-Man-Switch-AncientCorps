@@ -45,16 +45,16 @@
           </points>
         </SmokeCurve>
       </li>
-			<li Class="CompProperties_ProjectileEffecter">
-				<effecterDef>DMS_LaunchDust_Recoilless</effecterDef>
-			</li>
+      <li Class="CompProperties_ProjectileEffecter">
+        <effecterDef>DMS_LaunchDust_Recoilless</effecterDef>
+      </li>
     </comps>
-		<modExtensions>
-			<li Class="Fortified.ExplosiveExtension">
-				<preExplosionOffset>1.5</preExplosionOffset>
-				<effecterDef>FFF_Effecter_Penetrate_Sabot</effecterDef>
-			</li>
-		</modExtensions>
+    <modExtensions>
+      <li Class="Fortified.ExplosiveExtension">
+        <preExplosionOffset>1.5</preExplosionOffset>
+        <effecterDef>FFF_Effecter_Penetrate_Sabot</effecterDef>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">

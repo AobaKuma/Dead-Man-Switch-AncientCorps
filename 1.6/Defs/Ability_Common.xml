@@ -184,7 +184,7 @@
 		<charges>1</charges>
 		<cooldownPerCharge>true</cooldownPerCharge>
 		<verbProperties>
-      		<verbClass>Verb_CastAbility</verbClass>
+			<verbClass>Verb_CastAbility</verbClass>
 			<onlyManualCast>false</onlyManualCast>
 			<minRange>4.9</minRange>
 			<range>24.9</range>
@@ -198,13 +198,13 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
-		<li Class="CompProperties_AbilityFireSpew">
-			<range>29.9</range>
-			<lineWidthEnd>5</lineWidthEnd>
-			<filthDef>Filth_FlammableBile</filthDef>
-			<effecterDef>DMSAC_Fire_Blast</effecterDef>
-			<canHitFilledCells>true</canHitFilledCells>
-		</li>
+			<li Class="CompProperties_AbilityFireSpew">
+				<range>29.9</range>
+				<lineWidthEnd>5</lineWidthEnd>
+				<filthDef>Filth_FlammableBile</filthDef>
+				<effecterDef>DMSAC_Fire_Blast</effecterDef>
+				<canHitFilledCells>true</canHitFilledCells>
+			</li>
 		</comps>
 	</AbilityDef>
 </Defs>

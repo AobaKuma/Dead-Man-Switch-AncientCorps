@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<!-- <DesignationCategoryDef>
+  <!-- <DesignationCategoryDef>
 		<defName>DMSAC</defName>
 		<label>DMSAC</label>
 		<order>234</order>
@@ -9,10 +9,10 @@
 			<li>Designator_Deconstruct</li>
 		</specialDesignatorClasses>
 	</DesignationCategoryDef> -->
-  
+
   <ThingDef ParentName="BuildingBase" Name="DMSAC_BaseBuilding" Abstract="true">
-		<thingClass>Building</thingClass>
-		<category>Building</category>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
     <building>
       <claimable>false</claimable>
       <repairable>false</repairable>
@@ -24,8 +24,8 @@
     <passability>PassThroughOnly</passability>
     <!-- <designationCategory>DMSAC</designationCategory> -->
   </ThingDef>
-  
-   <ThingDef ParentName="DMSAC_BaseBuilding" Name="DMSACDoorBase" Abstract="True">
+
+  <ThingDef ParentName="DMSAC_BaseBuilding" Name="DMSACDoorBase" Abstract="True">
     <thingClass>Building_Door</thingClass>
     <category>Building</category>
     <altitudeLayer>DoorMoveable</altitudeLayer>
@@ -68,8 +68,8 @@
       <li>PlaceWorker_DoorLearnOpeningSpeed</li>
     </placeWorkers>
   </ThingDef>
-  
-   <ThingDef Abstract="True" Name="DMSACLampBase" ParentName="DMSAC_BaseBuilding">
+
+  <ThingDef Abstract="True" Name="DMSACLampBase" ParentName="DMSAC_BaseBuilding">
     <thingClass>Building</thingClass>
     <category>Building</category>
     <altitudeLayer>Building</altitudeLayer>
@@ -88,7 +88,7 @@
       </damageData>
     </graphicData>
     <comps>
-      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Flickable" />
     </comps>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
@@ -119,38 +119,38 @@
 
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_BarrierGate</defName>
-		<label>Barrier Gate</label>
-		<description>A barrier gate.</description>
-		<defaultPlacingRot>North</defaultPlacingRot>
-		<graphicData>
-			<texPath>Things/Building/Props/BarrierGate</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(4,4)</drawSize>
+    <label>Barrier Gate</label>
+    <description>A barrier gate.</description>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Things/Building/Props/BarrierGate</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,4)</drawSize>
       <shadowData>
         <offset>(1.5,0,0)</offset>
         <volume>(0.65,0.5,0.65)</volume>
       </shadowData>
-		</graphicData>
-		<size>(4,1)</size>
+    </graphicData>
+    <size>(4,1)</size>
     <fillPercent>0.2</fillPercent>
     <passability>PassThroughOnly</passability>
   </ThingDef>
 
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_RoadBlock</defName>
-		<label>road barrier</label>
-		<description>A road barrier designed to block vehicle, it also provides cover on gun fighting.</description>
-		<defaultPlacingRot>North</defaultPlacingRot>
-		<graphicData>
-			<texPath>Things/Building/Props/roadBlock</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2.24,1.12)</drawSize>
+    <label>road barrier</label>
+    <description>A road barrier designed to block vehicle, it also provides cover on gun fighting.</description>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Things/Building/Props/roadBlock</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2.24,1.12)</drawSize>
       <drawOffsetEast>(0,0,0.12)</drawOffsetEast>
       <drawOffsetWest>(0,0,0.12)</drawOffsetWest>
       <shadowData>
         <volume>(2,0.75,1)</volume>
       </shadowData>
-		</graphicData>
+    </graphicData>
     <statBases>
       <MaxHitPoints>700</MaxHitPoints>
       <Mass>50</Mass>
@@ -162,31 +162,31 @@
       <li>BuildingsSecurity</li>
     </thingCategories>
     <minifiedDef>MinifiedThing</minifiedDef>
-		<size>(2,1)</size>
+    <size>(2,1)</size>
     <fillPercent>0.75</fillPercent>
     <passability>PassThroughOnly</passability>
   </ThingDef>
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_FuelBarrel</defName>
-		<label>fuel barrel</label>
-		<description>A barrel filled with fuel.</description>
+    <label>fuel barrel</label>
+    <description>A barrel filled with fuel.</description>
     <tickerType>Normal</tickerType>
-		<graphicData>
-			<texPath>Things/Building/Props/barrel</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.5</drawSize>
+    <graphicData>
+      <texPath>Things/Building/Props/barrel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
       <shadowData>
         <offset>(0,0,-0.2)</offset>
         <volume>(0.5,0.5,0.5)</volume>
       </shadowData>
-		</graphicData>
+    </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>0.25</Flammability>
       <Mass>10</Mass>
     </statBases>
-		<filthLeaving>Filth_Fuel</filthLeaving>
-		<defaultPlacingRot>North</defaultPlacingRot>
+    <filthLeaving>Filth_Fuel</filthLeaving>
+    <defaultPlacingRot>North</defaultPlacingRot>
     <rotatable>false</rotatable>
     <canScatterOver>true</canScatterOver>
     <building>
@@ -203,8 +203,8 @@
         <explosiveRadius>3.9</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
         <chanceToStartFire>0.5</chanceToStartFire>
-				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
-				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
         <startWickOnDamageTaken>
           <li>EMP</li>
           <li>Flame</li>
@@ -230,26 +230,26 @@
       <Chemfuel>75</Chemfuel>
     </costList>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-		<size>(1,1)</size>
+    <size>(1,1)</size>
     <fillPercent>0.35</fillPercent>
     <passability>PassThroughOnly</passability>
   </ThingDef>
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_AirFan</defName>
-		<label>ventilation fan</label>
-		<description>An active ventilation fan,it seems to be used to discharge heat from underground spaces.</description>
-		<defaultPlacingRot>North</defaultPlacingRot>
+    <label>ventilation fan</label>
+    <description>An active ventilation fan,it seems to be used to discharge heat from underground spaces.</description>
+    <defaultPlacingRot>North</defaultPlacingRot>
     <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
-		<graphicData>
-			<texPath>Things/Building/Props/Fan</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(3,3)</drawSize>
+    <graphicData>
+      <texPath>Things/Building/Props/Fan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
       <drawOffset>(0,1.92,0)</drawOffset>
       <shadowData>
         <volume>(2,0.5,2)</volume>
       </shadowData>
-		</graphicData>
+    </graphicData>
     <statBases>
       <MaxHitPoints>800</MaxHitPoints>
     </statBases>
@@ -266,8 +266,8 @@
         <heatPerSecond>40</heatPerSecond>
         <heatPushMaxTemperature>80</heatPushMaxTemperature>
       </li>
-    </comps>  
-		<size>(2,2)</size>
+    </comps>
+    <size>(2,2)</size>
     <fillPercent>1</fillPercent>
     <passability>Impassable</passability>
   </ThingDef>
@@ -300,21 +300,21 @@
 
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_LiftShaft</defName>
-		<label>lift shaft</label>
+    <label>lift shaft</label>
     <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
-		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
+    <description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
-		<defaultPlacingRot>North</defaultPlacingRot>
-		<graphicData>
-			<texPath>Things/Building/liftShaft</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(12,12)</drawSize>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Things/Building/liftShaft</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(12,12)</drawSize>
       <shadowData>
         <offset>(1.5,0,0)</offset>
         <volume>(0.65,0.5,0.65)</volume>
       </shadowData>
-		</graphicData>
-		<size>(9,9)</size>
+    </graphicData>
+    <size>(9,9)</size>
     <building>
       <isTargetable>false</isTargetable>
     </building>
@@ -323,24 +323,24 @@
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
   </ThingDef>
-  
+
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_LiftShaft_Bottom</defName>
-		<label>lift Shaft</label>
+    <label>lift Shaft</label>
     <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
-		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
+    <description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
-		<defaultPlacingRot>North</defaultPlacingRot>
-		<graphicData>
-			<texPath>Things/Building/liftShaft_Bottom</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(12,12)</drawSize>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Things/Building/liftShaft_Bottom</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(12,12)</drawSize>
       <shadowData>
         <offset>(1.5,0,0)</offset>
         <volume>(0.65,0.5,0.65)</volume>
       </shadowData>
-		</graphicData>
-		<size>(9,9)</size>
+    </graphicData>
+    <size>(9,9)</size>
     <building>
       <isTargetable>false</isTargetable>
     </building>
@@ -349,24 +349,24 @@
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
   </ThingDef>
-  
+
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_Building_LiftShaft_Bottom_B</defName>
-		<label>lift Shaft</label>
+    <label>lift Shaft</label>
     <!-- 一個通向地下區域的大型電梯井，按照大小足以運輸載具，不過很顯然需要通行代碼才能夠激活。 -->
-		<description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
+    <description>A large elevator shaft leads to the underground area, large enough to transport vehicles, but apparently there is no way to activate it.</description>
     <rotatable>false</rotatable>
-		<defaultPlacingRot>North</defaultPlacingRot>
-		<graphicData>
-			<texPath>Things/Building/liftShaft_Bottom_B</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(12,12)</drawSize>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <graphicData>
+      <texPath>Things/Building/liftShaft_Bottom_B</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(12,12)</drawSize>
       <shadowData>
         <offset>(1.5,0,0)</offset>
         <volume>(0.65,0.5,0.65)</volume>
       </shadowData>
-		</graphicData>
-		<size>(9,9)</size>
+    </graphicData>
+    <size>(9,9)</size>
     <building>
       <isTargetable>false</isTargetable>
     </building>
@@ -413,7 +413,7 @@
       </options>
     </colorGenerator>
   </ThingDef>
-  
+
   <ThingDef ParentName="BaseDerelictMech">
     <defName>DMSAC_Building_DerelictMech_Alligator</defName>
     <label>large automatroid derelict</label>
@@ -422,8 +422,8 @@
       <drawOffset>(0,0,0)</drawOffset>
       <drawSize>7</drawSize>
       <shadowData>
-            <volume>(2.25,1,2.25)</volume>
-            <offset>(0,0,0)</offset>
+        <volume>(2.25,1,2.25)</volume>
+        <offset>(0,0,0)</offset>
       </shadowData>
     </graphicData>
     <size>(3,6)</size>
@@ -446,8 +446,8 @@
       <drawOffset>(0,0,0.25)</drawOffset>
       <drawSize>4.2</drawSize>
       <shadowData>
-            <volume>(2.25,1,2.25)</volume>
-            <offset>(0,0,0)</offset>
+        <volume>(2.25,1,2.25)</volume>
+        <offset>(0,0,0)</offset>
       </shadowData>
     </graphicData>
     <size>(3,3)</size>
@@ -467,8 +467,8 @@
       <texPath>Things/Building/Wreck/medium</texPath>
       <drawSize>2.75</drawSize>
       <shadowData>
-            <volume>(1.75,1,1.75)</volume>
-            <offset>(0,0,0)</offset>
+        <volume>(1.75,1,1.75)</volume>
+        <offset>(0,0,0)</offset>
       </shadowData>
     </graphicData>
     <size>(2,2)</size>
@@ -488,8 +488,8 @@
       <texPath>Things/Building/Wreck/small</texPath>
       <drawSize>1.9</drawSize>
       <shadowData>
-            <volume>(1.2,1,1.2)</volume>
-            <offset>(0,0,0)</offset>
+        <volume>(1.2,1,1.2)</volume>
+        <offset>(0,0,0)</offset>
       </shadowData>
     </graphicData>
     <size>(1,1)</size>
@@ -779,7 +779,7 @@
     <defName>DMSAC_Cargo</defName>
     <label>cargo container</label>
     <description>A standard issue container containing military supplies.</description>
-		<rotatable>true</rotatable>
+    <rotatable>true</rotatable>
     <tickerType>Normal</tickerType>
     <building>
       <paintable>true</paintable>
@@ -837,7 +837,7 @@
     <label>military crate</label>
     <!-- 一個裝有軍用裝備的標準物資運輸箱。這些裝備與箱子似乎都是在最近才生產的，並隨著機兵部隊的任務被送到各處。 -->
     <description>A standard issue equipmet crate containing military supplies.These equipment and boxes seemed to have been produced recently and sent to various locations along with the missions.</description>
-		<rotatable>true</rotatable>
+    <rotatable>true</rotatable>
     <tickerType>Normal</tickerType>
     <building>
       <deconstructible>true</deconstructible>
@@ -886,13 +886,13 @@
       </li>
     </modExtensions>
   </ThingDef>
-  
+
   <ThingDef ParentName="DMSAC_BaseLootBox">
     <defName>DMSAC_PackCrate</defName>
     <label>military parcel</label>
     <!-- 一個用於運輸軍用補給品的標準運輸包。裡面的內容物跟包裹本身似乎都是在最近才製造的，並隨著機兵部隊的任務被送到各處。 -->
     <description>A Standard issue parcel containing supplies for military logistics. These parcel seemed to have been produced recently and sent to various locations.</description>
-		<rotatable>false</rotatable>
+    <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
     <building>
       <deconstructible>true</deconstructible>
@@ -964,8 +964,8 @@
     <passability>Impassable</passability>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <size>(7,3)</size>
-	  <useHitPoints>false</useHitPoints>
-	  <selectable>false</selectable>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
     <building>
       <isTargetable>false</isTargetable>
       <ai_neverTrashThis>true</ai_neverTrashThis>
@@ -1158,14 +1158,14 @@
       <li>Medium</li>
       <li>Heavy</li>
     </affordances>
-	  <generatedFilth>Filth_Dirt</generatedFilth>
+    <generatedFilth>Filth_Dirt</generatedFilth>
     <fertility>0.00</fertility>
     <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
     <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
     <pollutionColor>(1, 1, 1, 0.8)</pollutionColor>
     <pollutionOverlayScale>(0.75, 0.75)</pollutionOverlayScale>
   </TerrainDef>
-  
+
   <ThingDef ParentName="DMSACDoorBase">
     <defName>DMSAC_RCdoor</defName>
     <label>facility door</label>
@@ -1409,7 +1409,7 @@
     </comps>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
   </ThingDef>
-  
+
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_ArcFurnace</defName>
     <label>electirc arc furnace</label>
@@ -1429,15 +1429,15 @@
     <passability>Impassable</passability>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <size>(4,4)</size>
-	  <useHitPoints>false</useHitPoints>
+    <useHitPoints>false</useHitPoints>
     <building>
-	 <isTargetable>false</isTargetable>
+      <isTargetable>false</isTargetable>
       <ai_neverTrashThis>true</ai_neverTrashThis>
       <deconstructible>false</deconstructible>
       <alwaysDeconstructible>false</alwaysDeconstructible>
     </building>
   </ThingDef>
-  
+
   <ThingDef ParentName="DMSAC_BaseBuilding">
     <defName>DMSAC_HeavyChem</defName>
     <label>pyrolysis plant</label>
@@ -1457,9 +1457,9 @@
     <passability>Impassable</passability>
     <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <size>(4,4)</size>
-	  <useHitPoints>false</useHitPoints>
+    <useHitPoints>false</useHitPoints>
     <building>
-	 <isTargetable>false</isTargetable>
+      <isTargetable>false</isTargetable>
       <ai_neverTrashThis>true</ai_neverTrashThis>
       <deconstructible>false</deconstructible>
       <alwaysDeconstructible>false</alwaysDeconstructible>

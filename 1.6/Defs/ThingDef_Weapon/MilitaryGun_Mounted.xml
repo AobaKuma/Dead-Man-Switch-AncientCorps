@@ -35,7 +35,7 @@
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>10</muzzleFlashScale>
 				<consumeFuelPerShot>1</consumeFuelPerShot>
-                <hasStandardCommand>true</hasStandardCommand>
+				<hasStandardCommand>true</hasStandardCommand>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
@@ -93,7 +93,7 @@
 	<ThingDef ParentName="DMS_AutomatroidTurretGun">
 		<defName>DMS_Gun_ECMSystem</defName>
 		<label>ECM system</label>
-		<description>A mounted pulse energy weapon that disables electronic equipment in the direction it is pointed at through directional electromagnetic interference. When working, it will cause the target to generate high temperatures, so it can also shock the enemy by igniting it. \n\nThis equipment was first developed after the Europa conflict in response to NATO's "Wyvern swarms",  several armed helicopter squadrons which are completely unmanned. The power of this air force was so prominent during World War III that there are no military weapon platforms with a height higher than four meters, because they have no cover to hide from these predators.</description>
+		<description>A mounted pulse energy weapon that disables electronic equipment in the direction it is pointed at through directional electromagnetic interference. When working, it will cause the target to generate high temperatures, so it can also shock the enemy by igniting it. \n\nThis equipment was first developed after the Europa conflict in response to NATO's "Wyvern swarms", several armed helicopter squadrons which are completely unmanned. The power of this air force was so prominent during World War III that there are no military weapon platforms with a height higher than four meters, because they have no cover to hide from these predators.</description>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_ECMS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -172,7 +172,7 @@
 		<statBases>
 			<RangedWeapon_Cooldown>10.0</RangedWeapon_Cooldown>
 			<Mass>205</Mass>
-		</statBases>		
+		</statBases>
 		<weaponTags>
 			<li>DMS_Gun_Empero</li>
 			<li>NoSwitch</li>
@@ -212,11 +212,11 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
-		
+
 	<ThingDef ParentName="BaseBullet">
 		<defName>DMS_Bullet_EmperoExplosive</defName>
 		<label>high-explosive shell</label>
-			<graphicData>
+		<graphicData>
 			<texPath>Things/Projectile/ShellHighExplosive</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>

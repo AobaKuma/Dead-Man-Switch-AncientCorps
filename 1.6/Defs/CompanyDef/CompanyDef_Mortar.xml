@@ -73,7 +73,7 @@
       <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
       <DMS_Mech_Gorod_Piper>1</DMS_Mech_Gorod_Piper>
       <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
-      <DMS_Mech_Tsvetnik>2</DMS_Mech_Tsvetnik>     
+      <DMS_Mech_Tsvetnik>2</DMS_Mech_Tsvetnik>
     </fixedPawnkind>
     <memberCountRange>5~7</memberCountRange>
     <memberKindDefs>
@@ -89,7 +89,7 @@
       <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
       <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
       <DMS_Mech_Pravda>2</DMS_Mech_Pravda>
-      <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>       
+      <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>
     </fixedPawnkind>
     <memberCountRange>5~7</memberCountRange>
     <memberKindDefs>
@@ -105,7 +105,7 @@
       <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
       <DMS_Mech_Gorod_Cornetist>2</DMS_Mech_Gorod_Cornetist>
       <DMS_Mech_Pravda>2</DMS_Mech_Pravda>
-      <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>       
+      <DMS_Mech_Krepost_Sweeper>2</DMS_Mech_Krepost_Sweeper>
     </fixedPawnkind>
     <memberCountRange>5~7</memberCountRange>
     <memberKindDefs>
@@ -123,7 +123,7 @@
       <DMS_Mech_Zabor_Shkatulka>2</DMS_Mech_Zabor_Shkatulka>
       <DMS_Mech_Pravda>2</DMS_Mech_Pravda>
       <DMS_Mech_Tsvetnik>2</DMS_Mech_Tsvetnik>
-      <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>         
+      <DMS_Mech_Krepost_Sweeper>1</DMS_Mech_Krepost_Sweeper>
     </fixedPawnkind>
     <memberCountRange>5~7</memberCountRange>
     <memberKindDefs>

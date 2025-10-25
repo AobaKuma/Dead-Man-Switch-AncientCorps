@@ -68,7 +68,7 @@
 					</li>
 				</value>
 			</li>
-			
+
 			<li Class="PatchOperationAddModExtension">
 				<xpath>Defs/PawnKindDef[
 					defName="DMS_Mech_Gorod" or

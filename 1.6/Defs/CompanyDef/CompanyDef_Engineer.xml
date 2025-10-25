@@ -46,7 +46,7 @@
     <defconRating>1</defconRating>
     <squadCountRange>1~4</squadCountRange>
     <squads>
-      <li>DMSAC_Light_Engineer_A</li>  
+      <li>DMSAC_Light_Engineer_A</li>
       <li>DMSAC_Sentry_Light_A</li>
       <li>DMSAC_Light_Engineer_B</li>
       <li>DMSAC_Light_Engineer_C</li>
@@ -94,7 +94,7 @@
     </leaderKindDef>
     <fixedPawnkind>
       <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
-      <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin> 
+      <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
     </fixedPawnkind>
     <memberCountRange>4~6</memberCountRange>
     <memberKindDefs>
@@ -103,7 +103,7 @@
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
   </AncientCorps.PlatoonDef>
-  
+
   <!--========機炮 + AGS30 + 81迫 配置（警戒度4）========-->
   <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Engineer">
     <defName>DMSAC_GrenadierTeam_4</defName>
@@ -143,7 +143,7 @@
     <fixedPawnkind>
       <DMS_Mech_Gorod>2</DMS_Mech_Gorod>
       <DMS_Mech_Zabor>2</DMS_Mech_Zabor>
-      <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper> 
+      <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
       <DMS_Mech_Tsvetnik>1</DMS_Mech_Tsvetnik>
     </fixedPawnkind>
     <memberCountRange>4~7</memberCountRange>
@@ -161,7 +161,7 @@
       <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
       <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
       <DMS_Mech_Gorod_Organist>1</DMS_Mech_Gorod_Organist>
-      <DMS_Mech_Molot_Kamin>2</DMS_Mech_Molot_Kamin> 
+      <DMS_Mech_Molot_Kamin>2</DMS_Mech_Molot_Kamin>
     </fixedPawnkind>
     <memberCountRange>6~9</memberCountRange>
     <memberKindDefs>
@@ -178,7 +178,7 @@
       <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
       <DMS_Mech_Gorod_Piper>2</DMS_Mech_Gorod_Piper>
       <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
-      <DMS_Mech_Molot_Kamin>2</DMS_Mech_Molot_Kamin> 
+      <DMS_Mech_Molot_Kamin>2</DMS_Mech_Molot_Kamin>
     </fixedPawnkind>
     <memberCountRange>7~10</memberCountRange>
     <memberKindDefs>

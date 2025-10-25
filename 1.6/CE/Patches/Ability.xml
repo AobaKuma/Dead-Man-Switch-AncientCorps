@@ -2,8 +2,8 @@
 <Patch>
 	<Operation Class="PatchOperationSequence">
 		<operations>
-		
-		<!-- ========== ATGM ========== -->
+
+			<!-- ========== ATGM ========== -->
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/AbilityDef[defName="DMSAC_ATGMLauncher"]/comps/li[@Class="CompProperties_AbilityLaunchProjectile"]/projectileDef</xpath>
 				<value>
@@ -11,7 +11,7 @@
 				</value>
 			</li>
 
-		<!-- ========== APS ========== -->
+			<!-- ========== APS ========== -->
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/AbilityDef[defName="DMSAC_APS"]/comps/li[@Class="Fortified.CompProperties_ActiveProtectionSystem"]/Radius</xpath>
 				<value>
@@ -30,7 +30,7 @@
 				<value>FortifiedCE.CompProperties_ActiveProtectionSystem</value>
 			</li>
 
-		<!-- ========== RocketPod ========== -->
+			<!-- ========== RocketPod ========== -->
 			<li Class="PatchOperationAttributeAdd">
 				<xpath>Defs/AbilityDef[defName="DMSAC_Rocket"]/verbProperties</xpath>
 				<attribute>Class</attribute>
