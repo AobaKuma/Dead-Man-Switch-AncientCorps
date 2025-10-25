@@ -9,13 +9,13 @@
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>1.25</drawSize>
     </graphicData>
-    <thingClass>Fortified.Projectile_Parabola</thingClass>
+    <thingClass>Fortified.Projectile_Parabola_ConeExplosive</thingClass>
     <projectile>
-      <damageDef>Bomb</damageDef>
+      <damageDef>FFF_ShapeChargeBullet</damageDef>
       <speed>80</speed>
-      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
       <explosionRadius>1.95</explosionRadius>
-      <damageAmountBase>200</damageAmountBase>
+      <damageAmountBase>160</damageAmountBase>
       <flyOverhead>true</flyOverhead>
       <explosionRadiusDisplayPadding>3</explosionRadiusDisplayPadding>
       <arcHeightFactor>0.1</arcHeightFactor>
@@ -45,7 +45,16 @@
           </points>
         </SmokeCurve>
       </li>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>DMS_LaunchDust_Recoilless</effecterDef>
+			</li>
     </comps>
+		<modExtensions>
+			<li Class="Fortified.ExplosiveExtension">
+				<preExplosionOffset>1.5</preExplosionOffset>
+				<effecterDef>FFF_Effecter_Penetrate_Sabot</effecterDef>
+			</li>
+		</modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">

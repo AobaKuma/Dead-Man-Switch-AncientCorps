@@ -103,7 +103,6 @@
 		<resourceReadoutPriority>Middle</resourceReadoutPriority>
 		<smeltable>false</smeltable>
 		<burnableByRecipe>false</burnableByRecipe>
-		<!-- <drawGUIOverlay>false</drawGUIOverlay> -->
 		<verbs>
 			<li>
 				<commandIcon>Things/Projectiles/DMS_9M133Missile/VerbIcon</commandIcon>
@@ -292,6 +291,7 @@
 			<li Class="Fortified.ForceTargetableExtension"/>
 		</modExtensions>
 	</ThingDef>
+
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>DMSAC_Gun_StugnaATGM</defName>
 		<label>Stugna ATGM</label>
