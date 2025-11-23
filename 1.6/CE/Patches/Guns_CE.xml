@@ -164,8 +164,8 @@
                         </verbPropsUnderBarrel>
                         <propsFireModesUnderBarrel>
                             <aiUseBurstMode>FALSE</aiUseBurstMode>
-							<aiAimMode>AimedShot</aiAimMode>
-							<aimedBurstShotCount>1</aimedBurstShotCount>
+                            <aiAimMode>AimedShot</aiAimMode>
+                            <aimedBurstShotCount>1</aimedBurstShotCount>
                         </propsFireModesUnderBarrel>
                     </li>
                 </value>
@@ -752,7 +752,7 @@
                     <defaultProjectile>Bullet_155mmHowitzerShell_HE</defaultProjectile>
                     <warmupTime>8.1</warmupTime>
                     <minRange>20</minRange>
-				    <range>240</range>
+                    <range>240</range>
                     <burstShotCount>1</burstShotCount>
                     <soundCast>DMS_Shot_JusticeGavel</soundCast>
                     <soundCastTail>GunTail_Heavy</soundCastTail>
