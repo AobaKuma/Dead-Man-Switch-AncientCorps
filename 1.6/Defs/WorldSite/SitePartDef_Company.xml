@@ -69,7 +69,7 @@
     <defName>DMSAC_Garrison</defName>
     <linkWithSite>DMSAC_GarrisonSite</linkWithSite>
     <order>470</order>
-    <genStep Class="KCSG.GenStep_CustomStructureGen">
+    <genStep Class="Fortified.Structures.GenStep_FFFStructureGen">
       <fullClear>true</fullClear>
       <structureLayoutDefs>
         <li>DMSAC_Garrison_A</li>
