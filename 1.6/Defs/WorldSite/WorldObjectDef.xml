@@ -45,7 +45,7 @@
     </comps>
     <modExtensions>
       <!-- **This is needed to be spawned at generation** -->
-      <li Class="KCSG.SpawnAtWorldGen">
+      <li Class="Fortified.Structures.SpawnAtWorldGen">
         <!-- Number to spawn-->
         <spawnPartOfFaction>DMS_AncientCorps</spawnPartOfFaction>
         <spawnCount>7</spawnCount>
@@ -110,7 +110,7 @@
     </comps>
     <modExtensions>
       <!-- **This is needed to be spawned at generation** -->
-      <li Class="KCSG.SpawnAtWorldGen">
+      <li Class="Fortified.Structures.SpawnAtWorldGen">
         <!-- Number to spawn-->
         <spawnPartOfFaction>DMS_AncientCorps</spawnPartOfFaction>
         <spawnCount>3</spawnCount>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_A</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -90,9 +90,9 @@
     <modRequirements>
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_B</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -208,9 +208,9 @@
     <modRequirements>
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_C</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -327,9 +327,9 @@
       <li>aoba.deadmanswitch.ancientcorps</li>
       <li>ludeon.rimworld.biotech</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_D</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -445,9 +445,9 @@
     <modRequirements>
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_E</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -564,9 +564,9 @@
       <li>aoba.deadmanswitch.ancientcorps</li>
       <li>ludeon.rimworld.biotech</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_F</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -682,9 +682,9 @@
     <modRequirements>
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_G</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -800,9 +800,9 @@
     <modRequirements>
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_H</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -918,9 +918,9 @@
     <modRequirements>
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
   
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_LogisticTerminal_I</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -1036,5 +1036,5 @@
     <modRequirements>
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 </Defs>

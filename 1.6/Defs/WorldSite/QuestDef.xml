@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>  
   <QuestScriptDef>
     <defName>DMSAC_OpportunitySite_Facility</defName>
@@ -29,6 +29,8 @@
         <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
         <!-- Faction leader asker -->
         <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+        <!-- Any other asker -->
+        <li>questDescription(asker!=null)->[asker_nameDef] from [asker_faction_name] has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
@@ -73,7 +75,7 @@
           <sitePartDefs>$sitePartDefs</sitePartDefs>
         </li>
         
-        <li Class="VEF.Storyteller.QuestNode_GetFaction">
+        <li Class="Fortified.Structures.QuestNode_FFFGetFaction">
           <allowEnemy>true</allowEnemy>
           <storeAs>siteFaction</storeAs>
           <factionDef>DMS_AncientCorps</factionDef>
@@ -147,6 +149,8 @@
         <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
         <!-- Faction leader asker -->
         <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+        <!-- Any other asker -->
+        <li>questDescription(asker!=null)->[asker_nameDef] from [asker_faction_name] has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
@@ -188,7 +192,7 @@
           <sitePartDefs>$sitePartDefs</sitePartDefs>
         </li>
         
-        <li Class="VEF.Storyteller.QuestNode_GetFaction">
+        <li Class="Fortified.Structures.QuestNode_FFFGetFaction">
 					<allowEnemy>true</allowEnemy>
 					<storeAs>siteFaction</storeAs>
 					<factionDef>DMS_AncientCorps</factionDef>
@@ -299,6 +303,8 @@
         <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
         <!-- Faction leader asker -->
         <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+        <!-- Any other asker -->
+        <li>questDescription(asker!=null)->[asker_nameDef] from [asker_faction_name] has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
@@ -342,7 +348,7 @@
           <preferCloserTiles>false</preferCloserTiles>
           <sitePartDefs>$sitePartDefs</sitePartDefs>
         </li>
-        <li Class="VEF.Storyteller.QuestNode_GetFaction">
+        <li Class="Fortified.Structures.QuestNode_FFFGetFaction">
 					<allowEnemy>true</allowEnemy>
 					<storeAs>siteFaction</storeAs>
 					<factionDef>DMS_AncientCorps</factionDef>

@@ -7,7 +7,7 @@
   -->
   <DMSAC_OpportunitySite_Facility.questDescriptionRules.rulesStrings>
     <li>questDescription(askerIsNull==true)->根据分析的数据，我们在距离不远的地方定位了一处古代机兵部队的军用设施。\n\n似乎[allSitePartsDescriptions]</li>
-    <li>questDescription(asker_factionLeader==True)->根据分析的数据结合此前来自[asker_faction_name]的[asker_faction_leaderTitle][asker_nameDef]所透漏的模糊讯息。我们确认不远处有一处古代机兵部队的军用设施。\n\n[asker_label]曾表示这里可能[allSitePartsDescriptions]</li>
+    <li>questDescription(asker!=null)->根据此前来自[asker_faction_name]的[asker_nameDef]所透漏的模糊讯息。我们确认不远处有一处古代机兵部队的军用设施。\n\n[asker_label]曾表示这里可能[allSitePartsDescriptions]</li>
   </DMSAC_OpportunitySite_Facility.questDescriptionRules.rulesStrings>
   <!-- EN:
     <li>questName(priority=1)->[asker_nameDef]'s [verb] [abj] [facility]</li>
@@ -27,7 +27,7 @@
   -->
   <DMSAC_OpportunitySite_Facility.questNameRules.rulesStrings>
     <li>questName(priority=1)->[asker_nameDef][verb]的[abj][facility]</li>
-    <li>questName->[Located]的[abj][facility]</li>
+    <li>questName->[verb]的[abj][facility]</li>
     <li>verb->定位</li>
     <li>verb->侦查</li>
     <li>verb->暴露</li>
@@ -48,7 +48,7 @@
   -->
   <DMSAC_OpportunitySite_Graveyard.questDescriptionRules.rulesStrings>
     <li>questDescription(askerIsNull==true)->根据分析的数据，我们在距离不远的地方定位了一处古代机兵部队的军用设施。\n\n似乎[allSitePartsDescriptions]</li>
-    <li>questDescription(asker_factionLeader==True)->根据分析的数据结合此前来自[asker_faction_name]的[asker_faction_leaderTitle][asker_nameDef]所透漏的模糊讯息。我们确认不远处有一处古代机兵部队的军用设施。\n\n[asker_label]曾表示这里可能[allSitePartsDescriptions]</li>
+    <li>questDescription(asker!=null)->根据此前来自[asker_faction_name]的[asker_nameDef]所透漏的模糊讯息。我们确认不远处有一处古代机兵部队的军用设施。\n\n[asker_label]曾表示这里可能[allSitePartsDescriptions]</li>
   </DMSAC_OpportunitySite_Graveyard.questDescriptionRules.rulesStrings>
   <!-- EN:
     <li>questName(priority=1)->[asker_nameDef]'s [stash] of [treasure]</li>
@@ -86,7 +86,7 @@
   -->
   <DMSAC_OpportunitySite_LogisticTerminal.questDescriptionRules.rulesStrings>
     <li>questDescription(askerIsNull==true)->根据分析的数据，我们在距离不远的地方定位了一处古代机兵部队的军用设施。\n\n似乎[allSitePartsDescriptions]</li>
-    <li>questDescription(asker_factionLeader==True)->根据分析的数据结合此前来自[asker_faction_name]的[asker_faction_leaderTitle][asker_nameDef]所透漏的模糊讯息。我们确认不远处有一处古代机兵部队的军用设施。\n\n[asker_label]曾表示这里可能[allSitePartsDescriptions]</li>
+    <li>questDescription(asker!=null)->根据此前来自[asker_faction_name]的[asker_faction_leaderTitle][asker_nameDef]所透漏的模糊讯息。我们确认不远处有一处古代机兵部队的军用设施。\n\n[asker_label]曾表示这里可能[allSitePartsDescriptions]</li>
   </DMSAC_OpportunitySite_LogisticTerminal.questDescriptionRules.rulesStrings>
   <!-- EN:
     <li>questName(priority=1)->[asker_nameDef]'s [stash] of [treasure]</li>

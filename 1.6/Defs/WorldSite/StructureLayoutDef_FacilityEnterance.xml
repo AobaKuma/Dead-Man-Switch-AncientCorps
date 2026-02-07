@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_FacilityEnterance_A</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -384,5 +384,5 @@
       <li>aoba.deadmanswitch.ancientcorps</li>
       <li>aoba.deadmanswitch.core_steam</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 </Defs>

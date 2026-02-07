@@ -1,807 +1,807 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Large_East</defName>
     <thing>DMSAC_Building_DerelictMech_Large</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedLargeMech_East</defName>
     <thing>DMSAC_Building_DeactivatedLargeMech</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Large_South</defName>
     <thing>DMSAC_Building_DerelictMech_Large</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedLargeMech_South</defName>
     <thing>DMSAC_Building_DeactivatedLargeMech</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedMediumMech_West</defName>
     <thing>DMSAC_Building_DeactivatedMediumMech</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedMediumMech_South</defName>
     <thing>DMSAC_Building_DeactivatedMediumMech</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
-  <KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Wall_Steel_MG</defName>
     <thing>Wall</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Door_WoodLog_MG</defName>
     <thing>Door</thing>
     <stuff>WoodLog</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Autodoor_Steel_MG</defName>
     <thing>Autodoor</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Molot_Mosta</defName>
     <pawnKindDef>DMS_Mech_Molot_Mosta</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Krepost</defName>
     <pawnKindDef>DMS_Mech_Krepost</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_A_MG</defName>
     <thing>DMSAC_Wall_A</thing>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Small_West</defName>
     <thing>DMSAC_Building_DerelictMech_Small</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_ChunkSlag_Old</defName>
     <thing>DMS_ChunkSlag_Old</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Large_West</defName>
     <thing>DMSAC_Building_DerelictMech_Large</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Small_East</defName>
     <thing>DMSAC_Building_DerelictMech_Small</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Large_North</defName>
     <thing>DMSAC_Building_DerelictMech_Large</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Small_North</defName>
     <thing>DMSAC_Building_DerelictMech_Small</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedSmallMech_West</defName>
     <thing>DMSAC_Building_DeactivatedSmallMech</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedSmallMech_East</defName>
     <thing>DMSAC_Building_DeactivatedSmallMech</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Small_South</defName>
     <thing>DMSAC_Building_DerelictMech_Small</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedSmallMech_South</defName>
     <thing>DMSAC_Building_DeactivatedSmallMech</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedLargeMech_West</defName>
     <thing>DMSAC_Building_DeactivatedLargeMech</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Mushketer_Static</defName>
     <pawnKindDef>DMS_Mech_Mushketer_AR</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Mushketer_AR</defName>
     <pawnKindDef>DMS_Mech_Mushketer_AR</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Dogge</defName>
     <pawnKindDef>DMS_Mech_Dogge</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Zabor</defName>
     <pawnKindDef>DMS_Mech_Zabor</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Mushketer_SAR</defName>
     <pawnKindDef>DMS_Mech_Mushketer_SAR</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Gorod</defName>
     <pawnKindDef>DMS_Mech_Gorod</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Gorod_Piper</defName>
     <pawnKindDef>DMS_Mech_Gorod_Piper</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_BattleWalker</defName>
     <pawnKindDef>DMS_Mech_BattleWalker</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Tsvetnik</defName>
     <pawnKindDef>DMS_Mech_Tsvetnik</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Molot_Kamin</defName>
     <pawnKindDef>DMS_Mech_Molot_Kamin</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Mech_Molot_Reservoir</defName>
     <pawnKindDef>DMS_Mech_Molot_Reservoir</pawnKindDef>
     <faction>DMS_AncientCorps</faction>
     <defendSpawnPoint>true</defendSpawnPoint>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Medium_East</defName>
     <thing>DMSAC_Building_DerelictMech_Medium</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Medium_West</defName>
     <thing>DMSAC_Building_DerelictMech_Medium</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Medium_South</defName>
     <thing>DMSAC_Building_DerelictMech_Medium</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Medium_North</defName>
     <thing>DMSAC_Building_DerelictMech_Medium</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedMediumMech_North</defName>
     <thing>DMSAC_Building_DeactivatedMediumMech</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Turret_Okhotnik</defName>
     <thing>DMS_Turret_Okhotnik</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedMediumMech_East</defName>
     <thing>DMSAC_Building_DeactivatedMediumMech</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
-  <KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Alligator_North</defName>
     <thing>DMSAC_Building_DerelictMech_Alligator</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Alligator_West</defName>
     <thing>DMSAC_Building_DerelictMech_Alligator</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Alligator_East</defName>
     <thing>DMSAC_Building_DerelictMech_Alligator</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_ChunkSlag</defName>
     <thing>DMS_ChunkSlag</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DerelictMech_Alligator_South</defName>
     <thing>DMSAC_Building_DerelictMech_Alligator</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Wall_Tungsteel_MG</defName>
     <thing>Wall</thing>
     <stuff>Tungsteel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Fence_Steel_MG</defName>
     <thing>Fence</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedSmallMech_East</defName>
     <thing>DMSAC_Building_InactivatedSmallMech</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedSmallMech_West</defName>
     <thing>DMSAC_Building_InactivatedSmallMech</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedSmallMech_South</defName>
     <thing>DMSAC_Building_InactivatedSmallMech</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Barricade_Tungsteel_MG</defName>
     <thing>Barricade</thing>
     <stuff>Tungsteel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedSmallMech_North</defName>
     <thing>DMSAC_Building_InactivatedSmallMech</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Barricade_Steel_MG</defName>
     <thing>Barricade</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_RollingDoor_South</defName>
     <thing>DMSAC_Building_RollingDoor</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Crate_West</defName>
     <thing>DMSAC_Crate</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Column_Tungsteel_MG</defName>
     <thing>Column</thing>
     <stuff>Tungsteel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Tungsteel</defName>
     <thing>Tungsteel</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_DeposableRocketLauncher</defName>
     <thing>DMS_DeposableRocketLauncher</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_StugnaATGM</defName>
     <thing>DMSAC_StugnaATGM</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>FenceGate_Tungsteel_MG</defName>
     <thing>FenceGate</thing>
     <stuff>Tungsteel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Door_Tungsteel_MG</defName>
     <thing>Door</thing>
     <stuff>Tungsteel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Cargo_North</defName>
     <thing>DMSAC_Cargo</thing>
     <rotation>North</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_CombatRation</defName>
     <thing>DMS_CombatRation</thing>
     <replacementDef>MealSurvivalPack</replacementDef>
     <maxStackSize>5</maxStackSize>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_NuclearBattery</defName>
     <thing>DMS_NuclearBattery</thing>
     <maxStackSize>1</maxStackSize>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_EncryptedTransmitter</defName>
     <thing>DMS_EncryptedTransmitter</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_CeramicsPlating</defName>
     <thing>DMS_CeramicsPlating</thing>
     <maxStackSize>1</maxStackSize>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Crate_East</defName>
     <thing>DMSAC_Crate</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_DeactivatedSmallMech_North</defName>
     <thing>DMSAC_Building_DeactivatedSmallMech</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Crate_North</defName>
     <thing>DMSAC_Crate</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_RollingDoor_East</defName>
     <thing>DMSAC_Building_RollingDoor</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedLargeMech_West</defName>
     <thing>DMSAC_Building_InactivatedLargeMech</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedMediumMech_East</defName>
     <thing>DMSAC_Building_InactivatedMediumMech</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_RollingDoor_West</defName>
     <thing>DMSAC_Building_RollingDoor</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Crate_South</defName>
     <thing>DMSAC_Crate</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_TableMachinePrinter_West</defName>
     <thing>DMS_TableMachinePrinter</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_BF_ExtendCargo</defName>
     <thing>DMS_BF_ExtendCargo</thing>
     <maxStackSize>1</maxStackSize>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedMediumMech_West</defName>
     <thing>DMSAC_Building_InactivatedMediumMech</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Recharger_North</defName>
     <thing>DMS_Recharger</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Recharger_South</defName>
     <thing>DMS_Recharger</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Cargo_South</defName>
     <thing>DMSAC_Cargo</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedMediumMech_South</defName>
     <thing>DMSAC_Building_InactivatedMediumMech</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Polyester</defName>
     <thing>Polyester</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_RollingDoor_North</defName>
     <thing>DMSAC_Building_RollingDoor</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Recharger_West</defName>
     <thing>DMS_Recharger</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Wall_Steel_Olive</defName>
     <thing>Wall</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Olive</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
 
 <!-- 測試 -->
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Shelf_Steel_Olive_North</defName>
     <thing>Shelf</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Olive</color>
     <thingSetMakerDef>DMSAC_CrateLoots</thingSetMakerDef>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Shelf_Steel_Olive_East</defName>
     <thing>Shelf</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Olive</color>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Shelf_Steel_Olive_West</defName>
     <thing>Shelf</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Olive</color>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Shelf_Steel_Olive_South</defName>
     <thing>Shelf</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Olive</color>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Wall_Steel_Teal</defName>
     <thing>Wall</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Door_Steel_Teal</defName>
     <thing>Door</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_BarrierGate_North</defName>
     <thing>DMSAC_Building_BarrierGate</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_FuelBarrel</defName>
     <thing>DMSAC_Building_FuelBarrel</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_BarrierGate_West</defName>
     <thing>DMSAC_Building_BarrierGate</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_BarrierGate_East</defName>
     <thing>DMSAC_Building_BarrierGate</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
   
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_BarrierGate_South</defName>
     <thing>DMSAC_Building_BarrierGate</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_RoadBlock_East</defName>
     <thing>DMSAC_Building_RoadBlock</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_RoadBlock_West</defName>
     <thing>DMSAC_Building_RoadBlock</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_RoadBlock_South</defName>
     <thing>DMSAC_Building_RoadBlock</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_PackCrate</defName>
     <thing>DMSAC_PackCrate</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Wall_Steel_Structure_Green</defName>
     <thing>Wall</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Door_WoodLog_Structure_Green</defName>
     <thing>Door</thing>
     <stuff>WoodLog</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Wall_Tungsteel_Structure_Green</defName>
     <thing>Wall</thing>
     <stuff>Tungsteel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Cargo_West</defName>
     <thing>DMSAC_Cargo</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Cargo_East</defName>
     <thing>DMSAC_Cargo</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_AirFan</defName>
     <thing>DMSAC_Building_AirFan</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_WallLamp_North</defName>
     <thing>DMSAC_WallLamp</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Autodoor_Steel_Structure_Green</defName>
     <thing>Autodoor</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_FloorLamp</defName>
     <thing>DMSAC_FloorLamp</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_WallLamp_East</defName>
     <thing>DMSAC_WallLamp</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Turret_GateKeeper_North</defName>
     <thing>DMS_Turret_GateKeeper</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_WallLamp_West</defName>
     <thing>DMSAC_WallLamp</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Hole_Empty_West</defName>
     <thing>DMSAC_Hole_Empty</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Hole_PowerGen_West</defName>
     <thing>DMSAC_Hole_PowerGen</thing>
     <rotation>West</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_A_Structure_Green</defName>
     <thing>DMSAC_Wall_A</thing>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Hole_PowerGen_South</defName>
     <thing>DMSAC_Hole_PowerGen</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_LiftShaft</defName>
     <thing>DMSAC_Building_LiftShaft</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_BandNode</defName>
     <thing>DMSAC_BandNode</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Hole_Empty_South</defName>
     <thing>DMSAC_Hole_Empty</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_TableMachinePrinter_South</defName>
     <thing>DMS_TableMachinePrinter</thing>
     <rotation>South</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_Recharger_East</defName>
     <thing>DMS_Recharger</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedLargeMech_East</defName>
     <thing>DMSAC_Building_InactivatedLargeMech</thing>
     <rotation>East</rotation>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMS_TableMachinePrinter_North</defName>
     <thing>DMS_TableMachinePrinter</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_InactivatedMediumMech_North</defName>
     <thing>DMSAC_Building_InactivatedMediumMech</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Building_RoadBlock_North</defName>
     <thing>DMSAC_Building_RoadBlock</thing>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Wall_Steel_Green</defName>
     <thing>Wall</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
-  <KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_A_Green</defName>
     <thing>DMSAC_Wall_A</thing>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_C_Green</defName>
     <thing>DMSAC_Wall_C</thing>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_B_Green</defName>
     <thing>DMSAC_Wall_B</thing>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Door_WoodLog_Green</defName>
     <thing>Door</thing>
     <stuff>WoodLog</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 
-  <KCSG.SymbolDef>
+  <Fortified.Structures.SymbolDef>
     <defName>Door_Steel_Green</defName>
     <thing>Door</thing>
     <stuff>Steel</stuff>
     <color>DMSAC_Structure_Green</color>
-  </KCSG.SymbolDef>
+  </Fortified.Structures.SymbolDef>
 </Defs>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_Graveyard_Large_A</defName>
     <spawnConduits>false</spawnConduits>
     <maxSize>38</maxSize>
@@ -95,9 +95,9 @@
       <li>aoba.deadmanswitch.core</li>
       <li>aoba.deadmanswitch.ancientcorps</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_Graveyard_Large_B</defName>
     <spawnConduits>false</spawnConduits>
     <maxSize>38</maxSize>
@@ -308,5 +308,5 @@
       <li>aoba.deadmanswitch.ancientcorps</li>
       <li>aoba.deadmanswitch.core</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 </Defs>

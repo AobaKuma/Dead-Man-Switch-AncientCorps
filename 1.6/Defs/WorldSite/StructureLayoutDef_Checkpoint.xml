@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_Checkpoint_A</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -300,9 +300,9 @@
       <li>aoba.deadmanswitch.ancientcorps</li>
       <li>aoba.deadmanswitch.core</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_Checkpoint_B</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -482,9 +482,9 @@
       <li>aoba.deadmanswitch.ancientcorps</li>
       <li>aoba.deadmanswitch.core</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 
-  <KCSG.StructureLayoutDef>
+  <Fortified.Structures.StructureLayoutDef>
     <defName>DMSAC_Checkpoint_C</defName>
     <spawnConduits>false</spawnConduits>
     <layouts>
@@ -664,5 +664,5 @@
       <li>aoba.deadmanswitch.ancientcorps</li>
       <li>aoba.deadmanswitch.core</li>
     </modRequirements>
-  </KCSG.StructureLayoutDef>
+  </Fortified.Structures.StructureLayoutDef>
 </Defs>

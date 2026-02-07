@@ -10,11 +10,6 @@
 	<packageId>Aoba.DeadManSwitch.AncientCorps</packageId>
 	<modDependencies>
 		<li>
-			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
-			<displayName>Vanilla Expanded Framework</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
-		</li>
-		<li>
 			<packageId>Aoba.DeadManSwitch.Core</packageId>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3121742525</steamWorkshopUrl>
 			<displayName>Dead Man Switch</displayName>
