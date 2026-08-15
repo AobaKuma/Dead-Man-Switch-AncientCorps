@@ -17,6 +17,7 @@
 	</modDependencies>
 	<loadAfter>
 		<li>Aoba.DeadManSwitch.Core</li>
+		<li>DwS.FunctionalAmmunition.Library</li>
 	</loadAfter>
 	<description>For some reason, a main combat corps belonging to an former-visited colonial fleet left on this planet for hundreds of years. Now, the underground military facilities built for total war are operating once again, and those ancient automatroid war machines are gathering on the surface again.\n\nHowever, we still don't know who their enemy is...</description>
 </ModMetaData>

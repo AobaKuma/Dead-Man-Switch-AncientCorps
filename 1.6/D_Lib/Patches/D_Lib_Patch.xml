@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DMSAC_Bullet_StugnaATGM"]/projectile</xpath>
+    <value>
+      <trajectoryWorker>D_FuncAmmoLib.MissileTrajectoryWorker</trajectoryWorker>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DMSAC_Bullet_StugnaATGM"]/comps</xpath>
+    <value>
+      <li Class="D_FuncAmmoLib.CompProperties_GuidanceCE">
+        <GuidanceMode>Active</GuidanceMode>
+				<RequireSight>true</RequireSight>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

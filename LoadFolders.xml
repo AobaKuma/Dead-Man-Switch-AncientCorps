@@ -11,6 +11,7 @@
 		<li>/</li>
 		<li>1.6</li>
 		<!--<li IfModActive="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam">1.6/AUR</li> disabled yet-->
-		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.6/CE</li>		
+		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.6/CE</li>
+		<li IfModActiveAll="CETeam.CombatExtended,DwS.FunctionalAmmunition.Library">1.6/D_Lib</li>
 	</v1.6>
 </loadFolders>
