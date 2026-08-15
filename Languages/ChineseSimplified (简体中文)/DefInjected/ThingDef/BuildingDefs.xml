@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
     <!-- EN: electirc arc furnace -->
   <DMSAC_ArcFurnace.label>电弧炉</DMSAC_ArcFurnace.label>
@@ -142,26 +142,28 @@
   <!-- EN: A Standard issue parcel containing supplies for military logistics. These parcel seemed to have been produced recently and sent to various locations. -->
   <DMSAC_PackCrate.description>一个用于运输军用补给品的标准运输包。里面的内容物跟包裹本身似乎都是在最近才制造的，并随着机兵部队的任务被送到各处。</DMSAC_PackCrate.description>
   
+  
+  
+  
+  
+  <!-- DEPRECATED: moved to FFF_RCdoor / FFF_Wall_*, kept for save compatibility -->
   <!-- EN: facility door -->
   <DMSAC_RCdoor.label>设施门</DMSAC_RCdoor.label>
   <!-- EN: Divides rooms. allows people to move through the door without slowing down. -->
   <DMSAC_RCdoor.description>分隔房间的门。允许人们不减慢速度地穿过。</DMSAC_RCdoor.description>
-  
   <!-- EN: facility wall -->
   <DMSAC_Wall_A.label>设施内墙</DMSAC_Wall_A.label>
   <!-- EN: A structure with waterproof layers, commonly found in underground facilities. -->
   <DMSAC_Wall_A.description>常见于地下设施具有复合涂层的钢筋混凝土结构墙，为了支撑内部结构而被建造的无坚不摧。</DMSAC_Wall_A.description>
-  
   <!-- EN: facility wall -->
   <DMSAC_Wall_B.label>设施内墙</DMSAC_Wall_B.label>
   <!-- EN: A structure with waterproof layers, commonly found in underground facilities. -->
   <DMSAC_Wall_B.description>常见于地下设施具有复合涂层的钢筋混凝土结构墙，为了支撑内部结构而被建造的无坚不摧。</DMSAC_Wall_B.description>
-  
   <!-- EN: facility wall -->
   <DMSAC_Wall_C.label>设施内墙</DMSAC_Wall_C.label>
   <!-- EN: A structure with waterproof layers, commonly found in underground facilities. -->
   <DMSAC_Wall_C.description>常见于地下设施具有复合涂层的钢筋混凝土结构墙，为了支撑内部结构而被建造的无坚不摧。</DMSAC_Wall_C.description>
-  
+
   <!-- EN: facility wall lamp -->
   <DMSAC_WallLamp.label>设施墙灯</DMSAC_WallLamp.label>
   <!-- EN: A wall-mounted lamp that lights an area using electricity. It is less powerful than a standing lamp, but can be mounted on walls. -->

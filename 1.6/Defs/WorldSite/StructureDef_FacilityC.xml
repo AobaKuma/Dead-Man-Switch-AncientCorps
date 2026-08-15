@@ -6,61 +6,61 @@
     <disableSuggestedRoof>True</disableSuggestedRoof>
     <elements>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(0, 0, 0)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(0, 0, 14)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(0, 0, 56)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(0, 0, 73)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(14, 0, 0)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(14, 0, 14)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(82, 0, 0)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(1, 0, 0)</pos>
         <size>(13, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(16, 0, 0)</pos>
         <size>(66, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(84, 0, 0)</pos>
         <size>(16, 1)</size>
         <rot>2</rot>
@@ -151,43 +151,43 @@
         <size>(1, 7)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(73, 0, 1)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(73, 0, 21)</pos>
         <size>(1, 12)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(73, 0, 34)</pos>
         <size>(1, 6)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(99, 0, 1)</pos>
         <size>(1, 15)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(99, 0, 18)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(99, 0, 21)</pos>
         <size>(1, 26)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(99, 0, 92)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
@@ -223,55 +223,55 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(0, 0, 2)</pos>
         <size>(1, 12)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(0, 0, 16)</pos>
         <size>(1, 18)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(0, 0, 37)</pos>
         <size>(1, 19)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(0, 0, 58)</pos>
         <size>(1, 15)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(0, 0, 75)</pos>
         <size>(1, 23)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 2)</pos>
         <size>(2, 12)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 29)</pos>
         <size>(2, 8)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 40)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 43)</pos>
         <size>(2, 5)</size>
         <rot>2</rot>
@@ -328,37 +328,37 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(19, 0, 5)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(32, 0, 5)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(45, 0, 5)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(58, 0, 5)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(72, 0, 9)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(72, 0, 11)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
@@ -418,13 +418,13 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(2, 0, 15)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(12, 0, 15)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -442,7 +442,7 @@
         <stuff>Cloth</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(2, 0, 16)</pos>
         <size>(2, 7)</size>
         <rot>2</rot>
@@ -484,109 +484,109 @@
         <stuff>Cloth</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(98, 0, 16)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(81, 0, 21)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(86, 0, 19)</pos>
         <size>(1, 4)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(91, 0, 19)</pos>
         <size>(1, 4)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(96, 0, 21)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(73, 0, 19)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(73, 0, 41)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(25, 0, 20)</pos>
         <size>(6, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(32, 0, 20)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(37, 0, 20)</pos>
         <size>(6, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(44, 0, 20)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(53, 0, 20)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(62, 0, 20)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(71, 0, 20)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(75, 0, 20)</pos>
         <size>(7, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(96, 0, 20)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(96, 0, 47)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(96, 0, 90)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
@@ -597,31 +597,31 @@
         <size>(75, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(25, 0, 21)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(46, 0, 21)</pos>
         <size>(1, 12)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(55, 0, 21)</pos>
         <size>(1, 12)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(55, 0, 62)</pos>
         <size>(1, 6)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(64, 0, 21)</pos>
         <size>(1, 12)</size>
         <rot>2</rot>
@@ -672,19 +672,19 @@
         <size>(1, 3)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(2, 0, 23)</pos>
         <size>(24, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(28, 0, 78)</pos>
         <size>(1, 6)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(28, 0, 89)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
@@ -695,7 +695,7 @@
         <size>(24, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(2, 0, 24)</pos>
         <size>(41, 1)</size>
         <rot>2</rot>
@@ -716,25 +716,25 @@
         <size>(1, 3)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(2, 0, 25)</pos>
         <size>(1, 9)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(2, 0, 37)</pos>
         <size>(1, 14)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(2, 0, 52)</pos>
         <size>(1, 4)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 25)</pos>
         <size>(29, 1)</size>
         <rot>2</rot>
@@ -745,25 +745,25 @@
         <size>(31, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 26)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 50)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(38, 0, 26)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(38, 0, 50)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
@@ -794,25 +794,25 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 27)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 49)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(39, 0, 27)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(39, 0, 49)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
@@ -847,25 +847,25 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 28)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 48)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(40, 0, 28)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(40, 0, 48)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
@@ -876,19 +876,19 @@
         <size>(7, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(41, 0, 29)</pos>
         <size>(2, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(41, 0, 40)</pos>
         <size>(2, 4)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(41, 0, 46)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
@@ -934,13 +934,13 @@
         <size>(1, 7)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(46, 0, 33)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(49, 0, 33)</pos>
         <size>(25, 1)</size>
         <rot>2</rot>
@@ -951,43 +951,43 @@
         <size>(28, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(0, 0, 34)</pos>
         <size>(3, 3)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(52, 0, 34)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(67, 0, 34)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(69, 0, 34)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(71, 0, 34)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(71, 0, 92)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(71, 0, 97)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
@@ -1017,19 +1017,19 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(64, 0, 35)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(64, 0, 66)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(41, 0, 36)</pos>
         <size>(6, 1)</size>
         <rot>2</rot>
@@ -1059,19 +1059,19 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(46, 0, 37)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(51, 0, 37)</pos>
         <size>(9, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(61, 0, 37)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
@@ -1087,7 +1087,7 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(67, 0, 38)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
@@ -1103,7 +1103,7 @@
         <size>(1, 10)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(62, 0, 48)</pos>
         <size>(1, 8)</size>
         <rot>2</rot>
@@ -1114,7 +1114,7 @@
         <size>(3, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(73, 0, 40)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1130,31 +1130,31 @@
         <size>(3, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(62, 0, 41)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(4, 0, 42)</pos>
         <size>(12, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(45, 0, 42)</pos>
         <size>(10, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(64, 0, 42)</pos>
         <size>(9, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(75, 0, 42)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1180,25 +1180,25 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(56, 0, 42)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(44, 0, 43)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(44, 0, 57)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(76, 0, 43)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1219,13 +1219,13 @@
         <size>(1, 6)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(41, 0, 44)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(77, 0, 44)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1236,13 +1236,13 @@
         <size>(3, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(41, 0, 45)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(78, 0, 45)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1259,7 +1259,7 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(79, 0, 46)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1277,37 +1277,37 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(62, 0, 47)</pos>
         <size>(7, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(73, 0, 47)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(73, 0, 55)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(73, 0, 63)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(73, 0, 71)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 47)</pos>
         <size>(10, 1)</size>
         <rot>2</rot>
@@ -1318,73 +1318,73 @@
         <size>(43, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(57, 0, 47)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(68, 0, 48)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(68, 0, 56)</pos>
         <size>(1, 6)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(80, 0, 48)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(80, 0, 56)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(80, 0, 64)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(80, 0, 72)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 48)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 56)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 64)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 72)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(98, 0, 48)</pos>
         <size>(2, 42)</size>
         <rot>2</rot>
@@ -1531,13 +1531,13 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(57, 0, 49)</pos>
         <size>(1, 5)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(49, 0, 49)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
@@ -1548,37 +1548,37 @@
         <size>(1, 2)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(14, 0, 51)</pos>
         <size>(13, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(30, 0, 51)</pos>
         <size>(12, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(42, 0, 51)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(4, 0, 52)</pos>
         <size>(23, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(30, 0, 52)</pos>
         <size>(6, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(37, 0, 52)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
@@ -1589,7 +1589,7 @@
         <size>(41, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(15, 0, 53)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1600,13 +1600,13 @@
         <size>(1, 3)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(22, 0, 54)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(56, 0, 54)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1617,37 +1617,37 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(55, 0, 55)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(64, 0, 55)</pos>
         <size>(5, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 55)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 63)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 71)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(82, 0, 79)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
@@ -1668,13 +1668,13 @@
         <size>(17, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(24, 0, 56)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(42, 0, 56)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
@@ -1690,19 +1690,19 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(2, 0, 56)</pos>
         <size>(18, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(21, 0, 56)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(54, 0, 56)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1725,43 +1725,43 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(30, 0, 57)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(47, 0, 57)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(25, 0, 58)</pos>
         <size>(1, 6)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(25, 0, 69)</pos>
         <size>(1, 5)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(30, 0, 58)</pos>
         <size>(1, 10)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(30, 0, 69)</pos>
         <size>(1, 4)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(61, 0, 58)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1798,7 +1798,7 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(60, 0, 59)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1809,7 +1809,7 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(59, 0, 60)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1820,37 +1820,37 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(58, 0, 61)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_C</def>
+        <def>FFF_Wall_C</def>
         <pos>(34, 0, 61)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(38, 0, 61)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(42, 0, 62)</pos>
         <size>(10, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(57, 0, 62)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(57, 0, 76)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1881,13 +1881,13 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(42, 0, 63)</pos>
         <size>(1, 5)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(67, 0, 63)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1903,7 +1903,7 @@
         <size>(8, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(66, 0, 64)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1914,13 +1914,13 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(25, 0, 74)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(65, 0, 65)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -1958,25 +1958,25 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(63, 0, 67)</pos>
         <size>(3, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(30, 0, 68)</pos>
         <size>(20, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(51, 0, 68)</pos>
         <size>(8, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(60, 0, 68)</pos>
         <size>(6, 1)</size>
         <rot>2</rot>
@@ -1987,19 +1987,19 @@
         <size>(36, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(38, 0, 69)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(56, 0, 69)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(65, 0, 69)</pos>
         <size>(1, 7)</size>
         <rot>2</rot>
@@ -2010,7 +2010,7 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(47, 0, 70)</pos>
         <size>(1, 6)</size>
         <rot>2</rot>
@@ -2031,7 +2031,7 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(30, 0, 73)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -2042,7 +2042,7 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(31, 0, 74)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -2058,49 +2058,49 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(32, 0, 75)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(3, 0, 76)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(3, 0, 95)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(6, 0, 76)</pos>
         <size>(17, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(24, 0, 76)</pos>
         <size>(4, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(33, 0, 76)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(39, 0, 76)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(48, 0, 76)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -2111,61 +2111,61 @@
         <size>(66, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(37, 0, 76)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(37, 0, 88)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(46, 0, 76)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(46, 0, 88)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(55, 0, 76)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(55, 0, 88)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <pos>(64, 0, 76)</pos>
         <size>(2, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(3, 0, 77)</pos>
         <size>(1, 18)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(27, 0, 77)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(27, 0, 96)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -2206,7 +2206,7 @@
         <size>(1, 2)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(71, 0, 79)</pos>
         <size>(10, 1)</size>
         <rot>2</rot>
@@ -2217,19 +2217,19 @@
         <size>(29, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(70, 0, 80)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(70, 0, 88)</pos>
         <size>(1, 2)</size>
         <rot>2</rot>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(86, 0, 80)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -2268,7 +2268,7 @@
         <stuff>Steel</stuff>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(85, 0, 81)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -2325,7 +2325,7 @@
         <size>(43, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(70, 0, 90)</pos>
         <size>(23, 1)</size>
         <rot>2</rot>
@@ -2336,7 +2336,7 @@
         <size>(29, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(70, 0, 91)</pos>
         <size>(30, 1)</size>
         <rot>2</rot>
@@ -2362,7 +2362,7 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(4, 0, 96)</pos>
         <size>(22, 1)</size>
         <rot>2</rot>
@@ -2373,7 +2373,7 @@
         <size>(25, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(0, 0, 98)</pos>
         <size>(2, 1)</size>
         <rot>2</rot>
@@ -2384,7 +2384,7 @@
         <size>(2, 1)</size>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingRect">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <pos>(0, 0, 99)</pos>
         <size>(100, 1)</size>
         <rot>2</rot>
@@ -2404,7 +2404,7 @@
         </posList>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingScatter">
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <rot>2</rot>
         <posList>
           <li>(73, 0, 7)</li>
@@ -2649,7 +2649,7 @@
         </posList>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingScatter">
-        <def>DMSAC_RCdoor</def>
+        <def>FFF_RCdoor</def>
         <rot>1</rot>
         <posList>
           <li>(73, 0, 8)</li>
@@ -2684,7 +2684,7 @@
         </posList>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingScatter">
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <rot>2</rot>
         <posList>
           <li>(72, 0, 10)</li>
@@ -2878,7 +2878,7 @@
         </posList>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingScatter">
-        <def>DMSAC_Wall_C</def>
+        <def>FFF_Wall_C</def>
         <rot>2</rot>
         <posList>
           <li>(31, 0, 20)</li>
@@ -3161,7 +3161,7 @@
         </posList>
       </li>
       <li Class="Fortified.Structures.FFF_Element_ThingScatter">
-        <def>DMSAC_RCdoor</def>
+        <def>FFF_RCdoor</def>
         <posList>
           <li>(66, 0, 35)</li>
           <li>(68, 0, 35)</li>

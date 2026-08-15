@@ -20021,7 +20021,7 @@
         <position>(93,0,84)</position>
       </li>
       <li>
-        <def>DMSAC_Wall_A</def>
+        <def>FFF_Wall_A</def>
         <rotation>2</rotation>
         <faction>DMS_AncientCorps</faction>
         <colorDef>DMSAC_Structure_Olive</colorDef>
@@ -21722,7 +21722,7 @@
         </allPositions>
       </li>
       <li>
-        <def>DMSAC_Wall_C</def>
+        <def>FFF_Wall_C</def>
         <rotation>2</rotation>
         <faction>DMS_AncientCorps</faction>
         <colorDef>DMSAC_Structure_Olive</colorDef>
@@ -22088,7 +22088,7 @@
         </allPositions>
       </li>
       <li>
-        <def>DMSAC_Wall_B</def>
+        <def>FFF_Wall_B</def>
         <rotation>2</rotation>
         <faction>DMS_AncientCorps</faction>
         <colorDef>DMSAC_Structure_Olive</colorDef>
@@ -22276,7 +22276,7 @@
         </allPositions>
       </li>
       <li>
-        <def>DMSAC_RCdoor</def>
+        <def>FFF_RCdoor</def>
         <rotation>1</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>500</hitPoint>
@@ -22303,7 +22303,7 @@
         </allPositions>
       </li>
       <li>
-        <def>DMSAC_RCdoor</def>
+        <def>FFF_RCdoor</def>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>500</hitPoint>
         <colorDef>DMSAC_Structure_Olive</colorDef>
@@ -23548,7 +23548,7 @@
         </allPositions>
       </li>
       <li>
-        <def>DMSAC_RCdoor</def>
+        <def>FFF_RCdoor</def>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>500</hitPoint>
         <colorDef>DMSAC_Structure_Green</colorDef>
@@ -23562,7 +23562,7 @@
         </allPositions>
       </li>
       <li>
-        <def>DMSAC_RCdoor</def>
+        <def>FFF_RCdoor</def>
         <rotation>1</rotation>
         <faction>DMS_AncientCorps</faction>
         <hitPoint>500</hitPoint>

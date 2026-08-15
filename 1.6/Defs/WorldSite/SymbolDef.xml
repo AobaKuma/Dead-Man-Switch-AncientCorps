@@ -73,7 +73,7 @@
 
   <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_A_MG</defName>
-    <thing>DMSAC_Wall_A</thing>
+    <thing>FFF_Wall_A</thing>
     <color>DMSAC_Structure_Green</color>
   </Fortified.Structures.SymbolDef>
 
@@ -708,7 +708,7 @@
 
   <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_A_Structure_Green</defName>
-    <thing>DMSAC_Wall_A</thing>
+    <thing>FFF_Wall_A</thing>
     <color>DMSAC_Structure_Green</color>
   </Fortified.Structures.SymbolDef>
 
@@ -775,19 +775,19 @@
   </Fortified.Structures.SymbolDef>
   <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_A_Green</defName>
-    <thing>DMSAC_Wall_A</thing>
+    <thing>FFF_Wall_A</thing>
     <color>DMSAC_Structure_Green</color>
   </Fortified.Structures.SymbolDef>
 
   <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_C_Green</defName>
-    <thing>DMSAC_Wall_C</thing>
+    <thing>FFF_Wall_C</thing>
     <color>DMSAC_Structure_Green</color>
   </Fortified.Structures.SymbolDef>
 
   <Fortified.Structures.SymbolDef>
     <defName>DMSAC_Wall_B_Green</defName>
-    <thing>DMSAC_Wall_B</thing>
+    <thing>FFF_Wall_B</thing>
     <color>DMSAC_Structure_Green</color>
   </Fortified.Structures.SymbolDef>
 
