@@ -6,6 +6,23 @@
   
   <!-- EN: solid slug -->
   <Bullet_DMS_CombatShotgun.label>实心独头弹</Bullet_DMS_CombatShotgun.label>
+  <!-- EN: A hardened steel slug seated in a 23mm case. It was the round the weapon was designed around, and it will go through plating that a pellet load only scuffs. -->
+  <Bullet_DMS_CombatShotgun.description>装在23mm弹壳里的硬化钢制独头弹。这把枪当初就是绕着这种弹设计的，它能穿透散弹只能刮花的装甲板。</Bullet_DMS_CombatShotgun.description>
+
+  <!-- EN: 23mm shrapnel shot -->
+  <DMS_Bullet_KS23K_Shrapnel.label>23mm弹片霰弹</DMS_Bullet_KS23K_Shrapnel.label>
+  <!-- EN: A 23mm case filled with hardened pellets instead of a single slug. It empties a magazine faster than anything else the weapon accepts and stops being relevant past a dozen paces. -->
+  <DMS_Bullet_KS23K_Shrapnel.description>以硬化弹丸取代单颗独头弹的23mm弹壳。它清空弹匣的速度比这把枪能用的任何弹种都快，但超过十来步就失去意义。</DMS_Bullet_KS23K_Shrapnel.description>
+
+  <!-- EN: 23mm rubber slug -->
+  <DMS_Bullet_KS23K_Volna.label>23mm橡胶独头弹</DMS_Bullet_KS23K_Volna.label>
+  <!-- EN: A 23mm rubber slug loaded to a reduced charge. At this calibre a less-lethal round still breaks ribs, which the manuals describe as compliance. -->
+  <DMS_Bullet_KS23K_Volna.description>以减装药发射的23mm橡胶独头弹。在这种口径上，所谓的低致命弹依然打得断肋骨，而手册把这个结果称为服从。</DMS_Bullet_KS23K_Volna.description>
+
+  <!-- EN: 23mm stun shell -->
+  <DMS_Bullet_KS23K_Zvezda.label>23mm震撼弹</DMS_Bullet_KS23K_Zvezda.label>
+  <!-- EN: A 23mm flash-bang shell with an impact fuze. It wounds nothing and stops everything within a couple of paces of where it lands, friend and enemy alike, for just long enough to close the distance. -->
+  <DMS_Bullet_KS23K_Zvezda.description>装有触发引信的23mm闪光震撼弹。它不会造成任何伤口，却能让落点附近几步内的一切在数秒内动弹不得，敌我不分，而那段时间刚好够你冲过去。</DMS_Bullet_KS23K_Zvezda.description>
   
   <!-- EN: subsonic bullet -->
   <Bullet_DMS_Subsonic_Pistol.label>亚音速手枪弹</Bullet_DMS_Subsonic_Pistol.label>
@@ -40,7 +57,25 @@
   <!-- EN: barrel -->
   <DMS_KS23K.tools.barrel.label>枪管</DMS_KS23K.tools.barrel.label>
   <!-- EN: Tula combat shotgun -->
-  <DMS_KS23K.verbs.Verb_Shoot.label>KS23K</DMS_KS23K.verbs.Verb_Shoot.label>
+  <DMS_KS23K.verbs.Verb_Shoot_AmmoSwitch.label>KS23K</DMS_KS23K.verbs.Verb_Shoot_AmmoSwitch.label>
+
+  <!-- 彈種切換 / ammo switch -->
+  <!-- EN: Barrikada slug -->
+  <DMS_KS23K.comps.CompAmmoSwitch.ammos.0.label>路障独头弹</DMS_KS23K.comps.CompAmmoSwitch.ammos.0.label>
+  <!-- EN: The steel slug the weapon was built around. It reaches out to the full length of the barrel and defeats plating that pellets merely scratch. -->
+  <DMS_KS23K.comps.CompAmmoSwitch.ammos.0.description>这把枪当初就是绕着这种钢制独头弹设计的。它能打满整根枪管所赋予的射程，并击穿散弹只能刮花的装甲。</DMS_KS23K.comps.CompAmmoSwitch.ammos.0.description>
+  <!-- EN: Shrapnel-25 shot -->
+  <DMS_KS23K.comps.CompAmmoSwitch.ammos.1.label>弹片霰弹</DMS_KS23K.comps.CompAmmoSwitch.ammos.1.label>
+  <!-- EN: A lead pellet load for close work against unarmored crowds. Its reach is limited. -->
+  <DMS_KS23K.comps.CompAmmoSwitch.ammos.1.description>发射近距离对付无装甲人群的铅制弹丸，射程有限。</DMS_KS23K.comps.CompAmmoSwitch.ammos.1.description>
+  <!-- EN: Volna-R rubber slug -->
+  <DMS_KS23K.comps.CompAmmoSwitch.ammos.2.label>波浪橡胶弹</DMS_KS23K.comps.CompAmmoSwitch.ammos.2.label>
+  <!-- EN: A less-lethal rubber slug for dispersal and for taking prisoners intact. Its range is short, and it has no penetration worth speaking of. -->
+  <DMS_KS23K.comps.CompAmmoSwitch.ammos.2.description>用于驱散与活捉的低致命橡胶独头弹。它的射程很短，并且也没有足够的穿甲能力。</DMS_KS23K.comps.CompAmmoSwitch.ammos.2.description>
+  <!-- EN: Zvezda stun shell -->
+  <DMS_KS23K.comps.CompAmmoSwitch.ammos.3.label>星辰震撼弹</DMS_KS23K.comps.CompAmmoSwitch.ammos.3.label>
+  <!-- EN: A flash-bang shell that bursts on impact and puts everything nearby on the floor for a few seconds without wounding any of it. It does not care whose side the target is on, so place it accordingly. -->
+  <DMS_KS23K.comps.CompAmmoSwitch.ammos.3.description>命中即引爆的闪光震撼弹，能让附近的一切在数秒内倒在地上，却不留下任何伤口。它不管目标站在哪一边，所以放的位置要自己想清楚。</DMS_KS23K.comps.CompAmmoSwitch.ammos.3.description>
   
   <!-- UNUSED -->
   <DMS_KS23K.tools.muzzle.label>枪口</DMS_KS23K.tools.muzzle.label>

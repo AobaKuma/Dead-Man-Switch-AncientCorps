@@ -381,9 +381,53 @@
 			<Tungsteel>70</Tungsteel>
 			<ComponentStamped>4</ComponentStamped>
 		</costList>
+		<!-- 彈種切換: 制式的四種23mm彈藥。實心獨頭彈(預設) / 鹿彈 / 橡膠彈 / 震撼彈 -->
+		<comps>
+			<li Class="Fortified.CompProperties_AmmoSwitch">
+				<defaultIndex>0</defaultIndex>
+				<includeDefaultAmmo>false</includeDefaultAmmo>
+				<switchCooldown>120</switchCooldown>
+				<soundSwitch>Interact_Rifle</soundSwitch>
+				<ammos>
+					<li>
+						<label>Barrikada slug</label>
+						<description>The steel slug the weapon was built around. It reaches out to the full length of the barrel and defeats plating that pellets merely scratch.</description>
+						<iconPath>UI/Ammoswitch/Shotgun_Slug</iconPath>
+						<useDefaultProjectile>true</useDefaultProjectile>
+					</li>
+					<li>
+						<label>Shrapnel-25 shot</label>
+						<description>A lead pellet load for close work against unarmored crowds. Its reach is limited.</description>
+						<iconPath>UI/Ammoswitch/Shotgun_Pellet</iconPath>
+						<projectileDef>DMS_Bullet_KS23K_Shrapnel</projectileDef>
+						<burstShotCountOverride>3</burstShotCountOverride>
+						<rangeFactor>0.7</rangeFactor>
+						<accuracyFactor>0.9</accuracyFactor>
+					</li>
+					<li>
+						<label>Volna-R rubber slug</label>
+						<description>A less-lethal rubber slug for dispersal and for taking prisoners intact. Its range is short, and it has no penetration worth speaking of.</description>
+						<iconPath>UI/Ammoswitch/Shotgun_Rubber</iconPath>
+						<projectileDef>DMS_Bullet_KS23K_Volna</projectileDef>
+						<burstShotCountOverride>1</burstShotCountOverride>
+						<rangeFactor>0.6</rangeFactor>
+					</li>
+					<li>
+						<label>Zvezda stun shell</label>
+						<description>A flash-bang shell that bursts on impact and puts everything nearby on the floor for a few seconds without wounding any of it. It does not care whose side the target is on, so place it accordingly.</description>
+						<iconPath>UI/Ammoswitch/Shotgun_EMP</iconPath>
+						<projectileDef>DMS_Bullet_KS23K_Zvezda</projectileDef>
+						<burstShotCountOverride>1</burstShotCountOverride>
+						<rangeFactor>0.75</rangeFactor>
+						<warmUpFactor>1.2</warmUpFactor>
+					</li>
+				</ammos>
+			</li>
+		</comps>
 		<verbs>
 			<li>
-				<verbClass>Verb_Shoot</verbClass>
+				<!-- 人類可用武器一律用 Verb_Shoot_AmmoSwitch, Verb_LaunchProjectile_AmmoSwitch 不會給射擊經驗 -->
+				<verbClass>Fortified.Verb_Shoot_AmmoSwitch</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_DMS_CombatShotgun</defaultProjectile>
 				<warmupTime>1.2</warmupTime>
@@ -410,9 +454,11 @@
 		</modExtensions>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseBullet">
+	<!-- 「路障」實心獨頭彈: 制式預設彈, 反裝甲 -->
+	<ThingDef ParentName="DMS_BaseSwitchableBullet">
 		<defName>Bullet_DMS_CombatShotgun</defName>
 		<label>solid slug</label>
+		<description>A hardened steel slug seated in a 23mm case. It was the round the weapon was designed around, and it will go through plating that a pellet load only scuffs.</description>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Big</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -426,6 +472,73 @@
 			<stoppingPower>3</stoppingPower>
 			<armorPenetrationBase>0.7</armorPenetrationBase>
 			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<!-- 「彈片-25」鹿彈: 近距離對無甲群體 -->
+	<ThingDef ParentName="DMS_BaseSwitchableBullet">
+		<defName>DMS_Bullet_KS23K_Shrapnel</defName>
+		<label>23mm shrapnel shot</label>
+		<description>A 23mm case filled with hardened pellets instead of a single slug. It empties a magazine faster than anything else the weapon accepts and stops being relevant past a dozen paces.</description>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(235,225,205)</color>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>14</damageAmountBase>
+			<stoppingPower>2</stoppingPower>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
+	<!-- 「波浪-R」橡膠彈: 非致命驅散與活捉 -->
+	<ThingDef ParentName="DMS_BaseSwitchableBullet">
+		<defName>DMS_Bullet_KS23K_Volna</defName>
+		<label>23mm rubber slug</label>
+		<description>A 23mm rubber slug loaded to a reduced charge. At this calibre a less-lethal round still breaks ribs, which the manuals describe as compliance.</description>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(90,90,95)</color>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<stoppingPower>4</stoppingPower>
+			<armorPenetrationBase>0.10</armorPenetrationBase>
+			<speed>50</speed>
+		</projectile>
+	</ThingDef>
+
+	<!-- 「星辰」震撼彈: 命中即炸的暈眩彈, 零傷害。用原版 Stun 傷害型別,
+	     自訂 DamageDef 無法暈眩 pawn (StunHandler.CanBeStunnedByDamage 只認 Stun/EMP/NerveStun/MechBandShockwave) -->
+	<ThingDef ParentName="DMS_BaseSwitchableBullet">
+		<defName>DMS_Bullet_KS23K_Zvezda</defName>
+		<label>23mm stun shell</label>
+		<description>A 23mm flash-bang shell with an impact fuze. It wounds nothing and stops everything within a couple of paces of where it lands, friend and enemy alike, for just long enough to close the distance.</description>
+		<thingClass>Projectile_Explosive</thingClass>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(255,240,170)</color>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>6</damageAmountBase>
+			<explosionRadius>1.9</explosionRadius>
+			<speed>50</speed>
+			<ai_IsIncendiary>false</ai_IsIncendiary>
+			<soundExplode>Explosion_Smoke</soundExplode>
 		</projectile>
 	</ThingDef>
 
