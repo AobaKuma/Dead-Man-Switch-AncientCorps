@@ -14,4 +14,16 @@
 		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.6/CE</li>
 		<li IfModActiveAll="CETeam.CombatExtended,DwS.FunctionalAmmunition.Library">1.6/D_Lib</li>
 	</v1.6>
+	<!--
+		1.7 沿用 1.6 的內容；最後列出的 1.7 只有 .NET 10 版的 Assemblies，會蓋掉 1.6 同名的 DLL。
+		1.7 reuses the 1.6 content; 1.7, listed last, only holds the .NET 10 Assemblies, which override the 1.6 DLLs of the same name.
+	-->
+	<v1.7>
+		<li>/</li>
+		<li>1.6</li>
+		<!--<li IfModActive="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam">1.6/AUR</li> disabled yet-->
+		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.6/CE</li>
+		<li IfModActiveAll="CETeam.CombatExtended,DwS.FunctionalAmmunition.Library">1.6/D_Lib</li>
+		<li>1.7</li>
+	</v1.7>
 </loadFolders>

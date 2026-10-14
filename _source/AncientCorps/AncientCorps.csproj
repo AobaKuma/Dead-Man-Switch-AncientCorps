@@ -1,111 +1,71 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    同一份原始碼同時建置兩個遊戲版本（做法同 Fortified-Framework 的 Fortified.csproj）：
+      net472   → RimWorld 1.6（.NET Framework / Unity / Harmony 2）→ 1.6/Assemblies
+      net10.0  → RimWorld 1.7（.NET 10 / Waylith / Harmony 3）    → 1.7/Assemblies，並定義 RW_1_7
+    1.7 沒有參考組件套件，直接參考遊戲本體的 DLL；預設假設本模組位於 <RimWorld>/Mods/<模組>/，
+    遊戲裝在別處時以 -p:RimWorldDir=<遊戲目錄>\ 覆寫。只建置其中一版：-f net472 或 -f net10.0。
+    Builds both game versions from the same source (same setup as Fortified-Framework's Fortified.csproj):
+      net472  → RimWorld 1.6 (.NET Framework / Unity / Harmony 2) → 1.6/Assemblies
+      net10.0 → RimWorld 1.7 (.NET 10 / Waylith / Harmony 3)       → 1.7/Assemblies, defines RW_1_7
+    1.7 has no reference-assembly package, so the game's own DLLs are referenced; override the game path
+    with -p:RimWorldDir=<game dir>\ when the mod is not under <RimWorld>/Mods/<mod>/. Build one version with -f.
+  -->
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FD2498CC-DAF3-4827-A309-390DB131EDFC}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworks>net472;net10.0</TargetFrameworks>
     <RootNamespace>AncientCorps</RootNamespace>
     <AssemblyName>AncientCorps</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>10.0</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
     <Deterministic>true</Deterministic>
+    <!-- Properties/AssemblyInfo.cs 已提供組件屬性。Properties/AssemblyInfo.cs already supplies the assembly attributes. -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DebugType>none</DebugType>
+    <RimWorldDir Condition="'$(RimWorldDir)' == ''">$(MSBuildThisFileDirectory)..\..\..\..\</RimWorldDir>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net472'">
+    <OutputPath>$(MSBuildThisFileDirectory)..\..\1.6\Assemblies\</OutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <OutputPath>$(MSBuildThisFileDirectory)..\..\1.7\Assemblies\</OutputPath>
+    <DefineConstants>$(DefineConstants);RW_1_7</DefineConstants>
+    <!-- 遊戲只載入 Assemblies 內的 .dll，不需要 deps.json。The game only loads the .dll, so no deps.json. -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
   </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\Reference\0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+    <!-- 舊專案也沒有編譯這個檔案。The old project did not compile this file either. -->
+    <Compile Remove="GameCondition_Planetkiller.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4850" />
+    <PackageReference Include="Lib.Harmony" Version="2.4.2" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <!-- 與 Harmony 模組 1.7 資料夾內的 0Harmony.dll 完全相同（3.0.0-rc.2）。Identical to the Harmony mod's 1.7 0Harmony.dll. -->
+    <PackageReference Include="Lib.Harmony" Version="3.0.0-rc.2" ExcludeAssets="runtime" />
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\Reference\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(RimWorldDir)Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="DMS">
-      <HintPath>..\..\..\Dead-Man-Switch\1.5\Assemblies\DMS.dll</HintPath>
+    <!-- 1.7 的 UnityEngine.* 型別全部由 UnityStubs 提供。In 1.7 every UnityEngine.* type comes from UnityStubs. -->
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldDir)UnityStubs.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\Reference\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\Reference\UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\Reference\UnityEngine.IMGUIModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\Reference\UnityEngine.TextRenderingModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>..\Reference\UnityEngine.UI.dll</HintPath>
+    <Reference Include="Waylith">
+      <HintPath>$(RimWorldDir)Waylith.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AncientCorpsUltility.cs" />
-    <Compile Include="CircleConst.cs" />
-    <Compile Include="CompUseEffect_DisableMechs.cs" />
-    <Compile Include="CompUseEffect_LevelUpDefcon.cs" />
-    <Compile Include="Defcon\CompanyDef.cs" />
-    <Compile Include="Defcon\GameComponent_RaidCompany.cs" />
-    <Compile Include="Defcon\PlatoonDef.cs" />
-    <Compile Include="Defcon\SitePartWorker_Company.cs" />
-    <Compile Include="Defcon\Company.cs" />
-    <Compile Include="JobDriver_ResurrectMech.cs" />
-    <Compile Include="DMS_DefOf.cs" />
-    <Compile Include="Defcon\GameComponent_DefconLevel.cs" />
-    <Compile Include="Patch\HarmonyEntry.cs" />
-    <Compile Include="Boss\KrepostAttackTransition.cs" />
-    <Compile Include="Patch\Patch_GoodwillSituationWorker_MemeCompatibility.cs" />
-    <Compile Include="Patch\Patch_GoodwillSituationWorker_SameIdeo.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BaseGen\QuestNode_GetSiteTile.cs" />
-    <Compile Include="ThinkTree\JobGiver_AIDisarmingDistant.cs" />
-    <Compile Include="ThinkTree\JobGiver_AIFightEnemiesWhenDefending.cs" />
-    <Compile Include="ThinkTree\JobGiver_AITrashColonyDoorClose.cs" />
-    <Compile Include="ThinkTree\JobGiver_FollowDefendedTarget.cs" />
-    <Compile Include="ThinkTree\JobGiver_PickUpDefendedTarget.cs" />
-    <Compile Include="ThinkTree\JobGiver_PickUpTeammates.cs" />
-    <Compile Include="ThinkTree\LordJob_DefendTargetAndAssaultColony.cs" />
-    <Compile Include="ThinkTree\LordToil_DefendTargetAndAssaultColony.cs" />
-    <Compile Include="ThinkTree\LordToil_PickUpTeammatesAndExitMap.cs" />
-    <Compile Include="Defcon\WorldObjectComp_PatrolSquad.cs" />
-    <Compile Include="WorldUtils.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="QuestNode\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>
