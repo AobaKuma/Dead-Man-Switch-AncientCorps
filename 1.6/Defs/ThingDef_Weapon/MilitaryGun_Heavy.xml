@@ -399,7 +399,12 @@
 			<drawSize>1.4</drawSize>
 		</graphicData>
 		<projectile>
-			<flyOverhead>true</flyOverhead>
+			<!-- 直射的戰車砲彈，不能 flyOverhead：原版的高拋投射物落在厚岩頂下會直接消失（不爆炸），落在建造屋頂下會把屋頂打塌，
+			     在地下設施裡完全打不出去。弧線只是 arcHeightFactor 的外觀，不影響命中判定。
+			     A direct-fire tank round, so not flyOverhead: vanilla overhead projectiles vanish without exploding under a thick
+			     rock roof and collapse a constructed roof, so it could not hit anything inside an underground facility. The arc
+			     is only arcHeightFactor's drawing; it does not change what gets hit. -->
+			<flyOverhead>false</flyOverhead>
 			<explosionDelay>1</explosionDelay>
 			<soundExplode>Explosion_Rocket</soundExplode>
 			<damageDef>Bullet</damageDef>
