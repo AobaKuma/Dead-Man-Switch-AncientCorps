@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    模塊（《DMS2更新計畫》「可安裝的模塊」與「籬笆／城邦共用模塊池」）。
+    沿用 DMS2 的 Modification 三段式：ThingDef（ParentName=BaseModificationItem）＋
+    HediffDef（Fortified.HediffCompProperties_Modification ＋ stages ＋ <abilities>）＋
+    Fortified.CompProperties_AddHediffOnTarget 指定可安裝的機種。
+
+    Mech modules, following DMS2's Modification pattern (item + hediff + AddHediffOnTarget).
+    支援機種 / supported chassis: Zabor, Gorod, Molot, BattleFrame(戰鬥步行者).
+  -->
+  <ThingDef ParentName="BaseModificationItem">
+    <defName>DMSAC_Mod_Kornet</defName>
+    <label>Kornet launcher mount</label>
+    <description>A single 9M133 Kornet tube bolted to the module rack, wired into the chassis fire control chain. Two guided anti-tank missiles are carried; once they are gone the mount is dead weight until the next refit.\n\nThe tube is heavy and the backblast is enormous, so the chassis pays for it in walking pace and cargo room.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DMSAC_Mod_Kornet</HediffDef>
+      <AbilityDef>DMSAC_ATGMLauncher</AbilityDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Projectiles/DMS_9M133Missile/tripod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <MarketValue>900</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Tungsteel>20</Tungsteel>
+      <ComponentStamped>2</ComponentStamped>
+    </costList>
+    <recipeMaker>
+      <workAmount>4200</workAmount>
+      <researchPrerequisite>DMS_Occultech_MainBattle</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>DMS_TableMachinePrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="Fortified.CompProperties_AddHediffOnTarget">
+        <compClass>Fortified.CompTargetable_AddHediffOnTarget</compClass>
+        <hediffDef>DMSAC_Mod_Kornet</hediffDef>
+        <soundDef>DMS_EquipGear</soundDef>
+        <supportRaceDefs>
+          <li>DMS_Mech_Zabor</li>
+          <li>DMS_Mech_Gorod</li>
+          <li>DMS_Mech_Molot</li>
+          <li>DMS_Mech_BattleFrame</li>
+        </supportRaceDefs>
+        <targetBodyPartDefs />
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DMSAC_Mod_Kornet</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Kornet launcher mount</label>
+    <description>A 9M133 Kornet tube on the module rack.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMSAC_Mod_Kornet</ThingDef>
+      <AbilityDef>DMSAC_ATGMLauncher</AbilityDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>DMSAC_Mod_Kornet</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.9</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+          <Mass>8</Mass>
+          <CarryingCapacity>-10</CarryingCapacity>
+          <MechEnergyUsageFactor>0.05</MechEnergyUsageFactor>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Fortified.HediffCompProperties_Modification">
+        <applyJob>FFF_ModificationRemove</applyJob>
+      </li>
+    </comps>
+    <abilities>
+      <li>DMSAC_ATGMLauncher</li>
+    </abilities>
+  </HediffDef>
+
+  <ThingDef ParentName="BaseModificationItem">
+    <defName>DMSAC_Mod_SmokePod</defName>
+    <label>smoke rocket pod</label>
+    <description>A light five-tube pod of 73mm airburst smoke rockets, meant to break contact or cover an advance. The smoke is laid along the direction of fire, not around the chassis.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DMSAC_Mod_SmokePod</HediffDef>
+      <AbilityDef>DMSAC_Ability_SmokeSalvo</AbilityDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Projectiles/DMS_S8Rocket/shell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>5</Mass>
+      <MarketValue>450</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <workAmount>2400</workAmount>
+      <researchPrerequisite>DMS_Occultech_RemnantPatterns</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>DMS_TableMachinePrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="Fortified.CompProperties_AddHediffOnTarget">
+        <compClass>Fortified.CompTargetable_AddHediffOnTarget</compClass>
+        <hediffDef>DMSAC_Mod_SmokePod</hediffDef>
+        <soundDef>DMS_EquipGear</soundDef>
+        <supportRaceDefs>
+          <li>DMS_Mech_Zabor</li>
+          <li>DMS_Mech_Gorod</li>
+          <li>DMS_Mech_Molot</li>
+          <li>DMS_Mech_BattleFrame</li>
+        </supportRaceDefs>
+        <targetBodyPartDefs />
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DMSAC_Mod_SmokePod</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>smoke rocket pod</label>
+    <description>A five-tube 73mm smoke rocket pod on the module rack.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMSAC_Mod_SmokePod</ThingDef>
+      <AbilityDef>DMSAC_Ability_SmokeSalvo</AbilityDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>DMSAC_Mod_SmokePod</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.95</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+          <Mass>5</Mass>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Fortified.HediffCompProperties_Modification">
+        <applyJob>FFF_ModificationRemove</applyJob>
+      </li>
+    </comps>
+    <abilities>
+      <li>DMSAC_Ability_SmokeSalvo</li>
+    </abilities>
+  </HediffDef>
+
+  <ThingDef ParentName="BaseModificationItem">
+    <defName>DMSAC_Mod_RocketNest</defName>
+    <label>cluster rocket nest</label>
+    <description>The helicopter-derived cluster rocket nest, adapted to a walker's module rack. Nine tubes fire in a single ripple, covering a wide arc in front of the machine.\n\nThe nest is the single heaviest thing you can bolt onto these chassis, and the machine walks like it knows.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DMSAC_Mod_RocketNest</HediffDef>
+      <AbilityDef>DMSAC_Rocket</AbilityDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Projectiles/DMS_S8Rocket/projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>12</Mass>
+      <MarketValue>1200</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Tungsteel>25</Tungsteel>
+      <ComponentStamped>3</ComponentStamped>
+    </costList>
+    <recipeMaker>
+      <workAmount>5400</workAmount>
+      <researchPrerequisite>DMS_Occultech_MainBattle</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>DMS_TableMachinePrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="Fortified.CompProperties_AddHediffOnTarget">
+        <compClass>Fortified.CompTargetable_AddHediffOnTarget</compClass>
+        <hediffDef>DMSAC_Mod_RocketNest</hediffDef>
+        <soundDef>DMS_EquipGear</soundDef>
+        <supportRaceDefs>
+          <li>DMS_Mech_Zabor</li>
+          <li>DMS_Mech_Gorod</li>
+          <li>DMS_Mech_Molot</li>
+          <li>DMS_Mech_BattleFrame</li>
+        </supportRaceDefs>
+        <targetBodyPartDefs />
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DMSAC_Mod_RocketNest</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>cluster rocket nest</label>
+    <description>A nine-tube cluster rocket nest on the module rack.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMSAC_Mod_RocketNest</ThingDef>
+      <AbilityDef>DMSAC_Rocket</AbilityDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>DMSAC_Mod_RocketNest</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.85</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+          <Mass>12</Mass>
+          <CarryingCapacity>-15</CarryingCapacity>
+          <MechEnergyUsageFactor>0.1</MechEnergyUsageFactor>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Fortified.HediffCompProperties_Modification">
+        <applyJob>FFF_ModificationRemove</applyJob>
+      </li>
+    </comps>
+    <abilities>
+      <li>DMSAC_Rocket</li>
+    </abilities>
+  </HediffDef>
+
+  <ThingDef ParentName="BaseModificationItem">
+    <defName>DMSAC_Mod_Flamer</defName>
+    <label>flamer module</label>
+    <description>A pressure tank and projector taken from a vehicle flamethrower, mounted on the module rack. The fuel is carried as a gunpowder-ignited charge, so the projector throws a single long tongue of burning fuel rather than a steady stream.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DMSAC_Mod_Flamer</HediffDef>
+      <AbilityDef>DMSAC_ExplosiveFlamer</AbilityDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>UI/Ability/DMSAC_FlameBlast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Mass>6</Mass>
+      <MarketValue>600</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>35</Steel>
+      <Chemfuel>60</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <workAmount>3000</workAmount>
+      <researchPrerequisite>DMS_Occultech_RemnantPatterns</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>DMS_TableMachinePrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="Fortified.CompProperties_AddHediffOnTarget">
+        <compClass>Fortified.CompTargetable_AddHediffOnTarget</compClass>
+        <hediffDef>DMSAC_Mod_Flamer</hediffDef>
+        <soundDef>DMS_EquipGear</soundDef>
+        <supportRaceDefs>
+          <li>DMS_Mech_Zabor</li>
+          <li>DMS_Mech_Gorod</li>
+          <li>DMS_Mech_Molot</li>
+          <li>DMS_Mech_BattleFrame</li>
+        </supportRaceDefs>
+        <targetBodyPartDefs />
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DMSAC_Mod_Flamer</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>flamer module</label>
+    <description>A vehicle flamethrower projector on the module rack.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMSAC_Mod_Flamer</ThingDef>
+      <AbilityDef>DMSAC_ExplosiveFlamer</AbilityDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>DMSAC_Mod_Flamer</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.95</MoveSpeed>
+        </statFactors>
+        <statOffsets>
+          <Mass>6</Mass>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Fortified.HediffCompProperties_Modification">
+        <applyJob>FFF_ModificationRemove</applyJob>
+      </li>
+    </comps>
+    <abilities>
+      <li>DMSAC_ExplosiveFlamer</li>
+    </abilities>
+  </HediffDef>
+
+  <ThingDef ParentName="BaseModificationItem">
+    <defName>DMSAC_Mod_MGPod</defName>
+    <label>machine gun pod</label>
+    <description>A 7.62 machine gun in a slim pod on the module rack, fed from a linkless magazine. It is not accurate, but nothing in its arc wants to stand in it.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DMSAC_Mod_MGPod</HediffDef>
+      <AbilityDef>DMSAC_Ability_MGPod</AbilityDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Weapons/DMS_Weapon_Kord</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>4</Mass>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <workAmount>2200</workAmount>
+      <researchPrerequisite>DMS_Occultech_RemnantPatterns</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>DMS_TableMachinePrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="Fortified.CompProperties_AddHediffOnTarget">
+        <compClass>Fortified.CompTargetable_AddHediffOnTarget</compClass>
+        <hediffDef>DMSAC_Mod_MGPod</hediffDef>
+        <soundDef>DMS_EquipGear</soundDef>
+        <supportRaceDefs>
+          <li>DMS_Mech_Zabor</li>
+          <li>DMS_Mech_Gorod</li>
+          <li>DMS_Mech_Molot</li>
+          <li>DMS_Mech_BattleFrame</li>
+        </supportRaceDefs>
+        <targetBodyPartDefs />
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DMSAC_Mod_MGPod</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>machine gun pod</label>
+    <description>A 7.62 machine gun pod on the module rack.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMSAC_Mod_MGPod</ThingDef>
+      <AbilityDef>DMSAC_Ability_MGPod</AbilityDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>DMSAC_Mod_MGPod</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <Mass>4</Mass>
+        </statOffsets>
+        <statFactors>
+          <ShootingAccuracyPawn>0.95</ShootingAccuracyPawn>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Fortified.HediffCompProperties_Modification">
+        <applyJob>FFF_ModificationRemove</applyJob>
+      </li>
+    </comps>
+    <abilities>
+      <li>DMSAC_Ability_MGPod</li>
+    </abilities>
+  </HediffDef>
+
+  <ThingDef ParentName="BaseModificationItem">
+    <defName>DMSAC_Mod_ExtraMount</defName>
+    <label>extra mount rack</label>
+    <description>A bare pylon set and power bus for hanging more mass on the chassis: more cargo, another weapon, whatever the field workshop can weld on. It carries nothing by itself.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DMSAC_Mod_ExtraMount</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Resource/DMS_Kit_Repair</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <Mass>3</Mass>
+      <MarketValue>250</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <workAmount>1600</workAmount>
+      <researchPrerequisite>DMS_Occultech_RemnantPatterns</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>DMS_TableMachinePrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="Fortified.CompProperties_AddHediffOnTarget">
+        <compClass>Fortified.CompTargetable_AddHediffOnTarget</compClass>
+        <hediffDef>DMSAC_Mod_ExtraMount</hediffDef>
+        <soundDef>DMS_EquipGear</soundDef>
+        <supportRaceDefs>
+          <li>DMS_Mech_Zabor</li>
+          <li>DMS_Mech_Gorod</li>
+          <li>DMS_Mech_Molot</li>
+          <li>DMS_Mech_BattleFrame</li>
+        </supportRaceDefs>
+        <targetBodyPartDefs />
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DMSAC_Mod_ExtraMount</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>extra mount rack</label>
+    <description>An empty pylon rack and power bus.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMSAC_Mod_ExtraMount</ThingDef>
+    </descriptionHyperlinks>
+    <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>DMSAC_Mod_ExtraMount</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <Mass>3</Mass>
+          <CarryingCapacity>20</CarryingCapacity>
+          <FFF_MassCarryCapacity>10</FFF_MassCarryCapacity>
+          <CarryBulk MayRequire="ceteam.combatextended">10</CarryBulk>
+          <CarryWeight MayRequire="ceteam.combatextended">20</CarryWeight>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Fortified.HediffCompProperties_Modification">
+        <applyJob>FFF_ModificationRemove</applyJob>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

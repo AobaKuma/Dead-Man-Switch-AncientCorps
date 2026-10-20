@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 之後用 -->
+  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany" Abstract="true">
+    <defaultFaction>DMS_AncientCorps</defaultFaction>
+    <IconPath>UI/Icons/Company/Company_Default</IconPath>
+  </AncientCorps.CompanyDef>
+</Defs>

@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -20,30 +20,27 @@ namespace AncientCorps
                 if (!pos.InBounds(pawn.Map)) continue;
                 foreach (var item in pos.GetThingList(pawn.Map))
                 {
+                    if (item == null) continue;
+                    if (!GenSight.LineOfSight(pawn.Position, pos, pawn.Map)) continue;
                     if (item.def.IsRangedWeapon)
                     {
-                        if (item != null && GenSight.LineOfSight(pawn.Position, pos, pawn.Map))
+                        Job job = TrashUtility.TrashJob(pawn, item);
+                        if (job != null)
                         {
-                            Job job = TrashUtility.TrashJob(pawn, item);
-                            if (job != null)
-                            {
-                                return job;
-                            }
+                            return job;
                         }
                     }
-                    if (item.GetType().IsAssignableFrom(typeof(Building_Door)))
+                    // 用 is 而不是 GetType().IsAssignableFrom(...)：後者的參數順序會讓自動門等子類永遠不被選中。
+                    if (item is Building_Door door && TrashUtility.ShouldTrashBuilding(pawn, door))
                     {
-                        if (item != null && TrashUtility.ShouldTrashBuilding(pawn, item as Building) && GenSight.LineOfSight(pawn.Position, pos, pawn.Map))
+                        Job job = TrashUtility.TrashJob(pawn, door);
+                        if (job != null)
                         {
-                            Job job = TrashUtility.TrashJob(pawn, item);
-                            if (job != null)
-                            {
-                                return job;
-                            }
+                            return job;
                         }
                     }
                 }
-                
+
             }
             return null;
         }

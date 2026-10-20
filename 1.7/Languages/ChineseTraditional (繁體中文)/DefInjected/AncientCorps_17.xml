@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 2.0.0 新增內容（1.7 分支）。DefInjected 的路徑不影響鍵值比對，這裡集中在一個檔案。
+       2.0.0 additions for the 1.7 branch. -->
+
+  <!-- ===== 榖倉 Saray ===== -->
+  <DMS_Mech_Saray.label>穀倉</DMS_Mech_Saray.label>
+  <DMS_Mech_Saray.description>РГМ-4「穀倉」（北約代號「工蜂」）是 РГМ 無人履帶平台家族的輕武裝後勤型，與蹄兔共用履帶構造。戰時大量生產，和平時期大多轉回二線與保養勤務：巡邏無人設施、搬運零件、讓整個軍團繼續運轉。\n\n只有一具遙控武器站與薄裝甲，穀倉不是戰列單位。但它便宜、有耐性，而且當有人走進它被交代要看守的倉庫時，它仍然是武裝的。</DMS_Mech_Saray.description>
+
+  <DMSAC_FoamSpray.label>消防泡沫</DMSAC_FoamSpray.label>
+  <DMSAC_FoamSpray.description>從保養槽噴出一股消防泡沫，壓熄火焰並在地面鋪上泡沫。</DMSAC_FoamSpray.description>
+
+  <DMSAC_Make_Saray.label>培育 РГМ-4「穀倉」</DMSAC_Make_Saray.label>
+  <DMSAC_Make_Saray.description>培育一台 РГМ-4「穀倉」，РГМ 履帶平台家族的輕武裝後勤型。它的生產圖紙還留在駐屯兵器的檔案裡。\n\n安靜的日子裡它搬貨、蓋房、照顧作物；吵鬧的日子裡它帶著一具遙控武器站和一槽消防泡沫，守著自己被交代要看守的倉庫。</DMSAC_Make_Saray.description>
+
+  <!-- ===== 模塊 Modules ===== -->
+  <DMSAC_Mod_Kornet.label>短號發射具</DMSAC_Mod_Kornet.label>
+  <DMSAC_Mod_Kornet.description>一具 9M133 短號發射管鎖在模塊架上，接進車體的射控鏈。攜帶兩枚導引反戰車飛彈；打光之後，這具架子在下一次整備前只是壓艙物。\n\n管子很重、尾焰很大，所以車體要在行走速度與載貨空間上付代價。</DMSAC_Mod_Kornet.description>
+  <DMSAC_Mod_SmokePod.label>煙幕火箭倉</DMSAC_Mod_SmokePod.label>
+  <DMSAC_Mod_SmokePod.description>五管 73mm 空爆煙霧火箭，用來脫離接觸或掩護推進。煙幕沿射向鋪開，不是繞著車體。</DMSAC_Mod_SmokePod.description>
+  <DMSAC_Mod_RocketNest.label>集群火箭巢</DMSAC_Mod_RocketNest.label>
+  <DMSAC_Mod_RocketNest.description>從直升機上拆下來的集群火箭巢，改裝到機甲的模塊架上。九管一次齊射，覆蓋正前方一大片扇形區域。\n\n這是能鎖上這些車體最重的東西之一，而機甲走起來也知道。</DMSAC_Mod_RocketNest.description>
+  <DMSAC_Mod_Flamer.label>噴火器模塊</DMSAC_Mod_Flamer.label>
+  <DMSAC_Mod_Flamer.description>從載具噴火器拆下來的壓力槽與噴射器，裝在模塊架上。燃料以火藥點燃的方式帶裝，所以噴出的是單一道長長的火舌，而不是穩定的油流。</DMSAC_Mod_Flamer.description>
+  <DMSAC_Mod_MGPod.label>機槍莢艙</DMSAC_Mod_MGPod.label>
+  <DMSAC_Mod_MGPod.description>一挺 7.62 機槍裝在薄型莢艙裡，掛在模塊架上，由無鏈彈匣供彈。它不精準，但它掃過的扇形裡沒有人想站著。</DMSAC_Mod_MGPod.description>
+  <DMSAC_Mod_ExtraMount.label>附加掛載架</DMSAC_Mod_ExtraMount.label>
+  <DMSAC_Mod_ExtraMount.description>一組空掛架與電力母線，用來把更多東西掛上車體：更多貨、另一件武器，野戰工坊能焊上去的都可以。它本身不帶任何東西。</DMSAC_Mod_ExtraMount.description>
+
+  <!-- ===== 技能 Abilities ===== -->
+  <DMSAC_Ability_SmokeSalvo.label>煙幕齊射</DMSAC_Ability_SmokeSalvo.label>
+  <DMSAC_Ability_SmokeSalvo.description>朝指定方向打出一小群空爆煙霧彈，沿射向鋪出一片煙幕。</DMSAC_Ability_SmokeSalvo.description>
+  <DMSAC_Ability_MGPod.label>機槍莢艙</DMSAC_Ability_MGPod.label>
+  <DMSAC_Ability_MGPod.description>從模塊架上的莢艙朝前方噴出一個 7.62 火網。</DMSAC_Ability_MGPod.description>
+
+  <!-- ===== 八音盒 Music Box ===== -->
+  <DMS_Mech_MusicBox.label>八音盒</DMS_Mech_MusicBox.label>
+  <DMS_Mech_MusicBox.description>以籬笆車體為底、繞著一對直升機集群火箭艙重造的機甲。改裝把原本的正面裝甲方案換成更多重量、更大耗電，以及一次齊射就能抹掉一格地圖的能力。\n\n一線部隊把這種彈幕叫做「噩夢交響樂」。如果你聽到發射艙開始齊射的聲音，正確的反應是你已經在別的地方了。</DMS_Mech_MusicBox.description>
+  <DMSAC_Gun_ClusterRocketPod.label>集群火箭發射艙</DMSAC_Gun_ClusterRocketPod.label>
+  <DMSAC_Gun_ClusterRocketPod.description>改裝到機甲肩掛的直升機集群火箭艙。六管一次齊射，覆蓋非常寬的扇形。</DMSAC_Gun_ClusterRocketPod.description>
+  <DMSAC_Boss_MusicBox.label>八音盒</DMSAC_Boss_MusicBox.label>
+  <DMSAC_Bossgroup_MusicBox.label>八音盒</DMSAC_Bossgroup_MusicBox.label>
+  <DMSAC_BossCaller.label>火力召喚信標</DMSAC_BossCaller.label>
+  <DMSAC_BossCaller.description>一台擄獲的軍團火力召喚信標，被改裝成能發出偽造的「八音盒」呼號。使用它會把一台八音盒與她的護衛放到你旁邊的地面上；軍團從不過問是誰呼叫的。\n\n不要在室內用。不要在化合燃料庫旁邊用。如果你真的要用的話，先想好退路。</DMSAC_BossCaller.description>
+</LanguageData>

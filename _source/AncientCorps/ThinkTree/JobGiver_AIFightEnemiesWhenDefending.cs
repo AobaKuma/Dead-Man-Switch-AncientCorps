@@ -1,4 +1,3 @@
-using System.Reflection;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -6,7 +5,7 @@ using Verse.AI.Group;
 
 namespace AncientCorps
 {
-    public class JobGiver_AIFightEnemiesWhenDefending :  JobGiver_AIFightEnemy
+    public class JobGiver_AIFightEnemiesWhenDefending : JobGiver_AIFightEnemy
     {
         protected override bool ExtraTargetValidator(Pawn pawn, Thing target)
         {
@@ -31,7 +30,8 @@ namespace AncientCorps
             }
             foreach (var comp in pawn.AllComps)
             {
-                if (comp.GetType().IsAssignableFrom(typeof(CompTurretGun)) && (comp as CompTurretGun).AutoAttack)
+                // 參數順序反了會讓 CompTurretGun 的子類（改裝砲塔）永遠判定為沒有武器。
+                if (comp is CompTurretGun turret && turret.AutoAttack)
                 {
                     return true;
                 }
@@ -58,8 +58,9 @@ namespace AncientCorps
                 wantCoverFromTarget = (verb.verbProps.range > 5f),
                 validator = vec3 =>
                 {
-                    Pawn pawnToFollow = (pawn.GetLord().LordJob as LordJob_DefendTargetAndAssaultColony)?.defendedTarget;
-                    if (pawnToFollow == null || !pawnToFollow.Spawned||pawnToFollow.Downed || pawnToFollow.Position.InHorDistOf(vec3, JobGiver_FollowDefendedTarget.FollowDistance) )
+                    // pawn.GetLord() 可能為 null（pawn 已脫離 lord，或 duty 被其他 lord 借用）。
+                    Pawn pawnToFollow = LordJob_DefendTargetAndAssaultColony.GetFor(pawn)?.DefendedTargetOrNull;
+                    if (pawnToFollow == null || !pawnToFollow.Spawned || pawnToFollow.Downed || pawnToFollow.Position.InHorDistOf(vec3, JobGiver_FollowDefendedTarget.FollowDistance))
                     {
                         return true;
                     }

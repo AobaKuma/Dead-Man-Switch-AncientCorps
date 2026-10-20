@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    D-Lib 導引：斯圖格納飛彈的導引由 DwS.FunctionalAmmunition.Library 提供。
+    目標是發射物本體 DMSAC_Grenade_Stugna（斯圖格納砲塔實際發射的 projectile）；
+    舊版寫的 DMSAC_Bullet_StugnaATGM 在目前的內容裡並不存在，補丁一直是空轉。
+    D-Lib guidance for the Stugna missile. The target is the projectile itself,
+    DMSAC_Grenade_Stugna; the old xpath named DMSAC_Bullet_StugnaATGM, which no longer exists.
+  -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMSAC_Grenade_Stugna"]/projectile</xpath>
+        <value>
+          <trajectoryWorker>D_FuncAmmoLib.MissileTrajectoryWorker</trajectoryWorker>
+        </value>
+      </li>
+      <!-- 發射物原始 XML 沒有 comps 節點 / the projectile has no comps node in the source XML -->
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="DMSAC_Grenade_Stugna"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="DMSAC_Grenade_Stugna"]</xpath>
+          <value>
+            <comps />
+          </value>
+        </nomatch>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMSAC_Grenade_Stugna"]/comps</xpath>
+        <value>
+          <li Class="D_FuncAmmoLib.CompProperties_GuidanceCE">
+            <GuidanceMode>Active</GuidanceMode>
+            <RequireSight>true</RequireSight>
+          </li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

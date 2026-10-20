@@ -1,20 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <!--
-    同一份原始碼同時建置兩個遊戲版本（做法同 Fortified-Framework 的 Fortified.csproj）：
-      net472   → RimWorld 1.6（.NET Framework / Unity / Harmony 2）→ 1.6/Assemblies
-      net10.0  → RimWorld 1.7（.NET 10 / Waylith / Harmony 3）    → 1.7/Assemblies，並定義 RW_1_7
-    1.7 沒有參考組件套件，直接參考遊戲本體的 DLL；預設假設本模組位於 <RimWorld>/Mods/<模組>/，
-    遊戲裝在別處時以 -p:RimWorldDir=<遊戲目錄>\ 覆寫。只建置其中一版：-f net472 或 -f net10.0。
-    Builds both game versions from the same source (same setup as Fortified-Framework's Fortified.csproj):
-      net472  → RimWorld 1.6 (.NET Framework / Unity / Harmony 2) → 1.6/Assemblies
-      net10.0 → RimWorld 1.7 (.NET 10 / Waylith / Harmony 3)       → 1.7/Assemblies, defines RW_1_7
-    1.7 has no reference-assembly package, so the game's own DLLs are referenced; override the game path
-    with -p:RimWorldDir=<game dir>\ when the mod is not under <RimWorld>/Mods/<mod>/. Build one version with -f.
+    1.7 分支只建置 net10.0（RimWorld 1.7 / .NET 10 / Waylith / Harmony 3）→ 1.7/Assemblies。
+    1.6（net472）分支已凍結，不再隨 1.6 的內容更新重建；因此這裡不列入 TargetFrameworks，
+    避免 `dotnet build` 覆蓋 1.6/Assemblies 內凍結的 DLL。若日後要對 1.6 做 backport：
+      1. 把 TargetFrameworks 改回 net472;net10.0
+      2. 取消下方 net472 區塊的註解（Krafs.Rimworld.Ref + Lib.Harmony 2.4.2）
+      3. 用 `#if RW_1_7` 圍住只存在於 1.7 內容的 Def 參照（例如新增的 DMSAC_* defName）
+    The 1.7 branch builds net10.0 only (RimWorld 1.7 / .NET 10 / Waylith / Harmony 3) into 1.7/Assemblies.
+    The 1.6 (net472) branch is frozen and is no longer rebuilt alongside 1.6 content, so net472 is not a
+    target here — that keeps `dotnet build` from overwriting the frozen DLL in 1.6/Assemblies.
+    To backport to 1.6 later: restore TargetFrameworks to net472;net10.0, re-enable the net472 block below
+    (Krafs.Rimworld.Ref + Lib.Harmony 2.4.2), and fence 1.7-only Def references with `#if RW_1_7`.
   -->
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net472;net10.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <RootNamespace>AncientCorps</RootNamespace>
     <AssemblyName>AncientCorps</AssemblyName>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
@@ -27,10 +28,15 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <DebugType>none</DebugType>
     <RimWorldDir Condition="'$(RimWorldDir)' == ''">$(MSBuildThisFileDirectory)..\..\..\..\</RimWorldDir>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net472'">
-    <OutputPath>$(MSBuildThisFileDirectory)..\..\1.6\Assemblies\</OutputPath>
+    <!--
+      FFF 的組件路徑。本模組現在會直接呼叫 Fortified 的 API（例如 HuntdownUtility、CompMultipleTurretGun），
+      所以需要參考 Fortified.dll；它會在 AOBA.Framework 之後載入（About.xml 的 loadAfter）。
+      工作坊安裝的資料夾名稱不同時，以 -p:FortifiedDir=<路徑>\ 覆寫。
+      FFF assembly location. The mod now calls Fortified APIs directly (HuntdownUtility, CompMultipleTurretGun…),
+      so Fortified.dll is referenced; it loads before us via AOBA.Framework + loadAfter. Override the folder with
+      -p:FortifiedDir=<path>\ when the framework lives in a differently named workshop folder.
+    -->
+    <FortifiedDir Condition="'$(FortifiedDir)' == ''">$(RimWorldDir)Mods\_Fortified-Framework\1.7\</FortifiedDir>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
@@ -45,10 +51,15 @@
     <Compile Remove="GameCondition_Planetkiller.cs" />
   </ItemGroup>
 
+  <!-- 1.6 backport 用；平日不啟用 / only for a 1.6 backport:
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net472'">
+    <OutputPath>$(MSBuildThisFileDirectory)..\..\1.6\Assemblies\</OutputPath>
+  </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4850" />
     <PackageReference Include="Lib.Harmony" Version="2.4.2" ExcludeAssets="runtime" />
   </ItemGroup>
+  -->
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
     <!-- 與 Harmony 模組 1.7 資料夾內的 0Harmony.dll 完全相同（3.0.0-rc.2）。Identical to the Harmony mod's 1.7 0Harmony.dll. -->
@@ -64,6 +75,10 @@
     </Reference>
     <Reference Include="Waylith">
       <HintPath>$(RimWorldDir)Waylith.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Fortified">
+      <HintPath>$(FortifiedDir)Assemblies\Fortified.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

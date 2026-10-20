@@ -9,8 +9,8 @@ namespace AncientCorps
     {
         protected override Job TryGiveJob(Pawn pawn)
         {
-            Pawn pawnToFollow = (pawn.GetLord().LordJob as LordJob_DefendTargetAndAssaultColony)?.defendedTarget;
-            if (pawnToFollow == null|| !pawnToFollow.Spawned||pawnToFollow.Downed || pawnToFollow.Position.InHorDistOf(pawn.Position, FollowDistance) )
+            Pawn pawnToFollow = LordJob_DefendTargetAndAssaultColony.GetFor(pawn)?.DefendedTargetOrNull;
+            if (pawnToFollow == null || !pawnToFollow.Spawned || pawnToFollow.Downed || pawnToFollow.Position.InHorDistOf(pawn.Position, FollowDistance))
             {
                 return null;
             }

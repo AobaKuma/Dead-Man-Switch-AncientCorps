@@ -1,7 +1,5 @@
-﻿using RimWorld;
-using System;
+using RimWorld;
 using System.Collections.Generic;
-using UnityEngine;
 using Verse;
 
 namespace AncientCorps
@@ -33,42 +31,37 @@ namespace AncientCorps
                 yield return "squads is null.";
                 yield break;
             }
+            for (int i = 0; i < squads.Count; i++)
+            {
+                PlatoonDef squad = squads[i];
+                if (squad == null)
+                {
+                    yield return $"squads[{i}] is null.";
+                    continue;
+                }
+                if (squad.leaderKindDef.NullOrEmpty())
+                {
+                    yield return $"squads[{i}] ({squad.defName}) has no leaderKindDef.";
+                }
+                if (squad.memberKindDefs.NullOrEmpty() && squad.memberCountRange.max > 0)
+                {
+                    yield return $"squads[{i}] ({squad.defName}) has no memberKindDefs but memberCountRange allows members.";
+                }
+            }
         }
         public IEnumerable<Pawn> GeneratePawns()
         {
             Faction f = Find.FactionManager.FirstFactionOfDef(defaultFaction);
+            if (f == null) yield break;
             for (int i = 0; i < squadCountRange.RandomInRange; i++)
             {
-                foreach (var kind in squads.RandomElement().GeneratePawnKind())
+                PlatoonDef squad = squads.RandomElement();
+                if (squad == null) continue;
+                foreach (var kind in squad.GeneratePawnKind())
                 {
-                    Pawn pawn = PawnGenerator.GeneratePawn(kind, f);
-                    yield return pawn;
+                    if (kind == null) continue;
+                    yield return PawnGenerator.GeneratePawn(kind, f);
                 }
-            }
-        }
-    }
-    [Serializable]
-    public class PlatoonMaker
-    {
-        public RulePackDef nameDef;
-        public List<PawnKindDef> leaderKindDef;
-        public List<PawnGenOption> fixedPawnkind;
-        public IntRange memberCountRange;
-        public List<PawnKindDef> memberKindDefs;
-
-        public IEnumerable<PawnKindDef> GeneratePawnKind()
-        {
-            yield return leaderKindDef.RandomElement();
-            foreach (var item in fixedPawnkind)
-            {
-                for (int i = 0; i < (int)item.selectionWeight; i++)
-                {
-                    yield return item.kind;
-                }
-            }
-            for (int i = 0; i < memberCountRange.RandomInRange; i++)
-            {
-                yield return memberKindDefs.RandomElement();
             }
         }
     }

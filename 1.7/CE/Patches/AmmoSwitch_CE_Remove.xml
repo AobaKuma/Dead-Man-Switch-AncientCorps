@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  CE 環境下把 FFF 的 AmmoSwitch 整組拆掉, 說明見
+  Dead-Man-Switch/1.6/CE/Patches/Weapons/AmmoSwitch_CE_Remove.xml。
+
+  重點: PatchOperationMakeGunCECompatible 清除舊 verb 的 xpath 只認
+  Verb_Shoot / Verb_ShootOneUse / Verb_LaunchProjectile, 認不得
+  Fortified.Verb_*_AmmoSwitch, 所以舊 verb 得自己拔掉,
+  否則武器會有兩個 verb 而 PrimaryVerb 抓到非 CE 的那一個。
+  DMS_KS23K 的 MakeGunCECompatible 在同資料夾的 Guns_CE.xml。
+-->
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="DMS_KS23K"]/verbs/li[verbClass="Fortified.Verb_Shoot_AmmoSwitch"]</xpath>
+            </li>
+
+            <li Class="PatchOperationRemove">
+                <xpath>Defs/ThingDef[defName="DMS_KS23K"]/comps/li[@Class="Fortified.CompProperties_AmmoSwitch"]</xpath>
+            </li>
+
+        </operations>
+    </Operation>
+</Patch>

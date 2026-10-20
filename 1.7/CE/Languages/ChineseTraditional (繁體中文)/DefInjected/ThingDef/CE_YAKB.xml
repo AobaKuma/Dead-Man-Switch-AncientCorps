@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: YAK-B gatlinggun -->
+  <DMS_YAKBGatlinggun.label>雅庫雪夫多管機槍</DMS_YAKBGatlinggun.label>
+  <!-- EN: A heavy and violent Soviet large-caliber rotary machine gun, used in large numbers on ground vehicles and aircraft. The Yak-B operates at high speed using a gas-driven rotation mechanism and therefore does not rely on an external power supply, which especially appreciated on platforms that lacks of it. -->
+  <DMS_YAKBGatlinggun.description>一種沉重而兇暴的大口徑旋轉機槍，被大量裝備在地面與航空載具上。該型機槍使用高壓火藥氣體來驅動槍管旋轉與上膛，因此不需外部輸入電源即可發揮毀天滅地的射速，這點在缺乏穩定電力的平台上尤其受到好評。</DMS_YAKBGatlinggun.description>
+  <!-- EN: stock -->
+  <DMS_YAKBGatlinggun.tools.stock-0.label>槍托</DMS_YAKBGatlinggun.tools.stock-0.label>
+  <!-- EN: barrel -->
+  <DMS_YAKBGatlinggun.tools.barrel-0.label>槍管</DMS_YAKBGatlinggun.tools.barrel-0.label>
+  <!-- EN: muzzle -->
+  <DMS_YAKBGatlinggun.tools.muzzle-0.label>槍口</DMS_YAKBGatlinggun.tools.muzzle-0.label>
+  <!-- EN: barrel -->
+  <DMS_YAKBGatlinggun.tools.barrel-1.label>槍管</DMS_YAKBGatlinggun.tools.barrel-1.label>
+  <!-- EN: muzzle -->
+  <DMS_YAKBGatlinggun.tools.muzzle-1.label>槍口</DMS_YAKBGatlinggun.tools.muzzle-1.label>
+  <!-- EN: stock -->
+  <DMS_YAKBGatlinggun.tools.stock-1.label>槍托</DMS_YAKBGatlinggun.tools.stock-1.label>
+  <!-- EN: barrel -->
+  <DMS_YAKBGatlinggun.tools.barrel-2.label>槍管</DMS_YAKBGatlinggun.tools.barrel-2.label>
+  <!-- EN: muzzle -->
+  <DMS_YAKBGatlinggun.tools.muzzle-2.label>槍口</DMS_YAKBGatlinggun.tools.muzzle-2.label>
+  <!-- EN: YAK-B gatlinggun -->
+  <DMS_YAKBGatlinggun.verbs.Verb_ShootCE.label>Yak-B</DMS_YAKBGatlinggun.verbs.Verb_ShootCE.label>
+  
+</LanguageData>

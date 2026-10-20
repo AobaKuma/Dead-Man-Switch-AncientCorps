@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using System;
 using Verse;
 using Verse.AI;
@@ -7,6 +7,7 @@ using AncientCorps;
 using System.Linq;
 using System.Collections.Generic;
 using RimWorld.Planet;
+using Fortified;
 
 namespace AncientCorps
 {
@@ -25,7 +26,7 @@ namespace AncientCorps
         protected float[] scale;
         public int MTBAction => actionInterval;
         public Faction CorpsFaction => AncientCorpsUltility.Corps;
-        public float GetCurrentScale => Scale[Level];
+        public float GetCurrentScale => Scale[Mathf.Clamp(Level, 0, Scale.Length - 1)];
         public GameComponent_DefconLevel(Game game)
         {
             level = 0;
@@ -37,7 +38,7 @@ namespace AncientCorps
         //每個等級的下降時間，如果攻擊了設施就會重置時間。
         private readonly IntRange[] intervalPerLevel = new IntRange[]
         {
-            new IntRange(-1,-1),
+            new IntRange(480000,960000), //8~16天（0級：原本是 (-1,-1)，會讓 interval 永遠 < 0，0 級就不可能自己上升）
             new IntRange(300000,600000), //5~10天
             new IntRange(300000,600000), //5~10天
             new IntRange(600000,1200000),//10~20天
@@ -68,6 +69,7 @@ namespace AncientCorps
 
         public void LevelRise()
         {
+            if (CorpsFaction == null) return;
             var _ = level;
             level++;
             if (level > 5) level = 5;
@@ -82,24 +84,52 @@ namespace AncientCorps
                 {
                     targetedFaction = GetFaction();
                 }
+                SyncHuntdown();
+            }
+        }
+
+        /// <summary>
+        /// 五級警戒時啟動 FFF 的追殺（Huntdown）：警告 → 倒數 → 逐波增援，右側會有內建倒數提示。
+        /// 其他等級（含降級）停止追殺，沿用既有的 patrol/DEFCON 動作表，不取代它。
+        /// Level 5 starts FFF's Huntdown (warning → countdown → escalating waves with a built-in alert);
+        /// every other level stops it. The existing patrol/DEFCON action table is left untouched.
+        /// </summary>
+        private void SyncHuntdown()
+        {
+            if (DMSAC_DefOf.DMSAC_Huntdown == null) return;
+            if (level >= 5)
+            {
+                Map map = Find.AnyPlayerHomeMap;
+                if (map != null && !HuntdownUtility.IsActive(DMSAC_DefOf.DMSAC_Huntdown))
+                {
+                    HuntdownUtility.Start(DMSAC_DefOf.DMSAC_Huntdown, map, false, "DMSAC_Defcon5", null);
+                }
+            }
+            else if (HuntdownUtility.IsActive(DMSAC_DefOf.DMSAC_Huntdown))
+            {
+                HuntdownUtility.Stop(DMSAC_DefOf.DMSAC_Huntdown);
             }
         }
         public void LevelDown(int lv)
         {
+            if (CorpsFaction == null) return;
             if (level == 0) { ResetInterval(); return; }
-            level = lv;
-            if (level < 0) level = 0;
+            // LevelDown(int) 只會下降，不會把警戒等級「調升」（原本戰爭結束設 2 級時可能會拉高目前等級）。
+            level = Mathf.Clamp(lv, 0, level);
             ResetInterval();
             ResetActionInterval();
+            SyncHuntdown();
             Find.LetterStack.ReceiveLetter("DMSAC_Level_Down".Translate(), "DMSAC_Level_Down_Desc".Translate(CorpsFaction.NameColored, level) + "\n\n" + GetLevelDesc(), LetterDefOf.PositiveEvent);
         }
         public void LevelDown()
         {
+            if (CorpsFaction == null) return;
             if (level == 0) { ResetInterval(); return; }
             level--;
             if (level < 0) level = 0;
             ResetInterval();
             ResetActionInterval();
+            SyncHuntdown();
             //根據近期觀察的活動變化，(機兵師)指揮部下降了其內部的警戒等級，現在它們的警戒等級為:
             Find.LetterStack.ReceiveLetter("DMSAC_Level_Down".Translate(), "DMSAC_Level_Down_Desc".Translate(CorpsFaction.NameColored, level) + "\n\n" + GetLevelDesc(), LetterDefOf.PositiveEvent);
         }
@@ -145,18 +175,19 @@ namespace AncientCorps
         }
         public void StartAction()
         {
-            List<Company> companies = Find.WorldObjects.AllWorldObjects.OfType<Company>().Where(x => x.Faction == CorpsFaction && x.Tile != -1).ToList();
+            if (CorpsFaction == null) return;
             AdjustCompanyCount();
+            List<Company> companies = GetCompanies();
             switch (level)
             {
                 case 0: //8~16天
                     //啥都不幹
                     if (Rand.Chance(0.25f)) { LevelRise(); return; }
-                    while (allCompanies.Count > 0)
+                    for (int i = 0; i < companies.Count; i++)
                     {
-                        allCompanies[0].Destroy();
-                        allCompanies.RemoveAt(0);
+                        companies[i]?.Destroy();
                     }
+                    companies.Clear();
                     break;
                 case 1: //4~8天
                     //5%機率自己上升
@@ -209,30 +240,49 @@ namespace AncientCorps
                     //玩家攻擊設施時會遭到襲擊。
                     break;
             }
-            for (int i = 0; i < level * companies.Count / 2; i++)
+            int extraActions = level * companies.Count / 2;
+            for (int i = 0; i < extraActions; i++)
             {
                 AncientCorpsUltility.TriggerRandomCompanyAction();
             }
-            void AdjustCompanyCount()
+        }
+
+        private List<Company> GetCompanies()
+        {
+            return Find.WorldObjects.AllWorldObjects.OfType<Company>().Where(x => x.Faction == CorpsFaction && x.Tile != -1).ToList();
+        }
+
+        /// <summary>
+        /// 讓連隊數量靠近目前警戒等級允許的上限：和平時解散多餘的連，戰時補到上限（找不到落腳點就停手）。
+        /// Trim or top up the company count towards the current DEFCON ceiling; stops when no tile can be found.
+        /// </summary>
+        private void AdjustCompanyCount()
+        {
+            List<Company> companies = GetCompanies();
+            while (!HasTarget && companies.Count > TargetCompanyCountMax)
             {
-                while (!HasTarget && companies.Count > 0 && companies.Count > TargetCompanyCountMax)
-                {
-                    companies[0].Destroy();
-                    companies.RemoveAt(0);
-                }
-                if (HasTarget && companies.Count < TargetCompanyCountMax)
-                {
-                    DepolyNewCompany();
-                }
+                Company c = companies[companies.Count - 1];
+                companies.RemoveAt(companies.Count - 1);
+                c?.Destroy();
+            }
+            if (!HasTarget) return;
+            int guard = 0;
+            while (GetCompanies().Count < TargetCompanyCountMax && guard++ <= TargetCompanyCountMax)
+            {
+                int before = GetCompanies().Count;
+                DepolyNewCompany();
+                if (GetCompanies().Count <= before) break;
             }
         }
         public void TryTriggerCompanyRaid()
         {
-            if (CorpsFaction == null && !CorpsFaction.HostileTo(Faction.OfPlayer)) return;
+            if (CorpsFaction == null || !CorpsFaction.HostileTo(Faction.OfPlayer)) return;
             Map map = Find.AnyPlayerHomeMap;
             if (map != null)
             {
-                CompanyDef company = DefDatabase<CompanyDef>.AllDefsListForReading.Where(x => x.defaultFaction == DMSAC_DefOf.DMS_AncientCorps).RandomElement();
+                CompanyDef company = DefDatabase<CompanyDef>.AllDefsListForReading
+                    .Where(x => x.defaultFaction == DMSAC_DefOf.DMS_AncientCorps && Level >= x.defconRating)
+                    .RandomElementWithFallback();
                 Current.Game.GetComponent<GameComponent_RaidCompany>().RaidCompany(map, company);
             }
         }
@@ -250,18 +300,22 @@ namespace AncientCorps
     }
     public partial class GameComponent_DefconLevel : GameComponent
     {
-        public int TargetCompanyCountMax => (int)(20 * GetCurrentScale);
+        public int TargetCompanyCountMax => Mathf.Clamp(Mathf.RoundToInt(4f / Mathf.Max(GetCurrentScale, 0.1f)), 2, 20);
         public bool HasTarget => GetFaction() != null;
         private Faction targetedFaction = null;
 
-        private List<Company> allCompanies = new List<Company>();
         public override void FinalizeInit()
         {
             base.FinalizeInit();
+            // 舊存檔若沒有 Interval/ActionInterval，Scribe 會回 0，下一個 tick 就會立刻降級並觸發一次行動。
+            // Old saves without these values would drop a level and fire an action on the first tick.
+            if (interval <= 0) ResetInterval();
+            if (actionInterval <= 0) ResetActionInterval();
         }
         public Faction CurrentTarget => targetedFaction;
         public Faction GetFaction()
         {
+            if (CorpsFaction == null) return null;
             if (targetedFaction != null && targetedFaction.defeated)
             {
                 AncientCorpsUltility.WarIsOver(targetedFaction);
@@ -269,13 +323,14 @@ namespace AncientCorps
             }
             if (targetedFaction == null && level == 5)
             {
+                // 原本用 .First()：沒有任何合法敵對派系時會直接擲 InvalidOperationException。
                 targetedFaction = Find.FactionManager.AllFactions.Where(
                         f =>
                         f.HostileTo(CorpsFaction) &&
                         f.def.humanlikeFaction &&
                         !f.Hidden &&
                         !f.defeated &&
-                        !f.IsPlayer).OrderByDescending(f => f.def.techLevel).First();
+                        !f.IsPlayer).OrderByDescending(f => f.def.techLevel).FirstOrDefault();
 
                 if (targetedFaction != null)
                 {
@@ -285,26 +340,25 @@ namespace AncientCorps
             }
             return targetedFaction;
         }
-        private readonly List<Settlement> cacheTargetedSettlement = new List<Settlement>();
         internal Settlement GetTargetSettlement()
         {
-            allCompanies = Find.WorldObjects.AllWorldObjects.OfType<Company>().ToList();
-            foreach (var item in allCompanies)
-            {
-                if (item.HasTarget)
-                {
-                    cacheTargetedSettlement.Add(item.Target);
-                }
-            }
+            if (targetedFaction == null) return null;
+            // 原本把「已成為連隊目標的聚落」累積在一個永不清空的欄位裡（無限成長 + 卡住已摧毀物件）。
+            // The old cache list was never cleared, grew forever and kept destroyed settlements alive.
+            List<Settlement> alreadyTargeted = Find.WorldObjects.AllWorldObjects
+                .OfType<Company>()
+                .Where(c => c.HasTarget && c.Target != null)
+                .Select(c => c.Target)
+                .ToList();
             List<Settlement> settlementsA = Find.World.worldObjects.Settlements
                 .Where(s => s.Faction == targetedFaction && s.Tile != -1)
                 .ToList();
-            if (settlementsA.NullOrEmpty()) targetedFaction.defeated = true;
+            if (settlementsA.NullOrEmpty()) return null;
 
             List<Settlement> settlementsB = Find.World.worldObjects.Settlements
                 .Where(s => s.Faction == CorpsFaction && s.Tile != -1)
                 .ToList();
-            settlementsA.RemoveAll(x => cacheTargetedSettlement.Contains(x));
+            settlementsA.RemoveAll(x => alreadyTargeted.Contains(x));
 
             var v = WorldUtils.FindClosestSettlementPair(settlementsA, settlementsB);
             if (v.Item1 == null)
@@ -319,7 +373,9 @@ namespace AncientCorps
         }
         public void DepolyNewCompany()
         {
+            if (CorpsFaction == null) return;
             if (targetedFaction == null) GetFaction();
+            if (targetedFaction == null) return;
             List<Settlement> settlementsA = Find.World.worldObjects.SettlementBases
                 .Where(s => s.Faction == targetedFaction && s.Tile != -1)
                 .ToList();
@@ -339,6 +395,7 @@ namespace AncientCorps
                 Log.Warning("worldObject is null!");
                 return;
             }
+            if (CorpsFaction == null) return;
 
             var worldObject = WorldObjectMaker.MakeWorldObject(DMSAC_DefOf.DMSAC_Garrison);
             if (worldObject == null)
@@ -349,26 +406,29 @@ namespace AncientCorps
             worldObject.SetFaction(CorpsFaction);
 
             //根據警戒等級生成單位。
-            (worldObject as Company).SetCompany(DefDatabase<CompanyDef>.AllDefsListForReading.Where(c => Level >= c.defconRating).RandomElement());
+            CompanyDef companyDef = DefDatabase<CompanyDef>.AllDefsListForReading
+                .Where(c => Level >= c.defconRating)
+                .RandomElementWithFallback();
+            if (companyDef == null || worldObject is not Company company)
+            {
+                Log.Warning("DMSAC: could not create a company (no CompanyDef or wrong world object class).");
+                worldObject.Destroy();
+                return;
+            }
+            company.SetCompany(companyDef);
 
-            PlanetTile result = -1;
-            if (result == -1)
+            // 原本的 `if (result == -1) { ... } else if (...)` 讓 else 分支永遠走不到；
+            // 另外 SetTarget 之後 Tile 會被覆寫成目標附近的可通行格，所以這裡只需要找到一個新站點格。
+            // The old `if (result == -1) { … } else if (…)` made the else branch unreachable, and SetTarget
+            // overwrites Tile with a passable cell near the target anyway.
+            if (!TileFinder.TryFindNewSiteTile(out PlanetTile result, maxDist: 19, allowCaravans: true) || result == -1)
             {
-                if (!TileFinder.TryFindNewSiteTile(out result, maxDist: 19, allowCaravans: true))
-                {
-                    result = -1;
-                }
+                worldObject.Destroy();
+                return;
             }
-            else if (Find.WorldObjects.AnyWorldObjectAt(result) && !TileFinder.TryFindPassableTileWithTraversalDistance(result, 1, 50, out result, (PlanetTile x) => !Find.WorldObjects.AnyWorldObjectAt(x), ignoreFirstTilePassability: false, TileFinderMode.Near))
-            {
-                result = -1;
-            }
-            if (result != -1)
-            {
-                worldObject.Tile = result;
-                (worldObject as Company).SetTarget(target);
-                Find.WorldObjects.Add(worldObject);
-            }
+            worldObject.Tile = result;
+            company.SetTarget(target);
+            Find.WorldObjects.Add(worldObject);
         }
     }
 }

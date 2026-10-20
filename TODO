@@ -1,47 +1,48 @@
 Tag(完成)
 技能圖標(完成)
-製作配方
+製作配方(完成：武器由 DMS2 的 DMSAC 相容層接管，古機單位由 DMS2 培育配方負責；榖倉自帶 DMSAC_Make_Saray)
 
-====任務:
+====任務(完成):
 遠古兵器墳場
-用VEF quest site實現，具體是大量的古代機兵殘骸散落在地圖上。
+已用 FFF 的 site part 實作（DMSAC_Graveyard），2.0.0 再改用 GenStep_FFFGarrisonedStructure：
+大量殘骸散落 + 戰利品進儲藏 + 守軍入駐。
 
 遠古地下設施
-用AUR實現的多層地下遺跡。有少量激活的古代機兵遊蕩，一旦進入便會與古代機兵為敵。
+已用 FFF pocket map 實作（DMSAC_UndergroundFacility + Fortified.FacilityEntrance/Exit），AUR 版停用。
+2.0.0 加上設施警報網路與地下封鎖（指揮核心掃描 → 處理陣列/通風扇放出機兵 → 電梯封鎖）。
 
 野戰維修廠
-用VEF quest site實現，由中小型古代機兵鎮守的，有砲塔。中央是未啟動的機兵。
+已用 FFF site part 實作（DMSAC_Garage），中央為未啟動機兵。
 
-====物品與建築:
+====物品與建築(完成):
 設施情報
-擊敗古代軍團襲擊機率獲得，也可以透過召喚稜堡襲擊來穩定獲取。使用後得知地圖上一個古代地下設施的地點。
+已實作 DMSAC_FacilityIntel / DMSAC_SiteIntel（CompUseEffectGiveQuest）。
 
 長波誘餌雷達
-一個能發射長波段誘餌訊號的簡易發射裝置，本身不具有功能但其工作的頻率足以讓古代機兵的反輻射偵察衛星探測並調派機兵部隊前去偵查。
-出於其人道且符合戰爭法的交戰守則，機兵部隊並不一定與你的陣營敵對，但如果你襲擊了它們，那麼便會被紀錄為交戰目標。
+由 DMS2 的 DMS_AncientDecoyRadio 提供，本模組在 DMSAC_FacilityIntel 的說明裡連過去。
 
-未啟動的機兵(玩家獲取古代機兵的方式)
-本質上其實是一個渲染內部機兵的地台，在第一次靠近時有機率自己啟動(閃紅光後5秒彈出機兵)，玩家可以讓機械師駭入來獲取控制權(需要帶寬)。但有機率控制失敗並警醒其他部分未啟動的機兵。
-拆毀的話有
-10%機率:機兵醒來並攻擊
-30%機率:獲得機兵的拆解產出
-60%機率:獲得碎鋼渣與機兵殘骸
+未啟動的機兵
+已實作 Fortified.Building_DeactivatedMech + ModExtension_DeactivatedMech（駭入取得帶寬、拆毀有機率醒來/產出）。
 
 古代機兵殘骸
-本質上跟上面的一樣，不過機兵無法控制，渲染的也比較雜亂。內部的機兵有隨機(不至於死亡)的受損。
-拆毀的話有
-1%機率:機兵醒來並攻擊
-14%機率:獲得機兵的拆解產出
-85%機率:獲得碎鋼渣與古代機兵殘骸
+已實作 DMSAC_Building_DerelictMech_* 與 Deactivated*Mech（2.0.0 起可 Recycleable 回收）。
 
 封存貨櫃
-封閉的貨櫃，開啟後獲取隨機物品。 破壞掉只能獲得價值10%的物品。
+已實作 Fortified.Building_SurplusContainer + ModExtension_Lootbox（DMSAC_Cargo / Crate / PackCrate）。
 
 棄置的軍用載具
-無法使用的純裝飾性載具(從摩托化那裏整)，破壞掉出鋼渣塊與機兵殘骸。
+尚未實作（缺貼圖使用規劃；parking_* 與 saray 貼圖已存在但未接線）。
 
 ==================
 Cinder的侵蝕稜堡
-Pawnkind
+Pawnkind —— 貼圖 Things/Automatroid/erodedKrepost_* 已存在；1.7 已預留 1.7/Cinders 條件載入夾，尚未填入內容。
 
-boss group caller(測試中)
+boss group caller(完成)
+2.0.0：DMSAC_BossCaller（FFF CompUseEffect_SummonRaid）召喚 DMSAC_Bossgroup_MusicBox（八音盒）。
+
+====2.0.0 之後待辦:
+- 八音盒專屬貼圖（現以 zabor 佔位）。
+- 城邦/籬笆貼圖重製（覆蓋 gorod_*.png / zabor_*.png，XML 不動）。
+- 模塊專屬圖示（現沿用既有武器/飛彈貼圖）。
+- 模塊代價數值試玩微調。
+- 棄置軍用載具（parking_* 貼圖）與 Cinder 侵蝕稜堡（erodedKrepost_* 貼圖）。

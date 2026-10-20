@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    模塊用技能。兩個都用 FFF 的弧形噴射 verb（既有 DMSAC_Rocket 也是同一個 verb），
+    避免為每個模塊新增發射物：彈種直接重用 DMS2 既有的 73mm 空爆煙霧彈與 7.62 彈。
+    Module abilities. Both use FFF's arc-spray cast verb (same as DMSAC_Rocket) so no new projectiles
+    are needed: they reuse DMS2's 73mm airburst smoke shell and 7.62 machine gun bullet.
+  -->
+  <AbilityDef>
+    <defName>DMSAC_Ability_SmokeSalvo</defName>
+    <label>smoke salvo</label>
+    <description>Fire a short salvo of airburst smoke shells, laying down a screen along the chosen direction.</description>
+    <iconPath>UI/Ability/Smoke</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>1800~2400</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Fortified.Verb_CastAbilityArcSprayProjectile</verbClass>
+      <defaultProjectile>DMS_Bullet_RR_Smoke</defaultProjectile>
+      <warmupTime>1.2</warmupTime>
+      <minRange>6.9</minRange>
+      <range>28.9</range>
+      <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+      <sprayWidth>5</sprayWidth>
+      <sprayArching>6</sprayArching>
+      <sprayThicknessCells>1</sprayThicknessCells>
+      <sprayNumExtraCells>12</sprayNumExtraCells>
+      <burstShotCount>5</burstShotCount>
+      <forcedMissRadius>2</forcedMissRadius>
+      <soundCast>Mortar_LaunchA</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>DMSAC_Ability_MGPod</defName>
+    <label>machine gun pod</label>
+    <description>Spray a cone of 7.62 fire from the pod mounted on the module rack.</description>
+    <iconPath>UI/Ability/DMSAC_UBGL</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>900~1200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Fortified.Verb_CastAbilityArcSprayProjectile</verbClass>
+      <defaultProjectile>Bullet_DMS_LightMachineGun</defaultProjectile>
+      <warmupTime>0.8</warmupTime>
+      <minRange>4.9</minRange>
+      <range>24.9</range>
+      <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+      <sprayWidth>4</sprayWidth>
+      <sprayArching>4</sprayArching>
+      <sprayThicknessCells>1</sprayThicknessCells>
+      <sprayNumExtraCells>10</sprayNumExtraCells>
+      <burstShotCount>10</burstShotCount>
+      <forcedMissRadius>1.5</forcedMissRadius>
+      <soundCast>DMS_AC_Shot_MachineGunSound</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>true</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+</Defs>

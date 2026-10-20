@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using System;
+using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -17,48 +16,71 @@ namespace AncientCorps
         {
             base.ExposeData();
         }
+
         public void RaidCompany(Map map, CompanyDef company)
         {
-            if (company == null) company = DefDatabase<CompanyDef>.GetRandom();
+            if (map == null) return;
+            if (company == null)
+            {
+                // 原本用 DefDatabase.GetRandom()，會抽到非 AncientCorps 的連（也就沒有對應派系）。
+                // The old GetRandom() could pick a company that does not belong to the AncientCorps.
+                company = DefDatabase<CompanyDef>.AllDefsListForReading
+                    .Where(c => c.defaultFaction == DMSAC_DefOf.DMS_AncientCorps && c.squads != null && c.squads.Count > 0)
+                    .RandomElementWithFallback();
+            }
+            if (company == null)
+            {
+                Log.Error("DMSAC: RaidCompany called without a usable CompanyDef.");
+                return;
+            }
 
             Faction faction = Find.FactionManager.FirstFactionOfDef(company.defaultFaction);
-            if (faction == null) { Log.Error("Company faction have null faction, using pirate instead"); faction = Find.FactionManager.OfPirates; }
-
-            List<Thing> targetThing = new List<Thing>();
-            targetThing.AddRange(map.listerThings.ThingsInGroup(ThingRequestGroup.Weapon));
-            targetThing.AddRange(map.listerThings.ThingsInGroup(ThingRequestGroup.WasteProducer));
-            targetThing.AddRange(map.listerThings.ThingsInGroup(ThingRequestGroup.SubcoreScanner));
-            targetThing.AddRange(map.listerThings.ThingsMatching(ThingRequest.ForDef(ThingDefOf.Door)));
-            targetThing.AddRange(map.listerThings.ThingsMatching(ThingRequest.ForDef(ThingDefOf.TrapSpike)));
-            targetThing.RemoveAll(x => x.Faction != Faction.OfPlayer);
+            if (faction == null)
+            {
+                Log.Error("DMSAC: company faction is null, skipping raid.");
+                return;
+            }
 
             List<Pawn> commanders = new List<Pawn>();
-            for (int i = 0; i < company.squadCountRange.RandomInRange; i++)
+            int squads = Mathf.Max(1, company.squadCountRange.RandomInRange);
+            for (int i = 0; i < squads; i++)
             {
                 PlatoonDef maker = company.squads.RandomElement();
+                if (maker == null || maker.leaderKindDef.NullOrEmpty()) continue;
+                if (!RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal + 0.2f)) continue;
 
-                if (map != null && RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal + 0.2f))
+                PawnKindDef leaderKind = maker.leaderKindDef.RandomElement();
+                if (leaderKind == null) continue;
+                Pawn leaderPawn = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(leaderKind, faction), result, map, WipeMode.VanishOrMoveAside);
+                if (leaderPawn == null) continue;
+
+                // 指揮官與護衛放進「同一個」lord：原本指揮官被丟進另一個 LordJob_AssaultThings，
+                // 導致 DefendTargetAndAssaultColony 的所有「目標倒下」邏輯永遠對不上人。
+                // Commander and escorts share one lord; the old code put the commander in a separate
+                // LordJob_AssaultThings, so the defend-target graph could never see him.
+                List<Pawn> group = new List<Pawn>() { leaderPawn };
+                foreach (PawnGenOption pawnOption in maker.fixedPawnkind ?? new List<PawnGenOption>())
                 {
-                    Pawn leaderPawn = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(maker.leaderKindDef.RandomElement(), faction), result, map, WipeMode.VanishOrMoveAside);
-                    LordMaker.MakeNewLord(faction, new LordJob_AssaultThings(faction, targetThing.Where(x => leaderPawn.CanReach(x, Verse.AI.PathEndMode.Touch, Danger.Deadly)).ToList()), map, new List<Pawn>() { leaderPawn });
-                    commanders.Add(leaderPawn);
-                    List<Pawn> group = new List<Pawn>();
-                    foreach (PawnGenOption pawnOption in maker.fixedPawnkind)
+                    if (pawnOption?.kind == null) continue;
+                    int count = Mathf.Max(0, (int)pawnOption.selectionWeight);
+                    for (int j = 0; j < count; j++)
                     {
-                        for (int j = 0; j < (int)pawnOption.selectionWeight; j++)
-                        {
-                            Pawn squadPawnFix = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(pawnOption.kind, faction), GetRandomCell(leaderPawn), map, WipeMode.VanishOrMoveAside);
-                            group.Add(squadPawnFix);
-                        }
+                        Pawn squadPawnFix = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(pawnOption.kind, faction), GetRandomCell(leaderPawn), map, WipeMode.VanishOrMoveAside);
+                        if (squadPawnFix != null) group.Add(squadPawnFix);
                     }
-                    for (int k = 0; k < maker.memberCountRange.RandomInRange; k++)
-                    {
-                        Pawn squadPawnFix = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(maker.memberKindDefs.RandomElement(), faction), GetRandomCell(leaderPawn), map, WipeMode.VanishOrMoveAside);
-                        group.Add(squadPawnFix);
-                    }
-                    LordMaker.MakeNewLord(faction, new LordJob_DefendTargetAndAssaultColony(leaderPawn), map, group);
                 }
+                int memberCount = maker.memberCountRange.RandomInRange;
+                for (int k = 0; k < memberCount; k++)
+                {
+                    PawnKindDef memberKind = maker.memberKindDefs.RandomElementWithFallback();
+                    if (memberKind == null) continue;
+                    Pawn squadPawnFix = (Pawn)GenSpawn.Spawn(PawnGenerator.GeneratePawn(memberKind, faction), GetRandomCell(leaderPawn), map, WipeMode.VanishOrMoveAside);
+                    if (squadPawnFix != null) group.Add(squadPawnFix);
+                }
+                LordMaker.MakeNewLord(faction, new LordJob_DefendTargetAndAssaultColony(leaderPawn), map, group);
+                commanders.Add(leaderPawn);
             }
+
             TaggedString name = NameGenerator.GenerateName(company.NamePack);
             //訊息
             Find.LetterStack.ReceiveLetter("DMSAC_CompanyRaid".Translate(name), "DMSAC_CompanyRaid_Desc".Translate(faction.Name, name), LetterDefOf.ThreatBig, new LookTargets(commanders), faction);
@@ -72,6 +94,7 @@ namespace AncientCorps
                 //之後大概會有個展開大小的參數在CompanyDef裡;
                 IntVec3 cell = rect.RandomCell;
                 if (!cell.InBounds(pawn.Map)) continue;
+                if (!cell.Standable(pawn.Map)) continue;
                 if (pawn.CanReach(cell, Verse.AI.PathEndMode.Touch, Danger.Some))
                 {
                     return cell;

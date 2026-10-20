@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 2.0.0: DEFCON 5 huntdown text. -->
+  <!-- 補上先前只在中文檔有的兩個鍵（原文檔遺漏）。 / Keys that only existed in the Chinese files. -->
+  <DMSAC_PatrolSquad>Reinforcements</DMSAC_PatrolSquad>
+  <DMSAC_PatrolSquadDesc>A patrol squad has reached the facility. Follow-up units will arrive in shorter intervals now.</DMSAC_PatrolSquadDesc>
+  <DMSAC_Huntdown_LetterLabel>The corps is hunting you</DMSAC_Huntdown_LetterLabel>
+  <DMSAC_Huntdown_LetterText>The automatroid division has logged your colony as a target for liquidation. Command listed every incursion into its facilities on the broadcast, and announced that its units have left patrol rotation.\n\nFirst comes the warning. Then comes the corps.</DMSAC_Huntdown_LetterText>
+  <DMSAC_Huntdown_AlertLabel>Huntdown: the first wave is coming</DMSAC_Huntdown_AlertLabel>
+  <DMSAC_Huntdown_AlertCritical>Huntdown: troops on the strike lane</DMSAC_Huntdown_AlertCritical>
+  <DMSAC_Huntdown_AlertDesc>At DEFCON 5 the division has fixed on this colony. Its first wave is assembling and will arrive when the countdown ends.</DMSAC_Huntdown_AlertDesc>
+  <DMSAC_Huntdown_AlertCriticalDesc>The huntdown wave is on the strike lane and can appear at the map edge at any moment.</DMSAC_Huntdown_AlertCriticalDesc>
+</LanguageData>

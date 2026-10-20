@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 2.0.0：DEFCON 五級的 FFF 追殺令文字 / DEFCON 5 huntdown text. -->
+  <DMSAC_Huntdown_LetterLabel>軍團正在追殺你</DMSAC_Huntdown_LetterLabel>
+  <DMSAC_Huntdown_LetterText>(機兵師)已將殖民地登記為「待肅清目標」。指揮部在廣播裡列舉了你對其設施的每一次入侵，並宣告部隊已脫離巡邏模式。\n\n先是警告。然後是部隊。</DMSAC_Huntdown_LetterText>
+  <DMSAC_Huntdown_AlertLabel>軍團追殺：第一波即將抵達</DMSAC_Huntdown_AlertLabel>
+  <DMSAC_Huntdown_AlertCritical>軍團追殺：部隊已進入打擊航線</DMSAC_Huntdown_AlertCritical>
+  <DMSAC_Huntdown_AlertDesc>五級警戒下，機兵師已鎖定這座殖民地。第一波部隊正在集結，倒數結束後抵達。</DMSAC_Huntdown_AlertDesc>
+  <DMSAC_Huntdown_AlertCriticalDesc>追殺部隊已進入打擊航線，隨時會出現在地圖邊緣。</DMSAC_Huntdown_AlertCriticalDesc>
+</LanguageData>

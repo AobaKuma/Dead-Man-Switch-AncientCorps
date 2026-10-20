@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MapGeneratorDef>
+    <defName>DMSAC_UndergroundFacility</defName>
+    <label>underground facility</label>
+    <isUnderground>true</isUnderground>
+    <disableCallAid>true</disableCallAid>
+    <pocketMapProperties>
+      <biome>Underground</biome>
+      <temperature>15</temperature>
+      <canBeCleaned>true</canBeCleaned>
+    </pocketMapProperties>
+    <genSteps>
+      <li>ElevationFertility</li>
+      <li>Underground_RocksFromGrid</li>
+      <li>Terrain</li>
+      <li>DMSAC_UndergroundFacility</li>
+      <li>Fog</li>
+    </genSteps>
+  </MapGeneratorDef>
+
+  <GenStepDef>
+    <defName>DMSAC_UndergroundFacility</defName>
+    <order>551</order>
+    <genStep Class="Fortified.Structures.GenStep_FFFStructureDef">
+      <structureDefs>
+        <li>DMSAC_UndergroundFacility_A</li>
+        <li>DMSAC_UndergroundFacility_B</li>
+        <li>DMSAC_UndergroundFacility_C</li>
+      </structureDefs>
+      <allowedRotation>All</allowedRotation>
+      <forcedFaction>DMS_AncientCorps</forcedFaction>
+    </genStep>
+  </GenStepDef>
+</Defs>

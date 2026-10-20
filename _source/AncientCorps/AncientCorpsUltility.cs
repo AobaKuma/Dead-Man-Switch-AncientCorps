@@ -1,4 +1,4 @@
-﻿using LudeonTK;
+using LudeonTK;
 using RimWorld;
 using RimWorld.Planet;
 using RimWorld.QuestGen;
@@ -23,7 +23,9 @@ namespace AncientCorps
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
         private static void Site_SpawnPatrol()
         {
-            var a = Current.Game.World.worldObjects.ObjectsAt(Current.Game.CurrentMap.Tile).First();
+            Map currentMap = Current.Game.CurrentMap;
+            if (currentMap == null) return;
+            var a = Current.Game.World.worldObjects.ObjectsAt(currentMap.Tile).FirstOrDefault();
             a?.GetComponent<WorldObjectComp_PatrolSquad>()?.SpawnPatrol();
         }
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
@@ -42,13 +44,14 @@ namespace AncientCorps
         private static void Defcon_PrintCurrentStatus()
         {
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
+            if (comp == null) return;
             Log.Message($"DEFCON: {comp.Level} ActionTime:{comp.MTBAction}");
         }
         [DebugAction("DMS", null, false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.Playing)]
         private static void Defcon_TriggerAction()
         {
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
-            comp.StartAction();
+            comp?.StartAction();
         }
         public static void SetHostileToPlayer(Map map, Pawn targetPawn = null)
         {
@@ -58,7 +61,7 @@ namespace AncientCorps
             if (LastPilotCheck(faction.RelationKindWith(Faction.OfPlayer))) return;
 
             SendWarning();
-            Current.Game.GetComponent<GameComponent_DefconLevel>().LevelRise();
+            Current.Game.GetComponent<GameComponent_DefconLevel>()?.LevelRise();
 
             bool LastPilotCheck(FactionRelationKind factionRelation)
             {
@@ -80,7 +83,9 @@ namespace AncientCorps
                         //"代碼5，識別到登記對象。這裡是{0}，如果有任何資源需求請向{0}後勤辦事處正式遞交軍剩品徵用申請表。"
                         //古老的機兵指揮系統出於對{1}的信任，對殖民者的行為睜一隻眼閉一隻眼，但出於流程需要發出了警告。
                         Find.LetterStack.ReceiveLetter("DMSAC_CorpAlly".Translate(), "DMSAC_CorpAllyDesc".Translate(faction.NameColored, pawn.NameShortColored), LetterDefOf.PositiveEvent);
-                        faction.TryAffectGoodwillWith(Faction.OfPlayer, -10, reason: HistoryEventDefOf.PeaceTalksSuccess, lookTarget: pawn);
+                        // 非法闖入設施的警告：用「攻擊聚落」當歷史理由比「和平會談成功」合理。
+                        // A trespass warning is recorded as an attack, not as a successful peace talk.
+                        faction.TryAffectGoodwillWith(Faction.OfPlayer, -10, reason: HistoryEventDefOf.AttackedSettlement, lookTarget: pawn);
                         break;
 
                     case FactionRelationKind.Ally:
@@ -100,9 +105,18 @@ namespace AncientCorps
         }
         public static void GenerateQuest(QuestScriptDef questDef)
         {
+            if (questDef == null) return;
+            Map homeMap = Find.AnyPlayerHomeMap;
+            if (homeMap == null) return;
             Slate slate = new Slate();
-            slate.Set("points", StorytellerUtility.DefaultThreatPointsNow(Find.AnyPlayerHomeMap));
+            slate.Set("points", StorytellerUtility.DefaultThreatPointsNow(homeMap));
             Quest quest = QuestUtility.GenerateQuestAndMakeAvailable(questDef, slate);
+            // QuestGen.Generate 失敗時會回 null（只記錯誤），原本接著讀 quest.hidden 會 NRE。
+            if (quest == null)
+            {
+                Log.Warning("DMSAC: quest generation failed for " + questDef.defName);
+                return;
+            }
             if (!quest.hidden && quest.root.sendAvailableLetter)
             {
                 QuestUtility.SendLetterQuestAvailable(quest);
@@ -134,34 +148,43 @@ namespace AncientCorps
         public static void DeployCompany()
         {
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
-            comp.DepolyNewCompany();
+            comp?.DepolyNewCompany();
         }
         public static void TriggerTakeover()
         {
-            Faction faction = 
-                Find.FactionManager.AllFactions.Where(f => 
-                Corps.HostileTo(f) && 
-                !f.defeated && 
-                !f.IsPlayer).RandomElement();
+            Faction faction = Corps;
+            if (faction == null) return;
+            faction = Find.FactionManager.AllFactions
+                .Where(f => faction.HostileTo(f) && !f.defeated && !f.IsPlayer)
+                .RandomElementWithFallback();
+            if (faction == null) return;
 
-            Settlement settlement = 
-                Find.World.worldObjects.SettlementBases.Where(s => s.Faction == faction).RandomElement();
+            Settlement settlement = Find.World.worldObjects.SettlementBases
+                .Where(s => s.Faction == faction)
+                .RandomElementWithFallback();
 
             if (settlement == null)
             {
-                faction = 
-                    Find.FactionManager.AllFactions.Where(
-                        f => Corps.HostileTo(f) && 
-                        f.def.humanlikeFaction && 
-                        !f.defeated && 
-                        !f.IsPlayer).RandomElement();
-                settlement = Find.World.worldObjects.SettlementBases.Where(s => s.Faction == faction).RandomElement();
+                faction = Find.FactionManager.AllFactions
+                    .Where(f => faction.HostileTo(f) && f.def.humanlikeFaction && !f.defeated && !f.IsPlayer)
+                    .RandomElementWithFallback();
+                if (faction == null) return;
+                settlement = Find.World.worldObjects.SettlementBases
+                    .Where(s => s.Faction == faction)
+                    .RandomElementWithFallback();
             }
             TriggerTakeover(settlement);
         }
         public static void TriggerTakeover(Settlement settlement)
         {
             if (settlement == null) return;
+            Faction corps = Corps;
+            if (corps == null) return;
+            if (settlement.Faction == null)
+            {
+                Log.Warning("DMSAC: takeover target has no faction, skipping.");
+                return;
+            }
             TaggedString faction = settlement.Faction.NameColored.Colorize(settlement.Faction.Color);
             TaggedString oldName = settlement.Name;
             int tile = settlement.Tile;
@@ -169,12 +192,12 @@ namespace AncientCorps
             SettlementDefeatUtility.CheckDefeated(settlement);
 
             Settlement newSettlement = (Settlement)WorldObjectMaker.MakeWorldObject(WorldObjectDefOf.Settlement);
-            newSettlement.Name = SettlementNameGenerator.GenerateSettlementName(newSettlement, Corps.def.settlementNameMaker);
+            newSettlement.Name = SettlementNameGenerator.GenerateSettlementName(newSettlement, corps.def.settlementNameMaker);
             newSettlement.Tile = tile;
-            newSettlement.SetFaction(Corps);
+            newSettlement.SetFaction(corps);
             Find.WorldObjects.Add(newSettlement);
             //接管: 根據最新的消息，一支隸屬於{機兵師}的部隊接管了原屬於{受害者}的{基地舊名稱}，現在該基地被重新命名為{基地新名稱}。
-            if (Rand.Chance(0.25f)) Find.LetterStack.ReceiveLetter("DMSAC_World_Takeover".Translate(), "DMSAC_World_Takeover_Desc".Translate(Corps.NameColored, faction, oldName, newSettlement.Name), LetterDefOf.PositiveEvent, lookTargets: newSettlement);
+            if (Rand.Chance(0.25f)) Find.LetterStack.ReceiveLetter("DMSAC_World_Takeover".Translate(), "DMSAC_World_Takeover_Desc".Translate(corps.NameColored, faction, oldName, newSettlement.Name), LetterDefOf.PositiveEvent, lookTargets: newSettlement);
         }
         public static void SendDeclaration(Faction targetedFaction)
         {
@@ -186,10 +209,13 @@ namespace AncientCorps
         public static void WarIsOver(Faction targetedFaction)
         {
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
+            if (targetedFaction == null || comp == null) return;
             if (comp.Level > 2)
             {
                 //行動結束: 在接管了最後一個基地後，{0}宣布針對{1}的軍事行動已圓滿結束，作為行動的結果{1}在本星球的影響力被徹底的拔除。\n\n而根據情報，這支傾巢而出的軍隊在完成了它們的任務後已經重新回到原來的巡邏模式。\n戰爭結束了...\n\n暫時的。   
-                Find.LetterStack.ReceiveLetter("DMSAC_World_WarOver".Translate(), "DMSAC_World_WarOver_Desc".Translate(Corps.NameColored.Colorize(Corps.Color), targetedFaction.NameColored.Colorize(targetedFaction.Color), targetedFaction.leader.NameShortColored), LetterDefOf.NeutralEvent);
+                // 被清空的派系沒有領袖，直接讀 leader 會 NRE。
+                string leaderName = targetedFaction.leader != null ? targetedFaction.leader.NameShortColored : targetedFaction.Name;
+                Find.LetterStack.ReceiveLetter("DMSAC_World_WarOver".Translate(), "DMSAC_World_WarOver_Desc".Translate(Corps.NameColored.Colorize(Corps.Color), targetedFaction.NameColored.Colorize(targetedFaction.Color), leaderName), LetterDefOf.NeutralEvent);
 
                 comp.LevelDown(2);
             }

@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using System.Collections.Generic;
 using Verse;
 
@@ -13,17 +13,29 @@ namespace AncientCorps
 
         public IEnumerable<PawnKindDef> GeneratePawnKind()
         {
-            yield return leaderKindDef.RandomElement();
-            foreach (var item in fixedPawnkind)
+            PawnKindDef leader = leaderKindDef.RandomElementWithFallback();
+            if (leader != null) yield return leader;
+            if (!fixedPawnkind.NullOrEmpty())
             {
-                for (int i = 0; i < (int)item.selectionWeight; i++)
+                foreach (var item in fixedPawnkind)
                 {
-                    yield return item.kind;
+                    if (item?.kind == null) continue;
+                    // selectionWeight 在固定的班組編制裡是「數量」，用整數解釋（XML 一律寫整數）。
+                    int count = (int)item.selectionWeight;
+                    for (int i = 0; i < count; i++)
+                    {
+                        yield return item.kind;
+                    }
                 }
             }
-            for (int i = 0; i < memberCountRange.RandomInRange; i++)
+            if (!memberKindDefs.NullOrEmpty())
             {
-                yield return memberKindDefs.RandomElement();
+                int members = memberCountRange.RandomInRange;
+                for (int i = 0; i < members; i++)
+                {
+                    PawnKindDef kind = memberKindDefs.RandomElement();
+                    if (kind != null) yield return kind;
+                }
             }
         }
     }

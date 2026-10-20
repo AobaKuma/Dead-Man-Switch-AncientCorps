@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    РГМ-4「穀倉」/ RGM-4 "Saray"，北約代號 "Worker Bee"。
+    與 RGM-3「水車」同一個無人履帶平台家族，與蹄兔（Hyrax）共用履帶構造；
+    和平時期由軍團大量轉作後勤與二線部隊，負責無人設施的例行巡邏與設備保養。
+    低甲、中速、二帶寬；固定武裝只有一具遙控武器站，可換用手槍/短管衝鋒槍。
+    RGM-4 "Saray" (NATO: Worker Bee) — the light-armed logistics variant of the RGM tracked
+    platform family, sharing the Hyrax running gear. Low armour, medium speed, 2 bandwidth.
+  -->
+  <ThingDef ParentName="BaseAncientAutomatroidRace" Name="BaseSarayRace" Abstract="True">
+    <statBases>
+      <MoveSpeed>3.6</MoveSpeed>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <MechEnergyUsageFactor>0.35</MechEnergyUsageFactor>
+      <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">2</BandwidthCost>
+      <ControlTakingTime MayRequire="Ludeon.Rimworld.Biotech">8</ControlTakingTime>
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">2</WastepacksPerRecharge>
+      <WorkSpeedGlobal MayRequire="Ludeon.Rimworld.Biotech">0.9</WorkSpeedGlobal>
+      <CarryingCapacity>75</CarryingCapacity>
+    </statBases>
+    <race>
+      <body>DMS_Caterpillar</body>
+      <baseBodySize>1.3</baseBodySize>
+      <baseHealthScale>0.7</baseHealthScale>
+      <mechWeightClass>Light</mechWeightClass>
+      <mechFixedSkillLevel>6</mechFixedSkillLevel>
+      <nameGenerator>DMS_AncientMechStandard</nameGenerator>
+      <mechEnabledWorkTypes>
+        <li>Hauling</li>
+        <li>Construction</li>
+        <li>PlantWork</li>
+      </mechEnabledWorkTypes>
+    </race>
+    <comps>
+      <li Class="Fortified.CompProperties_VehicleWeapon">
+        <defaultWeapon>DMS_SubMachineGunMounted</defaultWeapon>
+        <turretRotationFollowPawn>true</turretRotationFollowPawn>
+        <rotationSmoothTime>0.1</rotationSmoothTime>
+        <drawData>
+          <defaultData>
+            <pivot>(0.5,0.5)</pivot>
+          </defaultData>
+          <dataEast>
+            <offset>(0.15,0,0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(-0.15,0,0.15)</offset>
+            <rotationOffset>0</rotationOffset>
+          </dataWest>
+          <dataSouth>
+            <offset>(0,0,0)</offset>
+          </dataSouth>
+          <dataNorth>
+            <offset>(0,0,0.2)</offset>
+          </dataNorth>
+        </drawData>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Fortified.MechWeaponExtension">
+        <EnableWeaponFilter>true</EnableWeaponFilter>
+        <UsableWeaponTags>
+          <li>SimpleGun</li>
+          <li>DMS_MechWeaponLight</li>
+        </UsableWeaponTags>
+        <BypassUsableWeapons>
+          <li>DMS_TacticalPistol</li>
+          <li>DMS_PDW</li>
+          <li>DMS_ZlobinRevolver</li>
+        </BypassUsableWeapons>
+        <EnableTechLevelFilter>true</EnableTechLevelFilter>
+        <UsableTechLevels>
+          <li>Industrial</li>
+        </UsableTechLevels>
+      </li>
+    </modExtensions>
+    <butcherProducts>
+      <Steel>25</Steel>
+      <ComponentStamped>1</ComponentStamped>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseSarayRace">
+    <defName>DMS_Mech_Saray</defName>
+    <label>saray</label>
+    <description>RGM-4 "Saray" (NATO: Worker Bee) is the light-armed logistics variant of the same unmanned tracked platform family as the RGM-3. Built in enormous numbers during the war, most of them were converted back to second-line and maintenance duties in peacetime: patrolling unmanned facilities, moving parts, and keeping the rest of the corps running.\n\nWith only a remote weapon station and light armour, a Saray is no line combatant. It is, however, cheap, patient, and still armed when something walks into the depot it was told to watch.</description>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseAncientAutomatroidKind">
+    <defName>DMS_Mech_Saray</defName>
+    <label>saray</label>
+    <race>DMS_Mech_Saray</race>
+    <isFighter>false</isFighter>
+    <combatPower>45</combatPower>
+    <maxPerGroup>6</maxPerGroup>
+    <weaponMoney>200~900</weaponMoney>
+    <weaponTags>
+      <li>DMS_TacticalPistol</li>
+      <li>DMS_PDW</li>
+      <li>DMS_ZlobinRevolver</li>
+    </weaponTags>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/saray</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Automatroid/saray</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <abilities>
+      <li>DMSAC_FoamSpray</li>
+    </abilities>
+    <aiAvoidCover>false</aiAvoidCover>
+  </PawnKindDef>
+
+  <!-- 消防泡沫：把燃燒範圍壓掉。Firefighting foam pulse. -->
+  <AbilityDef>
+    <defName>DMSAC_FoamSpray</defName>
+    <label>firefighting foam</label>
+    <description>Discharge a burst of firefighting foam from the maintenance tank, smothering fires and covering the ground in foam.</description>
+    <iconPath>UI/Ability/Smoke</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>1800~2400</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <onlyManualCast>false</onlyManualCast>
+      <drawAimPie>true</drawAimPie>
+      <minRange>1.9</minRange>
+      <range>12.9</range>
+      <warmupTime>0.6</warmupTime>
+      <soundCast>Mortar_LaunchA</soundCast>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFirefoampop">
+        <firefoamRadius>6.9</firefoamRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

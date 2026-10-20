@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>The Dead Man's Switch - AncientCorps</name>
-	<modIconPath IgnoreIfNoMatchingField="True">UI/Faction/AncientIcon</modIconPath>
 	<author>AobaKuma</author>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/Faction/AncientIcon</modIconPath>
+	<modVersion IgnoreIfNoMatchingField="True">2.0.0</modVersion>
 	<supportedVersions>
 		<li>1.5</li>
 		<li>1.6</li>
 		<li>1.7</li>
 	</supportedVersions>
 	<packageId>Aoba.DeadManSwitch.AncientCorps</packageId>
-	<modDependencies>
-		<li>
-			<packageId>Aoba.DeadManSwitch.Core</packageId>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3121742525</steamWorkshopUrl>
-			<displayName>Dead Man Switch</displayName>
-		</li>
-	</modDependencies>
+	<!--
+		本模組的 Def 直接使用 Fortified Features Framework 的型別（StructureLayoutDef、GenStep_FFF*、
+		Building_DeactivatedMech、FacilityEntrance、AlertScanner…），所以 FFF 是硬性前置，不能只用 loadAfter。
+		1.5 / 1.6 分支凍結在 DMS1 世代，1.7 分支對應 DMS2。
+		The defs use Fortified Features Framework types directly, so FFF is a hard dependency, not just loadAfter.
+		The 1.5 / 1.6 branches are frozen at the DMS1 generation; the 1.7 branch targets DMS2.
+	-->
+	<modDependenciesByVersion>
+		<v1.6>
+			<li>
+				<packageId>Aoba.DeadManSwitch.Core</packageId>
+				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3121742525</steamWorkshopUrl>
+				<displayName>Dead Man Switch</displayName>
+			</li>
+			<li>
+				<packageId>AOBA.Framework</packageId>
+				<displayName>Fortified Feature Framework</displayName>
+				<downloadUrl>https://github.com/AobaKuma/Fortified-Framework</downloadUrl>
+				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3498575851</steamWorkshopUrl>
+			</li>
+			<li>
+				<packageId>brrainz.harmony</packageId>
+				<displayName>Harmony</displayName>
+				<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+				<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+			</li>
+			<li>
+				<packageId>ludeon.rimworld.biotech</packageId>
+				<displayName>Biotech</displayName>
+			</li>
+		</v1.6>
+		<v1.7>
+			<li>
+				<packageId>Aoba.DeadManSwitch.Core</packageId>
+				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3121742525</steamWorkshopUrl>
+				<displayName>Dead Man Switch</displayName>
+			</li>
+			<li>
+				<packageId>AOBA.Framework</packageId>
+				<displayName>Fortified Feature Framework</displayName>
+				<downloadUrl>https://github.com/AobaKuma/Fortified-Framework</downloadUrl>
+				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3498575851</steamWorkshopUrl>
+			</li>
+			<li>
+				<packageId>brrainz.harmony</packageId>
+				<displayName>Harmony</displayName>
+				<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+				<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+			</li>
+			<li>
+				<packageId>ludeon.rimworld.biotech</packageId>
+				<displayName>Biotech</displayName>
+			</li>
+		</v1.7>
+	</modDependenciesByVersion>
 	<loadAfter>
 		<li>Aoba.DeadManSwitch.Core</li>
+		<li>AOBA.Framework</li>
 		<li>DwS.FunctionalAmmunition.Library</li>
+		<li>ceteam.combatextended</li>
+		<li>BreadMo.Cinders</li>
 	</loadAfter>
 	<description>For some reason, a main combat corps belonging to an former-visited colonial fleet left on this planet for hundreds of years. Now, the underground military facilities built for total war are operating once again, and those ancient automatroid war machines are gathering on the surface again.\n\nHowever, we still don't know who their enemy is...</description>
 </ModMetaData>

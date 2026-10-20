@@ -1,13 +1,11 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 using System.Linq;
 using RimWorld.Planet;
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using RimWorld.BaseGen;
 using Verse.AI.Group;
-using Verse.Noise;
 
 namespace AncientCorps
 {
@@ -35,7 +33,6 @@ namespace AncientCorps
                 }
             }
         }
-        public override IEnumerable<GenStepWithParams> ExtraGenStepDefs => base.ExtraGenStepDefs;
         public override string GetDescription()
         {
             string str = base.GetDescription();
@@ -59,6 +56,13 @@ namespace AncientCorps
         {
             companyDef = company;
         }
+
+        /// <summary>
+        /// 把連隊放到目標附近。鄰格必須可通行、且沒有其他世界物件（flood fill 會包含目標格本身，
+        /// 原本不檢查會讓連隊疊在目標聚落或海上）。
+        /// Place the company next to its target: passable and not already occupied (the flood fill includes
+        /// the root tile, so the old code could stack the company on the target settlement itself or on water).
+        /// </summary>
         public void SetTarget(Settlement settlement)
         {
             if (settlement == null)
@@ -67,12 +71,15 @@ namespace AncientCorps
                 return;
             }
             targetSettlement = settlement;
-            var tiles = WorldUtils.GetNearbyTiles(targetSettlement.Tile, GetCompany().combatRadius);
-            if (!tiles.NullOrEmpty())
-            {
-                this.Tile = tiles.RandomElement();
-            }
+            CompanyDef def = GetCompany();
+            if (def == null) return;
+            var tiles = WorldUtils.GetNearbyTiles(settlement.Tile, def.combatRadius);
+            if (tiles.NullOrEmpty()) return;
+            var valid = tiles.Where(t => !Find.World.Impassable(t) && !Find.WorldObjects.AnyWorldObjectAt(t)).ToList();
+            if (valid.Count == 0) return;
+            Tile = valid.RandomElement();
         }
+
         public override void PostMake()
         {
             base.PostMake();
@@ -81,52 +88,73 @@ namespace AncientCorps
                 def = DMSAC_DefOf.DMSAC_GarrisonSite,
                 parms = new SitePartParams()
                 {
-                    threatPoints = StorytellerUtility.DefaultThreatPointsNow(Find.AnyPlayerHomeMap)
+                    threatPoints = Find.AnyPlayerHomeMap != null ? StorytellerUtility.DefaultThreatPointsNow(Find.AnyPlayerHomeMap) : 500f
                 }
             });
         }
+
         public override void SpawnSetup()
         {
             base.SpawnSetup();
             if (Faction == null) SetFaction(Corps);
-            if (companyDef == null) companyDef = DefDatabase<CompanyDef>.AllDefsListForReading.Where(x => this.Faction.def == x.defaultFaction).RandomElement();
+            if (companyDef == null)
+            {
+                companyDef = DefDatabase<CompanyDef>.AllDefsListForReading
+                    .Where(x => x.defaultFaction == this.Faction?.def)
+                    .RandomElementWithFallback();
+                if (companyDef == null)
+                {
+                    Log.Error("DMSAC: no CompanyDef available for faction " + (Faction?.def?.defName ?? "null") + ", removing world object.");
+                    Destroy();
+                    return;
+                }
+            }
             if (name.NullOrEmpty()) name = NameGenerator.GenerateName(companyDef.NamePack);
-            SetFaction(Find.FactionManager.FirstFactionOfDef(companyDef.defaultFaction));
+            Faction owner = Find.FactionManager.FirstFactionOfDef(companyDef.defaultFaction);
+            if (owner != null) SetFaction(owner);
         }
         private Faction Corps => AncientCorpsUltility.Corps;
+
         public void DoAction()
         {
-            if (targetSettlement == null || targetSettlement.Destroyed || !targetSettlement.Spawned || targetSettlement.Faction == Corps) targetSettlement = null;
+            if (targetSettlement == null || targetSettlement.Destroyed || !targetSettlement.Spawned || targetSettlement.Faction == Corps)
+            {
+                targetSettlement = null;
+            }
             GameComponent_DefconLevel comp = Current.Game.GetComponent<GameComponent_DefconLevel>();
             if (targetSettlement != null)
             {
                 if (Rand.Chance(0.5f)) return;
                 if (Rand.Chance(0.25f))
                 {
+                    // 先記下座標：TriggerTakeover 會 Destroy 這個聚落。
+                    PlanetTile targetTile = targetSettlement.Tile;
                     AncientCorpsUltility.TriggerTakeover(targetSettlement);
-
                     List<PlanetTile> neighboringTiles = new List<PlanetTile>();
-                    Find.WorldGrid.GetTileNeighbors(targetSettlement.Tile, neighboringTiles);
+                    Find.WorldGrid.GetTileNeighbors(targetTile, neighboringTiles);
                     var t = neighboringTiles.ClosestTileTo(this.Tile);
-                    Tile = (t != -1) ? t : Tile;
-                    SettlementDefeatUtility.CheckDefeated(targetSettlement);
+                    if (t != -1) Tile = t;
                     targetSettlement = null;
                     return;
                 }
                 if (Rand.Chance(0.25f))
                 {
-                    comp.DepolyNewCompany(targetSettlement);
+                    Settlement victim = targetSettlement;
+                    targetSettlement = null;
+                    if (comp != null) comp.DepolyNewCompany(victim);
                     return;
                 }
                 if (Rand.Chance(0.1f))
                 {
+                    PlanetTile targetTile = targetSettlement.Tile;
                     DestroyedSettlement destroyedSettlement = (DestroyedSettlement)WorldObjectMaker.MakeWorldObject(WorldObjectDefOf.DestroyedSettlement);
-                    destroyedSettlement.Tile = targetSettlement.Tile;
+                    destroyedSettlement.Tile = targetTile;
                     Find.WorldObjects.Add(destroyedSettlement);
 
                     List<PlanetTile> neighboringTiles = new List<PlanetTile>();
-                    Find.WorldGrid.GetTileNeighbors(targetSettlement.Tile, neighboringTiles);
-                    Tile = neighboringTiles.ClosestTileTo(destroyedSettlement.Tile);
+                    Find.WorldGrid.GetTileNeighbors(targetTile, neighboringTiles);
+                    var t = neighboringTiles.ClosestTileTo(destroyedSettlement.Tile);
+                    if (t != -1) Tile = t;
                     targetSettlement.Destroy();
                     SettlementDefeatUtility.CheckDefeated(targetSettlement);
                     targetSettlement = null;
@@ -135,8 +163,12 @@ namespace AncientCorps
             }
             else
             {
-                if (Rand.Chance(0.5f)) Destroy();
-                if (comp.HasTarget)
+                if (Rand.Chance(0.5f))
+                {
+                    Destroy();
+                    return;
+                }
+                if (comp != null && comp.HasTarget)
                 {
                     var a = comp.GetTargetSettlement();
                     if (a != null)
@@ -150,46 +182,55 @@ namespace AncientCorps
                 }
                 else
                 {
-                    Tile = WorldUtils.GetNearbyTiles(this.Tile, companyDef.combatRadius/2).RandomElement();
+                    var tiles = WorldUtils.GetNearbyTiles(this.Tile, GetCompany().combatRadius / 2);
+                    PlanetTile dest = tiles.RandomElementWithFallback(this.Tile);
+                    if (dest != this.Tile) Tile = dest;
                 }
             }
         }
+
+        /// <summary>
+        /// 保留原版 Site.ShouldRemoveMapNow 的所有守衛（pocket map、建築、condition causer、raid source、
+        /// transporter），只額外加上「指揮步行者不在場就一起收掉站點」的條件。
+        /// Keep every vanilla guard; only add the "no relay walker left → drop the world object too" rule.
+        /// </summary>
         public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
         {
-            alsoRemoveWorldObject = false;
-            if (!base.Map.IsPlayerHome)
+            bool result = base.ShouldRemoveMapNow(out alsoRemoveWorldObject);
+            if (!result) return false;
+            if (Map != null && !Map.IsPlayerHome && Faction != null)
             {
                 var pawns = Map.mapPawns.PawnsInFaction(Faction);
-                if (pawns.NullOrEmpty())
+                if (pawns.NullOrEmpty() || !pawns.Any(p => p.kindDef == DMSAC_DefOf.DMS_Mech_CommandWalker))
                 {
                     alsoRemoveWorldObject = true;
                 }
-                else if (pawns.Where(p => p.kindDef == DMSAC_DefOf.DMS_Mech_CommandWalker).EnumerableNullOrEmpty())
-                {
-                    alsoRemoveWorldObject = true;
-                }
-                return !base.Map.mapPawns.AnyPawnBlockingMapRemoval;
             }
-
-            return false;
+            return result;
         }
+
         public override void PostMapGenerate()
         {
             base.PostMapGenerate();
-            AncientCorpsUltility.Defcon_Rise();
+            if (AncientCorpsUltility.Corps != null) AncientCorpsUltility.Defcon_Rise();
             GenerateCompanyPawn();
         }
+
         public void GenerateCompanyPawn()
         {
             if (!HasMap) { Log.Error("Generate without map"); return; }
+            if (companyDef == null) companyDef = GetCompany();
+            if (companyDef == null) return;
             IntVec3 baseCenter = this.Map.Center;
             Faction faction = this.Faction;
-            var thing = Map.listerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.PowerTrader));
-            Lord singlePawnLord = LordMaker.MakeNewLord(faction, new LordJob_MechanoidsDefend(thing, faction, 20, baseCenter, false, false), this.Map);
+            List<Thing> defendThings = Map.listerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.PowerTrader)).ToList();
+            // canAssaultColony: true — 否則機兵只會死守中心點，玩家從地圖邊緣進來時不會交戰。
+            // canAssaultColony: true, otherwise the mechs only hold the centre and never engage an edge arrival.
+            Lord defendLord = LordMaker.MakeNewLord(faction, new LordJob_MechanoidsDefend(defendThings, faction, 20f, baseCenter, canAssaultColony: true, isMechCluster: false), this.Map);
             foreach (var item in companyDef.GeneratePawns())
             {
                 GenPlace.TryPlaceThing(item, baseCenter + (20 * Rand.InsideUnitCircleVec3).ToIntVec3(), this.Map, ThingPlaceMode.Near);
-                singlePawnLord.AddPawn(item);
+                defendLord.AddPawn(item);
             }
         }
         public override void ExposeData()
@@ -202,8 +243,10 @@ namespace AncientCorps
         internal CompanyDef GetCompany()
         {
             if (companyDef == null)
-            { 
-                companyDef = DefDatabase<CompanyDef>.AllDefsListForReading.Where(x => x.defaultFaction == this.Faction.def).RandomElement();
+            {
+                companyDef = DefDatabase<CompanyDef>.AllDefsListForReading
+                    .Where(x => x.defaultFaction == this.Faction?.def)
+                    .RandomElementWithFallback();
             }
             return companyDef;
         }

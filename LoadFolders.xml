@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <loadFolders>
+	<!--
+		1.5 / 1.6 為凍結分支（DMS1 世代），內容不再更新；1.7 是從 1.6 分出來的分支，之後所有更新只發生在 1.7/。
+		兩邊的 defName 保持一致，方便日後比對或 backport。1.7 不再列出 1.6，避免同名 Def 重複載入。
+		The 1.5 / 1.6 folders are frozen (DMS1 era) and receive no further content changes; 1.7 is a branch
+		forked from 1.6 and is the only folder that will keep evolving. Def names are kept identical on both
+		sides so they stay comparable and backportable. 1.7 no longer lists 1.6 to avoid duplicate Defs.
+	-->
 	<v1.5>
 		<li>/</li>
 		<li>1.5</li>
 		<li IfModActive="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam">1.5/AUR</li>
-		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.5/CE</li>		
+		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.5/CE</li>
 	</v1.5>
 	<v1.6>
 		<li>/</li>
@@ -15,15 +22,16 @@
 		<li IfModActiveAll="CETeam.CombatExtended,DwS.FunctionalAmmunition.Library">1.6/D_Lib</li>
 	</v1.6>
 	<!--
-		1.7 沿用 1.6 的內容；最後列出的 1.7 只有 .NET 10 版的 Assemblies，會蓋掉 1.6 同名的 DLL。
-		1.7 reuses the 1.6 content; 1.7, listed last, only holds the .NET 10 Assemblies, which override the 1.6 DLLs of the same name.
+		1.7 使用自己的完整內容分支（Defs / Patches / CE / D_Lib / Cinders），不再沿用 1.6。
+		AUR 的相容層不再需要：地下設施已改用 FFF 的 pocket map（FacilityEntrance / FacilityExit）。
+		1.7 uses its own full content branch (Defs / Patches / CE / D_Lib / Cinders) instead of 1.6.
+		The AUR compatibility layer is gone: underground facilities now use FFF pocket maps.
 	-->
 	<v1.7>
 		<li>/</li>
-		<li>1.6</li>
-		<!--<li IfModActive="xmb.ancienturbanruins.mo,xmb.ancienturbanruins.mo_steam">1.6/AUR</li> disabled yet-->
-		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.6/CE</li>
-		<li IfModActiveAll="CETeam.CombatExtended,DwS.FunctionalAmmunition.Library">1.6/D_Lib</li>
 		<li>1.7</li>
+		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.7/CE</li>
+		<li IfModActiveAll="CETeam.CombatExtended,DwS.FunctionalAmmunition.Library">1.7/D_Lib</li>
+		<li IfModActive="BreadMo.Cinders,BreadMo.Cinders_steam">1.7/Cinders</li>
 	</v1.7>
 </loadFolders>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    DEFCON 五級時由 GameComponent_DefconLevel 啟動的 FFF 追殺令。
+    警告 → 倒數（右側內建提示）→ 兩波逐級加重的增援；沿用既有的巡邏／DEFCON 動作表，不取代它。
+    Started by GameComponent_DefconLevel at DEFCON 5: warning → countdown → two escalating waves.
+    The existing patrol / DEFCON action table is left untouched.
+  -->
+  <Fortified.HuntdownDef>
+    <defName>DMSAC_Huntdown</defName>
+    <faction>DMS_AncientCorps</faction>
+    <initialWarningDelay>2500</initialWarningDelay>
+    <initialRaidDelay>60000</initialRaidDelay>
+    <criticalAlertLeadTicks>60000</criticalAlertLeadTicks>
+    <waves>
+      <li>
+        <delayTicks>0</delayTicks>
+        <pointsMultiplier>1.5</pointsMultiplier>
+        <minPoints>2000</minPoints>
+      </li>
+      <li>
+        <delayTicks>30000</delayTicks>
+        <pointsMultiplier>2</pointsMultiplier>
+        <minPoints>8000</minPoints>
+      </li>
+    </waves>
+    <repeatWhileStaying>true</repeatWhileStaying>
+    <postponeWhileNotHostile>true</postponeWhileNotHostile>
+    <retargetPlayerHome>true</retargetPlayerHome>
+    <sendWarningLetter>true</sendWarningLetter>
+    <showAlert>true</showAlert>
+    <raidStrategy>ImmediateAttack</raidStrategy>
+    <raidArrivalMode>EdgeWalkIn</raidArrivalMode>
+    <letterLabel>DMSAC_Huntdown_LetterLabel</letterLabel>
+    <letterText>DMSAC_Huntdown_LetterText</letterText>
+    <alertLabel>DMSAC_Huntdown_AlertLabel</alertLabel>
+    <alertLabelCritical>DMSAC_Huntdown_AlertCritical</alertLabelCritical>
+    <alertExplanation>DMSAC_Huntdown_AlertDesc</alertExplanation>
+    <alertExplanationCritical>DMSAC_Huntdown_AlertCriticalDesc</alertExplanationCritical>
+  </Fortified.HuntdownDef>
+</Defs>

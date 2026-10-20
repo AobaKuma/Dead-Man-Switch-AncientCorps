@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingSetMakerDef[defName="VisitorGift"]/root/options</xpath>
+                <value>
+                    <li>
+                        <weight>1.2</weight>
+                        <thingSetMaker Class="ThingSetMaker_StackCount">
+                            <fixedParams>
+                                <filter>
+                                    <thingDefs>
+                                        <li>DMSAC_SiteIntel</li>
+                                    </thingDefs>
+                                </filter>
+                                <countRange>1~2</countRange>
+                            </fixedParams>
+                        </thingSetMaker>
+                    </li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingSetMakerDef[defName="OutlanderRaidLootMaker"or defName="PirateRaidLootMaker"]/root/fixedParams/filter/thingDefs</xpath>
+                <value>
+                    <li>DMSAC_SiteIntel</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

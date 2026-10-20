@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    榖倉的培育配方。掛在 DMS2 的 I 級封存檔案「駐屯兵器」底下（和磨坊同級），
+    使用中型培育艙（與蹄兔同一個 recipe 基底）。重型/超重型配方由 DMS2 的 DMSAC 相容層另外提供。
+    Saray's gestation recipe. Sits under DMS2's class I sealed file "garrison arsenal" (same tier as the
+    Molot) and uses the medium gestator base, like the Hyrax it shares its running gear with.
+  -->
+  <RecipeDef ParentName="DMS_MediumMechanoidRecipe">
+    <defName>DMSAC_Make_Saray</defName>
+    <label>Gestate RGM-4 "Saray"</label>
+    <description>Gestate an RGM-4 "Saray", the light-armed logistics variant of the RGM tracked platform family. Its production pattern survives among the garrison arsenal files.\n\nOn a quiet day it hauls, builds and tends crops; on a loud one it watches a depot with a remote weapon station and a tank of firefighting foam.</description>
+    <products>
+      <DMS_Mech_Saray>1</DMS_Mech_Saray>
+    </products>
+    <gestationCycles>1</gestationCycles>
+    <researchPrerequisite>DMS_Occultech_RemnantPatterns</researchPrerequisite>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Mech_Saray</ThingDef>
+    </descriptionHyperlinks>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>120</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Tungsteel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentStamped</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+</Defs>

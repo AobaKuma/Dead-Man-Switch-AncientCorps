@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="DMS_ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+                <value>
+                    <li>Corpse_DMS_Mech_Molot</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="DMS_ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+                <value>
+                    <li>Corpse_DMS_Mech_Zabor</li>
+                    <li>Corpse_DMS_Mech_Gorod</li>
+                    <li>Corpse_DMS_Mech_Tsvetnik</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/RecipeDef[defName="DMS_ResurrectUltraheavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+                <value>
+                    <li>Corpse_DMS_Mech_Krepost</li>
+                    <li>Corpse_DMS_Mech_Pravda</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

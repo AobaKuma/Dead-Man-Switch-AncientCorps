@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    兵種載荷（《DMS2更新計畫》「長銃士／短銃士／戰鬥步行者／磨坊」）。
+    原版 PawnWeaponGenerator 只用 weaponTags 比對，而原版步槍的 tag 只有泛用的 "Gun"，
+    沒辦法指定單一武器。所以這裡替每把武器加上專屬的 DMSAC_ 角色 tag（不會和其他派系衝突），
+    再把 PawnKind 的 weaponTags 換成角色 tag。武器的數值一律不動。
+    Weapon loadouts per the design doc. PawnWeaponGenerator matches on weaponTags only, and vanilla
+    rifles share the generic "Gun" tag, so each weapon gets a dedicated DMSAC_ role tag and each
+    PawnKind lists only its role tag. No weapon stats are touched.
+
+    長銃士 Long musketeer  : 栓動步槍、狙擊槍、葉卡狙、吹氣者狙
+    短銃士 Short musketeer : 霰彈槍、機兵霰、衝鋒槍、突擊步槍、茲洛賓步槍
+    戰鬥步行者 Battle walker: 7.62步槍、7.62輕機槍、AGS30、12.7機槍
+    磨坊 Molot             : 輕機槍、7.62步槍、7.62機槍、23霰
+  -->
+
+  <!-- ===== 武器角色 tag / weapon role tags ===== -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <!-- 長銃士 -->
+      <!-- 原版栓動步槍在原始 XML 裡沒有 weaponTags 節點（沿用 BaseGun 的 "Gun"），所以直接補一個完整節點。 -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_BoltActionRifle"]</xpath>
+        <value>
+          <weaponTags>
+            <li>Gun</li>
+            <li>DMSAC_LongMusket</li>
+          </weaponTags>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_SniperRifle"]/weaponTags</xpath>
+        <value><li>DMSAC_LongMusket</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_YekaterinRifle"]/weaponTags</xpath>
+        <value><li>DMSAC_LongMusket</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_VykhlopRifle"]/weaponTags</xpath>
+        <value><li>DMSAC_LongMusket</li></value>
+      </li>
+
+      <!-- 短銃士 -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_PumpShotgun"]/weaponTags</xpath>
+        <value><li>DMSAC_ShortMusket</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_AssaultShotgun"]/weaponTags</xpath>
+        <value><li>DMSAC_ShortMusket</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_PDW"]/weaponTags</xpath>
+        <value><li>DMSAC_ShortMusket</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_AssaultRifle"]/weaponTags</xpath>
+        <value><li>DMSAC_ShortMusket</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_ZlobinRifle"]/weaponTags</xpath>
+        <value><li>DMSAC_ShortMusket</li></value>
+      </li>
+
+      <!-- 戰鬥步行者 -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_BattleRifle"]/weaponTags</xpath>
+        <value><li>DMSAC_BattleWalker</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_MiniMachineGun"]/weaponTags</xpath>
+        <value><li>DMSAC_BattleWalker</li><li>DMSAC_Molot</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_AtlantGrenadeLauncher"]/weaponTags</xpath>
+        <value><li>DMSAC_BattleWalker</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_KordMachineGun"]/weaponTags</xpath>
+        <value><li>DMSAC_BattleWalker</li></value>
+      </li>
+
+      <!-- 磨坊 -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_PKM"]/weaponTags</xpath>
+        <value><li>DMSAC_Molot</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_KS23K"]/weaponTags</xpath>
+        <value><li>DMSAC_Molot</li></value>
+      </li>
+
+      <!-- 籬笆：主近戰、裝備較輕 / Zabor: melee-leaning, lighter kit -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_PumpShotgun"]/weaponTags</xpath>
+        <value><li>DMSAC_Zabor</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_RiotShotgun"]/weaponTags</xpath>
+        <value><li>DMSAC_Zabor</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Machete"]/weaponTags</xpath>
+        <value><li>DMSAC_Zabor</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_BattleRifle"]/weaponTags</xpath>
+        <value><li>DMSAC_Zabor</li></value>
+      </li>
+
+      <!-- 城邦：主遠程，7.62/12.7 轉管與 14.5 重機槍 / Gorod: rotary guns and the 14.5 -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_M214Gatlinggun"]/weaponTags</xpath>
+        <value><li>DMSAC_Gorod</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_GAU19Gatlinggun"]/weaponTags</xpath>
+        <value><li>DMSAC_Gorod</li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_VladimirovMachineGun"]/weaponTags</xpath>
+        <value><li>DMSAC_Gorod</li></value>
+      </li>
+    </operations>
+  </Operation>
+
+  <!-- ===== PawnKind 只保留角色 tag / role tags only ===== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="DMS_Mech_Mushketer_AR"]/weaponTags</xpath>
+    <value>
+      <weaponTags>
+        <li>DMSAC_LongMusket</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="DMS_Mech_Mushketer_SAR"]/weaponTags</xpath>
+    <value>
+      <weaponTags>
+        <li>DMSAC_ShortMusket</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="DMS_Mech_BattleWalker"]/weaponTags</xpath>
+    <value>
+      <weaponTags>
+        <li>DMSAC_BattleWalker</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="DMS_Mech_Molot"]/weaponTags</xpath>
+    <value>
+      <weaponTags>
+        <li>DMSAC_Molot</li>
+      </weaponTags>
+    </value>
+  </Operation>
+
+  <!-- ===== 讓 DMS2 的機體也能取用這些武器（他們原本的 UsableWeaponTags 不含我方角色 tag）===== -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Mech_Arquebusier"]/modExtensions/li[@Class="Fortified.MechWeaponExtension"]/BypassUsableWeapons</xpath>
+        <value>
+          <li>DMS_YekaterinRifle</li>
+          <li>DMS_VykhlopRifle</li>
+          <li>DMS_ZlobinRifle</li>
+          <li>DMS_PDW</li>
+          <li>DMS_AssaultRifle</li>
+          <li>DMS_AssaultShotgun</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DMS_Mech_BattleFrame"]/modExtensions/li[@Class="Fortified.MechWeaponExtension"]/BypassUsableWeapons</xpath>
+        <value>
+          <li>DMS_BattleRifle</li>
+          <li>DMS_MiniMachineGun</li>
+          <li>DMS_AtlantGrenadeLauncher</li>
+          <li>DMS_KordMachineGun</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

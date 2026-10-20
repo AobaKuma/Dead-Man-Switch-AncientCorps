@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DMS_Turret_Okhotnik"]/designationCategory</xpath>
+    <value>
+      <designationCategory>DMS_Category</designationCategory>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DMS_Turret_Okhotnik"]/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>HeavyTurrets</li>
+      </researchPrerequisites>
+    </value>
+  </Operation> 
+</Patch>
