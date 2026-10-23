@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_Antipersonnel" ParentName="DMSAC_BaseCompany" Abstract="true">
+  <Fortified.CompanyDef Name="DMSAC_BaseCompany_Antipersonnel" ParentName="DMSAC_BaseCompany" Abstract="true">
     <IconPath>UI/Icons/Company/Antipersonnel</IconPath>
     <NamePack>DMSAC_Namer_Antipersonnel</NamePack>
     <description>A unit equipped with a large amount of supporting firepower</description>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
   <RulePackDef>
     <defName>DMSAC_Namer_Antipersonnel</defName>
@@ -39,10 +39,10 @@
   </RulePackDef>
 
   <!--====機炮 + 八音盒 + 風琴反人員配置（警戒度2）====-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Antipersonnel">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Antipersonnel">
     <defName>DMSAC_AntipersonnelTeam_2</defName>
     <label>Antipersonnel Team</label>
-    <defconRating>2</defconRating>
+    <minLevel>2</minLevel>
     <squadCountRange>1~4</squadCountRange>
     <squads>
       <li>DMSAC_Light_Rocket_A</li>
@@ -50,9 +50,9 @@
       <li>DMSAC_Light_Flamer_A</li>
       <li>DMSAC_Light_Combine_A</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
-  <AncientCorps.PlatoonDef><!--1x八音盒，輕機兵較多-->
+  <Fortified.PlatoonDef><!--1x八音盒，輕機兵較多-->
     <defName>DMSAC_Light_Rocket_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -66,8 +66,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--1x81mm-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--1x81mm-->
     <defName>DMSAC_Light_Mortar_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -81,8 +81,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--1x風琴，輕機兵較多-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--1x風琴，輕機兵較多-->
     <defName>DMSAC_Light_Flamer_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -97,8 +97,8 @@
       <li>DMS_Mech_Mushketer_SAR</li>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--1x81mm + 1x八音盒，輕機兵較少-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--1x81mm + 1x八音盒，輕機兵較少-->
     <defName>DMSAC_Light_Combine_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -113,22 +113,22 @@
     <memberKindDefs>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 
   <!--======重機槍 + 機炮 + 八音盒 + 風琴反人員配置（警戒度3）======-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Antipersonnel">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Antipersonnel">
     <defName>DMSAC_AntipersonnelTeam_3</defName>
     <label>Antipersonnel Team</label>
-    <defconRating>3</defconRating>
+    <minLevel>3</minLevel>
     <squadCountRange>2~6</squadCountRange>
     <squads>
       <li>DMSAC_Light_Rocket_B</li>
       <li>DMSAC_Light_Mortar_B</li>
       <li>DMSAC_Light_Rocket_C</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
-  <AncientCorps.PlatoonDef><!--2x八音盒 + 輕機兵-->
+  <Fortified.PlatoonDef><!--2x八音盒 + 輕機兵-->
     <defName>DMSAC_Light_Rocket_B</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -141,8 +141,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef>
     <defName>DMSAC_Light_Mortar_B</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -156,8 +156,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef>
     <defName>DMSAC_Light_Rocket_C</defName>
     <leaderKindDef>
       <li>DMS_Mech_Zabor_Shkatulka</li>
@@ -169,13 +169,13 @@
     <memberKindDefs>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 
   <!--========機炮 + 八音盒 + 風琴反人員配置（警戒度4）========-->
-  <AncientCorps.CompanyDef>
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Antipersonnel">
     <defName>DMSAC_AntipersonnelTeam_4</defName>
     <label>Antipersonnel Team</label>
-    <defconRating>4</defconRating>
+    <minLevel>4</minLevel>
     <squadCountRange>3~8</squadCountRange>
     <squads>
       <li>DMSAC_Light_Combine_A</li>
@@ -183,5 +183,5 @@
       <li>DMSAC_Light_Rocket_C</li>
       <li>DMSAC_Light_Mortar_B</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 </Defs>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_Combine" ParentName="DMSAC_BaseCompany" Abstract="true">
+  <Fortified.CompanyDef Name="DMSAC_BaseCompany_Combine" ParentName="DMSAC_BaseCompany" Abstract="true">
     <IconPath>UI/Icons/Company/Mechanized</IconPath>
     <NamePack>DMSAC_Namer_Combine</NamePack>
     <description>A mixed equipment troops temporarily formed for missions</description>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
   <RulePackDef>
     <defName>DMSAC_Namer_Combine</defName>
@@ -37,19 +37,19 @@
   </RulePackDef>
 
   <!--====重機槍 + 機炮 + 9M133 + 八音盒 + 風琴 混合配置（警戒度4）====-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Combine">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Combine">
     <defName>DMSAC_MediumMixedTeam_4</defName>
     <label>Medium Mixed Team</label>
-    <defconRating>4</defconRating>
+    <minLevel>4</minLevel>
     <squadCountRange>3~8</squadCountRange>
     <squads>
       <li>DMSAC_Medium_Combine_A</li>
       <li>DMSAC_Medium_Combine_B</li>
       <li>DMSAC_Medium_Combine_C</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
-  <AncientCorps.PlatoonDef><!--2x9M133 + 2x風琴 + 輕機兵較多-->
+  <Fortified.PlatoonDef><!--2x9M133 + 2x風琴 + 輕機兵較多-->
     <defName>DMSAC_Medium_Combine_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -64,8 +64,8 @@
       <li>DMS_Mech_Molot</li>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--2x9M133，輕機兵較少-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--2x9M133，輕機兵較少-->
     <defName>DMSAC_Medium_Combine_B</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -80,8 +80,8 @@
       <li>DMS_Mech_Molot</li>
       <li>DMS_Mech_Mushketer_AR</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--1x9M133，1x八音盒，2x風琴，輕機兵較多-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--1x9M133，1x八音盒，2x風琴，輕機兵較多-->
     <defName>DMSAC_Medium_Combine_C</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -97,21 +97,21 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 
   <!--==========帶有稜堡的重裝甲配置（警戒度5）==========-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Combine">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Combine">
     <defName>DMSAC_HeavyArmourTeam_5</defName>
     <label>Heavy Armour Team</label>
-    <defconRating>5</defconRating>
+    <minLevel>5</minLevel>
     <squadCountRange>4~10</squadCountRange>
     <squads>
       <li>DMSAC_Heavy_Armour_A</li>
       <li>DMSAC_Heavy_Armour_B</li>
       <li>DMSAC_Heavy_Flamer_A</li>
     </squads>
-  </AncientCorps.CompanyDef>
-  <AncientCorps.PlatoonDef><!--2x125mm炮 + 1xGSH30-6 + 1x八音盒 + 較少的輕機兵-->
+  </Fortified.CompanyDef>
+  <Fortified.PlatoonDef><!--2x125mm炮 + 1xGSH30-6 + 1x八音盒 + 較少的輕機兵-->
     <defName>DMSAC_Heavy_Armour_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_Krepost</li>
@@ -127,8 +127,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Molot_Reservoir</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--3x125mm炮 + 3x八音盒 + 較多的輕機兵-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--3x125mm炮 + 3x八音盒 + 較多的輕機兵-->
     <defName>DMSAC_Heavy_Armour_B</defName>
     <leaderKindDef>
       <li>DMS_Mech_Krepost</li>
@@ -142,8 +142,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--2x81mm + 加入噴火機兵（風琴手）+ 更多的近戰輕機兵-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--2x81mm + 加入噴火機兵（風琴手）+ 更多的近戰輕機兵-->
     <defName>DMSAC_Heavy_Flamer_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -159,22 +159,22 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 
   <!--==========155炮+稜堡+S8DF為主的混合配置（警戒度5）==========-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Combine">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Combine">
     <defName>DMSAC_HeavyMixedTeam_51</defName>
     <label>Heavy Mixed Team</label>
-    <defconRating>5</defconRating>
+    <minLevel>5</minLevel>
     <squadCountRange>4~10</squadCountRange>
     <squads>
       <li>DMSAC_Heavy_Armour_B</li>
       <li>DMSAC_Heavy_Artillery_B</li>
       <li>DMSAC_Heavy_Flamer_A</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
-  <AncientCorps.PlatoonDef><!--1x155mm + 2x125mm炮 + 1x9M133 + 2x八音盒 + 較多的輕機兵-->
+  <Fortified.PlatoonDef><!--1x155mm + 2x125mm炮 + 1x9M133 + 2x八音盒 + 較多的輕機兵-->
     <defName>DMSAC_Heavy_Combine_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -191,12 +191,12 @@
     <memberKindDefs>
       <li>DMS_Mech_Molot_Reservoir</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
   <!--==========155炮+稜堡+八音盒+9M133的混合配置（警戒度5）==========-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Combine">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Combine">
     <defName>DMSAC_HeavyMixedTeam_52</defName>
     <label>Heavy Mixed Team</label>
-    <defconRating>5</defconRating>
+    <minLevel>5</minLevel>
     <squadCountRange>4~10</squadCountRange>
     <squads>
       <li>DMSAC_Heavy_Armour_A</li>
@@ -204,5 +204,5 @@
       <li>DMSAC_Heavy_Artillery_B</li>
       <li>DMSAC_Heavy_Flamer_A</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 </Defs>

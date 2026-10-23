@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 軍團首領群任務（DMSAC_Boss）。Corps bossgroup quest. -->
+  <DMSAC_Boss.questContentRules.rulesStrings>
+    <li>bossDefeatedLetterLabel->[escortees0_label]已被击败</li>
+    <li>bossDefeatedStudyChipLetterText->[defeated][study][manufacture]</li>
+    <li>bossDefeatedLetterText->[defeated][manufacture]</li>
+    <li>defeated->军团的[escortees0_label]已被击败，并掉落了[reward_label]！</li>
+    <li>manufacture->\n\n如果它没有在战斗中损毁，你应该能在机体残骸中找到那个[reward_label]。</li>
+    <li>study->\n\n研究[reward_label]可以解锁后续的科技。</li>
+  </DMSAC_Boss.questContentRules.rulesStrings>
+  <DMSAC_Boss.root.LetterLabelBossgroupSummoned>军团回应</DMSAC_Boss.root.LetterLabelBossgroupSummoned>
+  <DMSAC_Boss.root.LetterBossgroupSummoned>机兵师截获了你的信号，并派出一支分遣队朝信号来源移动，很快就会抵达。做好交战准备。</DMSAC_Boss.root.LetterBossgroupSummoned>
+  <DMSAC_Boss.root.LetterLabelBossgroupArrived>军团分遣队</DMSAC_Boss.root.LetterLabelBossgroupArrived>
+  <DMSAC_Boss.root.LetterBossgroupArrived>军团分遣队已经抵达！</DMSAC_Boss.root.LetterBossgroupArrived>
+  <DMSAC_Boss.root.AlertBossgroupIncoming>军团分遣队接近中</DMSAC_Boss.root.AlertBossgroupIncoming>
+  <DMSAC_Boss.root.AlertBossgroupIncomingDesc>一支机兵师的分遣队正循着你发出的信号逼近。</DMSAC_Boss.root.AlertBossgroupIncomingDesc>
+</LanguageData>

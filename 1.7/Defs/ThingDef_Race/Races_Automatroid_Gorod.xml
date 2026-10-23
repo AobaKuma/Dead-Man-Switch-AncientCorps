@@ -45,6 +45,19 @@
 			  <turretRotationFollowPawn>true</turretRotationFollowPawn>			  
         <rotationSmoothTime>0.12</rotationSmoothTime>
       </li>
+      <!-- FFF 殘骸回收。FFF hulk recycling. -->
+      <li Class="Fortified.CompProperties_Recycleable">
+        <products>
+          <Steel>90</Steel>
+          <Tungsteel>40</Tungsteel>
+          <ComponentStamped>3</ComponentStamped>
+        </products>
+        <yieldFactor>0.8</yieldFactor>
+        <workTicks>900</workTicks>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <allowDead>true</allowDead>
+        <playerFactionOnly>true</playerFactionOnly>
+      </li>
     </comps>
     <modExtensions>
       <li Class="Fortified.MechWeaponExtension">
@@ -87,6 +100,9 @@
     <isFighter>true</isFighter>
     <combatPower>400</combatPower>
     <maxPerGroup>3</maxPerGroup>
+    <!-- 角色武器最便宜的 M214 也要 1520（GAU-19 1995），預設的 1300 起跳會讓部分城邦空手生成。
+         The cheapest role weapon (M214) costs 1520 and the GAU-19 1995; the default 1300 floor left some Gorods unarmed. -->
+    <weaponMoney>2000~4000</weaponMoney>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -113,10 +129,10 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
+    <!-- 角色 tag：5.56 / 12.7 轉管機槍與 14.5 重機槍（見 Patches/DMSAC_WeaponLoadouts.xml；種族的 BypassUsableWeapons 已放行）。
+         Role tag: the 5.56 / 12.7 rotary guns and the 14.5 (see Patches/DMSAC_WeaponLoadouts.xml; the race bypasses them). -->
     <weaponTags Inherit="False">
-      <li>A_MG_Heavy</li>
-      <li>A_SuppressWeapon</li>
-			<li>DMS_AerialAutocannon</li>
+      <li>DMSAC_Gorod</li>
     </weaponTags>
   </PawnKindDef>
 

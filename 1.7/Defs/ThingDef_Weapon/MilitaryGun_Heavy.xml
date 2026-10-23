@@ -15,6 +15,7 @@
 			<li>DMS_MechWeaponTransHeavy</li>
 			<li>A_SuppressWeaponHeavy</li>
 			<li>A_MG_Heavy</li>
+			<li>DMSAC_BattleWalker</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_Kord</texPath>
@@ -82,6 +83,7 @@
 			<li>DMS_MechWeaponTransHeavy</li>
 			<li>A_SuppressWeaponHeavy</li>
 			<li>A_MG_Heavy</li>
+			<li>DMSAC_Gorod</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_KPV</texPath>

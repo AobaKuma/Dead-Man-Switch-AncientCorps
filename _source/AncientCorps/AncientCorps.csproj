@@ -37,6 +37,7 @@
       -p:FortifiedDir=<path>\ when the framework lives in a differently named workshop folder.
     -->
     <FortifiedDir Condition="'$(FortifiedDir)' == ''">$(RimWorldDir)Mods\_Fortified-Framework\1.7\</FortifiedDir>
+    <DMSDir Condition="'$(DMSDir)' == ''">$(RimWorldDir)Mods\Dead-Man-Switch\1.7\</DMSDir>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
@@ -79,6 +80,15 @@
     </Reference>
     <Reference Include="Fortified">
       <HintPath>$(FortifiedDir)Assemblies\Fortified.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!--
+      DMS2 的組件：軍團首領群沿用 DMS.QuestNode_Root_BossgroupFactionExposed（只換派系）。本模組依賴 DMS2 並在其後載入。
+      DMS2's assembly: corps bossgroups reuse DMS.QuestNode_Root_BossgroupFactionExposed (only the faction changes).
+      This mod depends on DMS2 and loads after it. Override with -p:DMSDir=<path>\ for a differently named folder.
+    -->
+    <Reference Include="DMS">
+      <HintPath>$(DMSDir)Assemblies\DMS.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

@@ -286,6 +286,20 @@
             </fixedParams>
           </thingSetMaker>
         </li>
+        <!-- 火力召喚信標：低權重的稀有戰利品。Fire-mission beacon as rare loot. -->
+        <li>
+          <weight>2</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>DMSAC_BossCaller</li>
+                </thingDefs>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
       </options>
     </root>
   </ThingSetMakerDef>

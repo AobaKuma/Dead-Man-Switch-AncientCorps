@@ -15,7 +15,11 @@
       <li Class="WorldObjectCompProperties_Abandon" />
       <li Class="WorldObjectCompProperties_TradeRequest" />
       <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
-      <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
+      <li Class="Fortified.WorldObjectCompProperties_ReadinessPatrol">
+        <faction>DMS_AncientCorps</faction>
+        <readiness>DMSAC_Defcon</readiness>
+        <letterLabel>DMSAC_PatrolSquad</letterLabel>
+        <letterText>DMSAC_PatrolSquadDesc</letterText>
         <MBTTime>15000</MBTTime>
         <spawnCountSigma>2</spawnCountSigma>
         <averagePawnCount>2</averagePawnCount>
@@ -26,6 +30,7 @@
           <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
           <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
           <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Saray>3</DMS_Mech_Saray>
         </possibleGeneratePawn>
         <possibleGeneratePawn_Medium>
           <DMS_Mech_Molot_Kamin>4</DMS_Mech_Molot_Kamin>
@@ -84,13 +89,18 @@
       <li Class="WorldObjectCompProperties_Abandon" />
       <li Class="WorldObjectCompProperties_TradeRequest" />
       <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
-      <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
+      <li Class="Fortified.WorldObjectCompProperties_ReadinessPatrol">
+        <faction>DMS_AncientCorps</faction>
+        <readiness>DMSAC_Defcon</readiness>
+        <letterLabel>DMSAC_PatrolSquad</letterLabel>
+        <letterText>DMSAC_PatrolSquadDesc</letterText>
         <possibleGeneratePawn>
           <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
           <DMS_Mech_Molot>1</DMS_Mech_Molot>
           <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
           <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
           <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Saray>3</DMS_Mech_Saray>
         </possibleGeneratePawn>
         <possibleGeneratePawn_Medium>
           <DMS_Mech_Molot_Kamin>4</DMS_Mech_Molot_Kamin>
@@ -149,13 +159,18 @@
       <li Class="WorldObjectCompProperties_Abandon" />
       <li Class="WorldObjectCompProperties_TradeRequest" />
       <li Class="WorldObjectCompProperties_TimedDetectionRaids"/>
-      <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
+      <li Class="Fortified.WorldObjectCompProperties_ReadinessPatrol">
+        <faction>DMS_AncientCorps</faction>
+        <readiness>DMSAC_Defcon</readiness>
+        <letterLabel>DMSAC_PatrolSquad</letterLabel>
+        <letterText>DMSAC_PatrolSquadDesc</letterText>
         <possibleGeneratePawn>
           <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
           <DMS_Mech_Molot>1</DMS_Mech_Molot>
           <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
           <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
           <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Saray>3</DMS_Mech_Saray>
         </possibleGeneratePawn>
         <possibleGeneratePawn_Medium>
           <DMS_Mech_Molot_Kamin>4</DMS_Mech_Molot_Kamin>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 2.0.0（1.7 分支）新增內容。RimWorld 只讀 DefInjected/<Def 類型>/ 底下的檔案。
+       2.0.0 additions for the 1.7 branch; RimWorld only reads files under DefInjected/<DefType>/. -->
+
+  <DMSAC_Make_Saray.label>培育 РГМ-4「谷仓」</DMSAC_Make_Saray.label>
+  <DMSAC_Make_Saray.description>培育一台 РГМ-4「谷仓」，РГМ 履带平台家族的轻武装后勤型。它的生产图纸还留在驻屯兵器的档案里。\n\n安静的日子里它搬货、盖房、照顾作物；吵闹的日子里它带着一具遥控武器站和一槽消防泡沫，守着自己被交代要看守的仓库。</DMSAC_Make_Saray.description>
+</LanguageData>

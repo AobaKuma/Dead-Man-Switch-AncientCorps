@@ -1,18 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <!--
+    軍團站點（照 DMS2 NewContent 的站點寫法重寫）：
+      SitePartDef  workerClass = AncientCorps.SitePartWorker_DMSAC_Installation
+                   ├ Fortified.FFF_TimedSiteExtension ：進入後的增援倒數（小時 ÷ 難度 threatScale）。
+                   │  世界生成、帶巡邏隊（WorldObjectComp_PatrolSquad）的站點由巡邏隊增援，不另外倒數。
+                   └ AncientCorps.ModExtension_SiteGarrison ：守軍 = 威脅點數 × pointsFactor（站點類型）
+                      × defconPointsFactor（警戒等級），兵種由 tiers 依警戒等級累加後抽。
+      GenStepDef   AncientCorps.GenStep_DMSAC_GarrisonedStructure：用 useTag 挑 Structures_*.xml 的佈局，
+                   殘骸、戰利品、外圍廢墟（DMS2 的 DMS_RuinSatellite / DMS_RuinScattered）照 FFF。
+    label / description 維持原文，根目錄 Languages 的翻譯仍然有效。
+
+    Corps sites, rewritten the way DMS2's NewContent sites are built:
+      SitePartDef  worker AncientCorps.SitePartWorker_DMSAC_Installation
+                   ├ FFF_TimedSiteExtension: post-entry reinforcement countdown (hours ÷ threatScale); world-gen sites
+                   │  with a patrol squad keep the patrols as their reinforcement instead.
+                   └ ModExtension_SiteGarrison: garrison = threat points × pointsFactor (site type) × defconPointsFactor
+                      (DEFCON); units rolled from the tiers unlocked at the current DEFCON.
+      GenStepDef   AncientCorps.GenStep_DMSAC_GarrisonedStructure picks a Structures_*.xml layout by useTag; debris,
+                   loot and satellite ruins (DMS2's DMS_RuinSatellite / DMS_RuinScattered) are FFF's.
+    Labels and descriptions are unchanged, so the root Languages translations still apply.
+  -->
+
+  <!-- ======================= 兵器墳場 Automatroid graveyard ======================= -->
   <SitePartDef>
     <defName>DMSAC_Graveyard</defName>
     <label>Automatroid graveyard</label>
     <description>An open graveyard with a large number of decommissioned automatroids from the Corp piled up.\n\nLocal scavengers and raiders often sneaked in and stole parts to repair their automatroids, so the Corp deployed an automatroid garrison.</description>
+    <workerClass>AncientCorps.SitePartWorker_DMSAC_Installation</workerClass>
+    <modExtensions>
+      <li Class="Fortified.FFF_TimedSiteExtension">
+        <baseEntryHours>36</baseEntryHours>
+        <minEntryHours>8</minEntryHours>
+        <maxEntryHours>72</maxEntryHours>
+        <entryLetterLabelKey>DMSAC_Site_EntryCountdownLabel</entryLetterLabelKey>
+        <entryLetterTextKey>DMSAC_Site_EntryCountdownText</entryLetterTextKey>
+      </li>
+      <!-- 墳場守衛：步兵為主，警戒升高後才調來重型機兵。Graveyard guards: infantry first, heavies as DEFCON rises. -->
+      <li Class="AncientCorps.ModExtension_SiteGarrison">
+        <pointsFactor>1</pointsFactor>
+        <minPoints>400</minPoints>
+        <maxPoints>5000</maxPoints>
+        <tiers>
+          <li>
+            <minDefcon>0</minDefcon>
+            <options>
+              <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+              <DMS_Mech_Mushketer_SAR>2</DMS_Mech_Mushketer_SAR>
+              <DMS_Mech_Molot>2</DMS_Mech_Molot>
+              <DMS_Mech_Molot_Mosta>1</DMS_Mech_Molot_Mosta>
+            </options>
+          </li>
+          <li>
+            <minDefcon>1</minDefcon>
+            <options>
+              <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+              <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+            </options>
+          </li>
+          <li>
+            <minDefcon>2</minDefcon>
+            <options>
+              <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+              <DMS_Mech_Zabor_Shkatulka>0.5</DMS_Mech_Zabor_Shkatulka>
+            </options>
+          </li>
+          <li>
+            <minDefcon>3</minDefcon>
+            <options>
+              <DMS_Mech_Tsvetnik>0.5</DMS_Mech_Tsvetnik>
+              <DMS_Mech_Krepost_Sweeper>0.25</DMS_Mech_Krepost_Sweeper>
+            </options>
+          </li>
+        </tiers>
+      </li>
+    </modExtensions>
     <siteTexture>UI/Icons/Graveyard_Site</siteTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <expandingIconTexture>UI/Icons/Graveyard_Icon</expandingIconTexture>
-    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <showFactionInInspectString>true</showFactionInInspectString>
+    <requiresFaction>true</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minThreatPoints>400</minThreatPoints>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <!-- 倒數由 worker 依難度自己啟動。The worker starts its own difficulty-scaled countdown. -->
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>
     <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
-    <considerEnteringAsAttack>true</considerEnteringAsAttack>
-    <wantsThreatPoints>true</wantsThreatPoints>
     <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(150, 1, 150)</minMapSize>
     <tags>
@@ -23,14 +98,13 @@
   <GenStepDef>
     <defName>DMSAC_Graveyard</defName>
     <linkWithSite>DMSAC_Graveyard</linkWithSite>
-    <order>470</order>
-    <genStep Class="Fortified.Structures.GenStep_FFFStructureGen">
+    <order>400</order>
+    <genStep Class="AncientCorps.GenStep_DMSAC_GarrisonedStructure">
+      <forcedFaction>DMS_AncientCorps</forcedFaction>
+      <useTag>DMSAC_Graveyard</useTag>
+      <randomOffset>0~3</randomOffset>
+      <randomRotation>true</randomRotation>
       <fullClear>true</fullClear>
-      <structureLayoutDefs>
-        <li>DMSAC_Graveyard_A</li>
-        <li>DMSAC_Graveyard_B</li>
-        <li>DMSAC_Graveyard_C</li>
-      </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
       <filthTypes>
         <li>Filth_Dirt</li>
@@ -45,22 +119,88 @@
         <li>kcsg_randomroofremoval</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
+      <!-- 佈局本身已經堆滿殘骸，這裡只在外圍補一些。The layouts are already full of hulks; just a few more outside. -->
+      <debrisDef>DMSAC_Building_DerelictMech_Medium</debrisDef>
+      <debrisCount>4~8</debrisCount>
+      <scatterRadius>34</scatterRadius>
+      <lootMaker>DMSAC_LootMaker</lootMaker>
+      <defendRadius>20</defendRadius>
+      <satelliteScatter>
+        <li>
+          <tag>DMSAC_GraveyardSatellite</tag>
+          <count>1~2</count>
+          <radiusPct>0.3</radiusPct>
+          <minRadius>48</minRadius>
+          <minSpacing>6</minSpacing>
+        </li>
+        <li>
+          <tag>DMS_RuinSatellite</tag>
+          <count>2~3</count>
+          <radiusPct>0.22</radiusPct>
+          <minRadius>44</minRadius>
+          <minSpacing>5</minSpacing>
+        </li>
+      </satelliteScatter>
     </genStep>
   </GenStepDef>
 
+  <!-- ======================= 檢查哨 Military checkpoint ======================= -->
   <SitePartDef>
     <defName>DMSAC_Checkpoint</defName>
     <label>military checkpoint</label>
     <description>A military checkpoint on the path, also serves as a transit station for the automatroid patrols, several automatroid garrisons are protecting this position.</description>
+    <workerClass>AncientCorps.SitePartWorker_DMSAC_Installation</workerClass>
+    <modExtensions>
+      <li Class="Fortified.FFF_TimedSiteExtension">
+        <baseEntryHours>24</baseEntryHours>
+        <minEntryHours>6</minEntryHours>
+        <maxEntryHours>48</maxEntryHours>
+        <entryLetterLabelKey>DMSAC_Site_EntryCountdownLabel</entryLetterLabelKey>
+        <entryLetterTextKey>DMSAC_Site_EntryCountdownText</entryLetterTextKey>
+      </li>
+      <!-- 哨卡：小規模步兵班，高警戒時加派籬笆。Checkpoint: a small infantry squad, Zabors at high DEFCON. -->
+      <li Class="AncientCorps.ModExtension_SiteGarrison">
+        <pointsFactor>0.6</pointsFactor>
+        <minPoints>300</minPoints>
+        <maxPoints>2500</maxPoints>
+        <tiers>
+          <li>
+            <minDefcon>0</minDefcon>
+            <options>
+              <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+              <DMS_Mech_Mushketer_SAR>3</DMS_Mech_Mushketer_SAR>
+              <DMS_Mech_Molot>1</DMS_Mech_Molot>
+            </options>
+          </li>
+          <li>
+            <minDefcon>1</minDefcon>
+            <options>
+              <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+              <DMS_Mech_Molot_Mosta>1</DMS_Mech_Molot_Mosta>
+            </options>
+          </li>
+          <li>
+            <minDefcon>3</minDefcon>
+            <options>
+              <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+              <DMS_Mech_Gorod_Piper>0.3</DMS_Mech_Gorod_Piper>
+            </options>
+          </li>
+        </tiers>
+      </li>
+    </modExtensions>
     <siteTexture>UI/Icons/Checkpoint_Site</siteTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <expandingIconTexture>UI/Icons/Checkpoint_Icon</expandingIconTexture>
-    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <showFactionInInspectString>true</showFactionInInspectString>
+    <requiresFaction>true</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minThreatPoints>300</minThreatPoints>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>
     <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
-    <considerEnteringAsAttack>true</considerEnteringAsAttack>
-    <wantsThreatPoints>true</wantsThreatPoints>
     <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(100, 1, 100)</minMapSize>
     <tags>
@@ -71,14 +211,12 @@
   <GenStepDef>
     <defName>DMSAC_Checkpoint</defName>
     <linkWithSite>DMSAC_Checkpoint</linkWithSite>
-    <order>470</order>
-    <genStep Class="Fortified.Structures.GenStep_FFFStructureGen">
+    <order>400</order>
+    <genStep Class="AncientCorps.GenStep_DMSAC_GarrisonedStructure">
+      <forcedFaction>DMS_AncientCorps</forcedFaction>
+      <useTag>DMSAC_Checkpoint</useTag>
+      <randomOffset>0~3</randomOffset>
       <fullClear>true</fullClear>
-      <structureLayoutDefs>
-        <li>DMSAC_Checkpoint_A</li>
-        <li>DMSAC_Checkpoint_B</li>
-        <li>DMSAC_Checkpoint_C</li>
-      </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
       <filthTypes>
         <li>Filth_Dirt</li>
@@ -89,22 +227,86 @@
         <li>kcsg_storagezone</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
+      <lootMaker>DMSAC_LootMaker</lootMaker>
+      <defendRadius>14</defendRadius>
+      <satelliteScatter>
+        <li>
+          <tag>DMS_RuinSatellite</tag>
+          <count>1~2</count>
+          <radiusPct>0.22</radiusPct>
+          <minRadius>26</minRadius>
+          <minSpacing>4</minSpacing>
+        </li>
+      </satelliteScatter>
     </genStep>
   </GenStepDef>
 
+  <!-- ======================= 野戰維修廠 Field maintenance base ======================= -->
   <SitePartDef>
     <defName>DMSAC_Garage</defName>
     <label>field maintenance base</label>
     <description>A temporary field repair workshop and logistic center to offer maintenance for frontline operations. maintenance stations like this will constantly change locations as the Corps division moves their task forces.\n\nDepending on their importance, some long-term maintenance stations will have reinforced fortifications and garrisons.</description>
+    <workerClass>AncientCorps.SitePartWorker_DMSAC_Installation</workerClass>
+    <modExtensions>
+      <li Class="Fortified.FFF_TimedSiteExtension">
+        <baseEntryHours>30</baseEntryHours>
+        <minEntryHours>6</minEntryHours>
+        <maxEntryHours>60</maxEntryHours>
+        <entryLetterLabelKey>DMSAC_Site_EntryCountdownLabel</entryLetterLabelKey>
+        <entryLetterTextKey>DMSAC_Site_EntryCountdownText</entryLetterTextKey>
+      </li>
+      <!-- 維修廠：工兵與待修的重型機兵，高警戒時有稜堡進廠。Repair yard: engineers and heavies in for repair; a Krepost at high DEFCON. -->
+      <li Class="AncientCorps.ModExtension_SiteGarrison">
+        <pointsFactor>1.1</pointsFactor>
+        <minPoints>500</minPoints>
+        <maxPoints>6000</maxPoints>
+        <tiers>
+          <li>
+            <minDefcon>0</minDefcon>
+            <options>
+              <DMS_Mech_Mushketer_AR>3</DMS_Mech_Mushketer_AR>
+              <DMS_Mech_Mushketer_SAR>2</DMS_Mech_Mushketer_SAR>
+              <DMS_Mech_Molot>2</DMS_Mech_Molot>
+              <DMS_Mech_Molot_Reservoir>1</DMS_Mech_Molot_Reservoir>
+              <DMS_Mech_Molot_Mosta>1</DMS_Mech_Molot_Mosta>
+            </options>
+          </li>
+          <li>
+            <minDefcon>1</minDefcon>
+            <options>
+              <DMS_Mech_BattleWalker>1.5</DMS_Mech_BattleWalker>
+              <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+            </options>
+          </li>
+          <li>
+            <minDefcon>2</minDefcon>
+            <options>
+              <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+              <DMS_Mech_Gorod_Piper>0.5</DMS_Mech_Gorod_Piper>
+            </options>
+          </li>
+          <li>
+            <minDefcon>3</minDefcon>
+            <options>
+              <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
+              <DMS_Mech_Krepost>0.3</DMS_Mech_Krepost>
+            </options>
+          </li>
+        </tiers>
+      </li>
+    </modExtensions>
     <siteTexture>UI/Icons/Station_Site</siteTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <expandingIconTexture>UI/Icons/Station_Icon</expandingIconTexture>
-    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <showFactionInInspectString>true</showFactionInInspectString>
+    <requiresFaction>true</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minThreatPoints>500</minThreatPoints>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>
     <arrivedLetterDef>ThreatBig</arrivedLetterDef>
-    <considerEnteringAsAttack>true</considerEnteringAsAttack>
-    <wantsThreatPoints>true</wantsThreatPoints>
     <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(150, 1, 150)</minMapSize>
     <tags>
@@ -115,15 +317,12 @@
   <GenStepDef>
     <defName>DMSAC_Garage</defName>
     <linkWithSite>DMSAC_Garage</linkWithSite>
-    <order>470</order>
-    <genStep Class="Fortified.Structures.GenStep_FFFStructureGen">
+    <order>400</order>
+    <genStep Class="AncientCorps.GenStep_DMSAC_GarrisonedStructure">
+      <forcedFaction>DMS_AncientCorps</forcedFaction>
+      <useTag>DMSAC_Garage</useTag>
+      <randomOffset>0~3</randomOffset>
       <fullClear>true</fullClear>
-      <structureLayoutDefs>
-        <li>DMSAC_Garage_A</li>
-        <li>DMSAC_Garage_B</li>
-        <li>DMSAC_Garage_C</li>
-        <li>DMSAC_Garage_D</li>
-      </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
       <filthTypes>
         <li>Filth_Trash</li>
@@ -133,22 +332,97 @@
         <li>kcsg_storagezone</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
+      <debrisDef>ChunkSlagSteel</debrisDef>
+      <debrisCount>6~10</debrisCount>
+      <scatterRadius>32</scatterRadius>
+      <lootMaker>DMSAC_LootMaker</lootMaker>
+      <defendRadius>22</defendRadius>
+      <satelliteScatter>
+        <li>
+          <tag>DMS_RuinSatellite</tag>
+          <count>2~3</count>
+          <radiusPct>0.22</radiusPct>
+          <minRadius>44</minRadius>
+          <minSpacing>5</minSpacing>
+        </li>
+      </satelliteScatter>
     </genStep>
   </GenStepDef>
 
+  <!-- ======================= 地下設施入口 Underground facility ======================= -->
   <SitePartDef>
     <defName>DMSAC_FacilityEnterance</defName>
     <label>underground facility</label>
     <description>A ground entrance shaft to an underground complex, which may not be it's only exit, but the exterior of the shaft facility contains a large amount of military supplies waiting to be circulated.</description>
+    <workerClass>AncientCorps.SitePartWorker_DMSAC_Installation</workerClass>
+    <modExtensions>
+      <li Class="Fortified.FFF_TimedSiteExtension">
+        <baseEntryHours>24</baseEntryHours>
+        <minEntryHours>6</minEntryHours>
+        <maxEntryHours>48</maxEntryHours>
+        <entryLetterLabelKey>DMSAC_Site_EntryCountdownLabel</entryLetterLabelKey>
+        <entryLetterTextKey>DMSAC_Site_EntryCountdownText</entryLetterTextKey>
+      </li>
+      <!-- 設施入口：最重的地表守備；五級警戒時連掃蕩型稜堡都會守在井口。
+           The facility entrance: the heaviest surface garrison; at DEFCON 5 even the sweeper Krepost guards the shaft. -->
+      <li Class="AncientCorps.ModExtension_SiteGarrison">
+        <pointsFactor>1.3</pointsFactor>
+        <minPoints>800</minPoints>
+        <maxPoints>8000</maxPoints>
+        <tiers>
+          <li>
+            <minDefcon>0</minDefcon>
+            <options>
+              <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+              <DMS_Mech_Mushketer_SAR>3</DMS_Mech_Mushketer_SAR>
+              <DMS_Mech_Molot_Mosta>1</DMS_Mech_Molot_Mosta>
+              <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+            </options>
+          </li>
+          <li>
+            <minDefcon>1</minDefcon>
+            <options>
+              <DMS_Mech_Zabor>1</DMS_Mech_Zabor>
+              <DMS_Mech_Gorod>1</DMS_Mech_Gorod>
+            </options>
+          </li>
+          <li>
+            <minDefcon>2</minDefcon>
+            <options>
+              <DMS_Mech_Zabor_Shkatulka>1</DMS_Mech_Zabor_Shkatulka>
+              <DMS_Mech_Gorod_Cornetist>0.4</DMS_Mech_Gorod_Cornetist>
+              <DMS_Mech_CommandWalker>0.3</DMS_Mech_CommandWalker>
+            </options>
+          </li>
+          <li>
+            <minDefcon>3</minDefcon>
+            <options>
+              <DMS_Mech_Tsvetnik>0.5</DMS_Mech_Tsvetnik>
+              <DMS_Mech_Krepost>0.4</DMS_Mech_Krepost>
+              <DMS_Mech_Pravda>0.3</DMS_Mech_Pravda>
+            </options>
+          </li>
+          <li>
+            <minDefcon>5</minDefcon>
+            <options>
+              <DMS_Mech_Krepost_Sweeper>0.5</DMS_Mech_Krepost_Sweeper>
+            </options>
+          </li>
+        </tiers>
+      </li>
+    </modExtensions>
     <siteTexture>UI/Icons/Enterance_Site</siteTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <expandingIconTexture>UI/Icons/Enterance_Icon</expandingIconTexture>
-    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <showFactionInInspectString>true</showFactionInInspectString>
+    <requiresFaction>true</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minThreatPoints>800</minThreatPoints>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>
     <arrivedLetterDef>ThreatBig</arrivedLetterDef>
-    <considerEnteringAsAttack>true</considerEnteringAsAttack>
-    <wantsThreatPoints>true</wantsThreatPoints>
     <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(150, 1, 150)</minMapSize>
     <tags>
@@ -159,34 +433,87 @@
   <GenStepDef>
     <defName>DMSAC_FacilityEnterance</defName>
     <linkWithSite>DMSAC_FacilityEnterance</linkWithSite>
-    <order>470</order>
-    <genStep Class="Fortified.Structures.GenStep_FFFStructureGen">
+    <order>400</order>
+    <genStep Class="AncientCorps.GenStep_DMSAC_GarrisonedStructure">
+      <forcedFaction>DMS_AncientCorps</forcedFaction>
+      <useTag>DMSAC_FacilityEnterance</useTag>
+      <randomOffset>0~3</randomOffset>
       <fullClear>true</fullClear>
-      <structureLayoutDefs>
-        <li>DMSAC_FacilityEnterance_A</li>
-      </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
       <symbolResolvers>
         <li>kcsg_storagezone</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
+      <lootMaker>DMSAC_LootMaker</lootMaker>
+      <defendRadius>22</defendRadius>
+      <satelliteScatter>
+        <li>
+          <tag>DMS_RuinSatellite</tag>
+          <count>2~3</count>
+          <radiusPct>0.22</radiusPct>
+          <minRadius>40</minRadius>
+          <minSpacing>5</minSpacing>
+        </li>
+      </satelliteScatter>
     </genStep>
   </GenStepDef>
-  
+
+  <!-- ======================= 物流終端站 Logistic terminal ======================= -->
   <SitePartDef>
     <defName>DMSAC_LogisticTerminal</defName>
     <label>logistic terminal</label>
     <!-- 一個自動運行的前線物資終端站，透過自動砲塔與不間斷巡邏的機兵巡邏隊防守。這樣的小型終端站是為那些進行特遣任務的連級機兵部隊所供他們彈藥補充與回收受損的機兵。 -->
     <description>An automatically operated frontline supply terminal, defended by automatic turrets and automatroid patrols. Such small terminals are used by company-level automatroid squads to replenish ammunition and recycle damaged automatroids.</description>
+    <workerClass>AncientCorps.SitePartWorker_DMSAC_Installation</workerClass>
+    <modExtensions>
+      <li Class="Fortified.FFF_TimedSiteExtension">
+        <baseEntryHours>24</baseEntryHours>
+        <minEntryHours>6</minEntryHours>
+        <maxEntryHours>48</maxEntryHours>
+        <entryLetterLabelKey>DMSAC_Site_EntryCountdownLabel</entryLetterLabelKey>
+        <entryLetterTextKey>DMSAC_Site_EntryCountdownText</entryLetterTextKey>
+      </li>
+      <!-- 終端站主要靠砲塔，守軍是最小的一班。The terminal leans on its turrets; the garrison is the smallest squad. -->
+      <li Class="AncientCorps.ModExtension_SiteGarrison">
+        <pointsFactor>0.5</pointsFactor>
+        <minPoints>250</minPoints>
+        <maxPoints>2000</maxPoints>
+        <tiers>
+          <li>
+            <minDefcon>0</minDefcon>
+            <options>
+              <DMS_Mech_Mushketer_AR>3</DMS_Mech_Mushketer_AR>
+              <DMS_Mech_Mushketer_SAR>3</DMS_Mech_Mushketer_SAR>
+              <DMS_Mech_Molot>1</DMS_Mech_Molot>
+            </options>
+          </li>
+          <li>
+            <minDefcon>2</minDefcon>
+            <options>
+              <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
+            </options>
+          </li>
+          <li>
+            <minDefcon>3</minDefcon>
+            <options>
+              <DMS_Mech_Zabor>0.5</DMS_Mech_Zabor>
+            </options>
+          </li>
+        </tiers>
+      </li>
+    </modExtensions>
     <siteTexture>UI/Icons/LogisticTerminal_Site</siteTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <expandingIconTexture>UI/Icons/LogisticTerminal_Icon</expandingIconTexture>
-    <disallowsAutomaticDetectionTimerStart>false</disallowsAutomaticDetectionTimerStart>
+    <showFactionInInspectString>true</showFactionInInspectString>
+    <requiresFaction>true</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minThreatPoints>250</minThreatPoints>
+    <considerEnteringAsAttack>true</considerEnteringAsAttack>
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
     <approachOrderString>Investigate {0}</approachOrderString>
     <approachingReportString>Investigate {0}</approachingReportString>
     <arrivedLetterDef>ThreatSmall</arrivedLetterDef>
-    <considerEnteringAsAttack>true</considerEnteringAsAttack>
-    <wantsThreatPoints>true</wantsThreatPoints>
     <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minMapSize>(100, 1, 100)</minMapSize>
     <tags>
@@ -197,20 +524,12 @@
   <GenStepDef>
     <defName>DMSAC_LogisticTerminal</defName>
     <linkWithSite>DMSAC_LogisticTerminal</linkWithSite>
-    <order>470</order>
-    <genStep Class="Fortified.Structures.GenStep_FFFStructureGen">
+    <order>400</order>
+    <genStep Class="AncientCorps.GenStep_DMSAC_GarrisonedStructure">
+      <forcedFaction>DMS_AncientCorps</forcedFaction>
+      <useTag>DMSAC_LogisticTerminal</useTag>
+      <randomOffset>0~3</randomOffset>
       <fullClear>true</fullClear>
-      <structureLayoutDefs>
-        <li>DMSAC_LogisticTerminal_A</li>
-        <li>DMSAC_LogisticTerminal_B</li>
-        <li>DMSAC_LogisticTerminal_C</li>
-        <li>DMSAC_LogisticTerminal_D</li>
-        <li>DMSAC_LogisticTerminal_E</li>
-        <li>DMSAC_LogisticTerminal_F</li>
-        <li>DMSAC_LogisticTerminal_G</li>
-        <li>DMSAC_LogisticTerminal_H</li>
-        <li>DMSAC_LogisticTerminal_I</li>
-      </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
       <filthTypes>
         <li>Filth_Dirt</li>
@@ -221,7 +540,17 @@
         <li>kcsg_storagezone</li>
         <li>kcsg_randomitemremoval</li>
       </symbolResolvers>
-      <scaleWithQuest></scaleWithQuest>
+      <lootMaker>DMSAC_LootMaker</lootMaker>
+      <defendRadius>12</defendRadius>
+      <satelliteScatter>
+        <li>
+          <tag>DMS_RuinSatellite</tag>
+          <count>1~2</count>
+          <radiusPct>0.2</radiusPct>
+          <minRadius>22</minRadius>
+          <minSpacing>4</minSpacing>
+        </li>
+      </satelliteScatter>
     </genStep>
   </GenStepDef>
 </Defs>

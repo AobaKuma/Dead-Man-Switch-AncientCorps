@@ -8,6 +8,7 @@
 
   <BossgroupDef ParentName="BaseBossgroupNonMechanitor">
     <defName>DMSAC_Boss_ArmedRecon</defName>
+    <quest>DMSAC_Boss</quest>
     <boss>DMS_Boss_BattleWalker</boss>
     <waves>
       <li> <!-- 0 -->
@@ -146,7 +147,7 @@
         <soundOnUsed>MechanoidsWakeUp</soundOnUsed>
       </li>
       <li Class="CompProperties_UseEffectGiveQuest">
-        <quest>DMSAC_OpportunitySite_LogisticTerminal</quest>
+        <quest>DMSAC_Installation_Logistic</quest>
       </li>
       <li Class="CompProperties_UseEffectDestroySelf">
         <delayTicks>120</delayTicks>
@@ -165,6 +166,7 @@
 
   <BossgroupDef ParentName="BaseBossgroupNonMechanitor">
     <defName>DMS_Krepost</defName>
+    <quest>DMSAC_Boss</quest>
     <boss>DMS_Boss_Krepost</boss>
     <waves>
       <li> <!-- 0 -->
@@ -309,7 +311,8 @@
         <bossgroupDef>DMS_Krepost</bossgroupDef>
         <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
       </li>
-      <li Class="AncientCorps.CompProperties_UseEffect_LevelUpDefcon">
+      <li Class="Fortified.CompProperties_UseEffect_RaiseReadiness">
+        <readiness>DMSAC_Defcon</readiness>
         <chance>0.2</chance>
       </li>
       <li Class="CompProperties_UseEffectDestroySelf">

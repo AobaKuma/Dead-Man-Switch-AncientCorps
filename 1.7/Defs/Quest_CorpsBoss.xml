@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    軍團首領群的任務（取代 DMS2 的 DMS_Boss）：首領與護衛屬於古代機兵軍團。軍團與玩家不敵對時（最後的駕駛員等）
+    改用 DMS_Legacy，即 DMS2 原本「遊蕩的殘存機兵」，召來的部隊才會真的進攻。
+    Corps bossgroup quest (replaces DMS2's DMS_Boss): the boss and escorts belong to the Ancient Corps. When the corps isn't
+    hostile to the player (the Last Pilot and the like) it falls back to DMS_Legacy, DMS2's original "wandering remnants",
+    so the summoned force actually attacks.
+  -->
+  <QuestScriptDef>
+    <defName>DMSAC_Boss</defName>
+    <successHistoryEvent>DMS_QuestSuccess_Military</successHistoryEvent>
+    <failedOrExpiredHistoryEvent>DMS_QuestFailed_Military</failedOrExpiredHistoryEvent>
+    <defaultHidden>true</defaultHidden>
+    <autoAccept>true</autoAccept>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->bossgroup</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->bossgroup</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <questContentRules>
+      <rulesStrings>
+        <li>bossDefeatedLetterLabel->[escortees0_label] defeated</li>
+        <li>bossDefeatedStudyChipLetterText->[defeated][study][manufacture]</li>
+        <li>bossDefeatedLetterText->[defeated][manufacture]</li>
+        <li>defeated->The corps' [escortees0_label] has been defeated and has dropped a [reward_label]!</li>
+        <li>manufacture->\n\nUnless it was destroyed in the fight, you should be able to find the [reward_label] among the wreckage.</li>
+        <li>study->\n\nStudying the [reward_label] will unlock further research.</li>
+      </rulesStrings>
+    </questContentRules>
+    <root Class="AncientCorps.QuestNode_Root_CorpsBossgroup">
+      <factionDef>DMS_AncientCorps</factionDef>
+      <fallbackFaction>DMS_Legacy</fallbackFaction>
+      <LetterLabelBossgroupSummoned>The corps answers</LetterLabelBossgroupSummoned>
+      <LetterBossgroupSummoned>The automatroid division has picked up your signal and dispatched a detachment toward its source, which will arrive shortly. Prepare to engage.</LetterBossgroupSummoned>
+      <LetterLabelBossgroupArrived>Corps detachment</LetterLabelBossgroupArrived>
+      <LetterBossgroupArrived>The corps detachment has arrived!</LetterBossgroupArrived>
+      <AlertBossgroupIncoming>Corps detachment approaching</AlertBossgroupIncoming>
+      <AlertBossgroupIncomingDesc>A detachment of the automatroid division is following the signal you sent and closing in.</AlertBossgroupIncomingDesc>
+    </root>
+  </QuestScriptDef>
+</Defs>

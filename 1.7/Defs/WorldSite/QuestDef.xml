@@ -1,429 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>  
-  <QuestScriptDef>
-    <defName>DMSAC_OpportunitySite_Facility</defName>
-    <rootSelectionWeight>0.5</rootSelectionWeight>
-    <rootMinPoints>0</rootMinPoints>
-    <autoAccept>true</autoAccept>
-    <questNameRules>
-      <rulesStrings>
-        <li>questName(priority=1)->[asker_nameDef]'s [verb] [abj] [facility]</li>
-        <li>questName->[abj] [facility]</li>
-        <li>verb->Located</li>
-        <li>verb->Detected</li>
-        <li>verb->Exposed</li>
-        <li>abj->Military</li>
-        <li>abj->Fortified</li>
-        <li>abj->Militarized</li>
-        <li>abj->Confidential</li>
-        <li>facility->Base</li>
-        <li>facility->Facility</li>
-        <li>facility->Fortress</li>
-        <li>facility->Shelter</li>
-        <li>facility->Installation</li>
-      </rulesStrings>
-    </questNameRules>
-    <questDescriptionRules>
-      <rulesStrings>
-        <!-- No asker -->
-        <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
-        <!-- Faction leader asker -->
-        <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
-        <!-- Any other asker -->
-        <li>questDescription(asker!=null)->[asker_nameDef] from [asker_faction_name] has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
-      </rulesStrings>
-    </questDescriptionRules>
-    <root Class="QuestNode_Sequence">
-      <nodes>
-        <li Class="QuestNode_SubScript">
-          <def>Util_RandomizePointsChallengeRating</def>
-          <parms>
-            <pointsFactorTwoStar>4</pointsFactorTwoStar>
-            <pointsFactorThreeStar>5</pointsFactorThreeStar>
-          </parms>
-        </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_GetDefaultRewardValueFromPoints</def>
-        </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_AdjustPointsForDistantFight</def>
-        </li>
-        <li Class="QuestNode_GetMap" />
-        <li Class="QuestNode_IsSet">
-          <name>asker</name>
-          <elseNode Class="QuestNode_RandomNode">
-            <nodes>
-              <li Class="QuestNode_Set">
-                <name>askerIsNull</name>
-                <value>true</value>
-                <selectionWeight>0.4</selectionWeight>
-              </li>
-              <li Class="QuestNode_GetPawn">
-                <storeAs>asker</storeAs>
-                <mustBeFactionLeader>true</mustBeFactionLeader>
-                <mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
-                <hostileWeight>0.15</hostileWeight>
-                <selectionWeight>0.6</selectionWeight>
-              </li>
-            </nodes>
-          </elseNode>
-        </li>
-        <li Class="QuestNode_GetSiteTile">
-          <storeAs>siteTile</storeAs>
-          <allowCaravans>true</allowCaravans>
-          <preferCloserTiles>false</preferCloserTiles>
-          <sitePartDefs>$sitePartDefs</sitePartDefs>
-        </li>
-        
-        <li Class="Fortified.Structures.QuestNode_FFFGetFaction">
-          <allowEnemy>true</allowEnemy>
-          <storeAs>siteFaction</storeAs>
-          <factionDef>DMS_AncientCorps</factionDef>
-        </li>
-        <!-- 隨機三選一 -->
-        <li Class="QuestNode_RandomNode">
-          <nodes>
-            <!-- 地下設施 -->
-            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
-              <storeAs>sitePartDefs</storeAs>
-              <selectionWeight>0.25</selectionWeight>
-              <sitePartsTags>
-                <li>
-                  <tag>DMSAC_FacilityEnterance</tag>
-                </li>
-              </sitePartsTags>
-            </li>
-          </nodes>
-        </li>
-        <li Class="QuestNode_GetDefaultSitePartsParams">
-          <tile>$siteTile</tile>
-          <faction>$siteFaction</faction>
-          <sitePartDefs>$sitePartDefs</sitePartDefs>
-          <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
-        </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_GenerateSite</def>
-          <parms>
-            <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
-          </parms>
-        </li>
-        <li Class="QuestNode_SpawnWorldObjects">
-          <worldObjects>$site</worldObjects>
-        </li>
-        <li Class="QuestNode_AddItemsReward">
-          <items>$generatedItemStashThings</items>
-          <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
-        </li>
-        <li Class="QuestNode_NoWorldObject">
-          <worldObject>$site</worldObject>
-          <node Class="QuestNode_End">
-          </node>
-        </li>
-      </nodes>
-    </root>
-  </QuestScriptDef>
+<Defs>
+  <!--
+    軍團站點任務（照 DMS2 的 DMS_LegacyInstallationQuest 寫法）：
+      DMSAC_Installation_Field     兵器墳場／野戰維修廠／地下設施，依威脅點數與權重抽一座（DMS.QuestNode_Root_DMS_RandomInstallation）。
+      DMSAC_Installation_Logistic  物流終端站／檢查哨（警戒等級動作、設施情報與回收發射器都發這個）。
+      DMSAC_Installation_Facility  只發地下設施（說書人任務池）。
+    逾期、肅清、進入倒數的信件與時限縮放都交給 FFF 的限時敵對站點根節點；守軍與敵人數由站點的
+    ModExtension_SiteGarrison 決定（見 SitePartDef.xml）。描述用語法常數 installation（＝SitePartDef defName）分流。
+    1.7 的任務改用新的 defName：根目錄 Languages 裡舊任務（asker 文法）的翻譯只給 1.5 / 1.6 用，
+    新任務的翻譯在 1.7/Languages/*/DefInjected/QuestScriptDef/。
+
+    Corps site quests, built like DMS2's DMS_LegacyInstallationQuest:
+      DMSAC_Installation_Field     graveyard / field maintenance base / underground facility, rolled by points and weight.
+      DMSAC_Installation_Logistic  logistic terminal / checkpoint (DEFCON actions, facility intel and the recover transmitter).
+      DMSAC_Installation_Facility  the underground facility only (storyteller pool).
+    Expiry, clear and entry-countdown letters plus timeout scaling come from FFF's timed hostile site root; the garrison and
+    the enemy count come from each site's ModExtension_SiteGarrison (SitePartDef.xml). Descriptions branch on the grammar
+    constant "installation" (the SitePartDef defName). The 1.7 quests use new defNames so the root Languages translations
+    of the old asker-grammar quests only apply to 1.5 / 1.6; the new ones live in 1.7/Languages/*/DefInjected/QuestScriptDef/.
+  -->
 
   <QuestScriptDef>
-    <defName>DMSAC_OpportunitySite_Graveyard</defName>
+    <defName>DMSAC_Installation_Field</defName>
     <rootSelectionWeight>1.0</rootSelectionWeight>
     <rootMinPoints>0</rootMinPoints>
     <autoAccept>true</autoAccept>
+    <sendAvailableLetter>true</sendAvailableLetter>
     <questNameRules>
       <rulesStrings>
-        <li>questName(priority=1)->[asker_nameDef]'s [stash] of [treasure]</li>
-        <li>questName->[stash] of [treasure]</li>
-        <li>stash->Stash</li>
-        <li>stash->Cache</li>
-        <li>stash->Collection</li>
-        <li>stash->Shack</li>
-        <li>treasure->Treasure</li>
-        <li>treasure->Valuables</li>
-        <li>treasure->Fortune</li>
-        <li>treasure->Goodies</li>
-        <li>treasure->Supplies</li>
+        <li>questName(installation==DMSAC_Graveyard)->The [graveyard]</li>
+        <li>graveyard->automatroid graveyard</li>
+        <li>graveyard->scrap field</li>
+        <li>graveyard->hulk yard</li>
+        <li>questName(installation==DMSAC_Garage)->The [garage]</li>
+        <li>garage->field maintenance base</li>
+        <li>garage->repair yard</li>
+        <li>garage->forward workshop</li>
+        <li>questName(installation==DMSAC_FacilityEnterance)->The [facility]</li>
+        <li>facility->buried facility</li>
+        <li>facility->sealed installation</li>
+        <li>facility->corps shaft</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <!-- No asker -->
-        <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
-        <!-- Faction leader asker -->
-        <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
-        <!-- Any other asker -->
-        <li>questDescription(asker!=null)->[asker_nameDef] from [asker_faction_name] has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+        <li>questDescription(installation==DMSAC_Graveyard)->Intercepted corps traffic points to an automatroid graveyard held by [siteFactionName]. Decommissioned machines are piled across the field, and scavengers have been stripping them for parts, so the corps posted a guard: (*Threat)[enemiesCount] [enemiesLabel](/Threat).\n\nSome of the hulks may still be recoverable, and the guard post keeps its supplies on site.\n\nThe position fix expires in [siteTimeout].\n\nCaution: entering the graveyard counts as an attack on the corps. Once you arrive, its monitoring network will call in reinforcements after a countdown.</li>
+        <li>questDescription(installation==DMSAC_Garage)->A [siteFactionName] field maintenance base has been located. It services frontline units and moves with the task forces, so it will not stay put for long. It is defended by (*Threat)[enemiesCount] [enemiesLabel](/Threat), and machines in for repair may be among them.\n\nThe workshop holds spare parts and stock for the units it maintains.\n\nThe base is expected to relocate in [siteTimeout].\n\nCaution: entering the base counts as an attack on the corps. Once you arrive, its monitoring network will call in reinforcements after a countdown.</li>
+        <li>questDescription(installation==DMSAC_FacilityEnterance)->The surface shaft of a [siteFactionName] underground facility has been found. Military supplies are staged around the shaft, guarded by (*Threat)[enemiesCount] [enemiesLabel](/Threat).\n\nThe lift leads down into the facility itself. Its command core runs an alarm network and can lock the lifts once the alert is full.\n\nThe position fix expires in [siteTimeout].\n\nCaution: entering the site counts as an attack on the corps. Once you arrive, its monitoring network will call in reinforcements after a countdown.</li>
       </rulesStrings>
     </questDescriptionRules>
-    <root Class="QuestNode_Sequence">
-      <nodes>
-        <li Class="QuestNode_SubScript">
-          <def>Util_RandomizePointsChallengeRating</def>
-          <parms>
-            <pointsFactorTwoStar>3</pointsFactorTwoStar>
-            <pointsFactorThreeStar>4</pointsFactorThreeStar>
-          </parms>
+    <root Class="DMS.QuestNode_Root_DMS_RandomInstallation">
+      <factionDef>DMS_AncientCorps</factionDef>
+      <!-- 說書人與 GenerateQuest 傳進來的都是原始襲擊點數，先壓成遠征點數。Raw raid points come in; cut to site points first. -->
+      <adjustPointsForDistantFight>true</adjustPointsForDistantFight>
+      <baseTimeoutDays>20</baseTimeoutDays>
+      <minTimeoutDays>6</minTimeoutDays>
+      <maxTimeoutDays>40</maxTimeoutDays>
+      <expiredLetterLabelKey>DMSAC_Site_ExpiredLabel</expiredLetterLabelKey>
+      <expiredLetterTextKey>DMSAC_Site_ExpiredText</expiredLetterTextKey>
+      <clearedLetterLabelKey>DMSAC_Site_ClearedLabel</clearedLetterLabelKey>
+      <clearedLetterTextKey>DMSAC_Site_ClearedText</clearedLetterTextKey>
+      <!-- 權重沿用舊任務（墳場 1、維修廠 0.5、地下設施 0.25）。Weights carry over from the old quest. -->
+      <installations>
+        <li>
+          <sitePartDef>DMSAC_Graveyard</sitePartDef>
+          <weight>1</weight>
         </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_GetDefaultRewardValueFromPoints</def>
+        <li>
+          <sitePartDef>DMSAC_Garage</sitePartDef>
+          <weight>0.5</weight>
+          <minPoints>500</minPoints>
         </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_AdjustPointsForDistantFight</def>
+        <li>
+          <sitePartDef>DMSAC_FacilityEnterance</sitePartDef>
+          <weight>0.25</weight>
+          <minPoints>800</minPoints>
         </li>
-        <li Class="QuestNode_GetMap" />
-        <li Class="QuestNode_RandomNode">
-          <nodes>
-            <li Class="QuestNode_Set">
-              <name>askerIsNull</name>
-              <value>true</value>
-              <selectionWeight>0.2</selectionWeight>
-            </li>
-            <li Class="QuestNode_GetPawn">
-              <storeAs>asker</storeAs>
-              <mustBeFactionLeader>true</mustBeFactionLeader>
-              <mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
-              <hostileWeight>0.15</hostileWeight>
-              <selectionWeight>0.3</selectionWeight>
-            </li>
-          </nodes>
-        </li>
-        <li Class="QuestNode_GetSiteTile">
-          <storeAs>siteTile</storeAs>
-          <allowCaravans>true</allowCaravans>
-          <preferCloserTiles>false</preferCloserTiles>
-          <sitePartDefs>$sitePartDefs</sitePartDefs>
-        </li>
-        
-        <li Class="Fortified.Structures.QuestNode_FFFGetFaction">
-					<allowEnemy>true</allowEnemy>
-					<storeAs>siteFaction</storeAs>
-					<factionDef>DMS_AncientCorps</factionDef>
-				</li>
-        <!-- 隨機三選一 -->
-        <li Class="QuestNode_RandomNode">
-          <nodes>
-            <!-- 地下設施 -->
-            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
-              <storeAs>sitePartDefs</storeAs>
-              <selectionWeight>0.25</selectionWeight>
-              <sitePartsTags>
-                <li>
-                  <tag>DMSAC_FacilityEnterance</tag>
-                </li>
-              </sitePartsTags>
-            </li>
-            <!-- 維修站 -->
-            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
-              <storeAs>sitePartDefs</storeAs>
-              <selectionWeight>0.5</selectionWeight>
-              <sitePartsTags>
-                <li>
-                  <tag>DMSAC_Garage</tag>
-                </li>
-              </sitePartsTags>
-            </li>
-            <!-- 廢棄墳場 -->
-            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
-              <storeAs>sitePartDefs</storeAs>
-              <selectionWeight>1</selectionWeight>
-              <sitePartsTags>
-                <li>
-                  <tag>DMSAC_Graveyard</tag>
-                </li>
-              </sitePartsTags>
-            </li>
-          </nodes>
-        </li>
-        <li Class="QuestNode_GetDefaultSitePartsParams">
-          <tile>$siteTile</tile>
-          <faction>$siteFaction</faction>
-          <sitePartDefs>$sitePartDefs</sitePartDefs>
-          <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
-        </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_GenerateSite</def>
-          <parms>
-            <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
-          </parms>
-        </li>
-        <li Class="QuestNode_SpawnWorldObjects">
-          <worldObjects>$site</worldObjects>
-        </li>
-        <li Class="QuestNode_WorldObjectTimeout">
-          <worldObject>$site</worldObject>
-          <isQuestTimeout>true</isQuestTimeout>
-          <delayTicks>$(randInt(24,52)*60000)</delayTicks>
-          <inSignalDisable>site.MapGenerated</inSignalDisable>
-          <node Class="QuestNode_Sequence">
-            <nodes>
-              <li Class="QuestNode_Letter">
-                <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestExpired">Intercepted communications indicate the facility has moved position or being claimed by others. The quest [resolvedQuestName] has expired.</text>
-              </li>
-              <li Class="QuestNode_End">
-                <outcome>Fail</outcome>
-              </li>
-            </nodes>
-          </node>
-        </li>
-        <li Class="QuestNode_AddItemsReward">
-          <items>$generatedItemStashThings</items>
-          <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
-        </li>
-        <li Class="QuestNode_NoWorldObject">
-          <worldObject>$site</worldObject>
-          <node Class="QuestNode_End">
-          </node>
-        </li>
-      </nodes>
+      </installations>
     </root>
   </QuestScriptDef>
 
   <QuestScriptDef>
-    <defName>DMSAC_OpportunitySite_LogisticTerminal</defName>
+    <defName>DMSAC_Installation_Logistic</defName>
     <rootSelectionWeight>1</rootSelectionWeight>
     <rootMinPoints>0</rootMinPoints>
     <autoAccept>true</autoAccept>
+    <sendAvailableLetter>true</sendAvailableLetter>
     <questNameRules>
       <rulesStrings>
-        <li>questName(priority=1)->[asker_nameDef]'s [stash] of [treasure]</li>
-        <li>questName->[stash] of [treasure]</li>
-        <li>stash->Stash</li>
-        <li>stash->Cache</li>
-        <li>stash->Collection</li>
-        <li>stash->Shack</li>
-        <li>treasure->Treasure</li>
-        <li>treasure->Valuables</li>
-        <li>treasure->Fortune</li>
-        <li>treasure->Goodies</li>
-        <li>treasure->Supplies</li>
+        <li>questName(installation==DMSAC_LogisticTerminal)->The [terminal]</li>
+        <li>terminal->logistic terminal</li>
+        <li>terminal->supply terminal</li>
+        <li>terminal->ammunition point</li>
+        <li>questName(installation==DMSAC_Checkpoint)->The [checkpoint]</li>
+        <li>checkpoint->corps checkpoint</li>
+        <li>checkpoint->road block</li>
+        <li>checkpoint->patrol station</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <!-- No asker -->
-        <li>questDescription(askerIsNull==true)->We've intercepted messages about an Ancient Corps facility not far from us. \n\nIt seems that [allSitePartsDescriptions]</li>
-        <!-- Faction leader asker -->
-        <li>questDescription(asker_factionLeader==true)->[asker_nameDef],[asker_faction_leaderTitle] of [asker_faction_name], has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
-        <!-- Any other asker -->
-        <li>questDescription(asker!=null)->[asker_nameDef] from [asker_faction_name] has informed us of an Ancient Corps facility not far from us.\n\n[asker_label] says that [allSitePartsDescriptions]</li>
+        <li>questDescription(installation==DMSAC_LogisticTerminal)->A [siteFactionName] logistic terminal has been located. It is an automated supply point where company-level squads rearm and drop off damaged machines, defended by turrets and a small guard of (*Threat)[enemiesCount] [enemiesLabel](/Threat).\n\nThe terminal's stock is still on site.\n\nThe terminal's position holds for [siteTimeout].\n\nCaution: entering the terminal counts as an attack on the corps. Once you arrive, its monitoring network will call in reinforcements after a countdown.</li>
+        <li>questDescription(installation==DMSAC_Checkpoint)->A [siteFactionName] checkpoint sits on a road nearby. It doubles as a transit station for the corps' patrols and is held by (*Threat)[enemiesCount] [enemiesLabel](/Threat).\n\nThe station keeps supplies for the patrols that pass through.\n\nThe checkpoint's position holds for [siteTimeout].\n\nCaution: entering the checkpoint counts as an attack on the corps. Once you arrive, its monitoring network will call in reinforcements after a countdown.</li>
       </rulesStrings>
     </questDescriptionRules>
-    <root Class="QuestNode_Sequence">
-      <nodes>
-        <li Class="QuestNode_SubScript">
-          <def>Util_RandomizePointsChallengeRating</def>
-          <parms>
-            <pointsFactorTwoStar>1</pointsFactorTwoStar>
-            <pointsFactorThreeStar>2</pointsFactorThreeStar>
-          </parms>
+    <root Class="DMS.QuestNode_Root_DMS_RandomInstallation">
+      <factionDef>DMS_AncientCorps</factionDef>
+      <adjustPointsForDistantFight>true</adjustPointsForDistantFight>
+      <baseTimeoutDays>16</baseTimeoutDays>
+      <minTimeoutDays>4</minTimeoutDays>
+      <maxTimeoutDays>28</maxTimeoutDays>
+      <expiredLetterLabelKey>DMSAC_Site_ExpiredLabel</expiredLetterLabelKey>
+      <expiredLetterTextKey>DMSAC_Site_ExpiredText</expiredLetterTextKey>
+      <clearedLetterLabelKey>DMSAC_Site_ClearedLabel</clearedLetterLabelKey>
+      <clearedLetterTextKey>DMSAC_Site_ClearedText</clearedLetterTextKey>
+      <!-- 權重沿用舊任務（終端站 0.25、檢查哨 0.75）。Weights carry over from the old quest. -->
+      <installations>
+        <li>
+          <sitePartDef>DMSAC_LogisticTerminal</sitePartDef>
+          <weight>0.25</weight>
         </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_GetDefaultRewardValueFromPoints</def>
+        <li>
+          <sitePartDef>DMSAC_Checkpoint</sitePartDef>
+          <weight>0.75</weight>
         </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_AdjustPointsForDistantFight</def>
-        </li>
-        <li Class="QuestNode_GetMap" />
-        <li Class="QuestNode_IsSet">
-          <name>asker</name>
-          <elseNode Class="QuestNode_RandomNode">
-            <nodes>
-              <li Class="QuestNode_Set">
-                <name>askerIsNull</name>
-                <value>true</value>
-                <selectionWeight>0.9</selectionWeight>
-              </li>
-              <li Class="QuestNode_GetPawn">
-                <storeAs>asker</storeAs>
-                <mustBeFactionLeader>true</mustBeFactionLeader>
-                <mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
-                <hostileWeight>0.15</hostileWeight>
-                <selectionWeight>0.1</selectionWeight>
-              </li>
-            </nodes>
-          </elseNode>
-        </li>
-        <li Class="QuestNode_GetSiteTile">
-          <storeAs>siteTile</storeAs>
-          <allowCaravans>true</allowCaravans>
-          <preferCloserTiles>false</preferCloserTiles>
-          <sitePartDefs>$sitePartDefs</sitePartDefs>
-        </li>
-        <li Class="Fortified.Structures.QuestNode_FFFGetFaction">
-					<allowEnemy>true</allowEnemy>
-					<storeAs>siteFaction</storeAs>
-					<factionDef>DMS_AncientCorps</factionDef>
-				</li>
-        <!-- 低烈度地圖 -->
-        <li Class="QuestNode_RandomNode">
-          <nodes>
-            <!-- 物流中轉站 -->
-            <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
-              <storeAs>sitePartDefs</storeAs>
-              <selectionWeight>0.25</selectionWeight>
-              <sitePartsTags>
-                <li>
-                  <tag>DMSAC_LogisticTerminal</tag>
-                </li>
-              </sitePartsTags>
-            </li>
-            <!-- 哨卡 -->
-            <li Class="QuestNode_Sequence">
-              <selectionWeight>0.75</selectionWeight>
-              <nodes>
-                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
-                  <storeAs>sitePartDefs</storeAs>
-                  <sitePartsTags>
-                    <li>
-                      <tag>DMSAC_Checkpoint</tag>
-                    </li>
-                  </sitePartsTags>
-                </li>
-              </nodes>
-            </li>
-          </nodes>
-        </li>
-        <li Class="QuestNode_GetDefaultSitePartsParams">
-          <tile>$siteTile</tile>
-          <faction>$siteFaction</faction>
-          <sitePartDefs>$sitePartDefs</sitePartDefs>
-          <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
-        </li>
-        <li Class="QuestNode_SubScript">
-          <def>Util_GenerateSite</def>
-          <parms>
-            <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
-          </parms>
-        </li>
-        <li Class="QuestNode_SpawnWorldObjects">
-          <worldObjects>$site</worldObjects>
-        </li>
-        <li Class="QuestNode_WorldObjectTimeout">
-          <worldObject>$site</worldObject>
-          <isQuestTimeout>true</isQuestTimeout>
-          <delayTicks>$(randInt(15,28)*60000)</delayTicks>
-          <inSignalDisable>site.MapGenerated</inSignalDisable>
-          <node Class="QuestNode_Sequence">
-            <nodes>
-              <li Class="QuestNode_Letter">
-                <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestExpired">Intercepted communications indicate the station has moved position or being claimed by others. The quest [resolvedQuestName] has expired.</text>
-              </li>
-              <li Class="QuestNode_End">
-                <outcome>Fail</outcome>
-              </li>
-            </nodes>
-          </node>
-        </li>
-        <li Class="QuestNode_AddItemsReward">
-          <items>$generatedItemStashThings</items>
-          <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
-        </li>
-        <li Class="QuestNode_NoWorldObject">
-          <worldObject>$site</worldObject>
-          <node Class="QuestNode_End">
-          </node>
-        </li>
-      </nodes>
+      </installations>
+    </root>
+  </QuestScriptDef>
+
+  <QuestScriptDef>
+    <defName>DMSAC_Installation_Facility</defName>
+    <rootSelectionWeight>0.5</rootSelectionWeight>
+    <rootMinPoints>500</rootMinPoints>
+    <autoAccept>true</autoAccept>
+    <sendAvailableLetter>true</sendAvailableLetter>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->The [facility]</li>
+        <li>facility->buried facility</li>
+        <li>facility->sealed installation</li>
+        <li>facility->corps shaft</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->The surface shaft of a [siteFactionName] underground facility has been found. Military supplies are staged around the shaft, guarded by (*Threat)[enemiesCount] [enemiesLabel](/Threat).\n\nThe lift leads down into the facility itself. Its command core runs an alarm network and can lock the lifts once the alert is full.\n\nThe position fix expires in [siteTimeout].\n\nCaution: entering the site counts as an attack on the corps. Once you arrive, its monitoring network will call in reinforcements after a countdown.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="Fortified.QuestNode_Root_FFF_TimedHostileSite">
+      <factionDef>DMS_AncientCorps</factionDef>
+      <sitePartDef>DMSAC_FacilityEnterance</sitePartDef>
+      <adjustPointsForDistantFight>true</adjustPointsForDistantFight>
+      <baseTimeoutDays>20</baseTimeoutDays>
+      <minTimeoutDays>6</minTimeoutDays>
+      <maxTimeoutDays>40</maxTimeoutDays>
+      <expiredLetterLabelKey>DMSAC_Site_ExpiredLabel</expiredLetterLabelKey>
+      <expiredLetterTextKey>DMSAC_Site_ExpiredText</expiredLetterTextKey>
+      <clearedLetterLabelKey>DMSAC_Site_ClearedLabel</clearedLetterLabelKey>
+      <clearedLetterTextKey>DMSAC_Site_ClearedText</clearedLetterTextKey>
     </root>
   </QuestScriptDef>
 </Defs>

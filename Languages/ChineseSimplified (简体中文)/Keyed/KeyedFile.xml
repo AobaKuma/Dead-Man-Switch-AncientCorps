@@ -39,6 +39,14 @@
   <DMSAC_Level.4>IV级警戒:  {0}确认海牙第一公约已不再适用于当前状况，并根据海牙第三公约进行正式的宣战布告。\n\n此外根据海牙第二公约第二条，处于未占领区拿起武器对抗{0}部队的平民将被视为战争法所定义的战斗员。</DMSAC_Level.4>
   <!-- EN: Level V   In accordance with the Colonial Fleet Convention's alert regulations, {0} has determined that conditions have been met to warrant an offensive and the mobilization of a heavy armored brigade to conduct the operation. \n\n{0} will occupy and take over identified hostile-controlled areas in compliance with international humanitarian law and the Rome Statute, and strike back at hostile forces that attack facilities in a proportional manner. -->
   <DMSAC_Level.5>V级警戒:   根据殖民舰队公约的戒备状态条例，{0}确认当前状况已达到必须展开进攻并调动重型装甲旅来执行作战的合规条件。\n\n{0}将在遵守国际人道法和《罗马规约》条例的前提下对已识别的敌对控制区进行占领与接管，并根据比例原则对袭击设施的敌对势力予以对等打击。</DMSAC_Level.5>
+  <DMSAC_Level_Label.0>O级警戒</DMSAC_Level_Label.0>
+  <DMSAC_Level_Label.1>I级警戒</DMSAC_Level_Label.1>
+  <DMSAC_Level_Label.2>II级警戒</DMSAC_Level_Label.2>
+  <DMSAC_Level_Label.3>III级警戒</DMSAC_Level_Label.3>
+  <DMSAC_Level_Label.4>IV级警戒</DMSAC_Level_Label.4>
+  <DMSAC_Level_Label.5>V级警戒</DMSAC_Level_Label.5>
+  <DMSAC_PermanentHostility>永久敌对</DMSAC_PermanentHostility>
+  <DMSAC_PermanentHostility_Desc>{0}指挥部已依殖民舰队公约将你的殖民地列为敌对军事力量，此为最终决议，不停火、不谈判、不复审。\n\n只有指挥系统仍认得的人，或许还能让它改变主意。</DMSAC_PermanentHostility_Desc>
 
   <!-- EN: Hacking failed -->
   <DMSAC_HackFailed>骇入失败</DMSAC_HackFailed>

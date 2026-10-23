@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_Engineer" ParentName="DMSAC_BaseCompany" Abstract="true">
+  <Fortified.CompanyDef Name="DMSAC_BaseCompany_Engineer" ParentName="DMSAC_BaseCompany" Abstract="true">
     <IconPath>UI/Icons/Company/Engineer</IconPath>
     <NamePack>DMSAC_Namer_Grenadier</NamePack>
     <description>An engineering company equipped with various explosive weapons and flamethrowers</description>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
   <RulePackDef>
     <defName>DMSAC_Namer_Grenadier</defName>
@@ -40,10 +40,10 @@
   </RulePackDef>
 
   <!--========AGS30 配置（警戒度1）========-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Engineer">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Engineer">
     <defName>DMSAC_GrenadierTeam_1</defName>
     <label>Grenadier team</label>
-    <defconRating>1</defconRating>
+    <minLevel>1</minLevel>
     <squadCountRange>1~4</squadCountRange>
     <squads>
       <li>DMSAC_Light_Engineer_A</li>
@@ -51,9 +51,9 @@
       <li>DMSAC_Light_Engineer_B</li>
       <li>DMSAC_Light_Engineer_C</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
-  <AncientCorps.PlatoonDef><!--1xAGS30 + Gorod-->
+  <Fortified.PlatoonDef><!--1xAGS30 + Gorod-->
     <defName>DMSAC_Light_Engineer_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -69,8 +69,8 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--1xAGS30 + Zabor-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--1xAGS30 + Zabor-->
     <defName>DMSAC_Light_Engineer_B</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -86,8 +86,8 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--1xAGS30 + 1x風琴-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--1xAGS30 + 1x風琴-->
     <defName>DMSAC_Light_Engineer_C</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -102,13 +102,13 @@
       <li>DMS_Mech_Mushketer_AR</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 
   <!--========機炮 + AGS30 + 81迫 配置（警戒度4）========-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Engineer">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Engineer">
     <defName>DMSAC_GrenadierTeam_4</defName>
     <label>Mortar grenadier team</label>
-    <defconRating>4</defconRating>
+    <minLevel>4</minLevel>
     <squadCountRange>3~6</squadCountRange>
     <squads>
       <li>DMSAC_Medium_Engineer_A</li>
@@ -116,9 +116,9 @@
       <li>DMSAC_Medium_Engineer_C</li>
       <li>DMSAC_Medium_Engineer_D</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
-  <AncientCorps.PlatoonDef><!--1x81mm + 4xAGS30 + 輕機兵較多-->
+  <Fortified.PlatoonDef><!--1x81mm + 4xAGS30 + 輕機兵較多-->
     <defName>DMSAC_Medium_Engineer_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -134,8 +134,8 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--1x81mm + 增加中型機兵 + 輕機兵較少-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--1x81mm + 增加中型機兵 + 輕機兵較少-->
     <defName>DMSAC_Medium_Engineer_B</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -151,8 +151,8 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--2xAGS30 + 1x風琴 + 輕機兵較多-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--2xAGS30 + 1x風琴 + 輕機兵較多-->
     <defName>DMSAC_Medium_Engineer_C</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -168,8 +168,8 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--2xAGS30 + 1x八音盒 + 輕機兵較多-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--2xAGS30 + 1x八音盒 + 輕機兵較多-->
     <defName>DMSAC_Medium_Engineer_D</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -185,5 +185,5 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 </Defs>

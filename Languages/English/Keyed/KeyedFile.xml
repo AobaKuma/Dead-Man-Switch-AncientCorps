@@ -21,6 +21,14 @@
   <DMSAC_Level.3>Level III Due to the recent tense situation, ultra-heavy automatroids have been put on combat readiness and deployed in various areas to provide reinforcement at any time. {0} will carry out armed expulsion of neighboring illegal military sites in accordance with the Colonial Fleet Convention's alert status regulations.</DMSAC_Level.3>
   <DMSAC_Level.4>Level IV  {0} confirmed that the First Hague Convention was no longer applicable to the current situation and issued a formal declaration of war in accordance with the Third Hague Convention. \n\nIn addition, according to Article 2 of the Second Hague Convention, civilians in non-occupied areas who take up arms against {0} forces will be considered combatants as defined by the laws of war.</DMSAC_Level.4>
   <DMSAC_Level.5>Level V   In accordance with the Colonial Fleet Convention's alert regulations, {0} has determined that conditions have been met to warrant an offensive and the mobilization of a heavy armored brigade to conduct the operation. \n\n{0} will occupy and take over identified hostile-controlled areas in compliance with international humanitarian law and the Rome Statute, and strike back at hostile forces that attack facilities in a proportional manner.</DMSAC_Level.5>
+  <DMSAC_Level_Label.0>DEFCON 0</DMSAC_Level_Label.0>
+  <DMSAC_Level_Label.1>DEFCON I</DMSAC_Level_Label.1>
+  <DMSAC_Level_Label.2>DEFCON II</DMSAC_Level_Label.2>
+  <DMSAC_Level_Label.3>DEFCON III</DMSAC_Level_Label.3>
+  <DMSAC_Level_Label.4>DEFCON IV</DMSAC_Level_Label.4>
+  <DMSAC_Level_Label.5>DEFCON V</DMSAC_Level_Label.5>
+  <DMSAC_PermanentHostility>Permanent enemy</DMSAC_PermanentHostility>
+  <DMSAC_PermanentHostility_Desc>{0} command has classified your colony as a hostile military power under the Colonial Fleet Convention, a final ruling that allows no ceasefire, negotiation or review.\n\nOnly someone the command still recognizes might change its mind.</DMSAC_PermanentHostility_Desc>
 
   <DMSAC_HackFailed>Hacking failed</DMSAC_HackFailed>
   <DMSAC_HackFailedDesc>Due to {0}'s mistakes, mech was not getting controlled as expected.</DMSAC_HackFailedDesc>

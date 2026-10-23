@@ -29,12 +29,29 @@
       <mechWeightClass>Light</mechWeightClass>
       <mechFixedSkillLevel>6</mechFixedSkillLevel>
       <nameGenerator>DMS_AncientMechStandard</nameGenerator>
+      <!-- 原版的種植工作分成 Growing（栽種）與 PlantCutting（收割），沒有 PlantWork（同農業機）。
+           Vanilla splits plant work into Growing and PlantCutting; there is no PlantWork (same as the agrihand). -->
       <mechEnabledWorkTypes>
         <li>Hauling</li>
         <li>Construction</li>
-        <li>PlantWork</li>
+        <li>Growing</li>
+        <li>PlantCutting</li>
       </mechEnabledWorkTypes>
     </race>
+    <!-- 履帶車體（DMS_Caterpillar）沒有手：不用古機基底的左右拳，改回 DMS2 BaseAutomatroidRace 的撞擊（蹄兔同款）。
+         The tracked DMS_Caterpillar body has no hands: drop the ancient base's fists for DMS2's head ram, like the Hyrax. -->
+    <tools Inherit="False">
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
     <comps>
       <li Class="Fortified.CompProperties_VehicleWeapon">
         <defaultWeapon>DMS_SubMachineGunMounted</defaultWeapon>
@@ -88,6 +105,20 @@
     <defName>DMS_Mech_Saray</defName>
     <label>saray</label>
     <description>RGM-4 "Saray" (NATO: Worker Bee) is the light-armed logistics variant of the same unmanned tracked platform family as the RGM-3. Built in enormous numbers during the war, most of them were converted back to second-line and maintenance duties in peacetime: patrolling unmanned facilities, moving parts, and keeping the rest of the corps running.\n\nWith only a remote weapon station and light armour, a Saray is no line combatant. It is, however, cheap, patient, and still armed when something walks into the depot it was told to watch.</description>
+    <comps>
+      <!-- FFF 殘骸回收。FFF hulk recycling. -->
+      <li Class="Fortified.CompProperties_Recycleable">
+        <products>
+          <Steel>25</Steel>
+          <ComponentStamped>1</ComponentStamped>
+        </products>
+        <yieldFactor>0.8</yieldFactor>
+        <workTicks>400</workTicks>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <allowDead>true</allowDead>
+        <playerFactionOnly>true</playerFactionOnly>
+      </li>
+    </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseAncientAutomatroidKind">
@@ -98,10 +129,10 @@
     <combatPower>45</combatPower>
     <maxPerGroup>6</maxPerGroup>
     <weaponMoney>200~900</weaponMoney>
+    <!-- weaponTags 比對的是武器的 tag 不是 defName；三把武器的 DMSAC_Saray tag 由 Patches/DMSAC_WeaponLoadouts.xml 加上。
+         weaponTags match weapon tags, not defNames; Patches/DMSAC_WeaponLoadouts.xml gives the three weapons DMSAC_Saray. -->
     <weaponTags>
-      <li>DMS_TacticalPistol</li>
-      <li>DMS_PDW</li>
-      <li>DMS_ZlobinRevolver</li>
+      <li>DMSAC_Saray</li>
     </weaponTags>
     <lifeStages>
       <li>

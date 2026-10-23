@@ -167,6 +167,19 @@
         <radius>3</radius>
         <angle>120</angle>
       </li>
+      <!-- FFF 殘骸回收。FFF hulk recycling. -->
+      <li Class="Fortified.CompProperties_Recycleable">
+        <products>
+          <Steel>150</Steel>
+          <Tungsteel>80</Tungsteel>
+          <ComponentStamped>6</ComponentStamped>
+        </products>
+        <yieldFactor>0.8</yieldFactor>
+        <workTicks>1500</workTicks>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <allowDead>true</allowDead>
+        <playerFactionOnly>true</playerFactionOnly>
+      </li>
     </comps>
     <modExtensions>
       <li Class="Fortified.MechWeaponExtension">

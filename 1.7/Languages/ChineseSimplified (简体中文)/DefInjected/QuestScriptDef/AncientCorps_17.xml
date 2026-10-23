@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 1.7 站點任務（DMSAC_Installation_*）。舊的 DMSAC_OpportunitySite_* 翻譯留在根目錄給 1.5 / 1.6。
+       1.7 site quests; the old DMSAC_OpportunitySite_* translations stay in the root Languages for 1.5 / 1.6. -->
+
+  <DMSAC_Installation_Field.questNameRules.rulesStrings>
+    <li>questName(installation==DMSAC_Graveyard)->[graveyard]</li>
+    <li>graveyard->机兵坟场</li>
+    <li>graveyard->废铁场</li>
+    <li>graveyard->残骸堆积场</li>
+    <li>questName(installation==DMSAC_Garage)->[garage]</li>
+    <li>garage->野战维修厂</li>
+    <li>garage->维修场</li>
+    <li>garage->前进工坊</li>
+    <li>questName(installation==DMSAC_FacilityEnterance)->[facility]</li>
+    <li>facility->地下设施</li>
+    <li>facility->封存设施</li>
+    <li>facility->军团竖井</li>
+  </DMSAC_Installation_Field.questNameRules.rulesStrings>
+  <DMSAC_Installation_Field.questDescriptionRules.rulesStrings>
+    <li>questDescription(installation==DMSAC_Graveyard)->截获的军团通讯指向一座由[siteFactionName]看守的机兵坟场。退役的机兵堆满整片场地，拾荒者一直在拆它们的零件，所以军团派了守卫：(*Threat)[enemiesCount] [enemiesLabel](/Threat)。\n\n有些残骸或许还能回收，守卫哨也把补给存放在现场。\n\n坐标在 [siteTimeout] 后失效。\n\n注意：进入坟场会被视为对军团的攻击。抵达后，它的监控网络会在倒数结束时呼叫增援。</li>
+    <li>questDescription(installation==DMSAC_Garage)->已找到一座[siteFactionName]的野战维修厂。它为前线单位提供维修，并跟着特遣部队移动，所以不会在原地停留太久。守备兵力为 (*Threat)[enemiesCount] [enemiesLabel](/Threat)，其中可能有正在维修的机兵。\n\n工坊里存放着它所维修单位的备件与库存。\n\n预计这座维修厂会在 [siteTimeout] 后转移。\n\n注意：进入维修厂会被视为对军团的攻击。抵达后，它的监控网络会在倒数结束时呼叫增援。</li>
+    <li>questDescription(installation==DMSAC_FacilityEnterance)->发现了一座[siteFactionName]地下设施的地表竖井。军需物资堆放在竖井周围，由 (*Threat)[enemiesCount] [enemiesLabel](/Threat) 看守。\n\n电梯通往设施内部。它的指挥核心运作着一套警报网络，警戒值满载时会封锁电梯。\n\n坐标在 [siteTimeout] 后失效。\n\n注意：进入站点会被视为对军团的攻击。抵达后，它的监控网络会在倒数结束时呼叫增援。</li>
+  </DMSAC_Installation_Field.questDescriptionRules.rulesStrings>
+
+  <DMSAC_Installation_Logistic.questNameRules.rulesStrings>
+    <li>questName(installation==DMSAC_LogisticTerminal)->[terminal]</li>
+    <li>terminal->物流终端站</li>
+    <li>terminal->补给终端</li>
+    <li>terminal->弹药补给点</li>
+    <li>questName(installation==DMSAC_Checkpoint)->[checkpoint]</li>
+    <li>checkpoint->军团检查哨</li>
+    <li>checkpoint->路障</li>
+    <li>checkpoint->巡逻站</li>
+  </DMSAC_Installation_Logistic.questNameRules.rulesStrings>
+  <DMSAC_Installation_Logistic.questDescriptionRules.rulesStrings>
+    <li>questDescription(installation==DMSAC_LogisticTerminal)->已找到一座[siteFactionName]的物流终端站。这是让连级机兵班补充弹药、送回受损机兵的自动补给点，由炮塔与一支 (*Threat)[enemiesCount] [enemiesLabel](/Threat) 的小队防守。\n\n终端站的库存仍在现场。\n\n终端站的位置会维持 [siteTimeout]。\n\n注意：进入终端站会被视为对军团的攻击。抵达后，它的监控网络会在倒数结束时呼叫增援。</li>
+    <li>questDescription(installation==DMSAC_Checkpoint)->附近的道路上有一座[siteFactionName]检查哨。它同时是军团巡逻队的中继站，由 (*Threat)[enemiesCount] [enemiesLabel](/Threat) 驻守。\n\n哨站存放着供过往巡逻队使用的补给。\n\n检查哨的位置会维持 [siteTimeout]。\n\n注意：进入检查哨会被视为对军团的攻击。抵达后，它的监控网络会在倒数结束时呼叫增援。</li>
+  </DMSAC_Installation_Logistic.questDescriptionRules.rulesStrings>
+
+  <DMSAC_Installation_Facility.questNameRules.rulesStrings>
+    <li>questName->[facility]</li>
+    <li>facility->地下设施</li>
+    <li>facility->封存设施</li>
+    <li>facility->军团竖井</li>
+  </DMSAC_Installation_Facility.questNameRules.rulesStrings>
+  <DMSAC_Installation_Facility.questDescriptionRules.rulesStrings>
+    <li>questDescription->发现了一座[siteFactionName]地下设施的地表竖井。军需物资堆放在竖井周围，由 (*Threat)[enemiesCount] [enemiesLabel](/Threat) 看守。\n\n电梯通往设施内部。它的指挥核心运作着一套警报网络，警戒值满载时会封锁电梯。\n\n坐标在 [siteTimeout] 后失效。\n\n注意：进入站点会被视为对军团的攻击。抵达后，它的监控网络会在倒数结束时呼叫增援。</li>
+  </DMSAC_Installation_Facility.questDescriptionRules.rulesStrings>
+</LanguageData>

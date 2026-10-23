@@ -10,4 +10,11 @@
   <DMSAC_Huntdown_AlertCritical>Huntdown: troops on the strike lane</DMSAC_Huntdown_AlertCritical>
   <DMSAC_Huntdown_AlertDesc>At DEFCON 5 the division has fixed on this colony. Its first wave is assembling and will arrive when the countdown ends.</DMSAC_Huntdown_AlertDesc>
   <DMSAC_Huntdown_AlertCriticalDesc>The huntdown wave is on the strike lane and can appear at the map edge at any moment.</DMSAC_Huntdown_AlertCriticalDesc>
+  <!-- 2.0.0：軍團站點的進入倒數、逾期與肅清信件 / corps site entry countdown, expiry and cleared letters. -->
+  <DMSAC_Site_EntryCountdownLabel>Corps monitoring alerted</DMSAC_Site_EntryCountdownLabel>
+  <DMSAC_Site_EntryCountdownText>The site's monitoring network has logged your arrival and reported it to the corps. Reinforcements will arrive in {0}.\n\nFinish what you came for and leave before they do, or be ready to hold.</DMSAC_Site_EntryCountdownText>
+  <DMSAC_Site_ExpiredLabel>Corps site lost</DMSAC_Site_ExpiredLabel>
+  <DMSAC_Site_ExpiredText>Intercepted communications indicate the site has moved or been claimed by others. Its position is lost.</DMSAC_Site_ExpiredText>
+  <DMSAC_Site_ClearedLabel>Corps site cleared</DMSAC_Site_ClearedLabel>
+  <DMSAC_Site_ClearedText>The corps garrison at the site has been destroyed. Whatever it was guarding is yours to take, until the next patrol comes by.</DMSAC_Site_ClearedText>
 </LanguageData>

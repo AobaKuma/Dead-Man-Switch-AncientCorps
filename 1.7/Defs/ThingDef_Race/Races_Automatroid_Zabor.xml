@@ -45,6 +45,19 @@
 			  <turretRotationFollowPawn>true</turretRotationFollowPawn>			  
         <rotationSmoothTime>0.12</rotationSmoothTime>
       </li>
+      <!-- FFF 殘骸回收。FFF hulk recycling. 海盜籬笆繼承此節點。The pirate Zabor inherits this node. -->
+      <li Class="Fortified.CompProperties_Recycleable">
+        <products>
+          <Steel>90</Steel>
+          <Tungsteel>40</Tungsteel>
+          <ComponentStamped>3</ComponentStamped>
+        </products>
+        <yieldFactor>0.8</yieldFactor>
+        <workTicks>900</workTicks>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <allowDead>true</allowDead>
+        <playerFactionOnly>true</playerFactionOnly>
+      </li>
     </comps>
     <modExtensions>
       <li Class="Fortified.MechWeaponExtension">
@@ -109,10 +122,10 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
+    <!-- 角色 tag：霰彈槍、防暴霰、砍刀、7.62 步槍（見 Patches/DMSAC_WeaponLoadouts.xml；種族的 BypassUsableWeapons 已放行）。
+         Role tag: pump / riot shotgun, machete, battle rifle (see Patches/DMSAC_WeaponLoadouts.xml; the race bypasses them). -->
     <weaponTags Inherit="False">
-      <li>DMS_PKM</li>
-      <li>H_Gatling127mm</li>
-      <li>GSHG</li>
+      <li>DMSAC_Zabor</li>
     </weaponTags>
   </PawnKindDef>
 

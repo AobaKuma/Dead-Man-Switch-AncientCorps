@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    In-game acceptance runner for the corps DEFCON / companies on FFF readiness (RimWorld 1.7).
+    Same scheme as DMSE.BVRAcceptance: a separate assembly copied into 1.7/Assemblies only for the duration of a run
+    (see run.ps1) and removed afterwards. It does nothing unless the game is started with -dmsac-acceptance=<dir>.
+    Never ship this DLL with the mod.
+  -->
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>DMSAC.Acceptance</RootNamespace>
+    <AssemblyName>DMSAC.Acceptance</AssemblyName>
+    <OutputPath>$(MSBuildThisFileDirectory)bin\</OutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>10.0</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <DebugType>none</DebugType>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <RimWorldDir Condition="'$(RimWorldDir)' == ''">$(MSBuildThisFileDirectory)..\..\..\..\</RimWorldDir>
+    <FortifiedDir Condition="'$(FortifiedDir)' == ''">$(RimWorldDir)Mods\_Fortified-Framework\1.7\</FortifiedDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="AncientCorps">
+      <HintPath>$(MSBuildThisFileDirectory)..\..\1.7\Assemblies\AncientCorps.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Fortified">
+      <HintPath>$(FortifiedDir)Assemblies\Fortified.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldDir)Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldDir)UnityStubs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>$(RimWorldDir)Waylith.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

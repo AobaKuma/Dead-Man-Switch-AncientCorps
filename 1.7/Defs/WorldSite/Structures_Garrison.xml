@@ -1,0 +1,1378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    由舊版 StructureLayoutDef 格線佈局轉成 FFF_StructureDef 元素式寫法（同 DMS2 的 NewContent/Defs/GenStructures）。
+    建築、地形、地形染色、屋頂、油漆與物品禁止都逐格保留；佈局裡寫死的機兵已移除，守軍改由站點 SitePartDef 上的
+    AncientCorps.ModExtension_SiteGarrison 依威脅點數、站點類型與警戒等級生成（見 SitePartDef.xml）。
+    GenStep 透過 <tags> 挑佈局，所以標籤就是站點的 useTag。
+    Converted from the legacy StructureLayoutDef grids to element-format FFF_StructureDef (like DMS2's
+    NewContent/Defs/GenStructures). Buildings, terrain, terrain colour, roofs, paint and item forbidding are kept cell
+    for cell; the hard-coded mechs are gone and the garrison now comes from AncientCorps.ModExtension_SiteGarrison on the
+    site's SitePartDef (threat points × site type × DEFCON, see SitePartDef.xml). The GenStep picks a layout by <tags>.
+  -->
+
+  <!-- DMSAC_Garrison_A：40×40；移除寫死的機兵 removed hard-coded mechs: none -->
+  <Fortified.Structures.FFF_StructureDef>
+    <defName>DMSAC_Garrison_A</defName>
+    <size>(40, 40)</size>
+    <disableSuggestedRoof>True</disableSuggestedRoof>
+    <tags>
+      <li>DMSAC_Garrison</li>
+    </tags>
+    <elements>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(32, 0, 1)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(26, 0, 2)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(30, 0, 2)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(35, 0, 2)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(20, 0, 3)</pos>
+        <size>(7, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(28, 0, 3)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(35, 0, 3)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(37, 0, 4)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(37, 0, 5)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(25, 0, 6)</pos>
+        <size>(9, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(35, 0, 6)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(5, 0, 7)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(25, 0, 7)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(28, 0, 7)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(31, 0, 7)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(33, 0, 7)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(35, 0, 7)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(5, 0, 8)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(25, 0, 8)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(33, 0, 8)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(35, 0, 8)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(5, 0, 9)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(9, 0, 9)</pos>
+        <rot>South</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(25, 0, 9)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_PackCrate</def>
+        <pos>(27, 0, 9)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_PackCrate</def>
+        <pos>(30, 0, 9)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(33, 0, 9)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(35, 0, 9)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(5, 0, 10)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(25, 0, 10)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(33, 0, 10)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(37, 0, 10)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(5, 0, 11)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(8, 0, 11)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(25, 0, 11)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(33, 0, 11)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(37, 0, 11)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(25, 0, 12)</pos>
+        <size>(2, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMS_RollingDoor_Quadruple</def>
+        <pos>(28, 0, 12)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(31, 0, 12)</pos>
+        <size>(3, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_RoadBlock</def>
+        <pos>(35, 0, 20)</pos>
+        <rot>West</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_RoadBlock</def>
+        <pos>(35, 0, 23)</pos>
+        <rot>West</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(33, 0, 25)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(33, 0, 26)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(35, 0, 26)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(35, 0, 27)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Column</def>
+        <pos>(3, 0, 28)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Column</def>
+        <pos>(9, 0, 28)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(35, 0, 28)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Shelf</def>
+        <pos>(8, 0, 29)</pos>
+        <rot>South</rot>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(6, 0, 30)</pos>
+        <rot>East</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(31, 0, 30)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(35, 0, 30)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 31)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(35, 0, 31)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 32)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Shelf</def>
+        <pos>(5, 0, 32)</pos>
+        <rot>South</rot>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(8, 0, 32)</pos>
+        <rot>South</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(11, 0, 32)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(33, 0, 32)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(35, 0, 32)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 33)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 33)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(5, 0, 33)</pos>
+        <rot>South</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(11, 0, 33)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Barricade</def>
+        <pos>(33, 0, 33)</pos>
+        <size>(3, 1)</size>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 34)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 34)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Shelf</def>
+        <pos>(4, 0, 34)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Shelf</def>
+        <pos>(8, 0, 34)</pos>
+        <rot>East</rot>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(11, 0, 34)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 35)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(3, 0, 35)</pos>
+        <size>(4, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Column</def>
+        <pos>(9, 0, 35)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(11, 0, 35)</pos>
+        <size>(2, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 36)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(12, 0, 36)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 37)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(5, 0, 37)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(12, 0, 37)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(1, 0, 38)</pos>
+        <size>(5, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(8, 0, 38)</pos>
+        <size>(5, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(19, 0, 5)</pos>
+        <size>(16, 7)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(6, 0, 8)</pos>
+        <size>(13, 22)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(19, 0, 12)</pos>
+        <size>(11, 18)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(2, 0, 18)</pos>
+        <size>(4, 18)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(30, 0, 18)</pos>
+        <size>(5, 16)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(6, 0, 30)</pos>
+        <size>(4, 6)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(24, 0, 30)</pos>
+        <size>(6, 4)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_RoofRect">
+        <def>RoofConstructed</def>
+        <pos>(25, 0, 6)</pos>
+        <size>(9, 7)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_RoofRect">
+        <def>RoofConstructed</def>
+        <pos>(3, 0, 28)</pos>
+        <size>(7, 8)</size>
+      </li>
+    </elements>
+  </Fortified.Structures.FFF_StructureDef>
+
+  <!-- DMSAC_Garrison_B：41×40；移除寫死的機兵 removed hard-coded mechs: none -->
+  <Fortified.Structures.FFF_StructureDef>
+    <defName>DMSAC_Garrison_B</defName>
+    <size>(41, 40)</size>
+    <disableSuggestedRoof>True</disableSuggestedRoof>
+    <tags>
+      <li>DMSAC_Garrison</li>
+    </tags>
+    <elements>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(23, 0, 1)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Barricade</def>
+        <pos>(33, 0, 1)</pos>
+        <size>(5, 1)</size>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(1, 0, 2)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(6, 0, 2)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(23, 0, 2)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(26, 0, 2)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(37, 0, 2)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 3)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(4, 0, 3)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 4)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 5)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(28, 0, 5)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(32, 0, 5)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(30, 0, 6)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(31, 0, 6)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(32, 0, 6)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(34, 0, 6)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(30, 0, 7)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(32, 0, 7)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(34, 0, 7)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(3, 0, 8)</pos>
+        <size>(6, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(30, 0, 8)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(31, 0, 8)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(32, 0, 8)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 9)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(4, 0, 9)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(7, 0, 9)</pos>
+        <rot>South</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(8, 0, 9)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(34, 0, 9)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 10)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(30, 0, 10)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(34, 0, 10)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 11)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Barricade</def>
+        <pos>(30, 0, 11)</pos>
+        <stuff>WoodLog</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(34, 0, 11)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 12)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 12)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMS_RollingDoor_Quadruple</def>
+        <pos>(8, 0, 12)</pos>
+        <rot>East</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_RoadBlock</def>
+        <pos>(30, 0, 12)</pos>
+        <rot>West</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(34, 0, 12)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 13)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 13)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 14)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 14)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(4, 0, 14)</pos>
+        <rot>East</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(8, 0, 14)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 15)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 15)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(7, 0, 15)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(8, 0, 15)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(36, 0, 15)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 16)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(8, 0, 16)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(38, 0, 16)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(3, 0, 17)</pos>
+        <size>(6, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(30, 0, 17)</pos>
+        <size>(7, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(38, 0, 17)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 18)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(7, 0, 18)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(8, 0, 18)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(29, 0, 18)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(30, 0, 18)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(33, 0, 18)</pos>
+        <rot>South</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(35, 0, 18)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(36, 0, 18)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(38, 0, 18)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 19)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 19)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(4, 0, 19)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(30, 0, 19)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(36, 0, 19)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 20)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 20)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(36, 0, 20)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 21)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 21)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMS_RollingDoor_Quadruple</def>
+        <pos>(8, 0, 21)</pos>
+        <rot>East</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(35, 0, 21)</pos>
+        <rot>West</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(36, 0, 21)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(1, 0, 22)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 22)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMS_RollingDoor_Quadruple</def>
+        <pos>(30, 0, 22)</pos>
+        <rot>East</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(36, 0, 22)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 23)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(8, 0, 23)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(36, 0, 23)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 24)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(8, 0, 24)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(30, 0, 24)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(36, 0, 24)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(0, 0, 25)</pos>
+        <size>(2, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(3, 0, 25)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(6, 0, 25)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(8, 0, 25)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(30, 0, 25)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(31, 0, 25)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(33, 0, 25)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Wall</def>
+        <pos>(36, 0, 25)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 26)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(3, 0, 26)</pos>
+        <size>(6, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Wall</def>
+        <pos>(30, 0, 26)</pos>
+        <size>(7, 1)</size>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(38, 0, 26)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 27)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Shelf</def>
+        <pos>(5, 0, 27)</pos>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(38, 0, 27)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 28)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(38, 0, 28)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Cargo</def>
+        <pos>(33, 0, 29)</pos>
+        <rot>West</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(38, 0, 29)</pos>
+        <size>(2, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 30)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(39, 0, 30)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 31)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(39, 0, 31)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 32)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(38, 0, 32)</pos>
+        <size>(2, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 33)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Shelf</def>
+        <pos>(6, 0, 33)</pos>
+        <rot>South</rot>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Shelf</def>
+        <pos>(13, 0, 33)</pos>
+        <rot>South</rot>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(38, 0, 33)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(6, 0, 34)</pos>
+        <rot>South</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Shelf</def>
+        <pos>(7, 0, 34)</pos>
+        <rot>East</rot>
+        <stuff>Steel</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(10, 0, 34)</pos>
+        <rot>South</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Crate</def>
+        <pos>(13, 0, 34)</pos>
+        <rot>South</rot>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(35, 0, 34)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(38, 0, 34)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(2, 0, 35)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(20, 0, 35)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(38, 0, 35)</pos>
+        <size>(2, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 36)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(20, 0, 36)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(39, 0, 36)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 37)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(2, 0, 37)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>DMSAC_Building_FuelBarrel</def>
+        <pos>(5, 0, 37)</pos>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(8, 0, 37)</pos>
+        <size>(7, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(20, 0, 37)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(27, 0, 37)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(33, 0, 37)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(39, 0, 37)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(0, 0, 38)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(8, 0, 38)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(14, 0, 38)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_Thing">
+        <def>Sandbags</def>
+        <pos>(20, 0, 38)</pos>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(30, 0, 38)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(36, 0, 38)</pos>
+        <size>(4, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(0, 0, 39)</pos>
+        <size>(5, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(6, 0, 39)</pos>
+        <size>(3, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_ThingRect">
+        <def>Sandbags</def>
+        <pos>(14, 0, 39)</pos>
+        <size>(7, 1)</size>
+        <stuff>Cloth</stuff>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(2, 0, 2)</pos>
+        <size>(35, 4)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(2, 0, 6)</pos>
+        <size>(28, 7)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(2, 0, 13)</pos>
+        <size>(15, 1)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(24, 0, 13)</pos>
+        <size>(6, 18)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(2, 0, 14)</pos>
+        <size>(13, 26)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(23, 0, 15)</pos>
+        <size>(1, 2)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(30, 0, 16)</pos>
+        <size>(8, 21)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(19, 0, 21)</pos>
+        <size>(1, 19)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(15, 0, 22)</pos>
+        <size>(4, 18)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(20, 0, 22)</pos>
+        <size>(4, 9)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(0, 0, 23)</pos>
+        <size>(2, 17)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(20, 0, 31)</pos>
+        <size>(1, 9)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PackedDirt</def>
+        <pos>(29, 0, 31)</pos>
+        <size>(1, 6)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PavedTile</def>
+        <pos>(17, 0, 13)</pos>
+        <size>(7, 2)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PavedTile</def>
+        <pos>(15, 0, 14)</pos>
+        <size>(2, 8)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PavedTile</def>
+        <pos>(17, 0, 15)</pos>
+        <size>(6, 6)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PavedTile</def>
+        <pos>(23, 0, 17)</pos>
+        <size>(1, 5)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PavedTile</def>
+        <pos>(17, 0, 21)</pos>
+        <size>(2, 1)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainRect">
+        <def>PavedTile</def>
+        <pos>(20, 0, 21)</pos>
+        <size>(3, 1)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainColorRect">
+        <color>Structure_Mustard</color>
+        <pos>(17, 0, 15)</pos>
+        <size>(1, 5)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainColorRect">
+        <color>Structure_Mustard</color>
+        <pos>(21, 0, 15)</pos>
+        <size>(1, 5)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_TerrainColorRect">
+        <color>Structure_Mustard</color>
+        <pos>(18, 0, 17)</pos>
+        <size>(3, 1)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_RoofRect">
+        <def>RoofConstructed</def>
+        <pos>(3, 0, 8)</pos>
+        <size>(6, 19)</size>
+      </li>
+      <li Class="Fortified.Structures.FFF_Element_RoofRect">
+        <def>RoofConstructed</def>
+        <pos>(30, 0, 17)</pos>
+        <size>(7, 10)</size>
+      </li>
+    </elements>
+  </Fortified.Structures.FFF_StructureDef>
+</Defs>

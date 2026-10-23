@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany_Mortar" ParentName="DMSAC_BaseCompany" Abstract="true">
+  <Fortified.CompanyDef Name="DMSAC_BaseCompany_Mortar" ParentName="DMSAC_BaseCompany" Abstract="true">
     <IconPath>UI/Icons/Company/Mortar</IconPath>
     <NamePack>DMSAC_Namer_Mortar</NamePack>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
   <RulePackDef>
     <defName>DMSAC_Namer_Mortar</defName>
@@ -34,11 +34,11 @@
   </RulePackDef>
 
   <!--==========81mm炮連配置（警戒度1）==========-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Mortar">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Mortar">
     <defName>DMSAC_MortarTeam</defName>
     <label>mortar battery</label>
     <description>A mortar battery equipped with several mortar teams.</description>
-    <defconRating>1</defconRating>
+    <minLevel>1</minLevel>
     <squadCountRange>1~4</squadCountRange>
     <squads>
       <li>DMSAC_Light_Mortar_A</li>
@@ -46,15 +46,15 @@
       <li>DMSAC_Sentry_Heavy_A</li>
       <li>DMSAC_Medium_Engineer_B</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
   <!--==========155mm炮連配置（警戒度5）==========-->
-  <AncientCorps.CompanyDef ParentName="DMSAC_BaseCompany_Mortar">
+  <Fortified.CompanyDef ParentName="DMSAC_BaseCompany_Mortar">
     <defName>DMSAC_ArtilleryTeam</defName>
     <label>artillery battery</label>
     <description>An artillery battery equipped with heavy self-propelled artillery.</description>
     <IconPath>UI/Icons/Company/Artillery</IconPath>
-    <defconRating>5</defconRating>
+    <minLevel>5</minLevel>
     <squadCountRange>4</squadCountRange>
     <squads>
       <li>DMSAC_Heavy_Artillery_A</li>
@@ -62,9 +62,9 @@
       <li>DMSAC_Heavy_Artillery_B</li>
       <li>DMSAC_Heavy_Artillery_C</li>
     </squads>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 
-  <AncientCorps.PlatoonDef><!--4x81mm + 2x八音盒-->
+  <Fortified.PlatoonDef><!--4x81mm + 2x八音盒-->
     <defName>DMSAC_MortarBattery_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -79,8 +79,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Molot_Reservoir</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--2x155mm + 2xGSH30-6 + 2x八音盒-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--2x155mm + 2xGSH30-6 + 2x八音盒-->
     <defName>DMSAC_Heavy_Artillery_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -95,8 +95,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Molot_Reservoir</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--2x155mm + 2xGSH30-6 + 2x9M133-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--2x155mm + 2xGSH30-6 + 2x9M133-->
     <defName>DMSAC_Heavy_Artillery_B</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -111,8 +111,8 @@
     <memberKindDefs>
       <li>DMS_Mech_Molot_Reservoir</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
-  <AncientCorps.PlatoonDef><!--2x155mm + 2x81mm + 1xGSH30-6 + 2x八音盒-->
+  </Fortified.PlatoonDef>
+  <Fortified.PlatoonDef><!--2x155mm + 2x81mm + 1xGSH30-6 + 2x八音盒-->
     <defName>DMSAC_Heavy_Artillery_C</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -129,5 +129,5 @@
     <memberKindDefs>
       <li>DMS_Mech_Molot_Reservoir</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 </Defs>

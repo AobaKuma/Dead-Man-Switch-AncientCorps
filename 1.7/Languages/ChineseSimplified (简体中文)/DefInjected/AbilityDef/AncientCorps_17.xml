@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 2.0.0（1.7 分支）新增內容。RimWorld 只讀 DefInjected/<Def 類型>/ 底下的檔案。
+       2.0.0 additions for the 1.7 branch; RimWorld only reads files under DefInjected/<DefType>/. -->
+
+  <DMSAC_FoamSpray.label>消防泡沫</DMSAC_FoamSpray.label>
+  <DMSAC_FoamSpray.description>从保养槽喷出一股消防泡沫，压熄火焰并在地面铺上泡沫。</DMSAC_FoamSpray.description>
+  <DMSAC_Ability_SmokeSalvo.label>烟幕齐射</DMSAC_Ability_SmokeSalvo.label>
+  <DMSAC_Ability_SmokeSalvo.description>朝指定方向打出一小群空爆烟雾弹，沿射向铺出一片烟幕。</DMSAC_Ability_SmokeSalvo.description>
+  <DMSAC_Ability_MGPod.label>机枪荚舱</DMSAC_Ability_MGPod.label>
+  <DMSAC_Ability_MGPod.description>从模块架上的荚舱朝前方喷出一个 7.62 火网。</DMSAC_Ability_MGPod.description>
+</LanguageData>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    軍團的 DEFCON，由 FFF 的戒備系統（Fortified.ReadinessDef）驅動。原本寫死在 GameComponent_DefconLevel 的
+    switch 全部搬到這裡：每級的行動間隔、自行下降時間、連隊上限與行動表。
+    行動表依序執行，每個動作各自擲 chance；exclusive 的動作（或任何讓等級改變的動作）一旦成功就結束這次行動。
+    巡邏抵達、攻入駐地、駭入終端會升級或累積壓力（pressurePerLevel 滿一升一級）。
+
+    The corps' DEFCON, driven by FFF readiness (Fortified.ReadinessDef). The switch that used to be hard-coded in
+    GameComponent_DefconLevel lives here now: per-level action interval, decay time, company cap and action table.
+    Actions run in order, each rolling its own chance; an exclusive action (or any that changes the level) ends the
+    tick once it fires. Patrols, entering a camp and hacking terminals raise the level or build pressure.
+  -->
+  <Fortified.ReadinessDef>
+    <defName>DMSAC_Defcon</defName>
+    <label>DEFCON</label>
+    <faction>DMS_AncientCorps</faction>
+    <workerClass>AncientCorps.ReadinessWorker_Corps</workerClass>
+    <companyWorldObject>DMSAC_Garrison</companyWorldObject>
+    <warMinLevel>5</warMinLevel>
+    <levelAfterWar>2</levelAfterWar>
+    <warOverMinLevel>2</warOverMinLevel>
+    <huntdown>DMSAC_Huntdown</huntdown>
+    <huntdownMinLevel>5</huntdownMinLevel>
+
+    <!-- 玩家把軍團推到 II 級：永久敵對（FFF FactionHostilityLock，不可逆）。殖民地有最後的駕駛員時不鎖，
+         他在設施被認出時也會解除（見 ReadinessWorker_Corps、AncientCorpsUltility.SetHostileToPlayer）。
+         Pushing the corps to level II makes it permanently hostile (FFF FactionHostilityLock, irreversible). No lock while
+         the colony has the Last Pilot, and his recognition at a facility lifts it. -->
+    <permanentHostilityLevel>2</permanentHostilityLevel>
+    <permanentHostilityLetterLabel>DMSAC_PermanentHostility</permanentHostilityLetterLabel>
+    <permanentHostilityLetterText>DMSAC_PermanentHostility_Desc</permanentHostilityLetterText>
+
+    <riseLetterLabel>DMSAC_Level_Rise</riseLetterLabel>
+    <riseLetterText>DMSAC_Level_Rise_Desc</riseLetterText>
+    <dropLetterLabel>DMSAC_Level_Down</dropLetterLabel>
+    <dropLetterText>DMSAC_Level_Down_Desc</dropLetterText>
+    <warLetterLabel>DMSAC_World_Declaration</warLetterLabel>
+    <warLetterText>DMSAC_World_Declaration_Desc</warLetterText>
+    <warOverLetterLabel>DMSAC_World_WarOver</warOverLetterLabel>
+    <warOverLetterText>DMSAC_World_WarOver_Desc</warOverLetterText>
+    <takeoverLetterLabel>DMSAC_World_Takeover</takeoverLetterLabel>
+    <takeoverLetterText>DMSAC_World_Takeover_Desc</takeoverLetterText>
+
+    <levels>
+      <!-- 0 級：只留設施間巡邏。偶爾自己升溫，並收回所有連隊。Level 0: patrols only; may heat up, recalls every company. -->
+      <li>
+        <label>DMSAC_Level_Label.0</label>
+        <description>DMSAC_Level.0</description>
+        <decays>false</decays>
+        <actionIntervalDays>8~16</actionIntervalDays>
+        <tempo>2</tempo>
+        <maxCompanies>2</maxCompanies>
+        <actions>
+          <li Class="Fortified.ReadinessAction_RaiseLevel">
+            <chance>0.25</chance>
+          </li>
+          <li Class="Fortified.ReadinessAction_DisbandCompanies" />
+        </actions>
+      </li>
+      <!-- I 級：全天候巡邏，後勤站點任務。Level I: all-weather patrols, logistic-site quests. -->
+      <li>
+        <label>DMSAC_Level_Label.1</label>
+        <description>DMSAC_Level.1</description>
+        <decayDays>5~10</decayDays>
+        <actionIntervalDays>4~8</actionIntervalDays>
+        <tempo>1</tempo>
+        <maxCompanies>4</maxCompanies>
+        <actions>
+          <li Class="Fortified.ReadinessAction_RaiseLevel">
+            <chance>0.05</chance>
+          </li>
+          <li Class="Fortified.ReadinessAction_GiveQuest">
+            <quest>DMSAC_Installation_Logistic</quest>
+            <chance>0.8</chance>
+          </li>
+          <li Class="Fortified.ReadinessAction_CompanyOrders">
+            <perCompany>0.5</perCompany>
+          </li>
+        </actions>
+      </li>
+      <!-- II 級：大型機兵重啟，裝甲排特遣。Level II: large automatroids restarted, armoured task forces. -->
+      <li>
+        <label>DMSAC_Level_Label.2</label>
+        <description>DMSAC_Level.2</description>
+        <decayDays>5~10</decayDays>
+        <actionIntervalDays>3~6</actionIntervalDays>
+        <tempo>0.75</tempo>
+        <maxCompanies>5</maxCompanies>
+        <actions>
+          <li Class="Fortified.ReadinessAction_RaiseLevel">
+            <chance>0.01</chance>
+          </li>
+          <li Class="Fortified.ReadinessAction_GiveQuest">
+            <quest>DMSAC_Installation_Logistic</quest>
+            <chance>0.4</chance>
+            <exclusive>true</exclusive>
+          </li>
+          <li Class="Fortified.ReadinessAction_CompanyOrders">
+            <perCompany>1</perCompany>
+          </li>
+        </actions>
+      </li>
+      <!-- III 級：超重型機兵戰備，連隊開始直接襲擊殖民地。Level III: super-heavies on standby; companies raid the colony. -->
+      <li>
+        <label>DMSAC_Level_Label.3</label>
+        <description>DMSAC_Level.3</description>
+        <decayDays>10~20</decayDays>
+        <actionIntervalDays>2~4</actionIntervalDays>
+        <tempo>0.5</tempo>
+        <maxCompanies>8</maxCompanies>
+        <actions>
+          <li Class="Fortified.ReadinessAction_GiveQuest">
+            <quest>DMSAC_Installation_Logistic</quest>
+            <chance>0.4</chance>
+            <exclusive>true</exclusive>
+          </li>
+          <li Class="Fortified.ReadinessAction_DeployCompanies">
+            <requireWar>true</requireWar>
+          </li>
+          <li Class="Fortified.ReadinessAction_CompanyRaid" />
+          <li Class="Fortified.ReadinessAction_CompanyOrders">
+            <perCompany>1.5</perCompany>
+          </li>
+        </actions>
+      </li>
+      <!-- IV 級：正式宣戰佈告，接管敵對聚落。Level IV: formal declaration; hostile settlements are taken over. -->
+      <li>
+        <label>DMSAC_Level_Label.4</label>
+        <description>DMSAC_Level.4</description>
+        <decayDays>7.5~15</decayDays>
+        <actionIntervalDays>1~2</actionIntervalDays>
+        <tempo>0.25</tempo>
+        <maxCompanies>16</maxCompanies>
+        <actions>
+          <li Class="Fortified.ReadinessAction_Takeover">
+            <chance>0.5</chance>
+            <exclusive>true</exclusive>
+          </li>
+          <li Class="Fortified.ReadinessAction_CompanyRaid" />
+          <li Class="Fortified.ReadinessAction_CompanyOrders">
+            <perCompany>2</perCompany>
+          </li>
+        </actions>
+      </li>
+      <!-- V 級：重裝旅出動、對一個派系開戰，並啟動追殺令。Level V: heavy brigade, war on a faction, huntdown. -->
+      <li>
+        <label>DMSAC_Level_Label.5</label>
+        <description>DMSAC_Level.5</description>
+        <decayDays>7.5~15</decayDays>
+        <actionIntervalDays>0.8~1.6</actionIntervalDays>
+        <tempo>0.2</tempo>
+        <maxCompanies>20</maxCompanies>
+        <actions>
+          <li Class="Fortified.ReadinessAction_CompanyOrders">
+            <perCompany>2.5</perCompany>
+          </li>
+        </actions>
+      </li>
+    </levels>
+  </Fortified.ReadinessDef>
+</Defs>

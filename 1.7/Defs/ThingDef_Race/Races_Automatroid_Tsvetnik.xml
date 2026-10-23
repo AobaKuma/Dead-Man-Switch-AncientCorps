@@ -43,6 +43,19 @@
           </dataSouth>
         </drawData>
       </li>
+      <!-- FFF 殘骸回收。FFF hulk recycling. -->
+      <li Class="Fortified.CompProperties_Recycleable">
+        <products>
+          <Steel>60</Steel>
+          <Tungsteel>20</Tungsteel>
+          <ComponentStamped>2</ComponentStamped>
+        </products>
+        <yieldFactor>0.8</yieldFactor>
+        <workTicks>600</workTicks>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <allowDead>true</allowDead>
+        <playerFactionOnly>true</playerFactionOnly>
+      </li>
     </comps>
     <butcherProducts>
       <DMS_ChunkSlag>1</DMS_ChunkSlag>

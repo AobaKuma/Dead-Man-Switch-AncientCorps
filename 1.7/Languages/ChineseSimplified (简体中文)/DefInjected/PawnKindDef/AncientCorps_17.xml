@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 2.0.0（1.7 分支）新增內容。RimWorld 只讀 DefInjected/<Def 類型>/ 底下的檔案。
+       2.0.0 additions for the 1.7 branch; RimWorld only reads files under DefInjected/<DefType>/. -->
+
+  <DMS_Mech_Saray.label>谷仓</DMS_Mech_Saray.label>
+  <DMS_Mech_Saray.description>РГМ-4「谷仓」（北约代号「工蜂」）是 РГМ 无人履带平台家族的轻武装后勤型，与蹄兔共用履带构造。战时大量生产，和平时期大多转回二线与保养勤务：巡逻无人设施、搬运零件、让整个军团继续运转。\n\n只有一具遥控武器站与薄装甲，谷仓不是战列单位。但它便宜、有耐性，而且当有人走进它被交代要看守的仓库时，它仍然是武装的。</DMS_Mech_Saray.description>
+</LanguageData>

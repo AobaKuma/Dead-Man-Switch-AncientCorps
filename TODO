@@ -38,10 +38,9 @@ Cinder的侵蝕稜堡
 Pawnkind —— 貼圖 Things/Automatroid/erodedKrepost_* 已存在；1.7 已預留 1.7/Cinders 條件載入夾，尚未填入內容。
 
 boss group caller(完成)
-2.0.0：DMSAC_BossCaller（FFF CompUseEffect_SummonRaid）召喚 DMSAC_Bossgroup_MusicBox（八音盒）。
+2.0.0：DMSAC_BossCaller（FFF CompUseEffect_SummonRaid）召喚 DMSAC_Bossgroup_Shkatulka（八音盒 = 既有的 DMS_Mech_Zabor_Shkatulka）。
 
 ====2.0.0 之後待辦:
-- 八音盒專屬貼圖（現以 zabor 佔位）。
 - 城邦/籬笆貼圖重製（覆蓋 gorod_*.png / zabor_*.png，XML 不動）。
 - 模塊專屬圖示（現沿用既有武器/飛彈貼圖）。
 - 模塊代價數值試玩微調。

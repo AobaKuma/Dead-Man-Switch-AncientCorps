@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 <!-- Boss召喚器 -->
   <ThingDef ParentName="ResourceBase" Name="DMSAC_SiteIntel" Abstract="True">
@@ -53,7 +53,7 @@
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
       <li Class="CompProperties_UseEffectGiveQuest">
-        <quest>DMSAC_OpportunitySite_Graveyard</quest>
+        <quest>DMSAC_Installation_Field</quest>
       </li>
     </comps>
   </ThingDef>
@@ -78,7 +78,7 @@
         <floatMenuFactionIcon>DMS_AncientCorps</floatMenuFactionIcon>
       </li>
       <li Class="CompProperties_UseEffectGiveQuest">
-        <quest>DMSAC_OpportunitySite_LogisticTerminal</quest>
+        <quest>DMSAC_Installation_Logistic</quest>
       </li>
     </comps>
   </ThingDef>

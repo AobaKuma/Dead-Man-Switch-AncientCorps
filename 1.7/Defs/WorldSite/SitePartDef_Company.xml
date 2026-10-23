@@ -13,7 +13,11 @@
     <canHaveFaction>true</canHaveFaction>
     <comps>
       <li Class="WorldObjectCompProperties_Abandon" />
-      <li Class="AncientCorps.WorldObjectCompProperties_PatrolSquad">
+      <li Class="Fortified.WorldObjectCompProperties_ReadinessPatrol">
+        <faction>DMS_AncientCorps</faction>
+        <readiness>DMSAC_Defcon</readiness>
+        <letterLabel>DMSAC_PatrolSquad</letterLabel>
+        <letterText>DMSAC_PatrolSquadDesc</letterText>
         <MBTTime>30000</MBTTime>
         <possibleGeneratePawn>
           <DMS_Mech_Molot_Kamin>1</DMS_Mech_Molot_Kamin>
@@ -21,6 +25,7 @@
           <DMS_Mech_BattleWalker>1</DMS_Mech_BattleWalker>
           <DMS_Mech_Mushketer_SAR>4</DMS_Mech_Mushketer_SAR>
           <DMS_Mech_Mushketer_AR>8</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Saray>3</DMS_Mech_Saray>
         </possibleGeneratePawn>
         <possibleGeneratePawn_Medium>
           <DMS_Mech_Molot_Kamin>4</DMS_Mech_Molot_Kamin>
@@ -40,6 +45,11 @@
       <li Class="WorldObjectCompProperties_TradeRequest" />
       <li Class="WorldObjectCompProperties_EnterCooldown" />
     </comps>
+    <modExtensions>
+      <li Class="Fortified.ModExtension_CompanyWorldObject">
+        <sitePart>DMSAC_GarrisonSite</sitePart>
+      </li>
+    </modExtensions>
   </WorldObjectDef>
 
   <SitePartDef>
@@ -47,7 +57,7 @@
     <label>garrison camp</label>
     <!-- 一支全副武裝的部队正駐紮在這裡並隨時準備展開他們的行動,在其展開戰鬥隊形前將其殲滅是明智之舉,但或許更明智的選擇是離的越遠越好。 -->
     <description>A heavily armed force is stationed here and is ready to launch their operations at any time. It is wise to annihilate them before they form a battle formation, but perhaps a wiser choice is to stay as far away as possible.</description>
-    <workerClass>AncientCorps.SitePartWorker_Company</workerClass>
+    <workerClass>Fortified.SitePartWorker_FFF_Company</workerClass>
     <siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/RaidSource</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
@@ -69,12 +79,12 @@
     <defName>DMSAC_Garrison</defName>
     <linkWithSite>DMSAC_GarrisonSite</linkWithSite>
     <order>470</order>
+    <!-- 連隊駐地的兵力由 SitePartWorker_Company 依連隊編制生成，這裡只放營地佈局（Structures_Garrison.xml）。
+         The company's troops come from SitePartWorker_Company; this only lays out the camp (Structures_Garrison.xml). -->
     <genStep Class="Fortified.Structures.GenStep_FFFStructureGen">
+      <forcedFaction>DMS_AncientCorps</forcedFaction>
+      <useTag>DMSAC_Garrison</useTag>
       <fullClear>true</fullClear>
-      <structureLayoutDefs>
-        <li>DMSAC_Garrison_A</li>
-        <li>DMSAC_Garrison_B</li>
-      </structureLayoutDefs>
       <preventBridgeable>true</preventBridgeable>
     </genStep>
   </GenStepDef>

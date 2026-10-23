@@ -11,6 +11,7 @@
 		</weaponClasses>
 		<weaponTags>
 			<li>DMS_ZlobinRevolver</li>
+			<li>DMSAC_Saray</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_RSh12</texPath>
@@ -87,6 +88,7 @@
 		<weaponTags>
 			<li>DMS_MechWeaponLongRifle</li>
 			<li>DMS_ZlobinRifle</li>
+			<li>DMSAC_ShortMusket</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_ASh12</texPath>
@@ -187,6 +189,7 @@
 			<li>DMS_VykhlopRifle</li>
 			<li>DMS_MechWeaponLongRifle</li>
 			<li>A_SAR_LongRifle</li>
+			<li>DMSAC_LongMusket</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_VKS12</texPath>
@@ -283,6 +286,7 @@
 			<li>A_MG_Light</li>
 			<li>CE_AI_LMG</li>
 			<li>Bipod_SAW</li>
+			<li>DMSAC_Molot</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_PKM</texPath>
@@ -353,6 +357,7 @@
 			<li>A_RC</li>
 			<li>A_RC_LongRifle</li>
 			<li>A_SG_LongRifle</li>
+			<li>DMSAC_Molot</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_KS23K</texPath>
@@ -551,6 +556,7 @@
 			<li>DMS_YekaterinRifle</li>
 			<li>DMS_MechWeaponLongRifle</li>
 			<li>A_SR_LongRifle</li>
+			<li>DMSAC_LongMusket</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_KSVK</texPath>
@@ -618,6 +624,7 @@
 		<weaponTags>
 			<li>DMS_AtlantGrenadeLauncher</li>
 			<li>A_MG_GrenadeLauncher</li>
+			<li>DMSAC_BattleWalker</li>
 		</weaponTags>
 		<graphicData>
 			<texPath>Things/Weapons/DMS_Weapon_AGS30</texPath>

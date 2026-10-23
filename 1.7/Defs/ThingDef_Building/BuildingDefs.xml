@@ -206,6 +206,16 @@
         <heatPerSecond>40</heatPerSecond>
         <heatPushMaxTemperature>80</heatPushMaxTemperature>
       </li>
+      <!-- 警報滿載時從通風井放出步兵機兵。The vent disgorges infantry at full alarm. -->
+      <li Class="Fortified.CompProperties_AlertEffector_ReleaseEntity">
+        <listenSignal>DMSAC_FacilityAlarm</listenSignal>
+        <minAlertLevel>0.75</minAlertLevel>
+        <inactiveWhenFogged>true</inactiveWhenFogged>
+        <oneShot>false</oneShot>
+        <pawnKindDef>DMS_Mech_Mushketer_SAR</pawnKindDef>
+        <countToSpawn>3</countToSpawn>
+        <spawnFactionDef>DMS_AncientCorps</spawnFactionDef>
+      </li>
     </comps>
     <size>(2,2)</size>
     <fillPercent>1</fillPercent>
@@ -273,6 +283,13 @@
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
     <holdsRoof>true</holdsRoof>
+    <comps>
+      <!-- 封鎖閘門（地表端，含需要工程的緊急解鎖）。Lockdown gate, surface end, with the engineering override. -->
+      <li Class="Fortified.CompProperties_FacilityLockdownGate">
+        <overrideWork>6000</overrideWork>
+        <overrideSkillPrerequisite>6</overrideSkillPrerequisite>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="PocketMapExit">
@@ -307,6 +324,10 @@
     <useHitPoints>false</useHitPoints>
     <passability>Impassable</passability>
     <holdsRoof>true</holdsRoof>
+    <comps>
+      <!-- 封鎖閘門（地下端）：只掛地表時封鎖中仍能從裡面離開。Lockdown gate, underground end; without it a locked facility could be left from inside. -->
+      <li Class="Fortified.CompProperties_FacilityLockdownGate" />
+    </comps>
   </ThingDef>
 
   <!--<ThingDef ParentName="PocketMapExit">
@@ -592,6 +613,7 @@
           <DMS_Mech_Molot_Kamin>0.5</DMS_Mech_Molot_Kamin>
           <DMS_Mech_Molot>3</DMS_Mech_Molot>
           <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Saray>2</DMS_Mech_Saray>
         </possibleGeneratePawn>
         <age>300~400</age>
         <innerPawnDrawOffset>(0,0.008,0.25)</innerPawnDrawOffset>
@@ -707,6 +729,7 @@
           <DMS_Mech_Molot_Kamin>0.5</DMS_Mech_Molot_Kamin>
           <DMS_Mech_Molot>3</DMS_Mech_Molot>
           <DMS_Mech_Mushketer_AR>4</DMS_Mech_Mushketer_AR>
+          <DMS_Mech_Saray>2</DMS_Mech_Saray>
         </possibleGeneratePawn>
         <innerPawnDrawOffset>(0,0.005,0.25)</innerPawnDrawOffset>
         <spawnChance>0.5</spawnChance>
@@ -1173,13 +1196,40 @@
       <li Class="AncientCorps.CompProperties_UseEffect_DisableMechs">
         <chance>0.25</chance>
       </li>
-      <li Class="AncientCorps.CompProperties_UseEffect_LevelUpDefcon">
+      <li Class="Fortified.CompProperties_UseEffect_RaiseReadiness">
+        <readiness>DMSAC_Defcon</readiness>
         <chance>1</chance>
       </li>
+      <!-- 核心會以 Vanish 移除，FFF 封鎖中控不會收到通知；先照「被駭入」解除封鎖，避免設施永遠卡在 Locked。
+           The core vanishes, which FFF's lockdown controller ignores; disarm first so the facility can't stay Locked. -->
+      <li Class="AncientCorps.CompProperties_UseEffect_DisarmFacilityLockdown" />
       <li Class="CompProperties_UseEffectDestroySelf">
         <delayTicks>500</delayTicks>
         <spawnKilledLeavings>true</spawnKilledLeavings>
         <effecterDef>MechbandBuildingDestroyed</effecterDef>
+      </li>
+      <!-- FFF 設施警報：偵測入侵者累積警報，滿 100% 啟動地下封鎖；駭入可解除封鎖。FFF facility alarm: intruders build the alarm, full alarm locks the facility; hacking disarms it. -->
+      <li Class="Fortified.CompProperties_AlertScanner">
+        <scanWidth>31</scanWidth>
+        <scanHeight>31</scanHeight>
+        <radius>0</radius>
+        <requireLOS>true</requireLOS>
+        <detectsInvisible>false</detectsInvisible>
+        <checkInterval>250</checkInterval>
+        <rearmInterval>2500</rearmInterval>
+        <alertIncrement>25</alertIncrement>
+        <signalString>DMSAC_FacilityAlarm</signalString>
+      </li>
+      <li Class="Fortified.CompProperties_FacilityLockdownController">
+        <checkInterval>60</checkInterval>
+      </li>
+      <li Class="CompProperties_Hackable">
+        <defence>2</defence>
+        <intellectualSkillPrerequisite>8</intellectualSkillPrerequisite>
+        <hackedMessage>The command core accepted the override; the facility lockdown is disarmed.</hackedMessage>
+        <hackedLetterLabel>Command core hacked</hackedLetterLabel>
+        <hackedLetterText>The command core has been overridden. The facility's lockdown controller is disarmed, and the lifts will keep working.\n\nThe corps will notice, eventually.</hackedLetterText>
+        <hackedLetterDef>PositiveEvent</hackedLetterDef>
       </li>
     </comps>
   </ThingDef>
@@ -1229,6 +1279,16 @@
       <li Class="CompProperties_Glower">
         <glowRadius>5</glowRadius>
         <glowColor>(180,100,100,0)</glowColor>
+      </li>
+      <!-- 警報過半後從陣列放出機兵。Releases mechs once the alarm is above half. -->
+      <li Class="Fortified.CompProperties_AlertEffector_ReleaseEntity">
+        <listenSignal>DMSAC_FacilityAlarm</listenSignal>
+        <minAlertLevel>0.5</minAlertLevel>
+        <inactiveWhenFogged>true</inactiveWhenFogged>
+        <triggerChance>0.5</triggerChance>
+        <pawnKindDef>DMS_Mech_Molot_Mosta</pawnKindDef>
+        <countToSpawn>2</countToSpawn>
+        <spawnFactionDef>DMS_AncientCorps</spawnFactionDef>
       </li>
     </comps>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>

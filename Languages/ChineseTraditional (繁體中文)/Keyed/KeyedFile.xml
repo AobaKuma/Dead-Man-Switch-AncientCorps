@@ -39,6 +39,14 @@
   <DMSAC_Level.4>II級警戒:  {0}確認海牙第一公約已不再適用於當前狀況，並根據海牙第三公約進行正式的宣戰佈告。\n\n此外根據海牙第二公約第二條，處於未佔領區拿起武器對抗{0}部隊的平民將被視為戰爭法所定義的戰鬥員。</DMSAC_Level.4>
   <!-- EN: Level V   In accordance with the Colonial Fleet Convention's alert regulations, {0} has determined that conditions have been met to warrant an offensive and the mobilization of a heavy armored brigade to conduct the operation. \n\n{0} will occupy and take over identified hostile-controlled areas in compliance with international humanitarian law and the Rome Statute, and strike back at hostile forces that attack facilities in a proportional manner. -->
   <DMSAC_Level.5>I級警戒:   根據殖民艦隊公約的戒備狀態條例，{0}確認當前狀況已達到必須展開進攻並調動重型裝甲旅來執行作戰的合規條件。\n\n{0}將在遵守國際人道法和《羅馬規約》條例的前提下對已識別的敵對控制區進行佔領與接管，並根據比例原則對襲擊設施的敵對勢力予以對等打擊。</DMSAC_Level.5>
+  <DMSAC_Level_Label.0>O級警戒</DMSAC_Level_Label.0>
+  <DMSAC_Level_Label.1>I級警戒</DMSAC_Level_Label.1>
+  <DMSAC_Level_Label.2>II級警戒</DMSAC_Level_Label.2>
+  <DMSAC_Level_Label.3>III級警戒</DMSAC_Level_Label.3>
+  <DMSAC_Level_Label.4>IV級警戒</DMSAC_Level_Label.4>
+  <DMSAC_Level_Label.5>V級警戒</DMSAC_Level_Label.5>
+  <DMSAC_PermanentHostility>永久敵對</DMSAC_PermanentHostility>
+  <DMSAC_PermanentHostility_Desc>{0}指揮部已依殖民艦隊公約將你的殖民地列為敵對軍事力量，此為最終決議，不停火、不談判、不覆審。\n\n只有指揮系統仍認得的人，或許還能讓它改變主意。</DMSAC_PermanentHostility_Desc>
 
   <!-- EN: Hacking failed -->
   <DMSAC_HackFailed>駭入失敗</DMSAC_HackFailed>

@@ -2,8 +2,11 @@
 <Defs>
 
   <!-- 之後用 -->
-  <AncientCorps.CompanyDef Name="DMSAC_BaseCompany" Abstract="true">
+  <Fortified.CompanyDef Name="DMSAC_BaseCompany" Abstract="true">
     <defaultFaction>DMS_AncientCorps</defaultFaction>
+    <workerClass>AncientCorps.CompanyWorker_Corps</workerClass>
+    <raidLetterLabel>DMSAC_CompanyRaid</raidLetterLabel>
+    <raidLetterText>DMSAC_CompanyRaid_Desc</raidLetterText>
     <IconPath>UI/Icons/Company/Company_Default</IconPath>
-  </AncientCorps.CompanyDef>
+  </Fortified.CompanyDef>
 </Defs>

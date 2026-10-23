@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    八音盒（BR-4U/FG "Shkatulka"）首領群組與火力召喚信標。
+    八音盒就是既有的籬笆 PawnKind DMS_Mech_Zabor_Shkatulka（Atlant 榴彈機槍＋溫壓火箭技能 DMSAC_Rocket，
+    定義在 ThingDef_Race/Races_Automatroid_Zabor.xml），這裡只替它加一個 BossDef，不另做種族；
+    寫法同 BossGroupDef.xml 的戰鬥步行者／稜堡（一般 PawnKind 掛 BossDef）。
+    Shkatulka ("music box") boss group and its fire-mission beacon. The Shkatulka is the existing Zabor PawnKind
+    DMS_Mech_Zabor_Shkatulka (Races_Automatroid_Zabor.xml); this only gives it a BossDef, the same way
+    BossGroupDef.xml does for the battle walker and the Krepost — no separate race.
+  -->
+  <BossDef>
+    <defName>DMSAC_Boss_Shkatulka</defName>
+    <kindDef>DMS_Mech_Zabor_Shkatulka</kindDef>
+    <appearAfterTicks>60000</appearAfterTicks>
+  </BossDef>
+
+  <BossgroupDef ParentName="BaseBossgroupNonMechanitor">
+    <defName>DMSAC_Bossgroup_Shkatulka</defName>
+    <quest>DMSAC_Boss</quest>
+    <boss>DMSAC_Boss_Shkatulka</boss>
+    <modExtensions>
+      <!-- 讓 FFF 的召喚器可以直接呼叫（原版 UI 不會把它當成可召喚首領） -->
+      <li Class="Fortified.CallableExtension" />
+    </modExtensions>
+    <waves>
+      <li>
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Zabor>3</DMS_Mech_Zabor>
+          <DMS_Mech_Molot>2</DMS_Mech_Molot>
+        </escorts>
+      </li>
+      <li>
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Zabor>4</DMS_Mech_Zabor>
+          <DMS_Mech_Gorod>2</DMS_Mech_Gorod>
+        </escorts>
+      </li>
+      <li>
+        <bossCount>1</bossCount>
+        <escorts>
+          <DMS_Mech_Zabor>6</DMS_Mech_Zabor>
+          <DMS_Mech_Gorod>2</DMS_Mech_Gorod>
+          <DMS_Mech_Molot_Kamin>2</DMS_Mech_Molot_Kamin>
+        </escorts>
+      </li>
+    </waves>
+    <rewardDef>DMSAC_FacilityIntel</rewardDef>
+  </BossgroupDef>
+
+  <!-- 召喚器：把八音盒與護衛招呼到自己的地圖上（TODO 的 boss group caller） -->
+  <ThingDef ParentName="DMSAC_SiteIntel">
+    <defName>DMSAC_BossCaller</defName>
+    <label>fire mission beacon</label>
+    <description>A captured corps fire-mission beacon rebuilt to transmit a forged Shkatulka call sign. Using it puts a BR-4U/FG "Shkatulka" and her Zabor escorts on the ground next to you; the corps never asks who called.\n\nThe Shkatulka carries thermobaric rockets. Do not use it indoors. Do not use it next to the chemfuel store. If you do use it, have an exit.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DMS_Mech_Zabor</ThingDef>
+      <HediffDef>DMSAC_StructuralDamage</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Resource/RecoverTransmitter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1800</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Transmit fire mission</useLabel>
+        <useDuration>300</useDuration>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="Fortified.CompProperties_UseEffectSummonRaid">
+        <bossgroupDef>DMSAC_Bossgroup_Shkatulka</bossgroupDef>
+        <effecterDef>DMSAC_ImpactDust</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

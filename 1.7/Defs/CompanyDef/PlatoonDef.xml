@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AncientCorps.PlatoonDef>
+  <Fortified.PlatoonDef>
     <defName>DMSAC_Sentry_Light_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -14,9 +14,9 @@
       <li>DMS_Mech_Mushketer_AR</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 
-  <AncientCorps.PlatoonDef><!--2x八音盒 + 2x風琴 + 較多的近戰輕機兵-->
+  <Fortified.PlatoonDef><!--2x八音盒 + 2x風琴 + 較多的近戰輕機兵-->
     <defName>DMSAC_Sentry_Heavy_A</defName>
     <leaderKindDef>
       <li>DMS_Mech_CommandWalker</li>
@@ -31,5 +31,5 @@
       <li>DMS_Mech_Molot_Reservoir</li>
       <li>DMS_Mech_Molot</li>
     </memberKindDefs>
-  </AncientCorps.PlatoonDef>
+  </Fortified.PlatoonDef>
 </Defs>

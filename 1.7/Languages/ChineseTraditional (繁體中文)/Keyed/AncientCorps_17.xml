@@ -7,4 +7,11 @@
   <DMSAC_Huntdown_AlertCritical>軍團追殺：部隊已進入打擊航線</DMSAC_Huntdown_AlertCritical>
   <DMSAC_Huntdown_AlertDesc>五級警戒下，機兵師已鎖定這座殖民地。第一波部隊正在集結，倒數結束後抵達。</DMSAC_Huntdown_AlertDesc>
   <DMSAC_Huntdown_AlertCriticalDesc>追殺部隊已進入打擊航線，隨時會出現在地圖邊緣。</DMSAC_Huntdown_AlertCriticalDesc>
+  <!-- 2.0.0：軍團站點的進入倒數、逾期與肅清信件 / corps site entry countdown, expiry and cleared letters. -->
+  <DMSAC_Site_EntryCountdownLabel>軍團監控已警覺</DMSAC_Site_EntryCountdownLabel>
+  <DMSAC_Site_EntryCountdownText>站點的監控網路記錄到你的到來，並回報給軍團。增援將在 {0} 後抵達。\n\n在他們到來前完成目的並撤離，或者準備好堅守。</DMSAC_Site_EntryCountdownText>
+  <DMSAC_Site_ExpiredLabel>軍團站點已失去蹤跡</DMSAC_Site_ExpiredLabel>
+  <DMSAC_Site_ExpiredText>截獲的通訊顯示，該站點已經轉移或被他人佔據。它的位置已經失去。</DMSAC_Site_ExpiredText>
+  <DMSAC_Site_ClearedLabel>軍團站點已肅清</DMSAC_Site_ClearedLabel>
+  <DMSAC_Site_ClearedText>站點的軍團守軍已被摧毀。在下一支巡邏隊經過之前，它守護的東西都歸你了。</DMSAC_Site_ClearedText>
 </LanguageData>

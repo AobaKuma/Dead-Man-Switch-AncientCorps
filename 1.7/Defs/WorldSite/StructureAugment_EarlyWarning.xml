@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    軍團設施的預警網（FFF StructureAugmentDef）：不改 Structures_*.xml，生成主結構後依規則加上 DMS2 的預警設施，
+    接上佈局本身的電網，交給軍團並連上地圖的警戒計數器。數量隨 DEFCON 增加，高等級才有大型掃描塔與 FPV 巢。
+    連隊駐地沒有電網（野戰營地），不套用。
+
+    Early-warning net for corps installations (FFF StructureAugmentDef): no edits to Structures_*.xml. After the main
+    structure spawns, DMS2's early-warning devices are added by rule, wired into the layout's own power net, owned by
+    the corps and tied to the map's alert counter. Counts grow with DEFCON; scanner towers and FPV nests only appear at
+    higher levels. Company camps have no power net (field camps) and are left out.
+
+    擺放規則 Placement:
+      WallMount + exteriorOnly  外牆上的攝影機，盯著來路   cameras on outer walls, watching the approaches
+      Entrance                  門外兩側的感應器           sensors beside the outer side of doors
+      Indoor                    室內的小型掃描器           small scanners on roofed floor
+      Outskirts                 外圍空地的掃描塔與 FPV 巢  scanner towers and FPV nests on the open ground around
+  -->
+  <Fortified.Structures.StructureAugmentDef>
+    <defName>DMSAC_EarlyWarningNet</defName>
+    <label>corps early-warning net</label>
+    <targetTags>
+      <li>DMSAC_Graveyard</li>
+      <li>DMSAC_Checkpoint</li>
+      <li>DMSAC_Garage</li>
+      <li>DMSAC_FacilityEnterance</li>
+      <li>DMSAC_LogisticTerminal</li>
+    </targetTags>
+    <factions>
+      <li>DMS_AncientCorps</li>
+    </factions>
+    <readiness>DMSAC_Defcon</readiness>
+    <entries>
+      <li>
+        <thing>DMS_Building_Camera</thing>
+        <placement>WallMount</placement>
+        <exteriorOnly>true</exteriorOnly>
+        <count>2~3</count>
+        <countPerLevel>0.5</countPerLevel>
+        <minSpacing>8</minSpacing>
+      </li>
+      <li>
+        <thing>DMS_Building_Sensor</thing>
+        <placement>Entrance</placement>
+        <count>1~2</count>
+        <countPerLevel>0.25</countPerLevel>
+        <minSpacing>5</minSpacing>
+      </li>
+      <li>
+        <thing>DMS_Building_Scanner_Small</thing>
+        <placement>Indoor</placement>
+        <minLevel>1</minLevel>
+        <count>1</count>
+        <countPerLevel>0.3</countPerLevel>
+        <minSpacing>10</minSpacing>
+      </li>
+      <li>
+        <thing>DMS_Building_Scanner_Large</thing>
+        <placement>Outskirts</placement>
+        <minLevel>2</minLevel>
+        <count>1</count>
+        <outskirtsRange>16</outskirtsRange>
+        <powerSearchRadius>40</powerSearchRadius>
+        <minSpacing>14</minSpacing>
+      </li>
+      <li>
+        <thing>DMS_Building_FPVNest</thing>
+        <placement>Outskirts</placement>
+        <minLevel>3</minLevel>
+        <count>1~2</count>
+        <countPerLevel>0.5</countPerLevel>
+        <outskirtsRange>12</outskirtsRange>
+        <powerSearchRadius>40</powerSearchRadius>
+        <minSpacing>8</minSpacing>
+      </li>
+    </entries>
+  </Fortified.Structures.StructureAugmentDef>
+</Defs>

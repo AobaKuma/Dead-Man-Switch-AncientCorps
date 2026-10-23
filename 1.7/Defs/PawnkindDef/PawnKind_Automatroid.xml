@@ -35,9 +35,7 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>GSHG</li>
-      <li>A_MG_Heavy</li>
-      <li>DMS_KordMachineGun</li>
+      <li>DMSAC_BattleWalker</li>
     </weaponTags>
     <abilities>
       <li>DMS_RepairMode</li>
@@ -72,10 +70,7 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>AssaultRifle</li>
-      <li>MachinePistol</li>
-      <li>DMS_ZlobinRifle</li>
-			<li>AK21</li>
+      <li>DMSAC_LongMusket</li>
     </weaponTags>
     <aiAvoidCover>false</aiAvoidCover>
   </PawnKindDef>
@@ -107,9 +102,7 @@
       </li>
     </lifeStages>
     <weaponTags>
-			<li>AK21</li>
-      <li>DMS_ZlobinRifle</li>
-      <li>DMS_VykhlopRifle</li>
+      <li>DMSAC_ShortMusket</li>
     </weaponTags>
     <aiAvoidCover>false</aiAvoidCover>
   </PawnKindDef>

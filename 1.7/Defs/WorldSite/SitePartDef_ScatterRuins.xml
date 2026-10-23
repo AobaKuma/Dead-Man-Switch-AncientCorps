@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    軍團設施站點的次要結構（沿用 DMS2 的 DMS.DMS_GenStep_ScatterStructures，與先鋒殘餘站點同一套）：
+    在 Fog（order 1500）之前，於剩餘空地隨機放幾座 DMS2 的廢墟。order 1400 時主結構、衛星環、殘骸、守軍都已就位，
+    這個 GenStep 只挑「沒建築、沒屋頂、非水面、非鋪設地板」且避開 UsedRects 的空地，所以不會壓到既有設施或地標。
+    useSiteFaction：廢墟裡的攝影機、掃描器、FPV 巢交給軍團，連上地圖的警戒計數器，成為外圍預警網。
+    墳場用小型殘骸廢墟（DMS_RuinScattered）；其餘設施用 29x29 中型廢墟（DMS_SiteStruct）。
+    連隊駐地是會移動的野戰營地，不加。
+
+    Secondary structures for the corps installation sites, using DMS2's DMS.DMS_GenStep_ScatterStructures (the same one
+    the Legacy-installation sites use): just before Fog (order 1500), a few DMS2 ruins go onto the open ground that is left.
+    At order 1400 the layout, satellite ring, debris and garrison are in place, and the step only takes ground with no
+    building, roof, water or laid floor, clear of UsedRects, so it never covers a facility or a landmark.
+    useSiteFaction hands the ruins' cameras, scanners and FPV nests to the corps, wired to the map's alert counter as an
+    outer early-warning net. The graveyard gets small wreck ruins (DMS_RuinScattered); the other installations get
+    29x29 medium ruins (DMS_SiteStruct). Company camps are mobile field camps and get none.
+  -->
+
+  <GenStepDef Name="DMSAC_ScatterRuinsBase" Abstract="True">
+    <order>1400</order>
+    <genStep Class="DMS.DMS_GenStep_ScatterStructures">
+      <tag>DMS_SiteStruct</tag>
+      <countRange>1~2</countRange>
+      <minSpacing>6</minSpacing>
+      <randomRotation>true</randomRotation>
+      <attemptsPerPiece>60</attemptsPerPiece>
+      <useSiteFaction>true</useSiteFaction>
+      <!-- 站點被玩家接手或沒有派系時，廢墟的預警設施仍歸軍團。Ruin devices stay corps even on a player-owned or faction-less site. -->
+      <forcedFaction>DMS_AncientCorps</forcedFaction>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef ParentName="DMSAC_ScatterRuinsBase">
+    <defName>DMSAC_GraveyardScatterRuins</defName>
+    <linkWithSite>DMSAC_Graveyard</linkWithSite>
+    <genStep Class="DMS.DMS_GenStep_ScatterStructures">
+      <tag>DMS_RuinScattered</tag>
+      <countRange>2~4</countRange>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef ParentName="DMSAC_ScatterRuinsBase">
+    <defName>DMSAC_CheckpointScatterRuins</defName>
+    <linkWithSite>DMSAC_Checkpoint</linkWithSite>
+  </GenStepDef>
+
+  <GenStepDef ParentName="DMSAC_ScatterRuinsBase">
+    <defName>DMSAC_GarageScatterRuins</defName>
+    <linkWithSite>DMSAC_Garage</linkWithSite>
+    <genStep Class="DMS.DMS_GenStep_ScatterStructures">
+      <countRange>2~3</countRange>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef ParentName="DMSAC_ScatterRuinsBase">
+    <defName>DMSAC_FacilityEnteranceScatterRuins</defName>
+    <linkWithSite>DMSAC_FacilityEnterance</linkWithSite>
+    <genStep Class="DMS.DMS_GenStep_ScatterStructures">
+      <countRange>2~3</countRange>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef ParentName="DMSAC_ScatterRuinsBase">
+    <defName>DMSAC_LogisticTerminalScatterRuins</defName>
+    <linkWithSite>DMSAC_LogisticTerminal</linkWithSite>
+  </GenStepDef>
+
+</Defs>

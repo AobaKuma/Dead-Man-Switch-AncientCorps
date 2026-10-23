@@ -58,6 +58,21 @@
       <DMS_ChunkSlag>1</DMS_ChunkSlag>
       <Steel>35</Steel>
     </butcherProducts>
+    <comps>
+      <!-- FFF 殘骸回收。FFF hulk recycling. -->
+      <li Class="Fortified.CompProperties_Recycleable">
+        <products>
+          <Steel>60</Steel>
+          <Tungsteel>20</Tungsteel>
+          <ComponentStamped>2</ComponentStamped>
+        </products>
+        <yieldFactor>0.8</yieldFactor>
+        <workTicks>600</workTicks>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <allowDead>true</allowDead>
+        <playerFactionOnly>true</playerFactionOnly>
+      </li>
+    </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseAncientAutomatroidKind" Name="DMS_BaseMolotKind">
@@ -87,9 +102,7 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>A_BR_LongRifle</li>
-      <li>DMS_MechWeaponMedium</li>
-      <li>AK21</li>
+      <li>DMSAC_Molot</li>
     </weaponTags>
   </PawnKindDef>
 
