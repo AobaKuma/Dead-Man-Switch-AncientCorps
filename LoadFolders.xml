@@ -32,6 +32,5 @@
 		<li>1.7</li>
 		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">1.7/CE</li>
 		<li IfModActiveAll="CETeam.CombatExtended,DwS.FunctionalAmmunition.Library">1.7/D_Lib</li>
-		<li IfModActive="BreadMo.Cinders,BreadMo.Cinders_steam">1.7/Cinders</li>
 	</v1.7>
 </loadFolders>
