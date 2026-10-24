@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: artillery battery -->
+  <DMSAC_ArtilleryTeam.label>自行砲兵连</DMSAC_ArtilleryTeam.label>
+  <!-- EN: An artillery battery equipped with heavy self-propelled artillery. -->
+  <DMSAC_ArtilleryTeam.description>一支配备了数架重型自行火砲机兵的独立砲兵连。会响应友方的请求对目标进行火炮覆盖。</DMSAC_ArtilleryTeam.description>
+  
+  <!-- EN: mortar battery -->
+  <DMSAC_MortarTeam.label>迫击砲兵连</DMSAC_MortarTeam.label>
+  <!-- EN: A mortar battery equipped with several mortar teams. -->
+  <DMSAC_MortarTeam.description>一支配备了数架重型自行迫击砲机兵的独立砲兵连。会响应友方的请求对目标进行曲射支援。</DMSAC_MortarTeam.description>
+  
+</LanguageData>

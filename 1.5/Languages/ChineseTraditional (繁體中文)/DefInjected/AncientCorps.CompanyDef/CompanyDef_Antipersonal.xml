@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Antipersonnel Team -->
+  <DMSAC_AntipersonnelTeam_2.label>反步兵掃蕩部隊</DMSAC_AntipersonnelTeam_2.label>
+  <!-- EN: A unit equipped with a large amount of supporting firepower -->
+  <DMSAC_AntipersonnelTeam_2.description>一支配備有大量支援火力的部隊。其編制為針對反人員需要而組成。</DMSAC_AntipersonnelTeam_2.description>
+  
+  <!-- EN: Antipersonnel Team -->
+  <DMSAC_AntipersonnelTeam_3.label>反步兵巷戰部隊</DMSAC_AntipersonnelTeam_3.label>
+  <!-- EN: A unit equipped with a large amount of supporting firepower -->
+  <DMSAC_AntipersonnelTeam_3.description>一支配備有大量支援火力的部隊。其編制為針對反人員需要而組成。</DMSAC_AntipersonnelTeam_3.description>
+  
+  <!-- EN: Antipersonnel Team -->
+  <DMSAC_AntipersonnelTeam_4.label>反步兵裝甲部隊</DMSAC_AntipersonnelTeam_4.label>
+  <DMSAC_AntipersonnelTeam_4.description>一支配備有大量支援火力的部隊。其編制為針對反人員需要而組成。</DMSAC_AntipersonnelTeam_4.description>
+  
+</LanguageData>

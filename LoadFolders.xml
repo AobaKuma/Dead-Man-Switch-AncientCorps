@@ -7,6 +7,10 @@
 		The 1.5 / 1.6 folders are frozen (DMS1 era) and receive no further content changes; 1.7 is a branch
 		forked from 1.6 and is the only folder that will keep evolving. Def names are kept identical on both
 		sides so they stay comparable and backportable. 1.7 no longer lists 1.6 to avoid duplicate Defs.
+		根目錄（Defs / Languages / Textures / Sounds）三個版本都會載入，只能放版本中立的內容；
+		綁定特定版本型別的翻譯（例如 1.5/1.6 的 AncientCorps.CompanyDef、1.7 的 Fortified.CompanyDef）放在各自版本的 Languages/。
+		The root folders are loaded by every version, so only version-neutral content goes there; translations
+		tied to a version's def types live in that version's own Languages/ folder.
 	-->
 	<v1.5>
 		<li>/</li>

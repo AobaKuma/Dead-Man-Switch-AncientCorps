@@ -454,8 +454,19 @@
 		</modExtensions>
 	</ThingDef>
 
+	<!-- 可切換彈種的彈丸基底（1.6 本地版）。DMS_BaseSwitchableBullet 只存在於 DMS 2.0（1.7），
+	     1.6 的 DMS Core 停在 1.8.27 沒有這個父類，彈頭會失去 BaseBullet 的 thingClass，開新遊戲時
+	     ReadingPolicyDatabase 擲 NullReferenceException。改名避免日後與 DMS 的同名抽象 Def 衝突。
+	     Local 1.6 base for switchable-ammo bullets: DMS_BaseSwitchableBullet only exists in DMS 2.0 (1.7);
+	     DMS Core for 1.6 stays at 1.8.27 without it, which left these bullets with a null thingClass. -->
+	<ThingDef ParentName="BaseBullet" Name="DMSAC_BaseSwitchableBullet" Abstract="True">
+		<comps>
+			<li Class="Fortified.CompProperties_SwitchableAmmo" />
+		</comps>
+	</ThingDef>
+
 	<!-- 「路障」實心獨頭彈: 制式預設彈, 反裝甲 -->
-	<ThingDef ParentName="DMS_BaseSwitchableBullet">
+	<ThingDef ParentName="DMSAC_BaseSwitchableBullet">
 		<defName>Bullet_DMS_CombatShotgun</defName>
 		<label>solid slug</label>
 		<description>A hardened steel slug seated in a 23mm case. It was the round the weapon was designed around, and it will go through plating that a pellet load only scuffs.</description>
@@ -476,7 +487,7 @@
 	</ThingDef>
 
 	<!-- 「彈片-25」鹿彈: 近距離對無甲群體 -->
-	<ThingDef ParentName="DMS_BaseSwitchableBullet">
+	<ThingDef ParentName="DMSAC_BaseSwitchableBullet">
 		<defName>DMS_Bullet_KS23K_Shrapnel</defName>
 		<label>23mm shrapnel shot</label>
 		<description>A 23mm case filled with hardened pellets instead of a single slug. It empties a magazine faster than anything else the weapon accepts and stops being relevant past a dozen paces.</description>
@@ -497,7 +508,7 @@
 	</ThingDef>
 
 	<!-- 「波浪-R」橡膠彈: 非致命驅散與活捉 -->
-	<ThingDef ParentName="DMS_BaseSwitchableBullet">
+	<ThingDef ParentName="DMSAC_BaseSwitchableBullet">
 		<defName>DMS_Bullet_KS23K_Volna</defName>
 		<label>23mm rubber slug</label>
 		<description>A 23mm rubber slug loaded to a reduced charge. At this calibre a less-lethal round still breaks ribs, which the manuals describe as compliance.</description>
@@ -519,7 +530,7 @@
 
 	<!-- 「星辰」震撼彈: 命中即炸的暈眩彈, 零傷害。用原版 Stun 傷害型別,
 	     自訂 DamageDef 無法暈眩 pawn (StunHandler.CanBeStunnedByDamage 只認 Stun/EMP/NerveStun/MechBandShockwave) -->
-	<ThingDef ParentName="DMS_BaseSwitchableBullet">
+	<ThingDef ParentName="DMSAC_BaseSwitchableBullet">
 		<defName>DMS_Bullet_KS23K_Zvezda</defName>
 		<label>23mm stun shell</label>
 		<description>A 23mm flash-bang shell with an impact fuze. It wounds nothing and stops everything within a couple of paces of where it lands, friend and enemy alike, for just long enough to close the distance.</description>
